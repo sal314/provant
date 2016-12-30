@@ -1,0 +1,102 @@
+/*
+** MealPlan.css
+*/
+.MPSource{background:none repeat scroll 0 0 #EFEFEF; border:1px solid #B4B4B4; padding:10px; border-top:none}
+.MPSource h2{border-bottom: solid 1px #CCC; font-size:19px; padding-bottom:10px}
+.MPSource .dayName{font-size:16px;}
+.MPSource .mealName{font-size:14px; color:#444; font-weight:bold;}
+.MPSource .submit{margin-left:100px}
+
+.dayName {margin:0 0 0 0; color:#2D568E; display:block; font-weight:bold; font-size:14px;}
+.mealName {color: #2D568E; margin:10px 0 -10px 0px; display:block;}
+.foodList {margin-left:10px; line-height:18px; margin-left: 10px; width: 550px;}
+.mealMenu{padding:5px}
+.mealMenu h3{margin:20px 0}
+
+.added{color:#6CA726}
+.check{width:25px}
+.servSize{width:40px}
+.servSizeLabel{width:60px}
+.foodName{width:350px}
+
+#printMe .mealMenu h3{margin:0;}
+
+.meal-intro {margin:10px; float:left; width:50%}
+
+#menuList a, #menuList a:visited{line-height:22px; margin-left:10px; font-size:14px;}
+#menuList a:hover{background:#F5F6D6;}
+
+.border{width:auto; padding:0 0 0 20px;}
+.mealborder{border-bottom:1px dotted #CCC; padding-bottom:20px; width:85%; }
+
+.filterMenu {background: #E1E1E1; border:1px solid #CCC; padding:10px; height:225px; width:200px}
+.filterMenu select{margin:7px 10px 5px 0; width:180px; height:23px;}
+.filterMenu .blue{font-size:14px; font-weight:bold;}
+
+.menu-controls {
+	background:url(/assets/media/images/planners/menu-header.jpg) top left no-repeat;
+	height:72px;
+}
+
+.menu-search {
+	width:250px;
+}
+
+.menu-select {
+	width:250px;
+}
+
+.menu-search, .menu-select {
+	margin:10px 25px;
+}
+
+.exercise .menu-search, .exercise .menu-select {
+	margin:25px 25px 0 25px;
+}
+
+
+.menu-select #MenuID {
+	margin-top:2px;
+}
+
+.print-list {
+	margin:10px;
+}
+
+#menuList{
+	border:1px solid #CCCCCC;
+	height:245px;
+	overflow:auto;
+	width:380px;
+	background:#fff;
+}
+
+#srcMenu, #srcPlan {
+	margin-right:10px;
+	float:left;
+}
+
+#CannedMenu, #CannedPlan{
+	width:410px;
+}
+
+.menuTab, .planTab{position:relative; top:1px; left:0px}
+.menuTab .dayName, .planTab .dayName{padding-top:5px}
+.menuTab a, .planTab a{background:url(/assets/media/images/meal-tab.png) 0 0 no-repeat; width:55px; height:28px; display:block; text-align:center; margin:15px 2px 0 0; }
+.menuTab a:hover, .planTab a:hover {background-position:0 -28px}
+
+#MDay1_tab, #MDay2_tab, #MDay3_tab, #MDay4_tab, #MDay5_tab, #MDay6_tab, #MDay7_tab{margin-top:6px}
+.print{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+#MenuForm h3 {margin-bottom:0}
+
+.mealMenu h3 {
+	margin-top:5px;
+}
+
+#addfrm {
+	border:1px solid #B5B4B2;
+	padding:15px;
+	background:#EBEAE8;
+	width:820px;
+	text-align:right;
+}

@@ -1,0 +1,16 @@
+  table{border:1px solid #000000; width:100%}
+  td{font-size:10pt; text-align:center;}
+  td a{color:black;}
+  th{font-size:10pt;background:lightgray;border:2px outset;}
+  th a{color:black;}
+  .ctls{width:220px;text-align:center;border:1px solid #000000;padding-top:5px;padding-bottom:5px;}
+  body{margin:0px;padding:0px;}
+  .button{
+     text-decoration:none;
+     color:black;
+     background:lightgray;
+     border:2px outset;
+     padding-left:5px;
+     padding-right:5px;
+  }
+

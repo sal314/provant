@@ -1,0 +1,512 @@
+
+
+#HLContent {
+_height: 1%;
+/* width: 580px;
+font-family:Arial, Helvetica, sans-serif; */
+text-align: left;
+color: #333333;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+line-height: 18px;
+font-size: 10pt;
+vertical-align: middle;
+}
+
+#health-library h3 {color:#333}
+
+/* Basic formatting rules */
+#HLContent table {
+border: 1px solid #000;
+border-collapse: collapse;
+margin-top:2px;
+margin-bottom:2px;
+}
+
+#HLContent td, #HLContent th {
+vertical-align: top;
+border: 1px solid #888;
+padding: 0.5em;
+}
+
+#HLContent .Image {
+   float: left;
+   margin: 0.5em 1em 0.5em 0em;
+}
+
+#HLContent a .Image {
+   float: none;
+   display: inline;
+   border: 0px;
+   margin: 0px 6px 0px 6px;
+}
+
+#HLContent .Figure .Image {
+float: none;
+}
+
+#HLContent .Figure h1 {
+font-size:11pt;
+}
+
+#HLContent .FigureCaption, #HLContent .FigureCredit {
+font-size: smaller;
+}
+
+#HLContent ul, #HLContent ol {
+margin:0;
+padding:0;
+clear: both;
+font-size: 12px;
+display: block;
+list-style-position: outside;
+list-style:none;
+padding:none;
+}
+
+#HLContent li {
+	width:80%;
+padding:0 0 20px 0;
+margin:0;
+vertical-align: top;
+text-justify: newspaper;
+line-height: 18px;
+}
+
+#search-next-previous {
+	height:20px;
+	text-align:center;
+	margin:10px;
+}
+
+#search-next-previous a {
+	font-size:12px!important;
+	font-weight:bold;
+}
+
+#HLContent ol li {
+white-space: normal;
+line-height: 18px;
+}
+
+#HLContent li img.Image {/*
+vertical-align: text-top;
+margin-top: 0;
+float: none;
+*/}
+
+#HLContent .IndexSectionHeader, 
+#HLContent .ListHeader {margin: 15px auto;font-size:16px;}
+
+#HLContent p {
+line-height: 18px;
+white-space: normal;
+}
+
+#HLContent ul li a,#HLContent ul li a:hover {
+	font-weight:bold;
+	font-size:18px;
+	text-decoration:underline;
+}
+
+#HLContent div div  ul { 
+	background:#EFEFEF;
+	border:1px solid #ccc;
+	margin:20px 0;
+	padding:5px 0 5px 30px;
+	list-style:lower-roman outside none;
+}
+
+#HLContent div div  ul li {
+	padding:0;
+}
+#HLContent div div  ul li a {
+	font-size:12px!important;
+}
+
+#HGContent h1 {
+margin:20px 0;
+}
+
+
+#HLContent .Figure {
+/*float: left;*/
+width:100%;
+}
+
+#HLContent h1 {
+font-size: 14pt;
+clear: both;
+}
+
+#HLContent h2 {
+color:#444444;
+font-size: 12pt;
+margin-top: 8px
+margin-bottom: 2px;
+clear: both;
+}
+
+
+
+#HLContent small {
+font-size:smaller;
+text-transform:uppercase;
+}
+
+#HLContent sup {
+vertical-align:super;
+font-size:smaller;
+}
+
+#HLContent sub {
+vertical-align:super;
+font-size:smaller;
+}
+
+#HLContent .UseTreatmentSubGroup {
+margin: 0.4em 0em;
+}
+
+#HLContent li.ListHeader {
+font-style: italic;
+}
+
+#HLContent ul.parent {
+margin-left: 15px;
+}
+
+element.style {
+border-bottom-style:none;
+border-left-style:none;
+border-right-style:none;
+border-top-style:none;
+/*float: left;*/
+margin-bottom:6pt;
+margin-left:0pt;
+margin-right:12pt;
+margin-top:6pt;
+}
+
+
+/* LINKS */
+#HLContent .link, #HLContent .link:visited, #HLContent .link:hover{font-size:14px; }
+.AlphaNavigation a {font-size:13px}
+
+#HLContent .ExLink,
+#HLContent .InLink,
+#HLContent .RefLink,
+#HLContent .MailTo
+{
+color: #0066FF;
+text-decoration: none;
+}
+
+#HLContent .link:hover,
+#HLContent .ExLink:hover,
+#HLContent .InLink:hover,
+#HLContent .RefLink:hover,
+#HLContent .MailTo:hover
+{
+text-decoration: underline;
+}
+
+
+.returnLink
+{
+padding: 5px;
+font-family: Georgia, Verdana, Times New Roman;
+font-size: 12px;
+color: #333333;
+line-height: 14px;
+}
+
+.returnLink a
+{
+color: #0066FF;
+text-decoration: none;
+}
+
+
+
+
+/*############# FRONTMATTER ##############*/
+
+#HLContent .FrontMatter {
+clear: both;
+}
+
+#HLContent .FrontMatter .Title {
+line-height:120%;
+}
+
+#HLContent .FrontMatter .SubTitle {
+}
+
+#HLContent .FrontMatter .Byline {
+clear: both;
+}
+
+#HLContent .FrontMatter .Introduction {
+}
+
+#HLContent .FrontMatter .NavigationGroup {
+}
+
+#HLContent .FrontMatter .NavigationGroup .Header {
+}
+
+#HLContent .FrontMatter .version {
+vertical-align: middle;
+clear: both;
+}
+
+
+
+#HLContent .FrontMatter .IndexNav,
+#HLContent .FrontMatter .IndexNav li, {
+margin: 0px auto;
+}
+
+
+/*################ BODY ###################*/
+
+#HLContent .IndexBody,.ArticleBody {
+width: 100%;
+}
+
+#HLContent #column1 {
+width:400px;
+}
+
+#HLContent #column2 {
+width:400px;
+}
+
+#HLContent .IndexBody table {
+   border-collapse: collapse;
+   border: 0px;
+}
+#HLContent .IndexBody table td,th {
+   border: 0px;
+   padding: 0;
+}
+
+#HLContent .AlphaNavigation{
+display:inline;
+font-size:8pt;
+letter-spacing:0;
+}
+
+
+#HLContent .NewsItem {
+}
+
+#HLContent .NewsItem p { 
+margin-bottom:2px;
+}
+
+#HLContent div .NewsBrief {
+margin-top:0px;
+}
+
+#HLContent .NewsNav {
+margin-top:8px; 
+margin-bottom:5px; 
+text-transform: uppercase; 
+font-size:8pt;
+}
+
+#HLContent .NewsNav a {
+text-decoration:underline;
+}
+
+#HLContent .SubHead {
+font-weight: bold;
+}
+
+#HLContent .AltNameGroup {}
+#HLContent .PageNav {}
+#HLContent .IndexNav {}
+
+#HLContent .UseTreatmentSubGroup {
+margin: 0.4em 0em;
+}
+
+#HLContent .AltNameGroup {}
+
+#HLContent .UseTreatmentSubGroup {}
+#HLContent .WireDate {}
+#HLContent .ListSectionHeader {}
+
+#HLContent .GroupHeader {}
+#HLContent .IntroHeader {}
+#HLContent .IndexSectionHeader {}
+#HLContent .SubTitle {}
+  
+#HLContent .Introduction {}
+#HLContent .IntroBody {}
+#HLContent .LeadSection {}
+#HLContent .SideBar {}
+
+#HLContent .IndexSection {
+margin-top: 5px;
+width: 100%;
+}
+
+#HLContent .IndexSection li a {
+float: none;
+}
+
+
+
+
+#HLContent .IndexSectionGroup {
+/*float: left;*/
+width: 49%;
+padding: 0%;
+}
+
+#HLContent .IndexSection a {
+}
+
+
+/*  SECTIONs */
+
+#HLContent .Section { }
+#HLContent .Section .Header { font-weight: bold; font-size: 15px; line-height: 18px;  }
+
+#HLContent .Section .Section { margin: 0px; }
+#HLContent .Section .Section .Header { font-weight: bold; font-size: 12px; }
+
+#HLContent .Section .Section .Section .Header { font-weight: bold; font-size: 11px; }
+
+
+#HLContent .Section .Section h2,
+#HLContent .Section .IndexSection h2 {
+}
+
+
+#HLContent p .first {}
+
+#HLContent .NewsBrief {}
+
+#HLContent .NewsNav {margin-top:8px;margin-bottom:5px;}
+
+#HLContent .Pronunciation {}
+
+#HLContent .SubIndexSection {
+clear: both;
+padding-left: 6px;
+padding-right: 6px;
+}
+
+#HLContent .returnLink {}
+
+/*############# BACKMATTER ##############*/
+
+#HLContent .BackMatter {
+border-top: 1px solid #000;
+margin-top: 2em;
+padding-top: 1em;
+width: 100%;
+font-size: 11px;
+}
+
+#HLContent .BackMatter a {
+color: #0066FF;
+text-decoration: none;
+}
+
+
+#HLContent .References  {
+}
+
+#HLContent .References .Header {
+}
+
+#HLContent .ReferenceItem {
+}
+
+
+#HLContent .Contributors {
+}
+
+#HLContent .Contributors .ContributorHeader {
+}
+
+#HLContent .ContributorItem {
+}
+
+#HLContent .ContributorItem .ContributorLine {
+}
+
+
+
+#HLContent .ResourceGroup {
+}
+
+#HLContent .Resources {
+}
+
+#HLContent .Resources .ResourceHeader {
+}
+
+#HLContent .ResourceSection {
+}
+
+#HLContent .ResourceItem {
+margin: 1em auto;
+}
+
+#HLContent .ResourceItem .Header {
+}
+
+#HLContent .Resource {
+}
+
+#HLContent .ResourceItem p {
+margin: 0px auto;
+}
+
+
+#HLContent .Sources {
+}
+
+#HLContent .Sources .Header {
+}
+
+#HLContent .Source {
+}
+
+#HLContent .Source .Header {
+}
+
+#HLContent .Source p {
+}
+
+
+#HLContent .Copyright {
+}
+
+
+#HLContent .EBSCOLinks {
+list-style: none;
+margin: 1em 0em;
+}
+
+#HLContent .EBSCOLinks li {
+width: auto;
+display: inline;
+margin-left: 0em;
+padding: 0em 0.25em 0em 0em;
+}
+
+
+#HLContent .Disclaimer {
+}
+
+p.ep_reference { text-indent: 0px; font-size: 90%; font-family: Arial, Helvetica, sans-serif; display:block; }
+p.ep_referenceHidden { text-indent: 0px; font-size: 90%; font-family: Arial, Helvetica, sans-serif; display:none; }

@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+/* Food Log */
+.FLContainer {width: 100%;}
+.FLSearch, .FLCalories{background: #ece9e9; border: 1px solid #B4B4B4; padding:20px 10px 5px 10px;}
+.FoodItem {/*	margin-left: 10px;*/}
+
+#foodTable {background:#FFF;}
+#foodTable table{border-collapse:collapse}
+#foodTable tr, #foodTable td, #foodTable th{height:20px; padding:0 0 0 4px; text-align:left}
+.FLCalories{height:35px;}
+.FLCalories span{font-size:14px;}
+.FLMeals span.foodlogDay{display:inline-block; font-size:15px; font-weight:bold;margin:10px auto 5px;}
+.FLSearch input{width:325px; margin-left:5px;}
+
+#FoodList, #menuList{margin:15px 0 10px;
+	border:1px solid #CCCCCC;
+	max-height:245px;
+	overflow:auto;
+	width:auto;
+	background:#fff;
+}
+/*#customFood{margin-left:665px;}*/
+
+
+/*.foodSearch {margin-bottom:10px}*/
+.foodSearch label {margin-top:3px}
+
+.foodBreakdown {border:1px solid #B4B4B4}
+/*.foodUpdate, .foodDelete{float:left}
+
+
+th.amount{width:40px}*/
+
+.FLMeals td{padding:5px}
+.FLMeals td{width:auto;}
+.FLMeals td.amount{width-min:130px;}
+.FLMeals td.actions{width:110px;}
+.FLMeals td.calories{width:80px;}
+.FLMealPop {position:absolute;background-color:#FFF;border:1px solid #000;width:150px;height:200px;left:200px;top:250px;}
+.FLMeals input {height:22px; background:#fff url(/assets/media/images/input-bg.jpg)repeat-x; border:1px solid #c3c3c3; border-bottom:1px solid #ddd; border-top:1px solid #7c7c7c; margin-right:5px; vertical-align:middle;}
+
+.foodCal img{vertical-align:middle}
+.foodCal{line-height:22px}
+#customFood{text-align:right; margin:10px 5px 0 0}
+#mealList{margin:10px 0px 15px 10px}
+#mealList a{margin-bottom:5px; display:inline-block;}

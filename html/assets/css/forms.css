@@ -1,0 +1,43 @@
+.fieldgroup label {display:inline-block}
+
+.inline-field {margin-bottom:10px}
+.inline-field label {display:inline-block; width:150px; font-weight:bold}
+
+.health-question {border-bottom:1px dotted #CCC; padding:10px; margin-bottom:10px}
+.health-question .question{font-size:14px; margin-bottom:4px; font-weight:bold}
+
+div.question {margin:10px 0}
+
+/*
+.health-question .history {width:100%; border:1px dotted #ccc}
+
+.health-question td {text-align:center; height:20px; vertical-align:middle;}	
+	.health-question tr.odd{background:#efefef!important; }
+	
+.health-question td.question {text-align:left; white-space:nowrap; border:none; font-size:1em; margin-bottom:5px}
+*/
+.health-question .generic tr.odd{background:none!important}
+.health-question .generic td{width:100px; text-align:center;}
+.health-question .generic th{font-weight:normal}
+
+input[type=text]:focus{background:#f5f6d6;}
+
+.kits .last,
+#profile-form .last {
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+#profile-form .stack {font-weight:bold}
+
+#profile-form label,
+.message-center label,
+.kits label{margin-left:0!important; font-weight:bold}
+
+.kits input[type=text]{width:200px} 
+#profile-form .column {margin-left:20px!important}
+
+#profile-form #dob_day,
+#profile-form #dob_year{margin-left:10px}
+
+.kits .stack{margin-right:5px;

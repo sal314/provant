@@ -1,0 +1,89 @@
+/** These may be changed but need to be in the final css **/
+
+.lw_window{
+  position:absolute;
+  z-index: 160;
+  /*left:650px!important;*/
+}
+.lw_titlebar{
+	background: #EFEFEF;
+	border-bottom:solid 1px #CCC;
+	height: 36px!important;
+	border-top:solid 3px #444; 
+	border-right:solid 3px #444; 
+	border-left:solid 3px #444;
+}
+.lw_titlebar_text{
+  padding:5px;
+}
+.lw_close_btn{
+        float:right;
+        margin-right:0px;
+        margin-top:5px;
+        margin-bottom:5px;
+        cursor:mouse;
+        cursor:hand;
+        cursor:pointer;
+}
+
+.lw_close_btn_img{
+}
+.lw_close_btn_text{
+	margin-top: 1px;
+	margin-right:3px;
+}
+
+.lw_content{
+  border-right:solid 3px #444; 
+  border-bottom:solid 3px #444;
+  border-left:solid 3px #444;
+}
+.lw_mask{
+   position:fixed;
+   left:0px;
+   top:0px;
+   background-color:#000000;
+   filter:alpha(opacity=50);
+   -moz-opacity:0.5;
+   -khtml-opacity: 0.5;
+   opacity: 0.6;
+   min-width:100%;
+   min-height:100%;
+   width:100%;
+   display:block;
+   z-index: 150;
+}
+
+div#lw_loading{
+        z-index:160;
+}
+.lw_loading{
+        padding-top:20px;
+        background:white;
+        text-align:center;
+        color:black;
+        font-weight:bold;
+}
+
+A.z_cal_marked_day{
+        font-weight:bold;
+        color:green;
+}
+
+
+.my_drop{
+	border: 1px solid black;
+	background-color:white;
+}
+
+.my_drop_option{
+	color:blue;
+}
+
+.ddo_selected{
+ color:green;
+}
+
+.lw_window{}
+
+.lw_window .lw_titlebar{border-bottom: 1px solid #CCC;}
