@@ -1,0 +1,50 @@
+<tpt:body>
+<div class="message-center inner-content">
+	<div class="${classname}">
+	<div id="section-header">
+		<h1>Message Center<br/><small>Sent Items</small></h1>
+	</div>
+	
+
+	<div class="w-75p right">
+
+			
+		<table class="datagrid txt-left">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Recipient</th>
+					<th>Subject</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="messages" as="message">
+					<tr  class="txt-left">
+						<td class="message-date"><tpt:formatvar id="message[date_added]" op="datetime" arg="m/d/Y"/></td>
+						<td class="message-sender">${message[recipient_name]}</td>
+						<td class="message-subject"><a href="/Messages/View/${message[id]}">${message[subject]}</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		 <div class="txt-right">
+			<tpt:include id="interface/message_pager.tpt" importvars="reference" />
+		</div>
+	</div>
+		
+
+	<div class="w-25p left">
+		<div class="messageNav">
+			<ul>
+				<li><a href="/Messages/Compose">Compose</a></li>
+				<li><a href="/Messages/Inbox">Inbox</a></li>
+				<li class="active">Sent Messages</li>
+				<li><a href="/Messages/Archive">Archived Messages</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	</div>
+	<div class="clear"> </div>
+</div>
+</tpt:body>

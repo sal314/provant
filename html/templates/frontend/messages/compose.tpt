@@ -1,0 +1,132 @@
+<tpt:body>
+<script type="text/javascript" src="/common/js/zmedia/z_dynamic_dropdown.js"></script>
+<div class="message-center inner-content">
+	<div class="${classname}">
+	<div id="section-header">
+		<h1>Message Center<br/><small>Compose</small></h1>
+	</div>
+	
+
+	<div class=" right messageBox">
+		<form method="post" action="/Messages/Submit/${mode}" onsubmit="return validateMessage()">
+		<div class="formElement question">
+			<tpt:if id="is_hc" test="EQ" value="true">
+				<label><span>Company:</span><br />
+				<select name="company_id" onchange="changeCompany();">
+					<option value="0">All Companies</option>
+					<tpt:html type="select-options" data="${companies}" selected="${_POST[company_id]}" />
+				</select></label><br /><br />
+				<label><span>To:</span><br /><input type="text" id="user" maxlength="100" autocomplete="off" value="${to_name}"/></label>
+				<input type="hidden" name="to" id="to" value="${_POST[to]}" />
+			</tpt:if>
+			<tpt:else>
+				<label><span>To:</span><br />
+					<tpt:if id="mode" test="eq" value="reply">
+						${_POST[sender_name]}<br/>
+						<input type="hidden" name="to" id="to" value="${_POST[to]}" />
+					</tpt:if>
+					<tpt:else>
+						<select name="to" id="to">
+							<tpt:html type="select-options" data="${to_select}" selected="${to}"/>
+						</select><br/>
+					</tpt:else>
+				</label>
+			</tpt:else>
+		</div>
+		<div class="formElement question">
+			<label><span>Subject:</span><br />
+				<input type="text" id="subj" name="subject" maxlength="100" style="width:610px" value="${_POST[subject]}"/>
+			</label>
+		</div>
+		<div class="formElement question">
+			<label><span>Message:</span><br />
+			<textarea name="message" id="message" rows="10" cols="50" style="width:610px">${_POST[message]}</textarea>
+			</label>
+		</div>
+
+
+			<div id="send-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+
+
+		
+		<div class="clear"> </div>
+		</form>
+		
+		<tpt:if id="is_hc" test="EQ" value="true">
+		<script type="text/javascript">
+		var p={
+		  dropdownClassName:"my_drop",
+		  dropdownOptionClassName:"my_drop_option",
+		  target:"to",
+		  url:"/Messages/FindRecipient/${_POST[company_id]}",
+		  align:"left",
+		  short:"none"
+		};
+		ZMEDIA.DynamicDropDown.createDropDown(document.getElementById("user"),p);
+
+		function validateMessage(e){
+		  if(document.getElementById("to").value=="0"){
+			ZMEDIA.DynamicDropDown.resetDropDown("user");
+			alert("You must choose a recipient");
+			return false;
+		  }
+		  
+		  var m=document.getElementById("message");
+		  m.value=m.value.trim();
+		  
+		  if(m.value==""){
+			alert("The message can not be blank.");
+			return false; 
+		  }
+			return true;
+		}
+
+		function changeCompany() {
+			var frm = document.forms[0];
+			frm.action = "/Messages/Compose"
+			frm.submit();
+		}
+		</script>
+		</tpt:if>
+		<tpt:else>
+		<script type="text/javascript">
+	
+		function validateMessage(e){
+		  if(document.getElementById("to").value==""){
+			alert("You must choose a recipient");
+			return false;
+		  }
+		  
+		  var m=document.getElementById("message");
+		  m.value=m.value.trim();
+		  
+		  if(m.value==""){
+			alert("The message can not be blank.");
+			return false; 
+		  }
+			return true;
+		}
+		</script>
+		
+		
+		</tpt:else>
+	</div>
+
+	<div class="w-25p left">
+		<div class="messageNav">
+			<ul>
+				<li class="active">Compose</li>
+				<li><a href="/Messages/Inbox">Inbox</a></li>
+				<li><a href="/Messages/Sent">Sent Messages</a></li>
+				<li><a href="/Messages/Archive">Saved Messages</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	</div>
+	<div class="clear"> </div>
+</div>
+	
+</tpt:body>

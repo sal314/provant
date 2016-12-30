@@ -1,0 +1,83 @@
+<tpt:body>
+<script language="javascript" type="text/javascript">
+	function DeleteMessages(){
+		if(confirm('Are you sure you want to delete the selected message(s)?')){
+			var frmName = window.document.frmMsg;
+			frmName.method="POST";
+			frmName.action="${delete_url}";
+			frmName.submit();
+		}
+	}
+</script>
+<div class="message-center inner-content">
+	<div class="${classname}">
+	<div id="section-header">
+		<h1>Message Center<br/><small>Saved Messages</small></h1>
+	</div>
+<tpt:if id = "messages" test = "GT" value = "0">
+<div class="w-75p right">
+		
+		<table class="datagrid txt-left">
+		 <form name="frmMsg" id="frmMsg">
+			<thead>
+				<tr>
+					<th> </th>
+					<th>Date</th>
+					<th>Sender</th>
+					<th>Subject</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tpt:foreach id="messages" as="message">
+				<tr>
+					<td><input type="checkbox" name="msg_${message.__index__}" id="msg_${message.__index__}" value="${message[id]}" /></td>
+					<td class="message-date"><tpt:if id="message[recipient_status]" test="EQ" value="0">NEW</tpt:if>
+					<tpt:formatvar id="message[date_added]" op="datetime" arg="m/d/Y"/></td>
+					<td class="message-sender">${message[sender_name]}</td>
+					<td class="message-subject"><a href="/Messages/View/${message[id]}">${message[subject]}</a></td>
+				</tr>
+			</tpt:foreach>
+			</tbody>
+		</form>
+		</table>		
+		
+		<br />
+		<div class="txt-right pagination right">
+			<tpt:include id="interface/message_pager.tpt" importvars="reference" />
+		</div>	
+	
+			
+		<div class="left" id="delete-button" style="width:110px;">
+			<a href="#nogo" target="_self" class="next" onclick="javscript: DeleteMessages();">Delete</a>
+		</div>	
+		
+		<div class="clear"> </div>
+		
+		
+		
+	</div>
+</tpt:if>
+<tpt:else>
+<div class="nomessage w-75p right">
+	<p>You have no saved messages</p>
+</div>
+</tpt:else>
+
+	<div class="w-25p left">
+		<div class="messageNav">
+			<ul>
+				<li><a href="/Messages/Compose">Compose</a></li>
+				<li><a href="/Messages/Inbox">Inbox</a></li>
+				<li><a href="/Messages/Sent">Sent Messages</a></li>
+				<li class="active">Saved Messages</li>
+				
+			</ul>
+		</div>
+	</div>
+	
+	</div>	
+	
+	<div class="clear"> </div>
+</div>
+
+</tpt:body>

@@ -1,0 +1,15 @@
+<tpt:body>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<div style="background:#FFF">
+		<a href="javascript:this.frames['shoppingList'].print();" class="submit right">Print</a><br />
+		<iframe src="/MealPlan/printShoppingList/${menuID}/1" name="shoppingList" scrolling="no" frameborder="0" width="100%" height="${list[vSize]}">
+		</iframe>
+		</div>
+		<div class="clear"> </div>
+	</body>
+</html>
+</tpt:body>

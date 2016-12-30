@@ -1,0 +1,56 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Meal Planner<br /><small>Resources and Tools</small></h1>
+	</div>
+	
+	<div class="w-25p right">
+		<div class="stack last">
+			<h3>Select a Tracker</h3>
+			<div class="sidebar">
+				<ul>
+				<tpt:foreach id="tracker" as="t">
+					<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+				</tpt:foreach>
+<!--
+					<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+					<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+					<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+					<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+					<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+					<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+					<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+				</ul>
+			</div> 
+		</div>
+	</div>
+
+	<div class="w-75p left">
+		<div class="mealMenu border">
+			<tpt:if id="menuData" test="HASELEMENTS">
+				<div id="submit-button" class="right print-list">
+					<a href="javascript:void(processPrint());" class="submit right">Print This Menu</a><br />
+					<a href="javascript:showWin('/MealPlan/printShoppingList/${menuID}/0');" class="submit right">Shopping List</a>
+				</div>
+				<div class="meal-intro">
+					Add foods from this menu that you&amp;acute;ve eaten to your food log by clicking on the food name below.
+				</div>
+				<div class="clear"> </div>
+				<div id="printMe">
+				<tpt:include id="/frontend/mealplan/show_menu.tpt" importvars="reference" />
+				</div>
+				<!--<iframe src="/MealPlan/ShowMenu/${menuID}" name="userMenu" scrolling="no" frameborder="0" width="100%" height="${menuData[vSize]}px">
+				</iframe>-->
+			</tpt:if>
+		</div>
+	</div>
+</div>
+
+	<div class="clear"> </div>
+</tpt:body>

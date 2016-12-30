@@ -1,0 +1,160 @@
+<tpt:body>
+	<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+	<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content tracker" id="Container">
+	<div id="section-header">
+		<h1>Meal Planner<br /><small>Resources and Tools</small></h1>
+	</div>
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+
+	<div class="left w-75p">
+
+	<form id="SelectMenuForm" method="post" action="/MealPlan/Display">	
+		<div class="menu-controls">
+			<div class="menu-search left">
+				<h3 class="left">Search for a Menu</h3>
+			</div>
+			<div class="menu-select right">
+				<h3 class="left">Show A Saved Menu</h3><br />
+				<a href="#" onclick="getMenuDetails(); return false;" class="next right">Next</a>
+				<select class="right" name="MenuID" id="MenuID">
+					<tpt:html type="select-options" data="${uMenus}" />
+				</select>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	<!-- <p>Filter by type of menu, number of days, number of calories, or simply select a menu from the list below. </p> -->
+	</form>
+
+		<div class="MPSource">
+	
+			<div id="menuList" class="right">
+				<tpt:setvar id="idx" value="1" />
+				<tpt:foreach id="srcMenus" as="sm">
+				  <input type="hidden" id="Midx${idx}" value="${sm[MenuTemplateID]}" />
+					<input type="hidden" id="Mtn${sm[MenuTemplateID]}" value="${sm[MenuTemplateName]}" />
+					<input type="hidden" id="Mtc${sm[MenuTemplateID]}" value="${sm[Category]}" />
+					<input type="hidden" id="Mtd${sm[MenuTemplateID]}" value="${sm[Days]}" />
+					<input type="hidden" id="Mtk${sm[MenuTemplateID]}" value="${sm[Calories]}" />
+					<tpt:modvar id="idx" op="++" />
+				</tpt:foreach>
+	
+				<div id="MLContent">
+					<tpt:foreach id="srcMenus" as="sm">
+						<a href="#" onclick="selectMenu(${sm[MenuTemplateID]}); return false;"><span>${sm[MenuTemplateName]}</span></a><br />
+					</tpt:foreach>
+				</div>
+			</div>
+			<div class="filterPlans filterMenu left">
+				<div class="blue">Filter By:</div>
+				<br />
+				<select name="MenuType" id="MenuType">
+					<tpt:html type="select-options" data="${menuType}" selected="${MT}" />
+				</select><br />
+				<select name="MenuDays" id="MenuDays">
+					<tpt:html type="select-options" data="${menuDays}" selected="${MD}" />
+				</select><br />
+				<select name="MenuCalories" id="MenuCalories">
+					<tpt:html type="select-options" data="${menuCalories}" selected="${MC}" />
+				</select><br />
+				
+				<br />
+				<div id="submit-button" class="left">
+					<a href="#" onclick="filterMenus(); return false;" class="submit next">Submit</a>
+				</div>
+	
+			</div>
+			<div class="clear"> </div>
+			
+			<input type="hidden" name="selectedDay" id="selectedDay" />
+			<input type="hidden" name="selectedMeal" id="selectedMeal" />
+			<input type="hidden" name="selectedSourceType" id="selectedSourceType" />
+		</div>
+	</div>
+	<div class="clear"> </div>
+	
+	<div>		
+		<p>To create your custom meal plan select either a day or a meal from the pre-defined menu in the right column.  Move it to your meal plan by selecting the option under the chosen day in the left column.</p>
+	</div>
+
+	<form method="post" id="MenuForm" action="/MealPlan/SaveUserMenu">	
+	<div class="menuHolder">
+
+		<div id="srcMenu">
+		</div>
+
+		<div class="left">
+		
+		<h3>Custom Menu: <input type="text" name="MenuName" id="UserMenuName" value="${UserMenuName}" /></h3>
+		<div class="menuTab">
+			<tpt:setvar id="dayNum" value="1" />
+			<tpt:setvar id="color" value="#d1d1d1" />
+			<tpt:while id="dayNum" test="LE" value="7">
+				<div id="UMDay${dayNum}_tab" style="float:left;"><a href="#" onclick="displayUserMeal(${dayNum}); return false;"><span class="dayName">Day ${dayNum}</span></a></div>
+				<tpt:modvar id="dayNum" op="++" />
+				<tpt:setvar id="color" value="#b3b3b3" />
+			</tpt:while>
+		</div>
+		<div class="clear"> </div>
+
+		<div class="border" style="width:400px">
+			<tpt:setvar id="dayNum" value="1" />
+			<tpt:setvar id="display" value="block" />
+
+			<tpt:while id="dayNum" test="LE" value="7">
+				<tpt:setvar id="mealNum" value="1" />
+	
+				<div id="UMDay${dayNum}_content" style="display:${display};">
+				<a href="#" onclick="moveMeal(${dayNum}); return false;"><span class="dayName">Click here to add current selection</span></a>
+					<tpt:foreach id="targetMeals" as="Meal" class="foodList">
+						<span class="mealName">${Meal[MealName]}</span><br />
+						<div id="food${dayNum}_${mealNum}" > </div>
+						<tpt:modvar id="mealNum" op="++" />
+					</tpt:foreach>
+				</div>
+	
+				<tpt:modvar id="dayNum" op="++" />
+				<tpt:setvar id="display" value="none" />
+			</tpt:while>
+			<input type="hidden" name="UMDay" id="UMDay" value="1" />		
+		</div>
+		
+	</div>
+
+	<div class="clear"> </div>
+	</div>
+	<div id="save-button-grey">
+		<a href="javascript:void(0);" onclick="submitMenuForm();" class="next right">Next</a>
+	</div>
+	</form>
+</div>
+
+<div class="clear"> </div>
+<script type="text/javascript">
+	displayUserMeal(1); // AW: Call out first meal display
+</script>
+
+</tpt:body>

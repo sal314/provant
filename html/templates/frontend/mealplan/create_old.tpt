@@ -1,0 +1,140 @@
+<tpt:body>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Meal Planner<br /><small>Resources and Tools</small></h1>
+	</div>
+	
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Create">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+					</ul>
+				</div> 
+			</div>
+		</div>
+	
+	<div class="w-75p left">
+	<p>Use the Meal Planner to help you achieve and maintain a healthy diet. Choose from among the Heart Healthy, No Restrictions, Fast &amp; Convenient, Low Glycemic, Low Dairy, Vegetarian and Vegan meal plans, for the plan that best fits your dietary requirements. </p>
+
+	<h3>Search for a Menu</h3><br />
+	
+	<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+	<div class="MPSource">
+	<form method="post" action="/MealPlan/Create" id="filterForm">
+	  	<div class="filterMenu">
+			<div class="blue">Filter By:</div>
+		  
+			<select name="MenuType" class="left dropdown" >
+				<tpt:html type="select-options" data="${menuType}" selected="${MT}" />
+			</select>
+			<select name="MenuDays" class="left dropdown">
+				<tpt:html type="select-options" data="${menuDays}" selected="${MD}" />
+			</select>
+			<select name="MenuCalories" class="left dropdown">
+				<tpt:html type="select-options" data="${menuCalories}" selected="${MC}" />
+			</select>
+			
+			<div id="submit-button" class="left">
+				<a href="#" class="nextstep submit next">Submit</a>
+			</div>
+			
+			<div class="clear"> </div>
+		</div>
+		
+		<div class="clear"> </div>
+		<br />
+		
+		<tpt:if id="srcMenus" test="HASELEMENTS">
+		<h3>Or, choose a menu from the list below</h3>		
+		<div id="menuList">
+
+			<tpt:foreach id="srcMenus" as="sm">
+				<a href="#" onclick="selectMenu(${sm[value]}); return false;">${sm[display]}</a><br />
+			</tpt:foreach>
+		</div>
+		</tpt:if>
+	</form>
+	<div class="mealMenu border">
+	<tpt:if id="menuData" test="HASELEMENTS">
+	
+		<h3>${calories} Calorie ${ndays} Day ${category} Menu</h3>
+		<tpt:setvar id="daynum" value="1" />
+		<tpt:setvar id="mealnum" value="1" />
+		<tpt:foreach id="menuData" as="srcDay">
+		
+			<a href="javascript:void(0);" onclick="highlightSource('day', ${daynum});"><span id="srcDayName${daynum}" class="dayName">${srcDay[name]}</span></a>
+			<input type="hidden" id="srcDayHidden${daynum}" value="${srcDay[id]" />
+			<tpt:modvar id="daynum" op="++" />
+
+		<div class="mealborder">
+			<tpt:foreach id="srcDay[meals]" as="srcMeal">
+				<a href="javascript:void(0);" onclick="highlightSource('meal', ${mealnum});"><span id="srcMealName${mealnum}" class="mealName">${srcMeal[name]}</span></a><br />
+				<input type="hidden" id="srcMealHidden${mealnum}" value="${srcMeal[id]" />
+
+				<tpt:setvar id="foodnum" value="1" />
+				<tpt:foreach id="srcMeal[foods]" as="srcFood">
+					<input type="hidden" name="srcFood${mealnum}_${foodnum}" value="${srcFood[FoodID]}" />
+					<input type="hidden" name="srcServ${mealnum}_${foodnum}" value="${srcFood[ServingSize]}" />
+					<input type="hidden" name="srcUnit${mealnum}_${foodnum}" value="${srcFood[UnitID]}" />
+					<span class="foodList">${srcFood[text]}</span><br />
+					<tpt:modvar id="foodnum" op="++" />
+				</tpt:foreach>
+
+				<tpt:modvar id="mealnum" op="++" />
+			</tpt:foreach>
+		</div>	
+			<br />
+		</tpt:foreach>
+		
+		<input type="hidden" name="selectedSource" id="selectedSource" />
+		<input type="hidden" name="selectedSourceType" id="selectedSourceType" />
+	</tpt:if>
+	</div>
+	</div>
+	
+	<div class="clear"> </div>
+
+<!-- [CDATA[
+	Part II - get the user's saved menus
+
+	<div class="MPTarget">
+		<select name="SavedMenu" onchange="savedSelected();">
+			<option value="0"> Select a menu </option>
+			<tpt:html type="select-option" data="${savedMenus}" />
+		</select>
+		<br />
+		<tpt:if id="menu" test="HASELEMENTS">
+			<span class="menuName">${menu[name]}</span><br />
+			<tpt:foreach id="menu[days]" as="day">
+				<span class="dayName">${day[name]}</span><br />
+				<tpt:foreach id="day[meals]" as="meal">
+					<span class="mealName">${meal[name]}</span><br />
+					<tpt:foreach id="meal[foods]" as="food">
+						<span class="foodList">${food[text]}</span><br />
+					</tpt:foreach>
+				</tpt:foreach>
+			</tpt:foreach>
+			<br />
+			<a href="javascript:void(0);" onclick="printShopping()">Print Shopping List</a><br />
+		</tpt:if>
+	</div>
+]]-->
+
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<div class="clear"> </div>
+
+</tpt:body>

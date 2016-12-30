@@ -1,0 +1,31 @@
+<tpt:body>
+	<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+	<script type="text/javascript" src="/common/js/zmedia/zmedia.js"></script>
+
+	<div class="mealMenu border" style="background-color:#efefefp;font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+">
+		<h3>Menu: ${menuName}</h3>
+	
+		<tpt:foreach id="menuData[days]" as="Day">
+			<span class="dayName">${Day[name]}</span>
+			<div class="mealborder">
+				<tpt:foreach id="Day[meals]" as="Meal">
+					<span class="mealName">${Meal[name]}</span><br />
+					<table class="foodList" border="0" style="background-color:#efefef">
+					<tpt:foreach id="Meal[foods]" as="Food">
+						<tr>
+							<td id="check${Day[id]}_${Meal[id]}_${Food[FoodID]}">&amp;nbsp;</td>
+							<td>${Food[SrvSize]}</td>
+							<td>${Food[UnitName]}</td>
+							<td>&amp;nbsp;&amp;nbsp;&amp;nbsp;</td>
+							<td><a href="#" title="Add to Food Log" onclick="addToFoodLog(${Day[id]}, ${Meal[id]}, ${Food[FoodID]}, ${Food[SrvSize]}, ${Food[UnitID]}); return false;">${Food[FoodName]}</a></td>
+						</tr>
+					</tpt:foreach>
+					</table>
+				</tpt:foreach>
+			</div>	
+			<br />
+		</tpt:foreach>
+	</div>
+</tpt:body>

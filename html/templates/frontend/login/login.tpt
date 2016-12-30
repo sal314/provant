@@ -1,0 +1,111 @@
+<tpt:body>
+<div class="wrapper">
+	
+	<div class="loginHeader">
+		<div class="loginProvant right">
+			<img src="/assets/media/images/login/provant.jpg" alt="Login"></img>
+		</div>
+		
+		<div class="loginLogo left">
+			<tpt:if id="logo" test="NOTEMPTY">
+				<img src="/zImageCache/Scale/500/${logo_height}/${logo}" alt="Company Logo"></img>
+			</tpt:if>
+			<tpt:else>
+				<img src="/uploads/image/logo.jpg" alt="Default Logo"></img>
+			</tpt:else>
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+	
+	<div class="loginColor">
+	</div>
+	
+	<div class="loginShade">
+	</div>
+	
+	<div class="loginpage-body">
+		<div class="loginpage-container">
+		
+			<div class="loginpage-right right">
+				<div class="loginImage">
+					<tpt:if id="login_img" test="NOTEMPTY">
+					<img src="/uploads/image/${login_img}" alt="Login"></img>
+					</tpt:if>
+					<tpt:else>
+					<img src="/uploads/image/default_login.png" alt="Login"></img>
+					</tpt:else>
+				</div>
+			</div>
+		
+			<div class="loginpage-left left">
+				<div class="login-content">
+					<div class="loginpage-welcome">
+						<span style="font-size:25px">Welcome!</span><br />
+						<span style="font-size:15px"> Login to your account</span><br />
+					</div>
+				
+					<div class="login-area">
+						<form name="${modelname}" id="${modelname}" method="post" action="/Landing/Login" class="index_${modelname}">			
+							<tpt:if id="authenticated" test="EQ" value="false">
+							   <div class="margin5">
+								<label>User Name:<br /><input type="text" name="login" value="${login}"/></label><br />
+								</div>
+								<div class="margin5">
+								<label>Password:<br /><input type="password" name="password"/></label><br />
+								<a href="/Landing/ForgotPassword">Forgot Password</a>
+								</div>
+							   <br />
+							
+								<div class="login-button right">
+								<input type="submit" id="loginButton" name="Submit" value="Sign In" />
+									
+								</div>
+							
+								<div class="contact left">
+									<a href="/Landing/ContactUs/">Contact us</a>
+								</div>
+	
+								<div class="clear"> </div>
+							</tpt:if>	
+							<tpt:if id="error_message" test="NOTEMPTY">
+								<br /><div style="color:red">${error_message}</div><br/>
+							</tpt:if>			
+						</form>
+					</div>
+				</div>
+			</div>
+		
+			<div class="clear"> </div>
+		
+		</div>
+	
+	</div>
+	
+	<div class="push"> </div>
+
+</div>
+
+
+<div class="loginFooter">
+
+	<div class="loginColor">
+	</div>
+	
+	<div class="loginShade">
+	</div>
+
+
+	<div class="loginCopy">
+	<p>&amp;copy; 2010 Provant all rights reserved. &amp;nbsp;<a href="/Page/Privacy/">Privacy Policy</a> &amp;nbsp;| <a href="/Page/Terms/"> &amp;nbsp;Terms of Use </a> &amp;nbsp; |&amp;nbsp; <a href="/Page/Legal/">Legal Notice </a> &amp;nbsp;| &amp;nbsp;<a href="#">About Us</a> &amp;nbsp;|  &amp;nbsp;<a href="#">Contact Us</a></p>
+	</div>
+	
+	
+</div>
+
+</tpt:body>		
+
+
+
+
+

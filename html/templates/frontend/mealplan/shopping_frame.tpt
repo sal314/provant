@@ -1,0 +1,20 @@
+<tpt:body>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<h3>Shopping List</h3>
+	<br />
+	<table border="0">
+	<tpt:foreach id="list[items]" as="fl">
+		<tr>
+			<td width="7%">${fl[Qty]}</td>
+			<td width="15%">${fl[Unit]}</td>
+			<td>${fl[Name]}</td>
+		</tr>
+	</tpt:foreach>
+	</table>
+	</body>
+</html>
+</tpt:body>

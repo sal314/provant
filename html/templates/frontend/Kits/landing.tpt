@@ -1,0 +1,178 @@
+<tpt:body>
+	<div class="inner-content kits">
+		<div id="section-header">
+			<h1>Screening Kits<br/><small> </small></h1>
+		</div>
+
+		<div class="right">
+			<img src="/assets/media/images/screeningkits/screeningkits-img.jpg" alt="Screening Kits" />
+		</div>
+
+		<div class="wleft left">
+		<div class="button-content">
+			<tpt:foreach id="modules" as="mod">
+
+					<tpt:if id="mod[class_name]" test="EQ" value="HomeHealthScreeningKit">
+						<tpt:switch id="hhsk">
+							<tpt:case value="1">
+								<div class="stack click">
+									<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+									<div class="intro">
+										<a href="/HomeHealthScreeningKit/RequestKit" class="no-pointer">Request Home Health Screening Kit</a>
+										<p>Complete the required fields to submit your request for a lab voucher kit. You will receive your kit within 5 business days of receipt of your request. </p>
+									</div>
+									
+									<div class="clear"> </div>
+								</div>
+							</tpt:case>
+							<tpt:case value="2">
+								<tpt:if id="hhsk_confirm_reception" test="EQ" value="true">
+									<div class="stack">
+										<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+										<div class="intro">
+											<form method="post" action="/HomeHealthScreeningKit/Received">
+												<input type="radio" value="1" name="recieved" />
+												I have recieved my Home Health Screening Kit
+												<br />
+												<input type="radio" value="0" name="recieved" />
+												I have not recieved my Home Health Screening Kit
+												<input type="submit" value="Update Status" />
+											</form>
+										</div>
+											
+										<div class="clear"> </div>
+									</div>
+								</tpt:if>
+								<tpt:else>
+									<div class="stack">
+										<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+										<div class="intro">
+											<span style="font-size:16px;"><u>Home Health Screening Kit Status</u></span><br />
+											<p>Home Health Screening Kit Has Been Ordered</p>
+										</div>
+										
+										<div class="clear"> </div>
+									</div>
+								</tpt:else>
+							</tpt:case>
+							<tpt:case value="3">
+							<div class="stack">
+								<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">
+									<span style="font-size:16px;"><u>Home Health Screening Kit Status</u></span><br /><br />
+									Awating results
+								</div>
+								
+								<div class="clear"> </div>
+							</div>
+							</tpt:case>
+							<tpt:case value="4">
+							<div class="stack">
+								<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">				
+									<a href="/HomeHealthScreeningKit/Index" class="no-pointer">Home Health Screening Kit Screening Results</a>
+									<p>View your results.</p>
+								</div>
+								
+								<div class="clear"> </div>
+							</div>				
+							</tpt:case>
+							<tpt:case value="5">
+								<tpt:if id="hhsk_confirm_reception" test="EQ" value="true">
+									<div class="stack">
+										<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+										<div class="intro">
+											<form method="post" action="/HomeHealthScreeningKit/Received">
+												<input type="radio" value="1" name="recieved" />
+												I have recieved my Home Health Screening Kit
+												<br />
+												<input type="radio" value="0" name="recieved" />
+												I have not recieved my Home Health Screening Kit
+												<input type="submit" value="Update Status" />
+											</form>
+										</div>
+
+										<div class="clear"> </div>
+									</div>
+								</tpt:if>
+								<tpt:else>
+									<div class="stack">
+										<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+										<div class="intro">
+											<span style="font-size:16px;"><u>Home Health Screening Kit Status</u></span><br />
+											<p>We are sorry for the delay. Your Home Health Screening Kit Has Been Reordered</p>
+										</div>
+
+										<div class="clear"> </div>
+									</div>
+								</tpt:else>
+							</tpt:case>
+
+						</tpt:switch>			
+					</tpt:if>
+					<tpt:elseif id="mod[class_name]" test="EQ" value="LabVoucherKit">
+						<tpt:switch id="lvk">
+							<tpt:case value="1">
+							<div class="stack click">
+								<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">
+									<a href="/LabVoucherKit/RequestKit" class="no-pointer">Request Lab Voucher Kit</a>
+									<p>Complete the required fields to submit your request for a lab voucher kit. You will receive your kit within 5 business days of receipt of your request.</p>
+								</div>
+							</div>
+							</tpt:case>
+							<tpt:case value="2">
+							<div class="stack">
+								<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">
+									<tpt:if id="lvk_confirm_reception" test="EQ" value="true">
+										<form method="post" action="/LabVoucherKit/Received">
+											<input type="radio" value="1" name="recieved" />
+											I have recieved my Lab Voucher Kit
+											<br />
+											<input type="radio" value="0" name="recieved" />
+											I have not recieved my Lab Voucher Kit
+											<input type="submit" value="Update Status" />
+										</form>
+									</tpt:if>
+									<tpt:else>
+										<a href="#" class="no-pointer">Request Lab Voucher Kit</a><br />
+										<p>Lab Voucher Kit Has Been Ordered</p>
+									</tpt:else>
+									
+									<div class="clear"> </div>
+								</div>
+							</div>
+							</tpt:case>
+							<tpt:case value="3">
+							<div class="stack">
+							<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">
+									<a href="#" class="no-pointer">View Lab Voucher Kit Results</a>
+									<p>Awaiting results</p>
+								</div>
+								
+								<div class="clear"> </div>
+							</div>
+							</tpt:case>
+							<tpt:case value="4">	
+							<div class="stack click">
+								<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+								<div class="intro">	
+									<a href="/HomeHealthScreeningKit/Index" class="no-pointer">View Lab Voucher Kit Results</a>
+									<p>View your results.</p>			
+								</div>
+								
+								<div class="clear"> </div>
+							</div>
+							</tpt:case>
+						</tpt:switch>
+					</tpt:elseif>
+				<div class="clear"> </div>
+			</tpt:foreach>
+		</div>
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+</tpt:body>

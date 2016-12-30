@@ -1,0 +1,4 @@
+<tpt:body>
+The following email has been submitted from the contact us form:<br/>
+${message} 
+</tpt:body>

@@ -1,0 +1,39 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+<div class="inner-content mealCreate" style="height:300px;">
+	<div id="section-header">
+		<h1>Meal Planner<br /><small>Resouces and Tools</small></h1>
+	</div>
+
+<br />
+	<tpt:if id="uMenus" test="HASELEMENTS">	
+	
+		<form id="SelectMenuForm" method="post" action="/MealPlan/Display">
+	
+			<div class="left" id="SelectMenu">
+				<h3>Show Your User Defined Menu</h3>
+				<label>Menu to Show:<br />
+					<select name="MenuID" id="MenuID">
+						<tpt:html type="select-options" data="${uMenus}" />
+					</select>
+				</label>
+				<br /><br />
+				<a href="#" onclick="getMenuDetails(); return false;" class="next">Go</a>
+			</div>
+	
+		</form>
+	</tpt:if>
+
+	<form id="CreateMenuForm" method="post" action="/MealPlan/Create">
+		<div class="left" id="CreateMenu">
+			<h3>Create a New User Defined Menu</h3>
+			<label>New Menu Name: <br />
+			<input type="text" id="UserMenuName" name="UserMenuName" size="30" /></label>
+			<br /><br />
+			<a href="#" onclick="createMenu(); return false;" class="next">Go</a>
+		</div>
+	</form>
+	
+	<div class="clear"> </div>
+</div>
+</tpt:body>

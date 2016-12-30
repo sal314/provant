@@ -1,0 +1,46 @@
+<tpt:body>
+<div class="inner-content kits">
+		<div id="section-header">
+			<h1>Screening Kits<br/><small>Order Confirmation</small></h1>
+		</div>
+		<div class="w-25p right">
+			<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+	
+	<div class="w-75p">
+		<p class="top">Your kit has been ordered. You should recieve it in 5 business days.  When you recieve the kit please indicate that you have recieved it by checking off the check box that will appear on the dashboard.</p>
+		
+		<strong>The Home Health Screening kit will be sent to:</strong><br /><br />
+		<div class="stack last">
+			<strong>First Name: </strong>${POST[first_name]}
+		</div>
+		<div class="stack last">
+			<strong>Last Name: </strong>${POST[last_name]}
+		</div>
+		<div class="stack last">
+			<strong>Address1:</strong>${POST[address1]}
+		</div>
+		<div class="stack last">
+			<strong>Address2: </strong>${POST[address2]}
+		</div>
+		<div class="stack last">
+			<strong>City: </strong>${POST[city]}
+		</div>
+		<div class="stack last">
+			<strong>Country: </strong><tpt:html id="country" type="country_select" include_only="US,CA" target="state" selected="${POST[country]}"/>
+		</div>
+		<div class="stack last">
+			<strong>State:</strong><tpt:html id="state" type="state_select" selected="${POST[state]}"/>
+		</div>
+		<div class="stack last">
+			<strong>Zip Code: </strong>${POST[zipcode]}
+		</div>
+		<div class="stack last">
+			<strong>Phone: </strong>${POST[phone]}
+		</div>
+		<div class="stack last">
+			<strong>Email: </strong>${POST[email]}
+		</div>
+	</div>
+</div>
+</tpt:body>

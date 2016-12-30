@@ -1,0 +1,134 @@
+<tpt:body>
+<div class="inner-content kits">
+		<div id="section-header">
+			<h1>Lab Voucher Kit<br/><small>Results</small></h1>
+		</div>
+		<div class="w-25p right results">
+			<img src="/assets/media/images/screeningkits/screeningkits-img.jpg" alt="Lab Voucher Kit" />
+			
+<!--[CDATA[			<h3>My Progress:</h3>
+			<table cellpadding="3">
+				<tr>
+				  <td class="w120"><span class="results-title">Weight: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[weight]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w120"><span class="results-title">Weight Change: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[goal_weight_change]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w120"><span class="results-title">Goal: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[goal_weight]} lbs</span></td>
+				</tr>
+				<tr>
+				  <td class="w120"><span class="results-title">Target Calories: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[target_calories]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w120"><span class="results-title">Exercise level: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[exercise_level]}</span></td>
+				</tr>
+		  </table>
+			
+			]]-->
+		</div>
+	
+	<div class="wleft results">
+
+		<div class="stack last ITtables">
+			<h3>Cholesterol:</h3>
+			 <table cellpadding="8">
+				<tr>
+				  <td class="w300"><span class="results-title">Total Cholesterol: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[total_cholesterol]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">HDL: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[hdl]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">LDL: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[ldl]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">Triglycerides: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[triglycerides]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">Cholesterol Ratio: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[cholesterol_ratio]}</span></td>
+				</tr>
+		  </table>
+		</div>
+		<br />
+		<div class="stack last ITtables">
+			<h3>Blood Glucose:</h3>
+			<table cellpadding="8">
+				<tr>
+				  <td class="w300"><span class="results-title">Fasting: </span></td>  
+				  <td align="right" class="w50"><span class="results-data"> ${results[glocose_fasting]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">Random: </span></td>  
+				  <td align="right" class="w50"><span class="results-data"> ${results[glucose_random]}</span></td>
+				</tr>
+		  </table>
+		</div>
+		<br />
+		
+	<!--[CDATA[	
+		<div class="stack last ITtables">
+			<h3>Lung Function: </h3>
+			 <table cellpadding="8">
+				<tr>
+				  <td class="w300"><span class="results-title">Age: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[lung_age]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">FVC: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[fvc]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">FEV1: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[fev1]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">Heart Rate: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[heart_rate]}</span></td>
+				</tr>
+		  </table>
+
+		</div>
+		]]-->
+		<div class="stack last ITtables">
+		<h2>Other Data:</h3>
+			
+			 <table cellpadding="8">
+				<tr>
+				  <td class="w300"><span class="results-title">BMI: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[bmi]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">Blood Pressure: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[systolic]}/ ${results[diastolic]}</span></td>
+				</tr>
+<!--[CDATA[				<tr>
+				  <td class="w300"><span class="results-title">Bone Density: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[bone_density]}</span></td>
+				</tr>
+				]]-->
+				<tr>
+				  <td class="w300"><span class="results-title">Hemoglobin A1c: </span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[HgA1c]}</span></td>
+				</tr>
+				<tr>
+				  <td class="w300"><span class="results-title">C-Reactive Protein:</span></td>  
+				  <td align="right" class="w50"><span class="results-data">${results[psa]}</span></td>
+				</tr>
+		  </table>
+		</div>
+	</div>
+</div>
+
+</tpt:body>
+

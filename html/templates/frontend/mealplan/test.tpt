@@ -1,0 +1,12 @@
+<tpt:body>
+	<script type="text/javascript" src="/assets/js/MealPlan.js"></script>
+
+	<tpt:setvar id="count" value="3" />
+	<tpt:setvar id="i" value="1" />
+	<tpt:while id="i"	test="LE" value="${count}">
+		<a href="javascript:void(0);" onclick="highlightTarget(${i}, ${count})"><span id="target${i}">Item ${i}</span></a><br />
+		<tpt:modvar id="i" op="++" />
+	</tpt:while>
+	<input type="hidden" id="selectedTarget" name="selectedTarget" />
+
+</tpt:body>

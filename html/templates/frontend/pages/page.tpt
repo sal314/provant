@@ -1,0 +1,9 @@
+<tpt:body>
+<div class="inner-content">
+${page}
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+
+</script>
+</div>
+</tpt:body>

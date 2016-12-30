@@ -1,0 +1,60 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		<script type="text/javascript" src="/assets/js/Print.js"></script>
+	</head>
+	<body>
+	<div class="popup">
+		<div class="inner-content">
+			<div class="right"><a href="javascript:void(0);" onclick="printMe('recipe');">Print</a></div>
+			<div id="recipe">
+			<h4>${recipe.head.FoodName}</h4>
+			Preparation Method: ${recipe.head.method}<br />
+			Number of Servings: ${recipe.head.NumberOfServings}<br />
+			<tpt:if id="recipe.head.CookingTimeHours" test="GT" value="0">
+			Cooking Time: ${recipe.head.CookingTimeHours} hour<tpt:if id="recipe.head.CookingTimeHours" test="GT" value="1">s</tpt:if> 
+			  <tpt:if id="recipe.head.CookingTimeMinutes" test="GT" value="0">
+			  ${recipe.head.CookingTimeMinutes} minutes
+			  </tpt:if>
+			  <br />
+			</tpt:if>
+			<tpt:else>
+			  <tpt:if id="recipe.head.CookingTimeMinutes" test="GT" value="0">
+			  CookingTime: ${recipe.head.CookingTimeMinutes} minutes<br />
+			  </tpt:if>
+			</tpt:else>
+			<tpt:if id="recipe.head.CookingTemperature" test="GT" value="0">
+			Cooking Temperature: ${recipe.head.CookingTemperature}<br />
+			</tpt:if>
+			<br />
+			<br />
+
+			Ingredients:<br />
+			<tpt:foreach id="recipe.ingredients" as="ing">
+				${ing.RecipeFoodText}<br />
+			</tpt:foreach>
+			<br />
+			<br />
+
+			Instructions:<br />
+			<tpt:foreach id="recipe.instructions" as="inst">
+				${inst.InstructionText} 
+			</tpt:foreach>
+			<br />
+			<br />
+
+			<tpt:if id="recipe.notes" test="HASELEMENTS">
+			Notes:<br />
+			<tpt:foreach id="recipe.notes" as="note">
+				${note.NotesText}<br />
+			</tpt:foreach>
+			<br />
+			</tpt:if>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
+</tpt:body>

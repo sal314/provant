@@ -1,0 +1,10 @@
+<tpt:body>
+<html>
+<head>
+	<title>Help</title>
+</head>
+<body style="background-color:white;">
+	${page}
+</body>
+</html>
+</tpt:body>

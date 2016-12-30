@@ -1,0 +1,62 @@
+<tpt:body>
+<script type="text/javascript" src="/common/js/zmedia/z_dynamic_dropdown.js"></script>
+
+<div class="message-center inner-content">
+<div class="${classname}">
+	<div id="section-header">
+		<h1>Message Center<br/><small>Read Message</small></h1>
+	</div>
+
+	<div class="w-25p left">
+		<div class="messageNav">
+			<ul>
+				<li><a href="/Messages/Compose">Compose</a></li>
+				<li><a href="/Messages/Inbox">Inbox</a></li>
+				<li><a href="/Messages/Sent">Sent Messages</a></li>
+				<li><a href="/Messages/Archive">Saved Messages</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class=" right messageBox">
+		<div class="margin5 question" style="margin-top:0">
+		<label><span>To:</span></label> ${message[recipient_name]}
+		</div>
+		<div class="question">
+			<label><span>Subject:</span></label> ${message[subject]}
+		</div><br />
+		<div class="formElement question">
+			<label><span>Message:</span></label><br />
+		<textarea name="message" id="message" disabled="true" rows="10" cols="50" style="width:610px">${message[message]}
+		</textarea>
+		</div>
+		<br />
+	
+		<tpt:if id="mode" test="EQ" value="Inbox">
+			<form method="post" action="/Messages/Reply/${message[id]}">
+			
+			<div id="reply-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+			</form>
+		</tpt:if>
+		<form method="post" action="/Messages/Delete/${message[id]}/${mode}">
+			<div id="delete-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+
+		</form>
+	</div>
+	</div>
+	<div class="clear"> </div>
+	
+
+</div>
+
+
+
+
+
+</tpt:body>
+
+
+

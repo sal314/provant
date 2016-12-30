@@ -1,0 +1,35 @@
+<tpt:body>
+<div class="loginpage-body">
+	<div class="contact-container">
+
+
+			<div class="contact-content">
+			
+				<div class="login-area">
+				<h6>Send us a message:</h6>
+					<form method="post" action="/Page/SubmitContactUs/" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+					
+						   <div class="margin5">
+							<label>Email:<br /><input type="text" name="email" data-validate="required=true pattern=email"/></label><br />
+							</div>
+							<div class="margin5">
+							<label>Subject:<br /><input type="text" name="subject" data-validate="required=true"/></label><br />
+							</div>
+							<div class="margin5">
+							<label>Message:<br /><textarea name="message"  data-validate="required=true">${_POST[message]}</textarea></label><br />
+							
+							</div>
+						    <br />
+						   
+
+							<div id="submit-button">
+								<a href="#" class="nextstep next"> </a>
+							</div>
+					</form>
+					
+				</div>
+			</div>
+	
+	</div>
+</div>
+</tpt:body>

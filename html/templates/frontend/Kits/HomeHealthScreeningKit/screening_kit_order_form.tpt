@@ -1,0 +1,64 @@
+<tpt:body>
+	<div class="inner-content kits">
+		<div id="section-header">
+			<h1>Screening Kits<br/><small>Home Screening Order Form</small></h1>
+		</div>
+
+<tpt:if id="errors" test="haselements">
+	Please correct the following errors:
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>${error.display_name} ${error.message}</li> 
+		</tpt:foreach>
+	</ul>	
+</tpt:if>
+
+		<div class="w-25p right">
+			<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+<div class="w-75p left">
+	<form method="post" action="/HomeHealthScreeningKit/RequestKit/" onsubmit="return ZMEDIA.FORM.validateForm(this);">
+		<div class="stack last left w300">
+			<label>First Name:<br /><input type="text" name="first_name" value="${POST[first_name]}" data-validate="required=true" /></label>
+		</div>
+		<div class="stack last left w300">
+			<label>Last Name:<br /><input type="text" name="last_name" value="${POST[last_name]}" data-validate="required=true" /></label>
+		</div>
+		
+		<div class="clear"> </div>
+<div class="stack last">
+	<label>Address1:<br /><input type="text" name="address1" value="${POST[address1]}" data-validate="required=true"/></label>
+</div>
+<div class="stack last">
+	<label>Address2:<br /><input type="text" name="address2" value="${POST[address2]}" /></label>
+</div>
+<div class="stack last">
+	<label>City:<br /><input type="text" name="city" value="${POST[city]}" data-validate="required=true"/></label>
+</div>
+<div class="stack last left">
+	<label>Counrty:<br /><tpt:html id="country" type="country_select" include_only="US,CA" target="state" selected="${POST[country]}"/></label>
+</div>
+<div class="stack last left">
+	<label>State:<br /><tpt:html id="state" type="state_select" selected="${POST[state]}"/></label>
+</div>
+<div class="stack last left">
+	<label>Zip Code:<br /><input type="text" name="zipcode" value="${POST[zipcode]}" data-validate="required=true pattern=zipcode"/></label>
+</div>
+
+<div class="clear"> </div>
+
+<div class="stack last left w300">
+	<label>Phone:<br /><input type="text" name="phone" value="${POST[phone]}" onkeypress='ZMEDIA.formatPhone(event,this)' data-validate="required=true pattern=phone"/></label>
+</div>
+<div class="stack last left w300">
+	<label>Email:<br /><input type="text" name="email" value="${POST[email]}" data-validate="required=true pattern=email"/></label>
+</div>
+
+<input type="submit" value="Order"/>
+
+</form>
+</div>
+
+<div class="clear"> </div>
+</div>
+</tpt:body>

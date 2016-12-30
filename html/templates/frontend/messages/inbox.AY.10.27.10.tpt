@@ -1,0 +1,54 @@
+<tpt:body>
+<div class="message-center inner-content">
+	<div class="${classname}">
+	<div id="section-header">
+		<h1>Message Center<br/><small>Inbox</small></h1>
+	</div>
+
+<div class="w-75p right">
+		
+		<table class="datagrid txt-left">
+			<thead>
+				<tr>
+					<th> </th>
+					<th>Date</th>
+					<th>Sender</th>
+					<th>Subject</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tpt:foreach id="messages" as="message">
+				<tr>
+					<td style="align:center; padding:5px;"><input type="checkbox" name="msg_${message[id]}" id="" value="" /></td>
+					<td class="message-date"><tpt:if id="message[recipient_status]" test="EQ" value="0">NEW</tpt:if>
+					<tpt:formatvar id="message[date_added]" op="datetime" arg="m/d/Y"/></td>
+					<td class="message-sender">${message[sender_name]}</td>
+					<td class="message-subject"><a href="/Messages/View/${message[id]}">${message[subject]}</a></td>
+				</tr>
+			</tpt:foreach>
+			</tbody>
+		</table>
+		<div class="txt-right">
+			<tpt:include id="interface/message_pager.tpt" importvars="reference" />
+		</div>
+	</div>
+
+
+	<div class="w-25p left">
+		<div class="messageNav">
+			<ul>
+				<li><a href="/Messages/Compose">Compose</a></li>
+				<li class="active">Inbox</li>
+				<li><a href="/Messages/Sent">Sent Messages</a></li>
+				<li><a href="/Messages/Archive">Archived Messages</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	
+	</div>	
+	
+	<div class="clear"> </div>
+</div>
+
+</tpt:body>

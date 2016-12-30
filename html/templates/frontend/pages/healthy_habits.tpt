@@ -1,0 +1,20 @@
+<tpt:body>
+  <tpt:if id="program" test="haselements">
+  	${program[page_text_healthy_habits]}
+  	<br/>
+  	<ul>
+  	<tpt:foreach id="activities" as="act">
+  		<li>${act[description]}
+  			<tpt:if id="act[minimum_value]" test="GT" value="0">(${act[minimum_value]}) </tpt:if>
+  			: ${act[points]} points</li>
+  	</tpt:foreach>
+  	</ul>  	
+  
+  	<tpt:if id="active" test="EQ" value="false">
+  		This program is curerntly closed.
+  	</tpt:if>
+  </tpt:if>
+  <tpt:else>
+  	There is not a rewards program at this time. 
+  </tpt:else>
+</tpt:body>
