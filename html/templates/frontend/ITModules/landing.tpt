@@ -1,0 +1,37 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="myfocus-logo">myFOCUS Workshops</h1>
+		
+	</div>
+
+	<div class="right">
+		<img src="/assets/media/images/myfocus/myfocus-img.jpg" alt="myFOCUS" />
+	</div>
+	
+	<div class="wleft left">
+		<tpt:foreach id="modules" as="mod">
+			
+			<div class="button-content">
+			
+				<div class="stack click">
+					<img class="left" src="/assets/media/images${mod[image]}" alt="${mod[name]}" />
+					<div class="intro">
+						<a href="/${mod[class_name]}/" class="fs16 no-pointer">${mod[name]}</a>
+						<p>${mod[short_description]}</p>
+<!-- [CDATA[
+						<p>Short description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, suscipit eu tempus a, convallis id libero.</p>
+]] -->
+					</div>
+					
+					<div class="clear"> </div>
+				</div>
+			
+			</div>
+
+		</tpt:foreach>
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+</tpt:body>
