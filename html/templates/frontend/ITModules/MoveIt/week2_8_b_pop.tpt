@@ -1,0 +1,21 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Choosing Your Sets, Reps and Weight</strong>
+		<p>
+		Choosing your reps, sets and weight can be the most confusing part of strength training. How many reps and sets you do will depend on your goals.
+		</p>
+		<ul>
+			<li><strong>To lose body fat, build muscle:</strong> Use enough weight that you can ONLY complete 10-12 repetitions and 1-3 sets (1 for beginners, 2-3 for intermediate and advanced exercisers). Rest about 30 seconds-1 minute between sets and at least one day between workout sessions</li>
+			<li><strong>For muscle gain:</strong> Use enough weight that you can ONLY complete 4-8 repetitions and 3 or more sets, resting for 1-2 minutes between sets and 2-3 days between sessions. For beginners, give yourself several weeks of conditioning before you tackle weight training with this degree of difficulty. You may need a spotter for many exercises.</li>
+			<li><strong>For health and muscular endurance:</strong> Use enough weight that you can ONLY complete 12-16 repetitions, 1-3 sets, resting 20-30 seconds between sets and at least one day between workout sessions.</li>
+		</ul>
+		<p>
+		To determine how much weight you should use, start with a light weight and perform one set. Continue adding weight until you can ONLY do the desired number of repetitions. The last rep should be difficult, but not impossible and you should be able to keep good form.
+		</p>
+	</body>
+	</html>
+</tpt:body>

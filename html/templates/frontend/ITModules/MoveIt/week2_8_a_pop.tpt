@@ -1,0 +1,25 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>What Exercises Should You Do?</strong>
+		<p>
+		If you don&amp;acute;t know much about weight training, consider hiring a personal trainer to help you set up your program. You should work all of your muscle groups each week so that you avoid muscle imbalances, which could lead to injury.
+		</p>
+		<p>
+		Below is a list of muscle groups along with sample exercises. If you&amp;acute;re a beginner, you only need to choose 1-2 exercises for each muscle group in the upper body and 3-4 moves for the lower body.
+		</p>
+		<ul>
+			<li>Chest: bench press, chest press machine, pushups, pec deck machine</li>
+			<li>Back: seated row machine, back extensions, lat pulldowns</li>
+			<li>Shoulders: overhead press, lateral raise, front raise</li>
+			<li>Biceps: bicep curls, hammer curls, concentration curls</li>
+			<li>Triceps: tricep extensions, dips, kickbacks</li>
+			<li>Lower Body: Squats, lunges, leg press machines, deadlifts, calf raises</li>
+			<li>Abdominals: crunches, reverse crunches, oblique twists, pelvic tilts</li>
+		</ul>
+	</body>
+	</html>
+</tpt:body>

@@ -1,0 +1,55 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Knowing When to Stop<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	
+	<div class="w-75p left">
+
+	<h3>When to Stop: Warning Signs</h3><br />
+	<p>
+	A certain amount of discomfort during exercise is normal and inevitable-after all, you are challenging your body to do more than it is accustomed to. And you can expect to have sore muscles after a vigorous workout; often the soreness doesn&amp;acute;t show up until a day or two later, especially with strength training. 
+	</p>
+	<p>
+	But pain and other symptoms that occur during exercise can be <strong>warning signs that something is wrong</strong>. You should stop exercising right away if you:
+	</p>
+	<ul>
+		<li>Have pain or pressure in the left or middle part of your chest, or in the left side of your neck, left shoulder or left arm</li>
+		<li>Feel dizzy or sick</li>
+		<li>Break out in a cold sweat</li>
+		<li>Have muscle cramps</li>
+		<li>Feel sharp pain in your joints, feet, ankles, or bones</li>
+		<li>Notice that your heart starts racing or beating irregularly</li>
+	</ul>
+	<p>
+	If you start to experience these problems during high intensity aerobic exercise, it is best to immediately slow down. Allow your heart rate to drop gradually before stopping completely, since an abrupt stop can cause problems with blood circulation and fainting. However, in cases of severe and sudden pain, stop immediately, seek help, and follow up with your doctor.
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/5" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

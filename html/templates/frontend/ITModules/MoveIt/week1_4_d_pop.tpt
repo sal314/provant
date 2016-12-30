@@ -1,0 +1,40 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<strong>Target Heart Rate and Estimated Maximum Heart Rate</strong>
+	<p>
+	One way of monitoring physical activity intensity is to determine whether your pulse or heart rate is within the target zone during physical activity.
+	</p>
+	<p>
+	<strong>For moderate-intensity physical activity</strong>, your target heart rate should be 50 to 70% of your maximum heart rate. This maximum rate is based on age. An estimate of a person's maximum age-related heart rate is obtained by subtracting your current age from 220. For example, for a 50-year-old person, the estimated maximum age-related heart rate would be calculated as 220 - 50 years = 170 beats per minute (bpm). The 50% and 70% levels would be:
+	</p>
+	<ul>
+		<li>50% level: 170 x 0.50 = 85 bpm, and</li>
+		<li>70% level: 170 x 0.70 = 119 bpm</li>
+	</ul>
+	<p>
+	Thus, moderate-intensity physical activity for a 50-year-old person will require that the heart rate remains between 85 and 119 bpm during physical activity.
+	</p>
+	<p>
+	<strong>For vigorous-intensity physical activity</strong>, your target heart rate should be 70 to 85% of your maximum heart rate. To calculate this range, follow the same formula as used above, except change &amp;quot;50 and 70%&amp;quot; to &amp;quot;70 and 85%&amp;quot;. For example, for a 35-year-old person, the estimated maximum age-related heart rate would be calculated as 220 - 35 years = 185 beats per minute (bpm). The 70% and 85% levels would be:
+	</p>
+	<ul>
+		<li>70% level: 185 x 0.70 = 130 bpm, and</li>
+		<li>85% level: 185 x 0.85 = 157 bpm</li>
+	</ul>
+	<p>
+	Thus, vigorous-intensity physical activity for a 35-year-old person will require that the heart rate remains between 130 and 157 bpm during physical activity.
+	</p>
+	<div>
+	  <div style="float:left; margin-right:10px;"><img src="/assets/media/images/moveit/HeartRate.jpg" alt="Taking Your Heart Rate"/> </div>
+	  <p>
+	  <strong>Taking Your Heart Rate</strong><br />
+	  Generally, to determine whether you are exercising within the heart rate target zone, you must stop exercising briefly to take your pulse. You can take the pulse at the neck, the wrist, or the chest. We recommend the wrist. You can feel the radial pulse on the artery of the wrist in line with the thumb. Place the tips of the index and middle fingers over the artery and press lightly. Do not use the thumb. Take a full 60-second count of the heartbeats, or take for 30 seconds and multiply by 2. Start the count on a beat, which is counted as &amp;quot;zero.&amp;quot; If this number falls between 85 and 119 bpm in the case of the 50-year-old person, he or she is active within the target range for moderate-intensity activity.
+	  </p>
+	</div>
+	</body>
+	</html>
+</tpt:body>

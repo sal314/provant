@@ -1,0 +1,45 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Activity<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	
+	<div class="w-75p left">
+	
+	<h3>Baseline Activity versus Health-Enhancing Physical Activity</h3><br />
+	<p>
+	Physical activity has been defined as any bodily movement produced by the contraction of skeletal muscle that increases energy expenditure above a basal level. The term "physical activity" generally refers to bodily movement that enhances health. Bodily movement can be divided into two categories:
+	</p>
+	<ul>
+		<li><strong>Baseline activity</strong> refers to the light-intensity activities of daily life, such as standing, walking slowly, and lifting lightweight objects. People vary in how much baseline activity they do. People who do only baseline activity are considered to be inactive. They may do very short periods of moderate- or vigorous-intensity activity, such as climbing a few flights of stairs, but these aren't long enough to count toward meeting Physical Activity Guidelines.</li>
+		<li><strong>Health-enhancing physical activity</strong> is activity that, when added to baseline activity, produces health benefits. The term "physical activity" generally refers to health-enhancing physical activity. Brisk walking, jumping rope, dancing, lifting weights, climbing on playground equipment at recess, and doing yoga are all examples of physical activity. Some people (such as postal carriers or carpenters on construction sites) may get enough physical activity on the job to meet the Guidelines.</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/3" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

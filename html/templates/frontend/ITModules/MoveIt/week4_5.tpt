@@ -1,0 +1,43 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Mental Health<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Benefits of Exercise on Mental Health</h3><br />
+	<p>
+	There are numerous benefits of exercise on mental health. Regular activity, such as walking, not only prevents disease, improves your health and makes you feel better physically. It also builds self-confidence and self-esteem, relieves anxiety and depression, increases energy, improves sleep patterns and helps to put you into a better mood.
+	</p>
+	<p>
+	Aerobic exercise such as walking, cycling or swimming release endorphins, the body&amp;acute;s natural painkillers, which help create a feeling of happiness that can last for hours. These endorphins help people to better cope with the ups and downs of everyday life.
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/4/6" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

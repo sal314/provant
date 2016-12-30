@@ -1,0 +1,58 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Disease Prevention<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<h3>Disease Prevention Benefits of Exercise</h3><br />
+	<p>
+	While physical activity and exercise provide health benefits which positively effect a wide range of factors contributing to the quality of life, there are a few areas of disease or health complications where regular exercise predominately reduces risk or aids in controlling disease.
+	</p>
+	<ol>
+		<li>Heart disease</li>
+		<li>Some forms of cancer</li>
+		<li>Non-insulin dependent diabetes mellitus</li>
+		<li>Obesity</li>
+		<li>Weakened Immune system</li>
+		<li>Autoimmune disease - Rheumatoid arthritis</li>
+	</ol>
+	<h3>Exercise &amp; Preventing Disease</h3><br />
+	<p>
+
+	It wasn&amp;acute;t too long ago that people with conditions such as high blood pressure, high blood sugar, arthritis, asthma and heart disease, were told by Physicians to &amp;quot;take it easy, stay in bed or take medications&amp;quot; in order to stabilize these conditions. Today, there is little doubt how the impact of physical activity can dramatically prevent and control many of these chronic conditions.
+
+	</p>
+	<p>
+
+	Any sustained movement, like walking, bicycling, swimming, or cross-country skiing, will reduce the risk of diseases, such as coronary heart disease, hypertension, diabetes, high cholesterol, and even some cancers. All that&amp;acute;s needed to personalize your fitness plan is a creative and adventurous spirit.
+
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/4/5" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

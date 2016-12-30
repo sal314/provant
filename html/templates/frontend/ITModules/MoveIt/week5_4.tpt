@@ -1,0 +1,49 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Staying on Track<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+	You may have good intentions of sticking to your exercise plan, but obstacles will come up that may detour you. Remember, excuses only get in the way if you allow them to. Follow these suggestions to get going and stay on track:
+	</p>
+	<ul>
+		<li>Write down your reasons for starting your physical activity plan on a 3x5 index card. Put this card where you will see it often.</li>
+		<li>Write down your three most disruptive obstacles to activity and propose three realistic solutions.</li>
+		<li>&amp;quot;Not enough time&amp;quot; is the most often used excuse. Increase your time management skills so that you can fit in your weekly exercise sessions.</li>
+		<li>Schedule your weekly exercise sessions in a daily planner or calendar. Consider these as appointments with yourself. Give yourself the same respect you give others in keeping appointments. Your only reason for not exercising should be if you&amp;acute;re sick or injured. Remember--no more excuses!</li>
+		<li>Enlist a friend or relative to share physical activity with you or to act as a helper. Support is one of the most important factors in exercise adherence.</li>
+		<li>It can take up to 8 weeks to see some of the benefits you desire from your program. In the meantime, focus on short-term goals, like performing your weekly training sessions as planned, which will increase your self-confidence.</li>
+		<li>Use a log sheet to track your progress. Consistency is the key, not how long or how hard you exercise. Do ten minutes when you don&amp;acute;t feel like a longer workout. Write it in your log. The most important thing is that you did something. You&amp;acute;ll be proud of your accomplishments and this will help you to stick with your program.</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleMoveIT/info/week5_4_a')">Stick With It</a><br />
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/5/5" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

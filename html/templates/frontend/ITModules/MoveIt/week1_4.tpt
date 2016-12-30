@@ -1,0 +1,65 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Beginning To Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<h3>Starting Slowly:</h3><br />
+	<p>
+	To avoid soreness and injury, start out slowly and gradually build up to the desired amount of exercise to give the body time to adjust. People with chronic health problems, such as heart disease, diabetes, or obesity, or who are at high risk for these problems should first consult with a physician before beginning a new program of physical activity. Also, men over age 40 and women over age 50 who plan to begin a new vigorous physical activity program should consult a physician first to be sure they do not have heart disease or other health problems.
+	</p>
+	<h3>How to Begin</h3>
+	<ol>
+		<li>Choose an activity that you enjoy. The best exercise for you is the one you&amp;acute;ll actually do, not the one you think you should do. Walking is a great place to start since it doesn&amp;acute;t require special equipment and you can do it anywhere, but you can try any activity that involves some type of continuous movement like cycling, swimming, running, aerobics, rowing, stair climbing, etc.</li>
+		<li>Start with 2 or 3 days of your chosen activity a week with a rest day between workouts.</li>
+		<li>Begin with a 5-10 minute warm up of light cardio to gradually increase heart rate.</li>
+		<li>Increase your pace and intensity to slightly harder than comfortable (about a Level 5 or 6 on the Perceived Exertion Scale or you can use Target Heart Rate to monitor intensity) and go as long as you comfortably can. Begin where you ARE, not where you want to be. You may only be able to exercise for a few minutes at a time, but that will change quickly if you're consistent.</li>
+		<li>End each workout with a cool down of light cardio and stretch the muscles you&amp;acute;ve worked to relax and keep your muscles flexible.</li>
+		<li>Each week, increase your workout time by a few minutes until you can work continuously for 30 minutes a session.</li>
+		<li>Don&amp;acute;t worry about distance or pace. For the first few weeks, focus on showing up for your workouts and building time. You have plenty of time to work on your speed and distance.</li>
+		<li>After 4-6 weeks, change your routine by adding another day of exercise, increasing your pace/intensity, adding a new activity and/or increasing the amount of time you exercise.</li>
+	</ol>
+
+	<h3>Measuring Physical Activity Intensity:</h3><br />
+	<p>
+	The following information was obtained from <a href="#" onclick="window.open('http://www.cdc.gov/physicalactivity/everyone/measuring/index.html', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">The Centers for Disease Control and Prevention</a><br />
+	</p>
+	<ol>
+		<li><a href="javascript:showWin('/ModuleMoveIT/info/week1_4_a')">Relative Intensity</a></li>
+		<li><a href="javascript:showWin('/ModuleMoveIT/info/week1_4_b')">Absolute Intensity</a></li>
+		<li><a href="javascript:showWin('/ModuleMoveIT/info/week1_4_c')">Perceived Exertion (Borg Rating of Perceived Exertion Scale)</a></li>
+		<li><a href="javascript:showWin('/ModuleMoveIT/info/week1_4_d')">Target Heart Rate and Extimated Maximum Heart Rate</a></li>
+	</ol>
+	<br />
+
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/1/5" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

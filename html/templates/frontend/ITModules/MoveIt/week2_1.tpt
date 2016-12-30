@@ -1,0 +1,98 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Guidelines For Physical Activity<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleMoveIT/Week/2/1">
+	
+	<div class="w-75p left">
+	
+	<h3>Key Guidelines</h3><br />
+	<p>
+	Substantial health benefits are gained by doing physical activity according to the Guidelines presented below for different groups.
+	</p>
+	<h3>Children and Adolescents (aged 6-17)</h3>
+	<ul>
+		<li>Children and adolescents should do 1 hour (60 minutes) or more of physical activity every day.</li>
+		<li>Most of the 1 hour or more a day should be either moderate- or vigorous-intensity aerobic physical activity.</li>
+		<li>As part of their daily physical activity, children and adolescents should do vigorous-intensity activity on at least 3 days per week. They also should do muscle-strengthening and bone-strengthening activity on at least 3 days per week.</li>
+	</ul>
+	<h3>Adults (aged 18-64)</h3>
+	<ul>
+		<li>Adults should do 2 hours and 30 minutes a week of moderate-intensity, or 1 hour and 15 minutes (75 minutes) a week of vigorous-intensity aerobic physical activity, or an equivalent combination of moderate- and vigorous-intensity aerobic physical activity. Aerobic activity should be performed in episodes of at least 10 minutes, preferably spread throughout the week.</li>
+		<li>Additional health benefits are provided by increasing to 5 hours (300 minutes) a week of moderate-intensity aerobic physical activity, or 2 hours and 30 minutes a week of vigorous-intensity physical activity, or an equivalent combination of both.</li>
+		<li>Adults should also do muscle-strengthening activities that involve all major muscle groups performed on 2 or more days per week.</li>
+	</ul>
+	<h3>Older Adults (aged 65 and older)</h3><br />
+	<p>
+	Older adults should follow the adult guidelines. If this is not possible due to limiting chronic conditions, older adults should be as physically active as their abilities allow. They should avoid inactivity. Older adults should do exercises that maintain or improve balance if they are at risk of falling.
+	</p>
+	<p>
+	For all individuals, some activity is better than none. Physical activity is safe for almost everyone, and the health benefits of physical activity far outweigh the risks. People without diagnosed chronic conditions (such as diabetes, heart disease, or osteoarthritis) and who do not have symptoms (e.g., chest pain or pressure, dizziness, or joint pain) do not need to consult with a health care provider about physical activity.
+	</p>
+	<h3>Adults With Disabilities</h3><br />
+	<p>
+	Follow the adult guidelines. If this is not possible, these persons should be as physically active as their abilities allow. They should avoid inactivity.
+	</p>
+	<h3>Children and Adolescents with Disabilities</h3><br />
+	<p>
+	Work with the child&amp;acute;s health care provider to identify the types and amounts of physical activity appropriate for them. When possible, these children should meet the guidelines for children and adolescents-or as much activity as their condition allows. Children and adolescents should avoid being inactive.
+	</p>
+	<h3>Pregnant and Postpartum Women</h3><br />
+	<p>
+	Healthy women who are not already doing vigorous-intensity physical activity should get at least 2 hours and 30 minutes (150 minutes) of moderate-intensity aerobic activity a week. Preferably, this activity should be spread throughout the week. Women who regularly engage in vigorous-intensity aerobic activity or high amounts of activity can continue their activity provided that their condition remains unchanged and they talk to their health care provider about their activity level throughout their pregnancy.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity:</h3><br />
+		<p>
+		<strong>How much exercise should you be doing weekly?</strong>
+		</p>
+		<div style="width:250px">
+			<input type="text" name="A1" size="10" value="${POST[A1]}" style="float:right;"/>Minutes per day:<br />
+			<div class="clear"> </div><br />
+			
+			<input type="text" name="A2" size="10" value="${POST[A2]}" style="float:right"/>How many days per week:<br />
+			<div class="clear"> </div>
+		</div>
+		<div style="width:250px">
+			<br />
+			<p>
+			<strong>How much exercise do you currently do?</strong>
+			</p>
+			<input type="text" name="A3" size="10" value="${POST[A3]}" style="float:right;"/>Minutes per day:<br />
+			<div class="clear"> </div><br />
+			<input type="text" name="A4" size="10" value="${POST[A4]}" style="float:right;"/>How many days per week:<br />
+			<div class="clear"> </div><br />
+			
+		</div>
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+	</form>
+</div>
+</tpt:body>

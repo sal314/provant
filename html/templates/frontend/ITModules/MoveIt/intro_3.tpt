@@ -1,0 +1,44 @@
+<tpt:body>
+	<br />
+	<p>
+	The objective of the program is to improve your health by incorporating physical activity into your way of life. To accomplish your physical activity goals will require your commitment to the program and your participation is vital to your success.
+	</p>
+	<p>
+	As a participant in the Move IT program you are encouraged to:
+	</p>
+	<ul>
+		<li>Participate in all individual and group activities</li>
+		<li>Make a commitment to yourself to establish an exercise program</li>
+		<li>Have a positive attitude about your success</li>
+		<li>Accept any relapse and get back on track immediately</li>
+		<li>Utilize all of the resources available to you</li>
+	</ul>
+
+	<form name="intro_form" method="post" action="/ModuleMoveIT/Intro/3" >
+		<span style="color:blue;"><strong>Activity</strong></span><br />
+		<p style="color:blue;">
+		List the reasons you want to increase your exercise:
+		</p>
+		1.&amp;nbsp;&amp;nbsp;<input type="text" name="C1" size="100" /><br />
+		2.&amp;nbsp;&amp;nbsp;<input type="text" name="C2" size="100" /><br />
+		3.&amp;nbsp;&amp;nbsp;<input type="text" name="C3" size="100" /><br />
+		4.&amp;nbsp;&amp;nbsp;<input type="text" name="C4" size="100" /><br />
+		5.&amp;nbsp;&amp;nbsp;<input type="text" name="C5" size="100" /><br />
+		<br />
+		<p style="color:blue;">
+		Now list obstacles that have prevented you from exercising in the past:
+		</p>
+		1.&amp;nbsp;&amp;nbsp;<input type="text" name="C6" size="100" /><br />
+		2.&amp;nbsp;&amp;nbsp;<input type="text" name="C7" size="100" /><br />
+		3.&amp;nbsp;&amp;nbsp;<input type="text" name="C8" size="100" /><br />
+		4.&amp;nbsp;&amp;nbsp;<input type="text" name="C9" size="100" /><br />
+		5.&amp;nbsp;&amp;nbsp;<input type="text" name="C10" size="100" /><br />
+		<br />
+		<input class="submit right" type="submit" value="Next &amp;gt;&amp;gt;" />
+	</form>
+
+	<br />
+	<span style="color:red;font-size:large;">Missing PDF for pop up exercise log</span>
+	<br />
+	<br />
+</tpt:body>

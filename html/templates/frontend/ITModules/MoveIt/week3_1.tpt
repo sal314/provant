@@ -1,0 +1,53 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Functional Strength Training<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	Functional strength training simply means training our bodies to better perform the types of movements we use for everyday life. The time spent developing dynamic strength, flexibility and agility carries over into your daily activities, making life a little bit easier.
+	</p>
+	<p>
+	Our bodies go through a variety of motions every day:
+	</p>
+	<ul>
+		<li>Lifting: Laundry basket, grocery bags, kids, etc.</li>
+		<li>Reaching and pulling: Opening the refrigerator or dryer, putting dishes away or picking things up from the floor</li>
+		<li>Power: Standing up from chair, going up stairs or walking up a hill</li>
+		<li>Balancing: Walking, holding multiple bags of groceries while carefully navigating the stairs or carrying a baby while talking on the phone and cooking dinner</li>
+		<li>Combinations of the above</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleMoveIT/info/week3_1_a')">Functional Exercises</a><br />
+	<a href="javascript:showWin('/ModuleMoveIT/info/week3_1_b')">Functional Equipment</a><br />
+	<br />
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/3/2" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,51 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Foot Care Tips<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+	Walking every day is good for the body and the soul - but how about for the soles?  You can help prevent the potential aches, pains, and blisters of long-distance walking with this sensible foot care advice.
+	</p>
+	<ul>
+		<li><strong>Stop blisters before they happen:</strong> The secret to avoiding a serious blister is to stop walking as soon as you feel any pinching, rubbing, or other uncomfortable sensation against your foot.  If you find a pebble or piece of dirt, remove it.  If your sock is bunched up, smooth it out.  If your feet are sweaty and sliding in your shoes, let them dry.  Apply a Band-Aid to any red spots, and if more padding is needed, attach a layer of moleskin over the Band-Aid.</li>
+		<li><strong>Avoid leg cramps:</strong> Occasionally, when legs and feet get a heavy workout, a muscle may lock into a sustained contraction, otherwise known as a spasm or cramp.  The exact cause remains a mystery, but it may be related to dehydration, overexertion, or an electrolyte imbalance.  To help prevent leg cramps:
+		<ul>
+			<li>Take at least 5 minutes before and after exercise to stretch your muscles</li>
+			<li>Train properly with shorter, less-exerting hikes before taking a long, strenuous one</li>
+			<li>Drink plenty of fluids - either water or a sports drink that helps balance the body&amp;acute;s electrolytes</li>
+		</ul>
+		</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleMoveIT/info/week2_7_a')">Wear a properly-fitting shoe</a>
+	<br />
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/8" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

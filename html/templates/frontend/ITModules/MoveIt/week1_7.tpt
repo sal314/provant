@@ -1,0 +1,49 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You are ready to begin your goals for Week 1<br /></h1>
+	</div>
+	
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+		<h3>Remember to:</h3>
+	
+		<ol>
+			<li>Find out if you&amp;acute;re able to start engaging in physical activity.</li>
+			<li>Start your workout program slowly.</li>
+			<li>Select some cardiovasular exercises you would like to try.</li>
+		</ol>
+		<br />
+		<h3>Goals for Week 2:</h3><br />
+		<ol>
+			<li>Continue your exercise journal.</li>
+			<li>Complete the Module 2 activities.</li>
+			<li>Start to increase your physical activity.</li>
+		</ol>
+	</div>
+
+		
+<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Index" class="loseit-home" style="margin:0 auto">Move It Homepage</a>
+	</div>
+</div>
+</tpt:body>

@@ -1,0 +1,16 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Realative Intensity</strong><br />
+		<p>
+		Relative Intensity is the level of effort required by a person to do an activity. When using relative intensity, pay attention to how physical activity affects your heart rate and breathing.
+		</p>
+		<p>
+		The <strong>talk test</strong> is a simple way to measure relative intensity. As a rule of thumb, if you&amp;acute;re doing moderate-intensity activity you can talk, but not sing, during the activity. If you're doing vigorous-intensity activity, you will not be able to say more than a few words without pausing for a breath.
+		</p>
+	</body>
+	</html>
+</tpt:body>

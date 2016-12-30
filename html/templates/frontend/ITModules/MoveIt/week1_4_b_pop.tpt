@@ -1,0 +1,33 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Absolute Intensity</strong><br />
+		<p>
+		The amount of energy used by the body per minute of activity. The table below lists examples of activities classified as moderate-intensity or vigorous-intensity based upon the amount of energy used by the body while doing the activity.
+		</p>
+		<strong>Moderate Intensity</strong><br />
+		<ul>
+			<li>Walking briskly (3 miles per hour or faster, but not race-walking)</li>
+			<li>Water aerobics</li>
+			<li>Bicycling slower than 10 miles per hour</li>
+			<li>Tennis (doubles)</li>
+			<li>Ballroom dancing</li>
+			<li>General gardening</li>
+		</ul>
+		<strong>Vigorous Intensity</strong><br />
+		<ul>
+			<li>Race walking, jogging, or running</li>
+			<li>Swimming laps</li>
+			<li>Tennis (singles)</li>
+			<li>Aerobic dancing</li>
+			<li>Bicycling 10 miles per hour or faster</li>
+			<li>Jumping rope</li>
+			<li>Heavy gardening (continuous digging or hoeing)</li>
+			<li>Hiking uphill or with a heavy backpack</li>
+		</ul>
+	</body>
+	</html>
+</tpt:body>

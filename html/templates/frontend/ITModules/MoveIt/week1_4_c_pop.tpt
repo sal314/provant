@@ -1,0 +1,104 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Perceived Exertion (Borg Rating of Perceived Exertion Scale)</strong><br />
+		<p>
+		The Borg RPE scale (named for its inventor, Dr. Gunnar Borg) may be the most versatile method of measuring exercise intensity for all age groups, genders and fitness levels. This is an individualized rating based on your own perception of how hard you&amp;acute;re exerting yourself when you are exercising.
+		</p>
+		<p>
+		To use the RPE scale, rate your own perception of your exertion while engaged in physical activity. Your rating should reflect how strenuous the exercise feels to you, combining all feelings of physical stress, effort and fatigue.
+		</p>
+		<p>
+		According to the Centers for Disease Control and Prevention, a 9 on the RPE scale corresponds to &amp;quot;very light&amp;quot; exercise - like a healthy person walking slowly at his or her own pace for a few minutes.
+		</p>
+		<p>
+		13 is &amp;quot;somewhat hard,&amp;quot; but it still feels OK to continue.
+		</p>
+		<p>
+		17 is &amp;quot;very hard&amp;quot; and strenuous - you can still go on, but you&amp;acute;re very tired and you really have to push yourself.
+		</p>
+		<p>
+		19 is &amp;quot;extremely strenuous&amp;quot; - for most people, this is the most strenuous exercise they have ever experienced.
+		</p>
+		<p>
+		If you are shooting for moderate intensity (12 to 14) but you feel like you&amp;acute;re not quite there, push a little harder. If you feel like you&amp;acute;re beyond that and you want to keep it moderate, ease off a little.
+		</p>
+		<p>
+		While it&amp;acute;s helpful to be familiar with both the THR and RPE methods, the RPE scale is your best guide for measuring exercise intensity.
+		</p>
+		<p>
+		The RPE scale:
+		</p>
+		<table border="0" cellpadding="5" style="font-size:small">
+			<tr>
+				<td>6</td>
+				<td>No exertion at all</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Extremely light</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Very light - (easy walking slowly at a comfortable pace)</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>Light</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>Somewhat hard (It is quite an effort; you feel tired but can continue)</td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>Hard (heavy)</td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td>Very hard (very strenuous, and you are very fatigued)</td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td>Extremely hard (You can not continue for long at this pace)</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>Maximal exertion</td>
+			</tr>
+		</table>
+		<br />
+		<p>
+		Borg RPE scale<br />
+		&amp;copy; Gunnar Borg, 1970, 1985, 1994, 1998
+		</p>
+	</body>
+	</html>
+</tpt:body>

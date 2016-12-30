@@ -1,0 +1,128 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 2 Questionnaire<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleMoveIt/Week/2/9" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+	
+	<div class="stack">
+			<div class="question">1. Children and adolescents aged 6-17 should exercise moderately-vigorously at least:</div>
+			<label><tpt:html type="radio" id="I1" value="1" selected="${POST[I1]}" />30 minutes daily</label><br />
+			<label><tpt:html type="radio" id="I1" value="2" selected="${POST[I1]}" />two hours (120 minutes)</label><br />
+			<label><tpt:html type="radio" id="I1" value="3" selected="${POST[I1]}" />one hour (60 minutes) daily</label><br />
+			<label><tpt:html type="radio" id="I1" value="4" selected="${POST[I1]}" />one hour ( 60 minutes ) weekly</label><br />
+			<tpt:if id="result[I1]" test="EXISTS">
+				<br />
+				<span class="${resClass[I1]}">${result[I1]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">2. Adults aged 18-64 should perform ____________ of vigorous intensity aerobic exercise a week.</div>
+			<label><tpt:html type="radio" id="I2" value="1" selected="${POST[I2]}" />1 hour 15 minutes</label><br />
+			<label><tpt:html type="radio" id="I2" value="2" selected="${POST[I2]}" />a half hour</label><br />
+			<label><tpt:html type="radio" id="I2" value="3" selected="${POST[I2]}" />2 hours 15 minutes</label><br />
+			<label><tpt:html type="radio" id="I2" value="4" selected="${POST[I2]}" />15 minutes</label><br />
+			<tpt:if id="result[I2]" test="EXISTS">
+				<br />
+				<span class="${resClass[I2]}">${result[I2]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">3. Physical activity can generally be defined as:</div>
+			<label><tpt:html type="radio" id="I3" value="1" selected="${POST[I3]}" />any type of movement</label><br />
+			<label><tpt:html type="radio" id="I3" value="2" selected="${POST[I3]}" />repetitive movement that can be sustained for long periods of time</label><br />
+			<label><tpt:html type="radio" id="I3" value="3" selected="${POST[I3]}" />movement that concentrates strictly on small muscle groups</label><br />
+			<label><tpt:html type="radio" id="I3" value="4" selected="${POST[I3]}" />movement that enhances health</label><br />
+			<tpt:if id="result[I3]" test="EXISTS">
+				<br />
+				<span class="${resClass[I3]}">${result[I3]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">4. Health enhancing physical activity can be defined as:</div>
+			<label><tpt:html type="radio" id="I4" value="1" selected="${POST[I4]}" />light intensity activity of daily life</label><br />
+			<label><tpt:html type="radio" id="I4" value="2" selected="${POST[I4]}" />movement from one area to another</label><br />
+			<label><tpt:html type="radio" id="I4" value="3" selected="${POST[I4]}" />physical activity that is added to baseline activity for health benefits</label><br />
+			<label><tpt:html type="radio" id="I4" value="4" selected="${POST[I4]}" />movement that consists of three (3) parts</label><br />
+			<tpt:if id="result[I4]" test="EXISTS">
+				<br />
+				<span class="${resClass[I4]}">${result[I4]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">5. You should stop exercising if:</div>
+			<label><tpt:html type="radio" id="I5" value="1" selected="${POST[I5]}" />feel dizzy or sick</label><br />
+			<label><tpt:html type="radio" id="I5" value="2" selected="${POST[I5]}" />break out in cold sweats</label><br />
+			<label><tpt:html type="radio" id="I5" value="3" selected="${POST[I5]}" />heave muscle cramps</label><br />
+			<label><tpt:html type="radio" id="I5" value="4" selected="${POST[I5]}" />all the above</label><br />
+			<tpt:if id="result[I5]" test="EXISTS">
+				<br />
+				<span class="${resClass[I5]}">${result[I5]}</span><br />
+			</tpt:if>
+	</div>
+	<br />
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleMoveIT/Week/2/10">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleMoveIT/Week/2/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

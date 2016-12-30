@@ -1,0 +1,56 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Strength Training<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Getting Started</h3><br />
+	<p>
+	Strength training has a number of benefits, not the least of which is helping you lose weight and, of course, keeping your body strong. No matter what your goals are, strength training is an important component of your exercise program and it&amp;acute;s never too late to start.
+	</p>
+	<p>
+	Be sure to check with your doctor before you start lifting weights if you have any medical conditions, injuries or illnesses.
+	</p>
+	<ul>
+		<li>Start with a program that works all muscle groups 1-3 non-consecutive days a week.</li>
+		<li>Warm up with 5-10 minutes of light cardio or with warm up sets of each exercise using a light-medium weight.</li>
+		<li>Choose 1-2 exercises for each muscle group (see below) and do 1-2 sets of 8-16 repetitions of each exercise. As a beginner, you may want to start with about 15-16 reps until you feel comfortable with the moves and build some strength. After that, you can add more weight and reduce your reps for a different challenge.</li>
+		<li>If you exercise in a gym, you may want to start with machines so you have more stabilization for the movements.</li>
+		<li>Give yourself at least a day of rest (though you may need more after the first workout) to recover.</li>
+		<li>Each week, add either 1 repetition and/or a few pounds of weight to each exercise to progress. Just keep your reps at about 16 or below. Once you hit 16 reps, increase your weight and drop your reps down to 10 or 12 reps.</li>
+		<li>You want to challenge yourself, not kill yourself. The first few weeks, focus on learning how to do each exercise rather than on how much weight you&amp;acute;re lifting or how many exercises you&amp;acute;re doing. You have plenty of time to build muscle.</li>
+		<li>After 6 or more weeks of consistent strength training, you may want to change your routine to make it more challenging.</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleMoveIT/info/week2_8_a')">What Exercises Should You Do?</a><br />
+	<a href="javascript:showWin('/ModuleMoveIT/info/week2_8_b')">Choosing Your Sets, Reps and Weight</a><br />
+	<br />
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/9" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

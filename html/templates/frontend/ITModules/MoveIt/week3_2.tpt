@@ -1,0 +1,59 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Obstacles to Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	&amp;quot;I don&amp;acute;t have time to exercise.&amp;quot; &amp;quot;Exercise is boring.&amp;quot;
+	</p>
+	<p>
+	Does this sound like you? If you&amp;acute;ve used these or similar excuses to avoid exercise, you&amp;acute;re not alone. Two out of three Americans are not getting enough exercise. Don&amp;acute;t let these excuses stop you from exercising.
+	</p>
+	<p>
+	Here are the top seven barriers to exercise and ways to hurdle over them:
+	</p>
+	<ol class="listSpace">
+		<li><strong>No time.</strong> Spend a week identifying 30-minute time slots that you can set aside for exercise. Then mark your calendar accordingly. Find ways to work in physical activity into your everyday life. Park further from your office, take the stairs instead of the elevator, ride your bike to the grocery store. Other time &amp;quot;obstacles&amp;quot; to hurdle:</li>
+		<ul>
+			<li><strong>Travel for work.</strong> Choose a hotel with a fitness center or pool. Pack a bathing suit and a pair of sneakers.</li>
+			<li><strong>Family obligations.</strong> Fit in exercise with the kids. Play together. Find time to work out when the kids are at school or staying with a friend.</li>
+		</ul>
+		<li><strong>Lack of support from family or friends.</strong> Tell your family or friends that you want to be more active. Ask them to support your efforts. Get your spouse/significant other or friend to walk, jog or play tennis with you. Join a gym or a hiking, biking or running club.</li>
+		<li><strong>No energy.</strong> We all have times when we are more energetic. If you are a morning person, maybe a before-work workout is best. If you feel an energy boost after work, then you may want to hit the gym on your way home. Try taking a walk at lunch, it can give you energy for the rest of your day!</li>
+		<li><strong>No will power.</strong> If you&amp;acute;re saying this, you may need to write yourself a contract. It may be as simple as writing down a time to exercise in your calendar or date book. You are more likely to do it if you write it down. Choose an activity you enjoy. To stay motivated, choose a reward to work toward and keep you going. Working out with a buddy (tennis partner, walking companion) will also keep it fun and keep you motivated.</li>
+		<li><strong>Fear of injury.</strong> Talk to your doctor first to get the go-ahead to exercise. If it has been some time since you&amp;acute;ve exercised regularly, start out slowly so you don&amp;acute;t injure yourself. Choose a low-impact activity that is gentle on your knees or other joints. Choose an activity that&amp;acute;s appropriate for your age and ability level. Remember to warm up and cool down before and after exercise.</li>
+		<li><strong>Lack of skill.</strong> If you can walk, you can exercise. In fact, you can build an entire exercise routine around walking. If you always wanted to learn to swim or play tennis, now is the time. You may want to take a class to develop new skills.</li>
+		<li><strong>Lack of resources.</strong> This barrier may be related to money or location. You don&amp;acute;t need to join an expensive gym to exercise. All you need is a pair of sneakers or comfortable walking shoes. Go to a nearby park or make up your own route in your neighborhood. You can work out in the privacy of your home with your favorite fitness DVD. And don&amp;acute;t let the winter keep you from staying in shape; take you&amp;acute;re walking routine to the mall.</li>
+	</ol>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/3/3" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

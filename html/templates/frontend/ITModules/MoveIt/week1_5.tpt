@@ -1,0 +1,73 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script> 
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Cardiovascular Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleMoveIT/Week/1/5">	
+	<div class="w-75p left">
+
+	<h3>Review Cardiovascular Exercise</h3><br />
+	<p>
+	There many types of cardiovascular exercise. Cardiovascular exercise is something that involves using the larger muscles like your legs. Cardiovascular exercise simply means that you're involved in an activity that raises your heart rate to a level where you're working, but can still talk (Target Heart Rate Zone).<br />Here's why cardio is so important: 
+	</p>
+	<ul>
+		<li>It&amp;acute;s one way to burn calories and help you lose weight</li>
+		<li>It makes your heart strong so that it doesn&amp;acute;t have to work as hard to pump blood</li>
+		<li>It increases your lung capacity</li>
+		<li>It helps reduce risk of heart attack, high cholesterol, high blood pressure and diabetes</li>
+		<li>It makes you feel good</li>
+		<li>It helps you sleep better</li>
+		<li>It helps reduce stress</li>
+	</ul>
+	<h3>Outside Cardiovascular Exercise</h3><br />
+	<p>
+	This includes running, walking, jogging, bicycling, jump-roping, swimming and some types of skiing
+	</p>
+
+	<h3>Indoor Cardiovascular Exercise</h3><br />
+	<p>
+	The indoor types of cardiovascular exercise include using treadmills, stationary bicycles, stair climbers, rowing machines, elliptical trainers and ladder climbers.
+	</p>
+	<div class="activity border">
+
+		<h3>Activity</h3><br />
+		<p>
+		List cardiovascular exercises that you would like to try:
+		</p>
+		
+		<ol>
+			<li><input type="text" name="E1" size="50" value="${POST[E1]}" /></li>
+			<li><input type="text" name="E2" size="50" value="${POST[E2]}" /></li>
+			<li><input type="text" name="E3" size="50" value="${POST[E3]}" /></li>
+		</ol>
+		<br />
+		
+		</div>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	</form>	
+</div>
+</tpt:body>

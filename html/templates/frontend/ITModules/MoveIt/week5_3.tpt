@@ -1,0 +1,46 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">The Fun in Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Finding Fun in Exercise</h3><br />
+	<p>
+	You may not think of exercise as being fun, but maybe you can change your perspective. Exercise gives you:
+	</p>
+	<ol>
+		<li>Satisfaction. Admit it--does anything feel better than finishing a workout? You feel good about yourself, confident and, most importantly, you learn to trust yourself to follow through with your commitments.</li>
+		<li>Relaxation. If you do it right, a good workout will leave you both energized and relaxed. You&amp;acute;re alert, but not stressed and you&amp;acute;re able to accomplish more.</li>
+		<li>Weight loss.</li>
+		<li>Better health. There&amp;acute;s no better prescription for high blood pressure, high cholesterol, diabetes and other conditions related to being overweight.</li>
+		<li>Confidence. You become comfortable in your own body and you typically become more graceful, balanced and agile.</li>
+	</ol>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/5/4" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

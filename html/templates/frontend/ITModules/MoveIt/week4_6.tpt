@@ -1,0 +1,101 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">How to Balance Your Workout<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleMoveIT/Week/4/6">	
+	<div class="w-75p left">
+	
+	<h3>Balance Your Workout</h3>
+	<ul>
+		<li>Cardio: Endurance</li>
+		<li>Resistance: Strength</li>
+		<li>Stretching: Flexibility</li>
+	</ul>
+	<p>
+	The 3 components of a total exercise program are cardiovascular exercise, resistance exercise and stretching.  Each offers unique and important benefits to your total wellness.
+	</p>
+
+	<h3>How to Balance it All</h3>
+	<ul>
+		<li>First, perform your cardiovascular exercise.</li>
+		<li>Then, perform full body resistance training, 1 set, 8-12 repetitions or alternate days between cardiovascular and resistance exercise.</li>
+		<li>End by cooling down and stretching your entire body.</li>
+		<li>Remember to always warm up before any exercise and cool down and stretch after.</li>
+	</ul>
+
+	<h3>Stretching</h3><br />
+	<p>
+	Flexibility is the ability to move joints thorough their full range of motion. There are differences between stretching before strength training and stretching for flexibility.  Prior to strength training, stretching is important to warm up the joints and deep muscle fibers.  To improve flexibility, stretching should be done after strength training, when the muscle fibers and the joints are more capable of elongating (increasing length).  Ideally, you want to start with at least 5 minutes of cardiovascular exercise, stretch, and then train.  If time does not permit, make sure you stretch after your work out.
+	</p>
+	<h3>Benefits of Stretching:</h3>
+	<ul>
+		<li>Reduces delayed-onset muscle soreness from exercise.</li>
+		<li>Maintains Flexibility-flexible muscles are strong muscles.</li>
+		<li>Decreases the risk of lower back pain.</li>
+		<li>Reduces muscle tension and makes the body feel more relaxed.</li>
+		<li>Helps coordination and allows for easier movement.</li>
+		<li>Increases range of motion.</li>
+		<li>Prevents injuries and muscle strains.</li>
+		<li>Promotes circulation and it feels great!</li>
+	</ul>
+	<h3>How to Stretch:</h3>
+	<ul>
+		<li>Stretch on a daily basis at least once a day.</li>
+		<li>Hold stretches at least fifteen to twenty seconds with two to three repetitions.</li>
+		<li>Stretch after exercise, when the muscles are warm.</li>
+		<li>Move into a stretch until mild to moderate tension is felt, but NOT pain.</li>
+		<li>Hold steady for 20 seconds.  DON&amp;acute;T BOUNCE.</li>
+		<li>Breathe normally; don&amp;acute;t hold your breath.</li>
+		<li>If a stretch feels too tight, release a little and inhale.</li>
+	</ul>
+
+	<div class="activity border">
+		<span><h3>Activity</h3></span><br />
+		<p>
+		List obstacles that have prevented you from exercising in the past:
+		</p>
+		<ol>
+			<li><input type="text" name="F1" size="75" value="${POST[F1]}" /></li>
+			<li><input type="text" name="F2" size="75" value="${POST[F2]}" /></li>
+			<li><input type="text" name="F3" size="75" value="${POST[F3]}" /></li>
+		</ol>
+		<br />
+		<p>
+		List exercises that you would like to try:
+		</p>
+		<ol>
+			<li><input type="text" name="F4" size="75" value="${POST[F4]}" /></li>
+			<li><input type="text" name="F5" size="75" value="${POST[F5]}" /></li>
+			<li><input type="text" name="F6" size="75" value="${POST[F6]}" /></li>
+		</ol>
+		<br />
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

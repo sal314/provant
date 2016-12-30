@@ -1,0 +1,55 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Physical Activity<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleMoveIT/Week/1/1">
+	
+	<div class="w-75p left">
+	
+	<h3>Definition of Physical Activity</h3><br />
+	<p>
+	Physical activity is any form of exercise or movement of the body that uses energy.  Some of your daily activities such as vacuuming, yard work, walking the dog are examples.  To get the health benefits of exercise, include activities that make you breathe harder and make your heart and blood vessels healthier. Examples of aerobic exercises are brisk walking, running, dancing, swimming, and playing basketball. A well balanced exercise program includes strengthening exercises that make your muscles stronger, like push ups and lifting weights and stretching exercises for flexibility.
+	</p>
+		<div class="activity border">
+		
+		<span><h3>Activity</h3></span><br />
+
+		List all the forms of physical activity that you currently do:
+		<ol>
+			<li><input type="text" name="A1" size="50" value="${POST[A1]}" /></li>
+			<li><input type="text" name="A2" size="50" value="${POST[A2]}" /></li>
+			<li><input type="text" name="A3" size="50" value="${POST[A3]}" /></li>
+			<li><input type="text" name="A4" size="50" value="${POST[A4]}" /></li>
+			<li><input type="text" name="A5" size="50" value="${POST[A5]}" /></li>
+		</ol>
+		</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

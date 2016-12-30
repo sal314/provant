@@ -1,0 +1,122 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Chair Yoga<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	Yoga poses can be done gently; just simple stretches along with conscious and deep breathing are effective and powerful.
+	</p>
+	
+	<div class="stack">
+	<h3>Shoulder Rolls</h3>
+	<ul>
+		<li>Sitting up straight, inhale and draw your shoulders up toward your ears.</li>
+		<li>Squeeze them tightly.</li>
+		<li>Press your shoulder blades toward each other, lifting your heart, feeling the stretch across your chest and shoulders.</li>
+		<li>Exhale and relax as you release your shoulder blades, sliding them on your back.</li>
+		<li>Repeat five times or more. Remember to breathe deeply!</li>
+	</ul>
+	<strong>Benefits:</strong>
+	<ul>
+		<li>Relaxes shoulder and neck tension, increases circulation to the head, neck and shoulders</li>
+		<li>Relieves headaches and releases upper back tightness</li>
+	</ul>
+	</div>
+<br />	
+	<div class="stack">
+	<h3>Arms Overhead</h3>
+	<ul>
+		<li>Inhale deeply as you raise your arms out to your sides and overhead, palms facing upward.</li>
+		<li>Interlace your fingers and turn your palms to face the ceiling.</li>
+		<li>Straighten your elbows as much as you comfortably can.</li>
+		<li>Exhale as you press through the heels of your hands.</li>
+		<li>Inhale as you press through your fingers and drop your shoulders down away from your ears.</li>
+		<li>Breathe deeply 3 to 5 times. Move your body and your breath together.</li>
+		<li>Feel your shoulder blades push gently against your back as you exhale.</li>
+		<li>Expand and stretch as you inhale, soften and relax as you exhale.</li>
+	</ul>
+	<p>
+	To release the pose, press out through the heels of your hands, fingers spread wide apart, and continue to press outward as you slowly lower your arms on the exhale.
+	</p>
+	
+	<strong>Benefits:</strong>
+	<ul>
+		<li>Stretches, relaxes and brings increased circulation to arms, wrists, hands, shoulders, back and chest</li>
+		<li>Counteracts effects of typing and helps to prevent carpal tunnel problems and headaches caused by shoulder tension</li>
+	</ul>
+	</div>
+	
+<br />
+	<div class="stack">
+	<h3>Side Stretch</h3>
+	<ul>
+		<li>Raise your right arm overhead, sit up straight and lengthen through your arm, all the way to your fingertips.</li>
+		<li>Inhale deeply.</li>
+		<li>Exhale as you arch to the left. As you stretch, keep your shoulder blades flat on your back and lift the right side of your ribcage with each inhalation.</li>
+		<li>Keep your back flat and your arm extended.</li>
+		<li>Take three to five deep breaths, and then come back to center as you inhale.</li>
+		<li>Exhaling, consciously and slowly lower your arm.</li>
+		<li>Raise your left arm overhead and repeat the stretch to the right.</li>
+	</ul>
+
+	<strong>Benefits:</strong>
+	<ul>
+		<li>Stretches the chest and shoulders, the arms, ribcage and spine</li>
+		<li>Massages organs, stimulates the nervous system, and hydrates spinal discs</li>
+	</ul>
+	</div>
+<br />
+	<div class="stack">
+	<h3>Spinal Twists</h3>
+	<ul>
+		<li>Sit up straight toward the edge of your seat. Cross your right leg over your left.</li>
+		<li>Place your left hand on the inside of your left knee.</li>
+		<li>Inhale deeply as you raise your back arm overhead and twist to the right; exhale as you bring your right elbow or shoulder around toward the back of your chair.</li>
+		<li>Take 3 to 5 full breaths. Lift through the crown of your head as you inhale and twist a little deeper as you exhale. Keep lengthening your spine.</li>
+		<li>To unwind the twist, inhale as you raise your back arm overhead and come back to center on the exhalation.</li>
+		<li>Repeat for 3 to 5 breaths on the other side.</li>
+	</ul>
+
+	<strong>Benefits:</strong><br /><br />
+	<p>
+	Massages organs of digestion and elimination, relieving constipation and indigestion, releases back strain and tension, and relaxes the nervous system
+	</p>
+	<ul>
+		<li>Creates flexibility in the spine</li>
+	</ul>
+	</div>
+<br />
+	<h3>The most important tip to remember:</h3><br />
+	<p>
+	You are responsible for your own life and how you lead it. There is a gap between your perceived obstacle and your reaction (to exercise or not). Within that gap is your power to choose. When you choose not to exercise, you are giving power to your excuse. Do or do not--it&amp;acute;s <i>your</i> choice.
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/5/6" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

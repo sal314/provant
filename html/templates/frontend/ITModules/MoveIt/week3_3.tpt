@@ -1,0 +1,51 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Benefits of Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+
+	<p>
+	You probably know that exercise has many benefits, such as warding off heart disease and diabetes. Exercising 60 to 90 minutes a day can help you reach a healthy weight. Keeping a routine of 30 to 60 minutes a day helps you stay at a healthy weight. You can even benefit if you break up your exercise program into several 10-minute intervals a day.
+	</p>
+	<p>
+	So don&amp;acute;t let these excuses keep your from cashing in on the fun and the healthy returns. Check with your doctor to find out what a good activity level is for you, and then quit making excuses.
+	</p>
+	<p>
+	Merriam-Webster&amp;acute;s Collegiate Dictionary defines motivation as &amp;quot;that which gives purpose and direction to behavior.&amp;quot; By that definition, we&amp;acute;re looking for something to drive us to exercise, something to get us moving. So where does that &amp;acute;something&amp;acute; come from? For some people, like athletes, it may come from the desire to compete and to win. For others, it may come from a desire to be healthy or live longer for their kids. For most, losing weight is often the goal. But is that enough to motivate us?
+	</p>
+	<p>
+	The problem with motivation is that many of us believe it&amp;acute;s something that will come to us if we wait long enough...that someday we&amp;acute;ll wake up and finally want to exercise. Rather than believe in that desire, maybe we&amp;acute;d all be better off by realizing that motivation is something we create, not something we wait for.
+	</p>
+	<br />
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/3/4" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

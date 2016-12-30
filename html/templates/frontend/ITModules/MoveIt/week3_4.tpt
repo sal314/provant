@@ -1,0 +1,57 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stretching<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Types of Stretching</h3><br />
+	<p>
+	The best way to increase your flexibility is to stretch.  The type of stretching that is most recommended by professionals is static stretching because it is associated with a low risk of injury.
+	</p>
+	<p>
+	Static Stretching involves a slow, gradual elongation of the muscle through a full range of motion.  This is a low intensity, long duration technique. This is the recommended type of stretching.
+	</p>
+
+	<h3>Warming Up and Cooling Down</h3><br />
+	<p>
+	Many professionals agree that stretching should be incorporated into your fitness program.  It is important to stretch both before and after exercising.
+	</p>
+	<p>
+	Be sure to warm up for a few minutes. A warm-up prepares your body mentally and physically for exercise and reduces risk for injury. A warm-up increases circulation in a gradual manner in an effort to avoid undue pressure on the body. Jogging in place, riding a bike or walking for 5 minutes are good warm-up activities.
+	</p>
+	<p>
+	Stretching without a proper warm up can lead to pulled or strained muscles! Stretching before exercise eases tissue stiffness. Stretches should focus on those muscles that will be used during physical activity.
+	</p>
+	<p>
+	Stretching after exercise will enhance muscle relaxation, improve circulation to muscles, and expedite the removal of unwanted wastes.  In addition, stretching later in the workout will contribute to a more permanent elongation of the muscle.
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/3/5" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

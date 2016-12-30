@@ -1,0 +1,85 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">The FIT Formula<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+	The <strong>FIT formula</strong> helps you know how much exercise is enough to increase fitness. 
+	</p>
+	<p>
+	<strong>Frequency</strong> = how often a person exercises.<br />For example, you need to exercise at least three times a week.
+	</p>
+	<p>
+	<strong>Intensity</strong> = how hard a person exercises.<br />Remember there&amp;acute;s a difference between pain that comes from over exercise and the tiredness that comes from not being fit.
+	</p>
+	<p>
+	<strong>Time</strong> = how long a person exercises.<br />For example, you need to exercise 15 - 30 minutes at one time to improve fitness.
+	</p>
+	<br />
+	<div class="ITtables">
+	<table border="1" cellpadding="5">
+		<thead>
+		<tr style="align:left">
+			<th>&amp;nbsp;</th>
+			<th>Muscular<br />Endurance</th>
+			<th>Muscular<br />Strength</th>
+			<th>Isotonic</th>
+			<th>Isometric</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td><strong>F</strong></td>
+			<td>Every other day<br />at least 3 days a<br />week</td>
+			<td>Every other day at<br />least 3 days a<br />week</td>
+			<td>Every other day<br />at least 3 days a<br />week</td>
+			<td>Every other day at<br />least 3 days a<br />week</td>
+		</tr>
+		<tr>
+			<td><strong>I</strong></td>
+			<td>Appropriate<br />resistance</td>
+			<td>Appropriate<br />resistance</td>
+			<td>Heaviest weight<br />you can move for<br />the required<br />number of times</td>
+			<td>Contract muscles<br />as tightly as you<br />can for the<br />required length of<br />time</td>
+		</tr>
+		<tr>
+			<td><strong>T</strong></td>
+			<td>20 minutes<br />3-5 sets, 10-15<br />reps</td>
+			<td>20 minutes<br />2-3 sets, 5-10<br />reps</td>
+			<td>2-3 sets<br />5-10 reps</td>
+			<td>2 sets for<br />8-10 seconds</td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/4/2" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

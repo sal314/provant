@@ -1,0 +1,49 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Exercise Safety Suggestions<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	
+	<div class="w-75p left">
+
+	<h3>Getting Started: The Right Gear</h3><br />
+	<p>Many injuries and setbacks occur because people don&amp;acute;t take the time to get themselves well-equipped for their exercise. Make sure you:
+	</p>
+	<ul>
+		<li>Wear shoes that fit well and are capable of providing the right kind of support for your activity and body type. If you&amp;acute;re a runner or walker, get your feet and gait analyzed, and get the right type of shoe for you-this service is usually provided free by stores that specialize in running shoes.</li>
+		<li>Wear appropriate exercise clothing. Fabrics that absorb sweat and remove it from your skin are best; loose-fitting, light weight cotton is also fine. Women should wear supportive sports bras.</li>
+		<ul>
+			<li>You should never wear rubber or plastic suits or belts-these prevent your body from dissipating heat properly and can lead to serious health risks from overheating and dehydration.</li>
+		</ul>
+		<li>Use protective gear: helmets for biking or high-contact sports; knee and elbow pads for skating; reflective clothing and/or lights for evening exercise; sunglasses, sunscreen, and hats for outdoor exercise.</li>
+		<li>Avoid things like ankle and wrist weights. They can alter your normal movement patterns and increase the risk of injury. If you must add weight to your workout, a weighted vest helps distribute weight more evenly and allows you to move more freely and normally than weights attached to your extremities</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/4" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

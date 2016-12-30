@@ -1,0 +1,44 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">SUN SAFETY TIPS<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	It is important to protect your skin while you are enjoying outdoor exercise.
+	<ul>
+		<li>Avoid exposure to the midday sun (from 10:00 am to 2:00 pm standard time or from 11:00 am to 3:00 pm daylight savings time)</li>
+		<li>Use sunscreen with a sun protective factor (SPF) of 15-30 or more when exposed to the sun. The lighter your skin, the higher the SPF number should be.</li>
+		<li>Make sure your sunscreen blocks both UVA and UVB rays.</li>
+		<li>Reapply sunscreen every hour or two and always after swimming.</li>
+		<li>Wear a wide brim hat and sunglasses if you plan on being outside during the midday hours.</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/2/7" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

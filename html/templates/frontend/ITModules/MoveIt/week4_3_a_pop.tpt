@@ -1,0 +1,15 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<p>
+		A moderate amount of physical activity is roughly equivalent to physical activity that uses approximately 150 Calories (kcal) of energy per day, or 1,000 Calories per week.
+		</p>
+		<p>
+		+ Some activities can be performed at various intensities; the suggested durations correspond to expected intensity of effort.
+		</p>
+	</body>
+	</html>
+</tpt:body>

@@ -1,0 +1,60 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Exercise Contractions<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<p>
+	There are four types of exercise contractions.  Isotonic and isometric are two of these four types. All lifting exercises require isotonic exercises.  This happens when the muscle shortens as it contracts.
+	</p>
+	<p>
+	Examples of isotonic exercises are:
+	</p>
+	<ul>
+		<li>Lifting objects above the head-the front shoulder (anterior deltoid) shortens</li>
+		<li>Lifting object up from a lying position-chest muscle shortens</li>
+		<li>Lifting body up from squat position-quadriceps muscle shortens as legs extend</li>
+		<li>Doing a curl up</li>
+		<li>Throwing a ball</li>
+		<li>Swinging a bat</li>
+	</ul>
+	<p>
+	Isometric contractions happen when there is tension on the muscle but no movement is made causing the length of the muscle to remain the same.  This type of contraction is also referred to as a static contraction.  Some bodybuilders make up their own exercises using Isometric contraction in order to develop strength.  An example of this is when someone attempts to curl one arm using equal resistance from the other arm.
+	</p>
+	<p>
+	Examples of isometric exercises are:
+	</p>
+	<ul>
+		<li>Attempting to lift an immoveable object</li>
+		<li>Holding a weight at arm&amp;acute;s length</li>
+		<li>Some wrestling moves.</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/4/3" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,47 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Why You Don't Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+	We all have excuses for why we don't exercise. Recognize any of these?
+	</p>
+	<ul class="listSpace">
+		<li><strong>Exercise is boring.</strong> If you don&amp;acute;t look forward to your workouts, it&amp;acute;s no wonder you skip them. People often force themselves into activities that don&amp;acute;t interest them which increases the quit-factor.</li>
+		<li><strong>There are no immediate consequences to skipping a workout.</strong> It&amp;acute;s not like you&amp;acute;ll gain 10 pounds or suddenly get heart disease if you miss one day. But, it&amp;acute;s easy to let the time get away from you until, pretty soon it&amp;acute;s been a month since your last workout. Then the consequences start appearing such as weight gain, low energy and more.</li>
+		<li><strong>You&amp;acute;re waiting for things to calm down.</strong> Life doesn&amp;acute;t calm down as we get older. Jobs, kids, family, social obligations...they&amp;acute;re never going to go away. If you&amp;acute;re waiting for a clear schedule, you&amp;acute;ll be waiting for a long time. If you really want to exercise, find a way to do it now.</li>
+		<li><strong>You&amp;acute;re waiting to fall in love with exercise.</strong> Think you&amp;acute;ll suddenly wake up one morning, itching to get to that workout? It may not happen that way. You have to work at it every day and find that motivation wherever you can.</li>
+		<li><strong>You get frustrated by lack of results.</strong> Are you a scale-watcher? Remember, it takes time to see results. If you&amp;acute;re obsessed with the scale, it&amp;acute;s that much harder to stay motivated. Focus on what you&amp;acute;re getting NOW--energy, stress reduction, satisfaction, etc.</li>
+		<li><strong>You don&amp;acute;t have huge chunks of time to do all this exercise.</strong> You&amp;acute;re in luck--you don&amp;acute;t need lots of time. Just 10 or so minutes a few times throughout the day and you&amp;acute;ve got yourself an exercise program.</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/5/3" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

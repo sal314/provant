@@ -1,0 +1,123 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Keeping Up Your Physical Activity<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleMoveIt/Week/5/6" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>Congratulations!  You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	<div class="stack">
+			<div class="question">1. People often force themselves into activities that don&amp;acute;t interest them which, of course, increases the quit-factor.</div>
+			<label><tpt:html type="radio" id="F1" value="1" selected="${POST[F1]}" />True</label><br />
+			<label><tpt:html type="radio" id="F1" value="2" selected="${POST[F1]}" />False</label><br />
+			<tpt:if id="result[F1]" test="EXISTS">
+				<br />
+				<span class="${resClass[F1]}">${result[F1]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">2. Most people don&amp;acute;t exercise because:</div>
+			<label><tpt:html type="radio" id="F2" value="1" selected="${POST[F2]}" />They are waiting for things to calm down</label><br />
+			<label><tpt:html type="radio" id="F2" value="2" selected="${POST[F2]}" />They are waiting to fall in love with exercise</label><br />
+			<label><tpt:html type="radio" id="F2" value="3" selected="${POST[F2]}" />They get frustrated at the lack of results</label><br />
+			<label><tpt:html type="radio" id="F2" value="4" selected="${POST[F2]}" />All the above</label><br />
+			<tpt:if id="result[F2]" test="EXISTS">
+				<br />
+				<span class="${resClass[F2]}">${result[F2]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">3. Exercise gives you:</div>
+			<label><tpt:html type="radio" id="F3" value="1" selected="${POST[F3]}" />Satisfaction</label><br />
+			<label><tpt:html type="radio" id="F3" value="2" selected="${POST[F3]}" />Relaxation</label><br />
+			<label><tpt:html type="radio" id="F3" value="3" selected="${POST[F3]}" />Confidence</label><br />
+			<label><tpt:html type="radio" id="F3" value="4" selected="${POST[F3]}" />All the above</label><br />
+			<tpt:if id="result[F3]" test="EXISTS">
+				<br />
+				<span class="${resClass[F3]}">${result[F3]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">4. A great way to stay on track when beginning your exercise routine are/is:</div>
+			<label><tpt:html type="radio" id="F4" value="1" selected="${POST[F4]}" />Limit your physical activity plan to once a week</label><br />
+			<label><tpt:html type="radio" id="F4" value="2" selected="${POST[F4]}" />Rely on a partner to push you</label><br />
+			<label><tpt:html type="radio" id="F4" value="3" selected="${POST[F4]}" />Write down reasons for starting your physical activity plan on an index card and place it where you can see it</label><br />
+			<label><tpt:html type="radio" id="F4" value="4" selected="${POST[F4]}" />None of the above</label><br />
+			<tpt:if id="result[F4]" test="EXISTS">
+				<br />
+				<span class="${resClass[F4]}">${result[F4]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">5. You are responsible for your own life and how you lead it.</div>
+			<label><tpt:html type="radio" id="F5" value="1" selected="${POST[F5]}" />True</label><br />
+			<label><tpt:html type="radio" id="F5" value="2" selected="${POST[F5]}" />False</label><br />
+			<tpt:if id="result[F5]" test="EXISTS">
+				<br />
+				<span class="${resClass[F5]}">${result[F5]}</span><br />
+			</tpt:if>
+	</div>
+	<br />
+		</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleMoveIT/Week/5/7">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleMoveIT/Week/5/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

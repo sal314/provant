@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Functional Equipment</strong><br />
+		<p>
+		There are a variety of tools to help you get a little more functional including:
+		</p>
+		<ul>
+			<li>Dumbbells: Begin with 3-4 pounds and progress to 8-10</li>
+			<li>Body Weight: Combined with jump ropes or exercise balls, body weight is  often challenging on its own, especially with lunges and push-ups</li>
+			<li>Resistance Bands and Loops: Replicate the exercises on a cable machine in the gym</li>
+			<li>Exercise Balls: A fun way to combine balance work with other exercises</li>
+			<li>Medicine Balls: Great for combo moves involving the shoulders</li>
+		</ul>
+		<p>
+		Just as athletes train for their specific sport, we have specific household or recreational activities to train for. Make your training count; make it functional!
+		</p>
+	</body>
+	</html>
+</tpt:body>

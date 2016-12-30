@@ -1,0 +1,64 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Physical Activity<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Health benefits of physical activity</h3><br />
+	<p>
+	The benefits of exercise extend far beyond weight management. Research shows that regular physical activity can help reduce your risk for several diseases and health conditions and improve your overall quality of life.
+	</p>
+	<h3>Physical activity contributes to health by:</h3>
+	<ul>
+		<li>Decreasing the risk of cardiovascular disease</li>
+		<li>Reducing the amount of bone loss that is associated with age and osteoporosis</li>
+		<li>Reducing the resting heart rate</li>
+	</ul>
+	<p>
+	Physical activity helps the body use calories better by increasing basal metabolic rate, reducing appetite and body fat to promote weight loss.
+	</p>
+	<h3>Physical activity can help you:</h3>
+	<ul>
+		<li>Burn calories and reduce body fat</li>
+		<li>Control or maintain your current weight</li>
+		<li>Promote weight loss</li>
+		<li>Improve chronic medical conditions such as diabetes, high blood pressure, and heart disease</li>
+		<li>Prevent diseases such as osteoporosis and depression</li>
+		<li>Improve your fitness and ability to perform daily activities</li>
+		<li>Reduce your appetite</li>
+	</ul>
+	<h3>Remember:</h3>
+	<ul>
+		<li>Some activity is better than no activity</li>
+		<li>The more exercise that you do, the greater the health benefits and the better you will feel</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/1/3" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

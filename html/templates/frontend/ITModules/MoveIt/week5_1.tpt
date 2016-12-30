@@ -1,0 +1,40 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Finding Time to Exercise<br /><small>Move IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+
+	<p>
+	Be honest...on your list of priorities, where does exercise fall? Is it even on your list? Some of you don&amp;acute;t exercise because you think you don&amp;acute;t have time. You&amp;acute;re waiting for your schedules to ease up, for the weather to cool off or heat up, for school to end or start, or some other future event. The truth is there&amp;acute;s never a right time to get moving. It&amp;acute;s now or never, so read on to find out how to make exercise a reality.
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleMoveIT/Week/5/2" class="right next">Next</a>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Move It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

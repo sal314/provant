@@ -1,0 +1,110 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Stick With It (CDC website)</strong><br />
+		<p>
+		By picking physical activities you enjoy and that match your abilities, it will help ensure that you stick with them. If you&amp;acute;re not sure where to start, here are some examples:
+		</p>
+		<table border="1" cellpadding="5">
+			<thead>
+			<tr style="background-color:#ccc;">
+				<th colspan="7">Example 1: Moderate Intensity Activity and Muscle Strengthening Activity</th>
+			</tr>
+			<tr style="background-color:#ccc;">
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday></th>
+				<th>Saturday</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr align="center">
+				<td>30<br />minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>30<br />minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>30<br />minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>Weight<br />training<br /><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+				<td>30<br />minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>30<br />minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>Weight<br />training<br /><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+			</tr>
+			<tr style="background-color:#ccc;" align="center">
+				<td colspan="7"><strong>Total 150 minutes moderate intensity aerobic activity<br />+ 2 days muscle-strengthening activity</strong></td>
+			</tr>
+			</tbody>
+		</table>
+		&amp;nbsp;<br />
+		&amp;nbsp;<br />
+		<table border="1" cellpadding="5">
+			<thead>
+			<tr style="background-color:#ccc;">
+				<th colspan="7">Example 2: Vigorous Intensity Activity and Muscle Strengthening Activity</th>
+			</tr>
+			<tr style="background-color:#ccc;">
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday></th>
+				<th>Saturday</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr align="center">
+				<td>&amp;nbsp;</td>
+				<td>25 minute<br />jog<br /><img src="/assets/media/images/moveit/runit.jpg"/></td>
+				<td>&amp;nbsp;</td>
+				<td>25 minute jog<br />and weight<br />training<br /><img src="/assets/media/images/moveit/runit.jpg"/><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+				<td>&amp;nbsp;</td>
+				<td>Weight<br />training<br /><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+				<td>25 minute<br />jog<br /><img src="/assets/media/images/moveit/runit.jpg"/></td>
+			</tr>
+			<tr style="background-color:#ccc;" align="center">
+				<td colspan="7"><strong>Total: 75 minutes vigorous-intensity aerobic activity<br />+ 2 days muscle-strengthening activity</strong></td>
+			</tr>
+			</tbody>
+		</table>
+		&amp;nbsp;<br />
+		&amp;nbsp;<br />
+
+		<table border="1" cellpadding="5">
+			<thead>
+			<tr style="background-color:#ccc;">
+				<th colspan="7">Example 3: Mix of Moderate &amp; Vigorous Intensity Activity and Muscle<br />Strengthening Activity</th>
+			</tr>
+			<tr style="background-color:#ccc;">
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday></th>
+				<th>Saturday</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr align="center">
+				<td>30<br />minute<br />brisk<br />walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>15 minute<br />jog<br /><img src="/assets/media/images/moveit/runit.jpg"/></td>
+				<td>Weight<br />training<br /><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+				<td>30 minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+				<td>Weight<br />training<br /><img src="/assets/media/images/moveit/liftit.jpg"/></td>
+				<td>15<br />minute<br />jog<br /><img src="/assets/media/images/moveit/runit.jpg"/></td>
+				<td>30 minute<br />brisk walk<br /><img src="/assets/media/images/moveit/walkit.jpg"/></td>
+			</tr>
+			<tr style="background-color:#ccc;" align="center">
+				<td colspan="7"><strong>Total: The equivalent of 150 minutes of moderate-intensity aerobic activity<br />+ 2 days muscle-strengthening activity</strong></td>
+			</tr>
+			</tbody>
+		</table>
+		&amp;nbsp;<br />
+		&amp;nbsp;<br />
+	</body>
+	</html>
+</tpt:body>
