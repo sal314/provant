@@ -1,0 +1,239 @@
+<tpt:body>
+<link rel="stylesheet" type="text/css" media="screen" href="${css}" />
+<script type="text/javascript" language="JavaScript" src="/assets/js/Register.js"></script>
+<div class="inner-content healthcoach">
+	<div id="register">
+		<tpt:if id="logo" test="NOTEMPTY">
+		<div>
+			<img src="/zImageCache/Scale/222/37/${logo}" />
+		</div>
+		</tpt:if>
+
+		<div id="section-header">
+			<h1>${company}<br />
+			<small>Register</small></h1>
+		</div>
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+		Please correct the following errors:
+		<ul>
+			<tpt:foreach id="errors" as="error">
+				<li>${error.display_name} ${error.message}</li> 
+			</tpt:foreach>
+		</ul>	
+		</div>
+	</tpt:if>
+	
+	<form method="POST" action="/Register/AddUser/${company}/${uid}" onsubmit="return ZMEDIA.FORM.validateForm(this);">
+	<input type="hidden" name="status" value="${post[status]}"/>
+	<div>
+		<div class="left">
+			<label class="textfield" for="first_name">First Name:*<br />
+				<input type="text" name="first_name" value="${post[first_name]}" data-validate="required=true" />
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="last_name">Last Name:*<br />
+				<input type="text" name="last_name" value="${post[last_name]}" data-validate="required=true" />
+			</label>
+		</div>
+		<div class="clear"> </div>
+	</div> 
+	<br />
+	
+	<div>
+		<div class="left">
+			<label class="textfield" for="email">Email:*<br />
+				<input type="text" name="email" value="${post[email]}" data-validate="required=true pattern=email"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="email_confim">Confirm Email:*<br />
+				<input type="text" name="email_confirm" value="${post[email]}" data-validate="required=true match=email"/>
+			</label>
+		</div>
+		<div class="clear"> </div>
+	</div> 
+	<br />
+		
+	<div>
+		<div class="left" style="width:208px">
+			<label class="textfield" for="password">Password:*<br />
+				<input type="password" name="password" value="${post[password]}" data-validate="required=true password=6"/><br />
+				<span style="font-size:11px; font-weight:normal;">Password must contain at least 6 characters</span>
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="password_confirm">Confirm Password:*<br />
+				<input type="password" name="password_confirm" value="${post[password_confirm]}" data-validate="required=true match=password"/><br />
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	<br />
+	<div>
+		<label for="registration_code" class="textfield">Registration Code:*<br/>
+			<input type="text" name="registration_code" value="${post[registration_code]}" data-validate="required=true" />
+		</label>
+	</div>
+		<br /><br />
+		
+		<label for="location_id">Location:*<br />
+			<select name="location_id"><tpt:html id="location_id" type="select-options" data="${locations}" selected="${data[location_id]}" /></select>
+		</label>
+		
+		<br />
+		<br />
+	<tpt:comment>
+	  Address1:   <input type="text" name="address1" value="${post[address1]}" data-validate="required=true"/><br/>
+	  Address2:   <input type="text" name="address2" value="${post[address2]}" /><br/>
+	  city:   	  <input type="text" name="city" value="${post[city]}" data-validate="required=true"/><br/>
+	  Counrty:    <tpt:html id="country" type="country_select" include_only="US,CA" target="state" selected="${post[country]}"/><br/>
+	  State:	  <tpt:html id="state" type="state_select" selected="${post[state]}"/><br/> 
+	  zipcode:    <input type="text" name="zipcode" value="${post[zipcode]}" data-validate="required=true pattern=zipcode"/><br/>
+	</tpt:comment>  
+	  
+		<label>Date of Birth:*<br />
+			<select name="dob_month" id="dob_month" onchange="setDays();">
+			<tpt:html type="select-options" data="${months}" selected="${post[dob_month]}"/>
+			</select>
+			<select name="dob_day" id="dob_day" >
+			<tpt:html type="select-options" data="${days}" selected="${post[dob_day]}"/>
+			</select>
+			<select name="dob_year" id="dob_year" onchange="setDays();">
+			<tpt:html type="select-options" data="${years}" selected="${post[dob_year]}"/>
+			</select>
+		</label>
+		
+		<br /><br />
+		
+		<div class="fieldgroup"><label>Gender:*</label><br />
+			<tpt:html type="radio" id="gender" value="M" selected="${post[gender]}" onclick="enableF(false)"/><label for="gender"><span>Male</span></label>
+			<tpt:html type="radio" id="gender" altid="gender2" value="F" selected="${post[gender]}" onclick="enableF(true)"/><label for="gender2"><span>Female</span></label>
+		</div>
+		<br />
+		<div class="fieldgroup">
+		
+		<label>Height:*</label><br />
+		<select name="height_ft"><tpt:html type="select-options" data="${height_ft}" selected="${post[height_ft]}"/></select>
+		<select name="height_in"><tpt:html type="select-options" data="${height_in}" selected="${post[height_in]}"/></select>
+		</div><br />
+	
+		<label>Ethnicity:<br />
+			<select name="race_id"><tpt:html type="select-options" data="${race}" selected="${post[race_id]}"/></select>
+		</label>
+		<br /><br />
+		
+	<div>
+		<div class="left">	
+			<label>Current Weight:*<br />
+				<input type="text" name="initial_weight" value="${post[initial_weight]}" data-validate="required=true type=number precision=5,2 range=(0,999.99)"/>
+			</label>
+		</div>
+		<div class="left">
+			<label class="left column">Goal Weight:*<br />
+				<input type="text" name="goal_weight" value="${post[goal_weight]}" />
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	<br /><br />
+	
+		
+		<div>
+			<label>Goal:*</label><br />
+		 	<tpt:html type="radio" id="goal" altid="goal1" value="maintain" selected="${post[goal]}" default="true"/>Maintain Weight<br/>
+			<tpt:html type="radio" id="goal" altid="goal2" value="gain_1pw" selected="${post[goal]}"/>Gain 1lb per week
+			<tpt:html type="radio" id="goal" altid="goal3" value="gain_2pw" selected="${post[goal]}"/>Gain 2lb per week<br/>
+			<tpt:html type="radio" id="goal" altid="goal4" value="lose_1pw" selected="${post[goal]}"/>Lose 1lb per week
+			<tpt:html type="radio" id="goal" altid="goal5" value="lose_2pw" selected="${post[goal]}"/>Lose 2lb per week<br/>
+			<tpt:html type="radio" id="goal" altid="goal6" value="other" selected="${post[goal]}"/>Other<br/>
+		</div>
+	
+	<div>
+	<br /><br />
+	
+<!--[Cdata[
+	
+	<h3 style="color:#444;text-decoration:underline;">Optional:</h3>	
+		
+	
+	<div>
+		<div class="left">
+			<label>Chest<br /> Measurement: <br />
+				<input type="text" name="measurement[chest]" size="4" maxlength="4" value="${data[measurement][chest]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label>Waist<br /> Measurement: <br />
+				<input type="text" name="measurement[waist]" size="4" maxlength="4" value="${data[measurement][waist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label>Hips<br />  Measurement: <br />
+				<input type="text" name="measurement[hips]" size="4" maxlength="4"  value="${data[measurement][hips]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	
+	]]-->
+	
+	<br />
+	<tpt:setif id="post[gender]" test="EQ" value="f" var="display" iftrue="block" iffalse="none"/>
+		<div id="female_q" style="display:${display}">
+			<div class="left">
+			<label>Wrist<br /> Measurement:<br />
+				<input type="text" name="measurement[wrist]" size="4" maxlength="4" value="${post[measurement][wrist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+			</div>
+			<div class="left column">
+				<label>Forearm<br /> Measurement:<br />
+					<input type="text" name="measurement[forearm]" size="4" maxlength="4" value="${post[measurement][forearm]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+				</label>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	
+	
+	<br /><br />
+		<tpt:html type="checkbox" id="allow_provant_access" value="1" selected="${post[allow_provant_access]}" default="true"/>Allow health coaches to see my account information.
+	</div>
+	<br />
+
+	<iframe width="525" scrolling="auto" height="200" marginwidth="5" marginheight="5" src="/Page/Privacy/">
+	</iframe>
+
+	<!--
+	${policy}
+	-->
+	<br /><br />
+	
+	<div class="registerSubmit">
+		<div class="fieldgroup">
+			<tpt:html type="radio" altid="eula1" id="eula" value="accept" selected="${post[eula]}" default="true"/>Accept 
+			<tpt:html type="radio" altid="eula2" id="eula" value="decline" selected="${post[eula]}"/>Decline
+		</div>
+		<br /><br />
+		
+		<div id="submit-button" style="margin:0;">
+			<a href="#" class="nextstep next"> </a>
+		</div>
+	</div>
+	</form>
+	<script type="text/javascript">
+		function enableF(w){
+			document.getElementById("female_q").style.display=(w)?"block":"none";
+		}
+	</script>
+	<br />
+	<span>* Required Field</span>
+	</div>
+	
+
+</div>
+</tpt:body>
