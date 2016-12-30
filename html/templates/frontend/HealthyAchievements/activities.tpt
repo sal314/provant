@@ -1,0 +1,121 @@
+<tpt:body>
+<div class="inner-content healthy">
+	<div id="section-header">
+		<h1>Healthy Achievements</h1>
+	</div>
+	<div class="right">
+		<img src="/assets/media/images/healthy_achievements/healthy-img.jpg" alt="Healthy Achievements" />
+		
+		
+  
+  <br />
+  <tpt:if id="sacts" test="DNE">
+  	<br />
+  </tpt:if>
+  <tpt:else>
+    <br />
+    <h3>Self Reporting Points</h3>
+	<form name="self_rpt" method="post" action="/HealthyAchievements/AddSelfReporting">
+	  <input type="hidden" name="z_user_id" value="${z_user_id}" />
+	  <div class="ITtables">
+      <table cellpadding="5"  width="320">
+        <tr><th></th><th>Description</th><th>Points</th></tr>
+		<tpt:setvar id="idx" value="0" />
+        <tpt:foreach id="sacts" as="sact">
+          <tr>
+      		  <tpt:if id="sact[showcheck]" test="EQ" value="1">
+      			  <td><input type="checkbox" name="self_${idx}" /></td>
+				  <input type="hidden" name="act_${idx}" value="${sact[aid]}" />
+				  <tpt:modvar id="idx" op="++" />
+      		  </tpt:if>
+			  <tpt:else>
+			      <td>&amp;nbsp;&amp;nbsp;</td>
+			  </tpt:else>
+      		  <tpt:if id="sact[minimum_value]" test="GT" value="0">
+      			  <td>${sact[description]} (${sact[minimum_value})</td>
+      		  </tpt:if>
+      		  <tpt:else>
+      			<td>${sact[description]}</td>
+      		  </tpt:else>
+      		  <td align="right">${sact[points]}</td>
+      	  </tr>
+        </tpt:foreach>
+      </table>
+	  </div>
+	  
+      <br />
+	  
+		<div id="points-button" class="right">
+			<a href="#" class="nextstep next"> </a>
+		</div>
+	 	<div class="clear"> </div>
+    </form>
+  </tpt:else>
+  
+	</div>
+	
+	
+	
+	
+	
+	<div class="wleft left">
+	
+	<h3>${title}</h3>
+	<div class="ITtables">
+		<table cellpadding="8" width="500">
+  		<tr><th>Description</th><th>Points</th></tr>
+    <tpt:foreach id="acts" as="act">
+		<tr>
+		  <tpt:if id="act[minimum_value]" test="GT" value="0">
+		    <td>${act[description]}  (${act[minimum_value]})</td>
+		  </tpt:if>
+		  <tpt:else>
+		    <td>${act[description]}</td>
+		  </tpt:else>		  
+		  <td align="right">${act[points]}</td>
+		</tr>
+	</tpt:foreach>
+  </table>
+  </div>
+<br />
+<br />
+	
+	
+	
+	
+	
+	
+	<tpt:if id="points" test="HASELEMENTS">
+  <h3>Healthy Achievements Points Earned</h3>
+
+ 	<div class="ITtables" style="width:475px;">
+  <table cellpadding="8" width="500">
+  	<tr><th>Description</th><th>Points</th><th>Date Awarded</th></tr>
+ 
+    <tpt:foreach id="points" as="point">
+		<tr>
+		  <td>${point[description]}</td>
+		  <td align="right">${point[points]}</td>
+		  <td align="right">${point[date_added]}</td>
+		</tr>
+	</tpt:foreach>
+  </table>  
+	</div>
+	  	
+	<br />
+	</tpt:if>
+	
+	
+ 
+	<br />
+	<br />
+	<h3>Redeem Points</h3>
+	<span style="font-size:16px;">Coming Soon</span><br /> 
+
+ 
+ 
+  </div>
+  
+  <div class="clear"> </div>
+  </div>
+</tpt:body>

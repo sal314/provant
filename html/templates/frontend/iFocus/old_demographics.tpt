@@ -1,0 +1,68 @@
+<tpt:body>
+<tpt:if id="errors" test="EXISTS">
+The following error's must be fixed.
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li><tpt:switch id="error.name">
+	<tpt:case value="race">You must specify your Ethnicity</tpt:case>
+	<tpt:case value="marital_status">You must supply your marital status</tpt:case>
+	<tpt:case value="education">You must supply you highest level of Education</tpt:case>
+	<tpt:case value="language">You must supply choose a language</tpt:case>
+	<tpt:default>${error.name} : ${error.message}</tpt:default>
+	</tpt:switch>
+	</li>
+	
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}">
+  first name: <input type="text" name="first_name" value="${answers[first_name]}" /><br/>
+  last name:  <input type="text" name="last_name" value="${answers[last_name]}" /><br/>
+  Address1:   <input type="text" name="address1" value="${answers[address1]}" /><br/>
+  Address2:   <input type="text" name="address2" value="${answers[address2]}" /><br/>
+  city:   	  <input type="text" name="city" value="${answers[city]}" /><br/>
+  email:   	  <input type="text" name="email" value="${answers[email]}" /><br/>
+  state		  <tpt:html id="state" type="state_select" default="US" selected="${answers[state]}"/><br />
+  zipcode:    <input type="text" name="zipcode" value="${answers[zipcode]}" data-validate="required=false pattern=zipcode"/><br/>
+  Birth Date:    	<tpt:html id="date_of_birth" type="date_picker" value="${answers[date_of_birth]}" display="M d,Y"/><br/>
+  gender:    <tpt:html type="radio" id="gender" value="M" selected="${answers[gender]}"/><label for="gender">Male </label><tpt:html type="radio" id="gender" altid="gender2" value="F" selected="${answers[gender]}"/><label for="gender2">Female</label><br/>
+  
+  Ethinic Origin:    <tpt:html type="radio" id="race" value="A" selected="${answers[race]}"/>African American 
+  					<tpt:html type="radio" id="race" value="N" selected="${answers[race]}"/>American Indian or Alaskan Native
+  					<tpt:html type="radio" id="race" value="P" selected="${answers[race]}"/>Asian or Pacific Islander
+  					<tpt:html type="radio" id="race" value="H" selected="${answers[race]}"/>Hispanic
+  					<tpt:html type="radio" id="race" value="C" selected="${answers[race]}"/>Caucasian
+  					<tpt:html type="radio" id="race" value="O" selected="${answers[race]}" default="true"/>Other<br/>
+  
+  marital status:    <tpt:html type="radio" id="marital_status" value="S" selected="${answers[marital_status]}" default="true"/>Single(never married) 
+  					<tpt:html type="radio" id="marital_status" value="M" selected="${answers[marital_status]}"/>Married
+  					<tpt:html type="radio" id="marital_status" value="P" selected="${answers[marital_status]}"/>Seperated
+  					<tpt:html type="radio" id="marital_status" value="D" selected="${answers[marital_status]}"/>Divorced
+  					<tpt:html type="radio" id="marital_status" value="O" selected="${answers[marital_status]}"/>Other<br/>
+  
+  Education:	<tpt:html type="radio" id="education" value="I" selected="${answers[education]}" default="true"/>Some High School 
+  				<tpt:html type="radio" id="education" value="H" selected="${answers[education]}"/>High School or GED
+  				<tpt:html type="radio" id="education" value="S" selected="${answers[education]}"/>Some College
+  				<tpt:html type="radio" id="education" value="C" selected="${answers[education]}"/>College
+  				<tpt:html type="radio" id="education" value="G" selected="${answers[education]}"/>Post Graduate or Professional Degree<br/>
+  				
+  Vision:    <tpt:html type="radio" id="vision" value="Y" selected="${answers[vision]}"/>Yes  
+  			 <tpt:html type="radio" id="vision" value="N" selected="${answers[vision]}" default="true"/>No<br/>
+  			 
+  Hearing:   <tpt:html type="radio" id="hearing" value="Y" selected="${answers[hearing]}"/>Yes  
+  			 <tpt:html type="radio" id="hearing" value="N" selected="${answers[hearing]}" default="true"/>No
+  			 <tpt:html type="radio" id="hearing" value="U" selected="${answers[hearing]}"/>Not Sure<br/>
+  			 
+  Language:  <tpt:html type="radio" id="language" value="EN" selected="${answers[language]}" default="true"/>English  
+  			 <tpt:html type="radio" id="language" value="SP" selected="${answers[language]}"/>Spanish 
+  			 <tpt:html type="radio" id="language" value="O" selected="${answers[language]}"/>Other
+  <br/>
+  <tpt:if id="next_last[0]" test="NOTEMPTY"><a href="/iFocus/topic/${next_last[0]}">Previous Page</a></tpt:if>
+  <tpt:if id="next_last[1]" test="NOTNULL"><a href="/iFocus/topic/${next_last[1]}">Next Page</a></tpt:if>
+  
+  <input type="submit" name="save" value="Save and advance"/>
+ </form>
+</tpt:body>

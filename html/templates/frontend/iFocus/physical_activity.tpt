@@ -1,0 +1,99 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Physical Activity<br /><small>Health Assessment</small></h1>
+	</div>
+
+	<tpt:if id="errors" test="EXISTS">
+		<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>${error.name} : ${error.message}</li>
+		</tpt:foreach>
+		</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	   Saved!
+	</tpt:if>
+	<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+		<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq24">${QNo}. How many days per week do you participate in at least 20-30 minutes of moderate physical activity (walking, jogging, swimming, aerobics, etc.)?</span>
+			</div>
+			<table class="generic"> 
+				<thead> 
+					<tr><th>None</th><th>1-2 days/week</th><th>3-4 days/week</th><th>5-6 days/week</th><th>7 days/week</th></tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q24" value="1,2,3,4,5" selected="${answers[q24]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq25">${QNo}. How many days per week do you engage in strength training exercises?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr><th>None</th><th>1-2 day2/week</th><th>3-4 days/week</th><th>5-6 days/week</th><th>7 days/week</th></tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q25" value="1,2,3,4,5" selected="${answers[q25]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq26">${QNo}. How many days per week do you engage in stretching and flexibility exercises (e.g. yoga, warm up stretching, Pilates, etc.)?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr><th>None</th><th>1-2 day2/week</th><th>3-4 days/week</th><th>5-6 days/week</th><th>7 days/week</th></tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q26" value="1,2,3,4,5" selected="${answers[q26]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+		
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

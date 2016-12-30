@@ -1,0 +1,33 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+
+<body>
+<div class="popup">
+	<div class="inner-content">
+		<div class="ifocusResultBox">
+			<div style="margin: 15px;">
+				<h6>${title}</h6>
+				<p>
+				${text}
+				</p>
+
+				<img class="left ifocusStop" src="/assets/media/images/ifocus/${image}" />
+				<div class="left">
+					<br />
+					<span>Your score: ${score}</span>
+					<br />
+					<span>Optimal: ${range}</span>
+					<br />
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

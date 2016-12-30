@@ -1,0 +1,29 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+<h2>National Health Promotion Resources:</h2><br />
+<p>
+In addition to the recommendations provided, you may find additional health and wellness resources from the following national health resources:
+</p>
+<ul>
+	<li>Nutrition: Healthier Dietary Intake /Weight Loss:<br />
+	<a href="javascript:void(0);" onclick="window.open('http://www.mypyramid.gov', '_blank');" >www.mypyramid.gov</a></li>
+	<li>Physical Activity/Fitness Programs:<br />
+	<a href="javascript:void)0);" onclick="window.open('http://www.healthierus.gov/exercise.html', '_blank');">www.healthierus.gov/exercise.html</a></li>
+	<li>Tobacco Cessation:<br />
+	<a href="javascript:void(0);" onclick="window.open('http://www.cancer.org', '_blank');">"www.cancer.org</a></li>
+	<li>Stress Management/Reduction/Emotional Wellness:<br />
+	<a href="javascript:void(0);" onclick="window.open('http://www.mentalhealthamerica.net/llw/stressquiz.html', '_blank');">www.mentalhealthamerica.net/llw/stressquiz.html</a></li>
+	<li>Cholesterol Management/Heart Disease:<br />
+	<a href="javascript:void(0);" onclick="window.open('http://www.heart.org', '_blank');">www.heart.org</a></li>
+	<li>Diabetes and Diabetes Prevention:<br />
+	<a href="javascript:void(0);" onclick="window.open('http://www.diabetes.org', '_blank');">www.diabetes.org</a></li>
+</ul>
+<br />
+<br />
+	</body>
+	</html>
+</tpt:body>

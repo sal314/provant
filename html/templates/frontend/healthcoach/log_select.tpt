@@ -1,0 +1,21 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/CallLog.js"> </script>
+<div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>Call Log</h1>
+	</div>
+
+	<form method="post" action="/HealthCoach/CallLog">
+		<label>Company:<br />
+		<select name="company_id" id="company_id" onchange="getCompanyUsers(event, '/HealthCoach/GetUserList');">
+			<option value="">--Select a company--</option>
+			<option value="-1">All companies</option>
+			<tpt:html id="" type="select-options" data="${companies}" /> 
+		</select>
+		</label><br />
+		<input type="hidden" name="user_id" id="user_id" />
+	<br />
+	<div id="UserList"></div>
+	</form>
+</div>
+</tpt:body>

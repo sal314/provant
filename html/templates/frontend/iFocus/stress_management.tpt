@@ -1,0 +1,187 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Stress Management<br /><small>Health Assessment</small></h1>
+	</div>
+	<tpt:if id="errors" test="EXISTS">
+		<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>${error.name} : ${error.message}</li>
+		</tpt:foreach>
+		</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	   Saved!
+	</tpt:if>
+	<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+		<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq27">${QNo}. How well do you feel you cope with day to day stressors?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Unable to cope</th>
+						<th>Able to cope sometimes</th>
+						<th>Able to cope often</th>
+						<th>Cope very well</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q27" value="1,2,3,4" selected="${answers[q27]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq28">${QNo}. How much stress do you feel from your job?</span>
+			</div>
+			<table class="generic">
+				<thead> 
+					<tr>
+						<th>None</th>
+						<th>A little</th>
+						<th>Moderate</th>
+						<th>A lot</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q28" value="1,2,3,4" selected="${answers[q28]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq29">${QNo}. How much stress do you feel from your family related activities and/or relationships?</span>
+			</div>
+			<table class="generic">  
+				<tr>
+					<th>None</th>
+					<th>A little</th>
+					<th>Moderate</th>
+					<th>A lot</th>
+				</tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q29" value="1,2,3,4" selected="${answers[q29]}"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq30">${QNo}. How often does stress from work and/or your family interfere with your daily job activities?</span>
+			</div>
+			<table class="generic">  
+				<tr>
+					<th>None</th>
+					<th>A little</th>
+					<th>A lot</th>
+					<th>Every day</th>
+				</tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q30" value="1,2,3,4" selected="${answers[q30]}"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question"> 	
+				<span id="qq31">${QNo}. How often do you get at least seven to eight (7-8) hours of sleep per night?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>None</th>
+						<th>Less than 3 nights</th>
+						<th>More than 3 nights</th>
+						<th>Most nights</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q31" value="1,2,3,4" selected="${answers[q31]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq32">${QNo}. How often do you participate in relaxing activities (such as reading, exercise, or other enjoyable activity?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Never</th>
+						<th>Seldom</th>
+						<th>Often</th>
+						<th>Always</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q32" value="1,2,3,4" selected="${answers[q32]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question"> 	
+				<span id="qq33">${QNo}. How often do you use (prescribed or over-the-counter) medication to help you relax or sleep?</span>
+			</div>
+
+			<table class="generic">  
+				<thead>
+					<tr>
+						<th>Never</th>
+						<th>Seldom</th>
+						<th>Often</th>
+						<th>Always</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q33" value="1,2,3,4" selected="${answers[q33]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+			
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+	 
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

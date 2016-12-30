@@ -1,0 +1,62 @@
+<tpt:body>
+ <div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>User Information</h1>
+	</div>
+	
+<a href="/IFocus/Index">iFocus</a> ${last_completed}<br/>
+<tpt:if id="completed" test="HASELEMENTS">
+View Previous iFocus <select id="report">
+<option value=''>Select iFocus Report</option>
+<tpt:html type="select-options" data="${completed}"/>
+</select>
+<input type="button" value="View Report" onclick="gotoReport()"/>
+<br/>
+</tpt:if>
+<br/>
+<a href="/TrackerBP/Index">Blood Pressure Tracker</a>:  UPDATE every ${trackers[update_bp]} days<br/>
+<a href="/TrackerCholesterol/Index">Cholesterol Tracker</a>: UPDATE every ${trackers[update_cholesterol]} days<br/>
+<a href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a>: UPDATE every ${trackers[update_blood_glucose]} days<br/>
+<a href="/TrackerPedometer/Index">Pedometer Tracker</a><br/>
+<a href="/TrackerWeight/Index">Weight Tracker</a><br/>
+<a href="/TrackerMeasurements/Index">Measurement Tracker</a><br/>
+
+<a href="/WorkoutPlan/Index">Workout Plans</a><br/>
+<a href="/WorkoutPlan/trackCardio">Enter Cardio Log</a><br/>
+<a href="/WorkoutPlan/trackStrength">Enter Strength Log</a><br/>
+<tpt:foreach id="modules" as ="module">
+	<tpt:if id="module[class_name]" test="NOTEMPTY">
+		<a href="/${module[class_name]}/Start/${profile[z_user_id]}">${module[name]}</a><br/>
+	</tpt:if>
+</tpt:foreach>
+<hr/>
+<tpt:if id="hhsk" test="EQ" value="true">
+<a href="/HomeHealthScreeningKit/Index">Home Health Screening Kit Results</a><br/>
+</tpt:if>
+<tpt:if id="lvsk" test="EQ" value="true">
+<a href="/LabVoucherKit/Index">Lab Voucher Kit Results</a><br/>
+</tpt:if>
+
+<br/>
+${profile[first_name]}<br/>
+Current BMI: ${bmi}<br/>
+Weight Change: ${weight_change}<br/>
+Goal: ${profile[goal_weight]} lbs<br/>
+Target Calories<br/>
+Exercise level: ${exercise_level}<br/>
+
+Water Consumed today: ${glasses}
+
+</div>
+<script type="text/javascript">
+  function gotoReport(){
+    var el=document.getElementById("report");
+    
+    if(el.selectedIndex){
+      document.location.href="/iFocus/Total/"+el.options[el.selectedIndex].value;
+      return;
+    }
+    alert("You must select a report.");
+  }
+</script>
+</tpt:body>

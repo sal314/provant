@@ -1,0 +1,1562 @@
+<CoreCollections xmlns="">
+	<CoreCollection>
+		<CoreColliid>1</CoreColliid>
+		<CoreCollDocid>/dci/index</CoreCollDocid>
+		<Colliid>2</Colliid>
+		<CollName>CAES CND Diseases, Conditions and Injuries</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>2</CoreColliid>
+		<CoreCollDocid>/dsp/index</CoreCollDocid>
+		<Colliid>3</Colliid>
+		<CollName>CAES PRC Diagnostic and Surgical Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>3</CoreColliid>
+		<CoreCollDocid>/healthy/aging/index</CoreCollDocid>
+		<Colliid>12</Colliid>
+		<CollName>CAES WCT Aging &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>4</CoreColliid>
+		<CoreCollDocid>/healthy/alternative/index</CoreCollDocid>
+		<Colliid>13</Colliid>
+		<CollName>CAES WCT Alternative Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>5</CoreColliid>
+		<CoreCollDocid>/healthy/athlete/index</CoreCollDocid>
+		<Colliid>14</Colliid>
+		<CollName>CAEA WCT Sports &amp; Fitness</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>6</CoreColliid>
+		<CoreCollDocid>/healthy/eating/index</CoreCollDocid>
+		<Colliid>15</Colliid>
+		<CollName>CAEA WCT Food &amp; Nutrition</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>7</CoreColliid>
+		<CoreCollDocid>/healthy/man/index</CoreCollDocid>
+		<Colliid>16</Colliid>
+		<CollName>CAES WCT Men's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>8</CoreColliid>
+		<CoreCollDocid>/healthy/mind/index</CoreCollDocid>
+		<Colliid>17</Colliid>
+		<CollName>CAES WCT Mental Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>9</CoreColliid>
+		<CoreCollDocid>/healthy/parenting/index</CoreCollDocid>
+		<Colliid>18</Colliid>
+		<CollName>CAES WCT Kids' &amp; Teens' Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>10</CoreColliid>
+		<CoreCollDocid>/healthy/rx/index</CoreCollDocid>
+		<Colliid>19</Colliid>
+		<CollName>CAES WCT Medications</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11</CoreColliid>
+		<CoreCollDocid>/healthy/sexuality/index</CoreCollDocid>
+		<Colliid>20</Colliid>
+		<CollName>CAES WCT Sexuality &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12</CoreColliid>
+		<CoreCollDocid>/healthy/traveler/index</CoreCollDocid>
+		<Colliid>21</Colliid>
+		<CollName>CAES WCT Travel &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13</CoreColliid>
+		<CoreCollDocid>/healthy/woman/index</CoreCollDocid>
+		<Colliid>22</Colliid>
+		<CollName>CAES WCT Women's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>14</CoreColliid>
+		<CoreCollDocid>/hic/default</CoreCollDocid>
+		<Colliid>23</Colliid>
+		<CollName>CAES TCT Therapeutic Centers</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>15</CoreColliid>
+		<CoreCollDocid>/animations/index</CoreCollDocid>
+		<Colliid>408</Colliid>
+		<CollName>CAEA PRC Procedures InMotion - Formats</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>16</CoreColliid>
+		<CoreCollDocid>/journalnotes/journalnoteindex</CoreCollDocid>
+		<Colliid>26</Colliid>
+		<CollName>CAES NWS Current Research from Top Journals</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>17</CoreColliid>
+		<CoreCollDocid>/lexidrugdb_English/index</CoreCollDocid>
+		<Colliid>36</Colliid>
+		<CollName>CAEA DRG Drug Information</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>18</CoreColliid>
+		<CoreCollDocid>/healthy/eating/diets</CoreCollDocid>
+		<Colliid>1039</Colliid>
+		<CollName>CAEA WCT Food &amp; Nutrition - Diets</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>19</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1081</Colliid>
+		<CollName>CAEA WCT Interviews</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>20</CoreColliid>
+		<CoreCollDocid>/healthy/living/index</CoreCollDocid>
+		<Colliid>206</Colliid>
+		<CollName>CAEA MSC Miscellaneous</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>21</CoreColliid>
+		<CoreCollDocid>/coe/cancer</CoreCollDocid>
+		<Colliid>1099</Colliid>
+		<CollName>CWES COE Cancer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>22</CoreColliid>
+		<CoreCollDocid>/tnp-professionals/supplements/supplements-index
+		</CoreCollDocid>
+		<Colliid>258</Colliid>
+		<CollName>CAEA NAT (Pro) Herbs &amp; Supplements</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>23</CoreColliid>
+		<CoreCollDocid>/CID/index</CoreCollDocid>
+		<Colliid>254</Colliid>
+		<CollName>CAES CND Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>24</CoreColliid>
+		<CoreCollDocid>/tnp/therapy/index</CoreCollDocid>
+		<Colliid>265</Colliid>
+		<CollName>CAEA NAT Alternative Therapies</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>25</CoreColliid>
+		<CoreCollDocid>/tnp/pg000030</CoreCollDocid>
+		<Colliid>261</Colliid>
+		<CollName>CAEA NAT Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>26</CoreColliid>
+		<CoreCollDocid>/tnp/pg000171</CoreCollDocid>
+		<Colliid>263</Colliid>
+		<CollName>CAEA NAT Drug Interactions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>27</CoreColliid>
+		<CoreCollDocid>/tnp/</CoreCollDocid>
+		<Colliid>262</Colliid>
+		<CollName>CAEA NAT Complementary Therapy Definitions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>28</CoreColliid>
+		<CoreCollDocid>/tnp/pg000001</CoreCollDocid>
+		<Colliid>264</Colliid>
+		<CollName>CAEA NAT Herbs &amp; Supplements</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>29</CoreColliid>
+		<CoreCollDocid>/coe/cvd</CoreCollDocid>
+		<Colliid>1100</Colliid>
+		<CollName>CWES COE Cardiovascular</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>30</CoreColliid>
+		<CoreCollDocid>/reuters/index</CoreCollDocid>
+		<Colliid>31</Colliid>
+		<CollName>CAEA NWS HealthDay News</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>31</CoreColliid>
+		<CoreCollDocid>/TNP-Professionals/conditions/conditions-index
+		</CoreCollDocid>
+		<Colliid>281</Colliid>
+		<CollName>CAEA NAT (Pro) Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>32</CoreColliid>
+		<CoreCollDocid>/TNP-Professionals/druginteractions/drug-inter-index
+		</CoreCollDocid>
+		<Colliid>282</Colliid>
+		<CollName>CAEA NAT (Pro) Drug Interactions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>33</CoreColliid>
+		<CoreCollDocid>/Healthgate/HealthCalculators/</CoreCollDocid>
+		<Colliid>291</Colliid>
+		<CollName>CBEA TOL HealthCalculators</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>34</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/coe/cancer</CoreCollDocid>
+		<Colliid>1101</Colliid>
+		<CollName>CWSS COE Cancer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>35</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/coe/cvd</CoreCollDocid>
+		<Colliid>1102</Colliid>
+		<CollName>CWSS COE Cardiovascular</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>38</CoreColliid>
+		<CoreCollDocid>/animations/flv/index</CoreCollDocid>
+		<Colliid>910</Colliid>
+		<CollName>CAEA PRC Procedures InMotion (FLV)</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>39</CoreColliid>
+		<CoreCollDocid>/animations/flv/mf</CoreCollDocid>
+		<Colliid>1085</Colliid>
+		<CollName>CAXA PRC Wellness FLVs</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>41</CoreColliid>
+		<CoreCollDocid>/tnp/homeo/index</CoreCollDocid>
+		<Colliid>324</Colliid>
+		<CollName>CAEA NAT Homeopathy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>42</CoreColliid>
+		<CoreCollDocid>/tnp/ffoods/index</CoreCollDocid>
+		<Colliid>323</Colliid>
+		<CollName>CAEA NAT Functional Foods</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>43</CoreColliid>
+		<CoreCollDocid>/healthguides/men/index</CoreCollDocid>
+		<Colliid>5</Colliid>
+		<CollName>CAEA GDS Guides Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>50</CoreColliid>
+		<CoreCollDocid>/Common/index</CoreCollDocid>
+		<Colliid>440</Colliid>
+		<CollName>I??? Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>51</CoreColliid>
+		<CoreCollDocid>/healthy/diseasemanagement</CoreCollDocid>
+		<Colliid>715</Colliid>
+		<CollName>CAEA WCT Disease Management Center</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>52</CoreColliid>
+		<CoreCollDocid>/medications/index</CoreCollDocid>
+		<Colliid>650</Colliid>
+		<CollName>CAXA DRG Drug Database - Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>53</CoreColliid>
+		<CoreCollDocid>/healthy/spine/index</CoreCollDocid>
+		<Colliid>916</Colliid>
+		<CollName>CAEA WCT healthy Spine</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>54</CoreColliid>
+		<CoreCollDocid>/qarc/index</CoreCollDocid>
+		<Colliid>508</Colliid>
+		<CollName>COL.000.00.000.000 Quality Architect</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>55</CoreColliid>
+		<CoreCollDocid>/AnatomyExplorer/index</CoreCollDocid>
+		<Colliid>390</Colliid>
+		<CollName>CBEA TOL Anatomy Explorer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>56</CoreColliid>
+		<CoreCollDocid>/ConditionExplorer/index</CoreCollDocid>
+		<Colliid>391</Colliid>
+		<CollName>CBEA TOL Condition Explorer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>57</CoreColliid>
+		<CoreCollDocid>/ConditionExplorerNew/index</CoreCollDocid>
+		<Colliid>541</Colliid>
+		<CollName>CBEA TOL Condition Explorer_Chromium</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>58</CoreColliid>
+		<CoreCollDocid>/PersonalHealthManager/premium/index</CoreCollDocid>
+		<Colliid>438</Colliid>
+		<CollName>CBEA TOL Personal Health Manager</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>59</CoreColliid>
+		<CoreCollDocid>/PersonalHealthManager/standard/index</CoreCollDocid>
+		<Colliid>439</Colliid>
+		<CollName>CBEA TOL Health Risk Assessment</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>70</CoreColliid>
+		<CoreCollDocid>/dynamed/index</CoreCollDocid>
+		<Colliid>584</Colliid>
+		<CollName>CXXX DYN DynaMed Content</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>78</CoreColliid>
+		<CoreCollDocid>/coe/pregnancy</CoreCollDocid>
+		<Colliid>1079</Colliid>
+		<CollName>CWES COE Pregnancy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>79</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1098</Colliid>
+		<CollName>CWSS COE Pregnancy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>80</CoreColliid>
+		<CoreCollDocid>/reuters/index/spanish</CoreCollDocid>
+		<Colliid>585</Colliid>
+		<CollName>CASA NWS HealthDay News</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>81</CoreColliid>
+		<CoreCollDocid>/lexidrugdb_Spanish/index</CoreCollDocid>
+		<Colliid>589</Colliid>
+		<CollName>CASA DRG Drug Information</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>103</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/animations/index</CoreCollDocid>
+		<Colliid>612</Colliid>
+		<CollName>CASA PRC Procedures InMotion</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>116</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/ConditionExplorerNew/index
+		</CoreCollDocid>
+		<Colliid>624</Colliid>
+		<CollName>CASA TOL Condition Explorer_Chromium</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>117</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/Common/index</CoreCollDocid>
+		<Colliid>625</Colliid>
+		<CollName>I??? SP Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>118</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/HealthGate Corporate site articles
+		</CoreCollDocid>
+		<Colliid>626</Colliid>
+		<CollName>I??? HealthGate Corporate Site</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>129</CoreColliid>
+		<CoreCollDocid>/lexidrugdb/IndexFiles</CoreCollDocid>
+		<Colliid>650</Colliid>
+		<CollName>CAXA DRG Drug Database - Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>130</CoreColliid>
+		<CoreCollDocid>/HDS/2006/healthcareindex</CoreCollDocid>
+		<Colliid>651</Colliid>
+		<CollName>CAEA WCT Healthcare</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>131</CoreColliid>
+		<CoreCollDocid>/healthy/mythbusters/2006</CoreCollDocid>
+		<Colliid>671</Colliid>
+		<CollName>CAES WCT Health Myths</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>132</CoreColliid>
+		<CoreCollDocid>/healthy/recipes/</CoreCollDocid>
+		<Colliid>711</Colliid>
+		<CollName>CAEA WCT Recipes</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>133</CoreColliid>
+		<CoreCollDocid>/navigation</CoreCollDocid>
+		<Colliid>712</Colliid>
+		<CollName>CAEA NAV HealthLibrary Navigation</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>134</CoreColliid>
+		<CoreCollDocid>/PureWellness/</CoreCollDocid>
+		<Colliid>716</Colliid>
+		<CollName>CBEA TOL PureWellness</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>137</CoreColliid>
+		<CoreCollDocid>/newsletter/</CoreCollDocid>
+		<Colliid>851</Colliid>
+		<CollName>CAEA LTR Newsletter Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>138</CoreColliid>
+		<CoreCollDocid>/interactivetools/</CoreCollDocid>
+		<Colliid>853</Colliid>
+		<CollName>PBEA TOL Interactive Tools</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>139</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/contentselection/wellnesscenterindex
+		</CoreCollDocid>
+		<Colliid>663</Colliid>
+		<CollName>PASS WCT WellnessCenters</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>140</CoreColliid>
+		<CoreCollDocid>/coe/pregnancy</CoreCollDocid>
+		<Colliid>960</Colliid>
+		<CollName>CBES COE Pregnancy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>142</CoreColliid>
+		<CoreCollDocid>/coe/cvd</CoreCollDocid>
+		<Colliid>962</Colliid>
+		<CollName>CBES COE Cardiovascular</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>144</CoreColliid>
+		<CoreCollDocid>/coe/cancer</CoreCollDocid>
+		<Colliid>964</Colliid>
+		<CollName>CBES COE Cancer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>200</CoreColliid>
+		<CoreCollDocid>/perc/howtos/</CoreCollDocid>
+		<Colliid>841</Colliid>
+		<CollName>CZES MED HowTos</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>201</CoreColliid>
+		<CoreCollDocid>/perc/discharge/conditions</CoreCollDocid>
+		<Colliid>842</Colliid>
+		<CollName>CZES MED Discharge Notes Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>202</CoreColliid>
+		<CoreCollDocid>/perc/discharge/procedures</CoreCollDocid>
+		<Colliid>843</Colliid>
+		<CollName>CZES MED Discharge Notes Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>203</CoreColliid>
+		<CoreCollDocid>/perc/labtests</CoreCollDocid>
+		<Colliid>844</Colliid>
+		<CollName>CZES MED Lab Tests</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>315</CoreColliid>
+		<CoreCollDocid>/animations3D/index</CoreCollDocid>
+		<Colliid>958</Colliid>
+		<CollName>CAXA PRC Procedures InMotion (3D)</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>336</CoreColliid>
+		<CoreCollDocid>/medline/index</CoreCollDocid>
+		<Colliid>34</Colliid>
+		<CollName>CBEA TOL MEDLINE</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>337</CoreColliid>
+		<CoreCollDocid>/interactive/dummy</CoreCollDocid>
+		<Colliid>313</Colliid>
+		<CollName>CBEA TOL Interactive Tools (Dummy Chunks)</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>338</CoreColliid>
+		<CoreCollDocid>/TNP-Professionals/library</CoreCollDocid>
+		<Colliid>314</Colliid>
+		<CollName>CAEA TNP Professional's Library</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>339</CoreColliid>
+		<CoreCollDocid>/medications/rxchecker</CoreCollDocid>
+		<Colliid>327</Colliid>
+		<CollName>CBEA TOL RXChecker</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>340</CoreColliid>
+		<CoreCollDocid>/selfassessment</CoreCollDocid>
+		<Colliid>373</Colliid>
+		<CollName>CBEA TOL 5 Heaalth Risk Assessors</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>341</CoreColliid>
+		<CoreCollDocid>/sinarticles</CoreCollDocid>
+		<Colliid>643</Colliid>
+		<CollName>I??? Sin Articles</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>347</CoreColliid>
+		<CoreCollDocid>/aspx/coe/cardio</CoreCollDocid>
+		<Colliid>709</Colliid>
+		<CollName>SBES COE Cardiovascular</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>348</CoreColliid>
+		<CoreCollDocid>/tol/dict</CoreCollDocid>
+		<Colliid>721</Colliid>
+		<CollName>CBSA TOL Medical Dictionary</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>361</CoreColliid>
+		<CoreCollDocid>/recipies/asf</CoreCollDocid>
+		<Colliid>827</Colliid>
+		<CollName>CAEF RCP Recipes - Adventist SinFree</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>362</CoreColliid>
+		<CoreCollDocid>/CSI/index</CoreCollDocid>
+		<Colliid>852</Colliid>
+		<CollName>CASA LTR Newsletter Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>364</CoreColliid>
+		<CoreCollDocid>/animations/non-mf</CoreCollDocid>
+		<Colliid>924</Colliid>
+		<CollName>CAEA PRC Procedures InMotion (FLV) -MF</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>666</CoreColliid>
+		<CoreCollDocid>/delete/</CoreCollDocid>
+		<Colliid>492</Colliid>
+		<CollName>I??? Deleted Articles</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>777</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1086</Colliid>
+		<CollName>ZZZZ NLM - Test</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>999</CoreColliid>
+		<CoreCollDocid>/corporatesite/articles</CoreCollDocid>
+		<Colliid>292</Colliid>
+		<CollName>CBEA MSC HealthGateCorporateSite</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1001</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>722</Colliid>
+		<CollName>CAEF CND Diseases, Conditions and Injuries</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1002</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>723</Colliid>
+		<CollName>CAEF PRC Diagnostic and Surgical Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1003</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>724</Colliid>
+		<CollName>CAEF WCT Aging &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1004</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>725</Colliid>
+		<CollName>CAEF WCT Alternative Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1007</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>726</Colliid>
+		<CollName>CAEF WCT Men's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1008</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>728</Colliid>
+		<CollName>CAEF WCT Mental Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1009</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>729</Colliid>
+		<CollName>CAEF WCT Kids' &amp; Teens' Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1010</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>757</Colliid>
+		<CollName>CAEF WCT Medications</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1011</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>730</Colliid>
+		<CollName>CAEF WCT Sexuality &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1012</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>731</Colliid>
+		<CollName>CAEF WCT Travel &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1013</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>732</Colliid>
+		<CollName>CAEF WCT Women's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1014</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>733</Colliid>
+		<CollName>CAEF TCT Therapeutic Centers</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1016</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>734</Colliid>
+		<CollName>CAEF NWS Current Research from Top Journals</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1023</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>735</Colliid>
+		<CollName>CAEF CND Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>1131</CoreColliid>
+		<CoreCollDocid>sin-free</CoreCollDocid>
+		<Colliid>752</Colliid>
+		<CollName>CAEF WCT Health Myths</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110001</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>578</Colliid>
+		<CollName>CASS CND Diseases, Conditions and Injuries</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110002</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>583</Colliid>
+		<CollName>CASS PRC Diagnostic and Surgical Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110003</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>595</Colliid>
+		<CollName>CASS WCT Aging &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110004</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>604</Colliid>
+		<CollName>CASA WCT Alternative Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110005</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>603</Colliid>
+		<CollName>CASA WCT Sports &amp; Fitness</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110006</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>599</Colliid>
+		<CollName>CASA WCT Food &amp; Nutrition</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110007</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>601</Colliid>
+		<CollName>CASS WCT Men's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110008</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>602</Colliid>
+		<CollName>CASS WCT Mental Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110009</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>598</Colliid>
+		<CollName>CASS WCT Kids' &amp; Teens' Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110010</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>597</Colliid>
+		<CollName>CASS WCT Medications</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110011</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>607</Colliid>
+		<CollName>CASS WCT Sexuality &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110012</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>608</Colliid>
+		<CollName>CASA WCT Travel &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110013</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>596</Colliid>
+		<CollName>CASS WCT Women's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110014</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>592</Colliid>
+		<CollName>CASS TCT Therapeutic Centers</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110016</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>619</Colliid>
+		<CollName>CASA NWS Current Research from Top Journals</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110018</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1074</Colliid>
+		<CollName>CASA WCT Food &amp; Nutrition - Diets</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110019</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1082</Colliid>
+		<CollName>CASA WCT Interviews</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110020</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>618</Colliid>
+		<CollName>CASA MSC Miscellaneous</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110022</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>638</Colliid>
+		<CollName>CASA NAT (Pro) Herbs &amp; Supplements</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110023</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>591</Colliid>
+		<CollName>CASS CND Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110024</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>615</Colliid>
+		<CollName>CASA NAT Alternative Therapies</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110025</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>605</Colliid>
+		<CollName>CASA NAT Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110026</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>609</Colliid>
+		<CollName>CASA NAT Drug Interactions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110027</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>616</Colliid>
+		<CollName>CASA NAT Complementary Therapy Definitions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110028</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>600</Colliid>
+		<CollName>CASA NAT Herbs &amp; Supplements</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110031</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>639</Colliid>
+		<CollName>CASA NAT (Pro) Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110032</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>640</Colliid>
+		<CollName>CASA NAT (Pro) Drug Interactions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110041</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>613</Colliid>
+		<CollName>CASA NAT Homeopathy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110042</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>628</Colliid>
+		<CollName>CASA NAT Functional Foods</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110043</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>631</Colliid>
+		<CollName>CASA GDS Guides Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110050</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>625</Colliid>
+		<CollName>I??? SP Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110051</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1038</Colliid>
+		<CollName>CASA WCT Disease Management Center</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110078</CoreColliid>
+		<CoreCollDocid>/spanish/pretoggle/coe/pregnancy</CoreCollDocid>
+		<Colliid>1098</Colliid>
+		<CollName>CWSS COE Pregnancy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110130</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>673</Colliid>
+		<CollName>CASA WCT HealthCare</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110131</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>915</Colliid>
+		<CollName>CASS WCT Health Myths</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110132</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1037</Colliid>
+		<CollName>CASA WCT Recipes</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110137</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>852</Colliid>
+		<CollName>CASA LTR Newsletter Index Pages</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110140</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>961</Colliid>
+		<CollName>CBSS COE Pregnancy</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110142</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>963</Colliid>
+		<CollName>CBSS COE Cardiovascular</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110144</CoreColliid>
+		<CoreCollDocid>/spanish</CoreCollDocid>
+		<Colliid>965</Colliid>
+		<CollName>CBSS COE Cancer</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110200</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1075</Colliid>
+		<CollName>CZSS MED HowTos</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110201</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1076</Colliid>
+		<CollName>CZSS MED Discharge Notes Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110202</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1077</Colliid>
+		<CollName>CZSS MED Discharge Notes Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>110203</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1078</Colliid>
+		<CollName>CZSS MED Lab Tests</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111001</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>743</Colliid>
+		<CollName>CASF CND Diseases, Conditions and Injuries</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111002</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>744</Colliid>
+		<CollName>CASF PRC Diagnostic and Surgical Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111003</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>746</Colliid>
+		<CollName>CASF WCT Aging &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111004</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>1006</Colliid>
+		<CollName>CASF WCT Alternative Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111007</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>749</Colliid>
+		<CollName>CASF WCT Men's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111008</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>750</Colliid>
+		<CollName>CASF WCT Mental Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111009</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>748</Colliid>
+		<CollName>CASF WCT Kids' &amp; Teens' Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111010</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>758</Colliid>
+		<CollName>CASF WCT Medications</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111011</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>751</Colliid>
+		<CollName>CASF WCT Sexuality &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111012</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>1008</Colliid>
+		<CollName>CASF WCT Travel &amp; Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111013</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>747</Colliid>
+		<CollName>CASF WCT Women's Health</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111014</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>760</Colliid>
+		<CollName>CASF TCT Therapeutic Centers</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111016</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1080</Colliid>
+		<CollName>CASF NWS Current Research from Top Journals</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111023</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>745</Colliid>
+		<CollName>CASF CND Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>111131</CoreColliid>
+		<CoreCollDocid>/sin-free</CoreCollDocid>
+		<Colliid>1007</Colliid>
+		<CollName>CASF WCT Health Myths</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>120001</CoreColliid>
+		<CoreCollDocid>/French</CoreCollDocid>
+		<Colliid>1044</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - French
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>120002</CoreColliid>
+		<CoreCollDocid>/French</CoreCollDocid>
+		<Colliid>1059</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - French
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>130001</CoreColliid>
+		<CoreCollDocid>/Arabic</CoreCollDocid>
+		<Colliid>1045</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Arabic
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>130002</CoreColliid>
+		<CoreCollDocid>/Arabic</CoreCollDocid>
+		<Colliid>1060</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Arabic
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>140001</CoreColliid>
+		<CoreCollDocid>/Chinese Traditional</CoreCollDocid>
+		<Colliid>1046</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Chinese
+			Traditional</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>140002</CoreColliid>
+		<CoreCollDocid>/Chinese Traditional</CoreCollDocid>
+		<Colliid>1061</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Chinese
+			Traditional</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>150001</CoreColliid>
+		<CoreCollDocid>/Chinese Simplified</CoreCollDocid>
+		<Colliid>1047</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Chinese
+			Simplified</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>150002</CoreColliid>
+		<CoreCollDocid>/Chinese Simplified</CoreCollDocid>
+		<Colliid>1062</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Chinese
+			Simplified</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>160001</CoreColliid>
+		<CoreCollDocid>/Farsi</CoreCollDocid>
+		<Colliid>1048</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Farsi
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>160002</CoreColliid>
+		<CoreCollDocid>/Farsi</CoreCollDocid>
+		<Colliid>1063</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Farsi
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>170001</CoreColliid>
+		<CoreCollDocid>/German</CoreCollDocid>
+		<Colliid>1049</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - German
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>170002</CoreColliid>
+		<CoreCollDocid>/German</CoreCollDocid>
+		<Colliid>1064</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - German
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>180001</CoreColliid>
+		<CoreCollDocid>/Hindi</CoreCollDocid>
+		<Colliid>1050</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Hindi
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>180002</CoreColliid>
+		<CoreCollDocid>/Hindi</CoreCollDocid>
+		<Colliid>1065</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Hindi
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>190001</CoreColliid>
+		<CoreCollDocid>/Italian</CoreCollDocid>
+		<Colliid>1051</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Italian
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>190002</CoreColliid>
+		<CoreCollDocid>/Italian</CoreCollDocid>
+		<Colliid>1066</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Italian
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>200001</CoreColliid>
+		<CoreCollDocid>/Japanese</CoreCollDocid>
+		<Colliid>1052</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Japanese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>200002</CoreColliid>
+		<CoreCollDocid>/Japanese</CoreCollDocid>
+		<Colliid>1067</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Japanese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>210001</CoreColliid>
+		<CoreCollDocid>/Korean</CoreCollDocid>
+		<Colliid>1053</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Korean
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>210002</CoreColliid>
+		<CoreCollDocid>/Korean</CoreCollDocid>
+		<Colliid>1068</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Korean
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>220001</CoreColliid>
+		<CoreCollDocid>/Polish</CoreCollDocid>
+		<Colliid>1054</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Polish
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>220002</CoreColliid>
+		<CoreCollDocid>/Polish</CoreCollDocid>
+		<Colliid>1069</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Polish
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>230001</CoreColliid>
+		<CoreCollDocid>/Portuguese</CoreCollDocid>
+		<Colliid>1055</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Portuguese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>230002</CoreColliid>
+		<CoreCollDocid>/Portuguese</CoreCollDocid>
+		<Colliid>1070</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Portuguese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>240001</CoreColliid>
+		<CoreCollDocid>/Russian</CoreCollDocid>
+		<Colliid>1056</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Russian
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>240002</CoreColliid>
+		<CoreCollDocid>/Russian</CoreCollDocid>
+		<Colliid>1071</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Russian
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>250001</CoreColliid>
+		<CoreCollDocid>/Tagalogue</CoreCollDocid>
+		<Colliid>1057</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Tagalogue
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>250002</CoreColliid>
+		<CoreCollDocid>/Tagalogue</CoreCollDocid>
+		<Colliid>1072</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Tagalogue
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>260001</CoreColliid>
+		<CoreCollDocid>/Vietnamese</CoreCollDocid>
+		<Colliid>1058</Colliid>
+		<CollName>CAXS CND Diseases, Conditions and Injuries - Vietnamese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>260002</CoreColliid>
+		<CoreCollDocid>/Vietnamese</CoreCollDocid>
+		<Colliid>1073</Colliid>
+		<CollName>CAXS PRC Diagnostic and Surgical Procedures - Vietnamese
+		</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000001</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>966</Colliid>
+		<CollName>CMES PERC Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000002</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>974</Colliid>
+		<CollName>CMES PERC Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000003</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>970</Colliid>
+		<CollName>CMES PERC Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000004</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>978</Colliid>
+		<CollName>CMES PERC NAT</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000005</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>984</Colliid>
+		<CollName>CMES PERC Lifestyles</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000006</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>987</Colliid>
+		<CollName>CMES PERC Research Summaries</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000007</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>981</Colliid>
+		<CollName>CMES PERC Diets</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000008</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>1041</Colliid>
+		<CollName>CMES PERC Discharge Instructions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000009</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>1040</Colliid>
+		<CollName>CMES PERC HowTos</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>11000010</CoreColliid>
+		<CoreCollDocid>/perc</CoreCollDocid>
+		<Colliid>1042</Colliid>
+		<CollName>CMES PERC Lab Tests</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000001</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>967</Colliid>
+		<CollName>CMES NRC Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000002</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>975</Colliid>
+		<CollName>CMES NRC Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000003</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>971</Colliid>
+		<CollName>CMES NRC Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000004</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>979</Colliid>
+		<CollName>CMES NRC NAT</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000005</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>985</Colliid>
+		<CollName>CMES NRC Lifestyles</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>12000007</CoreColliid>
+		<CoreCollDocid>/nrc</CoreCollDocid>
+		<Colliid>982</Colliid>
+		<CollName>CMES NRC Diets</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000001</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>968</Colliid>
+		<CollName>CMES RRC Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000002</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>976</Colliid>
+		<CollName>CMES RRC Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000003</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>972</Colliid>
+		<CollName>CMES RRC Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000004</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>980</Colliid>
+		<CollName>CMES RRC NAT</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000005</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>986</Colliid>
+		<CollName>CMES RRC Lifestyles</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>13000007</CoreColliid>
+		<CoreCollDocid>/rrc</CoreCollDocid>
+		<Colliid>983</Colliid>
+		<CollName>CMES RRC Diets</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>14000001</CoreColliid>
+		<CoreCollDocid>/chc</CoreCollDocid>
+		<Colliid>969</Colliid>
+		<CollName>CMES CHC Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>14000002</CoreColliid>
+		<CoreCollDocid>/chc</CoreCollDocid>
+		<Colliid>977</Colliid>
+		<CollName>CMES CHC Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>14000003</CoreColliid>
+		<CoreCollDocid>/chc</CoreCollDocid>
+		<Colliid>973</Colliid>
+		<CollName>CMES CHC Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>14000004</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>1009</Colliid>
+		<CollName>CMES CHC NAT</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>15000001</CoreColliid>
+		<CoreCollDocid>/chisp</CoreCollDocid>
+		<Colliid>990</Colliid>
+		<CollName>CMES CHI SP Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>15000002</CoreColliid>
+		<CoreCollDocid>/chisp</CoreCollDocid>
+		<Colliid>993</Colliid>
+		<CollName>CMES CHI SP Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>15000003</CoreColliid>
+		<CoreCollDocid>/chisp</CoreCollDocid>
+		<Colliid>994</Colliid>
+		<CollName>CMES CHI SP Conditions InDepth</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>16000001</CoreColliid>
+		<CoreCollDocid>/chifr</CoreCollDocid>
+		<Colliid>989</Colliid>
+		<CollName>CMES CHI FRE Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>16000002</CoreColliid>
+		<CoreCollDocid>/chifr</CoreCollDocid>
+		<Colliid>992</Colliid>
+		<CollName>CMES CHI FRE Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>17000001</CoreColliid>
+		<CoreCollDocid>/chiar</CoreCollDocid>
+		<Colliid>988</Colliid>
+		<CollName>CMES CHI AR Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>17000002</CoreColliid>
+		<CoreCollDocid>/chiar</CoreCollDocid>
+		<Colliid>991</Colliid>
+		<CollName>CMES CHI AR Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>18000001</CoreColliid>
+		<CoreCollDocid>/chict</CoreCollDocid>
+		<Colliid>1011</Colliid>
+		<CollName>CMES CHI CT Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>18000002</CoreColliid>
+		<CoreCollDocid>/chict</CoreCollDocid>
+		<Colliid>1024</Colliid>
+		<CollName>CMES CHI CT Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>19000001</CoreColliid>
+		<CoreCollDocid>/chics</CoreCollDocid>
+		<Colliid>1012</Colliid>
+		<CollName>CMES CHI CS Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>19000002</CoreColliid>
+		<CoreCollDocid>/chics</CoreCollDocid>
+		<Colliid>1025</Colliid>
+		<CollName>CMES CHI CS Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>20000001</CoreColliid>
+		<CoreCollDocid>/chifa</CoreCollDocid>
+		<Colliid>1013</Colliid>
+		<CollName>CMES CHI FA Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>20000002</CoreColliid>
+		<CoreCollDocid>/chifa</CoreCollDocid>
+		<Colliid>1026</Colliid>
+		<CollName>CMES CHI FA Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>21000001</CoreColliid>
+		<CoreCollDocid>/chige</CoreCollDocid>
+		<Colliid>1014</Colliid>
+		<CollName>CMES CHI GE Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>21000002</CoreColliid>
+		<CoreCollDocid>/chige</CoreCollDocid>
+		<Colliid>1027</Colliid>
+		<CollName>CMES CHI GE Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>22000001</CoreColliid>
+		<CoreCollDocid>/chihi</CoreCollDocid>
+		<Colliid>1015</Colliid>
+		<CollName>CMES CHI HI Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>22000002</CoreColliid>
+		<CoreCollDocid>/chihi</CoreCollDocid>
+		<Colliid>1028</Colliid>
+		<CollName>CMES CHI HI Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>23000001</CoreColliid>
+		<CoreCollDocid>/chiit</CoreCollDocid>
+		<Colliid>1016</Colliid>
+		<CollName>CMES CHI IT Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>23000002</CoreColliid>
+		<CoreCollDocid>/chiit</CoreCollDocid>
+		<Colliid>1029</Colliid>
+		<CollName>CMES CHI IT Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>24000001</CoreColliid>
+		<CoreCollDocid>/chija</CoreCollDocid>
+		<Colliid>1017</Colliid>
+		<CollName>CMES CHI JA Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>24000002</CoreColliid>
+		<CoreCollDocid>/chija</CoreCollDocid>
+		<Colliid>1030</Colliid>
+		<CollName>CMES CHI JA Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>25000001</CoreColliid>
+		<CoreCollDocid>/chiko</CoreCollDocid>
+		<Colliid>1018</Colliid>
+		<CollName>CMES CHI KO Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>25000002</CoreColliid>
+		<CoreCollDocid>/chiko</CoreCollDocid>
+		<Colliid>1031</Colliid>
+		<CollName>CMES CHI KO Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>26000001</CoreColliid>
+		<CoreCollDocid>/chipo</CoreCollDocid>
+		<Colliid>1019</Colliid>
+		<CollName>CMES CHI PO Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>26000002</CoreColliid>
+		<CoreCollDocid>/chipo</CoreCollDocid>
+		<Colliid>1032</Colliid>
+		<CollName>CMES CHI PO Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>27000001</CoreColliid>
+		<CoreCollDocid>/chipt</CoreCollDocid>
+		<Colliid>1020</Colliid>
+		<CollName>CMES CHI PT Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>27000002</CoreColliid>
+		<CoreCollDocid>/chipt</CoreCollDocid>
+		<Colliid>1033</Colliid>
+		<CollName>CMES CHI PT Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>28000001</CoreColliid>
+		<CoreCollDocid>/chiru</CoreCollDocid>
+		<Colliid>1021</Colliid>
+		<CollName>CMES CHI RU Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>28000002</CoreColliid>
+		<CoreCollDocid>/chiru</CoreCollDocid>
+		<Colliid>1034</Colliid>
+		<CollName>CMES CHI RU Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>29000001</CoreColliid>
+		<CoreCollDocid>/chitg</CoreCollDocid>
+		<Colliid>1022</Colliid>
+		<CollName>CMES CHI TG Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>29000002</CoreColliid>
+		<CoreCollDocid>/chitg</CoreCollDocid>
+		<Colliid>1035</Colliid>
+		<CollName>CMES CHI TG Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>30000001</CoreColliid>
+		<CoreCollDocid>/chivi</CoreCollDocid>
+		<Colliid>1023</Colliid>
+		<CollName>CMES CHI VI Conditions</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>30000002</CoreColliid>
+		<CoreCollDocid>/chivi</CoreCollDocid>
+		<Colliid>1036</Colliid>
+		<CollName>CMES CHI VI Procedures</CollName>
+	</CoreCollection>
+	<CoreCollection>
+		<CoreColliid>99000001</CoreColliid>
+		<CoreCollDocid />
+		<Colliid>571</Colliid>
+		<CollName>CWXS - LexiComp</CollName>
+	</CoreCollection>
+</CoreCollections>

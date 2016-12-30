@@ -1,0 +1,587 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		<style>
+			.nutrition{margin:0 auto}
+		</style>
+	</head>
+	<body>
+		<br />
+		
+		
+		
+		<h3 class="txt-ctr" style="margin-top:0; margin-bottom:5px">Total</h3>
+		<h5 class="txt-ctr" style="margin-top:0">Daily Nutrition Information</h5>
+		<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+		<table class="nutrition">
+			<thead>
+				<tr>
+					<th colspan="2"><img alt="Nutrition Facts" src="/assets/media/images/loseit/nutrition.jpg" /></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td align="left">Kilocalories&amp;nbsp;&amp;nbsp;
+					<tpt:if id = "total[total_calories]" test = "GT" value = "0">
+					${total[total_calories]}kcal
+					</tpt:if>
+					</td>
+					<tpt:if id="data[109]" test="EXISTS">
+						${data[109]}
+					</tpt:if>
+					<tpt:else>
+						<td> </td>
+					</tpt:else>
+				</tr>
+				<tr>
+					<td align="right" colspan="2">% Daily Need*</td>
+				</tr>
+				<tpt:if id = "total[fats]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Fat, Total&amp;nbsp;&amp;nbsp;${total[fats]}g</td>
+					<td align="right">${percent[fat]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[protein]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Protein&amp;nbsp;&amp;nbsp;${total[protein]}g</td>
+					<td align="right">${percent[prot]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[carbohydrates]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Carbohydrate&amp;nbsp;&amp;nbsp;${total[carbohydrates]}g</td>
+					<td align="right">${percent[carbs]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[alcohol]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Alcohol&amp;nbsp;&amp;nbsp;${total[alcohol]}g</td>
+					<td align="right"></td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[cholesterol]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Cholesterol&amp;nbsp;&amp;nbsp;${total[cholesterol]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[saturated fat]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Sat Fat&amp;nbsp;&amp;nbsp;${total[saturated fat]}g</td>
+					<td align="right">${percent[satfat]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[mono fat]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Mono Fat&amp;nbsp;&amp;nbsp;${total[mono fat]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[poly fat]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Poly Fat&amp;nbsp;&amp;nbsp;${total[poly fat]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Oleic]" test = "GT" value = "0">
+				<tr>
+					<td align="left">MFA 18:1, Oleic&amp;nbsp;&amp;nbsp;${total[Oleic]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Linoleic]" test = "GT" value = "0">
+				<tr>
+					<td align="left">PFA 18:2, Linoleic&amp;nbsp;&amp;nbsp;${total[Linoleic]}g</td>
+					<td align="right">${percent[n6_poly]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Linolenic]" test = "GT" value = "0">
+				<tr>
+					<td align="left">PFA 18:3, Linolenic&amp;nbsp;&amp;nbsp;${total[Linolenic]}g</td>
+					<td align="right">${percent[n3_poly]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[EPA]" test = "GT" value = "0">
+				<tr>
+					<td align="left">PFA 20:5, EPA&amp;nbsp;&amp;nbsp;${total[EPA]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[DHA]" test = "GT" value = "0">
+				<tr>
+					<td align="left">PFA 22:6, DHA&amp;nbsp;&amp;nbsp;${total[DHA]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Trans Fat]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Trans Fatty Acid&amp;nbsp;&amp;nbsp;${total[Trans Fat]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sodium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Sodium&amp;nbsp;&amp;nbsp;${total[Sodium]}mg</td>
+					<td align="right">${percent[sod]}%</td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2">
+					<br />
+					Provant data sources do not currently  provide complete nutritional information about this food so some items below may be appear as zeroes. We are actively working to improve this information.
+					<br />
+					</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Potassium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Potassium&amp;nbsp;&amp;nbsp;${total[Potassium]}mg</td>
+					<td align="right">${percent[potass]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vitamin ARE]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin A(RE)&amp;nbsp;&amp;nbsp;${total[Vitamin ARE]}RE</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit AIU]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin A (IU)&amp;nbsp;&amp;nbsp;${total[Vit AIU]}IU</td>
+					<td align="right">${percent[vitaminA]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Beta-C]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Beta-Carotene&amp;nbsp;&amp;nbsp;${total[Beta-C]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Alpha-C]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Alpha-Carotene&amp;nbsp;&amp;nbsp;${total[Alpha-C]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Lutein]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Lutein (+ Zeaxanthin)&amp;nbsp;&amp;nbsp;${total[Lutein]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Beta-Crypto]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Beta-Cryptoxanthin&amp;nbsp;&amp;nbsp;${total[Beta-Crypto]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Lycopene]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Lycopene&amp;nbsp;&amp;nbsp;${total[Lycopene]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vitamin C]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin C&amp;nbsp;&amp;nbsp;${total[Vitamin C]}mg</td>
+					<td align="right">${percent[vitaminC}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Calcium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Calcium&amp;nbsp;&amp;nbsp;${total[Calcium]}mg</td>
+					<td align="right">${percent[calc]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Iron]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Iron&amp;nbsp;&amp;nbsp;${total[Iron]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit Dug]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin D (ug)&amp;nbsp;&amp;nbsp;${total[Vit Dug]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit DIU]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin D (IU)&amp;nbsp;&amp;nbsp;${total[Vit DIU]}IU</td>
+					<td align="right">${percent[vitaminD]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit EIU]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin E (IU)&amp;nbsp;&amp;nbsp;${total[Vit EIU]}IU</td>
+					<td align="right">${percent[vitaminE]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit Emg]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin E (mg)&amp;nbsp;&amp;nbsp;${total[Vit Emg]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Alpha-T]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Alpha-Tocopherol&amp;nbsp;&amp;nbsp;${total[Alpha-T]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Thiamin]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Thiamin&amp;nbsp;&amp;nbsp;${total[Thiamin]}mg</td>
+					<td align="right">${percent[thiam]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Riboflavin]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Riboflavin&amp;nbsp;&amp;nbsp;${total[Riboflavin]}mg</td>
+					<td align="right">${percent[ribofl]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Niacin]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Niacin&amp;nbsp;&amp;nbsp;${total[Niacin]}mg</td>
+					<td align="right">${percent[niac]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit B6]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Pyridoxine (Vitamin B6)&amp;nbsp;&amp;nbsp;${total[Vit B6]}mg</td>
+					<td align="right">${percent[vitaminB6]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Folate]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Folate&amp;nbsp;&amp;nbsp;${total[Folate]}mcg</td>
+					<td align="right">${percent[folat]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit B12]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Cobalamin (Vitamin B12)&amp;nbsp;&amp;nbsp;${total[Vit B12]}mcg</td>
+					<td align="right">${percent[vitaminB12]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Biotin]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Biotin&amp;nbsp;&amp;nbsp;${total[Biotin]}mcg</td>
+					<td align="right">${percent[biot]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Panto Acid]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Pantothenic Acid&amp;nbsp;&amp;nbsp;${total[Panto Acid]}mg</td>
+					<td align="right">${percent[panto]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit K]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin K&amp;nbsp;&amp;nbsp;${total[Vit K]}mcg</td>
+					<td align="right">${percent[vitaminK]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Phosphorus]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Phosphorus&amp;nbsp;&amp;nbsp;${total[Phosphorus]}mg</td>
+					<td align="right">${percent[phos]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Iodine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Iodine&amp;nbsp;&amp;nbsp;${total[Iodine]}mcg</td>
+					<td align="right">${percent[iod]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Magnesium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Magnesium&amp;nbsp;&amp;nbsp;${total[Magnesium]}mg</td>
+					<td align="right">${percent[magnes]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Zinc]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Zinc&amp;nbsp;&amp;nbsp;${total[Zinc]}mg</td>
+					<td align="right">${percent[zin]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Copper]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Copper&amp;nbsp;&amp;nbsp;${total[Copper]}mg</td>
+					<td align="right">${percent[copp]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Manganese]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Manganese&amp;nbsp;&amp;nbsp;${total[Manganese]}mg</td>
+					<td align="right">${percent[manga]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Selenium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Selenium&amp;nbsp;&amp;nbsp;${total[Selenium]}mcg</td>
+					<td align="right">${percent[selen]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Fluoride]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Fluoride&amp;nbsp;&amp;nbsp;${total[Fluoride]}mcg</td>
+					<td align="right">${percent[fluo]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Chromium]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Chromium&amp;nbsp;&amp;nbsp;${total[Chromium]}mg</td>
+					<td align="right">${percent[chrom]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Molybdenum]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Molybdenum&amp;nbsp;&amp;nbsp;${total[Molybdenum]}mcg</td>
+					<td align="right">${percent[molyb]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Diet Fiber]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Dietary Fiber, Total&amp;nbsp;&amp;nbsp;${total[Diet Fiber]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sol Fiber]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Soluble Fiber&amp;nbsp;&amp;nbsp;${total[Sol Fiber]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Insol Fiber]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Insoluble Fiber&amp;nbsp;&amp;nbsp;${total[Insol Fiber]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Crude Fiber]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Crude Fiber&amp;nbsp;&amp;nbsp;${total[Crude Fiber]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sugar]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Sugar, Total&amp;nbsp;&amp;nbsp;${total[Sugar]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Glucose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Glucose&amp;nbsp;&amp;nbsp;${total[Glucose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Galactose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Galactose&amp;nbsp;&amp;nbsp;${total[Galactose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Fructose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Fructose&amp;nbsp;&amp;nbsp;${total[Fructose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sucrose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Sucrose&amp;nbsp;&amp;nbsp;${total[Sucrose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Lactose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Lactose&amp;nbsp;&amp;nbsp;${total[Lactose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Maltose]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Maltose&amp;nbsp;&amp;nbsp;${total[Maltose]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Tryptophan]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Tryptophan&amp;nbsp;&amp;nbsp;${total[Tryptophan]}mg</td>
+					<td align="right">${percent[trypto]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Threonine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Threonine&amp;nbsp;&amp;nbsp;${total[Threonine]}mg</td>
+					<td align="right">${percent[threo]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Isoleucine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Isoleucine&amp;nbsp;&amp;nbsp;${total[Isoleucine]}mg</td>
+					<td align="right">${percent[isoleu]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Leucine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Leucine&amp;nbsp;&amp;nbsp;${total[Leucine]}mg</td>
+					<td align="right">${percent[leuc]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Lysine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Lysine&amp;nbsp;&amp;nbsp;${total[Lysine]}mg</td>
+					<td align="right">${percent[lysi]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Methionine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Methionine&amp;nbsp;&amp;nbsp;${total[Methionine]}mg</td>
+					<td align="right">${percent[methio]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Cystine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Cystine&amp;nbsp;&amp;nbsp;${total[Cystine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Phenylalanine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Phenylalanine&amp;nbsp;&amp;nbsp;${total[Phenylalanine]}mg</td>
+					<td align="right">${percent[phenyl]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Tyrosine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Tyrosine&amp;nbsp;&amp;nbsp;${total[Tyrosine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Valine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Valine&amp;nbsp;&amp;nbsp;${total[Valine]}mg</td>
+					<td align="right">${percent[vali]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Arginine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Arginine&amp;nbsp;&amp;nbsp;${total[Arginine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Histidine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Histidine&amp;nbsp;&amp;nbsp;${total[Histidine]}mg</td>
+					<td align="right">${percent[histid]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Alanine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Alanine&amp;nbsp;&amp;nbsp;${total[Alanine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Asp Acid]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Aspartic Acid&amp;nbsp;&amp;nbsp;${total[Asp Acid]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Glut Acid]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Glutamic Acid&amp;nbsp;&amp;nbsp;${total[Glut Acid]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Glycine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Glycine&amp;nbsp;&amp;nbsp;${total[Glycine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Proline]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Proline&amp;nbsp;&amp;nbsp;${total[Proline]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Serine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Serine&amp;nbsp;&amp;nbsp;${total[Serine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Moisture]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Moisture&amp;nbsp;&amp;nbsp;${total[Moisture]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Ash]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Ash&amp;nbsp;&amp;nbsp;${total[Ash]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Caffeine]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Caffeine&amp;nbsp;&amp;nbsp;${total[Caffeine]}mg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Fat Cal]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Calories from Fat&amp;nbsp;&amp;nbsp;${total[Fat Cal]}kcal</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sat Fat Cal]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Calories from Saturated Fat&amp;nbsp;&amp;nbsp;${total[Sat Fat Cal]}kcal</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Sugar Alcohol]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Sugar Alcohol&amp;nbsp;&amp;nbsp;${total[Sugar Alcohol]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Other Carbohydrate]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Other Carbohydrate&amp;nbsp;&amp;nbsp;${total[Other Carbohydrate]}g</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Folate]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Folate (DFE)&amp;nbsp;&amp;nbsp;${total[Folate]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id = "total[Vit ARAE]" test = "GT" value = "0">
+				<tr>
+					<td align="left">Vitamin A (RAE)&amp;nbsp;&amp;nbsp;${total[Vit ARAE]}mcg</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tr>
+					<td align="center" colspan="2">
+					* Percent daily need is based on data entered in your Member Profile. Your daily values may be higher or lower depending on your nutritional and fitness goals.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+	</body>
+	</html>
+</tpt:body>

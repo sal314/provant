@@ -1,0 +1,107 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Safety<br /><small>Health Assessment</small></h1>
+	</div>
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq41">${QNo}. How often do you wear a seat belt while driving?</span>
+		</div>
+		<table class="generic">  
+			<tr><th>Always</th><th>Often</th><th>Sometimes</th><th>never</th></tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q41" value="1,2,3,4" selected="${answers[q41]}"/></tr>
+		</table>
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq42">${QNo}. Do you use a cell phone while driving?</span>
+		</div>
+		<table class="generic">  
+			<tr>
+				<th>Yes, but it&amp;acute;s hands-free</th>
+				<th>Yes, but it is not hands-free</th>
+				<th>No</th>
+			</tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q42" value="1,2,3" selected="${answers[q42]}"/></tr>
+		</table>
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq42a">${QNo}. Do you text message while driving?</span>
+		</div>
+		<table class="generic">
+			<tr>
+				<th>Never</th>
+				<th>Seldom</th>
+				<th>Often</th>
+				<th>Always</th>
+			</tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q42a" value="1,2,3,4" selected="${answers[q42a]}"/></tr>
+		</table>
+	</div>
+		
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq43">${QNo}. How often do you drive after you have consumed alcohol?</span>
+		</div>
+		<table class="generic">  
+			<tr><th>Always</th><th>Often</th><th>Sometimes</th><th>never</th></tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q43" value="1,2,3,4" selected="${answers[q43]}"/></tr>
+		</table>
+	</div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+  	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+	 
+ <div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

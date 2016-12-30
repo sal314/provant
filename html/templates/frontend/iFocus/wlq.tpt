@@ -1,0 +1,306 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Work-Life Quality<br /><small>Health Assessment</small></h1>
+	</div>
+
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+		<div>
+			<div class="question">
+				<span>These questions ask about how your health has affected you at work during the past 2 weeks. Please answer these questions even if you missed some workdays.</span>
+			</div>
+		</div>
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<div class="health-question">
+			<div class="question">
+				<span id="qwlq1">${QNo}. In the past 2 weeks, how much of the time did your physical health or emotional provlems make it difficult for you to do the follow:</span>
+			</div>
+			<br />
+			<div class="question">
+				<span id="qwlq1a">a. get going easily at the beginning of the workday?</span>
+			</div>
+			<br />
+			<table class="generic">
+				<thead> 
+					<tr>
+						<th>Difficult all of the time (100%)</th>
+						<th>Difficult most of the time</th>
+						<th>Difficult some of the time (about 50%)</th>
+						<th>Difficult a slight bit of the time</th>
+						<th>Difficult none of the time (0%)</th>
+						<th>Does not apply to my job</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:html type="radio-group" wrap="td" id="wlq1a" value="1,2,3,4,5,6" selected="${answers[wlq1a]}"/>
+				</tbody>
+			</table>
+
+			<div class="question">
+				<span id="qwlq1b">b. start on your job as soon as you arrived at work?</span>
+			</div>
+			<br />
+			<table class="generic">
+				<thead> 
+					<tr>
+						<th>Difficult all of the time (100%)</th>
+						<th>Difficult most of the time</th>
+						<th>Difficult some of the time (about 50%)</th>
+						<th>Difficult a slight bit of the time</th>
+						<th>Difficult none of the time (0%)</th>
+						<th>Does not apply to my job</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:html type="radio-group" wrap="td" id="wlq1b" value="1,2,3,4,5,6" selected="${answers[wlq1b]}"/>
+				</tbody>
+			</table>
+			<br />	
+		</div>
+
+
+
+<br />
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+			<div class="question">
+				<span id="qwlq3">${QNo}. In the past 2 weeks, how much of the time were you able to sit, stand, or stay in one position for longer than 15 minutes while working, without difficulty caused by physical health or emotional problems?</span>
+			</div>
+			<br />
+			<table class="generic">
+				<thead> 
+					<tr>
+						<th>All of the time (100%)</th>
+						<th>Most of the time</th>
+						<th>Some of the time (about 50%)</th>
+						<th>A slight bit of the time</th>
+						<th>None of the time (0%)</th>
+						<th>Does not apply to my job</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:html type="radio-group" wrap="td" id="wlq3" value="1,2,3,4,5,6" selected="${answers[wlq3]}"/>
+				</tbody>
+			</table>
+
+			<br />
+		</div>
+
+
+<br />				
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qwlq4">${QNo}. In the past 2 weeks, how much of the time were you able to repeat the same motions over and over again while working, without difficulty caused by physical health or emotional problems?</span>
+			</div>
+			<br />
+			<table class="generic">
+				<thead> 
+					<tr>
+						<th>All of the time (100%)</th>
+						<th>Most of the time</th>
+						<th>Some of the time (about 50%)</th>
+						<th>A slight bit of the time</th>
+						<th>None of the time (0%)</th>
+						<th>Does not apply to my job</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:html type="radio-group" wrap="td" id="wlq4" value="1,2,3,4,5,6" selected="${answers[wlq4]}"/>
+				</tbody>
+			</table>
+			<br />	
+		</div>
+
+
+
+<br />
+
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq34">${QNo}. In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to do the following: </span><br /><br />
+			
+			<span id="qwlq2a">a. handle the workload?</span>
+		</div>
+	
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq2a" value="1,2,3,4,5,6" selected="${answers[wlq2a]}"/></tr>
+			</tbody>
+		</table>
+
+		<div class="question">
+			<span id="qwlq2b">b. finish work on time?</span>
+		</div>
+	
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq2b" value="1,2,3,4,5,6" selected="${answers[wlq2b]}"/></tr>
+			</tbody>
+		</table>
+		<br />
+	</div>
+
+
+
+
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+  
+ 	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	</form>
+	 
+<div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--[CDATA[ This is the old form, before I moved things around: CD
+
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+		<div class="health-question">
+			<div class="question">
+				<span id="qwlq1">1.	Questions 1 through 5 ask about how your health has affected you at work during the past 2 weeks. Please answer these questions even if you missed some workdays.</span>
+			</div>
+	<table class="generic">  
+				<tr><th>Difficult all of the time (100%)</th><th>Difficult most of the time</th><th>Difficult some of the time (about 50%)</th><th>Difficult a slight bit of the time</th><th>Difficult none of the time (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq1" value="1,2,3,4,5,6" selected="${answers[wlq1]}"/></tr>
+			</table>
+			
+		</div>
+		<div class="health-question">
+			<div class="question">
+				<span id="qwlq2a">In the past 2 weeks, how much of the time were you able to sit, stand, or stay in one position for longer than 15 minutes while working, without difficulty caused by physical health or emotional problems?</span>
+			</div>
+			<table>
+				<tr><th>Able all of the time (100%)</th><th>Able most of the time</th><th>Able some of the time (50%)</th><th>Able a slight bit of the time</th><th>Able none (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq2a" value="1,2,3,4,5,6" selected="${answers[wlq2a]}"/></tr>
+			</table>
+		</div>
+		<div class="health-question">
+			<div class="question">
+			<span id="qwlq2b">In the past 2 weeks, how much of the time were you able to repeat the same motions over and over again while working, without difficulty caused by physical health or emotional problems?</span>
+			</div>
+			<table>
+				<tr><th>All of the time (100%)</th><th>Most of the time</th><th>Some of the time (50%)</th><th>A slight bit of the time</th><th>None (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq2b" value="1,2,3,4,5,6" selected="${answers[wlq2b]}"/></tr>
+			</table>  	
+  		</div>
+		<div class="health-question">
+			<div class="question">
+			<span id="qwlq3">In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to concentrate on your work?</span>
+			</div>
+			<table>
+				<tr><th>All of the time (100%)</th><th>Most of the time</th><th>Some of the time (50%)</th><th>A slight bit of the time</th><th>None (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq3" value="1,2,3,4,5,6" selected="${answers[wlq3]}"/></tr>
+			</table>
+		</div>
+		<div class="health-question">
+			<div class="question">
+				<span id="qwlq4">In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to speak with people in-person, in meetings or on the phone?</span>
+			</div>
+			<table>  
+				<tr><th>Difficult all of the time (100%)</th><th>Difficult most of the time</th><th>Difficult some of the time (about 50%)</th><th>Difficult a slight bit of the time</th><th>Difficult none of the time (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq4" value="1,2,3,4,5,6" selected="${answers[wlq4]}"/></tr>
+			</table>
+		</div>	
+		<div class="health-question">
+			<div class="question">
+			
+			
+				<span id="qwlq5">In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to do the following?</span>
+			</div>
+			<table>  
+				<tr><th>Difficult all of the time (100%)</th><th>Difficult most of the time</th><th>Difficult some of the time (about 50%)</th><th>Difficult a slight bit of the time</th><th>Difficult none of the time (0%)</th><th>Does not apply to my job</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="wlq5" value="1,2,3,4,5,6" selected="${answers[wlq5]}"/></tr>
+			</table>
+		</div>
+
+]]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tpt:body>

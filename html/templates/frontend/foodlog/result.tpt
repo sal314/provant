@@ -1,0 +1,10 @@
+<tpt:body>
+<tpt:comment>
+Note that this does not work.  Double substitution is not
+supported by the template parser.
+</tpt:comment>
+	<tpt:foreach id="keys" as="k"> {
+		${k} = ${server[${k}]}
+		<br />
+	</tpt:foreach>
+</tpt:body>

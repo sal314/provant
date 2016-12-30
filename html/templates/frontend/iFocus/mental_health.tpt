@@ -1,0 +1,82 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Emotional Health<br /><small>Health Assessment</small></h1>
+	</div>	
+
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				${QNo}.	Over the last 2 weeks, how often have you been bothered by any of the following problems?
+				
+			</div>
+			<br />
+			<table class="datagrid interactive">  
+				<thead>
+				<tr>
+					<th></th><th>Not at all</th><th>Several days</th><th>More than half the days</th><th>Nearly every day</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr><td class="question" id="qq38_1">a. Little interest or pleasure in activities that I normally enjoy</td><tpt:html type="radio-group" wrap="td" id="q38_1" value="1,2,3,4" selected="${answers[q38_1]}"/></tr> 
+				<tr><td class="question" id="qq38_2">b. Feeling down, depressed, or hopeless</td> <tpt:html type="radio-group" wrap="td" id="q38_2" value="1,2,3,4" selected="${answers[q38_2]}"/></tr>
+				<tr><td class="question" id="qq38_3">c. Trouble falling or staying asleep, or sleeping too much</td><tpt:html type="radio-group" wrap="td" id="q38_3" value="1,2,3,4" selected="${answers[q38_3]}"/></tr>
+				<tr><td class="question" id="qq38_4">d. Feeling tired or having too little energy for daily activities</td><tpt:html type="radio-group" wrap="td" id="q38_4" value="1,2,3,4" selected="${answers[q38_4]}"/></tr> 
+				<tr><td class="question" id="qq38_5">e. Poor appetite or overeating</td><tpt:html type="radio-group" wrap="td" id="q38_5" value="1,2,3,4" selected="${answers[q38_5]}"/></tr>
+				<tr><td class="question" id="qq38_6">f. Feeling bad about yourself, or that you let yourself or your family down</td><tpt:html type="radio-group" wrap="td" id="q38_6" value="1,2,3,4" selected="${answers[q38_6]}"/></tr>
+				<tr><td class="question" id="qq38_7">g. Trouble concentrating on things, such as reading or watching TV</td><tpt:html type="radio-group" wrap="td" id="q38_7" value="1,2,3,4" selected="${answers[q38_7]}"/></tr>
+<!--				<tr><td class="question" id="qq38_8">h. Moving or speaking so slowly that other people could have noticed?<br />Or the opposite - <br />being so fidgety or restless that you have been moving around a lot more than usual</td><tpt:html type="radio-group" wrap="td" id="q38_8" value="1,2,3,4" selected="${answers[q38_8]}"/></tr> -->
+				<tr><td class="question" id="qq38_8">h. Thinking that you would be better off dead or considering hurting yourself in some way</td><tpt:html type="radio-group" wrap="td" id="q38_8" value="1,2,3,4" selected="${answers[q38_8]}"/></tr>
+				</tbody>
+			</table>
+			</div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+<tpt:if id="next_last[0]" test="NOTEMPTY">
+	<div id="back-button">
+		<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+	</div>
+</tpt:if>
+<tpt:if id="is_completed" test="EQ" value="true">
+  	<tpt:if id="next_last[1]" test="NOTNULL">
+		<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+	</tpt:if>
+</tpt:if><tpt:else>
+  	<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+</tpt:else>
+ </form>
+ 
+ <div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

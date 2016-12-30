@@ -1,0 +1,6 @@
+<tpt:body>
+<a href="/Messages/Index">Check Messages</a><br/>
+<a href="/HealthCoach/CallLog">Call Log</a><br/>
+<a href="/HealthCoach/GetUsers">View User Info</a><br/>
+<a href="/HealthCoach/ChangePassword">Change Password</a><br/>
+</tpt:body>

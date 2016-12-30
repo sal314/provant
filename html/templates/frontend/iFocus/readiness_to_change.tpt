@@ -1,0 +1,79 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Readiness to Change<br /><small>Health Assessment</small></h1>
+	</div>
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+	<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+${QNo}. If you are planning on making changes in your behaviors and lifestyle to improve your health status please select the timeframe for anticipated change in the following categories:
+</div>
+<br />
+<table class="datagrid interactive">  
+<thead>
+	<tr>
+		<th></th>
+		<th>I am not planning on making any changes</th>
+		<th>I plan to change in the next 6 months</th>
+		<th>I plan to change in the next 30 days</th>
+		<th>I have recently begun changes</th>
+		<th>I currently engage in healty habits in this area</th>
+	</tr>
+	</thead>
+  	<tr><td class="question" id="qq48_1">Diet/Nutrition</td> 	<tpt:html type="radio-group" wrap="td" id="q48_1" value="1,2,3,4,5" selected="${answers[q48_1]}"/></tr>
+  	<tr><td class="question" id="qq48_2">Physical Activity</td>	<tpt:html type="radio-group" wrap="td" id="q48_2" value="1,2,3,4,5" selected="${answers[q48_2]}"/></tr>
+  	<tr><td class="question" id="qq48_3">Tobacco Use</td>		<tpt:html type="radio-group" wrap="td" id="q48_3" value="1,2,3,4,5" selected="${answers[q48_3]}"/></tr>
+  	<tr><td class="question" id="qq48_4">Weight management</td>				<tpt:html type="radio-group" wrap="td" id="q48_4" value="1,2,3,4,5" selected="${answers[q48_4]}"/></tr>
+  	<tr><td class="question" id="qq48_5">Stress management</td>				<tpt:html type="radio-group" wrap="td" id="q48_5" value="1,2,3,4,5" selected="${answers[q48_5]}"/></tr>
+  	<tr><td class="question" id="qq48_6">Alcohol Use</td>		<tpt:html type="radio-group" wrap="td" id="q48_6" value="1,2,3,4,5" selected="${answers[q48_6]}"/></tr>
+  	<tr><td class="question" id="qq48_7">Preventive care (get a physical, dental exam, vision exam, etc)</td>	<tpt:html type="radio-group" wrap="td" id="q48_7" value="1,2,3,4,5" selected="${answers[q48_7]}"/></tr>
+</table>
+</div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if>
+	<tpt:else>
+		<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+	</tpt:else>
+	 </form>
+<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

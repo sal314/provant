@@ -1,0 +1,99 @@
+<tpt:body>
+	<script type="text/javascript" language="JavaScript" src="/assets/js/FoodLog.js"></script>
+	
+<div class="inner-content customFood">
+	<div id="section-header">
+		<h1><span>Add Custom Foods</span><br /><small>Food Log</small></h1>
+	</div>
+	<form method="post" action="/CustomFoods/AddFood/${gotag}">
+	
+	<div class="right" style="width:360px">
+		<h3><span>Nutritional Information (for this serving size):</span></h3><br />
+	<table border="0">
+	<tpt:foreach id="nutrients" as="nut">
+		<tr>
+			<td style="width:170px">${nut[NutrientName]}</td>
+			<td><input type="text" name="nut${nut[NutrientID]}" size="5" autocomplete="off" value="0" />&amp;nbsp;${nut[UnitName]}</td>
+		</tr>
+	</tpt:foreach>
+	</table>
+	<input type="hidden" name="nsize" value="${nsize}" />
+	<br /><br />
+
+	<input type="submit" value="Add Food" style="margin-left:280px" />
+	<br />
+
+	
+	</div>
+	
+	<div class="left">
+	<h3>Basic Info:</h3>
+	
+	<tpt:if id="errors" test="HASELEMENTS">
+		<div style="background-color:#F395A2">
+		<br />
+		<tpt:foreach id="errors" as="error">
+			<span>${error}</span><br /><br />
+		</tpt:foreach>
+		</div>
+	</tpt:if>
+
+	<br />
+
+	<div class="stack last question">
+		<label><span>Food Name:</span><br />
+			<input type="text" name="food_name" autocomplete="off" size="40" />
+		</label>
+	</div>
+	<br />
+	<h3><span>Food Class:</span></h3><br />
+
+	<div class="stack last question">
+		<label><span>Main Class:</span><br />
+		<select name="major_class" id="major_class" onchange="GetClasses(event, '/CustomFoods/getClasses')">
+		<option value="0">-- Select Main Class --</option>
+		<tpt:html type="select-options" data="${classes}" />
+		</select>
+		</label>
+	</div>
+	
+	<div class="stack last question">
+		<label><span>Full Class:</span><br />
+			<select name="food_class" id="food_class">
+			<option value="0">-- Select Full Class --</option>
+			</select>
+		</label>
+	</div>
+	<br />
+	<h3><span>Serving Size:</span></h3><br />
+	
+	<div class="stack last question">
+		<label>Size:<br /><input type="text" name="amount" autocomplete="off" size="5" />
+		</label>
+	</div>
+	
+	<div class="stack last question">
+		<select name="unit" id="unit" >
+			<option value="0">-- Select serving units --</option>
+			<tpt:html type="select-options" data="${units}" />
+		</select>
+	</div>
+	<div class="clear"> </div>
+	<br />
+	<div class="stack last question">	
+		<label>Serving Size Notes:<br />
+			<input type="text" name="notes" size="40" autocomplete="off" />
+		</label>
+	</div>
+	<br /><br />
+	<tpt:if id="goto" test="ne" value="">
+		<a href="${goto}"> &lt;&lt; Return to ${where}</a> 
+	</tpt:if>
+	
+	<br />
+	</div>
+	
+	<div class="clear"> </div>
+	</form>
+	</div>
+</tpt:body>

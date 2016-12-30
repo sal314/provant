@@ -1,0 +1,180 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Biometric Data<br /><small>Health Assessment</small></h1>
+	</div>
+	
+
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+
+
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateFrm(this)">
+
+<div class="bioData">
+	<input type="hidden" name="height" value="${answers[height]}"/>
+	<div class="inline-field">
+		<label>Height </label>
+		<input type="text" size="1" maxlength="1" name="height_ft" value="${height_ft}" data-validate="required=true type=integer range=[1,8]"/>feet <input type="text" size="2" maxlength="2" name="height_in" value="${height_in}" data-validate="required=true type=integer range=[0,12]"/>inches
+		<div class="clear"> </div>
+	</div>
+	<div class="inline-field">
+		<label>Weight</label>
+		<input type="text" name="weight" value="${answers[weight]}" data-validate="required=true type=number range=[0,2000]"/>
+		pounds
+	</div>
+	<div class="inline-field">
+		<label>Waist Circumference</label>
+		<input type="text" name="waist" value="${answers[waist]}" data-validate="required=true type=number range=[0,200]"/>
+		inches
+	</div>
+	<div class="inline-field">
+		<label>Body Fat %</label>
+		<input type="text" name="body_fat" value="${answers[body_fat]}" data-validate="required=true type=number range=[0,100]" />
+		%
+	</div>
+	<div class="inline-field">
+		<label>BMI</label>
+		<input type="text" name="bmi" value="${answers[bmi]}" data-validate="required=true type=number range=[0,100]" />
+		kg/m&amp;sup2;
+	</div>
+	<br />
+
+	<div class="inline-field">
+		<span><strong>Blood Pressure</strong></span>
+	</div>
+	<div class="inline-field">
+		<label>Systolic</label>
+		<input type="text" name="bp_systolic" value="${answers[bp_systolic]}" data-validate="required=true type=integer range=[0,200]" />
+		mmHg
+	</div>
+	<div class="inline-field">
+		<label>Diastolic</label>
+		<input type="text" name="bp_diastolic" value="${answers[bp_diastolic]}" data-validate="required=true type=integer range=[0,200]" />
+		mmHg
+	</div>
+	<br />
+
+	<div class="inline-field">
+		<span><strong>Cholesterol</strong></span>
+	</div>
+	<div class="inline-field">
+		<label>Total</label>
+		<input type="text" name="cholesterol" id="cholesterol" value="${answers[cholesterol]}" onchange="calculateRatio()" data-validate="required=true type=integer range=[0,300]" />
+		mg/DL
+	</div>
+	<div class="inline-field">
+		<label>HDL</label>
+		<input type="text" name="hdl" id="hdl" value="${answers[hdl]}" onchange="calculateRatio()" data-validate="required=true type=integer range=[0,200]" />
+		mg/DL
+	</div>
+	<div class="inline-field">
+		<label>TC/HDL ratio</label>
+		<input style="border:0" type="text" name="ratio" id="ratio" value="${answers[ratio]}" readonly="true" />
+	</div>
+	<div class="inline-field">
+		<label>LDL</label>
+		<input type="text" name="ldl" value="${answers[ldl]}" data-validate="required=true type=integer range=[0,200]" />
+		mg/DL
+	</div>
+	<div class="inline-field">
+		<label>Triglycerides</label>
+		<input type="text" name="triglycerides" value="${answers[triglycerides]}" data-validate="required=true type=integer range=[0,200]" />
+		mg/DL
+	</div>
+	<br />
+
+	<div class="inline-field">
+		<span><strong>Blood Glucose</strong></span>
+	</div>
+	<div class="inline-field">
+		<label>Glucose Level</label>
+		<input type="text" name="blood_glucose" value="${answers[blood_glucose]}" data-validate="required=false type=integer range=[0,200]" />
+		mg/DL
+	</div>
+	<div class="inline-field">
+		<label>Fasting?</label>
+		<tpt:if id="answers[glucose_test]" test="EQ" value="random">
+			<input type="radio" name="fasting" value="Y" data-validate="required=false" />Yes
+			<input type="radio" name="fasting" value="N" data-validate="required=false" checked="checked" />No
+		</tpt:if>
+		<tpt:else>
+			<input type="radio" name="fasting" value="Y" data-validate="required=false" checked="checked"/>Yes
+			<input type="radio" name="fasting" value="N" data-validate="required=false" />No
+		</tpt:else>		 
+	</div>
+<!--
+	<div class="inline-field">
+		<label>Hemoglobin</label>
+		<input type="text" name="hemoglobin" value="${answers[hemoglobin]}" data-validate="required=false type=number range=[0,20]" />
+	</div>
+	<div class="inline-field">
+		<label>Cotinine</label>
+		<input type="text" name="cotinine" value="${answers[cotinine]}" data-validate="required=false type=number range=[0,20]" />
+	</div>
+-->
+</div>
+   
+  <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span>50%</span>
+			</div>
+		</div>
+	</div>
+    
+<tpt:if id="next_last[0]" test="NOTEMPTY">
+	<div id="back-button">
+		<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+	</div>
+</tpt:if>
+
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<a href="/iFocus/Total" class="right next">Next Page</a>
+	</tpt:if>
+	<tpt:else>
+		<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+	</tpt:else>
+</form>
+<div class="clear"> </div>
+<div id="section-footer"> </div>
+<script type="text/javascript">
+<![CDATA[
+   function validateFrm(f){
+   	 if(ZMEDIA.FORM.validateForm(f)){
+   	   f.elements['height'].value=(Number(f.elements['height_ft'].value)*12)+Number(f.elements['height_in'].value);
+   	   return true;
+   	 }
+   	 return false;
+   }
+
+   function calculateRatio() {
+     var tot = document.getElementById('cholesterol');
+     var hdl = document.getElementById('hdl');
+     if ((tot.value.length > 0) &&
+         (hdl.value.length > 0)) {
+       var rat = document.getElementById('ratio');
+       rat.value = Number(tot.value) / Number(hdl.value);
+     }
+     return;
+   }
+]]>
+</script>
+</div>
+</tpt:body>

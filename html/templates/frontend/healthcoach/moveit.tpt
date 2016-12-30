@@ -1,0 +1,546 @@
+<tpt:body>
+<style>
+	.answer {color: blue; font-size:12px;}
+	.ex {color: red; font-size:16px;}
+</style>
+
+ <div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>MoveIT Module Summary</h1>
+	</div>
+
+	<tpt:if id="errors" test="HASELEMENTS">
+		<tpt:foreach id="errors" as="error">
+			<tpt:if id="error.type" test="EQ" value="5">
+			<span>${error.message}</span><br /><br />
+			</tpt:if>
+		</tpt:foreach>
+	</tpt:if>
+	User: ${user[first_name]} ${user[last_name]}<br />
+	Date: ${date_updated}<br />
+	Last: Week ${last_completed}<br />
+	<br />
+	<div style="margin-left:10px;">
+		<tpt:if id="week" test="HASELEMENTS">
+			<span style="font-size:14px;"><u>Intro data</u></span><br /><br />
+
+			List the reasons you want to increase your exercise:<br />
+			<tpt:if id="week[0][C1]" test="NE" value="">
+				<span class="answer">${week[0][C1]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C2]" test="NE" value="">
+				<span class="answer">${week[0][C2]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C3]" test="NE" value="">
+				<span class="answer">${week[0][C3]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C4]" test="NE" value="">
+				<span class="answer">${week[0][C4]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C5]" test="NE" value="">
+				<span class="answer">${week[0][C5]}</span><br />
+			</tpt:if>
+			<br />
+			Now list obstacles that have prevented you from exercising in the past:<br />
+			<tpt:if id="week[0][C6]" test="NE" value="">
+				<span class="answer">${week[0][C6]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C7]" test="NE" value="">
+				<span class="answer">${week[0][C7]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C8]" test="NE" value="">
+				<span class="answer">${week[0][C8]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C9]" test="NE" value="">
+				<span class="answer">${week[0][C9]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C10]" test="NE" value="">
+				<span class="answer">${week[0][C10]}</span><br />
+			</tpt:if>
+			<br />
+			<br />
+
+			<tpt:if id="week[1]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 1 data</u></span><br /><br />
+
+				List all the forms of physical activity that you currently do:<br />
+				<tpt:if id="week[1][A1]" test="NE" value="">
+					<span class="answer">${week[1][A1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="NE" value="">
+					<span class="answer">${week[1][A2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="NE" value="">
+					<span class="answer">${week[1][A3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="NE" value="">
+					<span class="answer">${week[1][A4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="NE" value="">
+					<span class="answer">${week[1][A5]}</span><br />
+				</tpt:if>
+				<br />
+
+				The Physical Activity Readiness Questionnaire (PAR-Q)<br />
+				1. Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor?<br />
+				<tpt:if id="week[1][C1]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C1]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				2. Do you feel pain in your chest when you do physical activity?<br />
+				<tpt:if id="week[1][C2]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C2]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				3. In the past month, have you had chest pain when you were not doing physical activity?<br />
+				<tpt:if id="week[1][C3]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C3]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				4. Do you lose your balance because of dizziness or do you ever lose consciousness?<br />
+				<tpt:if id="week[1][C4]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C4]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				5. Do you have a bone or joint problem that could be made worse by a change in your physical activity?<br />
+				<tpt:if id="week[1][C5]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C5]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				6. Is your doctor currently prescribing drugs (for example, water pills) for your blood pressure or heart condition?<br />
+				<tpt:if id="week[1][C6]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C6]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				7. Do you know of any other reason why you should not do physical activity?<br />
+				<tpt:if id="week[1][C7]" test="EQ" value="1">
+					<span class="answer">Yes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C7]" test="EQ" value="2">
+					<span class="answer">No</span><br />
+				</tpt:if>
+				<br />
+
+				List cardiovascular exercises that you would like to try<br />
+				<tpt:if id="week[1][E1]" test="NE" value="">
+					<span class="answer">${week[1][E1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E2]" test="NE" value="">
+					<span class="answer">${week[1][E2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E3]" test="NE" value="">
+					<span class="answer">${week[1][E3]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. Example(s) of physical activity are:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][F1]" test="EQ" value="1">
+					<span class="answer">Running</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F1]" test="EQ" value="2">
+					<span class="answer">Swimming</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F1]" test="EQ" value="3">
+					<span class="answer">Yard work</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F1]" test="EQ" value="4">
+					<span class="answer">All the above</span><br />
+				</tpt:if>
+				2. Physical activity can help you:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][F2]" test="EQ" value="1">
+					<span class="answer">Burn calories and reduce fat</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F2]" test="EQ" value="2">
+					<span class="answer">Increase your appetite</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F2]" test="EQ" value="3">
+					<span class="answer">Increase body fat</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F2]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. The PAR-Q is a questionnaire used to determine:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][F3]" test="EQ" value="1">
+					<span class="answer">Your overall health</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F3]" test="EQ" value="2">
+					<span class="answer">If you can start engaging in physical activity</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F3]" test="EQ" value="3">
+					<span class="answer">Which physical activities are best suited for you</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F3]" test="EQ" value="4">
+					<span class="answer">What time you should exercise</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. When beginning your workout program, you should:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][F4]" test="EQ" value="1">
+					<span class="answer">Start with at least an hour of cardio</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F4]" test="EQ" value="2">
+					<span class="answer">Start with a high intensity workout</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F4]" test="EQ" value="3">
+					<span class="answer">Start with only 2-3 days and a day of rest</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F4]" test="EQ" value="4">
+					<span class="answer">Start with a 5 day routine</span><br />
+				</tpt:if>
+				5. Cardiovascular activity involves:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][F5]" test="EQ" value="1">
+					<span class="answer">Using large muscle groups and raising your heart rate</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F5]" test="EQ" value="2">
+					<span class="answer">Using small muscle groups</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F5]" test="EQ" value="3">
+					<span class="answer">Keeping your heart rate steady</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][F5]" test="EQ" value="4">
+					<span class="answer">All the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+
+			<tpt:if id="week[2]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 2 data</u></span><br /><br />
+
+				How much exercise should you be doing weekly?<br />
+				Minutes per day:&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][A1]" test="NE" value="">
+					<span class="answer">${week[2][A1]}</span><br />
+				</tpt:if>
+				How many days per week:&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][A2]" test="NE" value="">
+					<span class="answer">${week[2][A2]}</span><br />
+				</tpt:if>
+				<br />
+				How much exercise do you currently do?<br />
+				Minutes per day:&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][A3]" test="NE" value="">
+					<span class="answer">${week[2][A3]}</span><br />
+				</tpt:if>
+				How many days per week:&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][A4]" test="NE" value="">
+					<span class="answer">${week[2][A4]}</span><br />
+				</tpt:if>
+				<br />
+
+
+				Questionnaire<br />
+				1. Children and adolescents aged 6-17 should exercise moderately-vigorously at least:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][I1]" test="EQ" value="1">
+					<span class="answer">30 minutes daily</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I1]" test="EQ" value="2">
+					<span class="answer">two hours (120 minutes)</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I1]" test="EQ" value="3">
+					<span class="answer">one hour (60 minutes) daily</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I1]" test="EQ" value="4">
+					<span class="answer">one hour ( 60 minutes ) weekly</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Adults aged 18-64 should perform ____________ of vigorous intensity aerobic exercise a week.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][I2]" test="EQ" value="1">
+					<span class="answer">1 hour 15 minutes</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I2]" test="EQ" value="2">
+					<span class="answer">a half hour</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I2]" test="EQ" value="3">
+					<span class="answer">2 hours 15 minutes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I2]" test="EQ" value="4">
+					<span class="answer">15 minutes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. Physical activity can generally be defined as:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][I3]" test="EQ" value="1">
+					<span class="answer">any type of movement</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I3]" test="EQ" value="2">
+					<span class="answer">repetitive movement that can be sustained for long periods of time</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I3]" test="EQ" value="3">
+					<span class="answer">movement that concentrates strictly on small muscle groups</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I3]" test="EQ" value="4">
+					<span class="answer">movement that enhances health</span><br />
+				</tpt:if>
+				4. Health enhancing physical activity can be defined as:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][I4]" test="EQ" value="1">
+					<span class="answer">light intensity activity of daily life</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I4]" test="EQ" value="2">
+					<span class="answer">movement from one area to another</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I4]" test="EQ" value="3">
+					<span class="answer">physical activity that is added to baseline activity for health benefits</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I4]" test="EQ" value="4">
+					<span class="answer">movement that consists of three (3) parts</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. You should stop exercising if:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][I5]" test="EQ" value="1">
+					<span class="answer">feel dizzy or sick</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I5]" test="EQ" value="2">
+					<span class="answer">break out in cold sweats</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I5]" test="EQ" value="3">
+					<span class="answer">heave muscle cramps</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][I5]" test="EQ" value="4">
+					<span class="answer">all the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[3]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 3 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. Examples of motions that our bodies go through everyday are:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E1]" test="EQ" value="1">
+					<span class="answer">Lifting</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E1]" test="EQ" value="2">
+					<span class="answer">Power</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E1]" test="EQ" value="3">
+					<span class="answer">Balancing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E1]" test="EQ" value="4">
+					<span class="answer">All the above</span><br />
+				</tpt:if>
+				2. One (1) of the four (4) functional exercises is:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E2]" test="EQ" value="1">
+					<span class="answer">Push-ups</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E2]" test="EQ" value="2">
+					<span class="answer">Bent over rows</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E2]" test="EQ" value="3">
+					<span class="answer">Chest flys</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E2]" test="EQ" value="4">
+					<span class="answer">Tricep extensions</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. The Borg RPE scale measures:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E3]" test="EQ" value="1">
+					<span class="answer">Body mass index</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E3]" test="EQ" value="2">
+					<span class="answer">Exercise intensity for all age groups</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E3]" test="EQ" value="3">
+					<span class="answer">Exercise intensity strictly for adults aged 18-64</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E3]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Barriers to prevent one from exercising are/is:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E4]" test="EQ" value="1">
+					<span class="answer">No time</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E4]" test="EQ" value="2">
+					<span class="answer">No will power</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E4]" test="EQ" value="3">
+					<span class="answer">No support from family</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E4]" test="EQ" value="4">
+					<span class="answer">All the above</span><br />
+				</tpt:if>
+				5. A way to redefine motivation would be to:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E5]" test="EQ" value="1">
+					<span class="answer">Put off exercising until you feel you have enough time</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E5]" test="EQ" value="2">
+					<span class="answer">Exercise by yourself</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E5]" test="EQ" value="3">
+					<span class="answer">Have fun</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][E5]" test="EQ" value="4">
+					<span class="answer">Stick to a strict physical routine</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[4]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 4 data</u></span><br /><br />
+
+				List obstacles that have prevented you from exercising in the past:<br />
+				<tpt:if id="week[4][F1]" test="NE" value="">
+					<span class="answer">${week[4][F1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][F2]" test="NE" value="">
+					<span class="answer">${week[4][F2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][F3]" test="NE" value="">
+					<span class="answer">${week[4][F3]}</span><br />
+				</tpt:if>
+				<br />
+				List exercises that you would like to try:<br />
+				<tpt:if id="week[4][F4]" test="NE" value="">
+					<span class="answer">${week[4][F4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][F5]" test="NE" value="">
+					<span class="answer">${week[4][F5]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][F6]" test="NE" value="">
+					<span class="answer">${week[4][F6]}</span><br />
+				</tpt:if>
+				<br />
+				
+				Questionnaire<br />
+				1. F.I.T. in the FIT principle stands for:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][G1]" test="EQ" value="1">
+					<span class="answer">Follow, instruction, termination</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G1]" test="EQ" value="2">
+					<span class="answer">Fear, inadequacy, turbulence</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G1]" test="EQ" value="3">
+					<span class="answer">Frequency, intensity, time</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G1]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Intensity refers to:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][G2]" test="EQ" value="1">
+					<span class="answer">How hard a person works out</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G2]" test="EQ" value="2">
+					<span class="answer">How often a person woks out</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G2]" test="EQ" value="3">
+					<span class="answer">How long a person work out</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G2]" test="EQ" value="4">
+					<span class="answer">Who a person works out with</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. An isotonic contraction is when:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][G3]" test="EQ" value="1">
+					<span class="answer">There is tension on the muscle but no movement</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G3]" test="EQ" value="2">
+					<span class="answer">The muscle shortens as it contracts</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G3]" test="EQ" value="3">
+					<span class="answer">The muscle involuntarily contracts</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G3]" test="EQ" value="4">
+					<span class="answer">The muscle begins to have spasms after working out</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. An example of an isometric exercise would be:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][G4]" test="EQ" value="1">
+					<span class="answer">Bicep curls</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G4]" test="EQ" value="2">
+					<span class="answer">Throwing a ball</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G4]" test="EQ" value="3">
+					<span class="answer">Lifting and object over your head</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G4]" test="EQ" value="4">
+					<span class="answer">Holding a weight at arms length</span><br />
+				</tpt:if>
+				5. Benefits of stretching after your workout are/is:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][G5]" test="EQ" value="1">
+					<span class="answer">Reduce muscle soreness</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G5]" test="EQ" value="2">
+					<span class="answer">Decrease risk of lower back pain</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G5]" test="EQ" value="3">
+					<span class="answer">Increase range of motion</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][G5]" test="EQ" value="4">
+					<span class="answer">All the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[5]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 5 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. People often force themselves into activities that don&amp;acute;t interest them which, of course, increases the quit-factor.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][F1]" test="EQ" value="1">
+					<span class="answer">true</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F1]" test="EQ" value="2">
+					<span class="answer">false</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Most people don&amp;acute;t exercise because:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][F2]" test="EQ" value="1">
+					<span class="answer">they are waiting for things to calm down</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F2]" test="EQ" value="2">
+					<span class="answer">they ate waiting to fall in love with exercise</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F2]" test="EQ" value="3">
+					<span class="answer">they get frustrated at the lack of results</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F2]" test="EQ" value="4">
+					<span class="answer">all the above</span><br />
+				</tpt:if>
+				3. Exercise gives you:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][F3]" test="EQ" value="1">
+					<span class="answer">satisfaction</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F3]" test="EQ" value="2">
+					<span class="answer">relaxation</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F3]" test="EQ" value="3">
+					<span class="answer">confidence</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F3]" test="EQ" value="4">
+					<span class="answer">all the above</span><br />
+				</tpt:if>
+				4. A great way to stay on track when beginning your exercise routine are/is:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][F4]" test="EQ" value="1">
+					<span class="answer">limit your physical activity plan to once a week</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F4]" test="EQ" value="2">
+					<span class="answer">rely on a partner to push you</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F4]" test="EQ" value="3">
+					<span class="answer">write down your reasons for starting your physical activity plan on an index card and place it where you can see it</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F4]" test="EQ" value="4">
+					<span class="answer">none of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. You are responsible for your own life and how you lead it.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][F5]" test="EQ" value="1">
+					<span class="answer">true</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][F5]" test="EQ" value="2">
+					<span class="answer">false</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+		</tpt:if>
+	</div>
+</div>
+</tpt:body>

@@ -1,0 +1,769 @@
+<tpt:body>
+<style>
+	.answer {color: blue; font-size:12px;}
+	.ex {color: red; font-size:16px;}
+</style>
+	<h1>BreakIT Module Summary</h1>
+	<tpt:if id="errors" test="HASELEMENTS">
+		<tpt:foreach id="errors" as="error">
+			<tpt:if id="error.type" test="EQ" value="5">
+			<span>${error.message}</span><br /><br />
+			</tpt:if>
+		</tpt:foreach>
+	</tpt:if>
+	User: ${user[first_name]} ${user[last_name]}<br />
+	Date: ${date_updated}<br />
+	Last: Week ${last_completed}<br />
+	<br />
+	<div style="margin-left:10px;">
+		<tpt:if id="week" test="HASELEMENTS">
+			<span style="font-size:14px;"><u>Intro data</u></span><br /><br />
+			Where would you place yourself in the Stages of Change Model?<br />
+			<tpt:if id="week[0][B1]" test="EQ" value="1">
+				<span class="answer">Pre-contemplation</span><br />
+			</tpt:if>
+			<tpt:elseif id="week[0][B1]" test="EQ" value="2">
+				<span class="answer">Contemplation</span><br />
+			</tpt:elseif>
+			<tpt:elseif id="week[0][B1]" test="EQ" value="3">
+				<span class="answer">Planning/Preparation</span><br />
+			</tpt:elseif>
+			<tpt:elseif id="week[0][B1]" test="EQ" value="4">
+				<span class="answer">Action/Willpower</span><br />
+			</tpt:elseif>
+			<tpt:elseif id="week[0][B1]" test="EQ" value="5">
+				<span class="answer">Maintenance/Relapse</span><br />
+			</tpt:elseif>
+			<br />
+
+			Reasons to stop tobacco use:<br />
+			<tpt:if id="week[0][C1]" test="NE" value="">
+				<span class="answer">${week[0][C1]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C2]" test="NE" value="">
+				<span class="answer">${week[0][C2]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C3]" test="NE" value="">
+				<span class="answer">${week[0][C3]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C4]" test="NE" value="">
+				<span class="answer">${week[0][C4]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C5]" test="NE" value="">
+				<span class="answer">${week[0][C5]}</span><br />
+			</tpt:if>
+			<br />
+			<br />
+
+			<tpt:if id="week[1]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 1 data</u></span><br /><br />
+				What are the feelings or emotions you have when you deprive your body of nicotine.<br />
+				<tpt:if id="week[1][A1]" test="EQ" value="1">
+					<span class="answer">Nervous</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="EQ" value="1">
+					<span class="answer">Anxious</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="EQ" value="1">
+					<span class="answer">Short tempered</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="EQ" value="1">
+					<span class="answer">Angry</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="EQ" value="1">
+					<span class="answer">Irritable</span><br />
+				</tpt:if>
+				<br />
+
+				What are the triggers that match your personal tobacco habit.<br />
+				<tpt:if id="week[1][B1]" test="EQ" value="1">
+					<span class="answer">Watching TV</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B2]" test="EQ" value="1">
+					<span class="answer">Talking on the phone</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B3]" test="EQ" value="1">
+					<span class="answer">Driving a car</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B4]" test="EQ" value="1">
+					<span class="answer">Passenger in a car</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B5]" test="EQ" value="1">
+					<span class="answer">Working on the computer</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B6]" test="EQ" value="1">
+					<span class="answer">Smelling a cigarette</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B7]" test="EQ" value="1">
+					<span class="answer">Seeing someone else smoke</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B8]" test="EQ" value="1">
+					<span class="answer">Waking in the morning</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B9]" test="EQ" value="1">
+					<span class="answer">Drinking coffee, tea, or alcohol</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B10]" test="EQ" value="1">
+					<span class="answer">Stressed</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B11]" test="EQ" value="1">
+					<span class="answer">Feeling lonely depressed</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B12]" test="EQ" value="1">
+					<span class="answer">Bordom</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B13]" test="EQ" value="1">
+					<span class="answer">Anger and or irritability</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B14]" test="EQ" value="1">
+					<span class="answer">Other: ${week[1][B15]}</span><br />
+				</tpt:if>
+				<br />
+				
+				Write down your priorizied list of personal reasons to break the habit.<br />
+				<tpt:if id="week[1][C1]" test="NE" value="">
+					<span class="answer">${week[1][C1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C2]" test="NE" value="">
+					<span class="answer">${week[1][C2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C3]" test="NE" value="">
+					<span class="answer">${week[1][C3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C4]" test="NE" value="">
+					<span class="answer">${week[1][C4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][C5]" test="NE" value="">
+					<span class="answer">${week[1][C5]}</span><br />
+				</tpt:if>
+				<br />
+
+				What are some of the reasons you want to continue your tobacco habit?<br />
+				<tpt:if id="week[1][D1]" test="NE" value="">
+					<span class="answer">${week[1][D1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][D2]" test="NE" value="">
+					<span class="answer">${week[1][D2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][D3]" test="NE" value="">
+					<span class="answer">${week[1][D3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][D4]" test="NE" value="">
+					<span class="answer">${week[1][D4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][D5]" test="NE" value="">
+					<span class="answer">${week[1][D5]}</span><br />
+				</tpt:if>
+				<br />
+
+				What are some of your personal fears that may have prevented you from being successful in the past?<br />
+				<tpt:if id="week[1][E1]" test="EQ" value="1">
+					<span class="answer">Fears of Quitting</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E2]" test="EQ" value="1">
+					<span class="answer">Weight Gain</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E3]" test="EQ" value="1">
+					<span class="answer">Friends still smoke</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E4]" test="EQ" value="1">
+					<span class="answer">Spouse still smokes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E5]" test="EQ" value="1">
+					<span class="answer">Limited social support</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E6]" test="EQ" value="1">
+					<span class="answer">Fear of success</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E7]" test="EQ" value="1">
+					<span class="answer">Fear to fail (again)</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E8]" test="EQ" value="1">
+					<span class="answer">Unable to get breaks at work</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E9]" test="EQ" value="1">
+					<span class="answer">Other: ${week[1][E10]}</span><br />
+				</tpt:if>
+				<br />
+
+				If you&amp;acute;ve attempt to quit in the past:<br />
+				How long did you go without tobacco use?&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="answer">${week[1][F1]}</span><br />
+				What led you to smoke again?&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="answer">${week[1][F2]}</span><br />
+				List the positive benefits that you experienced:&amp;nbsp;&amp;nbsp;<span class="answer">${week[1][F3]}</span><br />
+				List the negative benefits that you experienced:&amp;nbsp;&amp;nbsp;<span class="answer">${week[1][F4]}</span><br />
+				What was your biggest personal challenge?&amp;nbsp;&amp;nbsp;<span class="answer">${week[1][F5]}</span><br />
+				<br />
+
+				Questionnaire<br />
+				1. How many different cancers is smoking linked to?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G1]" test="EQ" value="1">
+					<span class="answer">4</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="2">
+					<span class="answer">27</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="3">
+					<span class="answer">15</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="4">
+					<span class="answer">100</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. As a participant in the Break IT program you are required to (check all that apply):<br />
+				<tpt:if id="week[1][G5]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Attend all scheduled meetings.</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G6]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Drop out if you are not smoke free.</span>&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G7]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Listen to the audio track as directed.</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G8]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Have a positive attitude about your success.</span><br />
+				</tpt:if>
+				3. Triggers can be:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G2]" test="EQ" value="1">
+					<span class="answer">People</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="2">
+					<span class="answer">Places</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="3">
+					<span class="answer">Mental or physical</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				4. Which of the following choices are the correct stages in the Prochaska Stages of Change Model:<br />
+				<tpt:if id="week[1][G3]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Preparation/Determination, Pre-Contemplation, Contemplation, Action/Willpower, Maintenance and Relapse Prevention</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="2">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Pre-Contemplation, Contemplation, Preparation/Determination, Action/Willpower, Maintenance and Relapse Prevention</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="3">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Contemplation, Pre-Contemplation, Action/Willpower, Preparation/Determination, Maintenance and Relapse Prevention</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="4">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Pre-Contemplation, Contemplation, Preparation/Determination, Action/Willpower, Maintenance and Relapse Prevention</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. How many daily consecutive days should you plan on listening to your Break IT audio track?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G4]" test="EQ" value="1">
+					<span class="answer">21</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="2">
+					<span class="answer">7</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="3">
+					<span class="answer">14</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="4">
+					<span class="answer">28</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+			</tpt:if>
+			<br />
+			<br />
+
+			<tpt:if id="week[2]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 2 data</u></span><br /><br />
+				Make a list of all the people you can depend on to be supportive.<br />
+				<tpt:if id="week[2][A1]" test="NE" value="">
+					<span class="answer">${week[2][A1]}</span><br />
+				</tpt:if>
+				Who is your strongest supporter?<br />
+				<tpt:if id="week[2][A2]" test="NE" value="">
+					<span class="answer">${week[2][A2]}</span><br />
+				</tpt:if>
+				How would you like them to help you?<br />
+				<tpt:if id="week[2][A3]" test="NE" value="">
+					<span class="answer">${week[2][A3]}</span><br />
+				</tpt:if>
+				<br />
+
+				How soon after you wake up do you have your first tobacco product?<br />
+				<tpt:if id="week[2][E1]" test="EQ" value="1">
+					<span class="answer">Less than 5 minutes</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="2">
+					<span class="answer">6 - 30 minutes</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="3">
+					<span class="answer">31 - 60 minutes</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="4">
+					<span class="answer">After 1 hour</span><br />
+				</tpt:if>
+
+				Do you use tobacco more frequently in the hours after waking than during the rest of the day?<br />
+				<tpt:if id="week[2][E2]" test="EQ" value="1">
+					<span class="answer">YES</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E2]" test="EQ" value="2">
+					<span class="answer">NO</span><br />
+				</tpt:if>
+
+				Do you find it difficult not to use tobacco?<br />
+				<tpt:if id="week[2][E3]" test="EQ" value="1">
+					<span class="answer">YES</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E3]" test="EQ" value="2">
+					<span class="answer">NO</span><br />
+				</tpt:if>
+
+				Which time that you use tobacco would be the most difficult to give up?<br />
+				<tpt:if id="week[2][E4]" test="EQ" value="1">
+					<span class="answer">The first one in the morning</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E4]" test="EQ" value="2">
+					<span class="answer">Other: ${week[2][E5]}</span><br />
+				</tpt:if>
+
+				How many times daily so you use tobacco products?<br />
+				<tpt:if id="week[2][E6]" test="EQ" value="1">
+					<span class="answer">10 or less</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E6]" test="EQ" value="2">
+					<span class="answer">11 - 20</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E6]" test="EQ" value="3">
+					<span class="answer">21 - 30</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E6]" test="EQ" value="4">
+					<span class="answer">31 or more</span><br />
+				</tpt:if>
+
+				Do you typically use tobacco products when you are so sick that you are home in bed?<br />
+				<tpt:if id="week[2][E7]" test="EQ" value="1">
+					<span class="answer">YES</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E7]" test="EQ" value="2">
+					<span class="answer">NO</span><br />
+				</tpt:if>
+
+				Based on the information you provided in the above table which method do you think would work best for you? Why?<br />
+				<tpt:if id="week[2][E8]" test="NE" value="">
+					<span class="answer">${week[2][E8]}</span><br />
+				</tpt:if>
+
+				How can your support person help you to achieve success in using this method?<br />
+				<tpt:if id="week[2][E9]" test="NE" value="">
+					<span class="answer">${week[2][E9]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. It is important to have a support system to help you succeed in being smoke free.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][G1]" test="EQ" value="1">
+					<span class="answer">Family and/or Friends</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G1]" test="EQ" value="2">
+					<span class="answer">Telephonic or Web based support</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G1]" test="EQ" value="3">
+					<span class="answer">Co workers</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G1]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				2. Which methods are recommended for breaking a tobacco habit:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][G2]" test="EQ" value="1">
+					<span class="answer">Nicotine Replacement (NRT)</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G2]" test="EQ" value="2">
+					<span class="answer">Tapering</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G2]" test="EQ" value="3">
+					<span class="answer">Postponing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G2]" test="EQ" value="4">
+					<span class="answer">Cold Turkey</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G2]" test="EQ" value="5">
+					<span class="answer">A combination of the above methods</span><br />
+				</tpt:if>
+				3. Which Nicotine Replacement Therapy (NRT) has to be ordered by a physician:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][G3]" test="EQ" value="1">
+					<span class="answer">Nicotine Patch</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G3]" test="EQ" value="2">
+					<span class="answer">Nicotine Nasal Spray</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G3]" test="EQ" value="3">
+					<span class="answer">Nicotine Gum</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G3]" test="EQ" value="4">
+					<span class="answer">Nicotine Lozenge</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Which of the following are withdrawal symptoms:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][G4]" test="EQ" value="1">
+					<span class="answer">Irritability</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G4]" test="EQ" value="2">
+					<span class="answer">Headaches</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G4]" test="EQ" value="3">
+					<span class="answer">Increased Coughing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G4]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				5. Which is the 4 step process that the American Cancer Society recommends to help fight cravings:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][G5]" test="EQ" value="1">
+					<span class="answer">Deep Breaths, Drink water, Do something else, Delay for 10 minutes</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G5]" test="EQ" value="2">
+					<span class="answer">Dance, Do Something Else, Delay for 10 minutes,  Deep Breaths</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G5]" test="EQ" value="3">
+					<span class="answer">Deep Breaths, Drink Coffee, Do something else, Delay for 15 minutes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][G5]" test="EQ" value="4">
+					<span class="answer">Deep Breaths, Drink water, Do something else, Delay for 15 minutes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[3]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 3 data</u></span><br />
+				<br />
+				Make a list of enjoyable activities that will help you keep busy.<br />
+				<tpt:if id="week[3][A1]" test="NE" value="">
+					<span class="answer">${week[3][A1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][A2]" test="NE" value="">
+					<span class="answer">${week[3][A2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][A3]" test="NE" value="">
+					<span class="answer">${week[3][A3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][A4]" test="NE" value="">
+					<span class="answer">${week[3][A4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][A5]" test="NE" value="">
+					<span class="answer">${week[3][A5]}</span><br />
+				</tpt:if>
+				<br />
+
+				List your Personal Dietary Goals<br />
+				<tpt:if id="week[3][B1]" test="NE" value="">
+					<span class="answer">${week[3][B1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][B2]" test="NE" value="">
+					<span class="answer">${week[3][B2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][B3]" test="NE" value="">
+					<span class="answer">${week[3][B3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][B4]" test="NE" value="">
+					<span class="answer">${week[3][B4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][B5]" test="NE" value="">
+					<span class="answer">${week[3][B5]}</span><br />
+				</tpt:if>
+				<br />
+
+				Make a list of new activities that you would like to try to help you avoid tobacco.<br />
+				<tpt:if id="week[3][C1]" test="NE" value="">
+					<span class="answer">${week[3][C1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C2]" test="NE" value="">
+					<span class="answer">${week[3][C2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C3]" test="NE" value="">
+					<span class="answer">${week[3][C3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C4]" test="NE" value="">
+					<span class="answer">${week[3][C4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C5]" test="NE" value="">
+					<span class="answer">${week[3][C5]}</span><br />
+				</tpt:if>
+				<br />
+
+				Please complete the following activity to determine your biggest challenges.<br />
+				1. What is your biggest fear of quitting smoking?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E1]" test="NE" value="">
+					<span class="answer">${week[3][E1]}</span>
+				</tpt:if>
+				<br />
+				2. How do you plan on overcoming your fear?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E2]" test="NE" value="">
+					<span class="answer">${week[3][E2]}</span>
+				</tpt:if>
+				<br />
+				3. When dealing with stress and anxiety which method will work best for you?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E3]" test="NE" value="">
+					<span class="answer">${week[3][E3]}</span>
+				</tpt:if>
+				<br />
+				4. In your daily routine what is one activity you crave a cigarette after?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E4]" test="NE" value="">
+					<span class="answer">${week[3][E4]}</span>
+				</tpt:if>
+				<br />
+				5. What can you do to change your routine?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E5]" test="NE" value="">
+					<span class="answer">${week[3][E5]}</span>
+				</tpt:if>
+				<br />
+				6. How do you plan on dealing with situations where alcohol and smokers will be present?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][E6]" test="NE" value="">
+					<span class="answer">${week[3][E6]}</span>
+				</tpt:if>
+				<br />
+				Additional Notes:<br />
+				<tpt:if id="week[3][E7]" test="NE" value="">
+					<span class="answer">${week[3][E7]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. Suggestions for staying busy:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][F1]" test="EQ" value="1">
+					<span class="answer">Be active</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F1]" test="EQ" value="2">
+					<span class="answer">Distract your hands</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F1]" test="EQ" value="3">
+					<span class="answer">Fool your mouth</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F1]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				2. Causes for Potential Weight Gain:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][F2]" test="EQ" value="1">
+					<span class="answer">Boredom</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F2]" test="EQ" value="2">
+					<span class="answer">Oral fixation</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F2]" test="EQ" value="3">
+					<span class="answer">Using food as a reward</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F2]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				3. According to the American Cancer Society Research shows that about 80% of individuals gain weight who quit smoking.<br />&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;What is the percentage of people who continue to smoke and also gain weight:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][F3]" test="EQ" value="1">
+					<span class="answer">24%</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F3]" test="EQ" value="2">
+					<span class="answer">65%</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F3]" test="EQ" value="3">
+					<span class="answer">56%</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F3]" test="EQ" value="4">
+					<span class="answer">42%</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Which of the following is an example of Positive Self Talk:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][F4]" test="EQ" value="1">
+					<span class="answer">Don&amp;acute;t sweat the small stuff</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F4]" test="EQ" value="2">
+					<span class="answer">Be positive</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F4]" test="EQ" value="3">
+					<span class="answer">Maybe you will be tobacco free one day</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F4]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What is the recommended amount of times that you should repeat Yoga Breathing:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][F5]" test="EQ" value="1">
+					<span class="answer">2</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F5]" test="EQ" value="2">
+					<span class="answer">3</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F5]" test="EQ" value="3">
+					<span class="answer">4</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][F5]" test="EQ" value="4">
+					<span class="answer">5</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[4]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 4 data</u></span><br />
+				<br />
+				What happened that caused you to start using tobacco again?<br />
+				<tpt:if id="week[4][C1]" test="NE" value="">
+					<span class="answer">${week[4][C1]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. Relapse is an opportunity to/for ___________:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][E1]" test="EQ" value="1">
+					<span class="answer">Give Up</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E1]" test="EQ" value="2">
+					<span class="answer">Success</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E1]" test="EQ" value="3">
+					<span class="answer">Failure</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E1]" test="EQ" value="4">
+					<span class="answer">Set new goals</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Which are the top three reasons that individuals relapse: (Check all that apply)<br />
+				<tpt:if id="week[4][E4]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Living or working with others who continue to use tobacco products.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E5]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Setting unrealistic goals.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E6]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Thinking that just one won&amp;acute;t make a difference.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E7]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Working for an employer who does not enforce a Tobacco-free workplace policy.</span><br />
+				</tpt:if>
+				3. How many people should you share with your intent to become tobacco free:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][E2]" test="EQ" value="1">
+					<span class="answer">Only your family.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E2]" test="EQ" value="2">
+					<span class="answer">As many people as possible.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E2]" test="EQ" value="3">
+					<span class="answer">As few people as possible.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E2]" test="EQ" value="4">
+					<span class="answer">Only your close friends.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Which is the coping mechanism for the Trigger of smelling secondhand smoke:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][E3]" test="EQ" value="1">
+					<span class="answer">Stay at home more if your home is smoke free.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E3]" test="EQ" value="2">
+					<span class="answer">Wear more perfume/cologne.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E3]" test="EQ" value="3">
+					<span class="answer">Avoid situations for the first few weeks where tobacco use is involved.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E3]" test="EQ" value="4">
+					<span class="answer">Ask people not to smoke around you.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. Which of the following are recommendations designed to help you get through a relapse: (Check all that apply)<br />
+				<tpt:if id="week[4][E8]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Increase alcohol use.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E9]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Go for a walk.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E10]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Call a friend or your support partner.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][E11]" test="EQ" value="1">
+					<span class="answer">&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Listen to the Break IT audio stream.</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[5]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 5 data</u></span><br />
+				<br />
+				What would you do with the extra money?<br />
+				<tpt:if id="week[5][B1]" test="NE" value="">
+					<span class="answer">${week[5][B1]}</span><br />
+				</tpt:if>
+				<br />
+
+				Make a list of your own helpful tips to stay smoke free:<br />
+				<tpt:if id="week[5][C1]" test="NE" value="">
+					<span class="answer">${week[5][C1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][C2]" test="NE" value="">
+					<span class="answer">${week[5][C2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][C3]" test="NE" value="">
+					<span class="answer">${week[5][C3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][C4]" test="NE" value="">
+					<span class="answer">${week[5][C4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][C5]" test="NE" value="">
+					<span class="answer">${week[5][C5]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. Tobacco use is the single largest ____________ cause of disease and premature death in the United States.&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E1]" test="EQ" value="1">
+					<span class="answer">Avoidable</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="2">
+					<span class="answer">Needless</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="3">
+					<span class="answer">Preventable</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="4">
+					<span class="answer">Unnecessary</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Within 20 minutes of quitting tobacco what change happens:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E2]" test="EQ" value="1">
+					<span class="answer">Pulse rate increases</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="2">
+					<span class="answer">Blood Pressure increases</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="3">
+					<span class="answer">Body temperature of hands and feet increases</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="4">
+					<span class="answer">Blood Sugar decreases</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. After 24 hours of quitting tobacco what change happens:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E3]" test="EQ" value="1">
+					<span class="answer">Chance of heart attack decreases</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="2">
+					<span class="answer">Chance of stroke decreases</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="3">
+					<span class="answer">Nerve endings start re-growing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="4">
+					<span class="answer">Pulse rate drops</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Breaking the Bank: How much money will you save over 10 years if you smoke one pack per day and quit:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E4]" test="EQ" value="1">
+					<span class="answer">$35,500.00</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="2">
+					<span class="answer">$26,000.00</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="3">
+					<span class="answer">$12,550.00</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="4">
+					<span class="answer">$18,250.00</span><br />
+				</tpt:if>
+				5. Which of the following are tips to staying Smoke-Free:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E5]" test="EQ" value="1">
+					<span class="answer">Visualize yourself as tobacco free</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="2">
+					<span class="answer">Discover new healthy hobbies</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="3">
+					<span class="answer">Make your quit date a special occasion and celebrate it</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+		</tpt:if>
+		<br />
+	</div>
+</tpt:body>

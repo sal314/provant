@@ -1,0 +1,34 @@
+<tpt:body>
+<div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>User Information</h1>
+	</div>
+<form method="get" action="/HealthCoach/FindUser">
+
+
+
+	<div class="margin5">
+		<label>First Name:<br /><input type="text" name="first_name" value="${_GET[first_name]}"/></label><br />
+	</div>
+	<div class="margin5">
+		<label>Last Name:<br /> <input type="text" name="last_name" value="${_GET[last_name]}"/></label><br />
+	</div>
+	<div class="margin5">
+		<label>Company:<br /> <select name="company">
+			<tpt:html id="" type="select-options" data="${company}" selected="${_GET[company]}"/> 
+			</select>
+		</label><br />
+	</div>
+	
+
+<input type="submit" value="Search"/>
+</form>
+
+<table>
+<tpt:foreach id="matches" as="match">
+<tr onclick="document.location.href='/HealthCoach/AddLogEntry/${match[id]}'"><td>${match[first_name]} ${match[last_name]} ${match[email]}</td></tr>
+</tpt:foreach>
+</table>
+
+<div>
+</tpt:body>

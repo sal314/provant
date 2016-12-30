@@ -1,0 +1,168 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Productivity<br /><small>Health Assessment</small></h1>
+	</div>
+	<tpt:if id="errors" test="EXISTS">
+		<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>${error.name} : ${error.message}</li>
+		</tpt:foreach>
+		</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	   Saved!
+	</tpt:if>
+	<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq34">${QNo}. In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to do the following?</span><br /><br />
+			
+			<span id="qq34_1">a. get going easily at the beginning of the workday.</span>
+		</div>
+	
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q34_1" value="1,2,3,4,5,6" selected="${answers[q34_1]}"/></tr>
+			</tbody>
+		</table>
+
+		<div class="question">
+			<span id="qq34_2">b. start on your job as soon as you arrived at work.</span>
+		</div>
+	
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q34_2" value="1,2,3,4,5,6" selected="${answers[q34_2]}"/></tr>
+			</tbody>
+		</table>
+<br />
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq35">${QNo}. In the past 2 weeks, how much of the time were you able to sit, stand, or stay in one position for longer than 15 minutes while working, without difficulty caused by physical health or emotional problems?</span>
+		</div>
+		<table class="generic">
+			<tr><th>All of the time (100%)</th><th>Most of the time</th><th>Some of the time (50%)</th><th>A slight bit of the time</th><th>None (0%)</th></tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q35" value="1,2,3,4,5" selected="${answers[q35]}"/></tr>
+		</table>
+		<br />
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq36">${QNo}. In the past 2 weeks, how much of the time were you able to repeat the same motions over and over again while working, without difficulty caused by physical health or emotional problems?</span>
+		</div>
+		<table class="generic">
+			<tr><th>All of the time (100%)</th><th>Most of the time</th><th>Some of the time (50%)</th><th>A slight bit of the time</th><th>None (0%)</th></tr>
+			<tr><tpt:html type="radio-group" wrap="td" id="q36" value="1,2,3,4,5" selected="${answers[q36]}"/></tr>
+		</table>
+		<br />
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq37">${QNo}. In the past 2 weeks, how much of the time did your physical health or emotional problems make it difficult for you to do the following?</span><br /><br />
+			<span id="qq37_1">a. handle the workload.</span>
+		</div>
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q37_1" value="1,2,3,4,5,6" selected="${answers[q37_1]}"/></tr>
+			</tbody>
+		</table>
+
+		<div class="question">
+			<span id="qq37_2">b. finish work on time.</span>
+		</div>
+		<table class="generic">
+			<thead>
+				<tr>
+					<th>Difficult all of the time (100%)</th>
+					<th>Difficult most of the time</th>
+					<th>Difficult some of the time (about 50%)</th>
+					<th>Difficult a slight bit of the time</th>
+					<th>Difficult none of the time (0%)</th>
+					<th>Does not apply to my job</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q37_2" value="1,2,3,4,5,6" selected="${answers[q37_2]}"/></tr>
+			</tbody>
+		</table>
+		<br />
+	</div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	  
+	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+	
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

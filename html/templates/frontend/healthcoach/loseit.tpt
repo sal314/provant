@@ -1,0 +1,730 @@
+<tpt:body>
+<style>
+	.answer {color: blue; font-size:12px;}
+	.ex {color: red; font-size:16px;}
+</style>
+ <div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>LoseIT Module Summary</h1>
+	</div>
+
+	<tpt:if id="errors" test="HASELEMENTS">
+		<tpt:foreach id="errors" as="error">
+			<tpt:if id="error.type" test="EQ" value="5">
+			<span>${error.message}</span><br /><br />
+			</tpt:if>
+		</tpt:foreach>
+	</tpt:if>
+	User: ${user[first_name]} ${user[last_name]}<br />
+	Date: ${date_updated}<br />
+	Last: Week ${last_completed}<br />
+	<br />
+	<div style="margin-left:10px;">
+		<tpt:if id="week" test="HASELEMENTS">
+			<span style="font-size:14px;"><u>Intro data</u></span><br /><br />
+
+			List the reasons you want to lose weight:<br/>
+			<tpt:if id="week[0][C1]" test="EQ" value="1">
+				<span class="answer">Improve Health</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C2]" test="EQ" value="1">
+				<span class="answer">Feel Better</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C3]" test="EQ" value="1">
+				<span class="answer">Look Better</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C4]" test="EQ" value="1">
+				<span class="answer">Other</span><br />
+				<span class="answer">${week[0][C5]}</span><br />
+			</tpt:if>
+			<br />
+
+			List the obstacles that have prevented you from losing weight in the past:<br/>
+			<tpt:if id="week[0][C6]" test="EQ" value="1">
+				<span class="answer">??Obstacle 1</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C7]" test="EQ" value="1">
+				<span class="answer">??Obstacle 2</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C8]" test="EQ" value="1">
+				<span class="answer">??Obstacle 3</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C9]" test="EQ" value="1">
+				<span class="answer">Other</span><br />
+				<span class="answer">${week[0][C10]}</span><br />
+			</tpt:if>
+			<br />
+
+			<br />
+
+			<tpt:if id="week[1]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 1 data</u></span><br /><br />
+
+				Understanding Your Eating Habits - Triggers<br />
+				1. I eat when I am sad, lonely or depressed<br />
+				<tpt:if id="week[1][A1]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A1]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A1]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A1]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				2. I eat when someone upsets me.<br />
+				<tpt:if id="week[1][A2]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				3. I reward myself with food when I have completed a difficult or unpleasant task<br />
+				<tpt:if id="week[1][A3]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				4. I let people talk me into eating when I am not hungry.<br />
+				<tpt:if id="week[1][A4]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				5. I eat when I feel bored.<br />
+				<tpt:if id="week[1][A5]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				6. I eat when I am not hungry.<br />
+				<tpt:if id="week[1][A6]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A6]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A6]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A6]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A7]" test="NE" value="">
+					Other triggers:<br />
+					<span class="answer">${week[1][A7]}</span><br />
+				</tpt:if>
+				<br />
+
+				Understanding Your Eating Habits - Style of eating<br />
+				1. I nibble on food all day long<br />
+				<tpt:if id="week[1][B1]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B1]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B1]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B1]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				2. I limit my food intake during the day, eating more than half of my food in the evening.<br />
+				<tpt:if id="week[1][B2]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B2]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B2]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B2]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				3. I feel satisfied after I have eaten.<br />
+				<tpt:if id="week[1][B3]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B3]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B3]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B3]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				4. I never feel satisfied no matter how much I have eaten.<br />
+				<tpt:if id="week[1][B4]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B4]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B4]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B4]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				5. I eat as soon as I feel the slightest twinge of hunger.<br />
+				<tpt:if id="week[1][B5]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B5]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B5]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B5]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				6. I consume high calorie drinks each day (soda, juice, coffee with sugar and cream).<br />
+				<tpt:if id="week[1][B6]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B6]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B6]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B6]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				7. I finish my food before everyone else.<br />
+				<tpt:if id="week[1][B7]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B7]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B7]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B7]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				8. I eat very large mouthfuls.<br />
+				<tpt:if id="week[1][B8]" test="EQ" value="1">
+					<span class="answer">Never</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B8]" test="EQ" value="2">
+					<span class="answer">Sometimes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B8]" test="EQ" value="3">
+					<span class="answer">Usually</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][B8]" test="EQ" value="4">
+					<span class="answer">Always</span><br />
+				</tpt:if>
+				<br />
+
+
+				Questionnaire<br />
+				1. When are eating habits usually developed?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][E1]" test="EQ" value="1">
+					<span class="answer">Early Childhood</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E1]" test="EQ" value="2">
+					<span class="answer">Infancy</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E1]" test="EQ" value="3">
+					<span class="answer">Teenage years</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E1]" test="EQ" value="4">
+					<span class="answer">Adulthood</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. At what waist size (in inches) is the risk increased for most weight-related illnesses?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][E2]" test="EQ" value="1">
+					<span class="answer">MALE:  45 INCHES  FEMALE:  40 INCHES</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E2]" test="EQ" value="2">
+					<span class="answer">MALE:  35 INCHES  FEMALE:  30 INCHES</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E2]" test="EQ" value="3">
+					<span class="answer">MALE:  30 INCHES  FEMALE:  25 INCHES</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E2]" test="EQ" value="4">
+					<span class="answer">MALE:  40 INCHES  FEMALE:  35 INCHES</span><br />
+				</tpt:if>
+				3. How many pound(s) per week is a realistic and attainable weight loss goal?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][E3]" test="EQ" value="1">
+					<span class="answer">2-4 Pounds</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E3]" test="EQ" value="2">
+					<span class="answer">1-2 Pounds</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E3]" test="EQ" value="3">
+					<span class="answer">5-7 Pounds</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E3]" test="EQ" value="4">
+					<span class="answer">More than 8</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. What are some chronic illnesses associated with being overweight?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][E4]" test="EQ" value="1">
+					<span class="answer">HIGH BLOOD PRESSURE</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E4]" test="EQ" value="2">
+					<span class="answer">HIGH CHOLESTEROL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E4]" test="EQ" value="3">
+					<span class="answer">TYPE 2 DIABETES</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E4]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				5. To successfully lose weight, how many calories deficit do you need per day?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][E5]" test="EQ" value="1">
+					<span class="answer">250-500 Calories</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E5]" test="EQ" value="2">
+					<span class="answer">100-250 Calories</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E5]" test="EQ" value="3">
+					<span class="answer">350-450 Calories</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][E5]" test="EQ" value="4">
+					<span class="answer">More than 500 Calories</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[2]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 2 data</u></span><br /><br />
+
+				The physical activities that you enjoy or are currently doing:<br />
+				<tpt:if id="week[2][B1]" test="NE" value="">
+					<span class="answer">${week[2][B1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][B2]" test="NE" value="">
+					<span class="answer">${week[2][B2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][B3]" test="NE" value="">
+					<span class="answer">${week[2][B3]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][B4]" test="NE" value="">
+					<span class="answer">${week[2][B4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][B5]" test="NE" value="">
+					<span class="answer">${week[2][B5]}</span><br />
+				</tpt:if>
+				<br />
+
+				
+				Questionnaire<br />
+				1. What is the key to becoming more active?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][E1]" test="EQ" value="1">
+					<span class="answer">Signing up to be a member at a local gym.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="2">
+					<span class="answer">Learning to identify opportunities for physical activity and taking advantage of them as they come up.</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="3">
+					<span class="answer">Keeping workouts interesting and doing them with a friend.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E1]" test="EQ" value="4">
+					<span class="answer">Set realistic long and short term goals and chart your progress every step.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. What does the RPE (Rating of Perceived Exertion) Scale help to evaluate?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][E2]" test="EQ" value="1">
+					<span class="answer">Safe, effective levels of exercise to reach your goals.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E2]" test="EQ" value="2">
+					<span class="answer">What everyone else is thinking of you while you workout.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E2]" test="EQ" value="3">
+					<span class="answer">The amount of minimal effort needed to look like a tough workout.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E2]" test="EQ" value="4">
+					<span class="answer">How you feel during exercise based on how the session feels to you.</span><br />
+				</tpt:if>
+				3. What are the three components of a total exercise program?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][E3]" test="EQ" value="1">
+					<span class="answer">Cardiovascular exercise, resistance exercise, and stretching</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E3]" test="EQ" value="2">
+					<span class="answer">Commitment, perseverance, strength</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E3]" test="EQ" value="3">
+					<span class="answer">Endurance, strength, and flexibility</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E3]" test="EQ" value="4">
+					<span class="answer">Aerobic exercise, anaerobic exercise, running</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. By how much, on average, does muscle mass and muscle strength decrease as we age?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][E4]" test="EQ" value="1">
+					<span class="answer">Not at all.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E4]" test="EQ" value="2">
+					<span class="answer">3% every year</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E4]" test="EQ" value="3">
+					<span class="answer">30% due to inactivity</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E4]" test="EQ" value="4">
+					<span class="answer">50% after our youth</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. In order to improve flexibility, when should stretching be done?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][E5]" test="EQ" value="1">
+					<span class="answer">After strength training</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E5]" test="EQ" value="2">
+					<span class="answer">Before workout begins</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E5]" test="EQ" value="3">
+					<span class="answer">At a regularly scheduled dance lesson</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][E5]" test="EQ" value="4">
+					<span class="answer">First thing in the morning</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[3]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 3 data</u></span><br /><br />
+
+				Physical Activity<br />
+				List obstacles that have prevented you from  exercising in the past:<br />
+				<tpt:if id="week[3][C1]" test="NE" value="">
+					<span class="answer">${week[3][C1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C2]" test="NE" value="">
+					<span class="answer">${week[3][C2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C3]" test="NE" value="">
+					<span class="answer">${week[3][C3]}</span><br />
+				</tpt:if>
+				<br />
+				List steps to achieve your goal:<br />
+				<tpt:if id="week[3][C4]" test="NE" value="">
+					<span class="answer">${week[3][C4]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C5]" test="NE" value="">
+					<span class="answer">${week[3][C5]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C6]" test="NE" value="">
+					<span class="answer">${week[3][C6]}</span><br />
+				</tpt:if>
+				<br />
+				List incentives to help keep you motivated:<br />
+				<tpt:if id="week[3][C7]" test="NE" value="">
+					<span class="answer">${week[3][C7]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C8]" test="NE" value="">
+					<span class="answer">${week[3][C8]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][C9]" test="NE" value="">
+					<span class="answer">${week[3][C9]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. What do calories provide a measure of?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][D1]" test="EQ" value="1">
+					<span class="answer">What counts as a serving</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D1]" test="EQ" value="2">
+					<span class="answer">How much a serving of food weighs</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D1]" test="EQ" value="3">
+					<span class="answer">How much energy you get from a serving of food</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D1]" test="EQ" value="4">
+					<span class="answer">The amount of energy spent working out</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. How many grams of fat, by definition, should be in low fat foods?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][D2]" test="EQ" value="1">
+					<span class="answer"> 0 grams </span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D2]" test="EQ" value="2">
+					<span class="answer"> 1 grams or less</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D2]" test="EQ" value="3">
+					<span class="answer"> 2 grams of less</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D2]" test="EQ" value="4">
+					<span class="answer"> 3 grams or less</span><br />
+				</tpt:if>
+				3. Why are restaurant meals usually higher in calories than food you prepare yourself?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][D3]" test="EQ" value="1">
+					<span class="answer">Restaurants make food with lots of butter for flavor.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D3]" test="EQ" value="2">
+					<span class="answer">Restaurants serve large portions of protein and carbohydrates and only small portions of vegetables.</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D3]" test="EQ" value="3">
+					<span class="answer">Restaurants have more calories in their salad bar than you have at your house.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D3]" test="EQ" value="4">
+					<span class="answer">Food portions at restaurants are typically larger than what you may serve yourself at home.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. The food guide pyramid recommends what portion of vegetables per day on a 1600 calorie diet?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][D4]" test="EQ" value="1">
+					<span class="answer"> 1 cup</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D4]" test="EQ" value="2">
+					<span class="answer"> 2 cups</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D4]" test="EQ" value="3">
+					<span class="answer"> 3 cups</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D4]" test="EQ" value="4">
+					<span class="answer"> As much as you want.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. Why are snacks important?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][D5]" test="EQ" value="1">
+					<span class="answer">Provide fuel to muscles</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D5]" test="EQ" value="2">
+					<span class="answer">Increase overall energy levels</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D5]" test="EQ" value="3">
+					<span class="answer">Improve concentration and memory</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][D5]" test="EQ" value="4">
+					<span class="answer">All of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[4]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 4 data</u></span><br /><br />
+
+				Physical Activity - List the most important  benefits to you:<br />
+				<tpt:if id="week[4][A1]" test="NE" value="">
+					<span class="answer">${week[4][A1]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][A2]" test="NE" value="">
+					<span class="answer">${week[4][A2]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][A3]" test="NE" value="">
+					<span class="answer">${week[4][A3]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. How does physical activity affect feelings of stress, anxiety, and depression?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][C1]" test="EQ" value="1">
+					<span class="answer">Physical activity increases stress and anxiety but decreases feeling depressed.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C1]" test="EQ" value="2">
+					<span class="answer">Exercise improves mood and reduces feelings of stress, anxiety, and depression.</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C1]" test="EQ" value="3">
+					<span class="answer">Some forms of physical activity lower stress, anxiety, and/or depression.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C1]" test="EQ" value="4">
+					<span class="answer">Exercise makes you tired so you sleep more and are less stressed.</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. What color clothing should you wear when walking at night?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][C2]" test="EQ" value="1">
+					<span class="answer">Bright colors, like pink and orange</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C2]" test="EQ" value="2">
+					<span class="answer">White and black</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C2]" test="EQ" value="3">
+					<span class="answer">Tie-Dyed clothing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C2]" test="EQ" value="4">
+					<span class="answer">Black and Navy Blue</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. What should you carry with you when you're away from home and taking a walk?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][C3]" test="EQ" value="1">
+					<span class="answer">A note of the address in which you are staying</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C3]" test="EQ" value="2">
+					<span class="answer">A swim suit and a towel</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C3]" test="EQ" value="3">
+					<span class="answer">Bug spray, a first aid kit, and a compass</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C3]" test="EQ" value="4">
+					<span class="answer">A water bottle and some trail mix</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. How often should you apply sunscreen?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][C4]" test="EQ" value="1">
+					<span class="answer">Only when going swimming, every time you get out of the water</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C4]" test="EQ" value="2">
+					<span class="answer">Every 3-4 hours on a warm, sunny day</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C4]" test="EQ" value="3">
+					<span class="answer">Every 1-2 hours when in the sun and always after swimming</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C4]" test="EQ" value="4">
+					<span class="answer">Just once for the day</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What may a muscle spasm or leg cramp be related to?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][C5]" test="EQ" value="1">
+					<span class="answer">Dehydration</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C5]" test="EQ" value="2">
+					<span class="answer">Overexertion</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C5]" test="EQ" value="3">
+					<span class="answer">Electrolyte imbalance</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][C5]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[5]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 5 data</u></span><br /><br />
+
+				Here are some typical reasons for weight gain.  Check all that apply to you:<br />
+				<tpt:if id="week[5][B1]" test="EQ" value="1">
+					<span class="answer">Not reading food labels</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B2]" test="EQ" value="1">
+					<span class="answer">Not counting calories</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B3]" test="EQ" value="1">
+					<span class="answer">Finishing everything on your plate even if you feel full</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B4]" test="EQ" value="1">
+					<span class="answer">Not exercising regularly</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B5]" test="EQ" value="1">
+					<span class="answer">Seeking comfort in food</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B6]" test="EQ" value="1">
+					<span class="answer">Eating too large portions</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B7]" test="EQ" value="1">
+					<span class="answer">Skipping Meals</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B8]" test="EQ" value="1">
+					<span class="answer">Eating on the go, and not planning for meals or snacks</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B9]" test="EQ" value="1">
+					<span class="answer">Stress Eating</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B10]" test="EQ" value="1">
+					<span class="answer">Reverting to prior eating habits</span><br />
+				</tpt:if>
+				<br />
+				Now pick three that you are ready to change and write them below:<br />
+				<tpt:if id="week[5][B11]" test="NE" value="">
+					<span class="answer">${week[5][B11]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B12]" test="NE" value="">
+					<span class="answer">${week[5][B12]}</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][B13]" test="NE" value="">
+					<span class="answer">${week[5][B13]}</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. What are the stages of change?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E1]" test="EQ" value="1">
+					<span class="answer">Pre-contemplation, contemplation, and preparation/determination</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="2">
+					<span class="answer">Action/willpower, maintenance and relapse prevention</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="3">
+					<span class="answer">Both A and B</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. At what number on the Hunger Scale should you stop eating if you are trying to lose weight?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E2]" test="EQ" value="1">
+					<span class="answer">#7 Very full, may feel a little bit uncomfortable</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="2">
+					<span class="answer">#5 Comfortable, neither hungry or full</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="3">
+					<span class="answer">#3 Hungry, your stomach may be rumbling</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="4">
+					<span class="answer">#2 Very uncomfortable, may feel weak, lightheaded or irritable</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. What is the key to eating healthfully?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E3]" test="EQ" value="1">
+					<span class="answer">Mindful eating</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="2">
+					<span class="answer">Buy lots of fresh produce</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="3">
+					<span class="answer">Portion size</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="4">
+					<span class="answer">Following a strict food plan</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. What actions should you avoid when practicing healthy mealtime habits at home?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E4]" test="EQ" value="1">
+					<span class="answer">Standing in the kitchen</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="2">
+					<span class="answer">Watching television</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="3">
+					<span class="answer">Reading the newspaper</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				5. What is a common tendency of people who were successful with weight loss that fall into a relapse?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E5]" test="EQ" value="1">
+					<span class="answer">Portion sizes gradually get larger</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="2">
+					<span class="answer">They miss some of their "old" comfort foods</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="3">
+					<span class="answer">Working out stops once the desired weight is achieved</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="4">
+					<span class="answer">Forgot to continue with exercise and food log</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+		</tpt:if>
+	</div>
+</div>
+</tpt:body>

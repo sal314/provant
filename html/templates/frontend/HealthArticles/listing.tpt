@@ -1,0 +1,32 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Featured Health Articles<br /><small>Read up on our Featured Health Articles</small></h1>
+	</div>
+	<div class="w-25p right">
+		
+	</div>
+	
+	<div class="w-75p left">
+	<p>Improving personal health awareness of health conditions empowers you to make appropriate healthcare decisions that will ultimately support your health and well-being.  You are encouraged to explore the featured articles and the health library which includes evidence-based health information.  </p><br />
+		<div class="button-content">
+		<tpt:foreach id="articles" as="art">
+		<div class="stack click">
+<!-- [CDATA[
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Request Home Health Screening Kit" />
+]] -->
+			<img class="left" src="/zImageCache/Crop/70/70/${art[file_image]}" alt="Link" />
+			<div class="intro">
+				<a href="/HealthLibrary/getChunk/${art[ebsco_id]}" class="fs16 no-pointer">${art[title]}</a>
+				<p>${art[summary]}</p>
+				
+				<div class="clear"> </div>
+			</div>
+		</div>
+		</tpt:foreach>
+		</div>
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+</tpt:body>

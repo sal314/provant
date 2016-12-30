@@ -1,0 +1,110 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>Edit Log</h1>
+	</div>
+	
+	<tpt:if id="err" test="haselements">
+	<ul>
+		<tpt:foreach id="err" as="error">
+			<li>${error.display_name} ${error.message}</li>
+		</tpt:foreach>
+	</ul>
+	</tpt:if>
+
+	<form method="post" action="/HealthCoach/${mode}">
+	<input type="hidden" name="patient" value="${user[id]}"/>
+	<input type="hidden" name="call_log_id" value="${_POST[call_log_id]}"/>
+	<input type="hidden" name="company_id" value="${company_id}" />
+	<input type="hidden" name="user_id" value="${user_id}" />
+	<input type="hidden" name="contact_time" value="${_POST[contact_time]}" />
+
+	<div class="margin5">
+		<h3><label>User: ${user[first_name]} ${user[last_name]}</label> <br /> 
+		<label>Email: ${user[email]} </label><br/>
+		</h3>
+	</div>
+  <div class="margin5">
+	 <!-- [CDATA[	 <label>Contact Date:<tpt:html id="contact_date" type="date_picker" display="M d,Y" value="${_POST[contact_date]}"/></label> -->
+		
+		
+		<label>Contact Date: <a href="javascript:void(0);" onclick="showCalendarDialog(event, 210, 259, 'past');"><img src="/assets/media/images/calendar.gif" /></a></label>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+			<span id="date_entered_disp">${POST[disp_date]}</span>
+			<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+		
+		<label>Contact time: &amp;nbsp;
+<!-- [CDATA[		<input style="width:100px;" type="text" name="contact_time" value="${_POST[contact_time]}" /></label> ]] -->
+		<select name="time_hours">
+			<tpt:html type="select-options" data="${hours}" selected="${_POST[time_hours]}" />
+		</select>
+		<select name="time_min">
+			<tpt:html type="select-options" data="${minutes}" selected="${_POST[time_min]}" />
+		</select>
+		<select name="time_ampm">
+			<tpt:html type="select-options" data="${ampm}" selected="${_POST[time_ampm]}" />
+		</select>
+		</label>
+		<br /><br />
+	</div>
+	<div class="margin5">
+		<label>Contacted: <br/><select name="method">
+			<tpt:html type="select-options" data="${method_options}" selected="${_POST[method]}"/>
+			</select>
+		</label>
+		<br/><br/>    
+	</div>
+	<div class="margin5">
+		<label>Primary Intervention:<br/> <select name="primary">
+			<tpt:html type="select-options" data="${intervention_options}" selected="${_POST[primary]}"/>
+			</select>
+		</label>
+		<br/><br/>    
+	</div>
+	<div class="margin5">
+		<label>Secondary Intervention: <br/><select name="secondary">
+			<tpt:html type="select-options" data="${intervention_options}" selected="${_POST[secondary]}"/>
+			</select>
+		</label>
+		<br/> <br/>   
+	</div>	
+	
+	<div class="margin5">
+		<label>Current Risk Stratification:<br/><select name="risk">
+			<tpt:html type="select-options" data="${risk_options}" selected="${_POST[risk]}"/>
+			</select>
+		</label>
+		<br/><br/>    
+	</div>	
+	<div class="margin5">
+		<label>Migration:<br/><select name="migration">
+			<tpt:html type="select-options" data="${migration_options}" selected="${_POST[migration]}"/>
+			</select>
+		</label>
+		<br/><br/>    
+	</div>	
+	<div class="margin5">
+		<label>No-Longer Participating (Reason):<br/><select name="participation">
+			<tpt:html type="select-options" data="${participation_options}" selected="${_POST[participation]}"/>
+			</select>
+		</label>
+		<br/><br/>    
+	</div>	
+	<div class="margin5">
+		<label>Comments:<br/><textarea name="comment" cols="40" rows="5" id="phoneComments">${_POST[comment]}</textarea></label>
+		<br/> <br/>   
+	</div>	
+		
+	<tpt:if id="mode" test="EQ" value="UpdateEntry">
+	<div id="save-button" style="margin:0">
+		<a href="#" class="nextstep next"> </a>
+	</div>
+	</tpt:if><tpt:else>
+	<div id="save-button" style="margin:0">
+		<a href="#" class="nextstep next"> </a>
+	</div>
+	</tpt:else>
+	</form>
+
+</div>
+</tpt:body>

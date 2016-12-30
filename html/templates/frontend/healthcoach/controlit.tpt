@@ -1,0 +1,488 @@
+<tpt:body>
+<style>
+	.answer {color: blue; font-size:12px;}
+	.ex {color: red; font-size:16px;}
+</style>
+	<h1>ControlIT Module Summary</h1>
+	<tpt:if id="errors" test="HASELEMENTS">
+		<tpt:foreach id="errors" as="error">
+			<tpt:if id="error.type" test="EQ" value="5">
+			<span>${error.message}</span><br /><br />
+			</tpt:if>
+		</tpt:foreach>
+	</tpt:if>
+	User: ${user[first_name]} ${user[last_name]}<br />
+	Date: ${date_updated}<br />
+	Last: Week ${last_completed}<br />
+	<br />
+	<div style="margin-left:10px;">
+		<tpt:if id="week" test="HASELEMENTS">
+			<span style="font-size:14px;"><u>Intro data</u></span><br /><br />
+			List your own personal objectives for the Control IT program:<br />
+			<tpt:if id="week[0][C1]" test="NE" value="">
+				<span class="answer">${week[0][C1]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C2]" test="NE" value="">
+				<span class="answer">${week[0][C2]}</span><br />
+			</tpt:if>
+			<tpt:if id="week[0][C3]" test="NE" value="">
+				<span class="answer">${week[0][C3]}</span><br />
+			</tpt:if>
+			<br />
+			<br />
+
+			<tpt:if id="week[1]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 1 data</u></span><br /><br />
+
+				Check your risk factors for Diabetes:<br />
+				<tpt:if id="week[1][A1]" test="EQ" value="1">
+					<span class="answer">Age (half of all type 2 diabetes cases occur in people older than 45 years of age)</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A2]" test="EQ" value="1">
+					<span class="answer">Obesity</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A3]" test="EQ" value="1">
+					<span class="answer">Poor diet</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A4]" test="EQ" value="1">
+					<span class="answer">Inactivity</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A5]" test="EQ" value="1">
+					<span class="answer">History of Gestational Diabetes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A6]" test="EQ" value="1">
+					<span class="answer">History of Metabolic Syndrome</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A7]" test="EQ" value="1">
+					<span class="answer">Family History</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][A8]" test="EQ" value="1">
+					<span class="answer">Ethnicity-High risk ethnic populations include African Americans, Hispanic/Latino Americans, Native Americans, Asian Americans, and Pacific Islanders</span><br />
+				</tpt:if>
+				<br />
+
+				Questionnaire<br />
+				1. With diabetes, there is a lack of communications between what two things?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G1]" test="EQ" value="1">
+					<span class="answer">Good and Evil</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="2">
+					<span class="answer">Glucose and Insulin</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="3">
+					<span class="answer">Blood and muscle</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G1]" test="EQ" value="4">
+					<span class="answer">Heart and sugar</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. Which type of diabetes is the primary target audience?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G2]" test="EQ" value="1">
+					<span class="answer">Pre-Diabetes</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="2">
+					<span class="answer">Type I</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="3">
+					<span class="answer">Type II</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G2]" test="EQ" value="4">
+					<span class="answer">Gestational Diabetes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. What is NOT a common symptom of diabetes?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G3]" test="EQ" value="1">
+					<span class="answer">Weakness and fatigue</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="2">
+					<span class="answer">Dry itching skin</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="3">
+					<span class="answer">Slow healing for bruises and cuts</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G3]" test="EQ" value="4">
+					<span class="answer">Hair Loss</span><br />
+				</tpt:if>
+				4. In practicing portion control, about what size is a 3 oz. meat serving similar to?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G4]" test="EQ" value="1">
+					<span class="answer">Deck of cards</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="2">
+					<span class="answer">Baseball</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="3">
+					<span class="answer">Your hand</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G4]" test="EQ" value="4">
+					<span class="answer">Computer mouse</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What are the &amp;quot;good&amp;quot; fats?amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G5]" test="EQ" value="1">
+					<span class="answer">Saturated</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G5]" test="EQ" value="2">
+					<span class="answer">Trans fats</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G5]" test="EQ" value="3">
+					<span class="answer">Unsaturated</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G5]" test="EQ" value="4">
+					<span class="answer">Low fat substitutes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				6. Which fish are high in omega-3 fatty acids?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[1][G6]" test="EQ" value="1">
+					<span class="answer">Salmon</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G6]" test="EQ" value="2">
+					<span class="answer">Mackerel</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G6]" test="EQ" value="3">
+					<span class="answer">Herring</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[1][G6]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				<br />
+				<br />				
+			</tpt:if>
+
+			<tpt:if id="week[2]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 2 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. True or False:<br />&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;It is better to have only one doctor when becoming a diabetic so that the doctors do not have to get confused by each other&amp;acute;s opinion.<br />
+				<tpt:if id="week[2][F1]" test="EQ" value="1">
+					<span class="answer">True</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F1]" test="EQ" value="2">
+					<span class="answer">False</span><br />
+				</tpt:if>
+				2. What should glucose levels read before a meal?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][F2]" test="EQ" value="1">
+					<span class="answer">1 - 10 mg/dL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F2]" test="EQ" value="2">
+					<span class="answer">70 - 130 mg/dL</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F2]" test="EQ" value="3">
+					<span class="answer">Above 180 mg/dL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F2]" test="EQ" value="4">
+					<span class="answer">240 mg/dL or over</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. What is it called when too many ketones are made in the body creating severe effects?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][F3]" test="EQ" value="1">
+					<span class="answer">Ketone Testing</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F3]" test="EQ" value="2">
+					<span class="answer">Ketone Overload</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F3]" test="EQ" value="3">
+					<span class="answer">Diabetic Ketoacidosis</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F3]" test="EQ" value="4">
+					<span class="answer">Glycosylated hemoglobin</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. Where on the food label is information listed based on serving size?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][F4]" test="EQ" value="1">
+					<span class="answer">Nutrition Facts</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F4]" test="EQ" value="2">
+					<span class="answer">Ingredient List</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F4]" test="EQ" value="3">
+					<span class="answer">On the side panel</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F4]" test="EQ" value="4">
+					<span class="answer">None of these</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What effect does alcohol have on blood glucose levels?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][F5]" test="EQ" value="1">
+					<span class="answer">No effect</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F5]" test="EQ" value="2">
+					<span class="answer">Raises blood glucose levels</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F5]" test="EQ" value="3">
+					<span class="answer">Lowers levels and can be part of the cause of hypoglycemia</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F5]" test="EQ" value="4">
+					<span class="answer">Is the reason for low blood glucose</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				6. Which foods tend to be high in sodium?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[2][F6]" test="EQ" value="1">
+					<span class="answer">Snacked foods</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F6]" test="EQ" value="2">
+					<span class="answer">Canned soups</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F6]" test="EQ" value="3">
+					<span class="answer">Frozen Meals</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[2][F6]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[3]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 3 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. Which acute complication for Type II Diabetics has a death rate of over 50%?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I1]" test="EQ" value="1">
+					<span class="answer">Diabetic Acidosis</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I1]" test="EQ" value="2">
+					<span class="answer">Hyperosmolar Nonketogenic Coma</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I1]" test="EQ" value="3">
+					<span class="answer">Hypoglycemia</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I1]" test="EQ" value="4">
+					<span class="answer">Hyperglycmia</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. If your blood sugar was low and you felt shaky and anxious, what should you do?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I2]" test="EQ" value="1">
+					<span class="answer">Call for help</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I2]" test="EQ" value="2">
+					<span class="answer">Go for a drive</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I2]" test="EQ" value="3">
+					<span class="answer">Read a book</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I2]" test="EQ" value="4">
+					<span class="answer">Eat 15 grams of sugar</span><br />
+				</tpt:if>
+				3. What is the goal for triglyceride levels?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I3]" test="EQ" value="1">
+					<span class="answer">Greater than 40-50 mg/dL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I3]" test="EQ" value="2">
+					<span class="answer">Less than 100 mg/dL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I3]" test="EQ" value="3">
+					<span class="answer">Below 150 mg/dL</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I3]" test="EQ" value="4">
+					<span class="answer">Fewer than 200 mg/dL</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. In the U.S. approximately how many people use the pump?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I4]" test="EQ" value="1">
+					<span class="answer">120,000 people</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I4]" test="EQ" value="2">
+					<span class="answer">1 in 5 diabetics</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I4]" test="EQ" value="3">
+					<span class="answer">74% of people</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I4]" test="EQ" value="4">
+					<span class="answer">107 patients in Washington only</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What is carb counting?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I5]" test="EQ" value="1">
+					<span class="answer">A meal planning technique for managing blood glucose levels</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I5]" test="EQ" value="2">
+					<span class="answer">Counting all the pieces of bread you had eaten in a day</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I5]" test="EQ" value="3">
+					<span class="answer">Adding up all the forms on carbohydrates in your house</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I5]" test="EQ" value="4">
+					<span class="answer">Using different forms of table sugar to control blood glucose levels</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				6. Where is fiber found?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[3][I6]" test="EQ" value="1">
+					<span class="answer">Plant food</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I6]" test="EQ" value="2">
+					<span class="answer">Whole grains</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I6]" test="EQ" value="3">
+					<span class="answer">Legumes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[3][I6]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[4]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 4 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. Which is NOT a way to properly care for your feet?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K1]" test="EQ" value="1">
+					<span class="answer">Wear specially made shoes</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K1]" test="EQ" value="2">
+					<span class="answer">Go barefoot whenever possible</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K1]" test="EQ" value="3">
+					<span class="answer">Scrub your feet clean and dry daily</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K1]" test="EQ" value="4">
+					<span class="answer">Check for cuts, calluses, and swelling</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. For good skin care, what kind of shower is best?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K2]" test="EQ" value="1">
+					<span class="answer">A hot, steamy shower</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K2]" test="EQ" value="2">
+					<span class="answer">A bubble bath</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K2]" test="EQ" value="3">
+					<span class="answer">One with a lot of moisturizers and lotions</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K2]" test="EQ" value="4">
+					<span class="answer">None of the above</span><br />
+				</tpt:if>
+				3. When is the best time to eat when going to the dentist?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K3]" test="EQ" value="1">
+					<span class="answer">Before you go</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K3]" test="EQ" value="2">
+					<span class="answer">While you&amp;acute;re in the waiting room</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K3]" test="EQ" value="3">
+					<span class="answer">Immediately after</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K3]" test="EQ" value="4">
+					<span class="answer">Doesn&amp;acute;t matter</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				4. If you&amp;acute;re having trouble eating solid foods on a sick day, how often should you drink fluids?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K4]" test="EQ" value="1">
+					<span class="answer">Whenever you are thirsty</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K4]" test="EQ" value="2">
+					<span class="answer">Every 2 hours</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K4]" test="EQ" value="3">
+					<span class="answer">Every 4 hours</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K4]" test="EQ" value="4">
+					<span class="answer">As little as possible</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What is the second rule of travel for a person with diabetes?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K5]" test="EQ" value="1">
+					<span class="answer">Always have your passport</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K5]" test="EQ" value="2">
+					<span class="answer">Pack at least twice the amount of medication and blood testing supplies that you need</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K5]" test="EQ" value="3">
+					<span class="answer">Pack lots of snacks</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K5]" test="EQ" value="4">
+					<span class="answer">Don&amp;acute;t forget to tell your doctor where and when you&amp;acute;re going away</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				6. What qualifies as a &amp;quot;free food&amp;quot;?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[4][K6]" test="EQ" value="1">
+					<span class="answer">Food that is less than 20 calories and 5 grams of carbohydrate per serving</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K6]" test="EQ" value="2">
+					<span class="answer">Food that you did not have to pay for</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K6]" test="EQ" value="3">
+					<span class="answer">Both A and B</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[4][K6]" test="EQ" value="4">
+					<span class="answer">None of the above</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+
+
+				<br />
+				<br />
+			</tpt:if>
+
+			<tpt:if id="week[5]" test="HASELEMENTS">
+				<span style="font-size:14px;"><u>Week 5 data</u></span><br /><br />
+
+				Questionnaire<br />
+				1. Smoking causes an increase in all of the following EXCEPT:&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E1]" test="EQ" value="1">
+					<span class="answer">Cholesterol</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="2">
+					<span class="answer">Risk for nerve damage</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="3">
+					<span class="answer">Pregnancy</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E1]" test="EQ" value="4">
+					<span class="answer">Blood Pressure</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				2. The first treatment for Type II Diabetes is what?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E2]" test="EQ" value="1">
+					<span class="answer">Meal Planning</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="2">
+					<span class="answer">Pill Medication</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="3">
+					<span class="answer">Losing Weight</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E2]" test="EQ" value="4">
+					<span class="answer">Meeting with a doctor</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				3. Which class of drug works better in the muscles and fat to lower blood glucose levels?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E3]" test="EQ" value="1">
+					<span class="answer">Sulfonylureas</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="2">
+					<span class="answer">Biguanides</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="3">
+					<span class="answer">Alpha-glucosidase inhibitors</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E3]" test="EQ" value="4">
+					<span class="answer">Thiazolidinediones</span><br />
+				</tpt:if>
+				4. What drug for Type II Diabetes was made from a hormone in lizard saliva?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E4]" test="EQ" value="1">
+					<span class="answer">Pramlintide</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="2">
+					<span class="answer">Exenatide</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="3">
+					<span class="answer">Meglitinides</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E4]" test="EQ" value="4">
+					<span class="answer">Symlin</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				5. What are characteristic(s) of insulin types?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E5]" test="EQ" value="1">
+					<span class="answer">Onset</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="2">
+					<span class="answer">Peak time</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="3">
+					<span class="answer">Duration</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E5]" test="EQ" value="4">
+					<span class="answer">All of the above</span><br />
+				</tpt:if>
+				6. Insulin is made where?&amp;nbsp;&amp;nbsp;&amp;nbsp;
+				<tpt:if id="week[5][E6]" test="EQ" value="1">
+					<span class="answer">Beta cells of the pancreas</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E6]" test="EQ" value="2">
+					<span class="answer">In a manufacturing warehouse</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E6]" test="EQ" value="3">
+					<span class="answer">Always from other animals</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<tpt:if id="week[5][E6]" test="EQ" value="4">
+					<span class="answer">Alpha cells of the pancreas</span>&amp;nbsp;&amp;nbsp;&amp;nbsp;<span class="ex">X</span><br />
+				</tpt:if>
+				<br />
+				<br />
+			</tpt:if>
+		</tpt:if>
+	</div>
+</tpt:body>

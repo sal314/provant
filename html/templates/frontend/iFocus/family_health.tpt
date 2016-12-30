@@ -1,0 +1,78 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Family Health<br /><small>Health Assessment</small></h1>
+	</div>	
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<div class="health-question">
+		<div class="question">
+			${QNo}. Please select any condition(s) that has affected a biological relative such as a brother, sister, child or parent.
+		</div>
+		<br />
+		<table class="datagrid history interactive">  
+			<thead>
+				<tr><th></th><th>Yes</th><th>No</th><th>Not Sure</th></tr>
+			</thead>
+			<tbody>
+  	<tr><td class="question" id="qq10_1">Breast Cancer</td>		<tpt:html type="radio-group" wrap="td" id="q10_1" value="1,2,3" selected="${answers[q10_1]}"/></tr>
+  	<tr><td class="question" id="qq10_2">Colorectal Cancer</td>	<tpt:html type="radio-group" wrap="td" id="q10_2" value="1,2,3" selected="${answers[q10_2]}"/></tr>
+  	<tr><td class="question" id="qq10_3">Diabetes</td>			<tpt:html type="radio-group" wrap="td" id="q10_3" value="1,2,3" selected="${answers[q10_3]}"/></tr>
+  	<tr><td class="question" id="qq10_4">Heart Disease</td>		<tpt:html type="radio-group" wrap="td" id="q10_4" value="1,2,3" selected="${answers[q10_4]}"/></tr>
+  	<tr><td class="question" id="qq10_5">High Blood Pressure</td><tpt:html type="radio-group" wrap="td" id="q10_5" value="1,2,3" selected="${answers[q10_5]}"/></tr>
+  	<tr><td class="question" id="qq10_6">High Cholesterol</td>	<tpt:html type="radio-group" wrap="td" id="q10_6" value="1,2,3" selected="${answers[q10_6]}"/></tr>
+			</tbody>
+		</table>
+		<br />
+    </div>
+	
+	<div class="clear"> </div>
+		
+		<div class="progressbar">
+			<div class="percent">
+				<div id="progresstext">
+					<span> </span>
+				</div>
+			</div>
+		</div>
+	
+<tpt:if id="next_last[0]" test="NOTEMPTY">
+	<div id="back-button">
+		<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+	</div>
+</tpt:if>
+<tpt:if id="is_completed" test="EQ" value="true">
+  	<tpt:if id="next_last[1]" test="NOTNULL">
+		<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+	</tpt:if>
+</tpt:if><tpt:else>
+  	<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+</tpt:else>
+ </form>
+ 
+ 
+ 
+  <div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

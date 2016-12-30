@@ -1,0 +1,1266 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/iFocus.js"></script>
+<div class="inner-content ifocus">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Results<br /><small>Health Assessment</small></h1>
+		<br />
+		<br />
+		<h6><a href="javascript:void(0);" onclick="window.open('/iFocus/Certificate/${rpt}')">Download Certificate</a></h6><br />
+		<br />
+	</div>
+
+<img style="float:right; margin:0 0 15px 15px;" width="380" height="253" src="/assets/media/images/ifocus/ifocus-img.jpg" />
+
+<p>
+<strong>Congratulations</strong> on making a proactive choice to learn more about your personal health. Your participation in the <strong>iFOCUS</strong> health appraisal survey provides you with a better understanding of your potential personal health risks and improves your health awareness about your overall general health and well-being.
+</p>
+<p>
+
+Included in this report are your <strong><i><u>confidential</u></i></strong> personal results, your <strong><i>my</i>FOCUS</strong> health index, detailed explanations of each preventive health screening test you may have participated in as sponsored by your employer or through information you may have self-entered into the <strong>iFOCUS</strong> survey.
+</p>
+<p>
+As you consider your personal journey to achieving and maintaining good health, your understanding of your personal health risks is important to support you with making appropriate lifestyle and behavior changes that will help you achieve overall good health. Making changes can sometimes be challenging, however, with the right information, your personal health journey does not have to be difficult. Even the simplest changes, such as eating appropriate portion sizes, adding physical activity to your daily routine and getting appropriate preventive care can make a big difference in your health.
+</p>
+<p>
+The goal of a health survey and/or preventive health screenings is to identify health risk that you may not be aware of currently. Identified early, you can begin to incorporate certain health behaviors and lifestyle changes that could reverse or delay these risks and achieve improved health and well-being.
+</p>
+<p>
+The <strong><i>my</i>FOCUS</strong> report provides the insight needed to understand, maintain or improve your health. In addition to the other personal health identifiers in your <strong><i>my</i>FOCUS</strong> report, try to include the following simple steps in your daily routine:
+<ol>
+	<li>Schedule annual preventive physical exams with your healthcare provider. Early detection of certain health risk indicators that may lead to chronic disease increases the likelihood of preventing or delaying the onset health issues and improves health outcomes.</li>
+	<li>Inform your healthcare provider(s) of all health screening results, lifestyle changes and other health related information as soon as you receive updated information. This increases the ability of your healthcare provider to monitor potential changes in your health that may place you at risk for certain health conditions.</li>
+	<li>Adopt and engage in a healthy lifestyle by making appropriate health choices in: nutrition, physical activity, alcohol intake, tobacco use and your mental health.</li>
+	<li>Finally, do not forget to share this report with your physician and/or healthcare provider and review any personal results that may fall outside of the optimal ranges.</li>
+</ol>
+</p>
+<br />
+<br />
+
+<h2><a href="javascript:void(0);" onclick="toggleDisplay('understand');">Understanding Your Report &amp;gt;&amp;gt;</a></h2><br />
+<div id="understand" style="display:none;">
+<p>
+The <strong>iFOCUS</strong> health appraisal survey and wellness screenings are powered by Provant Health Solutions, a nationally accredited wellness and health promotion company. ${company_name} uses a third party wellness vendor to ensure that your confidentiality and privacy are maintained as required by regulatory organizations.
+</p>
+<p>
+<strong>The following information should be considered as you review your <i>my</i>FOCUS individual results:</strong>
+</p>
+<p>
+<strong>Lifestyle and Behavior Risk Categories:</strong> A brief explanation of your personal risk based on the answers you provided within the <strong>iFOCUS</strong> survey tool.
+</p>
+<p>
+<strong>Screening Name &amp;amp; Explanation:</strong> A brief explanation of each screening has been provided to assist you with understanding the basis of each preventive screening test and how you compare to optimal values.
+</p>
+<p>
+<strong>Health Stop Light:</strong> A visual indicator that demonstrates the potential health risk category of your personal <strong>iFOCUS</strong> lifestyle and behavior risk categories as well as your preventive screening results. The stop light colors indicate the potential risk level of your personal results as follows:
+
+
+<img class="left ifocusStop" src="/assets/media/images/ifocus/chips.png" />
+<ul class="left ifocusStop">
+	<li><strong>High risk screening value</strong></li>
+	<li><strong>Moderate risk screening value</strong></li>
+	<li><strong>Optimal screening value</strong></li>
+</ul>
+<div class="clear"> </div>
+</p>
+<p>
+<strong>Optimal Screening Values:</strong> The numerical value of each specific screening that has been clinically proven to be considered optimal to maintain overall good health. Optimal values are indicated with a green (optimal value) &amp;quot;health stop light&amp;quot; indicator.
+</p>
+<p>
+<strong>Screening Values Out of Range:</strong> Any value out of optimal range is indicated with a yellow (moderate risk) or red (high risk) &amp;quot;health stop light&amp;quot; indicator.
+</p>
+<p>
+<strong>Screening Unit Values:</strong> These values represent the amount of a substance detected in a specific volume of blood. Different screenings use different unit values. (Examples include; mg/dl, mmHg, etc.)
+</p>
+<p>
+<strong>Your <i>my</i>FOCUS score:</strong> Each lifestyle/behavior category and screening is assigned a 
+<strong><i>my</i>FOCUS</strong> health index score using a proprietary scoring algorithm developed by the 
+Provant Health&amp;acute;s Clinical Service Team. The 
+<strong><i>my</i>FOCUS</strong> health index is designed to provide you with an overall health rating. Your 
+<strong><i>my</i>FOCUS</strong> score ranges from 0 (high health risk) to 100 (optimal health).
+</p>
+<br />
+<br />
+</div>
+<br />
+<div class="resultsHeader">
+
+	<h2>Your Personal <i>my</i>FOCUS Score: <strong>${score[total]}</strong></h2><br />
+	<p>Please review your <strong><i>i</i>FOCUS</strong> score. An <strong><i>i</i>FOCUS</strong> score ranges from 0-100. A score of 0-49 indicates the presence of significant health risk, a score of 50-79 indicates moderate health risk, a score of 80-99 indicates good health and a score of 100 indicates optimal health.</p>
+</div>
+
+<br/><br/>
+
+
+	<div class="healthResultsHeader">
+		<div class="healthResultsTitle"> </div>
+		<div class="healthResultsHeaderBox colorOptimal">
+			<span>Optimal Health</span>
+		</div>
+		<div class="healthResultsHeaderBox colorModerate">
+			<span>Moderate Risk</span>
+		</div>
+		<div class="healthResultsHeaderBox colorHigh">
+			<span>High Risk</span>
+		</div>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>General/Current Health</strong><br />
+			Optimal: Good Health</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[current_health_status]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[current_health_status]}px;">${score[current_health_status]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>
+	
+	<tpt:if id="is_gina" test="neq" value="true">
+		<div class="healthResultsScale">
+			<div class="healthResultsTitle"> 
+				<span><strong>Family Health</strong></span>
+			</div>
+			<div class="healthResultsBox colorOptimal"> </div>
+			<div class="healthResultsBox colorModerate"> </div>
+			<div class="healthResultsBox colorHigh"> </div>
+			<img style="left:${left[family_health]}px;" src="/assets/media/images/chip.png" />
+<!--
+			<span class="chipData" style="left:${text[family_health]}px;">${score[family_health]}/100</span>
+-->
+		</div>
+		<div class="clear"> </div>
+	</tpt:if>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Preventative Health Screenings</strong><br />
+			Optimal: All screenings for age group</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[preventative_health]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[preventative_health]}px;">${score[preventative_health]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>	
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Nutrition</strong><br />
+			Optimal: Diverse Selection and Appropriate Portions</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[weight_nutrition]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[weight_nutrition]}px;">${score[weight_nutrition]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>	
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Physical Activity</strong><br />
+			Optimal: At least 30 min/day <br />3 times/week</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[physical_activity]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[physical_activity]}px;">${score[physical_activity]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>		
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Stress Management</strong><br />
+			Optimal: Able to Cope</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[stress_management]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[stress_management]}px;">${score[stress_management]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>		
+
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Self-Care / Safety</strong><br />
+			Optimal: All indicators</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[self_care]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[self_care]}px;">${score[self_care]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Emotional Health</strong><br />
+			Optimal: Good Health</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[mental_health]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[mental_health]}px;">${score[mental_health]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Tobacco Use</strong><br />
+			Optimal: No tobacco use</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[tobaco_use]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[tobaco_use]}px;">${score[tobaco_use]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>	
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Alcohol/Drug Use</strong><br />
+			Optimal: 1-2 drinks/day<br />
+			No drug use</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[alcohol_use]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[alcohol_use]}px;">${score[alcohol_use]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>		
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Rediness to Change</strong><br />
+			Optimal: Action phase</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[readiness_to_change]}px;" src="/assets/media/images/chip.png" />
+<!--
+		<span class="chipData" style="left:${text[readiness_to_change]}px;">${score[readiness_to_change]}/100</span>
+-->
+	</div>
+	<div class="clear"> </div>		
+	
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	
+<div class="resultsHeader">
+
+	<span><strong>Your Personal <i>my</i>FOCUS Score: ${score[total]}</strong></span><br />
+	<p>Please review your <strong><i>i</i>FOCUS</strong> score. An <strong><i>i</i>FOCUS</strong> score ranges from 0-100. A score of 0-49 indicates the presence of significant health risk, a score of 50-79 indicates moderate health risk, a score of 80-99 indicates good health and a score of 100 indicates optimal health.</p>
+</div>
+
+<br/><br/>
+
+
+	<div class="healthResultsHeader">
+		<div class="healthResultsTitle"> </div>
+		<div class="healthResultsHeaderBox colorOptimal">
+			<span>Optimal Health</span>
+		</div>
+		<div class="healthResultsHeaderBox colorModerate">
+			<span>Moderate Risk</span>
+		</div>
+		<div class="healthResultsHeaderBox colorHigh">
+			<span>High Risk</span>
+		</div>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Blood Pressure</strong><br />
+			Optimal: &amp;lt; 120/80mm/hg</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[blood_pressure]" test="EXISTS">
+		<img style="left:${left[blood_pressure]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[bp_systolic]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[blood_pressure]}px;">${biometric[bp_systolic]}/${biometric[bp_diastolic]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Total Cholesterol</strong><br />
+			Optimal: &amp;lt; 200mg/dl</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[total_cholesterol]" test="EXISTS">
+		<img style="left:${left[total_cholesterol]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[cholesterol]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[total_cholesterol]}px;">${biometric[cholesterol]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Triglycerides</strong><br />
+			Optimal: &amp;lt; 150mg/dl</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[triglycerides]" test="EXISTS">
+		<img style="left:${left[triglycerides]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[triglycerides]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[triglycerides]}px;">${biometric[triglycerides]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>LDL Cholesterol</strong><br />
+			Optimal: &amp;lt; 100mg/dl</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[ldl]" test="EXISTS">
+		<img style="left:${left[ldl]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[ldl]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[ldl]}px;">${biometric[ldl]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>HDL Cholesterol</strong><br />
+			Optimal: &amp;gt; 40mg/dl (females)<br />
+				&amp;gt; 50mg/dl (males)</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[hdl]" test="EXISTS">
+		<img style="left:${left[hdl]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[hdl]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[hdl]}px;">${biometric[hdl]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>TC/HDL Cardiac Ratio</strong><br />
+			Optimal: &amp;lt; 4.0</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[hdl_ratio]" test="EXISTS">
+		<img style="left:${left[hdl_ratio]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[hdl_ratio]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[hdl_ratio]}px;">${biometric[hdl_ratio]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>BMI</strong><br />
+			Optimal: 18.5 - 24.9 kg/m2</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[bmi]" test="EXISTS">
+		<img style="left:${left[bmi]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[bmi]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[bmi]}px;">${biometric[bmi]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Waist Circumference</strong><br />
+			Optimal: &amp;lt; 35 inches (female)<br />
+				&amp;lt; 40 inches (male)</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[waist]" test="EXISTS">
+		<img style="left:${left[waist]}px;" src="/assets/media/images/chip.png" />
+		<tpt:if id="biometric[waist]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[waist]}px;">${biometric[waist]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+<!--
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Hemoglobin A1C</strong><br />
+			Optimal: Non-diabetic 4.0 - 6.0%</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[hemoglobin]" test="EXISTS">
+		<img style="left:${left[hemoglobin]}px;" src="/assets/media/images/chip.png" />
+		<span class="chipData" style="left:${text[hemoglobin]}px;">${score[hemoglobin]}/100</span>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+-->
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Blood Glucose</strong> <small>(${biometric[glucose_test]})</small><br />
+			Optimal: Non-fasting: &amp;lt; 130mg/dl<br />
+				Fasting: &amp;lt; 100mg/dl</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<tpt:if id="score[blood_glucose]" test="EXISTS">
+		<a href="javascript:showWin('/iFocus/details/${rpt}/Blood_glucose', '675px', '400px')">
+		<img style="left:${left[blood_glucose]}px;" src="/assets/media/images/chip.png" />
+		</a>
+		<tpt:if id="biometric[blood_glucose]" test="NOTEMPTY">
+		<span class="chipData" style="left:${text[blood_glucose]}px;">${biometric[blood_glucose]}</span>
+		</tpt:if>
+		</tpt:if>
+	</div>
+	<div class="clear"> </div>
+<!--	
+	<div class="healthResultsScale">
+		<div class="healthResultsTitle"> 
+			<span><strong>Cotinine (Nicotine)</strong><br />
+			Optimal: Negative</span>
+		</div>
+		<div class="healthResultsBox colorOptimal"> </div>
+		<div class="healthResultsBox colorModerate"> </div>
+		<div class="healthResultsBox colorHigh"> </div>
+		<img style="left:${left[cotinine]}px;" src="/assets/media/images/chip.png" />
+		<span class="chipData" style="left:${text[cotinine]}px;">${score[cotinine]}/100</span>
+	</div>
+	<div class="clear"> </div>
+-->
+	<br />
+	<br />
+	<br />
+	<br />
+	<h2>Your Personal iFocus Score Summary</h2>
+	
+	<tpt:if id="score[total]" test="LT" value="50">
+	<p>
+According to your results your health score places your current health in the &amp;quot;poor health&amp;quot; category.  Remember, share the results of your myFOCUS report with your personal healthcare provider to review your screening results and to understand the types of lifestyle and behavior changes you should initiate to improve your personal myFOCUS health score. Preventive health screenings are valuable tools that help identify personal health risks you may not have been aware of before the screening. </p>
+
+<p>The good news is that seventy-five percent (75%) of chronic disease and illnesses can be prevented or delayed through the adoption of simple lifestyle and behaviors. Be sure to consult with your healthcare provider before beginning any behavior changes because some of your scores may need to be addressed with other interventions that only your personal healthcare provider can initiate. You and your healthcare provider can discuss your results and establish a safe and effective plan that will gradually get you on a path to achieving overall good health. </p> 
+
+<p>Keep these simple foundational principles of health in mind when you speak with your healthcare provider: eat appropriate portion sizes of all food groups, include regular amounts of physical activity in your daily routine by exercising at least three times a week or more, do not smoke and maintain a healthy weight.
+	</p>
+	<br />
+	</tpt:if>
+	<tpt:elseif id="score[total]" test="LT" value="75">
+	<p>
+According to your results your health score places your current health in the &amp;quot;fair health&amp;quot; category. You will want to share the results of your myFOCUS report with your personal healthcare provider to review the types of lifestyle and behavior changes you should initiate to improve your personal myFOCUS health score. Preventive health screenings are valuable tools that help identify personal health risks that you may not have been aware of before the screening. </p>
+
+<p>The good news is that seventy-five percent (75%) of chronic disease and illnesses can be prevented or delayed through the adoption of simple lifestyle and behavior changes. Be sure to speak with your healthcare provider before beginning your personal health journey. You and your healthcare provider will be able to discuss your results with you and establish a safe plan that will place you on a path to achieving good overall health. </p>
+
+<p>Keep these simple foundational principles of health in mind as you speak with your healthcare provider and begin to engage in a personal health improvement plan that will improve the quality of your life: eat appropriate portion sizes of all food groups, include regular amounts of physical activity in your daily routine by exercising at least three times a day or more, do not smoke and maintain a healthy weight.
+	</p>
+	<br />
+	</tpt:elseif>
+	<tpt:elseif id="score[total]" test="LT" value="85">
+	<p>
+Good for you! According to your results, your health score places your current health in the &amp;quot;good health&amp;quot; category. Slight to moderate adjustments in your health behaviors and lifestyle may improve your current health to an optimal state. Remember that seventy-five percent (75%) of chronic disease and illnesses can be prevented or delayed through the adoption of simple lifestyle and behavior changes. </p>
+
+<p>Keep these simple foundational principles of health in mind as you continue to engage in your personal health journey: eat appropriate portion sizes of all food groups, include regular amounts of physical activity in your daily routine by exercising at least three times per week or more, do not smoke and maintain a healthy weight.
+	</p>
+	<br />
+	</tpt:elseif>
+	<tpt:else>
+	<p>
+Congratulations on your great health! Continue to maintain your current health habits and lifestyle behaviors. Remember, the foundation of good health is to eat appropriate portion sizes of all food groups, include regular amounts of physical activity in your daily routine by exercising at least three times per week or more, do not smoke and maintain a healthy weight.
+	</p>
+	<br />
+	</tpt:else>
+	<br />
+	<br />
+	<br />
+
+<h2>Behaviors and Lifestyles</h2><br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('gen');">General Health</a></h6><br />
+<div id="gen" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>General/Current Health Status</h6><br />
+	<p>
+	Understanding your current health status is an important first step to learning what kinds of lifestyle and behavior changes you may need to adopt into your daily activities to improve your personal health. The results of the <strong>iFOCUS</strong> health survey will help you identify YOUR personal health risks associated with your current lifestyle and behaviors.  The <strong>iFOCUS</strong> health survey is not meant to take the place of your personal healthcare provider and/or primary care physician, nor can the survey diagnose a medical problem. The <strong>iFOCUS</strong> health survey will improve your personal health awareness and lead you on a personal path to achieving good health.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[current_health_status]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[current_health_status]} </span>
+			<tpt:if id="score[current_health_status]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[current_health_status]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[current_health_status]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: Optimal</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('prev');">Preventive Care</a></h6><br />
+<div id="prev" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Preventive Care</h6><br />
+	<p>
+Preventive care screenings are an essential aspect of maintaining optimal health. Think of a preventive screening like a tune up for your car. To be sure your body is operating to its highest potential, regular check ups with preventive health screenings for your personal age group help you maintain your health and/or identify potential risks. According to your answers to the preventive health questions for your age and gender your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[preventative_health]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[preventative_health]} </span>
+			<tpt:if id="score[preventative_health]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[preventative_health]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[preventative_health]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: All preventive screenings for age and gender category</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('nutr');">Nutrition</a></h6><br />
+<div id="nutr" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Nutrition</h6><br />
+	<p>
+The foods we eat provide our bodies with the nutrients required to function at home, work or play. Proper nutrition promotes good health and provides your body with the energy required at the cellular level. Proper eating habits can reduce your risk of certain conditions such as obesity, heart disease, some forms of cancer, and high blood pressure. Portion size and calories matter! Be sure to incorporate a balanced diet that includes at least 3-400 calories meals per day with at least 2-150 calorie snacks. Hydration is also an important aspect of your diet so be sure to drink at least 8-8 ounce glasses of water per day. According to your answers to the nutrition health questions for your age and gender your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[weight_nutrition]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[weight_nutrition]} </span>
+			<tpt:if id="score[weight_nutrition]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[weight_nutrition]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[weight_nutrition]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: Optimal Nutrition Habits</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('exer');">Physical Activity</a></h6><br />
+<div id="exer" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Physical Activity / Exercise</h6><br />
+	<p>
+	Incorporating physical activity into your daily schedule can help you to prevent and/or delay the onsite of certain chronic disease and illness. Regular physical activity has been shown to prevent obesity, high blood pressure, diabetes and certain forms of cancer. In addition, regular physical activity helps to alleviate stress, reduce symptoms of depression and anxiety. According to your answers to the physical activity health questions for your age and gender your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[physical_activity]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[physical_activity]} </span>
+			<tpt:if id="score[physical_activity]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[physical_activity]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[physical_activity]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: At least 30 minutes per day, three times per week</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('emot');">Stress Management</a></h6><br />
+<div id="emot" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Stress Management</h6><br />
+	<p>
+	Stress is a natural part of our lives and in small amounts is actually healthy for you. However, unmanaged stress can negatively impact our physical health and mental health. Effective stress management is an individual process and may need to be accompanied by direction from your primary healthcare provider. Unmanaged stress can physically impact our health by contributing to high blood pressure, heart disease, digestive problems and depression. According to your answers to the stress management and emotional health questions for your age and gender your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[stress_management]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[stress_management]} </span>
+			<tpt:if id="score[stress_management]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[stress_management]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[stress_management]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: Good Coping Mechanisms</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('self');">Self-Care</a></h6><br />
+<div id="self" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Self-Care / Safety</h6><br />
+	<p>
+	Personal safety and appropriate self-care are an important aspect of personal health accountability. Simple things like using a seat belt while driving, ensuring your home has a smoke detector and the use of a Nurse Line to help you determine the appropriate course of action for minor health issues are all positive and effective ways to actively engage in positive health behaviors. According to your answers to the self-care and safety health questions your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[self_care]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[self_care]} </span>
+			<tpt:if id="score[self_care]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[self_care]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[self_care]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Optimal</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: Optimal</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6>Emotional Health</h6><br />
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('smoke');">Tobacco Use</a></h6><br />
+<div id="smoke" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Tobacco Use</h6><br />
+	<p>
+	Nicotine found in tobacco products is a powerful drug. It has the ability to cause nicotine dependency and can lead to physical symptoms of irritability, headaches, anxiety, sleep depravation and memory problems. In addition, smoking has been linked to many forms of cancer such as breast, lung and mouth. Medical problems such as heart disease, high blood pressure and emphysema are a direct result of tobacco use. According to your answers to the tobacco use questions your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[tobaco_use]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[tobaco_use]} </span>
+			<tpt:if id="score[tobaco_use]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[tobaco_use]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[tobaco_use]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>No Tobacco Use</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: No Tobacco Use</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6>Alcohol/Drug Use</h6><br />
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('chng');">Readiness to Change</a></h6><br />
+<div id="chng" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Readiness to Change</h6><br />
+	<p>
+	Understanding your &amp;quot;readiness to change&amp;quot; is one of the most important scores within the <strong>iFOCUS</strong> survey tool. Adopting and making certain lifestyles and behavior changes is not always easy for everyone. Each person has an individual &amp;quot;readiness&amp;quot; as to when the change process will be initiated. The readiness to change questions assists you in identifying your ability to actively engage in change. You may use your results as an indicator of your motivation. If you happen to score low for readiness, use this as an opportunity to figure what barriers you think are preventing you from making a change. Knowledge is power; knowing where you are in your readiness is important to understand so that you can progress through the stages of change and place yourself in the &amp;quot;action&amp;quot; phase of readiness. According to your answers to the self-care and safety health questions your score is:
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[readiness_to_change]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${score[readiness_to_change]} </span>
+			<tpt:if id="score[readiness_to_change]" test="LT" value="50">
+			<span>High</span>
+			</tpt:if>
+			<tpt:elseif id="score[readiness_to_change]" test="LT" value="75">
+			<span>Moderate</span>
+			</tpt:elseif>
+			<tpt:elseif id="score[readiness_to_change]" test="LT" value="85">
+			<span>Low</span>
+			</tpt:elseif>
+			<tpt:else>
+			<span>Action</span>
+			</tpt:else>
+			<br />
+			<span>Optimal Range: Action</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+<br />
+<br />
+<br />
+
+
+<h2>Preventive Screenings</h2><br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('chol');">Cholesterol</a></h6><br />
+<div id="chol" style="display:none;">
+
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Total Cholesterol</h6><br />
+	<p>
+	Cholesterol is an essential fatty substance produced by the body used to create bile, hormones and fat soluble vitamins. Cholesterol is found in foods that come from animals such as meats, fish, poultry, eggs and dairy. High levels of circulating cholesterol may form deposits in artery walls leading to narrowing and hardening of the arteries and heart disease. Cholesterol does not dissolve in water and is combined with lipoproteins to assist in its transportation in the blood. Low-density lipoproteins (LDL), high-density lipoproteins (HDL), triglycerides, and other cholesterol levels such as VLDLS are all included in the total cholesterol value.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[total_cholesterol]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[cholesterol][3]} mg/dl  </span>
+			<br />
+			<span>Optimal Range: &amp;lt; 200 mg/dl</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<br />
+<br />
+
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Triglycerices</h6><br />
+	<p>
+	Triglycerides are composed of fatty acids and glycerol. Like cholesterol, it circulates in your blood, but is stored in body fat and is used when the body requires extra energy. Triglyceride levels are very sensitive and can be affected by food consumption before a screening. Optimally, triglyceride levels should be performed on a fasting individual.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[triglycerides]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[triglycerides][3]} mg/dl  </span>
+			<br />
+			<span>Optimal Range: &amp;lt; 150 mg/dl</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<br />
+<br />
+
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Low Density Lipoprotein (LDL) Cholesterol</h6><br />
+	<p>
+	LDL cholesterol is nicknamed the &amp;quot;bad&amp;quot; cholesterol because in excess levels it can build plaque deposits on your arterial wall; a condition known as arteriolosclerosis. Low levels of LDL cholesterol are optimal.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[ldl]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[ldl][3]} mg/dl  </span>
+			<br />
+			<span>Optimal Range: &amp;lt; 100 mg/dl</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<br />
+<br />
+
+
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>High-Density Lipoprotein (HDL) Cholesterol</h6><br />
+	<p>
+	HDL cholesterol is nicknamed &amp;quot;good&amp;quot; cholesterol because it removes excess cholesterol from the body and transports it to the liver where it is eliminated from the body. This, in turn, prevents LDL cholesterol accumulation in the arterial walls and can reduce the risk for heart disease. Higher levels of HDL cholesterol are optimal.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[hdl]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[hdl][3]} mg/dl  </span>
+			<br />
+			<span>Optimal Range: &amp;gt; 50 mg/dl (female) |  40 mg/dl (male)</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+
+<br />
+<br />
+
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Total Cholesterol/ HDL Cholesterol Ratio</h6><br />
+	<p>
+	A ratio of total cholesterol divided by HDL cholesterol greater than 4.0 can indicate an increased risk of developing heart disease. A high ratio suggests there is a large amount of LDL cholesterol circulating in the blood that can stick to arterial walls and not enough HDL cholesterol to eliminate the excess.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[hdl_ratio]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[tc_hdl][3]}   </span>
+			<br />
+			<span>Optimal Range: &amp;lt; 4.0</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('bp');">Blood Pressure</a></h6><br />
+<div id="bp" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Blood Pressure</h6><br />
+	<p>
+	Blood Pressure is the pressure of the blood against the walls of the arteries. The top number, systolic pressure, the pressure in the arteries as the heart contracts to pump blood to the body. The bottom number, diastolic pressure, measures the pressure in the arterial walls between heart beats. High blood pressure makes your heart work harder than normal. Both the heart and arteries are then more prone to injury. High blood pressure increases the risk of heart attacks, strokes, and/or kidney failure.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[blood_pressure]}" />
+		<div class="left">
+			<br />
+			<span>Your score:${total[biometric_data][0].data[bp_systolic][3]} / ${total[biometric_data][0].data[bp_diastolic][3]}   </span>
+			<br />
+			<span>Optimal Range: Systolic:  &amp;lt; 120 mm Hg | Diastolic:  &amp;lt; 80 mm Hg</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('bmi');">Body Mass Index</a></h6><br />
+<div id="bmi" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Body Mass Index (BMI)</h6><br />
+	<p>
+	Body Mass Index uses a mathematical formula that takes into account both a person&amp;acute;s height and weight. BMI is a person&amp;acute;s weight in kilograms divided by height in meters squared (BMI=kg/m2). BMI correlates with, but does not equal body fat. The relation between body shape and BMI changes with age and gender. BMI is one of many factors related to developing a chronic disease (such as heart disease, cancer or diabetes). Other factors that may be important to consider when assessing your risk for chronic disease include diet, physical activity, waist circumference, blood pressure, blood sugar level, cholesterol level, and family history of disease.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[bmi]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[bmi][3]}  </span>
+			<br />
+			<span>Optimal Range: 18.5 - 24.9</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('waist');">Waist Circumference</a></h6><br />
+<div id="waist" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Waist Circumference</h6><br />
+	<p>
+	Waist Circumference and Body Mass Index (BMI) are interrelated; however waist circumference can provide an independent prediction of risk in addition to BMI. Body fat that accumulates around the stomach area poses a greater health risk than fat stored in the lower half of the body.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[waist]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[waist][3]} inches </span>
+			<br />
+			<span>Optimal Range: &amp;lt; 35 inches (female) | &amp;lt; 40 inches (male)</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<!--
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Hemoglobin A1C</h6><br />
+	<p>
+	Hemoglobin A1C is a test that measures the amount of glycated hemoglobin in your blood. Glycated hemoglobin is a substance in red blood cells that is formed when blood sugar (glucose) attaches to hemoglobin. Hemoglobin A1C provides an average value of blood glucose (&amp;quot;sugar&amp;quot;) control over a 3-month period and may be used in conjunction with home glucose monitoring as part of a diabetic management program. It may also be used to detect pre-diabetes when used as a stand alone screening.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/chips.png" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[hemoglobin][3]}% </span>
+			<br />
+			<span>Optimal Range: Non-diabetic: 4.0 - 5.7%</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+-->
+
+<h6><a href="javascript:void(0);" onclick="toggleDisplay('glucose');">Blood Glucose</a></h6><br />
+<div id="glucose" style="display:none;">
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Blood Glucose</h6><br />
+	<p>
+	Glucose circulates in our blood stream and signals the pancreas to secrete insulin. Insulin is the body's "key" to release glucose. Glucose that enters into our cells is used by your body to create energy. Sometimes, certain conditions, such as excess body fat inhibit insulin ability to absorb glucose, thus leaving excess amounts of glucose in the bloodstream. This test measures the concentration of glucose in your blood.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/${SLimage[blood_glucose]}" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[blood_glucose][3]} mg/dl  (${biometric[glucose_test]})</span>
+			<br />
+			<span>Optimal Range: Non-Fasting Less than 130 mg/dl<br />
+	&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Fasting Less than 100 mg/dl</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+</div>
+<br />
+
+<!--
+<div class="ifocusResultBox">
+	<div style="margin: 15px;">
+	<h6>Nicotine (Cotinine)</h6><br />
+	<p>
+	Nicotine is one of the most heavily used addictive substances in the United States. Individuals who use tobacco and tobacco products increase their risk of certain chronic conditions such as lung cancer and mouth cancer as well as emphysema and other bronchial disorders. In addition, second hand smoke causes lung cancer in adults and greatly increases the risk of respiratory illnesses in children.
+	</p>
+	<p>
+	Both tobacco use and exposure to tobacco smoke can increase nicotine and its primary metabolite, cotinine, concentrations in the blood. Levels also rise with nicotine replacement products such as nicotine patches and gums. In large amounts, nicotine can be poisonous. The presence of nicotine and/or cotinine in an individual sample may indicate the use of tobacco products and/or exposure to environmental smoke.
+	</p>
+	
+	<img class="left ifocusStop" src="/assets/media/images/ifocus/chips.png" />
+		<div class="left">
+			<br />
+			<span>Your score: ${total[biometric_data][0].data[blood_glucose][3]} mg/dl</span>
+			<br />
+			<span>Optimal Range: Negative</span>
+			<br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+</div>
+<br />
+<br />
+-->
+<br />
+<br />
+<br />
+
+<h2><i>my</i>FOCUS Personal Health Improvement Plan</h2>
+
+
+<p>
+There are many factors that contribute to your overall personal health screening results, good health and personal health risks. Based on your <strong><i>my</i>FOCUS</strong> score, your top 3 areas you need to improve or maintain for your health right now are:
+</p>
+<p>
+Please be sure to go back to the home page of the online health and wellness portal and enroll in the following <strong><i>my</i>FOCUS</strong> wellness modules:
+</p>
+<tpt:foreach id="modules" as="mod">
+	<div class="button-content">
+		<div class="stack click">
+			<img class="left" src="/assets/media/images${mod[img]}" alt="${mod[alt]}" />
+			<div class="intro">
+				<a href="${mod[link]}" alt="${mod[alt]}" class="fs16 no-pointer">${mod[alt]}</a>
+				<p>${mod[text]}</p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	</div>
+</tpt:foreach>
+<br />
+<br />
+<br />
+<br />
+
+<h2><a href="javascript:showWin('/IFocus/info/resources', '600px', '400px')">Show National Health Promotion Resources</a></h2><br /><br />
+<br />
+
+<h2><a href="javascript:showWin('/IFocus/info/guidlines', '830px', '700px')">Show <i>my</i>FOCUS Preventive Health Guidelines</a></h2><br />
+<br />
+
+
+
+
+
+<!-- [CDATA[
+Overall risk (out of 100): ${total[total]}<br/><br/>
+<table>
+<tpt:foreach id="risks" as="risk">
+    <tr><td>${risk.__key__}</td><td>
+	<tpt:switch id="risk">
+		<tpt:case value="1">Low Risk</tpt:case>
+		<tpt:case value="2">Moderate Risk</tpt:case>
+		<tpt:case value="3">High Risk</tpt:case>
+	</tpt:switch></td></tr>
+</tpt:foreach>
+</table>
+<br /><br />
+<table>
+<tr><th>Category</th><th>Raw</th><th>Relative</th><th>Adjusted</th></tr>
+<tr><td>Current Health</td>   <td>${total[current_health_status][0].total}</td>	<td>${total[current_health_status][1]}</td> <td>${total[current_health_status][2]}</td></tr>
+<tpt:if id="is_gina" test="neq" value="true">
+<tr><td>Family Health</td>	  <td>${total[family_health][0].total}</td>		   	<td>${total[family_health][1]}</td>		  	<td>${total[family_health][2]}</td></tr>
+</tpt:if>
+<tr><td>Preventive Health</td><td>${total[preventative_health][0].total}</td>	<td>${total[preventative_health][1]}</td>	<td>${total[preventative_health][2]}</td></tr>
+<tr><td>WM/Nutrition*</td>	  <td>${total[weight_nutrition][0].total}</td>		<td>${total[weight_nutrition][1]}</td>	  	<td>${total[weight_nutrition][2]}</td></tr>
+<tr><td>Physical Act*</td>	  <td>${total[physical_activity][0].total}</td>		<td>${total[physical_activity][1]}</td>	  	<td>${total[physical_activity][2]}</td></tr>
+<tr><td>Stress</td>			  <td>${total[stress_management][0].total}</td>		<td>${total[stress_management][1]}</td>	  	<td>${total[stress_management][2]}</td></tr>
+<tr><td>Productivity</td>	  <td>${total[productivity][0].total}</td>			<td>${total[productivity][1]}</td>		  	<td>${total[productivity][2]}</td></tr>
+<tr><td>Mental Health</td>	  <td>${total[mental_health][0].total}</td>			<td>${total[mental_health][1]}</td>		  	<td>${total[mental_health][2]}</td></tr>
+<tr><td>Self-Care</td>		  <td>${total[self_care][0].total}</td>				<td>${total[self_care][1]}</td>			  	<td>${total[self_care][2]}</td></tr>
+<tr><td>Tobacco*</td>		  <td>${total[tobaco_use][0].total}</td>			<td>${total[tobaco_use][1]}</td>			<td>${total[tobaco_use][2]}</td></tr>
+<tr><td>Change</td>			  <td>${total[readiness_to_change][0].total}</td>	<td>${total[readiness_to_change][1]}</td>	<td>${total[readiness_to_change][2]}</td></tr>
+<tr><td>Biometrics</td>		  <td>${total[biometric_data][0].total}</td>		<td>${total[biometric_data][1]}</td>		<td>${total[biometric_data][2]}</td></tr>
+</table>
+Total Adjusted Score (out of 100): ${total[total]}<br/><br/>
+
+  
+ <tpt:foreach id="total" as="topic">
+   <tpt:if id="topic" test="HASELEMENTS">
+   		<b>${topic.__key__}</b><br/>
+   		<table>
+ 			<tr><th>Field</th><th>Raw</th><th>Relative</th><th>Total</th></tr>   			   	
+   			<tpt:foreach id="topic[0].data" as="entry">
+   				<tr><td>${entry.__key__}</td><td>${entry[0]}</td><td>${entry[1]}</td><td>${entry[2]}</td></tr>
+   			</tpt:foreach>
+   			<tr><td>total</td><td colspan='2'> </td><td>${topic[0].total}</td></tr>
+   		</table>
+   		<br/>
+   </tpt:if>
+ </tpt:foreach>
+ <hr/>
+ My Risk Assessment Report<br/>
+     
+ General Health <a href="#" onclick="toggle(this,'generalhealth')">${status}</a>
+ <a name="generalhealth"></a>
+ <div id="d_generalhealth" class="${status}">
+ </div>
+
+ Preventive Health <a href="#" onclick="toggle(this,'preventivehealth')">${status}</a>
+ <a name="preventivehealth"></a>
+ <div id="d_preventivehealth" class="${status}">
+ </div>
+ 
+ Nutrition <a href="#" onclick="toggle(this,'nutrition')">${status}</a>
+ <a name="nutrition"></a>
+ <div id="d_nutrition" class="${status}">
+ </div>
+
+ Physical Activity/Exercise <a href="#" onclick="toggle(this,'pae')">${status}</a>
+ <a name="pae"></a>
+ <div id="d_pae" class="${status}">
+ </div>
+ 
+ Emotional Health <a href="#" onclick="toggle(this,'emotionalhealth')">${status}</a>
+ <a name="emotionalhealth"></a>
+ <div id="d_emotionalhealth" class="${status}">
+ </div>
+ 
+Drug &amp; Alcohol <a href="#" onclick="toggle(this,'drugalcohol')">${status}</a>
+ <a name="drugalcohol"></a>
+ <div id="d_drugalcohol" class="${status}">
+ </div>
+ 
+ Safety <a href="#" onclick="toggle(this,'safety')">${status}</a>
+ <a name="safety"></a>
+ <div id="d_safety" class="${status}">
+ </div>
+
+ Tobacco <a href="#" onclick="toggle(this,'tobacco')">${status}</a>
+ <a name="tobacco"></a>
+ <div id="d_tobacco" class="${status}">
+ </div>
+ 
+ BMI <a href="#" onclick="toggle(this,'BMI')">${status}</a>
+ <a name="BMI"></a>
+ <div id="d_BMI" class="${status}">
+ </div>
+ 
+ Blood Pressure  <a href="#" onclick="toggle(this,'BloodPressure')">${status}</a>
+ <a name="BloodPressure"></a>
+ <div id="d_BloodPressure" class="${status}">
+ </div>
+ 
+  Cholesterol  <a href="#" onclick="toggle(this,'Cholesterol')">${status}</a>
+ <a name="Cholesterol"></a>
+ <div id="d_Cholesterol" class="${status}">
+ </div>
+ 
+ Blood Glucose  <a href="#" onclick="toggle(this,'BloodGlucose')">${status}</a>
+ <a name="BloodGlucose"></a>
+ <div id="d_BloodGlucose" class="${status}">
+ </div>
+
+]] -->
+
+</div>
+
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>

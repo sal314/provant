@@ -1,0 +1,53 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Health Library<br /><small>Reference and search thousands of articles, movies, and images</small></h1>
+	</div>
+	<div id="health-library">
+	<div class="health-search">
+		<form method="get" action="/HealthLibrary/search">
+			<a href="#" class="nextstep submit right">Submit</a>
+			<input type="text" name="query" value="${GET[query]}"/>
+			
+			<div class="clear"> </div>
+		</form>
+	</div>
+	<br />
+	<tpt:if id="results" test="EQ" value="true">
+		<tpt:if id="pager[last_page]" test="NE" value="0">
+			<div id="search-next-previous">
+				Page ${pager[current_page]} of ${pager[last_page]}
+				<tpt:if id="pager[first_page]" test="EXISTS">
+					<a href="/HealthLibrary/search?query=${GET[query]}&amp;page=1">
+						<img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" />
+					</a>
+				</tpt:if>
+				<tpt:if id="pager[previous_page]" test="EXISTS">
+					<a href="/HealthLibrary/search?query=${GET[query]}&amp;page=${pager[previous_page]}">
+						<img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" />
+					</a>
+				</tpt:if>
+				<tpt:foreach id="pager" as="page">
+					<tpt:if id="page.__key__" test="STARTSWITH" value="page">
+						<a href="/HealthLibrary/search?query=${GET[query]}&amp;page=${page}">${page}</a>
+					</tpt:if>
+				</tpt:foreach>
+				<tpt:if id="pager[next_page]" test="EXISTS">
+					<a href="/HealthLibrary/search?query=${GET[query]}&amp;page=${pager[next_page]}">
+						<img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" />
+					</a>
+				</tpt:if>
+				<tpt:if id="pager[last_page]" test="EXISTS">
+					<a href="/HealthLibrary/search?query=${GET[query]}&amp;page=${pager[last_page]}">
+						<img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" />
+					</a>
+				</tpt:if>
+				<div class="clear"> </div>
+				</div>
+			</tpt:if>  
+		</tpt:if>
+
+		${html}
+	</div>
+</div>
+</tpt:body>

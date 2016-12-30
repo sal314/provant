@@ -1,0 +1,219 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		<style>
+			.nutrition{margin:0 auto}
+		</style>
+	</head>
+	<body>
+		<br />
+
+		<h3 class="txt-ctr" style="margin-top:0; margin-bottom:5px">${foodName}</h3>
+		<h5 class="txt-ctr" style="margin-top:0">Daily Nutrition Information</h5>
+		<table class="nutrition">
+			<thead>
+				<tr>
+					<th colspan="2"><img alt="Nutrition Facts" src="/assets/media/images/loseit/nutrition.jpg" /></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2" class="thick">
+						<strong>Serving Size:</strong><br />
+						Amount: ${amount}, Unit: ${unit}
+					</td>
+				</tr>
+				<tr>
+					<td align="left">${data[1]}</td>
+					<tpt:if id="data[109]" test="EXISTS">
+						<td align="right">${data[109]}</td>
+					</tpt:if>
+					<tpt:else>
+						<td> </td>
+					</tpt:else>
+				</tr>
+				<tr>
+					<td align="right" colspan="2">% Daily Need*</td>
+				</tr>
+				<tpt:if id="data[4]" test="EXISTS">
+				<tr>
+					<td align="left">${data[4]}</td>
+					<td align="right">${percent[4]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[2]" test="EXISTS">
+				<tr>
+					<td align="left">${data[2]}</td>
+					<td align="right">${percent[2]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[3]" test="EXISTS">
+				<tr>
+					<td align="left">${data[3]}</td>
+					<td align="right">${percent[3]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[7]" test="EXISTS">
+				<tr>
+					<td align="left">${data[7]}</td>
+					<td align="right">${percent[7]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[78]" test="EXISTS">
+				<tr>
+					<td align="left">${data[78]}</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[74]" test="EXISTS">
+				<tr>
+					<td align="left">${data[74]}</td>
+					<td align="right">${percent[74]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[34]" test="EXISTS">
+				<tr>
+					<td align="left">${data[34]}</td>
+					<td align="right">${percent[34]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[6]" test="EXISTS">
+				<tr>
+					<td align="left">${data[6]}</td>
+					<td align="right">-</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[47]" test="EXISTS">
+				<tr>
+					<td align="left">${data[47]}</td>
+					<td align="right">${percent[47]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[46]" test="EXISTS">
+				<tr>
+					<td align="left">${data[46]}</td>
+					<td align="right">${percent[46]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[38]" test="EXISTS">
+				<tr>
+					<td align="left">${data[38]}</td>
+					<td align="right">${percent[38]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[45]" test="EXISTS">
+				<tr>
+					<td align="left">${data[45]}</td>
+					<td align="right">${percent[45]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[49]" test="EXISTS">
+				<tr>
+					<td align="left">${data[49]}</td>
+					<td align="right">${percent[49]}%</td>
+				</tr>
+				</tpt:if>
+				<tr>
+					<td align="center" colspan="2">
+					<br />
+					Provant data sources do not currently  provide complete nutritional information about this food so some items below may be appear as zeroes. We are actively working to improve this information.
+					<br />
+					</td>
+				</tr>
+				<tpt:if id="data[35]" test="EXISTS">
+				<tr>
+					<td align="left">${data[35]}</td>
+					<td align="right">${percent[35]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[65]" test="EXISTS">
+				<tr>
+					<td align="left">${data[65]}</td>
+					<td align="right">${percent[65]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[63]" test="EXISTS">
+				<tr>
+					<td align="left">${data[63]}</td>
+					<td align="right">${percent[63]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[66]" test="EXISTS">
+				<tr>
+					<td align="left">${data[66]}</td>
+					<td align="right">${percent[66]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[67]" test="EXISTS">
+				<tr>
+					<td align="left">${data[67]}</td>
+					<td align="right">${percent[67]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[68]" test="EXISTS">
+				<tr>
+					<td align="left">${data[68]}</td>
+					<td align="right">${percent[68]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[57]" test="EXISTS">
+				<tr>
+					<td align="left">${data[57]}</td>
+					<td align="right">${percent[57]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[59]" test="EXISTS">
+				<tr>
+					<td align="left">${data[59]}</td>
+					<td align="right">${percent[59]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[62]" test="EXISTS">
+				<tr>
+					<td align="left">${data[62]}</td>
+					<td align="right">${percent[62]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[51]" test="EXISTS">
+				<tr>
+					<td align="left">${data[51]}</td>
+					<td align="right">${percent[51]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[55]" test="EXISTS">
+				<tr>
+					<td align="left">${data[55]}</td>
+					<td align="right">${percent[55]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[54]" test="EXISTS">
+				<tr>
+					<td align="left">${data[54]}</td>
+					<td align="right">${percent[54]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[53]" test="EXISTS">
+				<tr>
+					<td align="left">${data[53]}</td>
+					<td align="right">${percent[53]}%</td>
+				</tr>
+				</tpt:if>
+				<tpt:if id="data[58]" test="EXISTS">
+				<tr>
+					<td align="left">${data[58]}</td>
+					<td align="right">${percent[58]}%</td>
+				</tr>
+				</tpt:if>
+				<tr>
+					<td align="center" colspan="2">
+					* Percent daily need is based on data entered in your Member Profile. Your daily values may be higher or lower depending on your nutritional and fitness goals.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</body>
+	</html>
+</tpt:body>

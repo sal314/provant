@@ -1,0 +1,197 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+
+function selectOther() {
+	var rad = document.getElementById('ot_language');
+	if (rad.checked) {
+		var sel = document.getElementById('select_other');
+		sel.style.display = "block";
+	}
+	else {
+		var sel = document.getElementById('select_other');
+		sel.style.display = "none";
+	}
+}
+
+</script>
+
+<div class="inner-content health">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Demographics<br /><small>Health Assessment</small></h1>
+	</div>
+	
+		<tpt:if id="errors" test="EXISTS">
+			The following error's must be fixed.
+			<ul>
+			<tpt:foreach id="errors" as="error">
+				<li><tpt:switch id="error.name">
+				<tpt:case value="race">You must specify your Ethnicity</tpt:case>
+				<tpt:case value="marital_status">You must supply your marital status</tpt:case>
+				<tpt:case value="education">You must supply you highest level of Education</tpt:case>
+				<tpt:case value="language">You must supply choose a language</tpt:case>
+				<tpt:default>${error.name} : ${error.message}</tpt:default>
+				</tpt:switch></li>
+			</tpt:foreach>
+			</ul>
+		</tpt:if>
+		<tpt:if id="saved" test="EQ" value="TRUE">
+		   Saved!
+		</tpt:if>
+		<form method="post" action="/iFocus/Update/${category}">
+
+		<div class="w-25p right">
+			<div class="stack last">
+				<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+			</div>
+		</div>
+		
+		<div class="w-75p left">
+		
+			<div class="inline-field stack">
+				<label>Name:</label>${answers[first_name]} ${answers[last_name]}
+			</div>
+			<div class="inline-field stack">
+				<label>Gender:</label>${answers[gender]}
+			</div>
+			<div class="inline-field stack">
+				<label>Date of Birth:</label>${answers[dob_disp]}
+			</div>
+			<div class="inline-field stack">
+				<label>Age:</label>${answers[age]}
+			</div>
+
+			<tpt:setvar id="QNo" value="${first_question}" />
+			<div class="stack health-question">
+				<div class="question">${QNo}. Do you have a vision impairment that requires special reading materials?</div>
+				<table class="generic">
+					<thead>  
+						<tr>
+							<th>Yes</th>
+							<th>No</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><label><tpt:html type="radio" id="vision" value="Y" selected="${answers[vision]}"/></label></td>
+							<td><label><tpt:html type="radio" id="vision" value="N" selected="${answers[vision]}" default="true"/></label></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<tpt:modvar id="QNo" op="++" />
+			<div class="health-question stack">
+				<div class="question">${QNo}. Do you have a hearing impairment that requires special hearing equipment?</div>
+					<table class="generic">
+					<thead>  
+						<tr>
+							<th>Yes</th>
+							<th>No</th>
+							<th>Not Sure</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><label><tpt:html type="radio" id="hearing" value="Y" selected="${answers[hearing]}"/></label></td>
+							<td><label><tpt:html type="radio" id="hearing" value="N" selected="${answers[hearing]}" default="true"/></label></td>
+							<td><label><tpt:html type="radio" id="hearing" value="U" selected="${answers[hearing]}"/></label></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<tpt:modvar id="QNo" op="++" />
+			<div class="health-question stack last">
+				<div class="question">${QNo}. Primary Language</div>
+				<table class="generic">
+				<thead>
+					<tr>
+						<th>English</th>
+						<th>Spanish</th>
+						<th>Other; specify</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tpt:if id="answers[language]" test="EQ" value="English">
+						<td><label><input type="radio" name="language" id="en_language" value="English" onclick="selectOther();" checked="true" /></label></td>
+						<td><label><input type="radio" name="language" id="sp_language" value="Spanish" onclick="selectOther();" /></label></td>
+						<td><label><input type="radio" name="language" id="ot_language" value="Other" onclick="selectOther();" /></label></td>
+						<tpt:setvar id="disp" value="none" />
+						</tpt:if>
+						<tpt:elseif id="answers[language]" test="EQ" value="Spanish">
+						<td><label><input type="radio" name="language" id="en_language" value="English" onclick="selectOther();" /></label></td>
+						<td><label><input type="radio" name="language" id="sp_language" value="Spanish" onclick="selectOther();" checked="true"/></label></td>
+						<td><label><input type="radio" name="language" id="ot_language" value="Other" onclick="selectOther();" /></label></td>
+						<tpt:setvar id="disp" value="none" />
+						</tpt:elseif>
+						<tpt:elseif id="answers[language]" test="EQ" value="Other">
+						<td><label><input type="radio" name="language" id="en_language" value="English" onclick="selectOther();" /></label></td>
+						<td><label><input type="radio" name="language" id="sp_language" value="Spanish" onclick="selectOther();" /></label></td>
+						<td><label><input type="radio" name="language" id="ot_language" value="Other" onclick="selectOther();" checked="true" /></label></td>
+						<tpt:setvar id="disp" value="block" />
+						</tpt:elseif>
+						<tpt:else>
+						<td><label><input type="radio" name="language" id="en_language" value="English" onclick="selectOther();" /></label></td>
+						<td><label><input type="radio" name="language" id="sp_language" value="Spanish" onclick="selectOther();" checked="true"/></label></td>
+						<td><label><input type="radio" name="language" id="ot_language" value="Other" onclick="selectOther();" /></label></td>
+						<tpt:setvar id="disp" value="none" />
+						</tpt:else>
+						<td id="select_other" style="display:${disp};">
+							<label>
+								<select id="other" name="other">
+									<tpt:html type="select-options" data="${other_lang}" selected="${answers[other]}"/>
+								</select>
+							</label>
+						</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div class="clear"> </div>
+		
+		<div class="progressbar">
+			<div class="percent">
+				<div id="progresstext">
+					<span> </span>
+				</div>
+			</div>
+		</div>
+
+		<tpt:if id="next_last[0]" test="NOTEMPTY">
+			<div id="back-button">
+				<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+			</div>
+		</tpt:if>
+		  
+		<tpt:if id="is_completed" test="EQ" value="true">
+			<tpt:if id="next_last[1]" test="NOTNULL">
+				<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+			</tpt:if>
+		</tpt:if>
+		<tpt:else>
+			<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+		</tpt:else>
+	</form>
+	
+
+	
+	
+	
+	
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

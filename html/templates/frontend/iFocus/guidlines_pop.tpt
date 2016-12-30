@@ -1,0 +1,155 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+<h2><i>my</i>FOCUS Preventive Health Guidelines</h2><br />
+<br />
+<table cellpadding="2" cellspacing="0" style="border:solid 1px #000;">
+	<thead>
+		<tr>
+			<th style="border:solid 1px #000; width:140px;">Adult Years of Age</th>
+			<th style="border:solid 1px #000; width:50px;">18</th>
+			<th style="border:solid 1px #000; width:50px;">25</th>
+			<th style="border:solid 1px #000; width:50px;">30</th>
+			<th style="border:solid 1px #000; width:50px;">35</th>
+			<th style="border:solid 1px #000; width:50px;">40</th>
+			<th style="border:solid 1px #000; width:50px;">45</th>
+			<th style="border:solid 1px #000; width:50px;">50</th>
+			<th style="border:solid 1px #000; width:50px;">55</th>
+			<th style="border:solid 1px #000; width:50px;">60</th>
+			<th style="border:solid 1px #000; width:50px;">65</th>
+			<th style="border:solid 1px #000; width:50px;">70</th>
+			<th style="border:solid 1px #000; width:50px;">75</th>
+		</tr>
+	</thead>
+	<tbody style="border:solid 1px #000;">
+		<tr>
+			<td colspan="13" style="border:solid 1px #000;"><strong>U. S. Preventive Screening Task Force Recommended Screenings</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Blood Pressure,<br />Height, and Weight</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">At each preventive visit</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Obesity</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Regularly at each visit</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Cholesterol Men</td>
+			<td colspan="3" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="9" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Every 5 years</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Cholesterol Women</td>
+			<td colspan="4" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="8" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Every 5 years</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Cervical cancer<br />screening</td>
+			<td colspan="10" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Annually beginning at age 18 or age of sexual activity, and<br />every three years after three consecutive normal tests</td>
+			<td colspan="2" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Chlamydia/<br />Gonorrhea</td>
+			<td colspan="2" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Sexually active<br />women</td>
+			<td colspan="10" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Mammography Women</td>
+			<td colspan="4" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="8" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Every one to two years</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Colorectal Cancer</td>
+			<td colspan="6" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="6" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Men and Women</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Osteoporosis</td>
+			<td colspan="8" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="4" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Beginning at age 65 or 60<br />for at risk</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Alcohol Use, Depression</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">As Indicated</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Vision, Hearing</td>
+			<td colspan="8" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="4" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">As Indicated</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<br />
+<table cellpadding="2" cellspacing="0" style="border:solid 1px #000;">
+	<thead>
+		<tr>
+			<th style="border:solid 1px #000; width:140px;">Adult Years of Age</th>
+			<th style="border:solid 1px #000; width:50px;">18</th>
+			<th style="border:solid 1px #000; width:50px;">25</th>
+			<th style="border:solid 1px #000; width:50px;">30</th>
+			<th style="border:solid 1px #000; width:50px;">35</th>
+			<th style="border:solid 1px #000; width:50px;">40</th>
+			<th style="border:solid 1px #000; width:50px;">45</th>
+			<th style="border:solid 1px #000; width:50px;">50</th>
+			<th style="border:solid 1px #000; width:50px;">55</th>
+			<th style="border:solid 1px #000; width:50px;">60</th>
+			<th style="border:solid 1px #000; width:50px;">65</th>
+			<th style="border:solid 1px #000; width:50px;">70</th>
+			<th style="border:solid 1px #000; width:50px;">75</th>
+		</tr>
+	</thead>
+	<tbody style="border:solid 1px #000;">
+		<tr>
+			<td colspan="13" style="border:solid 1px #000;"><strong>Adult Immunization</strong></td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Tetanus-Diphtheria<br />(Td/Tdap)</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Every 10 years</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Varicella (VZV)</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Susceptible only-two doses</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Measles, Mumps,<br />Rubella (MMR)</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Persons not already immune</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Pneumococcal</td>
+			<td colspan="9" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+			<td colspan="3" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">One dose</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Influenza</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Yearly</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Hepatitis B/Hepatitis A</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">Persons at risk</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Meningococcal</td>
+			<td colspan="12" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">For certain high-risk groups*</td>
+		</tr>
+		<tr>
+			<td style="background-color:#fff; border:solid 1px #000;">Human<br />Papillomavirus (HPV)</td>
+			<td colspan="2" style="background-color:#053863; color:#fff; border:solid 1px #000;" align="center">One dose</td>
+			<td colspan="10" style="border:solid 1px #000; background-color:#fff;">&amp;nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+Always follow the advice of your primary care physician as screenings should be individualized.<br />
+For more information about adult preventive screening guidelines visit:<br />
+<a href="javascript:void(0);" onclick="window.open('http://www.ahrq.gov/clinic/uspstfix.htm', '_blank');">http://www.ahrq.gov/clinic/uspstfix.htm</a>
+<br />
+<br />
+</body>
+</html>
+</tpt:body>

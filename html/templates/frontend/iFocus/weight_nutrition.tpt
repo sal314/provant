@@ -1,0 +1,190 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Nutrition<br /><small>Health Assessment</small></h1>
+	</div>
+	<tpt:if id="errors" test="EXISTS">
+		<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>${error.name} : ${error.message}</li>
+		</tpt:foreach>
+		</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	   Saved!
+	</tpt:if>
+	<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+		<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq21">${QNo}. Do you eat breakfast daily?</span>
+			</div>													
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Yes</th>
+						<th>No</th>
+						<th>Sometimes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<tpt:html type="radio-group" wrap="td" id="q21" value="1,2,3" selected="${answers[q21]}"/>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq22">${QNo}. How often do you snack on foods such as chips, pastry, cookies, candy, etc?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Often</th>
+						<th>Sometimes</th>
+						<th>Seldom</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="q22" value="1,2,3" selected="${answers[q22]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				${QNo}. How many servings do you eat from the following food groups?
+			</div>
+			<table class="datagrid interactive history">
+				<thead> 
+					<tr>
+						<th></th>
+						<th>None</th>
+						<th>1-4 per week</th>
+						<th>5-7 per week</th>
+						<th>2 per day</th>
+						<th>3+ per day</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="question" id="qq23_1"><strong>Fruit</strong><br />(One serving = 1 cup fresh, 1/2 cup cooked,<br />1 medium sized fruit, or 3/4 cup juice)</td>
+						<tpt:html type="radio-group" wrap="td" id="q23_1" value="1,2,3,4,5" selected="${answers[q23_1]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_2"><strong>Vegetables</strong><br />(One serving = 1 cup raw, 1/2 cup cooked,<br />or 1/2 cup vegetable juice)</td>
+						<tpt:html type="radio-group" wrap="td" id="q23_2" value="1,2,3,4,5" selected="${answers[q23_2]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_3"><strong>Protein</strong><br />(One serving = 1 oz cooked poultry, fish,<br />pork or beef, 1 oz of low-fat cheese, 1/4<br />cup cottage cheese, 1 egg, 1 TBSP<br />Peanut Butter, 1/2 cup beans, 4 oz tofu)<br />* A serving size of lean meat is 1 oz<br />however a typical meal is 3-4 oz</td>
+						<tpt:html type="radio-group" wrap="td" id="q23_3" value="1,2,3,4,5" selected="${answers[q23_3]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_4"><strong>Dairy</strong><br />(One serving = 1 cup or 8 oz milk or<br />6 oz of plain yogurt)</td>
+						<tpt:html type="radio-group" wrap="td" id="q23_4" value="1,2,3,4,5" selected="${answers[q23_4]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_5"><strong>Processed foods</strong></td>
+						<tpt:html type="radio-group" wrap="td" id="q23_5" value="1,2,3,4,5" selected="${answers[q23_5]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_6"><strong>Fried foods</strong></td>
+						<tpt:html type="radio-group" wrap="td" id="q23_6" value="1,2,3,4,5" selected="${answers[q23_6]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_7"><strong>Sweets/Desserts</strong></td>
+						<tpt:html type="radio-group" wrap="td" id="q23_7" value="1,2,3,4,5" selected="${answers[q23_7]}"/>
+					</tr>
+					<tr>
+						<td class="question" id="qq23_8"><strong>Breads/Grains</strong><br />(One serving = 1/2 cup cooked cereal,<br />1/3 cup cooked rice or pasta, 1 slice<br />of bread)</td>
+						<tpt:html type="radio-group" wrap="td" id="q23_8" value="1,2,3,4,5" selected="${answers[q23_8]}"/>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qqn24">${QNo}. How often do you add salt to your food or eat salty foods (chips, pickles, canned foods, processed foods)?</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Every meal</th>
+						<th>Most meals</th>
+						<th>Some meals</th>
+						<th>Seldom</th>
+						<th>Never</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="qn24" value="1,2,3,4,5" selected="${answers[qn24]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qqn25">${QNo}. How often do you eat high fat foods? (hamburgers, hotdogs, sausages, processed meats, whole milk, cheese, ice cream, cookies, butter, pastry)</span>
+			</div>
+			<table class="generic">
+				<thead>
+					<tr>
+						<th>Every meal</th>
+						<th>Most meals</th>
+						<th>Some meals</th>
+						<th>Seldom</th>
+						<th>Never</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><tpt:html type="radio-group" wrap="td" id="qn25" value="1,2,3,4,5" selected="${answers[qn25]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+    
+		
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+	 
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

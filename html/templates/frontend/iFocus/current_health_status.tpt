@@ -1,0 +1,272 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<!--
+11/24/10 - SAL
+Changed title from Current Health Status to General Health
+Added new table column (Have Condition but not in treatment) this adds a new value (5) to all radio groups
+Added new row (Anxiety)	(requires new db column)
+Added new row (High Cholesterol) (reuse Asthma db column)
+Removed row (Asthma)
+Changed Heart Problems to Heart Disease
+Removed question Do you have a medical condition...
+Changed wording of question to Do you understand your medical benefits?
+Removed question Do you obtain a yearly physical (moved to preventative_health)
+Changed wording of question to Do you know how to care for a minor...
+-->
+
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">General Health<br /><small>Health Assessment</small></h1>
+	</div>
+
+	<tpt:if id="errors" test="EXISTS">
+		<ul>
+			<tpt:foreach id="errors" as="error">
+				<li>${error.name} : ${error.message}</li>
+			</tpt:foreach>
+		</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	   Saved!
+	</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<table class="datagrid">
+		<thead>
+			<tr>
+				<th> </th>
+				<th>Excellent</th>
+				<th>Very Good</th>
+				<th>Good</th>
+				<th>Fair</th>
+				<th>Poor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td id="qq4" style="font-size:14px;" class="question"><strong>${QNo}. Generally, I consider the status of my overall health:</strong></td>
+				<tpt:html type="radio-group" wrap="td" id="q4" value="1,2,3,4,5" selected="${answers[q4]}"/>
+			</tr>
+		</tbody>
+	</table>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			${QNo}. Please select the condition(s) that reflects your current state of health.
+		</div><p>
+			<em>Indicate if you are under a physician&amp;acute;s care if you currently have a condition and if you are currently taking prescribed medication.</em>
+			</p>
+
+		</div>
+		<table class="datagrid interactive">
+			<thead>
+				<tr>
+					<th> </th>
+					<th>Never</th>
+					<th>In The Past</th>
+					<th>Under Physician Care</th>
+					<th>Taking Prescribed Medication</th>
+					<th>Have Condition but not in treatment</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="question" id="qq5_0">Anxiety</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_0" value="1,2,3,4,5" selected="${answers[q5_0]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_1">Stroke</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_1" value="1,2,3,4,5" selected="${answers[q5_1]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_2">Arthritis</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_2" value="1,2,3,4,5" selected="${answers[q5_2]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_4">Back Pain</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_4" value="1,2,3,4,5" selected="${answers[q5_4]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_5">Cancer</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_5" value="1,2,3,4,5" selected="${answers[q5_5]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_6">Chronic Pain</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_6" value="1,2,3,4,5" selected="${answers[q5_6]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_7">Congestive Heart Failure</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_7" value="1,2,3,4,5" selected="${answers[q5_7]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_8">Depression</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_8" value="1,2,3,4,5" selected="${answers[q5_8]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_3">High Cholesterol</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_3" value="1,2,3,4,5" selected="${answers[q5_3]}"/>
+				</tr>
+				<tr>
+					<td  class="question" id="qq5_9">Diabetes</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_9" value="1,2,3,4,5" selected="${answers[q5_9]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_10">Heartburn</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_10" value="1,2,3,4,5" selected="${answers[q5_10]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_11">Heart Disease</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_11" value="1,2,3,4,5" selected="${answers[q5_11]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_12">High Blood Pressure<br />(hypertension)</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_12" value="1,2,3,4,5" selected="${answers[q5_12]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_13">Migraine Headaches</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_13" value="1,2,3,4,5" selected="${answers[q5_13]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_14">Osteoporosis/Osteopenia</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_14" value="1,2,3,4,5" selected="${answers[q5_14]}"/>
+				</tr>
+				<tr>
+					<td class="question" id="qq5_15">Colon/Polyps</td>
+					<tpt:html type="radio-group" wrap="td" id="q5_15" value="1,2,3,4,5" selected="${answers[q5_15]}"/>
+				</tr>
+			</tbody>
+		</table>
+
+<!--
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq6">${QNo}. Do you currently have a medical condition that will require you to use your healthcare benefits often?</span>
+		</div>
+		<table class="generic">
+			<thead>  
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<tpt:html type="radio-group" wrap="td" id="q6" value="1,2" selected="${answers[q6]}"/>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+-->
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span  id="qq7">${QNo}. Do you understand your medical benefits?</span>
+		</div>
+		<table class="generic">  
+			<thead>
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<tpt:html type="radio-group" wrap="td" id="q7" value="1,2" selected="${answers[q7]}"/>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!--
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq8">${QNo}. Obtain a yearly preventive physical</span>
+		</div>
+		<table class="generic"> 
+			<thead> 
+				<tr>
+					<th>Confident</th>
+					<th>Not Confident</th>
+					<th>Not Sure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<tpt:html type="radio-group" wrap="td" id="q8" value="1,2,3" selected="${answers[q8]}"/>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+-->
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span  id="qq9">${QNo}. Do you know how to care for a minor injury using basic first aid?</span>
+		</div>
+		<table class="generic">  
+			<thead>
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<tpt:html type="radio-group" wrap="td" id="q9" value="1,2" selected="${answers[q9]}"/>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+<!-- <tpt:if id="next_last[1]" test="NOTNULL"><a href="/iFocus/topic/${next_last[1]}">Next Page</a></tpt:if>  -->
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+
+		</tpt:if>
+	</tpt:if>
+	<tpt:else>
+		<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+	</tpt:else>
+</form>
+
+
+
+
+
+
+
+	<div class="clear"> </div>
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

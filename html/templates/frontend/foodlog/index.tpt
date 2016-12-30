@@ -1,0 +1,189 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/FoodLog.css" /> 
+	<script type="text/javascript" src="/assets/js/salscal.js"></script>
+	<script type="text/javascript" src="/assets/js/FoodLog.js"></script>
+</head>
+	
+<body>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Food Log for <span id="date_entered_disp">${POST[disp_date]}</span><br /><small>Resources and Tools</small></h1>
+	</div>
+	<form method="post" action="/FoodLog/AddFoodLog" onsubmit="return checkEntry();">
+
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+		<div class="w-75p left">
+
+		<p>The Food Log is designed to make tracking and recording your nutritional intake as quick and easy as possible. Use the Food Log as a simple calorie counter or as a complete nutritional analysis tool.</p>
+
+		<p>Personalize a selected meal plan by altering and substituting foods here, or log foods outside of a meal plan. You can choose from the extensive food database of over 30,000 foods, create your own custom food, or select from your personal list of your previously created food choices. </p>
+
+			<div class="FLCalories">
+				<div class="left">
+					<span>Target Calories: <strong class="blue">${dri[target]}</strong></span>
+				</div>
+
+				<div class="left" style="margin:0 0 0 80px;">
+					<span>Total Calories: <strong class="blue">${total}</strong></span>
+				</div>
+				<div class="right">
+					<tpt:if id="rem" test="EQ" value="1">
+						<span>Remaining for this day: <strong class="blue">${diff}</strong></span><br />
+					</tpt:if>
+					<tpt:else>
+						<span>Calories over target: <strong class="blue">${diff}</strong></span><br />
+					</tpt:else>
+				</div>
+			</div>
+			<div class="clear"> </div>
+			<br />
+
+		<div class="FLContainer">
+
+			<div class="FLSearch">
+
+				<div class="foodSearch right">
+					<label>Search Foods: <input type="text" name="Food" id="search" size="25" maxlength="100" autocomplete="off" onkeyup="handleSearchBox(event, '/FoodLog/GetList');" /></label><br />
+					<div id="customFood" >
+						Didn't find what you were looking for? &amp;nbsp;<a href="/CustomFoods/AddFood/fl">Add a Custom Food</a>
+					</div>
+				</div>
+
+				<div class="foodCal left">
+					<input type="hidden" name="foodID" id="foodID" />
+					<input type="hidden" name="selected_meal" id="selected_meal" />
+					<input type="hidden" name="servingSize" id="servingSize" />
+					<input type="hidden" name="UnitID" id="UnitID" />
+					<input type="hidden" name="custom" id="custom" />
+					<label><strong> Date:
+					<span id="date_entered_disp">${POST[disp_date]}</span> &amp;nbsp;</strong></label>
+					
+					<a href="#" onclick="showCalendarDialog(event, 225, 300, 'past', '/FoodLog/Index'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+					<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+				</div>
+
+				<div class="clear"> </div>
+				<div id="FoodList"> </div>
+
+			</div>
+		</div>
+
+		<br />
+
+				<tpt:if id="food_count" test="GT" value="0">
+					<h3>Diet Breakdown</h3><br />
+					<img class="foodBreakdown" src="/FoodLog/PieChart/${carbs}/${protein}/${fats}" /><br /><br />
+				</tpt:if>
+
+
+	<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+		
+		</div>
+		
+		<div class="clear"> </div>
+
+		<div class="FLMeals" id="FLMeals" style="display:${display[all]}">
+			<img src="/FoodLog/PieChart/${carbs}/${protein}/${fats}" />
+			<input type="hidden" name="qty" id="qty" /><br/><br/>
+			<a href="javascript:showWin('/FoodLog/GetAllResults/${POST[date_entered]}', '300px')">Click Here For Total</a>
+		  <tpt:setvar id="idx" value="1" />
+			<tpt:foreach id="meals" as="m">
+
+			<tpt:if id="m[MealID]" test="EQ" value="1">
+				<tpt:setvar id="disp" value="${display[1]}" />
+			</tpt:if>
+			<tpt:elseif id="m[MealID]" test="EQ" value="2">
+				<tpt:setvar id="disp" value="${display[2]}" />
+			</tpt:elseif>
+			<tpt:elseif id="m[MealID]" test="EQ" value="3">
+				<tpt:setvar id="disp" value="${display[3]}" />
+			</tpt:elseif>
+			<tpt:elseif id="m[MealID]" test="EQ" value="4">
+				<tpt:setvar id="disp" value="${display[4]}" />
+			</tpt:elseif>
+			<tpt:elseif id="m[MealID]" test="EQ" value="5">
+				<tpt:setvar id="disp" value="${display[5]}" />
+			</tpt:elseif>
+			<tpt:elseif id="m[MealID]" test="EQ" value="6">
+				<tpt:setvar id="disp" value="${display[6]}" />
+			</tpt:elseif>
+
+			<div style="display:${disp}">
+				<span class="foodlogDay">${m[MealName]}:</span><br />
+				<input type="hidden" name="mid${m[MealID]}" id="meal${idx}" value="${m[MealID]}" />
+				<input type="hidden" name="mn${m[MealID]}" id="mname${idx}" value="${m[MealName]}" />
+				<tpt:modvar id="idx" op="++" />
+
+				<div class="message-center">
+					<table class="datagrid">
+					<thead>
+						<tr>
+							<th class="amount">Amount</th>
+							<th colspan="1"></th>
+							<th>Calories</th>
+							<th>Edit</th>
+						</tr>
+					</thead>
+					<tbody>
+					<tpt:foreach id="foods" as="f">
+						<tpt:if id="m[MealID]" test="EQ" value="${f[MealId]}">
+							<tr>
+								<td class="amount"><input name="qty${f[id]}" id="qty${f[id]}" class="tinyForm" size="2" value="${f[serving_size]}" /><span>${f[UnitName]}</span></td>
+								<td><a href="javascript:showWin('/FoodLog/nutrition/${f[id]}', '300px')"><span>${f[FoodName]}</span></a></td>
+								<td class="calories"><span>${f[total_calories]}</span></td>
+								<td class="actions">
+									<a href="#" class="foodUpdate" onclick="UpdQty(${f[id]}); return false;">Update</a>&amp;nbsp; | &amp;nbsp;
+									<a href="#" class="foodDelete" onclick="DelFood(${f[id]}); return false;">Delete</a>
+								</td>
+							</tr>
+						</tpt:if>
+					</tpt:foreach>
+			 		</tbody>
+					</table>
+				</div>
+				<br />
+				<tpt:setvar id="add_edit" value="Add a" />
+				<tpt:if id="comment" test="NOTEMPTY">
+					<br /><br />
+					<h4>Comments:</h4>
+					<div class="message-center">
+						<span>${comment}</span><br />
+						<tpt:setvar id="add_edit" value="Edit the" />
+					</div>
+				</tpt:if>
+				<div class="message-center">
+					<br />
+					<a href="/FoodLog/AddComment/${POST[date_entered]}">${add_edit} comment about your nutrition</a>
+				</div>
+			</div>
+			</tpt:foreach>
+		</div>
+	</form>
+</div>
+</body>
+</html>
+</tpt:body>

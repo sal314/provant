@@ -1,0 +1,85 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Alcohol Use<br /><small>Health Assessment</small></h1>
+	</div>	
+
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq39">${QNo}. How many alcoholic drinks do you consume per week on average?</span>
+			</div>
+			<table class="generic">  
+				<tr>
+					<th>None</th>
+					<th>1-7 Per week</th>
+					<th>8-14 Per week</th>
+					<th>15-20 Per week</th>
+					<th>21 or more Per week</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q39" value="1,2,3,4,5" selected="${answers[q39]}"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq40">${QNo}. Have you ever had more than 5 drinks at one sitting in the past four months?</span>
+			</div>
+			<table class="generic">  
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q40" value="1,2" selected="${answers[q40]}"/></tr>
+			</table>
+		</div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+<tpt:if id="next_last[0]" test="NOTEMPTY">
+	<div id="back-button">
+		<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+	</div>
+</tpt:if>
+<tpt:if id="is_completed" test="EQ" value="true">
+  	<tpt:if id="next_last[1]" test="NOTNULL">
+		<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+	</tpt:if>
+</tpt:if><tpt:else>
+  	<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+</tpt:else>
+ </form>
+ 
+ <div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

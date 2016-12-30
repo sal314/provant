@@ -1,0 +1,12 @@
+<tpt:body>
+ 	<div class="inner-content">
+		<form method="post" action="/FoodLog/saveComment">
+	  	<h4>Food Log Comments for ${date_entered}</h4>
+	  	<input type="hidden" name="action" value="${action}" />
+			<input type="hidden" name="date_entered" value="${date_entered}" />
+	  	<textarea name="comment" rows="10" cols="80">${comment}</textarea><br /><br />
+			<input type="submit" value="Save" />
+		</form>
+	</div>
+	<br />
+</tpt:body>

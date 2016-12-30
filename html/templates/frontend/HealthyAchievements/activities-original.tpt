@@ -1,0 +1,88 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Healthy Achievements<br /><small>Coming Soon!</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="w-75p left">
+	
+	
+	
+	
+	<p>Healthy Achievements is an incentive tracking tool designed to help you manage your employer sponsored wellness incentive programs. Watch your points add up and see how participating in wellness programs and activities can earn you valuable rewards.</p>
+	<br />
+	
+  <h3>${title}</h3>
+  
+  <table cellpadding="8" class="ITtables" width="400">
+  	<tr><th>Description</th><th>Points</th></tr>
+ 
+    <tpt:foreach id="acts" as="act">
+		<tr>
+		  <tpt:if id="act[minimum_value]" test="GT" value="0">
+		    <td>${act[description]}  (${act[minimum_value]})</td>
+		  </tpt:if>
+		  <tpt:else>
+		    <td>${act[description]}</td>
+		  </tpt:else>		  
+		  <td align="right">${act[points]}</td>
+		</tr>
+	</tpt:foreach>
+  </table>
+  <br />
+  <tpt:if id="sacts" test="DNE">
+  	<br />
+  </tpt:if>
+  <tpt:else>
+    <br />
+    <h3>Self Reporting Points</h3>
+	<br />
+	<form name="self_rpt" method="post" action="/HealthyAchievements/AddSelfReporting">
+	  <input type="hidden" name="z_user_id" value="${z_user_id}" />
+      <table cellpadding="8" class="ITtables" width="400">
+        <tr><th></th><th>Description</th><th>Points</th></tr>
+		<tpt:setvar id="idx" value="0" />
+        <tpt:foreach id="sacts" as="sact">
+          <tr>
+      		  <tpt:if id="sact[showcheck]" test="EQ" value="1">
+      			  <td><input type="checkbox" name="self_${idx}" /></td>
+				  <input type="hidden" name="act_${idx}" value="${sact[aid]}" />
+				  <tpt:modvar id="idx" op="++" />
+      		  </tpt:if>
+			  <tpt:else>
+			      <td>&amp;nbsp;&amp;nbsp;</td>
+			  </tpt:else>
+      		  <tpt:if id="sact[minimum_value]" test="GT" value="0">
+      			  <td>${sact[description]} (${sact[minimum_value})</td>
+      		  </tpt:if>
+      		  <tpt:else>
+      			<td>${sact[description]}</td>
+      		  </tpt:else>
+      		  <td align="right">${sact[points]}</td>
+      	  </tr>
+        </tpt:foreach>
+      </table>
+      <br />
+	  
+		<div id="points-button">
+			<a href="#" class="nextstep next"> </a>
+		</div>
+	  
+
+    </form>
+  </tpt:else>
+  <br />
+  <br />
+  <h3>Redeem Points</h3>
+  <br />
+	<span style="font-size:16px; color:#FF0000">Coming Soon</span><br /> 
+
+ 
+ 
+  </div>
+  
+  <div class="clear"> </div>
+  </div>
+</tpt:body>

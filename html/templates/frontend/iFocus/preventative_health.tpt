@@ -1,0 +1,271 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<script type="text/javascript">
+        $(function() {
+        $('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+        });
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Preventative Health<br /><small>Health Assessment</small></h1>
+	</div>
+	<tpt:if id="errors" test="EXISTS">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+		<li style="font-size:14px; color:red;">${error.name} : ${error.message}</li>
+		</tpt:foreach>
+	</ul>
+	</tpt:if>
+	<tpt:if id="saved" test="EQ" value="TRUE">
+	Saved!
+	</tpt:if>
+
+	<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+
+	<tpt:setvar id="QNo" value="${first_question}" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq8">${QNo}. Do you obtain a yearly physical examination?</span>
+		</div>
+		<table class="generic"> 
+			<thead> 
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<tpt:html type="radio-group" wrap="td" id="q8" value="1,2" selected="${answers[q8]}"/>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq11">${QNo}. If yes, when was your last physical?</span>
+		</div>
+		<br />
+<!-- [CDATA[            <tpt:html type="date_picker" id="q11" value="${answers[q11]}"/>
+                        <span> Please select a date: </span>
+						<a href="#" onclick="showCalendarDialog(event, 210, 259, 'past', '', 5,'q11'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+            <span id="q11_disp">${answers[q11_disp]}</span>
+            <input type="hidden" id="q11" name="q11" value="${answers[q11]}" />
+]] -->
+		<select name="q11_month">
+		<tpt:html type="select-options" data="${monopt}" selected="${answers[q11_month]}" />
+		</select>&amp;nbsp;&amp;nbsp;
+		<select name="q11_year">
+		<tpt:html type="select-options" data="${yropt}" selected="${answers[q11_year]}" />
+		</select>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Select the year, if you can only remember which year your exam was.
+		<br /><br />
+  </div>
+
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq12">${QNo}. Have you received a seasonal flu vaccine in the last 12 months?</span>
+		</div>
+		<table class="generic">
+			<thead>
+			<tr>
+				<th>Yes</th>
+				<th>No</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<tpt:html type="radio-group" wrap="td" id="q12" value="1,2" selected="${answers[q12]}"/>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<tpt:if id="age" test="GT" value="49">
+	<tpt:modvar id="QNo" op="++" />
+	<div class="health-question">
+		<div class="question">
+			<span id="qq13">${QNo}. If you are between the age 50-75, do you obtain regular colorectal screenings?</span>
+		</div>
+		<table class="generic">
+			<thead>
+			<tr>
+				<th>Yes</th>
+				<th>No</th>
+				<th>Does not apply to me</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<tpt:html type="radio-group" wrap="td" id="q13" value="1,2,3" selected="${answers[q13]}"/>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	</tpt:if>
+
+	<tpt:if id="demographics[gender]" test="EQ" value="F">
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq14">${Qno}. When was your last pap smear (cervical cancer screening)?</span>
+			</div>
+<!-- [CDATA[            <tpt:html type="date_picker" id="q14" value="${answers[q14]}"/>
+                        <a href="#" onclick="showCalendarDialog(event, 210, 259, 'past', '', 5,'q14'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+                        <span id="q14_disp">${answers[q14_disp]}</span>
+                        <input type="hidden" id="q14" name="q14" value="${answers[q14]}" />
+ ]] -->
+			<select name="q14_month">
+			<tpt:html type="select-options" data="${monopt}" selected="${answers[q14_month]}" />
+			</select>&amp;nbsp;&amp;nbsp;
+			<select name="q14_year">
+			<tpt:html type="select-options" data="${yropt}" selected="${answers[q14_year]}" />
+			</select>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq15">${QNo}. Have you ever had an abnormal pap smear?</span>
+			</div>
+			<table class="generic">
+				<thead>
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q15" value="1,2" selected="${answers[q15]}"/></tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:if id="age" test="GT" value="39">
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq16">${QNo}. If you are over the age of 40, have you ever had a mammogram?</span>
+			</div>
+			<table class="generic">
+				<thead>
+				<tr>
+					<th>Yes</th>
+					<th>No</th>
+					<th>Does not apply to me</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+        	<tpt:html type="radio-group" wrap="td" id="q16" value="1,2,3" selected="${answers[q16]}"/>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq17">${QNo}. If yes, what was the date of your last mammogram?</span>
+			</div>
+<!-- [CDATA[            <tpt:html type="date_picker" id="q17" value="${answers[q17]}"/>
+                        <a href="#" onclick="showCalendarDialog(event, 210, 259, 'past', '', 5,'q17'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+                        <span id="q17_disp">${answers[q17_disp]}</span>
+                        <input type="hidden" id="q17" name="q17" value="${answers[q17]}" />
+ ]] -->
+ 			<select name="q17_month">
+			<tpt:html type="select-options" data="${monopt}" selected="${answers[q17_month]}" />
+			</select>&amp;nbsp;&amp;nbsp;
+			<select name="q17_year">
+			<tpt:html type="select-options" data="${yropt}" selected="${answers[q17_year]}" />
+			</select>
+		</div>
+	</tpt:if>
+	</tpt:if>
+
+	<tpt:else>
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq18">${Qno}. Have you ever discussed the need for a prostate exam with your primary care phsyician?</span>
+			</div>
+			<table class="generic">
+			<thead>
+			<tr>
+				<th>Yes</th>
+				<th>No</th>
+				<th>Does not apply to me</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q18" value="1,2,3" selected="${answers[q18]}"/></tr>
+			</tbody>
+			</table>
+		</div>
+
+  	<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq19">${QNo}. If yes, have you ever had a Prostate Specific Antigen (PSA) test?</span>
+			</div>
+			<table class="generic">
+			<thead>
+			<tr>
+				<th>Yes</th>
+				<th>No</th>
+				<th>Does not apply to me</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr><tpt:html type="radio-group" wrap="td" id="q19" value="1,2,3" selected="${answers[q19]}"/></tr>
+			</tbody>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq20">${QNo}. If yes, when was your last PSA test?</span>
+			</div>
+ 			<select name="q20_month">
+			<tpt:html type="select-options" data="${monopt}" selected="${answers[q20_month]}" />
+			</select>&amp;nbsp;&amp;nbsp;
+			<select name="q20_year">
+			<tpt:html type="select-options" data="${yropt}" selected="${answers[q20_year]}" />
+			</select>
+		</div>
+	</tpt:else>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+  <tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if>
+	<tpt:else>
+		<div id="save-advance-button">
+			<a href="#" class="nextstep right next"> </a>
+		</div>
+	</tpt:else>
+	</form>
+
+	<div class="clear"> </div>
+	<div id="section-footer">
+	</div>
+</div>
+</tpt:body>

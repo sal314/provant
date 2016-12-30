@@ -1,0 +1,90 @@
+<tpt:body>
+
+  <script type="text/javascript">
+  function validate() {
+  	alert('validate');
+  	var butt1 = document.getElementById('buttY');
+  	if (butt1.checked) {
+  		return true;
+  	}
+  	else {
+  		alert('You got problems!');
+  		return false;
+  	}
+  }
+
+	</script>
+	<script type="text/javascript">
+	function submitForm() {
+		var frm = document.getElementById('TestForm');
+		var ret = true;
+		if (frm.onsubmit) {
+			ret = frm.onsubmit();
+		}
+		if (ret) {
+			frm.submit();
+		}
+	}
+	</script>
+
+	<script type="text/javascript">
+	function doRedirect() {
+		var ans = confirm("\tProvant Health Solutions\n\nWould you like to go to FoodLog/Index?");
+		if (ans == true) {
+			window.location.replace("/FoodLog/Index");
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	</script>
+
+	<br />
+	<br />
+	<input type="button" value="Go?" onclick="doRedirect();" />
+	<br />
+	<br />
+	<form method="post" id="TestForm" action="/FoodLog/Other/1" onsubmit="return validate();">
+		<tpt:if id="errors[0]" test="NE" value="">
+			<h1>Hey we got there!</h1>
+		</tpt:if>
+		<tpt:else>
+			<h1>Hey not dead yet</h1>
+		</tpt:else>
+		<input type="radio" name="butt" id="buttY" value="1" />Yes<br />
+		<input type="radio" name="butt" id="buttN" value="2" />No<br />
+		<input type="button" value="Submit" onclick="submitForm()" /><br />
+	</form>
+	<br />
+	<br />
+	Validator results:
+	<br />
+	Input date: ${input}<br />
+	Output date: ${output}<br />
+	<tpt:if id="errors[1]" test="EXISTS">
+	Validation err: ${errors[1]}<br />
+	</tpt:if>
+	<br />
+	<br />
+	<br />
+	Testing some styling
+	<br />
+	<div>
+	<a href="#" style="color:black" onmouseover="changeColor(this, 'red')" onmouseout="changeColor(this, 'black')" >Hover on this link</a>
+	</div>
+	<br />
+
+	<br />
+	IE 7 onclick test:
+	<br />
+	<br />
+	<a href="#" onclick="alert('yupper'); return false;">Test Link</a>
+	<br />
+	<script type="text/javascript">
+	function changeColor(obj, color) {
+		obj.style.color = color;
+	}
+	</script>
+	
+</tpt:body>

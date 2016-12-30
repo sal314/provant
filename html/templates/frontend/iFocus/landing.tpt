@@ -1,0 +1,58 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">iFOCUS Health Assessment<br /></h1>
+	</div>
+
+
+<div class="right">
+	<img src="/assets/media/images/ifocus/ifocus-img.jpg" alt="iFOCUS Health Assessment" />
+
+</div>
+
+<div class="left wleft">	
+
+	<p class="top-p">Identifying and understanding your health risks is the first step toward being able to reduce your risk factors. Your health profile is an online questionnaire about your well-being and lifestyle designed to provide a more complete picture of your health. By taking 15 minutes and completing your confidential health profile you'll be able to take active steps toward a more healthy lifestyle.</p>
+	<br />
+	
+	<tpt:if id="start" test="eq" value="true">
+		<a href="${topic}" class="iFocusStart">Start the iFOCUS Health Assessment</a>
+	</tpt:if>
+	<tpt:if id="continue" test="eq" value="true">
+		<a href="${topic}">Continue the iFOCUS Health Assessment</a>
+	</tpt:if>
+	<br/>
+	
+	<tpt:if id="completed" test="HASELEMENTS">
+	<br/>
+	<select id="report" class="left">
+	<option value=''>Select iFocus Report</option>
+	<tpt:html type="select-options" data="${completed}"/>
+	</select>
+	
+	<div id="view-report">
+		<a href="javascript:void(0);" onclick="gotoReport()" class="nextstep left next"> </a>
+	</div>
+	
+	
+	<br/>
+	</tpt:if>
+	
+	<script type="text/javascript">
+	  function gotoReport(){
+		var el=document.getElementById("report");
+		
+		if(el.selectedIndex){
+		  document.location.href="/iFocus/Total/"+el.options[el.selectedIndex].value;
+		  return;
+		}
+		alert("You must select a report.");
+	  }
+	</script>
+		
+	</div>
+
+</div>
+
+<div class="clear"> </div>
+</tpt:body>

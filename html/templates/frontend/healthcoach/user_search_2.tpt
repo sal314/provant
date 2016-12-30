@@ -1,0 +1,82 @@
+<tpt:body>
+<div class="inner-content healthcoach">
+	<div id="section-header">
+		<h1>User Information</h1>
+	</div>
+	
+			<div class="left">
+  			<table class="call-log user-info-table">
+			
+			<h3>User List</h3>
+    			<tbody>
+    			<tr>
+        			  <th class="call-log-name"><a href="/HealthCoach/GetUsers/first_name/${first_name}?${querystring}">First Name</a></th>
+        			  <th class="call-log-name"><a href="/HealthCoach/GetUsers/last_name/${last_name}?${querystring}">Last Name</a></th>
+        		</tr>
+					 
+        		<tpt:foreach id="users" as="record">
+					<tr>
+						<tpt:if id="_GET[mode]" test="eq" value="log">
+							<td><a href="/HealthCoach/AddLogEntry/${record[z_user_id]}">${record[first_name]}</a></td>
+							<td><a href="/HealthCoach/AddLogEntry/${record[z_user_id]}">${record[last_name]}</a></td>
+						</tpt:if>
+						<tpt:else id="_GET[mode]" test="eq" value="log">
+							<td><a href="/HealthCoach/UserInfo/${record[z_user_id]}">${record[first_name]}</a></td>
+							<td><a href="/HealthCoach/UserInfo/${record[z_user_id]}">${record[last_name]}</a></td>
+						</tpt:else>
+        			</tr>
+        		</tpt:foreach>        			
+    			</tbody>
+  			</table> 
+			<br />
+			<div class='form_action'>
+			<tpt:if id="admin_ctls" test="AND" value="16">
+        		<a href="/HealthCoachInsert"><img alt="Add Entry" title="Add Entry" border="0" src="/common/images/admin/admin_add.png" /></a>
+        	</tpt:if>
+			<tpt:if id="admin_ctls" test="AND" value="32">
+			<a href="/HealthCoachSearchIndex"><img alt="Find Entry" title="Find Entry" border="0" src="/common/images/admin/admin_find.png" /></a>
+			</tpt:if>
+			Page ${pager[current_page]} of ${pager[last_page]}
+  			<tpt:if id="pager[first_page]" test="EXISTS"><a href="/HealthCoach/GetUsers/${orderpath}1?${querystring}"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+			<tpt:if id="pager[previous_page]" test="EXISTS"><a href="/HealthCoach/GetUsers/${orderpath}${pager[previous_page]}?${querystring}"><img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" /></a></tpt:if>
+			
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/HealthCoach/GetUsers/${orderpath}${page}?${querystring}">${page}</a></tpt:if>
+			</tpt:foreach>
+			
+			<tpt:if id="pager[next_page]" test="EXISTS"><a href="/HealthCoach/GetUsers/${orderpath}${pager[next_page]}?${querystring}"><img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" /></a></tpt:if>
+			<tpt:if id="pager[last_page]" test="EXISTS"><a href="/HealthCoach/GetUsers/${orderpath}${pager[last_page]}?${querystring}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if>			
+		</div>
+			
+	</div>		
+	
+		<div class="left w375">	
+		<h3>Search for a User</h3>
+			<form name="HealthCoach" id="HealthCoach" action="/HealthCoach/GetUsers" method="get">
+			<input type="hidden" name="mode" value="${_GET[mode]}"/>
+			
+			<div class="margin5">
+				<label>First Name:<br /><input type="text" name="first_name" value="${_GET[first_name]}"/></label><br />
+			</div>
+			<div class="margin5">
+				<label>Last Name:<br /> <input type="text" name="last_name" value="${_GET[last_name]}"/></label><br />
+			</div>
+			<div class="margin5">
+				<label>Company:<br /> <select name="company">
+					<option value="">Any</option>
+					<tpt:html id="" type="select-options" data="${company}" selected="${_GET[company]}"/> 
+					</select>
+				</label><br />
+			</div>
+			<br />
+	
+					<div id="search-button">
+						<a href="#" class="nextstep next"> </a>
+					</div>
+			</form>		
+		</div>
+
+	<div class="clear"> </div>	
+			
+</div>
+</tpt:body>

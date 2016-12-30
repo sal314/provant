@@ -1,0 +1,117 @@
+<tpt:body>
+<script type="text/javascript">
+<![CDATA[
+   function updateSmoking(ele){
+     if (ele.value!=1){
+       var tags=document.getElementsByTagName("input");
+       for(var x = 0; x < tags.length; x++) {
+         if(tags[x].type=="radio" && (tags[x].id=="q45" ||  tags[x].id=="q46")){
+         	tags[x].checked =false;
+         }
+       }
+       document.getElementById("q45_1").checked=true;
+       document.getElementById("q46_1").checked=true;
+     }
+   }
+   function checkSmoking(ele){
+     if (ele.value!=1){
+       document.getElementById("q44_1").checked=true;
+     }
+   }
+]]>
+</script>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Tobacco Usage<br /><small>Health Assessment</small></h1>
+	</div>
+<tpt:if id="errors" test="EXISTS">
+<ul>
+<tpt:foreach id="errors" as="error">
+	<li>${error.name} : ${error.message}</li>
+</tpt:foreach>
+</ul>
+</tpt:if>
+<tpt:if id="saved" test="EQ" value="TRUE">
+   Saved!
+</tpt:if>
+<form method="post" action="/iFocus/Update/${category}" onsubmit="return validateiFocus(this)">
+	<tpt:setvar id="QNo" value="${first_question}" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq44">${QNo}. Do you smoke cigarettes?</span>
+			</div>
+			<table class="generic">  
+				<tr><th>Yes</th><th>I quit 2 or more years ago</th><th>I quit 2 or less years ago</th><th>Never smoked</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q44" value="1,2,3,4" altid="true" selected="${answers[q44]}" onclick="updateSmoking(this)"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq45">${QNo}. If you smoke cigarettes, how many cigarettes do you smoke per day?</span>
+			</div>
+			<table class="generic">  
+				<tr><th>0 to 1</th><th>2 to 3</th><th>4 to 5</th><th>6 to 7</th><th>1pk or more</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q45" altid="true" value="1,2,3,4,5" selected="${answers[q45]}" onclick="checkSmoking(this)"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq46">${QNo}. If you smoke, how many cigars or pipes do you smoke per day?</span>
+			</div>
+			<table class="generic">  
+				<tr><th>0 to 1</th><th>2 to 3</th><th>4 to 5</th><th>6 to 7</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q46" altid="true" value="1,2,3,4" selected="${answers[q46]}" onclick="checkSmoking(this)"/></tr>
+			</table>
+		</div>
+
+		<tpt:modvar id="QNo" op="++" />
+		<div class="health-question">
+			<div class="question">
+				<span id="qq47">${QNo}. How many times a day do you use smokeless tobacco (chew)?</span>
+			</div>
+			<table class="generic">  
+				<tr><th>Never</th><th>0 to 1</th><th>2 to 3</th><th>4 to 5</th><th>6 to 7</th></tr>
+				<tr><tpt:html type="radio-group" wrap="td" id="q47" value="1,2,3,4,5" selected="${answers[q47]}"/></tr>		
+			</table>
+		</div>
+		
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+ 	
+	<tpt:if id="next_last[0]" test="NOTEMPTY">
+		<div id="back-button">
+			<a href="/iFocus/topic/${next_last[0]}" class="left next">Back</a>
+		</div>
+	</tpt:if>
+	<tpt:if id="is_completed" test="EQ" value="true">
+		<tpt:if id="next_last[1]" test="NOTNULL">
+			<a href="/iFocus/topic/${next_last[1]}" class="right next">Next</a>
+		</tpt:if>
+	</tpt:if><tpt:else>
+		<div id="save-advance-button">
+				<a href="#" class="nextstep right next"> </a>
+			</div>
+	</tpt:else>
+	 </form>
+ <div class="clear"> </div>
+ 	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

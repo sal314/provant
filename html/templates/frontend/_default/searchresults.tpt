@@ -1,0 +1,24 @@
+<tpt:body>
+	
+		<div id="topicheading">search</div>		
+		<div class='fullpage'>
+		    Your search for <b>${keywords}</b> returned the following results.
+			<ul>
+			<tpt:foreach id="results" as="result">
+		   		<li><a href="${result.url}">${result.url}</a></li>
+			</tpt:foreach>
+			</ul>
+		<div class="form_action">
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="EQUALS" value="current_page">Page ${pager} of ${page.last_page}</tpt:if>							
+				<tpt:if id="page.__key__" test="EQUALS" value="first_page"><a href="/${modelname}/Index/1?${querystring}"><img alt="1st page" title="1st Page" border="0" src="/media/images/icons/admin/admin_first.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="previous_page"><a href="/${modelname}/Index/${pager}?${querystring}"><img alt="Previous page" title="Previous Page" border="0" src="/media/images/icons/admin/admin_previous.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/${modelname}/Index/${pager}?${querystring}">${pager}</a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="next_page"><a href="/${modelname}/Index/${pager}?${querystring}"><img alt="Next page" title="Next Page" border="0" src="/media/images/icons/admin/admin_next.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="last_page"><a href="/${modelname}/Index/${pager}?${querystring}"><img alt="Last page" title="Last Page" border="0" src="/media/images/icons/admin/admin_last.png" /></a></tpt:if>			
+			</tpt:foreach>			
+		</div>
+			
+		</div>
+	
+</tpt:body>	
