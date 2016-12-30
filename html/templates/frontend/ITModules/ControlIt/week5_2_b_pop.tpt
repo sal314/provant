@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Meglitinides</h3>
+			<p>
+			Meglitinides are drugs that also stimulate the beta cells to release insulin. Repaglinide (brand name Prandin) and nateglinide (Starlix) are meglitinides. They are taken before each of three meals.
+			</p>
+			<p>
+			Because sulfonylureas and meglitinides stimulate the release of insulin, it is possible to have hypoglycemia (low blood glucose levels).
+			</p>
+			<p>
+			You should know that alcohol and some diabetes pills may not mix. Occasionally, chlorpropamide, and other sulfonylureas, can interact with alcohol to cause vomiting, flushing, or sickness. Ask your doctor if you are concerned about any of these side effects.
+			</p>		
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

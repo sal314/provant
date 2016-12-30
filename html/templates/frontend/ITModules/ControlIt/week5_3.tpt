@@ -1,0 +1,97 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Diabetes Medications<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<h3>Can Diabetes Pills Help Me?</h3>
+	<p>
+	People with type 2 diabetes can use pills to manage their diabetes. These pills work best when used with meal planning and exercise.
+	</p>
+	<p>
+	Diabetes pills don't work for everyone. Although most people find that their blood glucose levels go down when they begin taking pills, their blood glucose levels may not go near the optimal range.
+	</p>
+	<p>
+	Diabetes pills sometimes stop working after a few months or years. The cause is often unknown. This doesn't mean your diabetes is worse. When this happens, oral combination therapy can help.
+	</p>
+	<p>
+	Even if diabetes pills do bring your blood glucose levels near the normal range, you may still need to take insulin if you have a severe infection or need surgery. Pills may not be able to control blood glucose levels during these stressful times when blood glucose levels shoot up.
+	</p>
+	<p>
+	Also, if you plan to become pregnant, you will need to control your diabetes with diet and exercise or with insulin. It is not safe for pregnant women to take oral diabetes medications.
+	</p>
+	<p>
+	There is no &amp;quot;best&amp;quot; pill or treatment for type 2 diabetes. You may need to try more than one type of pill, combination of pills, or pills plus insulin.
+	</p>
+	<br />
+	<h3>What About Insulin?</h3>
+	<p>
+	Although it is a common practice to try pills before insulin, you may start on insulin based on several factors. These factors include:
+	</p>
+	<ul>
+		<li>how long you have had diabetes</li>
+		<li>how high your blood glucose level is</li>
+		<li>what other medicines you take</li>
+		<li>your overall health</li>
+	</ul>
+	<p>
+	Because diabetes pills seem to help the body use insulin better, some people take them along with insulin shots. The idea behind this &amp;quot;combination&amp;quot; therapy is to try to help insulin work better.
+	</p>
+<br />
+	<h3>Using Diabetes Medications Wisely</h3>
+	<p>
+	In general, diabetes pills are safe and work well. But like any other drug, they must be used with care.
+	</p>
+	<p>
+	All diabetes pills can interact with other medicines. Because of the chance of medication interactions, you need to tell your doctor about all medicines you are taking. While you're taking diabetes pills, you should check with your doctor even before starting anything new -- even over-the-counter items.
+	</p>
+	<p>
+	Any sulfonylurea or meglitinide can cause blood glucose levels to drop too low (hypoglycemia). Metformin or the glitazones rarely cause hypoglycemia unless taken with insulin stimulators (sulfonylureas or repaglinide) or insulin injections. Acarbose or meglitol, taken as prescribed, does not cause hypoglycemia. However, hypoglycemia can occur when acarbose or meglitol is taken in combination with other oral diabetes medications.
+	</p>
+<br />
+	<h3>Two New Injectable Drugs Have Recently Been Approved by the FDA</h3>
+	<p>
+	<strong>Pramlintide</strong> (brand name <strong>Symlin</strong>) is a synthetic form of the hormone amylin, which is produced along with insulin by the beta cells in the pancreas. Amylin, insulin, and another hormone, glucagon, work in an interrelated fashion to maintain normal blood glucose levels.
+	</p>
+	<p>
+	Pramlintide injections taken with meals have been shown to modestly improve A1C levels without causing increased hypoglycemia or weight gain and even promoting modest weight loss. The primary side effect is nausea, which tends to improve over time and as an individual patient determines his or her optimal dose.
+	</p>
+	<p>
+	Because of differences in chemistry, pramlintide cannot be combined in the same vial or syringe with insulin and must be injected separately. Pramlintide has been approved for people with type 1 diabetes who are not achieving their goal A1C levels and for people with type 2 diabetes who are using insulin and are not achieving their A1C goals.
+	</p>
+	<p>
+	<strong>Exenatide</strong> (brand name <strong>Byetta</strong>) is the first in a new class of drugs for the treatment of type 2 diabetes called incretin mimetics. Exenatide is a synthetic version of exendin-4, a naturally-occurring hormone that was first isolated from the saliva of the lizard known as a Gila monster. Exenatide works to lower blood glucose levels primarily by increasing insulin secretion. Because it only has this effect in the presence of elevated blood glucose levels, it does not tend to increase the risk of hypoglycemia on its own, although hypoglycemia can occur if taken in conjunction with a sulfonylurea. The primary side effect is nausea, which tends to improve over time.
+	</p>
+	<p>
+	Like pramlintide, exenatide is injected with meals and, as with pramlintide, patients using exenatide have generally experienced modest weight loss as well as improved glycemic control. Exenatide has been approved for use by people with type 2 diabetes who have not achieved their target A1C levels using metformin, a sulfonylurea, or a combination of metformin and a sulfonylurea. 
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/5/4" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

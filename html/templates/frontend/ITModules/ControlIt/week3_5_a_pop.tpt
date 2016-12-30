@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Work</h3>
+			<p>
+			Coping with diabetes at work has similarities to coping with it at home. Of course, much of this depends on the type of work one does. People with "desk jobs" who get very little physical activity at work would do best by taking advantage of walking steps instead of riding the elevator, or intentionally parking further away than necessary. Even this moderate amount of additional exercise can improve glucose levels and for many, improve stress.
+			</p>
+			<p>
+			For people who take insulin, it is important your supervisor knows you need to eat at specific times. If this is not possible, you can discuss with your physician different strategies to avoid problems. With the newer insulins, there are many ways to be creative about this. For everyone with diabetes, it is important not to "hide" your diabetes from your co-workers. This is especially true if you take insulin.
+			</p>
+			<p>
+			Some people have difficulty discussing their diabetes with others. Occasionally, this is such a problem that self-management tasks are not performed (blood sugar testing for example). These fears need to be addressed and occasionally require the help of a psychologist.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+	<h3>Example Meal Log</h3>
+	<a href="javascript:top.frames['mealLogTable'].print();">Print Meal Log</a><br />
+	<br />
+	<iframe src="/assets/html/ControlIt/mealLog.html" name="mealLogTable" frameborder="0" scrolling="no" width="650px" height="650px"></iframe>
+	</div>
+	</div>
+	</body>
+	</html>
+</tpt:body>

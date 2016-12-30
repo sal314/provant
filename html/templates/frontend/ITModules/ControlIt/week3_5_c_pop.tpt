@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Adaptive Aids</h3>
+			<p>
+			There are a variety of different &amp;quot;adaptive aids&amp;quot; to help with the various aspects of diabetes. Perhaps the most common one is the use of the specialized shoes to protect the feet in people with severe peripheral neuropathy. Feelings of sensation in the feet are lost, and special protective shoes can protect these feet from developing an ulcer. These ulcers often become infected and cause many problems, but the special shoes can assist in preventing this. Similarly, the use of &amp;quot;orthotics&amp;quot; for the feet helps to redistribute the weight so that areas that are prone to callus formation have a better opportunity to heal.
+			</p>
+			<p>
+			There are a variety of new aids for actual blood glucose management. Home blood glucose meters have become quite simple to use, requiring small amounts of blood. Several meters can use blood from the arm or thigh so there is no more pain from the finger sticks, which tend to cause more pain. We are also using more sophisticated software systems to download the meters to help assess trends in blood glucose readings. This is particularly helpful for people who test frequently, and most of the meter software can be purchased directly from the company for your PC.
+			</p>
+			<p>
+			Insulin pump use continues to grow. In the US there are over 120,000 people using pumps, and this is also growing in people with type 2 diabetes. The pump delivers small amounts of fast-acting insulin--usually lispro (Humalog) or aspart (Novolog)-- continuously around-the-clock, and a &amp;quot;bolus&amp;quot; of insulin is infused by pressing a button before a meal. The amount of insulin to infuse is based on the blood glucose reading at the time and the amount of anticipated carbohydrate intake. Obviously, exercise also has an influence in how much insulin to administer. In an experiment at the University of Washington with pumps, for 107 patients for a time period of 3 years, they saw a 74% reduction in hypoglycemia.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

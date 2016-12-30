@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Sulfonylureas</h3>
+			<p>
+			Sulfonylureas stimulate the beta cells of the pancreas to release more insulin. Sulfonylurea drugs have been in use since the 1950s. Chlorpropamide (brand name Diabinese) is the only first-generation sulfonylurea still in use today. The second generation sulfonylureas are used in smaller doses than the first-generation drugs. There are three second-generation drugs: glipizide (brand names Glucotrol and Glucotrol XL), glyburide (Micronase, Glynase, and Diabeta), and glimepiride (Amaryl). These drugs are generally taken one to two times a day, before meals. All sulfonylurea drugs have similar effects on blood glucose levels, but they differ in side effects, how often they are taken, and interactions with other drugs.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

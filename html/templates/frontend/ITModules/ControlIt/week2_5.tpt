@@ -1,0 +1,66 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Sodium Intake<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<p>
+	Natural sodium is a mineral found in many foods and is used by the body. Sodium helps the body to send nerve impulses, maintain fluid balance, and helps muscles to contract and relax. It is the added sources of sodium that may cause problems.  Eating less sodium (salt) is good for almost everyone, not just those with diabetes.  Whenever possible, it is best to use minimal amounts of salt when cooking and try to not add salt to foods at the table.  Foods that tend to be high in sodium include:
+	</p>
+	<ul>
+		<li>Snack foods</li>
+		<li>Processed foods</li>
+		<li>Canned soups</li>
+		<li>Frozen meals</li>
+		<li>Restaurant and especially fast food</li>
+	</ul>
+	<p>
+	One teaspoon of salt is 2,400 milligrams- the maximum daily intake recommendation so it is important to watch what you add to season your food.  Try to use other flavors that have less sodium like fresh herbs and spices.
+	</p>
+	<h3>To Reduce Sodium in Your Diet:</h3>
+	<ul>
+		<li>Eat 5 or more servings of fruits and vegetables daily</li>
+		<li>Always check food labels to see how much sodium is in a serving</li>
+		<li>Choose foods that are low in sodium or are labeled &amp;quot;No Added Salt&amp;quot;</li>
+		<li>Use salt-free herbs and spices</li>
+		<li>Limit fast food and dining out</li>
+		<li>Limit convenience and processed foods</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleControlIT/info/week2_5_a', '600px', '350px')">More Sodium Facts</a><br /><br />
+	<div class="activity border">
+	<h3>Activity:</h3><br /> 
+	<p>
+	Keep a food and beverage log and include portions and sodium intake.  Also keep track of time and results of your glucometer readings.
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week2_5_b', '680px', '796px')">Example Sodium Intake Log</a><br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/2/6" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

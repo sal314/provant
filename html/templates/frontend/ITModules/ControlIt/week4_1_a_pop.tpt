@@ -1,0 +1,32 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+
+			<h3>Caring for Your Feet</h3>
+			<p>
+			There are many things you can do to keep your feet healthy.
+			</p>
+			<ol>
+				<li><strong>Take care of your diabetes</strong>. Work with your health care team to keep your blood glucose in your target range.</li>
+				<li><strong>Check your feet every day</strong>. Look at your bare feet for red spots, cuts, swelling, and blisters. If you cannot see the bottoms of your feet, use a mirror or ask someone for help.</li>
+				<li><strong>Be more active</strong>. Plan your physical activity program with your health team.</li>
+				<li><strong>Ask your doctor about Medicare coverage for special shoes</strong>.</li>
+				<li><strong>Wash your feet every day</strong>. Dry them carefully, especially between the toes.</li>
+				<li><strong>Keep your skin soft and smooth</strong>. Rub a thin coat of skin lotion over the tops and bottoms of your feet, but not between your toes.</li>
+				<li><strong>If you can see and reach your toenails, trim them when needed</strong>. Trim your toenails straight across and file the edges with an emery board or nail file.</li>
+				<li><strong>Wear shoes and socks at all times</strong>. Never walk barefoot. Wear comfortable shoes that fit well and protect your feet. Check inside your shoes before wearing them. Make sure the lining is smooth and there are no objects inside.</li>
+				<li><strong>Protect your feet from hot and cold</strong>. Wear shoes at the beach or on hot pavement. Don't put your feet into hot water. Test water before putting your feet in it just as you would before bathing a baby. Never use hot water bottles, heating pads, or electric blankets. You can burn your feet without realizing it.</li>
+				<li><strong>Keep the blood flowing to your feet</strong>. Put your feet up when sitting. Wiggle your toes and move your ankles up and down for 5 minutes, two (2) or three (3) times a day. Don't cross your legs for long periods of time. Don't smoke.</li>
+				<li><strong>Get started now</strong>. Begin taking good care of your feet today.  Set a time every day to check your feet.</li>
+			</ol>
+			
+			</div>
+			</div>
+		</body>
+	</html>
+</tpt:body>

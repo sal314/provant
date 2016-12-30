@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>DPP-4 Inhibitors</h3>
+			<p>
+			A new class of medications called DPP-4 inhibitors help improve A1C without causing hypoglycemia. They work by preventing the breakdown of a naturally occurring compound in the body, GLP-1. GLP-1 reduces blood glucose levels in the body, but is broken down very quickly so it does not work well when injected as a drug itself.  By interfering in the process that breaks down GLP-1, DPP-4 inhibitors allow it to remain active in the body longer, lowering blood glucose levels only when they are elevated. DPP-4 inhibitors do not tend to cause weight gain and tend to have a neutral or positive effect on cholesterol levels. Sitagliptin (Januvia) is currently the only DPP-4 inhibitor on the market.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

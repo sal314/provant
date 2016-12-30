@@ -1,0 +1,67 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Sick Days<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<h3>When You Travel</h3>
+	<p>
+	Planning a trip? Whether you-re camping or cruising, you can go anywhere and do almost anything. It just takes a little planning ahead to handle your diabetes.
+	</p>
+	<p>
+	How you prepare depends on where you are going and for how long. Two weeks backpacking through Europe takes different planning than a week at the beach. Will you be crossing time zones? What kind of food will you eat and when? Will you be more active or less active than usual?
+	</p>
+	<h3>Getting Ready</h3>
+	<p>
+	Before a long trip, have a medical exam to make sure your diabetes is in good control. Schedule the exam with enough time to work on your control before you depart. Get immunization shots -- if you need them -- at least one month before you leave. If the shots make you sick, you will have time to recover before your trip.
+	</p>
+	<p>
+	Before any trip, get two papers from your doctor: a letter and a prescription. The letter should explain what you need to do for your diabetes, such as take diabetes pills or insulin shots. It should list insulin, syringes, and any other medications or devices you use. The letter should also list any allergies you have or any foods or medications to which you are sensitive.
+	</p>
+	<p>
+	The prescription should be for insulin or diabetes pills. You should have more than enough insulin and syringes or pills to last through the trip. But the prescription may help in case of emergency. In the United States, prescription rules may vary from state to state.  The prescription laws may be very different in other countries. If you are going out of the country, <a href="javascript:showWin('/ModuleControlIT/info/week4_5_a', '600px', '350px')">write for a list</a> of International Diabetes Federation groups.
+	</p>
+	<h3>Packing Tips</h3>
+	<p>
+	The second rule of travel for a person with diabetes: pack at least twice as much medication and blood-testing supplies as you think you need. Pack at least half in your carry-on bag so that your medication is always with you.
+	</p>
+	<p>
+	Whether you travel by car, plane, boat, bike, or foot, you will want to keep this &amp;quot;carry-on&amp;quot; bag with you at all times. Pack this bag with:
+	</p>
+	<ul>
+		<li>All the insulin and syringes you will need for the trip</li>
+		<li>Blood and urine testing supplies (include extra batteries for your glucose meter)</li>
+		<li>All oral medications (an extra supply is a good idea)</li>
+		<li>Other medications or medical supplies, such as glucagon, antidiarrhea medication, antibiotic ointment, antinausea drugs</li>
+		<li>Your ID and diabetes identity card</li>
+		<li>A well-wrapped, air-tight snack pack of crackers or cheese, peanut butter, fruit, a juice box, and some form of sugar (hard candy or glucose tablets) to treat low blood glucose</li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/6" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Snacking: A Primer</h3>
+			<p>
+			In the past, people with diabetes who took insulins that peaked strongly between meals or during the night had to eat snacks at particular times to prevent hypoglycemia. Many newer types of insulin do not peak as much, so snacks may not be obligatory; however, they can often be worked into your meal plan.
+			</p>
+			<p>
+			Snacking can help prevent overeating at meals. It also provides a constant source of energy for your body. But snacking is not a good reason to eat foods that are 'nutrient-sparse', i.e. low in fiber, vitamins and minerals and high in fat, or an excuse to skip a meal. This type of substitution may result in actually eating more calories, carbohydrate or fat than planned - partnered by higher blood sugars.
+			</p>
+			<p>
+			The key to healthy eating is moderation. Air-popped popcorn may be low in fat, but it still has calories. And calories count. If you can control the portion sizes of the snacks you eat, you will be able to eat a wider variety of foods, including your favorites, and still keep your blood sugar in your target range.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

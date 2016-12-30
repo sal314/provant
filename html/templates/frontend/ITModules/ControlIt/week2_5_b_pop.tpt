@@ -1,0 +1,13 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<strong>Sodium Intake Log</strong><br /><br />
+	<a href="javascript:this.frames['sodiumIntakeLog'].print();">print Sodium Intake Log</a><br />
+	<br />
+	<iframe src="/assets/html/ControlIt/sodiumIntakeLog.html" name="sodiumIntakeLog" frameborder="0" scrolling="no" width="650px" height="720px"></iframe>
+	</body>
+	</html>
+</tpt:body>

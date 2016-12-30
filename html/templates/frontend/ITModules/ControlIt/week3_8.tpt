@@ -1,0 +1,190 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Protein and Fat<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<h3>Using Food Labels</h3>
+	<p>
+	With carbohydrate counting, it is easy to forget about the protein and fat in meals. Always include a source of protein and fat to balance out your meal.
+	</p>
+	<p>
+	Carbohydrate counting is easier when food labels are available. You can look at how much carbohydrate is in the foods you want to eat and decide how much of the food you can eat. The two most important lines with carbohydrate counting are the serving size and the total carbohydrate amount.
+	</p>
+	<ol>
+		<li>Look at the <strong>serving size</strong>. All the information on the label is about this serving of food. If you will be eating a larger serving, then you will need to double or triple the information on the label.</li>
+		<li>Look at the <strong>grams of total carbohydrate</strong>.<br />Total carbohydrate on the label includes sugar, starch, and fiber.<br />Know the amount of carbohydrate you can eat, figure out the portion size to match.<br /><strong>Other important label information:</strong></li>
+		<li>If you are trying to lose weight, look at the <strong>calories</strong>. Comparing products can be helpful to find those lower in calories per serving.</li>
+		<li>To cut risk of heart disease and stroke, look at <strong>saturated and trans fats</strong>. Look for products with the lowest amount of saturated and trans fats per serving.</li>
+		<li>For people with high blood pressure, look at the <strong>sodium</strong>. Look for foods with less sodium.</li>
+	</ol>
+	<h3>Fiber:</h3>
+	<p>
+	Many people have trouble getting enough fiber in their daily diet.  The recommended goal is 20-35 grams of fiber daily. Fiber is found only in plant foods such as fruits, vegetables, whole grains, beans and legumes.  Fiber is not digested and does not add calories.
+	</p>
+	<h3>Benefits of fiber:</h3>
+	<ul>
+		<li>Makes you feel fuller sooner and you feel fuller longer</li>
+		<li>Slows the rise of blood sugar after eating</li>
+		<li>Lowers blood cholesterol</li>
+		<li>Prevents constipation</li>
+	</ul>
+	<span>There are two types of fiber:</span><br />
+	<p><h3>Insoluble Fiber</h3></p>
+	<ul>
+		<li>Found in bran, whole grains, some vegetables and nuts</li>
+		<li>Helps prevents constipation by increasing the stool volume and lets it pass easily through the intestines</li>
+	</ul>
+	<h3>Soluble Fiber</h3>
+	<ul>
+		<li>Found in oats, beans, citrus fruits and barley</li>
+		<li>Helps lower blood sugar and cholesterol</li>
+	</ul>
+	<p>
+	Always increase fiber slowly.  Adding it too quickly can cause diarrhea, gas and bloating.  Increase by no more than 5 grams per day.  Drink plenty of water or other non-calorie fluids. A high fiber diet can cause constipation if you do not get enough fluid.  Try to drink 50-64 ounces of fluid daily.
+	</p>
+
+	<p>
+	<h3>Ways to Increase Your Fiber Intake:</h3>
+	</p>
+	<ul>
+		<li>Use brown rice rather than white rice; and whole wheat pasta instead of white pasta</li>
+		<li>Add beans to meals</li>
+		<li>Use whole grain cereals that have at least 4 grams of fiber per serving</li>
+		<li>Choose whole fruits rather than fruit juices</li>
+		<li>Snack on fruits, vegetables, popcorn or whole grain crackers</li>
+		<li>Increase vegetable intake by increasing portions at lunch and supper</li>
+		<li>With packaged foods, look for foods with at least two grams of fiber per 100 calories</li>
+		<li>Choose whole grain bread rather than white bread.  Whole grain should be the first ingredient listed on the food label.  Limit intake of processed</li>
+	</ul>
+	<br />
+	<h3>Average Fiber Content of Foods:</h3>
+	<div class="ITtables">
+	<table border="1" cellpadding="8" width="500px">
+		<tr align="left">
+			<th>Fruits</th>
+			<th>Serving</th>
+			<th>Grams of fiber per serving</th>
+		</tr>
+		<tr align="left">
+			<td>Apple with skin</td>
+			<td>1 medium</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Strawberries</td>
+			<td>1 cup</td>
+			<td>4</td>
+		</tr>
+		<tr align="left">
+			<td>Pear</td>
+			<td>1 medium</td>
+			<td>4</td>
+		</tr>
+		<tr align="left">
+			<td>Orange juice, no pulp</td>
+			<td>1/2 cup</td>
+			<td>0</td>
+		</tr>
+		<tr align="left">
+			<td colspan="3"><strong>Grains, Cereals, &amp; Pasta</strong></td>
+		</tr>
+		<tr align="left">
+			<td>Bran Cereal</td>
+			<td>1/3 cup</td>
+			<td>8</td>
+		</tr>
+		<tr align="left">
+			<td>Brown Rice, cooked</td>
+			<td>1/2 cup</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Pumpernickel bread</td>
+			<td>1 slice</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Whole wheat pasta</td>
+			<td>1/2 cup</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td colspan="3"><strong>Vegetables</strong></td>
+		</tr>
+		<tr align="left">
+			<td>Broccoli</td>
+			<td>1/2 cup</td>
+			<td>2</td>
+		</tr>
+		<tr align="left">
+			<td>Brussels Sprouts</td>
+			<td>1/2 cup</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Spinach</td>
+			<td>1/2 cup</td>
+			<td>2</td>
+		</tr>
+		<tr align="left">
+			<td colspan="3"><strong>Legumes, Nuts &amp; Seeds</strong></td>
+		</tr>
+		<tr align="left">
+			<td>Baked beans, canned</td>
+			<td>1/2 cup</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Lentils</td>
+			<td>1/2 cup</td>
+			<td>4</td>
+		</tr>
+		<tr align="left">
+			<td>Peanuts, dry roasted</td>
+			<td>1/4 cup</td>
+			<td>3</td>
+		</tr>
+		<tr align="left">
+			<td>Sunflower seeds</td>
+			<td>1/4 cup</td>
+			<td>2</td>
+		</tr>
+	</table>
+	</div>
+	<br />
+	<div class="border activity">
+		<h3>Activity:</h3> 
+		<p>Keep a weekly food diary; list all foods and beverages consumed and remember to list the portion sizes. Also keep track of the time and result of your glucometer readings.</p><br /><br />
+		<a href="javascript:showWin('/ModuleControlIt/info/week3_8_a', '680px', '770px')">Show Carbohydrate Log</a><br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/9" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,26 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Stress:</h3>
+			<p>
+			Stress can have a major impact on blood glucose control as it causes an elevation of adrenalin (also called epinephrine) in addition to other hormones. Adrenalin makes one more resistant to the effects of insulin, so no matter if you have type 1 or type 2 diabetes stress can raise the blood glucose levels. One recent study showed that if one can relieve stress the HbA1c can decrease, on average, by 0.5%.
+			</p>
+			<p>
+			The best strategy for relieving stress is to learn how to avoid the emotional upset that may occur. This is easier said then done as it takes time to change the way one reacts to stress. For some people, getting exercise works well. This is particularly helpful for people with diabetes as the exercise directly works against insulin resistance. For many, it also makes the stress less bothersome.
+			</p>
+			<p>
+			For others, the main problem is lack of sleep--the stress keeps people awake and the next day the stressed-out person has difficulty functioning due to lack of sleep. It would be important to discuss this with your physician as there are safe medications that could be used for a short period of time to help with this problem. For people with type 2 diabetes there is a higher rate of sleep apnea (due to obesity). If you snore and are exhausted during the day, also ask your doctor about this possibility.
+			</p>
+			<p>
+			For many with overwhelming stress, it may be best to discuss with your physician. Divorce, loss of a loved one, loss of a job are all major "stressor events" which may require more formal treatment, either by discussing with a psychologist or with anti-anxiety medication.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

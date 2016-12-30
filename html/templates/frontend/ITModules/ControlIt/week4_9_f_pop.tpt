@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Specialty Foods and Snacking</h3>
+			<p>
+			Some myths state that people with diabetes should be snacking constantly to keep their blood glucose levels level. Other myths claim that people with diabetes should be on a strict three-meal-a-day plan, especially when it comes to weight loss. The truth of the matter is somewhere in between. But where is that happy medium? And what does that mean for your daily meal plan?
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

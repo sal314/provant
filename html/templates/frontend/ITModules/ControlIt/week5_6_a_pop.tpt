@@ -1,0 +1,26 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+	
+		<h3>References:</h3>
+		<a href="#" onclick="window.open('http://www.americanheart.org/presenter.jhtml?identifier=4563', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Heart Association</a><br /><br />
+		<a href="#" onclick="window.open('http://www.cdc.gov/NCCDPHP/sgr/ataglan.htm', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Center for Disease Control and Prevention</a><br /><br />
+		<a href="#" onclick="window.open('http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/index.htm', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">National Heart Lung and Blood Institute</a><br /><br />
+		<a href="#" onclick="window.open('http://www.mypyramid.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">United States Department of Agriculture- Food Guide Pyramid</a><br /><br />
+		<a href="#" onclick="window.open('http://www.nutrition.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">United States Department of Agriculture-Dietary Guidelines for Americans 2005</a><br /><br />
+		<a href="#" onclick="window.open('http://www.nhtsa.dot.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">The National Highway Traffic Safety Administration</a><br /><br />
+		<a href="#" onclick="window.open('http://www.runnersworld.com/article/0,7120,s6-238-261-262-1914-0,00.html', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Runner&amp;acute;s World</a><br /><br />
+		<a href="#" onclick="window.open('http://www.eatright.org/Public/content.aspx?id=5497&amp;terms=hunger+scale', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Dietetic Association</a><br /><br />
+		A &amp;acute;Stages of Change&amp;acute; Approach to Helping Patients Change Behavior GRETCHEN L. ZIMMERMAN, PSY.D.,CYNTHIA G. OLSEN, M.D., and MICHAEL F. BOSWORTH, D.O. Wright State University School of Medicine, Dayton, Ohio<br /><br />
+		<a href="#" onclick="window.open('http://www.healthylessons.com/2009/05/02/servings-and-portions/', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Healthy Lessons</a><br /><br />
+ 		<a href="#" onclick="window.open('http://www.mayoclinic.com/health/diabetes-diet/DA00072', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">The Mayo Clinic</a><br />
+		</div>
+		</div>
+	</body>
+	</html>
+</tpt:body>

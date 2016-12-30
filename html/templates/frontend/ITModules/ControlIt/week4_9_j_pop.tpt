@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Sweets and Desserts</h3>
+			<p>
+			People with diabetes can include desserts in their meal plans. You just need to plan ahead and watch the portion sizes. To include a sweet with your meal, cut back on the other foods with carbohydrates at the same meal.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

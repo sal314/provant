@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Biguanides</h3>
+			<p>
+			Metformin (brand name Glucophage) is a biguanide. Biguanides lower blood glucose levels primarily by decreasing the amount of glucose produced by the liver.  Metformin also helps to lower blood glucose levels by making muscle tissue more sensitive to insulin so glucose can be absorbed. It is usually taken two times a day. A side effect of metformin may be diarrhea, but this is improved when the drug is taken with food.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

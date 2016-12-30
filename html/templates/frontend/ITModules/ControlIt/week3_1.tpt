@@ -1,0 +1,49 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>	
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Blood Sugar Levels<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	
+	<div class="w-75p left">
+	<h3>High Blood Sugar</h3>
+	<p>
+	High blood sugars can cause many serious complications.  High levels of blood sugar damage the small vessels of the eyes, kidneys and nerves.  It also damages the large vessels that lead to the heart, head, arms and legs.  When oxygen and other nutrients cannot reach these areas, long-term damage which affects the veins and arteries of the body may occur.  High blood pressure and smoking can also add to tissue damage.
+	</p>
+	<h3>Acute Complications:</h3>
+	<p>
+	Diabetics are susceptible to major acute metabolic complications such as:
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_1_a', '600px', '300px')">Diabetic Acidosis (type 1 diabetics)</a><br /><br />
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_1_b', '600px', '300px')">Hyperosmolar nonketogenic coma (type 2 diabetics)</a><br />
+	<br />
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/2" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

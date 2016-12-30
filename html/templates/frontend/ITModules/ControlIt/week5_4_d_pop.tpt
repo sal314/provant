@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Syringe Disposal</h3>
+			<p>
+			It's time to dispose of an insulin syringe when the needle is dull or bent or if it has come in contact with anything other than clean skin. Your syringe is medical waste. If you can do it safely, clip the needles off the syringes. When you remove the needle, no one can use the syringe. It's best to buy a device that clips, catches, and contains the needle. Do not use scissors to clip off needles - the flying needle could hurt someone or become lost. If you don't destroy your needles, recap them. Place the needle or entire syringe in an opaque (not clear) heavy-duty plastic bottle with a screw cap or a plastic or metal box that closes firmly.
+			</p>
+			<p>
+			Do not use a container that will allow the needle to break through or recycle your syringe container. Your area may have rules for getting rid of medical waste such as used syringes. Ask your refuse company, city or county waste authority what method meets their rules. When traveling, bring your used syringes home. Pack them in a heavy-duty holder, such as a hard plastic pencil box, for transport.
+			</p>
+			<p>
+			To learn more about safe needle disposal in your area, go to http://www.cdc.gov/needledisposal/
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

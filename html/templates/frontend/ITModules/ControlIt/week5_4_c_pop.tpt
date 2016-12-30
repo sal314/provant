@@ -1,0 +1,20 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Syringe Reuse</h3>
+			<p>
+			Many people safely reuse their insulin syringes. However, if you are ill, have open wounds on your hands, or have poor resistance to infection, you should not risk insulin syringe reuse. Syringe makers will not guarantee the sterility of syringes that are reused. Keep the needle clean by keeping it capped when you're not using it. Cleaning it with alcohol removes the coating that helps the needle slide into the skin easily. Never let the needle touch anything but clean skin and the top of the insulin bottle.
+			</p>
+			<p>
+			Most important, never let anyone use a syringe you've already used, and don't use anyone else's syringe. Reusing syringes may help you cut costs, avoid buying large supplies of syringes, and reduce waste. However, talk with your doctor or nurse before you begin reusing. They can help you decide whether it would be a safe choice for you.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

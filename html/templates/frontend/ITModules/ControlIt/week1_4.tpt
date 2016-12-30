@@ -1,0 +1,42 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Portion Control<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right" style="width:300px">
+		<img src="/assets/media/images/controlit/PortionControl.jpg" />
+	</div>
+		
+	<div class="w-75p left" style="width:500px">
+	<h3>Proper Portion Sizes</h3>
+	<p>
+	Proper portion sizes at each meal are as important as taking the proper dose of medication because they can affect your blood sugar level.  Food portions should be large enough to satisfy your appetite but not so large that you are left feeling overly full and tired.  Try to relate various portion servings to everyday items so that you do not have to weigh your food at every meal. If portions are too large, your blood sugar may go higher than it should and it may also cause weight gain. Too small portions may cause a drop in blood sugar.
+	</p>
+
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/1/5" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>	
+	
+</tpt:body>

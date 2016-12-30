@@ -1,0 +1,91 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Smoking and Diabetes<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<h3>Smoking and Diabetes</h3>
+	<p>
+	Tobacco has many bad health effects, particularly for people with diabetes. No matter how long you've smoked, your health will improve after you quit.  Nicotine, the drug in tobacco, is one of the most addictive substances known.
+	</p>
+	<p>
+	Besides the physical addiction, many smokers also become psychologically hooked on cigarettes. So kicking the habit is hard - but worth the work. There are many methods you can try to help you quit and stay away from smoking for good.
+	</p>
+	<h3>Smoking Hurts Your Health</h3>
+	<p>
+	The best-known effect of smoking is that it causes cancer. Smoking can also aggravate many problems that people with diabetes already face, such as heart and blood vessel disease.
+	</p>
+	<ol>
+		<li>Smoking cuts the amount of oxygen reaching tissues. The decrease in oxygen can lead to a heart attack, stroke, miscarriage, or stillbirth.</li>
+		<li>Smoking increases your cholesterol levels and the levels of some other fats in your blood, raising your risk of a heart attack.</li>
+		<li>Smoking damages and constricts the blood vessels. This damage can worsen foot ulcers and lead to blood vessel disease and leg and foot infections.</li>
+		<li>Smokers with diabetes are more likely to get nerve damage and kidney disease.</li>
+		<li>Smokers get colds and respiratory infections easier.</li>
+		<li>Smoking increases your risk for limited joint mobility.</li>
+		<li>Smoking can cause cancer of the mouth, throat, lung, and bladder.</li>
+		<li>People with diabetes who smoke are three times as likely to die of cardiovascular disease as are other people with diabetes.</li>
+		<li>Smoking increases your blood pressure.</li>
+		<li>Smoking raises your blood sugar level, making it harder to control your diabetes.</li>
+		<li>Smoking can cause impotence.</li>
+	</ol>
+	
+	<h3>Once You've Quit</h3>
+	<p>
+	Once you've quit, the next step is to stay off. The first three months or so after quitting are the hardest time. Most people who return to smoking do so then. During those first three months, they've broken the physical addiction but not yet shaken their psychological dependence on cigarettes.
+	</p>
+	<p>
+	It often takes just one cigarette to put you back on the smoking treadmill. Have some ideas up your sleeve to fight temptation. For example, plan to take a bath, chew sugarless gum, sip some water, find something to do with your hands, or step outside for some fresh air when the urge to smoke hits you.
+	</p>
+	<p>
+	If you know you are going to be around smokers, be prepared. Practice an answer for when you're offered a cigarette. Seek out nonsmokers in the group. Don't apologize for not smoking.
+	</p>
+	<p>
+	If you do smoke a cigarette, then you need to renew your decision to quit. Focus on learning from your slip, not on berating yourself for it. Figure out why you slipped up and how you might avoid doing so again.
+	</p>
+	<p>
+	Once your body's metabolism returns to normal, you may put on a little weight. The average is about 7 pounds. If you are worried about gaining weight, talk to your dietitian about changing your meal and exercise plans.
+	</p>
+	<p>
+	You also need to stay in touch with your health care provider after you quit. Your diabetes control will probably improve. If so, your health care provider may want to change your insulin dose or diabetes pill schedule. Similarly, if you are being treated for high blood pressure or high cholesterol levels, your condition may improve so much that your health care provider may want to change your treatment.
+	</p>
+	<p>
+	Remember - quitting smoking is probably the most important thing you can do for your health and for those around you.
+	</p>
+	<h3>Diabetes and Pregnancy</h3>
+	<p>
+	You have the good fortune to live when you do. Health care providers no longer discourage women with diabetes from becoming pregnant.
+	</p>
+	<p>
+	We now know that the key to a healthy pregnancy for a woman with diabetes is keeping blood glucose (sugar) in the target range -- both before she is pregnant and during her pregnancy. To do this, you need a diabetes treatment plan that keeps meals, exercise, and insulin in balance. This plan will change as you change with pregnancy. You will also need to check your blood glucose often and keep a record of your results. With your blood glucose in the target range and good medical care, your chances of a trouble-free pregnancy and a healthy baby are almost as good as they are for a woman without diabetes.
+	</p>
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/5/2" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

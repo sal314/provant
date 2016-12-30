@@ -1,0 +1,26 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Family and Friends</h3>
+			<p>
+			Another important but complicated topic is the effect of diabetes on different types of relationships.
+			</p>
+			<p>
+			For children, diabetes can affect their relationships with parents, siblings, and friends. Kids often feel "different" and this can create significant problems--occasionally resulting in behavior changes. It is important for parents to make sure their child with diabetes does not feel "different." The most important example is to make sure a different type of food is not served to the child with diabetes compared to the rest of the family. Everyone should be served the same food.
+			</p>
+			<p>
+			In teens with diabetes, issues pertaining to dating are often a concern. Both girls and boys often have difficulty in dealing with their diabetes when confronted with the opposite sex. Again, the key is for the family to be supportive of an open discussion of any concerns that the teen may have. This may include discussions about the effects of alcohol on diabetes control.
+			</p>
+			<p>
+			Diabetes can affect relationships in adults as well. Issues can be just as complicated: relationships at work, at church, and at the golf course can all be affected by diabetes. Many of these problems are due to others being uneducated about the diabetes. Explaining to others about diabetes can be the most important solution to problems that may arise.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

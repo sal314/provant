@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Oral combination therapy</h3>
+			<p>
+			Because the drugs listed above act in different ways to lower blood glucose levels, they may be used together. For example, a biguanide and a sulfonylurea may be used together. Many combinations can be used. Though taking more than one drug can be more costly and can increase the risk of side effects, combining oral medications can improve blood glucose control when taking only a single pill does not have the desired effects. Switching from one single pill to another is not as effective as adding another type of diabetes medicine.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

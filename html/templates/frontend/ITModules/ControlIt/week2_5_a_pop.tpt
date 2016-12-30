@@ -1,0 +1,21 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+<div class="popup">
+	<div class="inner-content">
+			<h3>Sodium Facts:</h3>
+			<ul>
+				<li>When reading food labels for sodium content, look for &amp;quot;salt,&amp;quot; &amp;quot;sodium,&amp;quot; &amp;quot;monosodium glutamate&amp;quot; and &amp;quot;sodium&amp;quot; added to words such as &amp;quot;benzoate.&amp;quot;</li>
+				<li>Sodium can be in medicines such as aspirin.</li>
+				<li>Check with your physician before using salt substitutes; they can interact with medications and certain medical conditions.</li>
+				<li>Softened water has varying amounts of sodium.</li>
+				<li>Spices with names that end in &amp;quot;salt,&amp;quot; such as garlic or celery salt are high in sodium; however other seasonings such as Lemon Pepper or Chili powder may also be high in sodium.</li>
+			</ul>
+</div>
+</div>
+		</body>
+	</html>
+</tpt:body>

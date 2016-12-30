@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Thiazolidinediones</h3>
+			<p>
+			Rosiglitazone (Avandia) and pioglitazone (ACTOS) are in a group of drugs called thiazolidinediones. These drugs help insulin work better in the muscle and fat and also reduce glucose production in the liver. The first drug in this group, troglitazone (Rezulin), was removed from the market because it caused serious liver problems in a small number of people. So far rosiglitazone and pioglitazone have not shown the same problems, but users are still monitored closely for liver problems as a precaution. Both drugs appear to increase the risk for heart failure in some individuals, and there is debate about whether rosiglitazone may contribute to an increased risk for heart attacks. Both drugs are effective at reducing A1C and generally have few side effects.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

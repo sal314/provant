@@ -1,0 +1,18 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Fasting Blood Sugar/Glucose Test:</h3>
+			<p>
+			This test requires a person to fast or abstain from eating or drinking for 8-10 hours before the blood is tested.  Someone without diabetes will have a fasting blood sugar between 70-100 milligrams per deciliter (mg/dL) whereas a diabetic will have a fasting blood sugar of 126 mg/dL or greater. A person with pre-diabetes will have a fasting blood sugar between 100-125 mg/dl. This is one of the most common ways to check for diabetes.
+			</p>
+			
+			</div>
+			</div>
+		</body>
+	</html>
+</tpt:body>

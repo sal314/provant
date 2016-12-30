@@ -1,0 +1,45 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Exercise<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<p>
+	Exercise can keep us healthy and feeling great.  It can also help us control our weight and blood sugar levels.  Remember these tips before you start exercise:
+	</p>
+	<ul>
+		<li>Exercise lowers blood sugar levels.  It can help us control blood sugar but can cause low blood sugar in type 1 and type 2 diabetics who take insulin or diabetes medicine.</li>
+		<li>Test blood sugar before and after exercise to see how it affects your levels.  Blood sugar level should be above 70 mg/dL and less than 300 mg/dL before exercising.</li>
+		<li>If your blood sugar level is higher than 300, call your doctor or wait until blood sugar comes down before exercising.</li>
+		<li>If you take insulin or diabetes medicines talk to your doctor before exercising.  You may need to take less insulin or eat an extra snack before exercise to avoid low blood sugar.</li>
+	</ul>
+	<a href="javascript:showWin('/ModuleControlIT/info/week4_10_a', '740px', '750px')">Show Weekly Physical Activity Log</a>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/11" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

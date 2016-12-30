@@ -1,0 +1,44 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Traveling<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<h3>Have Insulin, Will Travel</h3>
+	<p>
+	When you travel with insulin, give some thought to where you will be storing your supplies. Insulin does not need to be refrigerated. But insulin stored in very hot or very cold temperatures may lose strength. Don&amp;acute;t store your insulin in the glove compartment or trunk of your car. Backpacks and cycle bags can get quite hot in the direct sunlight. If you plan to travel by car or bike or to be out in the elements, take steps to protect your insulin. Many travel packs are available to keep your insulin cool.
+	</p>
+	<p>
+	In general, you should stick with the exact brand and formulation of insulin that you have been prescribed by your doctor. However, if you run out while you are on the road, and your regular brand is unavailable, you may substitute another brand&amp;acute;s equivalent formulation (for example, NovoLog for Humalog, Humulin R for Novolin R). Changes in <strong>formulation</strong> (for example, from rapid-acting Humalog to to short-acting Humulin R) require medical supervision.
+	</p>
+	<p>
+	Insulins used in the United States are all of the strength U-100. In foreign countries, insulins may come as U-40 or U-80. If you need to use these insulins, you must buy new syringes to match the new insulin to avoid a mistake in your insulin dose. If you use U-100 syringes for U-40 or U-80 insulin, you will take much less insulin than your correct dose. If you use U-100 insulin in a U-40 or U-80 syringe, you will take too much insulin.
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/8" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

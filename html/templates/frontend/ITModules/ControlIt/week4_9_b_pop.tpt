@@ -1,0 +1,31 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Recommendations for Dining Out:</h3>
+			<ul>
+				<li>If you don't know what's in a dish or don't know the serving size, ask.</li>
+				<li>Try to eat the same portion as you would at home. If the serving size is larger, share some with your dining partner, or put the extra food in a container to go.</li>
+				<li>Eat slowly.</li>
+				<li>Ask for fish or meat broiled with no extra butter.</li>
+				<li>Order your baked potato plain, and then top it with a teaspoon of margarine or low-calorie sour cream, and/or vegetables from the salad bar.</li>
+				<li>If you are on a low-salt meal plan, ask that no salt be added to your food.</li>
+				<li>Ask for sauces, gravy and salad dressings "on the side." Try dipping your fork tines in the salad dressing, and then spear a piece of lettuce. Or add a teaspoon of dressing at a time to your salad. You'll use less this way.</li>
+				<li>Order foods that are not breaded or fried because they add fat. If the food comes breaded, peel off the outer coating.</li>
+				<li>Read the menu creatively. Order a fruit cup for an appetizer or the breakfast melon for dessert. Instead of a dinner entree, combine a salad with a low-fat appetizer.</li>
+				<li>Ask for substitutions. Instead of French fries, request a double order of a vegetable. If you can't get a substitute, just ask that the high-fat food be left off your plate.</li>
+				<li>Ask for low-calorie items, such as salad dressings, even if they're not on the menu. Vinegar and a dash of oil or a squeeze of lemon are a better choice than high-fat dressings.</li>
+				<li>Limit alcohol, which adds calories but no nutrition to your meal.</li>
+			</ul>
+			<p>
+			Some restaurants will better meet your special needs if you phone ahead. When you make the reservation, ask if your food can be prepared with vegetable oil, low-fat margarine, little salt, no extra sauce or butter, and broiled instead of fried. Or ask to see a copy of the menu in advance so that you know which items would work well with your meal plan.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

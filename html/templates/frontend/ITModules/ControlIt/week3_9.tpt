@@ -1,0 +1,141 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 3 Questionnaire <br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleControlIt/Week/3/9" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+	
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	<div class="stack">
+		<div class="question">1. Which acute complication for Type II Diabetics has a death rate of over 50%?</div>
+		<label><tpt:html type="radio" id="I1" value="1" selected="${POST[I1]}" />Diabetic Acidosis</label><br />
+		<label><tpt:html type="radio" id="I1" value="2" selected="${POST[I1]}" />Hyperosmolar Nonketogenic Coma</label><br />
+		<label><tpt:html type="radio" id="I1" value="3" selected="${POST[I1]}" />Hypoglycemia</label><br />
+		<label><tpt:html type="radio" id="I1" value="4" selected="${POST[I1]}" />Hyperglycmia</label><br />
+		<tpt:if id="result[I1]" test="EXISTS">
+			<br />
+			<span class="${resClass[I1]}">${result[I1]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">2. If your blood sugar was low and you felt shaky and anxious, what should you do?</div>
+		<label><tpt:html type="radio" id="I2" value="1" selected="${POST[I2]}" />Call for help</label><br />
+		<label><tpt:html type="radio" id="I2" value="2" selected="${POST[I2]}" />Go for a drive</label><br />
+		<label><tpt:html type="radio" id="I2" value="3" selected="${POST[I2]}" />Read a book</label><br />
+		<label><tpt:html type="radio" id="I2" value="4" selected="${POST[I2]}" />Eat 15 grams of sugar</label><br />
+		<tpt:if id="result[I2]" test="EXISTS">
+			<br />
+			<span class="${resClass[I2]}">${result[I2]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">3. What is the goal for triglyceride levels?</div>
+		<label><tpt:html type="radio" id="I3" value="1" selected="${POST[I3]}" />Greater than 40-50 mg/dL</label><br />
+		<label><tpt:html type="radio" id="I3" value="2" selected="${POST[I3]}" />Less than 100 mg/dL</label><br />
+		<label><tpt:html type="radio" id="I3" value="3" selected="${POST[I3]}" />Below 150 mg/dL</label><br />
+		<label><tpt:html type="radio" id="I3" value="4" selected="${POST[I3]}" />Fewer than 200 mg/dL</label><br />
+		<tpt:if id="result[I3]" test="EXISTS">
+			<br />
+			<span class="${resClass[I3]}">${result[I3]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">4. In the U.S. approximately how many people use the pump?</div>
+		<label><tpt:html type="radio" id="I4" value="1" selected="${POST[I4]}" />120,000 people</label><br />
+		<label><tpt:html type="radio" id="I4" value="2" selected="${POST[I4]}" />1 in 5 diabetics</label><br />
+		<label><tpt:html type="radio" id="I4" value="3" selected="${POST[I4]}" />74% of people</label><br />
+		<label><tpt:html type="radio" id="I4" value="4" selected="${POST[I4]}" />107 patients in Washington only</label><br />
+		<tpt:if id="result[I4]" test="EXISTS">
+			<br />
+			<span class="${resClass[I4]}">${result[I4]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">5. What is carb counting?</div>
+		<label><tpt:html type="radio" id="I5" value="1" selected="${POST[I5]}" />A meal planning technique for managing blood glucose levels</label><br />
+		<label><tpt:html type="radio" id="I5" value="2" selected="${POST[I5]}" />Counting all the pieces of bread you had eaten in a day</label><br />
+		<label><tpt:html type="radio" id="I5" value="3" selected="${POST[I5]}" />Adding up all the forms on carbohydrates in your house</label><br />
+		<label><tpt:html type="radio" id="I5" value="4" selected="${POST[I5]}" />Using different forms of table sugar to control blood glucose levels</label><br />
+		<tpt:if id="result[I5]" test="EXISTS">
+			<br />
+			<span class="${resClass[I5]}">${result[I5]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">6. Where is fiber found?</div>
+		<label><tpt:html type="radio" id="I6" value="1" selected="${POST[I6]}" />Plant food</label><br />
+		<label><tpt:html type="radio" id="I6" value="2" selected="${POST[I6]}" />Whole grains</label><br />
+		<label><tpt:html type="radio" id="I6" value="3" selected="${POST[I6]}" />Legumes</label><br />
+		<label><tpt:html type="radio" id="I6" value="4" selected="${POST[I6]}" />All of the above</label><br />
+		<tpt:if id="result[I6]" test="EXISTS">
+			<br />
+			<span class="${resClass[I6]}">${result[I6]}</span><br />
+		</tpt:if>
+	</div>
+	<br />
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleControlIT/Week/3/10">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleControlIT/Week/3/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	</form>
+</div>	
+</tpt:body>
+

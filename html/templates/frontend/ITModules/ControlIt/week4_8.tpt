@@ -1,0 +1,72 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Traveling<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Crossing Time Zones</h3>
+	<p>
+	If you take insulin shots and will be crossing time zones, talk to your doctor or diabetes educator before your trip. Bring your flight schedule and information on time zone changes. Your doctor or educator can help you plan the timing of your injections while you travel.
+	</p>
+	<p>
+	Remember: eastward travel means a shorter day. If you inject insulin, less may be needed. Westward travel means a longer day, so more insulin may be needed.
+	</p>
+	<p>
+	To keep track of shots and meals through changing time zones, keep your watch on your home time zone until the morning after you arrive.
+	</p>
+	<p>
+	If you inject insulin while in flight, frequent travelers suggest you be careful not to inject air into the insulin bottle. In the pressurized cabin, pressure differences can cause the plunger to "fight you." This can make it hard to measure insulin accurately.
+	</p>
+	<p>
+	Checking your blood glucose while traveling is as important as when you are at home. Also, check your blood glucose level as soon as possible after landing. Jet lag can make it hard to tell if you have very low or very high blood glucose.
+	</p>
+
+	<h3>Arriving</h3>
+	<p>
+	After a long flight, take it easy for a few days. Check your blood glucose often. If you take insulin, plan your activities so you can work in your insulin and meals. If you are more active than usual, your blood glucose could go too low. Take along snacks when hiking or sightseeing. Do not assume you will be able to find food wherever you are.
+	</p>
+	<p>
+	No matter what kind of diabetes you have, it is smart to watch what you eat and drink when traveling. Avoid tap water overseas. This includes ice cubes made from tap water. Ask for a list of ingredients for unfamiliar foods. Some foods may upset your stomach and hurt your diabetes control. But you will also find foods that give you a healthy taste of culture.
+	</p>
+	<p>
+	Wear comfortable shoes and never go barefoot. Check your feet every day. You should look for blisters, cuts, redness, swelling, and scratches. Get medical care at the first sign of infection or inflammation.
+	</p>
+	<p>
+	Go wherever your heart leads you. Just remember that you take your diabetes with you. Take your self-care along, too.
+	</p>
+
+	<h3>Other information:</h3>
+	<p>
+	Due to increased airport security measures in response to September 11, 2001, the American Diabetes Association is providing the following information regarding diabetes-related equipment, medication and supplies to all airline passengers with diabetes.
+	</p>
+	<a href="javascript:void(0);" onclick="window.open('http://www.diabetes.org/living-with-diabetes/know-your-rights/discrimination/public-accommodations/air-travel-and-diabetes/', '_blank')">Air Travel and Diabetes</a>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/9" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

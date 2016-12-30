@@ -1,0 +1,115 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Exchange Lists<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<h3>Diabetic Exchange Lists</h3>
+	<p>
+	A dietitian may recommend using the exchange system, which groups foods into categories - such as starches, fruits, meats and meat substitutes, and fats. One serving in a group is called an &amp;quot;exchange.&amp;quot; An exchange has about the same amount of carbohydrates, protein, fat and calories - and the same effect on your blood sugar - as a serving of every other food in the same group. So, for example, you could exchange - or trade - either of the following for one carbohydrate serving:
+	</p>
+	<p>
+	Exchange Lists for Meal Planning
+	</p>
+	
+	<div class="ITtables">
+	
+	<table border="0" cellpadding="8" width="600px">
+		<tr>
+			<th>Group</th>
+			<th>Carbohydrate<br />(grams)</th>
+			<th>Protein (grams)</th>
+			<th>Fat (grams)</th>
+			<th>Calories</th>
+		</tr>
+		<tr>
+			<td align="center" colspan="5">Carbohydrate Group</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Starch</td>
+			<td>15</td>
+			<td>3</td>
+			<td>0-1</td>
+			<td>80</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Fruit</td>
+			<td>15</td>
+			<td>0</td>
+			<td>0</td>
+			<td>60</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Milk<br />Fat Free / Low Fat<br />Reduced Fat<br />Whole</td>
+			<td><br />12<br />12<br />12</td>
+			<td><br />8<br />8<br />8</td>
+			<td><br />0-3<br />5<br />8</td>
+			<td><br />90<br />120<br />150</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Other Carbohydrate</td>
+			<td>15</td>
+			<td>Varies</td>
+			<td>Varies</td>
+			<td>Varies</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Non-starchy<br />vegetables</td>
+			<td>5</td>
+			<td>2</td>
+			<td>0</td>
+			<td>25</td>
+		</tr>
+		<tr align="center">
+			<td colspan="5">Meat and Meat Substitute Group</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Very Lean<br />Lean<br />Medium fat<br />High-fat</td>
+			<td> 0 <br /> 0 <br /> 0 <br /> 0 </td>
+			<td>7<br />7<br />7<br />7</td>
+			<td>0-1<br />3<br />5<br />8</td>
+			<td>35<br />55<br />75<br />100</td>
+		</tr>
+		<tr align="center">
+			<td colspan="5">Fat Group</td>
+		</tr>
+		<tr align="center">
+			<td align="left">Fats</td>
+			<td>0</td>
+			<td>0</td>
+			<td>5</td>
+			<td>45</td>
+		</tr>
+	</table>
+	</div>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/8" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

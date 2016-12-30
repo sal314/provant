@@ -1,0 +1,18 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Random Blood Sugar Test:</h3>
+			<p>
+			This test measures a person&amp;acute;s blood sugar at any time, fasting or not, and looks for different blood sugar levels to determine if a person has diabetes or not.  Without diabetes, a random test should show blood sugar levels at less than 140 mg/dL but with diabetes, levels would be 200 mg/dL or greater. A diagnosis of Diabetes includes one random test greater than 200 with physical symptoms such as thirst and/or frequent urination.
+			</p>
+			</div>
+			</div>
+		</body>
+	</html>
+</tpt:body>
+

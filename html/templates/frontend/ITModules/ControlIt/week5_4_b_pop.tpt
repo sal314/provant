@@ -1,0 +1,29 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Insulin Storage</h3>
+			<p>
+			Although manufacturers recommend storing your insulin in the refrigerator, injecting cold insulin can sometimes make the injection more painful. To counter the reaction, many providers suggest storing the bottle of insulin you are using at room temperature. Insulin kept at room temperature will last approximately one (1) month.
+			</p>
+			<p>
+			Remember though, if you buy more than one bottle at a time -- a possible money saver -- store the extra bottles in the refrigerator. Then, take out the bottle ahead of time so it is ready for your next injection.
+			</p>
+			<p>
+			Do not store your insulin near extreme heat or extreme cold. Never store insulin in the freezer, direct sunlight, or in the glove compartment of a car.
+			</p>
+			<p>
+			Make sure that you check the expiration date, especially if you have had the bottle for a while. Don't use any insulin beyond its expiration date and examine the bottle closely to make sure the insulin looks normal before you draw the insulin into the syringe. If you use regular, check for particles or discoloration of the insulin. If you use NPH or lente, check for "frosting" or crystals in the insulin on the inside of the bottle or for small particles or clumps in the insulin.
+			</p>
+			<p>
+			If you find any of these in your insulin, do not use it, and return the unopened bottle to the pharmacy for an exchange and/or refund.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

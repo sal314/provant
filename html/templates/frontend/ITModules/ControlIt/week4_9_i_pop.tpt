@@ -1,0 +1,35 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Free Foods</h3>
+			<p>
+			Free foods are any food or drink choice that has less than 20 calories and 5 grams or less of carbohydrate per serving. Most free foods should be limited to 3 servings per day. Spread out the servings throughout the day. If you eat all 3 servings at once, it could raise your blood glucose level because you combine the small portions into one larger portion.
+			</p>
+			<p>
+			Some examples of free foods include:
+			</p>
+			<ul>
+				<li>1 piece of hard candy&amp;nbsp;&amp;nbsp;&amp;nbsp;(regular or sugar-free)</li>
+				<li>1/2 cup of dried cranberries</li>
+				<li>Sugar-free gelatin</li>
+				<li>Gum</li>
+				<li>5 baby carrots and celery sticks</li>
+				<li>1/4 cup blueberries</li>
+				<li>10 goldfish-style crackers</li>
+				<li>2 saltine-type crackers</li>
+				<li>1 frozen sugar-free cream pop</li>
+				<li>1 cup light popcorn</li>
+				<li>1 vanilla wafer</li>
+				<li>1/2 oz of fat-free sliced cheese</li>
+				<li>1/2 oz lean meat</li>
+			</ul>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

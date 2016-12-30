@@ -1,0 +1,75 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Different Types of Insulin<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<h3>Types of Insulin</h3>
+	<p>
+	<strong>Rapid-acting insulin</strong>, such as insulin lispro (Eli Lilly), insulin aspart (Novo Nordisk), or insulin glulisine (sanofi-aventis), begin to work about 5 minutes after injection, peak in about 1 hour, and continue to work for 2 to 4 hours.
+	</p>
+	<p>
+	<strong>Regular or Short-acting insulin</strong> (human) usually reaches the bloodstream within 30 minutes after injection, peaks anywhere from 2 to 3 hours after injection, and is effective for approximately 3 to 6 hours.
+	</p>
+	<p>
+	<strong>Intermediate-acting insulin</strong> (human) generally reaches the bloodstream about 2 to 4 hours after injection, peaks 4 to 12 hours later and is effective for about 12 to 18 hours. 
+	</p>
+	<p>
+	<strong>Long-acting insulin</strong> (ultralente) reaches the bloodstream 6 to 10 hours after injection and is usually effective for 20 to 24 hours. There are also two long-acting insulin analogues, glargine and detemir. They both tend to lower glucose levels fairly evenly over a 24-hour period with less of a peak of action than ultralente.
+	</p>
+	<p>
+	Premixed insulin can be helpful for people who have trouble drawing up insulin out of two bottles and reading the correct directions and dosages. It is also useful for those who have poor eyesight or dexterity and is a convenience for people whose diabetes has been stabilized on this combination.
+	</p>
+<br />
+	<h3>Characteristics of Insulin</h3>
+	<p>
+	The three characteristics of the four types of insulin are onset, peak time, and duration.
+	</p>
+	<ul>
+		<li><strong>Onset</strong> is the length of time before insulin reaches the bloodstream and begins lowering blood glucose.</li>
+		<li><strong>Peak time</strong> is the time during which insulin is at maximum strength in terms of lowering blood glucose.</li>
+		<li><strong>Duration</strong> is how insulin continues to lower blood glucose.</li>
+	</ul>
+	<br />
+	<h3>Insulin Strength</h3>
+	<p>
+	All insulins come dissolved or suspended in liquids. However, the solutions have different strengths. The most commonly used strength in the United States today is U-100. That means it has 100 units of insulin per milliliter of fluid. U40, which has 40 units of insulin per milliliter of fluid, is not used in the U.S., but is still used in Europe and in Latin America. If you're traveling outside of the U.S., be certain to match your insulin strength with the correct size syringe.
+	</p>
+<br />
+	<h3>More Information</h3>
+	<ul>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_4_a', '600px', '500px')">Animal Insulins</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_4_b', '600px', '420px')">Insulin Storage</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_4_c', '600px', '300px')">Syringe Reuse</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_4_d', '600px', '350px')">Syringe Disposal</a></li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/5/5" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

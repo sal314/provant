@@ -1,0 +1,13 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<strong>Carbohydrate Log</strong><br /><br />
+	<a href="javascript:this.frames['carboCountLog'].print();">print Carbohydrate Log</a><br />
+	<br />
+	<iframe src="/assets/html/ControlIt/carboCountLog.html" name="carboCountLog" frameborder="0" scrolling="no" width="650px" height="694px"></iframe>
+	</body>
+	</html>
+</tpt:body>

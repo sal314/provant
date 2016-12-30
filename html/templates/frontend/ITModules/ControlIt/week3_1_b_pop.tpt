@@ -1,0 +1,20 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Hyperosmolar Nonketogenic Coma (type 2 diabetics):</h3>
+			<p>
+			This is usually the result of profound dehydration as a result of not taking enough fluids or due to fluid loss from events such as pneumonia, burns, stroke, a recent operation, or certain drugs such as phonations, diazoxide, gluco-corticoids and diuretics.
+			</p>
+			<p>
+			With a death rate of over 50 per cent, this is a true medical emergency. Prompt medical attention is warranted to save life. The condition may develop over a period of days or weeks.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

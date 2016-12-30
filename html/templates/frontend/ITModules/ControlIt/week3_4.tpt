@@ -1,0 +1,100 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Blood Lipids<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+
+	<h3>Blood Lipid Goals:</h3>
+	<div class="ITtables">
+	<table border="1" cellpadding="8" style="width:600px">
+		<tr>
+			<th>Lipid (Blood Fats)</th>
+			<th>Goal</th>
+		</tr>
+		<tr>
+			<td>Total Cholesterol</td>
+			<td>Less than 200 mg/dL</td>
+		</tr>
+		<tr>
+			<td>LDL Cholesterol<br />(also known as &amp;quot;bad&amp;quot; cholesterol)</td>
+			<td>Below 100 mg/dL</td>
+		</tr>
+		<tr>
+			<td>HDL Cholesterol<br />(also known as &amp;quot;good&amp;quot; cholesterol)</td>
+			<td>Greater than 40 mg/dL in men<br />Greater than 50 mg/dL in women</td>
+		</tr>
+		<tr>
+			<td>Triglycerides<br />(main form in which fat travels in the blood)</td>
+			<td>Below 150 mg/dL</td>
+		</tr>
+	</table>
+	</div>
+	<br /><br />
+	
+	<h3>Classification of Blood Pressure for Adults:</h3>
+	<div class="ITtables">
+	<table border="1" cellpadding="5" style="width:600px">
+		<tr>
+			<th>Category</th>
+			<th>Systolic<br />(mm Hg)</th>
+			<th>&amp;nbsp;</th>
+			<th>Diastolic<br />(mm Hg)</th>
+		</tr>
+		<tr>
+			<td>Normal</td>
+			<td>Less than 120</td>
+			<td>And</td>
+			<td>Less than 80</td>
+		</tr>
+		<tr>
+			<td>Pre-Hypertension</td>
+			<td>120 - 139</td>
+			<td>Or</td>
+			<td>80 - 89</td>
+		</tr>
+		<tr>
+			<td>Stage I<br />Hypertension</td>
+			<td>140 - 159</td>
+			<td>Or</td>
+			<td>90 - 99</td>
+		</tr>
+		<tr>
+			<td>Stage 2<br />Hypertension</td>
+			<td>160 or higher</td>
+			<td>Or</td>
+			<td>100 or Higher</td>
+		</tr>
+	</table>
+	</div>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/5" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

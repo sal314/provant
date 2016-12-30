@@ -1,0 +1,46 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Caring For Your Teeth<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Dental Care</h3>
+	<p>
+	When you schedule your visit to the dentist, plan to:
+	</p>
+	<ul>
+		<li>Tell your dentist you have diabetes. Also, share any problems with infections or trouble keeping your blood sugar levels under control.</li>
+		<li>Eat before you go to see your dentist. The best time for dental work is when your blood sugar level is in a normal range and your diabetes medication action is low. If you take insulin, a morning visit after a normal breakfast is best.</li>
+		<li>Take your usual medicines before your dentist visit, unless your dentist or doctor tells you to change your dose for dental surgery. Your dentist should consult with your doctor to decide about adjustments in your diabetes medicines, or to decide if an antibiotic is needed before surgery to prevent infection.</li>
+		<li>Stick to your normal meal plan after dental work. If you can't chew well, plan how to get the calories you need. You may need to use your sick-day meal plan that uses more soft or liquid foods.</li>
+		<li>Wait to have dental surgery until your blood sugar is in better shape, if your diabetes is in poor control. If your dental needs are urgent, (pain or swelling), talk to your dentist and doctor about having dental treatment in a hospital or special setting where you can be checked on during and after surgery.</li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/4" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

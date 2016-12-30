@@ -1,0 +1,88 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Counting Carbs<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<h3>Carbohydrate Counting</h3>
+	<p>
+	Carbohydrate counting, or &amp;quot;carb counting,&amp;quot; is a meal planning technique for managing your blood glucose levels. Foods that contain <a href="#" onclick="window.open('http://www.diabetes.org/food-and-fitness/food/what-can-i-eat/carbohydrates.html', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes'); return false;">carbohydrate raise blood glucose</a>. By keeping track of how many carbohydrates you eat and setting a limit for your maximum amount to eat, you can help to keep your blood glucose levels in your target range. Finding the right amount of carbohydrate depends on many things including how active you are and what, if any, medicines you take.
+	</p>
+	<h3>How Many Carbs?</h3>
+	<p>
+	A place to start is at about 45-60 grams of carbohydrate at a meal. You may need more or less carbohydrate at meals depending on how you manage your diabetes. You and your health care team can figure out the right amount for you. Once you know how much carb to eat at a meal, choose your food and the portion size to match.
+	</p>
+	<h3>What Foods Have Carbohydrates?</h3>
+	<p>
+	Foods that contain carbohydrate are:
+	</p>
+	<ul>
+		<li>starchy foods like bread, cereal, rice, and crackers</li>
+		<li>fruit and juice</li>
+		<li>milk and yogurt</li>
+		<li>dried beans like pinto beans and soy products like veggie burgers</li>
+		<li>starchy vegetables like potatoes and corn</li>
+		<li>sweets and snack foods like sodas, juice drinks, cookies, candy, and chips</li>
+	</ul>
+	<p>
+	Non-starchy vegetables have a little bit of carbohydrate but in general are very low.
+	</p>
+	<h3>How Many Carbohydrates Are In These Foods?</h3>
+	<p>
+	Reading food labels is a great way to know how much carbohydrate is in a food. For foods that do not have a label, you have to estimate how much carbohydrate is in it. Keeping general serving sizes in mind will help you estimate how much carbohydrate you are eating.
+	</p>
+	<p>
+	For example there is about <strong>15 grams of carbohydrate</strong> in:
+	</p>
+	<ul>
+		<li>1 small piece of fresh fruit (4 oz)</li>
+		<li>1/2 cup of canned or frozen fruit</li>
+		<li>1 slice of bread (1 oz) or 1 (6 inch) tortilla</li>
+		<li>1/2 cup of oatmeal</li>
+		<li>1/3 cup of pasta or rice</li>
+		<li>4-6 crackers</li>
+		<li>1/2 English muffin or hamburger bun</li>
+		<li>1/2 cup of black beans or starchy vegetable</li>
+		<li>1/4 of a large baked potato (3 oz)</li>
+		<li>2/3 cup of plain fat-free yogurt or sweetened with sugar substitutes</li>
+		<li>2 small cookies</li>
+		<li>2 inch square brownie or cake without frosting</li>
+		<li>1/2 cup ice cream or sherbet</li>
+		<li>1 Tbsp syrup, jam, jelly, sugar or honey</li>
+		<li>2 Tbsp light syrup</li>
+		<li>6 chicken nuggets</li>
+		<li>1/2 cup of casserole</li>
+		<li>1 cup of soup</li>
+		<li>1/4 serving of a medium french fry</li>
+	</ul>
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/7" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

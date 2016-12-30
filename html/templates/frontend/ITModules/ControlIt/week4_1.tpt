@@ -1,0 +1,57 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Caring For Your Feet<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<h3>Foot Care</h3>
+	<p>
+	Inspect your feet every day, and seek care early if you do get a foot injury. Make sure your health care provider checks your feet at least once a year - more often if you have foot problems. Your health care provider should also give you a list and explain the do's and don'ts of foot care. Most people can prevent any serious foot problem by following some simple steps. So let's begin taking care of your feet today.
+	</p>
+	<h3>Prevention</h3>
+	<p>
+	Your health care provider should perform a complete foot exam at least annually but more often if you have foot problems.
+	</p>
+	<p>
+	Remember to take off your socks and shoes while you wait for your physical examination.
+	</p>
+	<p>
+	Call or see your health care provider if you have cuts or breaks in the skin, or have an ingrown nail. Also, tell your health care provider if your foot changes color, shape, or just feels different (for example, becomes less sensitive or hurts).
+	</p>
+	<p>
+	If you have corns or calluses, your health care provider can trim them for you. Your health care provider can also trim your toenails if you cannot do so safely.
+	</p>
+	<p>
+	Because people with diabetes are more prone to foot problems, a foot care specialist may be on your health care team.
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week4_1_a', '600px', '600px')">Caring for Your Feet</a><br />
+	<br />
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/2" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

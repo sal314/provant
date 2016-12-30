@@ -1,0 +1,44 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content controlit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You have completed the Control IT module!</h1>
+	</div>
+	
+	<div class="right">
+		<img src="/assets/media/images/controlit/week4-F.png" alt="Congratulations" />
+	</div>
+
+	<div>
+		<a href="javascript:showWin('/ModuleControlIT/info/week5_6_a');">See references</a><br />
+		<a href="javascript:showWin('/ModuleControlIT/info/week5_6_b');">See resources</a><br />
+	</div>
+
+	<div class="txt-ctr">
+		<h2><a href="javascript:void(0);" onclick="window.open('/ModuleControlIT/Download', '_blank')">Download Certificate</a></h2>
+		<img src="/assets/media/images/controlit/week5-E.jpg" alt="" />
+	</div>
+
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Index" class="loseit-home" style="margin:0 auto">Control It Homepage</a>
+	</div>
+</div>
+
+</tpt:body>

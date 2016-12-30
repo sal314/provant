@@ -1,0 +1,140 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 4 Questionnaire <br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleControlIt/Week/4/11" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	<div class="stack">
+		<div class="question">1. Which is NOT a way to properly care for your feet?</div>
+		<label><tpt:html type="radio" id="K1" value="1" selected="${POST[K1]}" />Wear specially made shoes</label><br />
+		<label><tpt:html type="radio" id="K1" value="2" selected="${POST[K1]}" />Go barefoot whenever possible</label><br />
+		<label><tpt:html type="radio" id="K1" value="3" selected="${POST[K1]}" />Scrub your feet clean and dry daily</label><br />
+		<label><tpt:html type="radio" id="K1" value="4" selected="${POST[K1]}" />Check for cuts, calluses, and swelling</label><br />
+		<tpt:if id="result[K1]" test="EXISTS">
+			<br />
+			<span class="${resClass[K1]}">${result[K1]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">2. For good skin care, what kind of shower is best?</div>
+		<label><tpt:html type="radio" id="K2" value="1" selected="${POST[K2]}" />A hot, steamy shower</label><br />
+		<label><tpt:html type="radio" id="K2" value="2" selected="${POST[K2]}" />A bubble bath</label><br />
+		<label><tpt:html type="radio" id="K2" value="3" selected="${POST[K2]}" />One with a lot of moisturizers and lotions</label><br />
+		<label><tpt:html type="radio" id="K2" value="4" selected="${POST[K2]}" />None of the above</label><br />
+		<tpt:if id="result[K2]" test="EXISTS">
+			<br />
+			<span class="${resClass[K2]}">${result[K2]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">3. When is the best time to eat when going to the dentist?</div>
+		<label><tpt:html type="radio" id="K3" value="1" selected="${POST[K3]}" />Before you go</label><br />
+		<label><tpt:html type="radio" id="K3" value="2" selected="${POST[K3]}" />While you&amp;acute;re in the waiting room</label><br />
+		<label><tpt:html type="radio" id="K3" value="3" selected="${POST[K3]}" />Immediately after</label><br />
+		<label><tpt:html type="radio" id="K3" value="4" selected="${POST[K3]}" />Doesn&amp;acute;t matter</label><br />
+		<tpt:if id="result[K3]" test="EXISTS">
+			<br />
+			<span class="${resClass[K3]}">${result[K3]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">4. If you&amp;acute;re having trouble eating solid foods on a sick day, how often should you drink fluids?</div>
+		<label><tpt:html type="radio" id="K4" value="1" selected="${POST[K4]}" />Whenever you are thirsty</label><br />
+		<label><tpt:html type="radio" id="K4" value="2" selected="${POST[K4]}" />Every 2 hours</label><br />
+		<label><tpt:html type="radio" id="K4" value="3" selected="${POST[K4]}" />Every 4 hours</label><br />
+		<label><tpt:html type="radio" id="K4" value="4" selected="${POST[K4]}" />As little as possible</label><br />
+		<tpt:if id="result[K4]" test="EXISTS">
+			<br />
+			<span class="${resClass[K4]}">${result[K4]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">5. What is the second rule of travel for a person with diabetes?</div>
+		<label><tpt:html type="radio" id="K5" value="1" selected="${POST[K5]}" />Always have your passport</label><br />
+		<label><tpt:html type="radio" id="K5" value="2" selected="${POST[K5]}" />Pack at least twice the amount of medication and blood testing supplies that you need</label><br />
+		<label><tpt:html type="radio" id="K5" value="3" selected="${POST[K5]}" />Pack lots of snacks</label><br />
+		<label><tpt:html type="radio" id="K5" value="4" selected="${POST[K5]}" />Don&amp;acute;t forget to tell your doctor where and when you&amp;acute;re going away</label><br />
+		<tpt:if id="result[K5]" test="EXISTS">
+			<br />
+			<span class="${resClass[K5]}">${result[K5]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">6. What qualifies as a &amp;quot;free food&amp;quot;?</div>
+		<label><tpt:html type="radio" id="K6" value="1" selected="${POST[K6]}" />Food that is less than 20 calories and 5 grams of carbohydrate per serving</label><br />
+		<label><tpt:html type="radio" id="K6" value="2" selected="${POST[K6]}" />Food that you did not have to pay for</label><br />
+		<label><tpt:html type="radio" id="K6" value="3" selected="${POST[K6]}" />Both A and B</label><br />
+		<label><tpt:html type="radio" id="K6" value="4" selected="${POST[K6]}" />None of the above</label><br />
+		<tpt:if id="result[K6]" test="EXISTS">
+			<br />
+			<span class="${resClass[K6]}">${result[K6]}</span><br />
+		</tpt:if>
+	</div>
+	<br />
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleControlIT/Week/4/12">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleControlIT/Week/4/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	</form>
+</div>	
+</tpt:body>

@@ -1,0 +1,23 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Table Tips</h3>
+			<p>
+			Not everyone with diabetes has the same meal plan or the same nutrition goals. For some, cutting calories is most important. Others may need to limit fat and salt, and eat more foods high in fiber. Work with your health care team to identify your own goals. Ask about eating out. If you're planning a special occasion, ask about adding some special food items.
+			</p>
+			<p>
+			If you eat out a lot, find ways to follow your meal plan as much as possible. Pick a restaurant with a variety of choices to increase your chances of finding the foods you want.
+			</p>
+			<p>
+			When you eat out, order only what you need and want. Know how to make changes in your meal plan in case the restaurant doesn't have just what you want.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

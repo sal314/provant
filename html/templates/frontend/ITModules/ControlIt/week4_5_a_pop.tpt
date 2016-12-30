@@ -1,0 +1,29 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+	<h3>International Diabetes Federation Groups</h3>
+		<strong>Write to:</strong> IDF, 1 rue Defaeqz, B-1000, Belgium (<a href="#" onclick="window.open('http://www.idf.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.idf.org</a>).<br />
+		<p>
+		You may want to get a list of English-speaking foreign doctors from the
+		</p>
+		<ul style="list-style-type:none;">
+			<li>International Association for Medical Assistance to Travelers (IAMAT)</li>
+			<li>1623 Military Road, #279</li>
+			<li>Niagara Falls, NY 14304 (<a href="#" onclick="window.open('http://www.iamat.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.iamat.org</a>).</li>
+		</ul>
+		<p>
+		IAMAT can be reached at 716-754-4883. If an emergency occurs while you are traveling and you do not have such a list, contact the American Consulate, American Express, or local medical schools for a list of doctors.
+		</p>
+		<p>
+		No matter where you go, wear a medical ID bracelet or necklace that shows you have diabetes. If you are leaving the country, also learn how to say &amp;quot;I have diabetes&amp;quot; and &amp;quot;sugar or orange juice, please&amp;quot; in the language or languages of the countries you will visit.
+		</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

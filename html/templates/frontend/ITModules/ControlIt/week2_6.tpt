@@ -1,0 +1,138 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 2 Questionnaire <br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleControlIt/Week/2/6" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	<div class="stack">
+		<div class="question">1. True or False: It is better to have only one doctor when becoming a diabetic so that the doctors do not have to get confused by each other&amp;acute;s opinion.</div>
+		<label><tpt:html type="radio" id="F1" value="1" selected="${POST[F1]}" />True</label><br />
+		<label><tpt:html type="radio" id="F1" value="2" selected="${POST[F1]}" />False</label><br />
+		<tpt:if id="result[F1]" test="EXISTS">
+			<br />
+			<span class="${resClass[F1]}">${result[F1]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">2. What should glucose levels read before a meal?</div>
+		<label><tpt:html type="radio" id="F2" value="1" selected="${POST[F2]}" />1 - 10 mg/dL</label><br />
+		<label><tpt:html type="radio" id="F2" value="2" selected="${POST[F2]}" />70 - 130 mg/dL</label><br />
+		<label><tpt:html type="radio" id="F2" value="3" selected="${POST[F2]}" />Above 180 mg/dL</label><br />
+		<label><tpt:html type="radio" id="F2" value="4" selected="${POST[F2]}" />240 mg/dL or over</label><br />
+		<tpt:if id="result[F2]" test="EXISTS">
+			<br />
+			<span class="${resClass[F2]}">${result[F2]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">3. What is it called when too many ketones are made in the body creating severe effects?</div>
+		<label><tpt:html type="radio" id="F3" value="1" selected="${POST[F3]}" />Ketone Testing</label><br />
+		<label><tpt:html type="radio" id="F3" value="2" selected="${POST[F3]}" />Ketone Overload</label><br />
+		<label><tpt:html type="radio" id="F3" value="3" selected="${POST[F3]}" />Diabetic Ketoacidosis</label><br />
+		<label><tpt:html type="radio" id="F3" value="4" selected="${POST[F3]}" />Glycosylated hemoglobin</label><br />
+		<tpt:if id="result[F3]" test="EXISTS">
+			<br />
+			<span class="${resClass[F3]}">${result[F3]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">4. Where on the food label is information listed based on serving size?</div>
+		<label><tpt:html type="radio" id="F4" value="1" selected="${POST[F4]}" />Nutrition Facts</label><br />
+		<label><tpt:html type="radio" id="F4" value="2" selected="${POST[F4]}" />Ingredient List</label><br />
+		<label><tpt:html type="radio" id="F4" value="3" selected="${POST[F4]}" />On the side panel</label><br />
+		<label><tpt:html type="radio" id="F4" value="4" selected="${POST[F4]}" />None of these</label><br />
+		<tpt:if id="result[F4]" test="EXISTS">
+			<br />
+			<span class="${resClass[F4]}">${result[F4]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">5. What effect does alcohol have on blood glucose levels?</div>
+		<label><tpt:html type="radio" id="F5" value="1" selected="${POST[F5]}" />No effect</label><br />
+		<label><tpt:html type="radio" id="F5" value="2" selected="${POST[F5]}" />Raises blood glucose levels</label><br />
+		<label><tpt:html type="radio" id="F5" value="3" selected="${POST[F5]}" />Lowers levels and can be part of the cause of hypoglycemia</label><br />
+		<label><tpt:html type="radio" id="F5" value="4" selected="${POST[F5]}" />Is the reason for low blood glucose</label><br />
+		<tpt:if id="result[F5]" test="EXISTS">
+			<br />
+			<span class="${resClass[F5]}">${result[F5]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">6. Which foods tend to be high in sodium?</div>
+		<label><tpt:html type="radio" id="F6" value="1" selected="${POST[F6]}" />Snacked foods</label><br />
+		<label><tpt:html type="radio" id="F6" value="2" selected="${POST[F6]}" />Canned soups</label><br />
+		<label><tpt:html type="radio" id="F6" value="3" selected="${POST[F6]}" />Frozen Meals</label><br />
+		<label><tpt:html type="radio" id="F6" value="4" selected="${POST[F6]}" />All of the above</label><br />
+		<tpt:if id="result[F6]" test="EXISTS">
+			<br />
+			<span class="${resClass[F6]}">${result[F6]}</span><br />
+		</tpt:if>
+	</div>
+	<br />
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleControlIT/Week/2/7">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleControlIT/Week/2/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	</form>
+</div>	
+</tpt:body>

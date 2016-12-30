@@ -1,0 +1,41 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Meals While Flying<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<h3>Eating in the Air</h3>
+	<p>
+	When you fly, you can request a special meal low in sugar, fat, or cholesterol. Make your request at least two days before the flight. If you take insulin, wait until you see your food coming down the aisle before you take your shot. Otherwise, a delay in the meal could lead to low blood glucose. To be safe, always carry some food with you.
+	</p>
+	<p>
+	If your meal is delayed or an order is mixed up, you won&amp;acute;t be stuck with an empty stomach.
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/7" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

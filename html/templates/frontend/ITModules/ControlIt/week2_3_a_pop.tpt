@@ -1,0 +1,10 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+			<img src="/uploads/file_upload/ITModules/ControlIt/food_label.jpg" />
+		</body>
+	</html>
+</tpt:body>

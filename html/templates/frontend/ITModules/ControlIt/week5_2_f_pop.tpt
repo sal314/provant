@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Alpha-glucosidase inhibitors</h3>
+			<p>
+			Acarbose (brand name Precose) and meglitol (Glyset) are alpha-glucosidase inhibitors. These drugs help the body to lower blood glucose levels by blocking the breakdown of starches, such as bread, potatoes, and pasta in the intestine. They also slow the breakdown of some sugars, such as table sugar. Their action slows the rise in blood glucose levels after a meal. They should be taken with the first bite of a meal. These drugs may have side effects, including gas and diarrhea.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

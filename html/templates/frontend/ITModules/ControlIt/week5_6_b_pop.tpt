@@ -1,0 +1,31 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+		<h3>Resources</h3>
+		<p>
+		There are a variety of important resources for people with diabetes. The largest American organization is the <a href="#" onclick="window.open('http://www.diabetes.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Diabetes Association (ADA)</a>. Based in Alexandria, Virginia, the ADA funds diabetes research, has extensive education programs for patients with diabetes and health-care professionals, and manages camps for children with diabetes. They have a monthly journal &amp;quot;Diabetes Forecast&amp;quot; and a regular e-newsletter for important updates in relevant news. The ADA can be reached at 1-800-DIABETES or <a href="#" onclick="window.open('http://www.diabetes.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.diabetes.org</a>.
+		</p>
+		<p>
+		Other important resources include:
+		</p>
+		<ul>
+			<li>Juvenile Diabetes Research Foundation: 1-800-533-CURE or <a href="#" onclick="window.open('http://www.jdf.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.jdf.org</a>. The JDRF is the world's leading nonprofit, nongovernmental funder of diabetes research. JDRF is the only major diabetes organization focused exclusively on research.</li>
+			<li>Taking Control of Your Diabetes: <a href="#" onclick="window.open('http://www.tcoyd.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.tcoyd.org</a>. A nonprofit organization started by Dr. Steven Edelman at the University of California in San Diego, this group strives to motivate and improve the lives of everyone with diabetes. The programs this group runs are tremendous and if one comes close to you please make time to attend!</li>
+			<li>American Association of Diabetes Educators: <a href="#" onclick="window.open('http://www.aadenet.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.aadenet.org</a></li>
+			<li>The Diabetes Mall: <a href="#" onclick="window.open('http://www.diabetesnet.com', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.diabetesnet.com</a>. Provides reviews of all of the latest research and new products.</li>
+			<li>The Diabetes Monitor: <a href="#" onclick="window.open('http://www.diabetesmonitor.com', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.diabetesmonitor.com</a>. &amp;quot;Monitors everything about diabetes in cyberspace.&amp;quot;</li>
+			<li>Diabetes Interview: <a href="#" onclick="window.open('http://www.diabetesworld.com', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">www.diabetesworld.com</a>. An excellent newspaper.</li>
+		</ul>
+		<br />
+		
+	</div>
+	</div>
+	</body>
+	</html>
+</tpt:body>
+	

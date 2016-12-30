@@ -1,0 +1,40 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+	<h3>Blood Glucose Monitoring</h3>
+			<p>
+			Even the simple, over-the-counter drugs can have harmful effects on blood glucose levels so it is important to be careful and keep watch on how your body responds.  For instance,
+			</p>
+			<p>
+			<strong>Asprin</strong><br />
+			Lowers blood glucose
+			</p>
+			<p>
+			<strong>Cold remedies</strong><br />
+			Raises blood glucose
+			</p>
+			<p>
+			<strong>Cough Drops</strong><br />
+			Raises blood glucose
+			</p>
+			<p>
+			<strong>Niacin (Vitamin B3)</strong><br />
+			Raises blood glucose
+			</p>
+			<p>
+			<strong>Nicotine Patches</strong><br />
+			Lowers blood glucose
+			</p>
+			<p>
+			Some prescription drugs, like those for an under active or removed thyroid gland, can even increase insulin requirements.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

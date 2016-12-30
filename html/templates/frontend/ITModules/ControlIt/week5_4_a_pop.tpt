@@ -1,0 +1,25 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Animal Insulins</h3>
+			<p>
+			For many years, the insulin used by people with diabetes was produced from the pancreases of pigs and cows. Synthetic human insulin derived from genetically engineered bacteria first became available in the 1980s, and now all insulin available in the United States is manufactured in a laboratory. Although the development of synthetic human insulin was a boon for most people, especially those who were allergic to the animal insulins, a few people find that they can manage their diabetes better using animal insulins. Although animal insulins are no longer produced in the United States, the FDA allows individuals to import animal insulins for their own personal use.
+			</p>
+<br />
+			<h3>About Insulin and Other Drugs</h3>
+			<p>
+			Inside the pancreas, beta cells make the hormone insulin. With each meal, beta cells release insulin to help the body use or store the blood glucose it gets from food. In people with type 1 diabetes, the pancreas no longer makes insulin. The beta cells have been destroyed and they need insulin shots to use glucose from meals. People with type 2 diabetes make insulin, but their bodies don't respond well to it. Some people with type 2 diabetes need diabetes pills or insulin shots to help their bodies use glucose for energy. Insulin cannot be taken as a pill. The insulin would be broken down during digestion just like the protein in food. Insulin must be injected into the fat under your skin for it to get into your blood.
+			</p>
+			<p>
+			There are many different insulins for many different situations and lifestyles and there are more than 20 types of insulin sold in the United States. These insulins differ in how they are made, how they work in the body, and price. Insulin is made in labs to be identical to human insulin or it comes from animals (pigs). Future availability of animal insulin is uncertain.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

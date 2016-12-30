@@ -1,0 +1,47 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Alcohol<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	<p>
+	Alcohol can be a sensitive subject for the average person, but for a diabetic there is much more risk.  Because alcohol impairs judgment, it can cause a person to forget to check their blood sugar or take their medications.  Some medications can be harmful when mixed with alcohol so it is best to refer to your pharmacist or doctor.  You may also eat foods that raise your blood sugar without realizing how much you&amp;acute;ve had.  Alcohol lowers blood glucose levels and increases triglycerides.  It is broken down by the liver so as the liver metabolizes the alcohol, the formation of glucose from other sources is blocked and can cause hypoglycemia (low blood glucose).
+	</p>
+	<p>
+	The American Diabetes Association recommends two drinks or less per day for men that choose to drink, and one drink or less per day for women.  Other recommendations and tips to keep in mind if you choose to drink alcohol would be:
+	</p>
+	<ul>
+		<li>Do not drink alcohol on an empty stomach, always try to pair alcohol with a meal</li>
+		<li>Drink only if your diabetes is in good control</li>
+		<li>Choose drinks that are lower in sugars and alcohol (example:  light beers and dry wines)</li>
+		<li>Select sugar-free drink mixers</li>
+		<li>Do not plan to exercise before, during or after drinking alcohol</li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/2/5" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

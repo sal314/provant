@@ -1,0 +1,31 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Ordering Out</h3>
+			<p>
+			The fast food we eat may stick around a lot longer than we'd like. It may linger in our bodies as excess blood fats and extra pounds.
+			</p>
+			<ul>
+				<li>Watch out for words like jumbo, giant, deluxe, biggie-sized or super-sized. Larger portions mean more calories. They also mean more fat, cholesterol and salt. Order a regular or junior-sized sandwich instead.</li>
+				<li>Choose grilled or broiled sandwiches with meats such as lean roast beef, turkey or chicken breast, or lean ham. Order items plain, without toppings, rich sauces, or mayonnaise. Add flavor with mustard, and crunch with lettuce, tomato, and onion.</li>
+				<li>Skip the croissant or biscuit. Eat your sandwich on a bun, bread or English muffin and save calories and fat.</li>
+				<li>Stay away from double burgers or "super" hot dogs with cheese, chili, or sauces. Cheese carries an extra 100 calories per ounce, as well as added fat and sodium.</li>
+				<li>Go for the salad bar, but watch out for high-fat toppings like dressings, bacon bits, cheeses, and croutons. Even too much low-calorie dressing can add up. Check the calories on the packet. Also limit salad bar items that are dressed with a lot of mayo, such as potato or macaroni salad. Fill your salad with things like carrots, peppers, onion, celery, broccoli, cauliflower, spinach, and etc.</li>
+				<li>Order bean burritos, soft tacos, fajitas, and other non-fried items when eating Mexican fast foods. Choose chicken over beef. Limit refried beans. Or ask if they have beans that aren't refried. Pile on extra lettuce, tomatoes, and salsa. Go easy on cheese, sour cream, and guacamole. Watch out for deep-fried taco salad shells - a taco salad can have more than 1,000 calories!</li>
+				<li>Pizza can be a good fast food choice. Go for thin crust pizza with vegetable toppings. Limit to 1-2 slices. Meat and extra cheese add calories, fat and sodium.</li>
+				<li>End your meal with sugar-free, fat-free frozen yogurt or a small cone of fat-free yogurt. Better still, bring a piece of fresh fruit from home. Ices, sorbets, and sherbets have less fat and fewer calories than ice cream. But they are chock full of sugar. They can send your blood sugar too high if you don't work the extra carbohydrate into your meal plan.</li>
+				<li>Be alert for traps. Fat-free muffins for breakfast may have plenty of sugar. Skinless fried chicken can have almost as much fat as the regular kind. Chinese food may seem like a healthy choice, but many dishes are deep fried or high in fat and sodium, especially in the sauces.</li>
+			</ul>
+			<p>
+			Eating out can be one of life's great pleasures. Make the right choices, ask for what you need, and balance your meals out with healthy meals at home. You can enjoy yourself and take good care of your diabetes at the same time.
+			</p>
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

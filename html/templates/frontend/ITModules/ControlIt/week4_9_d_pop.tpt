@@ -1,0 +1,38 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>The Fast-Food Challenge</h3>
+			<p>
+			Believe it or not, you can make healthy fast-food choices. How? Know exactly what you are ordering and plan ahead.
+			</p>
+			<p>
+			Keep the ground rules of good nutrition in mind. Eat a variety of foods in moderate amounts, limit the amount of fat you eat, and watch the amount of salt in food.
+			</p>
+			<p>
+			Follow the guidelines you've worked out with your dietitian or doctor.
+			</p>
+			<p>
+			What you order is the key. It's easy to eat an entire day's worth of fat, salt, and calories in just one fast-food meal. But it's also possible to make wise choices and eat a fairly healthy meal.
+			</p>
+			<p>
+			Here are some tips to help you choose well.
+			</p>
+			<ul>
+				<li>Know that an average fast-food meal can run as high as 1000 calories or more, and raise your blood sugar above your target range.</li>
+				<li>Know the nutritional value of the foods you order. Although there are some good choices, most fast-food items are high in fat and calories.</li>
+				<li>If you are having fast-food for one meal, let your remaining meals that day contain healthier foods, like fruits and vegetables.</li>
+				<li>Think about how your food will be cooked. Chicken and fish can be good choices - but not if they are breaded and deep fried.</li>
+			</ul>
+			<p>
+			If breakfast is your fast-food meal, choose a plain bagel, toast, or English muffin. Other muffins may be loaded with sugar and fat. Add fruit juice or low-fat or fat-free milk. Order cold cereal with fat-free milk, pancakes without butter, or plain scrambled eggs. Limit bacon and sausage because they are high in fat.
+			</p>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

@@ -1,0 +1,61 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Basic Meal Planning<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	<p>
+	Once a person has been diagnosed with diabetes, it is important to watch food patterns and habits so that blood sugar can be kept stable. It may be helpful to write down all food and beverage intake to observe patterns to stabilize weight and diet.  By keeping track of dietary intake, noting time and portions of food, it is easier to plan meals ahead of time.  Properly managing diabetes is a balancing act between food (especially carbohydrates), exercise, medication, and stress.  Eating a healthy diet does not have to be a source of stress as long as some basic guidelines, listed below, are followed.
+	</p>
+	<ul>
+		<li>Do not skip or delay meals</li>
+		<li>Eat meals and snacks at regular times every day</li>
+		<ul>
+			<li>Three balanced meals plus snacks spread evenly throughout the day</li>
+		</ul>
+		<li>Eat a variety of foods</li>
+		<ul>
+			<li>Lots of colors and whole grains</li>
+		</ul>
+		<li>Make sure to get enough fiber every day</li>
+		<li>Watch portion sizes</li>
+		<li>Eat slowly and enjoy the flavor of the food</li>
+		<li>Plan meals ahead of time</li>
+		<li>Avoid sugary and high fat foods on a regular basis</li>
+	</ul>
+	<p>
+	In fact, with a proper diet and exercise routine, the risk for developing type 2 Diabetes is reduced by 58% if a weight loss of 5-7% can be achieved.  The United States Department of Agriculture has designed the Food Pyramid that details the amount of servings recommended for each food group based on individual caloric needs. To access the food pyramid visit: <a href="#" onclick="window.open('http://www.mypyramid.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes');">www.mypyramid.gov</a>.
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week1_3_a', '600px', '300px')">Tips for menu planning and grocery shopping</a><br />
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/1/4" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>	
+	
+</tpt:body>
+	

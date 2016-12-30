@@ -1,0 +1,75 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Blood Glucose Monitoring<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<p>
+	The goal of diabetes treatment is to bring glucose levels down to as close to normal as is safely possible.  Depending on the target glucose level, glucose levels should be around 70-130 milligrams per deciliter (mg/dL) before a meal.  After a meal, the goal is to have glucose levels at less than 180 mg/dL within two hours.  If you experience feelings of &amp;quot;light headedness&amp;quot; then your body is letting you know to check your blood sugar.  The quickest fix for a situation like that would be to eat 15 grams of carbohydrate: a cup of milk, 5-6 hard candies, or 4 ounces of juice or soda to get your blood sugar almost regular again.
+	</p>
+	<p>
+	It is important to know how to <strong>self monitor blood glucose levels</strong> in the case that an emergency arises because it is also one of the best tools for managing your diabetes.  By checking it various times a day, it also becomes easier to pick up on any blood sugar patterns.
+	</p>
+	<p>
+	Regularly testing your blood glucose guides you to make choices regarding food and physical activity, provides feedback on how well these choices are working for you and helps to determine what factors have the greatest impact in managing your blood glucose.  Maintaining blood glucose levels as close to normal as possible is the best way to avoid complications from diabetes and keep you feeling your best.  Some individuals may have blood glucose goals that slightly deviate from normal, so aim for levels within the range determined by you and your diabetes care team.  Regular testing will help you adjust food intake, physical activity level and medications if necessary.  Below are the target blood glucose goals for before and after meals:
+	</p>
+	<div class="ITtables">
+	<table cellpadding="10">
+		<thead>
+			<tr>
+				<th>Time</th>
+				<th>Blood Glucose Goal Range*</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Fasting/Before meals (pre-prandial)</td>
+				<td>90-130 mg/dL</td>
+			</tr>
+			<tr>
+				<td>After meals-2 or more hours (post-prandial)</td>
+				<td>&amp;lt;180 mg/dL</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<br />
+	<span style="font-size:9px">* American Diabetes Association, &amp;quot;Clinical Practice Recommendations,&amp;quot; Diabetes Care January 2005, suppl 1, S10.</span>
+	<br /><br />
+	<p>
+	<strong>Glycosylated hemoglobin, or A1C</strong>, is a laboratory blood check for doctors to monitor how well your blood sugar has been checked over a period of time (usually 3-4 months).  It details the amount of blood sugar that is attached to red blood cells.  Typically, this measurement comes as a percentage where the goal is to achieve less than 7% in order to reduce the risk of diabetes complications.
+	</p>
+	<p>
+	There is also <strong>ketone testing</strong> that can be used to monitor blood glucose levels above 240 mg/dl, but mostly for those with Type 1 or Gestational Diabetes.  When the body doesn&amp;acute;t have enough insulin to burn fat for fuel, it produces ketones which build up in the blood.  Diabetic Ketoacidosis is a result of too many ketones being made in the body and can create severe effects.
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week2_2_a', '600px', '500px' )">Other things to watch</a>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/2/3" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,18 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+
+			<h3>Oral Glucose Tolerance Test:</h3>
+			<p>
+			This test measures the body&amp;acute;s response to sugar.  A person would have to fast, but is then given a drink containing a high amount of sugar.  Blood samples are looked at every thirty minutes for the next three hours to monitor blood sugar levels. After two hours, someone without diabetes would have a blood sugar reading at or less than 140 mg/dL.  Between 140-200 mg/dL indicates impaired glucose tolerance (pre-diabetes). If test results are in this range, a patient is at an increased risk for developing diabetes. However, someone with diabetes would have a reading of 200 mg/dL or more.
+			</p>
+			</div>
+			</div>
+		</body>
+	</html>
+</tpt:body>

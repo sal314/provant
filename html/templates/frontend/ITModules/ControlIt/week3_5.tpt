@@ -1,0 +1,52 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Coping With Diabetes<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<h3>Strategies For Coping With Diabetes:</h3>
+	<p>
+	Different people find different ways to cope with diabetes. Some people find it helpful to join a support group. This can be found in most communities by calling the local <a href="#" onclick="window.open('http://www.diabetes.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes'); return false;">American Diabetes Association</a> office. Others prefer to volunteer at hospitals, diabetes clinics, or camps for children with diabetes. For others, coping mechanisms require talking to a professional such as a psychologist. For everyone, it is important to relate feelings to both your family and your physician.
+	</p>
+	<h3>Asking For Help</h3>
+	<p>
+	There are many options for help in coping with diabetes. Support groups, healthcare professionals, and clergy can all be of assistance. Often, simply finding someone with experience living with diabetes can be quite helpful. The American Diabetes Association is a good resource, and they have a variety of books dealing with this topic. The books can be found at www.diabetes.org.
+	</p>
+	<p>
+	In many communities, the clinical nurse specialist is the most knowledgeable about what resources are available for a particular location.
+	</p>
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_5_a', '600px', '350px')">Work</a><br /><br />
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_5_b', '600px', '350px')">Family and friends</a><br /><br />
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_5_c', '600px', '470px')">Adaptive Aids</a><br /><br />
+	<a href="javascript:showWin('/ModuleControlIT/info/week3_5_d', '600px', '430px')">Stress</a><br /><br />
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/6" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

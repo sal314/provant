@@ -1,0 +1,63 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Dining Out<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+    Whether it's a business meeting over lunch, dinner from a neighborhood carry out, or a fast-food meal with the kids, eating out is a part of our lives. We eat out because it's easy, it's quick, and it's fun. But is it healthy?
+	</p>
+	<p>
+	It can be. Plan ahead, choose wisely, and you'll find foods that fit into your meal plan. Many restaurants are trying to meet diners' health needs. You want healthy foods because you have diabetes -- and you're not alone. More and more people want healthy food choices. Some are watching calories. Others want to keep their cholesterol under control or eat less fat.
+	</p>
+	<p>
+	Some restaurants offer foods lower in cholesterol, fat, and sodium, and higher in fiber. All restaurants offer low calorie sweeteners in the blue, yellow or pink packets, and diet drinks. Many offer reduced-calorie salad dressings, low-fat or fat-free milk, and salt substitutes. It's easy to find salads, fish, vegetables, baked or broiled food, and whole-grain breads.
+	</p>
+	<p>
+	Many restaurants have menu items that are "heart healthy." Ask for calorie and fat information on menu items. If you ask, chefs will often make low-fat entrees using low-cholesterol eggs or lean cuts of meat. You can ask for: skinless chicken, no butter on a particular dish, broiled instead of fried, and your sauces to be served on the side. There are some restaurants that let you order smaller portions at lower prices.
+	</p>
+	<p>
+	<h3>More Information:</h3>
+	</p>
+	<ul>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_a', '600px', '300px');">Table Tips</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_b');">Recommendations for dining out</a></li>
+		<li><a href="javascript:showWin('/ModulecontrolIT/info/week4_9_c', '600px', '390px');">Dining On Time</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_d', '600px', '540px');">The Fast-Food Challenge</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_e', '640px', '600px');">Ordering Out</a></li>
+		<li><a href="javascript:showWin('/ModulecontrolIT/info/week4_9_f', '600px', '300px');">Specialty Foods and Snacking</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_g', '600px', '400px');">Snacking: A Primer</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_h', '600px', '300px');">Read the Fine Print</a></li>
+		<li><a href="javascript:showWin('/ModulecontrolIT/info/week4_9_i');">Free Foods</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week4_9_j', '600px', '300px');">Sweets and Desserts</a></li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/10" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

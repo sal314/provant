@@ -1,0 +1,62 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Fats<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<p>
+	A small amount of fat in the diet is necessary to maintain good health. Consuming too much fat increases your risk for heart disease.  Fats are also calorie dense and can be a factor in weight gain and obesity. Diabetes increases your risk of heart disease and stroke by accelerating the development of clogged and hardened arteries.
+	</p>
+	<h3>Limit Saturated and Trans Fats:</h3>
+	<p>
+	Saturated fats are mainly found in animal products and are solid at room temperature. Trans fats (hydrogenated fats) significantly raise your cholesterol and they are found in commercially baked goods, stick margarines, fried foods and other processed foods.  It is recommended that no more than ten percent of your daily calories come from saturated fat, and try to avoid trans fat completely. The best way to reduce the amount of saturated and trans fats is to:
+	</p>
+	<ul>
+		<li><strong>Limit solid fats:</strong> Reduce the amount of butter, margarine and shortening you eat.</li>
+		<li><strong>Use low-fat substitutions:</strong> For example, top your baked potato with salsa or low-fat yogurt rather than butter. Try sugar-free fruit spread on toast instead of margarine.</li>
+		<li><strong>Unsaturated fats (monounsaturated and polyunsaturated):</strong> Unsaturated fats are known as the &amp;quot;good fats&amp;quot; may help to lower your blood cholesterol.  They are mainly found in plant products and are liquid at room temperature.  Aim for monounsaturated fats - such as olive oil or canola oil. Polyunsaturated fats, found in nuts and seeds, are a healthier choice as well. But moderation is essential. All fat is high in calories.</li>
+	</ul>
+	<h3>Limit Dietary Cholesterol:</h3>
+	<p>
+	When there&amp;acute;s too much cholesterol in your blood, you may develop fatty deposits in your blood vessels. Eventually, these deposits make it difficult for enough blood to flow through your arteries. To help keep your cholesterol under control, consume no more than 200 milligrams of cholesterol a day.<br />To reduce how much cholesterol you eat:
+	</p>
+	<ul>
+		<li>Use lean cuts of meat instead of organ meats</li>
+		<li>Choose egg substitutes over egg yolks</li>
+		<li>Opt for low fat dairy products</li>
+	</ul>
+	<h3>Eat Heart-healthy Fish at Least Twice a Week:</h3>
+	<p>
+	Fish can be a good alternative to high-fat meats. Cod, tuna and halibut, for example, have less total fat, saturated fat and cholesterol than do meat and poultry. Fish such as salmon, mackerel and herring are rich in omega-3 fatty acids, which promote heart health by lowering blood fats called triglycerides. Limit fried fish and fish with high levels of mercury, such as tilefish, swordfish and king mackerel.
+	</p>
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/1/6" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>	
+</tpt:body>
+	

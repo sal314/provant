@@ -1,0 +1,52 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Writing Down Food<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	Writing down food, exercise and blood sugar helps you:
+	<ul>
+		<li>See patterns in blood sugar</li>
+		<li>See how much food you should eat at meals</li>
+		<li>Create an eating plan that fit your needs</li>
+		<li>And your doctor come up with a plan to best manage your diabetes</li>
+		<li>See if changes in insulin/medicine or food need to be made to avoid low blood sugar during exercise.</li>
+		<li>Write down stressful situations or illness as they impact glucose levels.</li>
+	</ul>
+	<p>
+	In the log that follows, write down what you eat and drink at meals/snacks, along with any exercise, stress or illness.  Test and record your blood sugar first thing in the morning, 2 hours after the start of each meal and before bed.
+	</p>
+	<br />
+	<a href="javascript:showWin('/ModuleControlIT/info/week1_6_a','780px','740px')">Show Meal Log</a><br />
+
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/1/7" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>	
+</tpt:body>

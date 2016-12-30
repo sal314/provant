@@ -1,0 +1,55 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Food Labels<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<p>
+	Knowing about the foods in your diet will help you to feel better about what you are eating and will make managing your diabetes much easier.  The types of foods and the amounts in which they are eaten can cause blood sugar to rise at varying levels so it is important to know how food affects you.  Food labels contain a number of important health claims that people, particularly those with diabetes, should look into.  The &amp;quot;Nutrition Facts&amp;quot; section on food labels lists information that is based on a particular serving size.  This is convenient, especially when portioning out foods and planning ahead of what to eat.  However, make sure to compare what is an actual serving size with what you think is a serving size so there is not any miscalculating.  Some things you should focus on when reading a <a href="javascript:showWin('/ModuleControlIT/info/week2_3_a' , '325px', '555px')">food label</a> include:
+	</p>
+	<ul>
+		<li>Serving size</li>
+		<li>Servings per container</li>
+		<li>Calories</li>
+		<li>Fat (saturated fat)</li>
+		<li>Cholesterol</li>
+		<li>Sodium</li>
+		<li>Dietary fiber</li>
+		<li>Sugar</li>
+		<li>Carbohydrates</li>
+		<li>Protein</li>
+	</ul>
+	<p>
+	Be aware of various health claims saying &amp;quot;Fat Free&amp;quot; or &amp;quot;Light&amp;quot; that can be misleading.  Do not assume that those claims mean &amp;quot;Sugar Free&amp;quot; either.  However, you can take advantage of foods with those kinds of labels after looking for sources of fat, sweeteners, and ingredients that are likely to cause allergic reactions.  Talk to your dietitian or diabetes educator about what specific nutrients you should look out for on the label as well.
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/2/4" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>
+	

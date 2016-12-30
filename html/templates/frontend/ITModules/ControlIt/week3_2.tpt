@@ -1,0 +1,85 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Hypoglycemia<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Hypoglycemia</h3>
+	<p>
+	Keeping blood sugar as close to normal as possible is essential to prevent health problems from diabetes.  Low blood sugar=blood sugar less than 70 mg/dL. Hypoglycemia (low blood sugar) can happen from one or more of these reasons:
+	</p>
+	<ul>
+		<li>Skipped, small or late meals</li>
+		<li>Abnormal, unplanned or too much exercise</li>
+		<li>too much insulin or diabetes medicine</li>
+		<li>too much alcohol</li>
+	</ul>
+	<p>
+	With low blood sugar you may feel hungry, shaky, sweaty, light-headed, sleepy, and anxious, confused and find it hard to talk.  It is very dangerous if your blood sugar goes too low and you could pass out, fall into a coma or even die.
+	</p>
+	<p>
+	Test your blood sugar if you feel it is low. If is lower than 70 mg/dL then eat 15 grams of sugar called carbohydrate in the form of:
+	</p>
+	<ul>
+		<li>4 oz regular soda or juice</li>
+		<li>1 cup of milk</li>
+		<li>2-3 glucose tablets, 5-6 hard candies</li>
+	</ul>
+	<p>
+	Wait 15 minutes and test your blood sugar again.  Repeat the steps until blood sugar is above 70 mg/dL. Have a bigger snack or small meal if your next meal is more than 1 hour away.
+	</p>
+	<h3>Hyperglycemia: High Blood Sugar</h3>
+	<ul>
+		<li>High blood sugar=blood sugar greater than your target range</li>
+		<li>Greater than 130mg/dL before meals</li>
+		<li>Greater than 180 mg/dL 2 hours after meals</li>
+	</ul>
+	<h3>Symptoms associated with high blood sugar are:</h3>
+	<ul>
+		<li>Increased thirst</li>
+		<li>Increased Urination</li>
+		<li>Blurred vision</li>
+		<li>Dry skin</li>
+		<li>Hunger</li>
+		<li>Drowsy</li>
+	</ul>
+	<h3>Causes:</h3>
+	<ul>
+		<li>Skipping diabetes medicine or not taking the correct amount</li>
+		<li>Not enough activity or exercise</li>
+		<li>Eating too much</li>
+		<li>Stress (physical or emotional)</li>
+		<li>Illness</li>
+		<li>Infection</li>
+	</ul>
+	<br />
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/3" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

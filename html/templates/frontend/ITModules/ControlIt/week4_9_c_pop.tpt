@@ -1,0 +1,25 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Dining On Time</h3>
+			<p>
+			If you take diabetes pills or insulin shots, it pays to think about when you'll eat as well as what you'll eat. You can avoid problems by planning ahead.
+			</p>
+			<ul>
+				<li>If you're eating out with others, ask them to eat at your usual time.</li>
+				<li>Make your plans so you won't be kept waiting for a table when you need to be eating.</li>
+				<li>Have your reservations and be on time. Avoid the times when the restaurant is busiest so you won't have to wait.</li>
+				<li>Ask whether "special" dishes will take extra time.</li>
+				<li>If your lunch or dinner is going to be later than usual, eat a fruit or starch serving from that meal at your usual mealtime.</li>
+				<li>If the dinner will be very late, you can eat your bedtime snack at your usual dinner time. Then, eat your full dinner at the later hour. You may need to adjust your insulin to do this.</li>
+			</ul>
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

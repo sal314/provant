@@ -1,0 +1,54 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Caring For Your Skin<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Skin Care</h3>
+	<p>
+	Diabetes can affect every part of the body, including the skin. As many as one third of people with diabetes will have a skin disorder caused or affected by diabetes at some time in their lives. In fact, such problems are sometimes the first sign that a person has diabetes. Luckily, most skin conditions can be prevented or easily treated if caught early.
+	</p>
+	<h3>Good Skin Care</h3>
+	<p>
+	There are several things you can do to head off skin problems:
+	</p>
+	<ul>
+		<li>Keep your diabetes well managed. People with high glucose levels tend to have dry skin and less ability to fend off harmful bacteria. Both conditions increase the risk of infection.</li>
+		<li>Keep skin clean and dry. Use talcum powder in areas where skin touches skin, such as armpits and groin.</li>
+		<li>Avoid very hot baths and showers. If your skin is dry, don't use bubble baths. Moisturizing soaps may help. Afterward, use a standard skin lotion, but don't put lotions between toes. The extra moisture there can encourage fungus to grow.</li>
+		<li>Prevent dry skin. Scratching dry or itchy skin can open it up and allow infection to set in. Moisturize your skin to prevent chapping, especially in cold or windy weather.</li>
+		<li>Treat cuts right away. Wash minor cuts with soap and water. Do not use Mercurochrome antiseptic, alcohol, or iodine to clean skin because they are too harsh. Only use an antibiotic cream or ointment if your doctor says it's okay. Cover minor cuts with sterile gauze. See a doctor right away if you get a major cut, burn, or infection.</li>
+		<li>During cold, dry months, keep your home more humid. Bathe less during this weather, if possible.</li>
+		<li>Use mild shampoos. Do not use feminine hygiene sprays.</li>
+		<li>See a dermatologist (skin doctor) about skin problems if you are not able to solve them yourself.</li>
+		<li><a href="#" onclick="window.open('http://www.diabetes.org/living-with-diabetes/complications/foot-care.html', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes'); return false;">Take good care of your feet</a>. Check them every day for sores and cuts. Wear broad, flat shoes that fit well. Check your shoes for foreign objects before putting them on.</li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/3" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

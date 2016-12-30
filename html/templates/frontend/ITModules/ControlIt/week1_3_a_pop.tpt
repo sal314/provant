@@ -1,0 +1,25 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+		
+<div class="popup">
+	<div class="inner-content">
+			<h3>The following are helpful tips for menu planning and grocery shopping:</h3>
+			<ul>
+				<li>Review local grocery store flyers to see what is on sale</li>
+				<li>Write out weekly menus</li>
+				<li>Make a shopping list and stick to it</li>
+				<li>Do not go shopping when hungry</li>
+				<li>Shop for foods that are in season</li>
+				<li>Use fresh vegetables at the beginning of the week and frozen vegetables towards the end of the week</li>
+			</ul>
+			
+	</div>
+</div>
+		</body>
+	</html>
+</tpt:body>
+				

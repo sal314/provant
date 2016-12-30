@@ -1,0 +1,18 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+			<h3>Read the Fine Print</h3>
+			<p>
+			Keep in mind foods labeled as sugar-free, no sugar added, reduced-sugar and dietetic still contain carbohydrate. When you check the amount of sugars (listed as &amp;quot;Sugars&amp;quot; under &amp;quot;Total Carbohydrate&amp;quot;) in the Nutrition Facts on the label, keep in mind that the total carbohydrate includes both added sugars and naturally occurring sugars, such as the natural sugar in raisins. That's why it is more important to check the total carbohydrates.
+			</p>
+			
+		</div>
+		</div>
+		</body>
+	</html>
+</tpt:body>

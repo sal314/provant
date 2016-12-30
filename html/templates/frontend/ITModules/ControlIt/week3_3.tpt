@@ -1,0 +1,81 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Chronic Complications<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	You can prevent or delay long-term problems by managing your blood sugar.
+	</p>
+	<div class="ITtables">
+	
+	<table border="0" cellpadding="8" width="600px">
+		<tr>
+			<th>Complications</th>
+			<th>Problems</th>
+		</tr>
+		<tr>
+			<td><strong>Cardiovascular Disease</strong><br />(Heart and Blood Vessel Disease)</td>
+			<td><ul><li>Heart Attack</li>
+					<li>Stroke</li>
+					<li>Decreased blood flow in legs and arms</li>
+					<li>High blood lipids (fats)</li>
+					<li>High Blood Pressure</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Neuropathy</strong><br />(Nerve Disease)</td>
+			<td><ul><li>Burning, tingling and numbness in legs, feet and hands</li>
+					<li>Heartburn</li>
+					<li>Stomach pain</li>
+					<li>Diarrhea</li>
+					<li>Urinary Tract Infections</li>
+					<li>Sexual Problems</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Nephropathy</strong><br /><br /><strong>Kidney Disease</strong></td>
+			<td>End-stage renal disease<br /><br />Dialysis<br /></td>
+		</tr>
+		<tr>
+			<td><strong>Retinopathy</strong><br /><br />(Eye Disease)</td>
+			<td>Cataracts<br /><br />Blindness<br /></td>
+		</tr>
+		<tr>
+			<td><strong>Dental Disease</strong></td>
+			<td>Gum infections<br /></td>
+		</tr>
+	</table>
+	</div>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/3/4" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

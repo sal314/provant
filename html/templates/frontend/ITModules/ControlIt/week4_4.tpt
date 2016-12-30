@@ -1,0 +1,46 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Sick Days<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Sick Day Management</h3>
+	<p>
+	When sick, our body releases hormones that help us get better but also raise blood sugar levels. When you are sick:
+	</p>
+	<ul>
+		<li>Check blood sugar and urine ketones every 4 hours if you have type 1 diabetes. Type 2 diabetics should test 4 times a day and urine ketones if blood sugar is higher than 300 mg/dL.  Your body makes ketones when it can not use blood sugar for energy.</li>
+		<li>Take diabetes medicine even if you are throwing up.  You may need to take more insulin than usual or may have to use it for a short time to control blood sugar.</li>
+		<li>Eat normally and drink extra fluids.  If you can&amp;acute;t, eat easy foods like; 1/2 cup regular jello or applesauce, 6 saltine crackers, 3 graham crackers,1 slice dry toast or 1/2 cup cooked cereal.</li>
+		<li>If it is hard to eat solid foods, drink fluids with sugar every 4 hours like; 1 double stick popsicle, 1 cup Gatorade, milk or soup, 1/2 cup juice or regular soft drink</li>
+		<li>Take small doses of over the counter medicine.</li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/4/5" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

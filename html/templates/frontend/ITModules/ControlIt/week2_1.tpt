@@ -1,0 +1,62 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Healthy Monitoring<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<p>
+	Those dealing with diabetes should know that it is important to have a team of medical practioners rather than relying on one person alone.  Typically, a team is made up of a Registered Dietitian, Optometrist/Ophthalmologist, Podiatrist, Endocrinologist and your primary care physician. People suffering from high glucose levels have a higher chance of developing eye, nerve and kidney disease.  They are also more susceptible to getting infections.  As diabetes affects different parts of your body, different doctors should be included on your team for proper treatment.  Some things to check on a regular cycle include:
+	</p>
+
+		<h3>Daily</h3>
+			<ul>
+				<li>Monitoring your blood sugar (as ordered by your physician)</li>
+				<li>Following a healthy meal plan</li>
+				<li>Examining your feet</li>
+			</ul>
+		<h3>Every 6 Months</h3>
+			<ul>
+				<li>Dental exam and cleaning</li>
+			</ul>
+		<h3>Once a Year</h3>
+			<ul>
+				<li>Completing history and physical exams</li>
+				<li>Checking blood for lipids</li>
+				<li>Sampling urine for protein</li>
+				<li>Examining eyes</li>
+				<li>Receiving flu and pneumonia vaccines</li>
+			</ul>
+
+	<p>
+	It is also a wise idea to keep stress levels down.  Stress can be in response to your own feelings or to things going on around you but has the ability to cause blood sugar levels to rise.
+	</p>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/2/2" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

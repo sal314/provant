@@ -1,0 +1,58 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Diagnostic Criteria<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+
+	<p>
+	Nearly 24 million children and adults have been diagnosed with diabetes. Nearly one-fourth of those with the disease (5.7 million) do not even know that they have it.  Some common symptoms of diabetes include:
+	</p>
+	<ul>
+		<li>Frequent urination</li>
+		<li>Increased thirst</li>
+		<li>Unplanned weight loss</li>
+		<li>Weakness and fatigue</li>
+		<li>Numbness or tingling in hands, legs or feet</li>
+		<li>Blurred vision</li>
+		<li>Dry, itchy skin</li>
+		<li>Frequent infections</li>
+		<li>Slow healing of cuts and bruises</li>
+	</ul>
+	<h3>Screening Tests for Diabetes Include:</h3>
+	<ol>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week1_2_a', '600px', '300px')">Fasting Blood Sugar/Glucose Test</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week1_2_b', '600px', '300px')">Oral Glucose Tolerance Test</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week1_2_c', '600px', '300px')">Random Blood Sugar Test</a></li>
+	</ol>
+
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/1/3" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,19 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+	<div class="popup">
+	<div class="inner-content">
+
+			<h3>Diabetic Acidosis (type 1 diabetics):</h3>
+			<p>
+			This condition primarily occurs in the type 1 diabetic and, if progressive, can result in coma and numerous metabolic derangements. The coma is usually preceded by a day or more of frequent urination and severe thirst along with severe fatigue, nausea and vomiting, and mental confusion.<br /><strong>This is a medical emergency. Prompt recognition and treatment is important.</strong>
+			</p>
+			
+	</div>
+	</div>
+		</body>
+	</html>
+</tpt:body>

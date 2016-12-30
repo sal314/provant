@@ -1,0 +1,70 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Controlling Blood Sugar<br /><small>Control IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+		
+	<div class="w-75p left">
+	
+	<h3>Guidelines for Good Control:</h3>
+	<ul>
+		<li>Meet with your doctor to work out a plan to tightly control your blood sugars</li>
+		<li>Meet with a dietitian to develop a meal plan</li>
+		<li>Check your blood sugars as often as your doctor recommends (This may be 4-6 times per day or more if you take insulin or have an insulin pump)</li>
+		<li>Check your urine for ketones, if advised.</li>
+	</ul>
+
+	<h3>Diabetes Medications</h3>
+	<p>
+	The first treatment for type 2 diabetes is often meal planning for blood glucose (sugar) control, weight loss, and exercising. Sometimes these measures are not enough to bring blood glucose levels down near the normal range. The next step is taking a medicine that lowers blood glucose levels.
+	</p>
+
+	<h3>How They Work</h3>
+	<p>
+	In people with diabetes, blood glucose levels are too high. These high levels occur because glucose remains in the blood rather than entering cells, where it belongs. For glucose to pass into a cell insulin must be present and the cell must be &amp;quot;hungry&amp;quot; for glucose.
+	</p>
+	<p>
+	People with type 1 diabetes don't make insulin. For them, insulin shots are the only way to keep blood glucose levels down.
+	</p>
+	<p>
+	People with type 2 diabetes tend to have two problems: they don't make quite enough insulin and the cells of their bodies don't seem to take in glucose as eagerly as they should.
+	</p>
+
+	<h3>Oral Medications</h3>
+	<ul>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_a', '600px', '280px')">Sulfonylureas</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_b', '600px', '280px')">Meglitinides</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_c', '600px', '250px')">Biguanides</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_d', '600px', '250px')">Thiazolidinediones</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_e', '600px', '250px')">DPP-4 Inhibitors</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_f', '600px', '250px')">Alpha-glucosidase Inhibitors</a></li>
+		<li><a href="javascript:showWin('/ModuleControlIT/info/week5_2_g', '600px', '250px')">Oral Combination Therapy</a></li>
+	</ul>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleControlIT/Week/5/3" class="right next">Next</a>
+		<a href="/ModuleControlIT/Index" class="left loseit-home">Control It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>
