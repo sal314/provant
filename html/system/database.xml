@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<database>
+	<table id="h_call_log" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="int(11)" key="" display_name="Date Updated" index="none"  edit="integer"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="health_coach" type="int(11)" key="" display_name="Health Coach" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="patient" type="int(11)" key="" display_name="Patient" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="contact_date" type="date" key="" display_name="Contact Date" index="label"  edit="date"  create="date" search="true" />
+		<column id="contact_time" type="time" key="" display_name="Contact Time" index="label"  edit="time"  create="time" search="true" />
+		<column id="method" type="enum" key="" display_name="Method" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['yes','no','voice mail']]></column>
+		<column id="primary" type="enum" key="" display_name="Primary" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['DIABETES','PHYSICAL ACTIVITY','SMOKE CESSATION','STRESS MANAGEMENT','WEIGHT LOSS','OTHER','LIPIDS','HYPERTENSION']]></column>
+		<column id="secondary" type="enum" key="" display_name="Secondary" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['NONE','DIABETES','PHYSICAL ACTIVITY','SMOKE CESSATION','STRESS MANAGEMENT','WEIGHT LOSS','OTHER','LIPIDS','HYPERTENSION']]></column>
+		<column id="risk" type="enum" key="" display_name="Risk" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['high','moderate','low']]></column>
+		<column id="migration" type="enum" key="" display_name="Migration" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['NO MIGRATION','LOW TO MOD','LOW TO HIGH','MOD TO LOW','MOD TO HIGH','HIGHT TO MOD','HIGH TO LOW']]></column>
+		<column id="participation" type="enum" key="" display_name="Participation" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['ACTIVE','NON-COMPLIANT','NO LONGER EMPLOYED','OPTED OUT','OTHER']]></column>
+		<column id="comment" type="text" key="" display_name="Comment" index="label"  edit="richtext"  create="richtext" search="true" />
+	</table>
+	<table id="p_company" edit_controls="insert,search,edit,delete" association_field_to_display="${company_name}" related_tables="p_modules" association_tables="p_company_modules" association_fields="p_company_id" association_title="Available Modules">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="none"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="none"  create="none" />
+		<column id="company_name" type="varchar(255)" key="" display_name="Company Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="address1" type="varchar(50)" null="NO" key="" display_name="Address1" index="none"  edit="text"  create="text" validate="" search="true" />
+		<column id="address2" type="varchar(50)" null="YES" key="" display_name="Address2" index="none"  edit="text"  create="text" validate="" search="true" />
+		<column id="city" type="varchar(50)" null="NO" key="" display_name="City" index="none"  edit="text"  create="text" validate="" search="true" />
+		<column id="state" type="char(3)" null="NO" key="" display_name="State" index="none"  edit="text"  create="text" validate="" form-element="state=filter:US" search="true" />
+		<column id="country" type="char(2)" null="NO" key="" display_name="Country" index="none"  edit="text"  create="text" validate="" form-element="country=target:state,exclude:AU" search="true" />
+		<column id="zipcode" type="char(10)" null="NO" key="" display_name="Zipcode" index="none"  edit="text"  create="text" validate="pattern=zipcode" search="true" />
+		<column id="contact_name" type="varchar(100)" null="NO" key="" display_name="Contact Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="phone" type="char(15)" null="NO" key="" display_name="Phone" index="label"  edit="text"  create="text" validate="pattern=phone" form-element="phone" search="true" />
+		<column id="fax" type="char(15)" null="NO" key="" display_name="Fax" index="none"  edit="text"  create="text" validate="pattern=phone" form-element="phone" search="true" />
+		<column id="contact_email" type="varchar(100)" null="NO" key="" display_name="Contact Email" index="label"  edit="text" create="text" validate="pattern=email" search="true" />		
+		<column id="file_logo" type="varchar(255)" key="" display_name="Logo" index="none"  edit="file"  create="file" search="true" allowfiletype="jpg,gif,png"/>
+		<column id="login_image" type="varchar(255)" key="" display_name="Login Image" index="none" edit="file" create="file" search="true" allowfiletype="jpg,gif,png" />
+		<column id="file_css" type="varchar(255)" key="" display_name="Color Scheme" index="none"  edit="none"  create="none"  />
+		<column id="url" type="varchar(20)" key="" display_name="Registration URL" index="label"  edit="text"  create="text" search="true" />
+		<column id="host" type="varchar(255)" key="" display_name="Host Address" index="label" edit="text" create="text" search="true" />
+		<column id="registration_code" type="varchar(50)" key="" display_name="Registration Code" index="label"  edit="text"  create="text" search="true" />
+		<column id="is_gina" type="tinyint(1)" key="" display_name="Enable GINA Question" index="none"  edit="boolean"  create="boolean" />
+		<column id="is_wlq" type="tinyint(1)" key="" display_name="Enable WLQ Questions" index="none"  edit="boolean"  create="boolean" />
+		<column id="ifocus_freq" type="int(5)" key="" display_name="iFOCUS frequency (months)" index="none" edit="integer" create="integer" />
+		<column id="enable_hc" type="tinyint(1)" key="" display_name="Enable Health Coaching" index="none" edit="boolean" create="boolean" />
+		<column id="admin_user" type="int(11)" key="" display_name="Admin User Id" index="none"  edit="none"  create="none" search="false" />
+	</table>
+	<table id="p_company_locations" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(10)" autoincrement="true" key="PRI" display_name="Id" index="label" edit="integer" create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none" edit="none" create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none" edit="none" create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none" edit="none" create="none" />
+		<column id="company_id" type="int(10)" key="MUL" display_name="Company Id" index="label" edit="integer" create="integer" search="true" fk_table="p_company" fk_column="id" fk_display="company_id" />
+		<column id="location" type="varchar(50)" key="" display_name="Location" index="label" edit="text" create="text" search="true" />
+	</table>
+	<table id="p_company_modules" edit_controls="">
+		<column id="p_company_id" type="int(11)" key="" display_name="P Company Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="p_module_id" type="int(11)" key="" display_name="P Module Id" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="p_company_teams" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="company_id" type="int(11)" key="MUL" display_name="Company Id" index="label"  edit="integer"  create="integer" search="true" fk_table="p_company"  fk_column="id"  fk_display="company_name" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+	</table>
+	<table id="p_company_color_schemes" edit_controls="search">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label" edit="integer" create="none" />
+		<column id="color" type="varchar(20)" key="" display_name="Color" index="label" edit="text" create="none" search="true" />
+		<column id="css_file" type="varchar(100)" key="" display_name="CSS File" index="none" edit="text" create="none" search="true" />
+	</table>
+	<table id="p_health_articles" edit_controls="insert,search,edit,delete,order" order_display_text="\Key = ${id}">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="title" type="varchar(50)" null="NO" key="" display_name="Title" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="ebsco_id" type="varchar(10)" null="NO" key="" display_name="Ebsco Id" index="label"  edit="text"  create="text" validate="" search="true" />		
+		<column id="display_order" type="int(11)" null="NO" key="" display_name="Display Order" index="none"  edit="none"  create="none" validate=""/>
+		<column id="summary" type="varchar(100)" null="NO" key="" display_name="Summary" index="none"  edit="text"  create="text" validate="" search="true" />
+		<column id="start_view" type="timestamp" null="YES" key="" display_name="Date to Start Viewing" index="label" edit="timestamp" create="timestamp" validate="" />
+		<column id="end_view" type="timestamp" null="YES" key="" display_name="Date to End Viewing" index="label" edit="timestamp" create="timestamp" validate="" />
+		<column id="file_image" type="varchar(255)" null="NO" key="" display_name="Image" index="label"  edit="file"  create="file" validate="" search="true" allowfiletype="jpg,gif"/>
+	</table>
+	<table id="p_incentive_activity" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="has_min_value" type="tinyint(1)" null="NO" key="" display_name="Require a Minimum data value" index="none"  edit="boolean"  create="boolean" validate=""/>
+		<column id="module" type="varchar(50)" null="NO" key="" display_name="Module" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="action" type="varchar(50)" null="NO" key="" display_name="Action" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="description" type="varchar(100)" null="NO" key="" display_name="Description" index="label"  edit="text"  create="text" validate="" search="true" />
+	</table>
+	<table id="p_incentive_program" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="name" type="varchar(50)" null="NO" key="" display_name="name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="company_id" type="int(11)" null="NO" key="MUL" display_name="Company Id" index="label"  edit="integer"  create="integer" validate="" search="true" fk_table="p_company"  fk_column="id"  fk_display="company_name"/>
+		<column id="start_date" type="date" null="NO" key="" display_name="Start Date" index="label"  edit="date"  create="date" validate="" search="true" />
+		<column id="end_date" type="date" null="NO" key="" display_name="End Date" index="label"  edit="date"  create="date" validate="" search="true" />
+		<column id="page_text_healthy_habits" type="text" null="NO" key="" display_name="Page Text Healthy Habits" index="none"  edit="text"  create="text" validate="" search="true" />
+		<column id="page_text_summary" type="text" null="NO" key="" display_name="Page Text Summary" index="none"  edit="richtext"  create="richtext" validate="" search="true" />
+	</table>
+	<table id="p_incentive_triggers" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="points" type="int(11)" null="NO" key="" display_name="Points" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="frequency" type="enum" null="NO" key="" display_name="Frequency" index="label"  edit="enum"  create="enum" validate="" search="true" ><![CDATA['daily','weekly','monthy','onetime']]></column>
+		<column id="incentive_activity_id" type="int(11)" null="NO" key="" display_name="Incentive Activity Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="incentive_program_id" type="int(11)" null="NO" key="" display_name="Incentive Program Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="days_back" type="int(11)" null="NO" key="" display_name="Days Back" index="label"  edit="integer"  create="integer" validate="" search="true" />
+	</table>
+	<table id="p_incentive_triggers_log" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="z_user_id" type="int(11)" null="NO" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="p_incentive_triggers_id" type="int(11)" null="NO" key="" display_name="P Incentive Triggers Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="points" type="int(11)" null="NO" key="" display_name="Points Awarded" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="comment" type="varchar(255)" key="" display_name="Comment" edit="text" create="text" validate="" />
+	</table>
+	
+	<table id="p_messages" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="is_archived" type="tinyint(1)" key="" display_name="Archive" index="none"  edit="none"  create="none" />
+		<column id="to" type="int(11)" key="" display_name="To" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="from" type="int(11)" key="" display_name="From" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="subject" type="varchar(100)" key="" display_name="Subject" index="label"  edit="text"  create="text" search="true" />
+		<column id="message" type="text" key="" display_name="Message" index="label"  edit="richtext"  create="richtext" search="true" />
+		<column id="status" type="tinyint(1)" key="" display_name="Status" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="p_modules" edit_controls="insert,search,edit,delete" association_field_to_display="${name}" related_tables="p_company" association_tables="p_company_modules" association_fields="p_module_id" association_title="Availble Modules">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="short_description" type="varchar(255)" key="" display_name="Short Description" index="none" edit="text" create="text"  />
+		<column id="image" type="varchar(50)" key="" display_name="Image" index="none" edit="text" create="text" />
+		<column id="type" type="enum" key="" display_name="Method" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['IT','KIT','OTHER']]></column>
+	</table>
+	<table id="p_site_pages" edit_controls="insert,edit">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(1)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="page_type" type="varchar(50)" null="NO" key="" display_name="Page Type" index="label"  edit="text"  create="text" validate="" search="true"/>
+		<column id="page" type="text" null="NO" key="" display_name="Page" index="none"  edit="richtext"  create="richtext" validate="" search="true" />
+	</table>
+	<table id="p_user_option_activity_level" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(75)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="level" type="enum" key="" display_name="Level" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['Low','Medium','High']]></column>
+	</table>
+	<table id="p_user_option_fitness_goal" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+	</table>
+	<table id="p_user_option_language" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+	</table>	
+	<table id="p_other_languages" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label" edit="integer" create="none" />
+		<column id="id_active" type="tinyint(1)" key="" display_name="Active" index="none" edit="none" create="none" />
+		<column id="language" type="varchar(50)" key="" display_name="Language" index="label" edit="text" create="text" search="true" />
+	</table>
+	<table id="p_user_option_race" edit_controls="insert,search,edit,delete,order" order_display_text="${name}">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="display_order" type="int(11)" key="" display_name="Display Order" index="none"  edit="none"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+	</table>
+	
+	<table id="p_workout_exercises" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="description" type="text" key="" display_name="Description" index="none"  edit="richtext"  create="richtext" search="true" />
+		<column id="file_name" type="varchar(255)" key="" display_name="Thumb Image location" index="none"  edit="text"  create="text" search="true" />
+		<column id="category" type="enum" key="" display_name="Category" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['cardio','core','lower body','upper body','stretch']]></column>
+		<column id="equipment" type="enum" key="" display_name="Equipment" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['body weight','dumbell','none']]></column>
+		<column id="METs" type="double" key="" display_name="METs" index="label"  edit="number"  create="number" search="true" />
+	</table>
+	<table id="p_workout_plan_exercises" edit_controls="">
+		<column id="p_workout_plan_id" type="int(11)" key="PRI" display_name="P Workout Plan Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="p_workout_exercises" type="int(11)" key="PRI" display_name="P Workout Exercises" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="sets" type="int(11)" key="" display_name="Sets" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="reps" type="int(11)" key="" display_name="Reps" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="day" type="tinyint(1)" key="PRI" display_name="Day" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="p_workout_plans" edit_controls="insert,search,edit,delete,order" order_display_text="Key = ${id}">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(4)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="display_order" type="int(11)" key="" display_name="Display Order" index="none"  edit="none"  create="none" />
+		<column id="enabled" type="tinyint(4)" key="" display_name="Enable Plan" index="label" edit="boolean" create="boolean" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="category" type="enum" key="" display_name="Category" index="label" edit="enum" search="true" ><![CDATA['general','cardio','core','lower body','upper body','stretch']]></column>
+		<column id="level" type="enum" key="" display_name="Intensity Level" index="label" edit="enum" search="true" ><![CDATA['any','vigorous','moderate','light']]></column>
+		<column id="description" type="text" key="" display_name="Description" index="none"  edit="richtext"  create="richtext" search="true" />
+	</table>
+	<table id="u_health_screening_kit" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="z_user_id" type="int(11)" null="NO" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="is_recieved" type="tinyint(1)" null="NO" key="" display_name="Recieved" index="label"  edit="boolean"  create="boolean" validate="" search="true" />
+		<column id="company_id" type="int(11)" null="NO" key="" display_name="Company Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="first_name" type="varchar(50)" null="NO" key="" display_name="First Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="last_name" type="varchar(50)" null="NO" key="" display_name="Last Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="city" type="varchar(50)" null="NO" key="" display_name="City" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="state" type="char(3)" null="NO" key="" display_name="State" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="zipcode" type="char(2)" null="NO" key="" display_name="Zipcode" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="phone" type="char(15)" null="NO" key="" display_name="Phone" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="dob" type="char(10)" null="NO" key="" display_name="Dob" index="label"  edit="text"  create="text" validate="" search="true" />
+	</table>
+	<table id="u_mod_ifocus" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="MUL" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="vision" type="enum" key="" display_name="Vision" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['Y','N']]></column>
+		<column id="hearing" type="enum" key="" display_name="Hearing" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['Y','N']]></column>
+		<column id="q4" type="char(1)" key="" display_name="Q4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_1" type="char(1)" key="" display_name="Q5 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_2" type="char(1)" key="" display_name="Q5 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_3" type="char(1)" key="" display_name="Q5 3" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_4" type="char(1)" key="" display_name="Q5 4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_5" type="char(1)" key="" display_name="Q5 5" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_6" type="char(1)" key="" display_name="Q5 6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_7" type="char(1)" key="" display_name="Q5 7" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_8" type="char(1)" key="" display_name="Q5 8" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_9" type="char(1)" key="" display_name="Q5 9" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_10" type="char(1)" key="" display_name="Q5 10" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_11" type="char(1)" key="" display_name="Q5 11" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_12" type="char(1)" key="" display_name="Q5 12" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_13" type="char(1)" key="" display_name="Q5 13" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_14" type="char(1)" key="" display_name="Q5 14" index="label"  edit="text"  create="text" search="true" />
+		<column id="q5_15" type="char(1)" key="" display_name="Q5 15" index="label"  edit="text"  create="text" search="true" />
+		<column id="q6" type="char(1)" key="" display_name="Q6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q7" type="char(1)" key="" display_name="Q7" index="label"  edit="text"  create="text" search="true" />
+		<column id="q8" type="char(1)" key="" display_name="Q8" index="label"  edit="text"  create="text" search="true" />
+		<column id="q9" type="char(1)" key="" display_name="Q9" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_1" type="char(1)" key="" display_name="Q10 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_2" type="char(1)" key="" display_name="Q10 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_3" type="char(1)" key="" display_name="Q10 3" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_4" type="char(1)" key="" display_name="Q10 4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_5" type="char(1)" key="" display_name="Q10 5" index="label"  edit="text"  create="text" search="true" />
+		<column id="q10_6" type="char(1)" key="" display_name="Q10 6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q11" type="timestamp" key="" display_name="Q11" index="label"  edit="timestamp"  create="timestamp" search="true" />
+		<column id="q12" type="char(1)" key="" display_name="Q12" index="label"  edit="text"  create="text" search="true" />
+		<column id="q13" type="char(1)" key="" display_name="Q13" index="label"  edit="text"  create="text" search="true" />
+		<column id="q14" type="timestamp" key="" display_name="Q14" index="label"  edit="timestamp"  create="timestamp" search="true" />
+		<column id="q15" type="char(1)" key="" display_name="Q15" index="label"  edit="text"  create="text" search="true" />
+		<column id="q16" type="char(1)" key="" display_name="Q16" index="label"  edit="text"  create="text" search="true" />
+		<column id="q17" type="timestamp" key="" display_name="Q17" index="label"  edit="timestamp"  create="timestamp" search="true" />
+		<column id="q18" type="char(1)" key="" display_name="Q18" index="label"  edit="text"  create="text" search="true" />
+		<column id="q19" type="char(1)" key="" display_name="Q19" index="label"  edit="text"  create="text" search="true" />
+		<column id="q20" type="char(1)" key="" display_name="Q20" index="label"  edit="text"  create="text" search="true" />
+		<column id="q21" type="char(1)" key="" display_name="Q21" index="label"  edit="text"  create="text" search="true" />
+		<column id="q22" type="char(1)" key="" display_name="Q22" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_1" type="char(1)" key="" display_name="Q23 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_2" type="char(1)" key="" display_name="Q23 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_3" type="char(1)" key="" display_name="Q23 3" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_4" type="char(1)" key="" display_name="Q23 4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_5" type="char(1)" key="" display_name="Q23 5" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_6" type="char(1)" key="" display_name="Q23 6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_7" type="char(1)" key="" display_name="Q23 7" index="label"  edit="text"  create="text" search="true" />
+		<column id="q23_8" type="char(1)" key="" display_name="Q23 8" index="label"  edit="text"  create="text" search="true" />
+		<column id="qn24" type="char(1)" key="" display_name="QN24" index="label" edit="text" create="text" search="true" />
+		<column id="qn25" type="char(1)" key="" display_name="QN25" index="label" edic="text" create="text" search="true" />
+		<column id="q24" type="char(1)" key="" display_name="Q24" index="label"  edit="text"  create="text" search="true" />
+		<column id="q25" type="char(1)" key="" display_name="Q25" index="label"  edit="text"  create="text" search="true" />
+		<column id="q26" type="char(1)" key="" display_name="Q26" index="label"  edit="text"  create="text" search="true" />
+		<column id="q27" type="char(1)" key="" display_name="Q27" index="label"  edit="text"  create="text" search="true" />
+		<column id="q28" type="char(1)" key="" display_name="Q28" index="label"  edit="text"  create="text" search="true" />
+		<column id="q29" type="char(1)" key="" display_name="Q29" index="label"  edit="text"  create="text" search="true" />
+		<column id="q30" type="char(1)" key="" display_name="Q30" index="label"  edit="text"  create="text" search="true" />
+		<column id="q31" type="char(1)" key="" display_name="Q31" index="label"  edit="text"  create="text" search="true" />
+		<column id="q32" type="char(1)" key="" display_name="Q32" index="label"  edit="text"  create="text" search="true" />
+		<column id="q33" type="char(1)" key="" display_name="Q33" index="label"  edit="text"  create="text" search="true" />
+		<column id="q34_1" type="char(1)" key="" display_name="Q34 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q34_2" type="char(1)" key="" display_name="Q34 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q35" type="char(1)" key="" display_name="Q35" index="label"  edit="text"  create="text" search="true" />
+		<column id="q36" type="char(1)" key="" display_name="Q36" index="label"  edit="text"  create="text" search="true" />
+		<column id="q37_1" type="char(1)" key="" display_name="Q37 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q37_2" type="char(1)" key="" display_name="Q37 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_1" type="char(1)" key="" display_name="Q38 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_2" type="char(1)" key="" display_name="Q38 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_3" type="char(1)" key="" display_name="Q38 3" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_4" type="char(1)" key="" display_name="Q38 4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_5" type="char(1)" key="" display_name="Q38 5" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_6" type="char(1)" key="" display_name="Q38 6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_7" type="char(1)" key="" display_name="Q38 7" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_8" type="char(1)" key="" display_name="Q38 8" index="label"  edit="text"  create="text" search="true" />
+		<column id="q38_9" type="char(1)" key="" display_name="Q38 9" index="label"  edit="text"  create="text" search="true" />
+		<column id="q39" type="char(1)" key="" display_name="Q39" index="label"  edit="text"  create="text" search="true" />
+		<column id="q40" type="char(1)" key="" display_name="Q40" index="label"  edit="text"  create="text" search="true" />
+		<column id="q41" type="char(1)" key="" display_name="Q41" index="label"  edit="text"  create="text" search="true" />
+		<column id="q42" type="char(1)" key="" display_name="Q42" index="label"  edit="text"  create="text" search="true" />
+		<column id="q43" type="char(1)" key="" display_name="Q43" index="label"  edit="text"  create="text" search="true" />
+		<column id="q44" type="char(1)" key="" display_name="Q44" index="label"  edit="text"  create="text" search="true" />
+		<column id="q45" type="char(1)" key="" display_name="Q45" index="label"  edit="text"  create="text" search="true" />
+		<column id="q46" type="char(1)" key="" display_name="Q46" index="label"  edit="text"  create="text" search="true" />
+		<column id="q47" type="char(1)" key="" display_name="Q47" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_1" type="char(1)" key="" display_name="Q48 1" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_2" type="char(1)" key="" display_name="Q48 2" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_3" type="char(1)" key="" display_name="Q48 3" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_4" type="char(1)" key="" display_name="Q48 4" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_5" type="char(1)" key="" display_name="Q48 5" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_6" type="char(1)" key="" display_name="Q48 6" index="label"  edit="text"  create="text" search="true" />
+		<column id="q48_7" type="char(1)" key="" display_name="Q48 7" index="label"  edit="text"  create="text" search="true" />
+		<column id="height" type="char(4)" key="" display_name="Height" index="label"  edit="text"  create="text" search="true" />
+		<column id="weight" type="decimal(10,0)" key="" display_name="Weight" index="label"  edit="number"  create="number" search="true" />
+		<column id="bp_stollic" type="char(3)" key="" display_name="Bp Stollic" index="label"  edit="text"  create="text" search="true" />
+		<column id="bp_diastollic" type="char(3)" key="" display_name="Bp Diastollic" index="label"  edit="text"  create="text" search="true" />
+		<column id="body_fat" type="char(2)" key="" display_name="Body Fat" index="label"  edit="text"  create="text" search="true" />
+		<column id="bmi" type="char(2)" key="" display_name="Bmi" index="label"  edit="text"  create="text" search="true" />
+		<column id="blood_glucose" type="char(3)" key="" display_name="Blood Glucose" index="label"  edit="text"  create="text" search="true" />
+		<column id="cholesterol" type="char(3)" key="" display_name="Cholesterol" index="label"  edit="text"  create="text" search="true" />
+		<column id="triglycerides" type="char(3)" key="" display_name="Triglycerides" index="label"  edit="text"  create="text" search="true" />
+		<column id="hdl" type="char(3)" key="" display_name="Hdl" index="label"  edit="text"  create="text" search="true" />
+		<column id="completed" type="tinyint(1)" key="" display_name="Completed" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_lab_voucher_kit_order" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="z_user_id" type="int(11)" null="NO" key="UNI" display_name="Z User Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="is_received" type="tinyint(1)" null="NO" key="" display_name="Received" index="label"  edit="boolean"  create="boolean" validate="" search="true" />
+		<column id="company_name" type="varchar(50)" null="NO" key="" display_name="Company Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="first_name" type="varchar(50)" null="NO" key="" display_name="First Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="last_name" type="varchar(50)" null="NO" key="" display_name="Last Name" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="address1" type="varchar(50)" null="NO" key="" display_name="Address1" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="address2" type="varchar(50)" null="NO" key="" display_name="Address2" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="city" type="varchar(50)" null="NO" key="" display_name="City" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="state" type="char(3)" null="NO" key="" display_name="State" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="country" type="char(2)" null="NO" key="" display_name="Country" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="zipcode" type="char(10)" null="NO" key="" display_name="Zipcode" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="phone" type="char(15)" null="NO" key="" display_name="Phone" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="email" type="varchar(255)" null="NO" key="" display_name="Email" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="dob" type="date" null="NO" key="" display_name="Dob" index="label"  edit="date"  create="date" validate="" search="true" />
+		<column id="gender" type="char(1)" null="NO" key="" display_name="Gender" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="is_downloaded" type="tinyint(1)" null="NO" key="UNI" display_name="Downloaded" index="label"  edit="boolean"  create="boolean" validate="" search="true" />
+	</table>
+	<table id="u_lab_voucher_kit_results" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" null="NO" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" validate=""/>
+		<column id="date_added" type="timestamp" null="NO" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="date_updated" type="timestamp" null="NO" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" validate=""/>
+		<column id="is_active" type="tinyint(4)" null="NO" key="" display_name="Active" index="none"  edit="none"  create="none" validate=""/>
+		<column id="z_user_id" type="int(11)" null="NO" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="entered_by" type="int(11)" null="NO" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="date_entered" type="date" null="NO" key="" display_name="Date Entered" index="label"  edit="date"  create="date" validate="" search="true" />
+		<column id="total" type="int(3)" null="NO" key="" display_name="Total" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="hdl" type="int(3)" null="NO" key="" display_name="Hdl" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="ratio" type="decimal(5,2)" null="NO" key="" display_name="Ratio" index="label"  edit="number"  create="number" validate="" search="true" />
+		<column id="ldl" type="int(3)" null="NO" key="" display_name="Ldl" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="vldl" type="varchar(10)" null="NO" key="" display_name="Vldl" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="trigly" type="int(3)" null="NO" key="" display_name="Trigly" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="glucose" type="int(3)" null="NO" key="" display_name="Glucose" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="systolic" type="int(3)" null="NO" key="" display_name="Systolic" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="diastolic" type="int(3)" null="NO" key="" display_name="Diastolic" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="body_fat" type="decimal(5,3)" null="NO" key="" display_name="Body Fat" index="label"  edit="number"  create="number" validate="" search="true" />
+		<column id="bmi" type="decimal(5,2)" null="NO" key="" display_name="Bmi" index="label"  edit="number"  create="number" validate="" search="true" />
+		<column id="height_ft" type="int(1)" null="NO" key="" display_name="Height Ft" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="height_in" type="int(2)" null="NO" key="" display_name="Height In" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="weight" type="decimal(5,2)" null="NO" key="" display_name="Weight" index="label"  edit="number"  create="number" validate="" search="true" />
+		<column id="nicotine" type="varchar(10)" null="NO" key="" display_name="Nicotine" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="waist_in" type="int(3)" null="NO" key="" display_name="Waist In" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="hip" type="int(3)" null="NO" key="" display_name="Hip" index="label"  edit="integer"  create="integer" validate="" search="true" />
+		<column id="fasting" type="varchar(10)" null="NO" key="" display_name="Fasting" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="tobacco" type="varchar(10)" null="NO" key="" display_name="Tobacco" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="activity" type="varchar(10)" null="NO" key="" display_name="Activity" index="label"  edit="text"  create="text" validate="" search="true" />
+		<column id="match_yn" type="varchar(10)" null="NO" key="" display_name="Match Yn" index="label"  edit="text"  create="text" validate="" search="true" />
+	</table>	
+	<table id="u_profile" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="MUL" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="race" type="char(1)" key="" display_name="Race" index="label"  edit="text"  create="text" search="true" />
+		<column id="marital_status" type="char(1)" key="" display_name="Marital Status" index="label"  edit="text"  create="text" search="true" />
+		<column id="education" type="char(1)" key="" display_name="Education" index="label"  edit="text"  create="text" search="true" />
+		<column id="language" type="char(2)" key="" display_name="Language" index="label"  edit="text"  create="text" search="true" />
+		<column id="company" type="int(11)" key="" display_name="Company" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="health_coach" type="int(11)" key="" display_name="Health Coach" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="update_bp" type="int(11)" key="" display_name="Update Bp" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="update_cholesterol" type="int(11)" key="" display_name="Update Cholesterol" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="update_blood_glucose" type="int(11)" key="" display_name="Update Blood Glucose" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="goal_weight" type="int(11)" key="" display_name="Goal Weight" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="height" type="int(11)" key="" display_name="Height" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="age" type="char(2)" key="" display_name="Age" index="label"  edit="text"  create="text" search="true" />
+		<column id="initial_weight" type="decimal(5,2)" key="" display_name="Initial Weight" index="label"  edit="number"  create="number" search="true" />
+		<column id="location_id" type="int(10)" key="MUL" display_name="Location_Id" index="label"  edit="integer"  create="integer" search="true" fk_table="p_company_locations"  fk_column="id"  fk_display="location_id" />
+		<column id="team_id" type="int(11)" key="" display_name="Team Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="weight_goal" type="enum" key="" display_name="Weight Goal" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['maintain','gain_1pw','gain_2pw','loose_1pw','loose_2pw']]></column>
+		<column id="activity_level" type="int(11)" key="" display_name="Activity Level" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="fitness_goal" type="int(11)" key="" display_name="Fitness Goal" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="pregnancy" type="enum" key="" display_name="Pregnancy" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['no','trimester_1','trimester_2','trimester_3']]></column>
+		<column id="lactating" type="enum" key="" display_name="Lactating" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['no','first_6','last_6']]></column>
+		<column id="email_address" type="varchar(255)" key="" display_name="Email Address" index="label"  edit="text"  create="text" search="true" />
+		<column id="zipcode" type="char(10)" key="" display_name="Zipcode" index="label"  edit="text"  create="text" search="true" />
+		<column id="gender" type="enum" key="" display_name="Gender" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['m','f']]></column>
+		<column id="email_opt_out" type="tinyint(1)" key="" display_name="Opt-out of Admin Emails"  index="label" edit="enum" create="integer" search="true"></column>
+	</table>
+	<table id="u_tracker_blood_glucose" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="time_entered" type="time" key="" display_name="Time Entered" index="label"  edit="time"  create="time" search="true" />
+		<column id="blood_glucose" type="int(3)" key="" display_name="Blood Glucose" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="method" type="enum" key="" display_name="Method" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['random','fasting']]></column>
+		<column id="medication" type="varchar(50)" key="" display_name="Medication" index="label"  edit="text"  create="text" search="true" />
+		<column id="entered_by" type="int(11)" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_tracker_bp" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="systolic" type="int(3)" key="" display_name="Systolic" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="diastolic" type="int(3)" key="" display_name="Diastolic" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="entered_by" type="int(11)" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_tracker_cholesterol" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="total" type="int(3)" key="" display_name="Total" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="hdl" type="int(3)" key="" display_name="Hdl" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="ldl" type="int(3)" key="" display_name="Ldl" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="triglycerides" type="int(3)" key="" display_name="Triglycerides" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="entered_by" type="int(11)" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_tracker_exercises" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="p_workout_exercises_id" type="int(11)" key="" display_name="P Workout Exercises Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="supplemental" type="tinyint(1)" key="" display_name="Supplemental" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="custom_name" type="varchar(50)" key="" display_name="Custom Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="custom" type="enum" key="" display_name="Custom" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['no','cardio','strength']]></column>
+		<column id="calories" type="int(11)" key="" display_name="Calories" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="units" type="int(11)" key="" display_name="Units" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="heart_rate" type="int(11)" key="" display_name="Heart Rate" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="sets" type="int(11)" key="" display_name="Sets" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="reps" type="int(11)" key="" display_name="Reps" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="weight" type="int(11)" key="" display_name="Weight" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+	</table>
+	<table id="u_tracker_exercises_comments" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="comment" type="text" key="" display_name="Comment" index="label"  edit="richtext"  create="richtext" search="true" />
+		<column id="type" type="enum" key="" display_name="Type" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['cardio','strength']]></column>
+	</table>
+	<table id="u_tracker_pedometer" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="stride" type="decimal(3,2)" key="" display_name="Stride" index="label"  edit="number"  create="number" search="true" />
+		<column id="steps" type="int(4)" key="" display_name="Steps" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="calories" type="int(3)" key="" display_name="Calories" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="override" type="tinyint(1)" key="" display_name="Override" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="miles" type="decimal(5,2)" key="" display_name="Miles" index="label"  edit="number"  create="number" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="entered_by" type="int(11)" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_tracker_weight" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="weight" type="decimal(5,1)" key="" display_name="Weight" index="label"  edit="number"  create="number" search="true" />
+		<column id="date_entered" type="date" key="" display_name="Date Entered" index="label"  edit="date"  create="date" search="true" />
+		<column id="entered_by" type="int(11)" key="" display_name="Entered By" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_workout_plan_subscriptions" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="p_workout_plan_id" type="int(11)" key="" display_name="P Workout Plan Id" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="u_workout_plan_supplemental" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="p_workout_exercises_id" type="int(11)" key="" display_name="P Workout Exercises Id" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="type" type="enum" key="" display_name="Type" index="label"  edit="enum"  create="enum" search="true" ><![CDATA['strength','cardio']]></column>
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" search="true" />
+		<column id="sets" type="int(11)" key="" display_name="Sets" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="reps" type="int(11)" key="" display_name="Reps" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="weight" type="int(11)" key="" display_name="Weight" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="day" type="int(11)" key="" display_name="Day" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="user_track_water" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="glasses" type="int(11)" key="" display_name="Glasses" index="label"  edit="integer"  create="integer" search="true" />
+		<column id="z_user_id" type="int(11)" key="" display_name="Z User Id" index="label"  edit="integer"  create="integer" search="true" />
+	</table>
+	<table id="z_admin_components" edit_controls="insert,search,edit,delete,order" order_display_text="${name}">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none"/>
+		<column id="name" type="varchar(45)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+		<column id="page" type="varchar(45)" key="" display_name="Model" index="label"  edit="text"  create="text" />
+		<column id="read_permission" type="varchar(45)" null="true"  key="" display_name="Require Read Permission" index="none"  edit="text"  create="text" />
+		<column id="is_active" type="tinyint(1) unsigned" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="display_order" type="int(11) unsigned" key="" display_name="Display Order" index="none"  edit="none"  create="none" />
+	</table>
+	<table id="z_blast_associations" edit_controls="">
+		<column id="z_blast_users_id" type="int(11)" key="MUL" display_name="Blast Users Id" index="label"  edit="text"  create="text" />
+		<column id="z_blast_groups_id" type="int(11)" key="MUL" display_name="Blast Groups Id" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_blast_emails" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="z_blast_template" type="int(11)" key="MUL" display_name="Blast Template" index="label"  edit="text"  create="text" fk_table="z_blast_templates"  fk_column="id"  fk_display="name" />		
+		<column id="sender" type="int(11)" key="MUL" display_name="From" index="label"  edit="text"  create="text" fk_table="z_blast_senders"  fk_column="id"  fk_display="name" />
+		<column id="title" type="varchar(45)" key="" display_name="Subject Title" index="label"  edit="text"  create="text" />
+		<column id="template_body" type="text" key="" display_name="Template Body" index="label"  edit="richtext"  create="richtext" />		
+	</table>
+	<table id="z_blast_groups" edit_controls="insert,search,edit,delete" association_field_to_display="${name}">	
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(45)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_blast_send_notifications" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="email" type="varchar(45)" key="" display_name="Email" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_blast_senders" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(45)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+		<column id="email" type="varchar(45)" key="" display_name="Email" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_blast_sent_log" edit_controls="delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="label"  create="none" />
+		<column id="status" type="int(1)" key="MUL" display_name="Status" index="label"  edit="label"  create="none" fk_table="z_blast_status_codes"  fk_column="id"  fk_display="name"/>
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="label"  edit="label"  create="none" />
+		<column id="date_ended" type="timestamp" key="" display_name="Date Ended" index="label"  edit="label"  create="none" />
+		<column id="z_blast_email_id" type="int(11)" key="MUL" display_name="Blast Email Content" index="none"  edit="text"  create="text" fk_table="z_blast_emails"  fk_column="id"  fk_display="title"/>
+		<column id="z_blast_group_id" type="int(11)" key="MUL" display_name="Blast Group" index="none"  edit="text"  create="text" fk_table="z_blast_groups"  fk_column="id"  fk_display="name"/>
+		<column id="emails_total" type="int(11)" key="" display_name="Emails To Be Sent" index="label"  edit="label"  create="none" />		
+		<column id="emails_sent" type="int(11)" key="" display_name="Emails Sent" index="label"  edit="label"  create="none" />			
+	</table>
+	<table id="z_blast_status_codes" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(1)" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(45)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+	</table>	
+	<table id="z_blast_templates" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(45)" key="" display_name="Name" index="label"  edit="text"  create="text" />		
+		<column id="file_template" type="varchar(45)" key="" display_name="Template" index="label"  edit="file"  create="file" allowFileType="tpt"/>
+		<column id="file_original_template" type="varchar(45)" key="" display_name="Template" index="label"  edit="text"  create="text" />
+	</table>	
+	<table id="z_blast_users" edit_controls="insert,search,edit,delete" association_field_to_display="${first_name} ${lasst_name} ${email}" related_tables="z_blast_groups" association_tables="z_blast_associations" association_fields="z_blast_users_id" association_title="Blast Groups">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="first_name" type="varchar(20)" key="" display_name="First Name" index="label"  edit="text"  create="text" />
+		<column id="last_name" type="varchar(20)" key="" display_name="Last Name" index="label"  edit="text"  create="text" />
+		<column id="email" type="varchar(45)" key="" display_name="Email" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_event_log" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11) unsigned" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="user" type="varchar(50)" key="" display_name="User" index="label"  edit="text"  create="text" />
+		<column id="ip" type="varchar(32)" key="" display_name="Ip" index="label"  edit="text"  create="text" />
+		<column id="action" type="varchar(100)" key="" display_name="Action" index="label"  edit="text"  create="text" />
+		<column id="table" type="varchar(100)" key="" display_name="Table" index="label"  edit="text"  create="text" />
+		<column id="record_id" type="varchar(45)" key="" display_name="Record Id" index="label"  edit="text"  create="text" />
+		<column id="log" type="text" key="" display_name="Log" index="label"  edit="richtext"  create="richtext" />
+		<column id="page" type="varchar(100)" key="" display_name="Model" index="label"  edit="text"  create="text" />
+		<column id="method" type="varchar(100)" key="" display_name="Method" index="label"  edit="text"  create="text" />
+		<column id="mode" type="enum" key="" display_name="Mode" index="label"  edit="enum"  create="enum" ><![CDATA['admin','user']]></column>
+	</table>
+	
+	<table id="z_rss_channels" edit_controls="insert,search,edit,delete" related_tables="z_rss_days;z_rss_hours" association_tables="z_rss_skip_days;z_rss_skip_hours" association_fields="rss_channels_id;rss_channels_id" association_title="No Updates on these Days,,No Updates at these Hours">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="none" />
+		<column id="is_active" type="tinyint(1) unsigned" key="" display_name="Active" index="none"  edit="none"  create="none" />		
+		<column id="title" type="varchar(50)" key="" display_name="Title" index="label"  edit="text"  create="text" />
+		<column id="description" type="text" key="" display_name="Description" index="none"  edit="richtext"  create="richtext" />
+		<column id="link" type="varchar(255)" key="" display_name="Link" index="none"  edit="text"  create="text" />
+		<column id="language" type="varchar(10)" key="" display_name="Language" index="label"  edit="text"  create="text" />
+		<column id="copywrite" type="text" key="" display_name="Copywrite" index="none"  edit="largetext"  create="largetext" />
+		<column id="managing_editor" type="varchar(50)" key="" display_name="Managing Editor" index="label"  edit="text"  create="text" />
+		<column id="web_master" type="varchar(50)" key="" display_name="Web Master" index="label"  edit="text"  create="text" />
+		<column id="last_build_date" type="timestamp" key="" display_name="Last Build Date" index="label"  edit="none"  create="none" />
+		<column id="docs" type="varchar(255)" key="" display_name="Docs" index="none"  edit="text"  create="text" />
+		<column id="ttl" type="tinyint(4)" key="" display_name="Ttl" index="label"  edit="integer"  create="integer" />
+		<column id="image_url" type="varchar(255)" key="" display_name="Image Url" index="none"  edit="text"  create="text" />
+		<column id="image_title" type="varchar(50)" key="" display_name="Image Title" index="none"  edit="text"  create="text" />
+		<column id="image_link" type="varchar(255)" key="" display_name="Image Link" index="none"  edit="text"  create="text" />
+		<column id="image_width" type="tinyint(4)" key="" display_name="Image Width" index="none"  edit="integer"  create="integer" />
+		<column id="image_height" type="tinyint(5)" key="" display_name="Image Height" index="none"  edit="integer"  create="integer" />
+		<column id="rating" type="text" key="" display_name="Rating" index="label"  edit="largetext"  create="largetext" />
+		<column id="populator" type="varchar(20)" key="" display_name="Populator Class" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_rss_days" edit_controls="insert,search,edit,delete" association_field_to_display="${day}" association_fields="rss_days_id">
+		<column id="id" type="int(1) unsigned" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="day" type="varchar(10)" key="" display_name="Day" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_rss_hours" edit_controls="insert,search,edit,delete" association_field_to_display="${hour}" association_fields="rss_hours_id">
+		<column id="id" type="int(11) unsigned" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="hour" type="char(2)" key="" display_name="Hour" index="label"  edit="text"  create="text" />
+	</table>
+	<table id="z_rss_skip_days" edit_controls="" >
+		<column id="rss_channels_id" type="int(11)" key="MUL" display_name="Rss Channel Id" index="label"  edit="text"  create="text" fk_table="z_rss_days"  fk_column="id"  fk_display="day"/>
+		<column id="rss_days_id" type="int(1)" key="MUL" display_name="Rss Days Id" index="label"  edit="integer"  create="integer" />
+	</table>
+	<table id="z_rss_skip_hours" edit_controls="">
+		<column id="rss_channels_id" type="int(11)" key="MUL" display_name="Rss Channels Id" index="label"  edit="text"  create="text" fk_table="z_rss_hours"  fk_column="id"  fk_display="hour"/>
+		<column id="rss_hours_id" type="int(11)" key="MUL" display_name="Rss Hours Id" index="label"  edit="integer"  create="integer" />
+	</table>
+	
+	
+	<table id="z_action" edit_controls="insert,search,edit,delete"  index_sort_order="name ASC">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="text" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+		<column id="description" type="text" key="" display_name="Decription" index="label"  edit="text"  create="text" />
+		<column id="is_active" type="tinyint(1) unsigned" key="" display_name="Active" index="none"  edit="none"  create="none" />
+	</table>	
+	<table id="z_user_permission" edit_controls="insert,search,edit,delete" >
+		<column id="user" type="int(11)" key="MUL" display_name="User Name"  index="label"  edit="text"  create="none"  fk_table="z_users"  fk_column="id"  fk_display="email"/>
+		<column id="action" type="int(11)" key="MUL" display_name="Permission" index="label"  edit="text"  create="text"  fk_table="z_action"  fk_column="id"  fk_display="name"/>
+		<column id="permission" type="enum" key="" display_name="Permission" index="label"  edit="enum"  create="enum"   search="true">
+			<![CDATA['READ','INSERT','UPDATE','DELETE']]>
+		</column>		
+	</table>	
+	
+	<table id="z_users" edit_controls="insert,search,edit,delete" index_sort_order="last_name,first_name ASC">
+	    <column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="text"  create="text" />
+	    <column id="last_name" type="varchar(45)" key="" display_name="Last Name" index="label"  edit="text"  create="text" search="true"/>
+		<column id="first_name" type="varchar(45)" key="" display_name="First Name" index="label"  edit="text"  create="text" search="true"/>		
+	    
+		<column id="login" type="varchar(45)" key="UNI" display_name="Login" index="label"  edit="text"  create="text" search="true" validate="pattern=email"/>
+		<column id="email" type="varchar(45)" key="UNI" display_name="Email" index="label"  edit="text"  create="text" search="true" validate="pattern=email"/>
+		<column id="password" type="varchar(50)" key="" display_name="Password" index="none"  edit="password"  create="password" validate="password=6 length=6-20"/>
+						
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" search="true"/>
+		<column id="last_login" type="timestamp" key="" display_name="Last Login" index="label"  edit="label"  create="none" />
+		<column id="login_count" type="int(11)" key="" display_name="Login Count" index="label"  edit="label"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="none"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Added" index="none"  edit="label"  create="none" />
+	</table>	
+	
+	
+	<table id="z_roles" edit_controls="insert,search,edit,delete">
+		<column id="id" type="int(11)" autoincrement="true" key="PRI" display_name="Id" index="label"  edit="integer"  create="none" />
+		<column id="date_added" type="timestamp" key="" display_name="Date Added" index="none"  edit="timestamp"  create="none" />
+		<column id="date_updated" type="timestamp" key="" display_name="Date Updated" index="none"  edit="timestamp"  create="none" />
+		<column id="is_active" type="tinyint(1)" key="" display_name="Active" index="none"  edit="none"  create="none" />
+		<column id="name" type="varchar(50)" key="" display_name="Name" index="label"  edit="text"  create="text" />
+		<column id="description" type="text" key="" display_name="Roll Decription" index="label"  edit="text"  create="text" />
+	</table>	
+
+	<table id="z_user_role" edit_controls="">
+		<column id="user" type="int(11)" key="" display_name="User" index="label"  edit="text"  create="text" />
+		<column id="role" type="int(11)" key="" display_name="Role" index="label"  edit="integer"  create="integer" />
+	</table>
+	<table id="z_roles_grantors" edit_controls="">
+		<column id="user_id" type="int(11)" key="" display_name="User" index="label"  edit="text"  create="text" />
+		<column id="role_id" type="int(11)" key="" display_name="Role" index="label"  edit="integer"  create="integer" />
+	</table>
+	
+	<table id="z_role_action_permission" edit_controls="">
+		<column id="role" type="int(11)" key="" display_name="Role" index="label"  edit="integer"  create="integer" />
+		<column id="action" type="int(11)" key="" display_name="Action" index="label"  edit="text"  create="text" />
+		<column id="permission" type="enum" key="" display_name="Permission" index="label"  edit="enum"  create="enum"   search="true">
+			<![CDATA['READ','INSERT','UPDATE','DELETE']]>
+		</column>				
+	</table>	
+	
+</database>
