@@ -1,0 +1,80 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Dealing with Stress, Anxiety, Anger, &amp; Aggression Effectively<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+
+	<p>
+	Every individual deals with everyday stress differently. Chances are you used tobacco to help combat stress but now it is important to find an alternative.  The first thing you want to do when dealing with stress, anxiety, anger, and aggression is take a step back, breathe, and work with one of the following options:
+	</p>
+	<h3>Positive Self Talk</h3>
+
+		<p>Stay away from negative self-talk, you need to be positive.  Don&amp;acute;t be afraid to be your biggest supporter and talk to yourself.  Tell yourself that you can do it!</p>
+		Positive examples:
+		  <ul>
+			<li>This too shall pass</li>
+			<li>Your life will be better</li>
+			<li>Don&amp;acute;t sweat the small stuff.  It&amp;acute;s all small stuff (almost).</li>
+			<li>Know that you have the strength to be tobacco free</li>
+		  </ul>
+		<br />
+		<h3>Yoga Breathing</h3>
+		<p>Focusing on your breathing can help to relax you and keep your mind off of craving nicotine. Try the following breathing steps:</p>
+		  <ol>
+			<li>First push your stomach out, draw a long deep breath over the count of 3.</li>
+			<li>Hold for 3 seconds</li>
+			<li>Exhale, with a long breath, slowly and completely</li>
+			<li>As you exhale, let your jaw and shoulders drop</li>
+			<li>Feel the relaxation flow from your neck down your arms through your fingertips.</li>
+			<li>Repeat 5 times</li>
+		  </ol>
+
+		<br />
+		<h3>Guided Imagery</h3>
+		<p>Guided Imagery is a good way to escape from the current stress in your life by relaxing the body and mind.  It can help you to focus on something else and keep you from craving tobacco. Use the Break IT Guided Imagery audio stream.</p>
+		<br />
+		<h3>Other Relaxation Techniques</h3>
+		<p>There are many ways to relax, and not all ways work for everyone.  Here are a few suggestions that you may find helpful.</p>
+		  <ul>
+			<li>Listen to music</li>
+			<li>Watch a movie</li>
+			<li>Play a game on the computer (like solitaire)</li>
+			<li>Enjoy a warm bath or shower</li>
+			<li>Treat yourself to a massage</li>
+			<li>Take a nature walk or walk on the beach</li>
+			<li>Go on a picnic</li>
+			<li>Dance</li>
+			<li>Try meditation or visualization</li>
+		  </ul>
+
+
+	<br />
+</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/3/5" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

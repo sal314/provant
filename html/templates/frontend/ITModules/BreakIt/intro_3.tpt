@@ -1,0 +1,32 @@
+<tpt:body>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">What is Break IT?<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Intro/3">
+	<div class="w-75p left">
+	
+		<strong>List the reasons that you want to stop using tobacco:</strong><br />
+		<p>
+		Reasons to stop tobacco use:
+		</p>
+		1.&amp;nbsp;&amp;nbsp;<input type="text" name="C1" value="${POST[C1]}" /><br /><br />
+		2.&amp;nbsp;&amp;nbsp;<input type="text" name="C2" value="${POST[C2]}" /><br /><br />
+		3.&amp;nbsp;&amp;nbsp;<input type="text" name="C3" value="${POST[C3]}" /><br /><br />
+		4.&amp;nbsp;&amp;nbsp;<input type="text" name="C4" value="${POST[C4]}" /><br /><br />
+		<br />
+
+
+		</div>
+	<div class="clear"> </div>
+
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

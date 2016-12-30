@@ -1,0 +1,83 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Nutrition<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/3/2">
+	<div class="w-75p left">
+
+	<p>
+	One of the biggest concerns of quitting tobacco is the fear of weight gain.  According to the American Cancer Society Research shows that about 80% of individuals who quit smoking gain weight. However 56% of people who continue to smoke also gain weight! Don&amp;acute;t let weight gain be a factor to your stopping smoking, instead try to be aware of your dietary intake, and make some healthful changes.  Remember that the health benefits of quitting smoking far exceed any risks from weight gain.
+	</p>
+
+	<h3>Causes for Potential Weight Gain</h3>
+	<ul>
+		<li>Nicotine increases the body&amp;acute;s metabolism</li>
+		<li>Using food as a replacement for smoking</li>
+		<li>Oral fixation</li>
+		<li>Using food as a reward for quitting</li>
+		<li>Increase in taste in food causing an increase in caloric intake</li>
+		<li>Boredom</li>
+	</ul>
+
+	<h3>Healthy Guidelines</h3>
+	<p>
+	Being aware of your dietary intake, also called mindful eating, is one of the most important strategies to preventing weight gain. Increasing your physical activity will also help to prevent weight gain.  Since you have stopped using tobacco you may be feeling better physically, and have more endurance for exercise. Keep in mind that you want to focus on breaking your tobacco habit, so don&amp;acute;t try to make too many lifestyle changes at one time.  It can be overwhelming which can put you at risk for relapse.
+	</p>
+
+	<h3>Dietary Suggestions</h3>
+	<ul>
+		<li>Eat 3 meals daily and incorporate healthy snacks into your meal plan</li>
+		<li>Increase your intake of fruits and vegetables</li>
+		<li>Watch your portion sizes</li>
+		<li>Switch to whole grain breads and cereals</li>
+		<li>Choose low-fat dairy products</li>
+		<li>Limit high sugar, high fat foods and beverages</li>
+		<li>Limit dining out at restaurants</li>
+		<li>Eat mindfully</li>
+		<li>Increase your water intake</li>
+	</ul>
+
+	<div class="activity border">	
+		<h3>Activity</h3>
+		<p>
+		List your Personal Dietary Goals
+		</p>
+		<ol>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="B1" value="${POST[B1]}" size="50" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="B2" value="${POST[B2]}" size="50" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="B3" value="${POST[B3]}" size="50" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="B4" value="${POST[B4]}" size="50" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="B5" value="${POST[B5]}" size="50" /></li>
+		</ol>
+		<br />
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+</tpt:body>

@@ -1,0 +1,82 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Triggers and Coping Solution Recommendations<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	<p>It is important that you share with as many people as possible of your intent to become tobacco free.  The following is a list of recommendations designed to help you get through your relapse and back on the road to success.  You have made great strides in your tobacco cessation efforts, don&amp;acute;t give up now.</p>
+	<p>
+	You <strong>CAN</strong> Break IT. 
+	</p>
+	<ul>
+		<li>Avoid or reduce alcohol use</li>
+		<li>Tell your friends you&amp;acute;ve quit</li>
+		<li>Go for a walk</li>
+		<li>Call a friend or your support partner</li>
+		<li>Use the Break IT audio stream</li>
+		<li>Reward your success</li>
+		<li>Call a toll free tobacco cessation hotline</li>
+	</ul>
+	<br />
+	<h3>Coping Mechanisms</h3>
+	<p>
+	Following is a list of some alternative coping mechanisms that can be used to deal with &amp;quot;high risk&amp;quot; situations that could potentially lead you to relapse on your Break IT plan.  Check the boxes next to the coping mechanism that you think would help you handle situation that might lead you to use tobacco.
+	</p>
+
+	<div class="activity border" style="height:320px;">	
+	<h3>Activity</h3>
+	<p>Copy the list down on a 3x5 index card and keep in your shirt pocket, your purse or any other place that you can access quickly to help remind you of different things you can do to curb tobacco cravings. </p>
+	
+	<div style="position:relative; height:200px; margin-left:20px;">
+		<div style="postion:absolute; left:0; top:0;">
+			<ul>
+		  		<li>Brush your teeth</li>
+		  		<li>Drink coffee with two hands on cup</li>
+		  		<li>Eat a small nutritious snack</li>
+		  		<li>Take a walk</li>
+		  		<li>Read</li>
+		  		<li>Get a manicure</li>
+		  		<li>Chew sugarless gum</li>
+		  		<li>Deep, slow breaths</li>
+			</ul>
+		</div>
+		<div style="position:absolute; left:300px; top:0;">
+			<ul>
+				<li>Start an activity right away</li>
+				<li>Drink a non-caffeinated beverage</li>
+				<li>Sit in nonsmoking sections</li>
+				<li>Watch television</li>
+				<li>Discover a hobby</li>
+				<li>Write a letter</li>
+				<li>Take a break w/non-smoking co-workers</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/4/5" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

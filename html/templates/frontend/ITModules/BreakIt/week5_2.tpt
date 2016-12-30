@@ -1,0 +1,90 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Breaking the Bank<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/5/2">
+	<div class="w-75p left">
+
+	<p>
+	Listed below is the cost of smoking 1 pack of cigarettes per day.  Think of the money that you can save by breaking the habit!
+	</p>
+	<p>
+	For example, if you smoke one pack per day:*
+	</p>
+	<div class="ITtables">
+	<table border="0" cellpadding="5">
+		<thead>
+			<tr>
+				<th width="150px" align="left">After:</th>
+				<th width="150px" align="left">You&amp;acute;ve saved:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1 day</td>
+				<td>$7.00</td>
+			</tr>
+			<tr>
+				<td>1 week</td>
+				<td>$49.00</td>
+			</tr>
+			<tr>
+				<td>1 month</td>
+				<td>$210.00</td>
+			</tr>
+			<tr>
+				<td>1 year</td>
+				<td>$2,555.00</td>
+			</tr>
+			<tr>
+				<td>10 years</td>
+				<td>$25,550.00</td>
+			</tr>
+			<tr>
+				<td>20 years</td>
+				<td>$51,100.00</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<br />
+	<p>
+	*Prices are based on an average of $7.00 per pack of cigarettes; however cost may vary based on where they were purchased.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>What would you do with the extra money?</p>
+
+		<textarea rows="5" cols="70" name="B1">${POST[B1]}</textarea><br />
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+</tpt:body>

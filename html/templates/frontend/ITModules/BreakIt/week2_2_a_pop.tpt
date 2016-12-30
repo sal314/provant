@@ -1,0 +1,19 @@
+<tpt:body>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="popup">
+	<div class="inner-content">
+
+			<h3>Counseling and Group Support</h3>
+			<p>
+			The success rate for tobacco cessation appears to be greater for those people who combine therapies such as nicotine replacement therapy (NRT) and group tobacco cessation programs. Individual or group support programs may be weekly meetings that you attend, online support groups or even telephonic programs.  These programs can help you identify and overcome triggers and other barriers that prevent you from quitting tobacco products. According to the National Cancer Institute, research shows that success rates for all quit methods are higher when they are combined with an individual or group support program like Break IT. 
+			</p>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

@@ -1,0 +1,136 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+
+	<div id="section-header">
+		<h1 class="myfocus-logo">Activity<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIt/Week/2/5" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+	<h3>Go through the following list, read the question and then select the answer that most fits.</h3>
+	<br />
+<div class="stack">
+		<div class="question">How soon after you wake up do you have your first tobacco product?</div>
+			<label><tpt:html type="radio" id="E1" value="1" selected="${POST[E1]}" />&amp;nbsp;&amp;nbsp;Less than 5 minutes</label><br />
+		    <label><tpt:html type="radio" id="E1" value="2" selected="${POST[E1]}" />&amp;nbsp;&amp;nbsp;6 - 30 minutes</label><br />
+		    <label><tpt:html type="radio" id="E1" value="3" selected="${POST[E1]}" />&amp;nbsp;&amp;nbsp;31 - 60 minutes</label><br />
+		    <label><tpt:html type="radio" id="E1" value="4" selected="${POST[E1]}" />&amp;nbsp;&amp;nbsp;After 1 hour</label><br />
+		<tpt:if id="result[G1]" test="EXISTS">
+			<br />
+			<span class="${resClass[G1]}">${result[G1]}</span><br />
+		</tpt:if>
+		<br />
+	</div>	
+	<div class="stack">	
+		 <div class="question">
+		    <span>Do you use tobacco more frequently in the hours after waking than during the rest of the day?</span>
+		 </div>
+		 <div>
+		   <label> <tpt:html type="radio" id="E2" value="1" selected="${POST[E2]}" />&amp;nbsp;&amp;nbsp;YES</label><br />
+		   <label> <tpt:html type="radio" id="E2" value="2" selected="${POST[E2]}" />&amp;nbsp;&amp;nbsp;NO</label><br />
+		 </div>
+		
+	</div>
+	
+	<div class="stack">
+		  <div class="question">Do you find it difficult not to use tobacco?</div>
+		   <label> <tpt:html type="radio" id="E3" value="1" selected="${POST[E3]}" />&amp;nbsp;&amp;nbsp;YES</label><br />
+		   <label> <tpt:html type="radio" id="E3" value="2" selected="${POST[E3]}" />&amp;nbsp;&amp;nbsp;NO</label><br />
+	</div>
+	<br />
+		  
+	<div class="stack">
+		<div class="question">Which time that you use tobacco would be the most difficult to give up?</div>
+		    <label><tpt:html type="radio" id="E4" value="1" selected="${POST[E4]}" onchange="setTextBox();" />&amp;nbsp;&amp;nbsp;The first one in the morning</label><br />
+		   <label> <tpt:html type="radio" id="E4" value="2" selected="${POST[E4]}" onchange="setTextBox();" />&amp;nbsp;&amp;nbsp;Other&amp;nbsp;&amp;nbsp; </label><br />
+			<tpt:if id="DIS" test="EQ" value="T">
+			<label><input type="text" name="E5" value="${POST[E5]}" disabled="true" style="background:#DDD; margin:5px 0 0 5px;" size="50" /></label><br />
+			</tpt:if>
+			<tpt:else>
+			<label><input type="text" name="E5" value="${POST[E5]}" disabled="false" style="background:#FFF; margin:5px 0 0 5px;" size="50" /></label>	
+	<br />
+			</tpt:else>
+	</div>
+		  
+	<br />
+
+	<div class="stack">
+		  <div class="question">How many times daily do you use tobacco products?</div>
+		   <label><tpt:html type="radio" id="E6" value="1" selected="${POST[E6]}" />&amp;nbsp;&amp;nbsp;10 or less</label><br />
+		   <label> <tpt:html type="radio" id="E6" value="2" selected="${POST[E6]}" />&amp;nbsp;&amp;nbsp;11 - 20</label><br />
+		   <label><tpt:html type="radio" id="E6" value="3" selected="${POST[E6]}" />&amp;nbsp;&amp;nbsp;21 - 30</label><br />
+		   <label> <tpt:html type="radio" id="E6" value="4" selected="${POST[E6]}" />&amp;nbsp;&amp;nbsp;31 or more</label><br />
+	</div>
+		  
+	<br />
+		  
+	<div class="stack">
+		<div class="question">Do you typically use tobacco products when you are so sick that you are home in bed?</div>
+		   <label><tpt:html type="radio" id="E7" value="1" selected="${POST[E7]}" />&amp;nbsp;&amp;nbsp;YES</label><br />
+		   <label><tpt:html type="radio" id="E7" value="2" selected="${POST[E7]}" />&amp;nbsp;&amp;nbsp;NO</label><br />
+			<br />
+			<span>*Source: National Cancer Institute</span>
+	</div>
+	<br />
+	
+	<div class="stack">
+		<div class="question">
+		<span>Based on the information you provided in the previous questions, which method do you think would work best for you? Why?</span>
+		</div>
+		<br />
+		<textarea name="E8" rows="5" cols="75" style="margin:5px 0 0 0;">${POST[E8]}</textarea>
+	</div>
+	<br />
+	<div class="stack">
+		<div class="question">
+			<span>How can your support person help you to achieve success in using this method?</span><br />
+			<textarea name="E9" rows="5" cols="75" style="margin:5px 0 0 0;">${POST[E9]}</textarea>
+		</div>
+
+	</div>
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+	<script language="JavaScript" type="text/javascript">
+		function setTextBox () {
+			var radio = document.getElementsByName("E4");
+			var txt = document.getElementsByName("E5");
+			if (radio[0].checked) {
+				txt[0].disabled = true;
+				txt[0].style.background = "#CCC";
+			}
+			else {
+				txt[0].disabled = false;
+				txt[0].style.background = "#FFF";
+			}
+
+			return;
+		}
+	</script>
+</tpt:body>

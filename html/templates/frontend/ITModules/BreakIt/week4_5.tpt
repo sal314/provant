@@ -1,0 +1,129 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 4 Questionnaire <br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIt/Week/4/5" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+		<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+	
+	</ul>
+	</div>
+	</tpt:if>
+
+	<div class="stack">
+		<div class="question">1. Relapse is an opportunity to/for ___________:</div>
+		<label><tpt:html type="radio" id="E1" value="1" selected="${POST[E1]}" />Give Up</label><br />
+		<label><tpt:html type="radio" id="E1" value="2" selected="${POST[E1]}" />Success</label><br />
+		<label><tpt:html type="radio" id="E1" value="3" selected="${POST[E1]}" />Failure</label><br />
+		<label><tpt:html type="radio" id="E1" value="4" selected="${POST[E1]}" />Set new goals</label><br />
+		<tpt:if id="result[E1]" test="EXISTS">
+			<br />
+			<span class="${resClass[E1]}">${result[E1]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">2. Which are the top three reasons that individuals relapse: (Check all that apply)</div>
+		<label><tpt:html type="checkbox" id="E4" value="1" selected="${POST[E4]}" />Living or working with others who continue to use tobacco products.</label><br />
+		<label><tpt:html type="checkbox" id="E5" value="1" selected="${POST[E5]}" />Setting unrealistic goals.</label><br />
+		<label><tpt:html type="checkbox" id="E6" value="1" selected="${POST[E6]}" />Thinking that just one won&amp;acute;t make a difference.</label><br />
+		<label><tpt:html type="checkbox" id="E7" value="1" selected="${POST[E7]}" />Working for an employer who does not enforce a Tobacco-free workplace policy.</label><br />
+		<tpt:if id="result[E4]" test="EXISTS">
+			<br />
+			<span class="${resClass[E4]}">${result[E4]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">3. How many people should you share with your intent to become tobacco free:</div>
+		<label><tpt:html type="radio" id="E2" value="1" selected="${POST[E2]}" />Only your family.</label><br />
+		<label><tpt:html type="radio" id="E2" value="2" selected="${POST[E2]}" />As many people as possible.</label><br />
+		<label><tpt:html type="radio" id="E2" value="3" selected="${POST[E2]}" />As few people as possible.</label><br />
+		<label><tpt:html type="radio" id="E2" value="4" selected="${POST[E2]}" />Only your close friends.</label><br />
+		<tpt:if id="result[E2]" test="EXISTS">
+			<br />
+			<span class="${resClass[E2]}">${result[E2]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">4. Which is the coping mechanism for the Trigger of smelling secondhand smoke:</div>
+		<label><tpt:html type="radio" id="E3" value="1" selected="${POST[E3]}" />Stay at home more if your home is smoke free.</label><br />
+		<label><tpt:html type="radio" id="E3" value="2" selected="${POST[E3]}" />Wear more perfume/cologne.</label><br />
+		<label><tpt:html type="radio" id="E3" value="3" selected="${POST[E3]}" />Avoid situations for the first few weeks where tobacco use is involved.</label><br />
+		<label><tpt:html type="radio" id="E3" value="4" selected="${POST[E3]}" />Ask people not to smoke around you.</label><br />
+		<tpt:if id="result[E3]" test="EXISTS">
+			<br />
+			<span class="${resClass[E3]}">${result[E3]}</span><br />
+		</tpt:if>
+	</div>
+	<div class="stack">
+		<div class="question">5. Which of the following are recommendations designed to help you get through a relapse: (Check all that apply)</div>
+		<label><tpt:html type="checkbox" id="E8" value="1" selected="${POST[E8]}" />Increase alcohol use.</label><br />
+		<label><tpt:html type="checkbox" id="E9" value="1" selected="${POST[E9]}" />Go for a walk.</label><br />
+		<label><tpt:html type="checkbox" id="E10" value="1" selected="${POST[E10]}" />Call a friend or your support partner.</label><br />
+		<label><tpt:html type="checkbox" id="E11" value="1" selected="${POST[E11]}" />Listen to the Break IT audio stream.</label><br />
+		<tpt:if id="result[E8]" test="EXISTS">
+			<br />
+			<span class="${resClass[E8]}">${result[E8]}</span><br />
+		</tpt:if>
+	</div>
+	<br />
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleBreakIT/Week/4/6">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleBreakIT/Week/4/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

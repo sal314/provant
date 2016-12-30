@@ -1,0 +1,67 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Physical Activity Suggestions<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/3/3">	
+	<div class="w-75p left">
+	
+	<p>
+	Increasing your physical activity not only will help to prevent weight gain, it also helps with withdrawal symptoms as well as reducing stress.  Always check with your physician before starting an exercise program.  Walking is a great exercise to start with!  If you haven&amp;acute;t been exercising recently, start with a 10-15 minute walk, and increase your speed and time as your endurance improves.  You can try a pedometer which you clip to your waist band and it monitors your steps.  The goal is 10,000 steps a day. Also try adding activities to your day by taking the stairs, walking during lunch, parking farther away from your destination or stretching during breaks.
+	</p>
+
+	<h3>Suggested Activities</h3>
+	<ul>
+		<li>Walk, hike or jog</li>
+		<li>Swim</li>
+		<li>Bike Ride</li>
+		<li>Join a gym</li>
+		<li>Dance</li>
+		<li>Tennis, Basketball, Baseball or other sports</li>
+		<li>Yoga, or Pilates</li>
+		<li>Martial Arts</li>
+	</ul>
+	<br />
+	<div class="activity border">	
+		<h3>Activity</h3>
+		<p>
+		Make a list of new activities that you would like to try to help you avoid tobacco.
+		</p>
+		<ol>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C1" value="${POST[C1]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C2" value="${POST[C2]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C3" value="${POST[C3]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C4" value="${POST[C4]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C5" value="${POST[C5]}" size="75" /></li>
+		</ol>
+		<br />
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+</tpt:body>

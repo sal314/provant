@@ -1,0 +1,53 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">The &amp;quot;Big Three&amp;quot;<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/4/3">
+	<div class="w-75p left">
+
+	<h3>The Top Three Reasons Individuals Relapse Are:</h3>
+
+	<ol>
+		<li>Living or working with others who continue to use tobacco products.</li>
+		<li>An employer that does not enforce a Tobacco-free workplace policy.</li>
+		<li>The thought that &amp;quot;just one&amp;quot; won&amp;acute;t make a difference to my personal Break IT plan.</li>
+	</ol>
+
+	<div class="activity border">	
+		<h3>Activity</h3>
+		<p>Use the space provided to write down the triggers that may have contributed to your relapse. </p>
+		
+		<span class="question">What happened that caused you to start using tobacco again?
+		
+		<textarea name="C1" rows="6" cols="70">${POST[C1]}</textarea><br /></span>
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+</tpt:body>

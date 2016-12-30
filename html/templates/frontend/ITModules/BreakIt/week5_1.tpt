@@ -1,0 +1,136 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Benefits of Breaking the Tobacco Habit:<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+		<p>Tobacco use is the single largest preventable cause of disease and premature death in the United States.  It is never too late to stop using tobacco. Once you break the habit you can add healthy days and years to your life.  Just by becoming smokeless you can significantly lower your risk of death from lung cancer and other diseases, including:</p>
+	<ul>
+		<li>Heart disease</li>
+		<li>Stroke</li>
+		<li>Emphysema</li>
+		<li>Cervical cancer</li>
+		<li>Kidney cancer</li>
+		<li>Acute myeloid leukemia</li>
+		<li>Pancreatic cancer</li>
+		<li>Stomach cancer</li>
+		<li>Bladder cancer</li>
+		<li>Esophageal cancer</li>
+		<li>Laryngeal cancer</li>
+		<li>Oral cancer</li>
+		<li>Throat cancer</li>
+	</ul>
+	<p>When smokers quit; within twenty minutes of smoking that last cigarette the body begins a series of changes.</p>
+	
+	<br />
+	</div>
+	
+	
+	<div class="w400 right">
+	
+		<h6>Long-term Benefits of Quitting</h6>
+
+	<h3>At 5 years:</h3>
+	<ul>
+		<li>From 5 to 15 years after quitting, stroke risk is reduced to that of people who have never smoked</li>
+	</ul>
+
+
+	<h3>At 10 years:</h3>
+	<ul>
+		<li>Risk of lung cancer drops to as little as one-half that of continuing smokers</li>
+		<li>Risk of cancer of the mouth, throat, esophagus, bladder, kidney, and pancreas decreases</li>
+		<li>Risk of ulcer decreases</li>
+	</ul>
+
+
+	<h3>At 15 years:</h3>
+	<ul>
+		<li>Risk of coronary heart disease is now similar to that of people who have never smoked</li>
+		<li>Risk of death returns to nearly the level of people who have never smoked</li>
+	</ul>
+	<br />
+	
+	
+	</div>
+	
+	<div class="w400 left">
+	
+
+	<h3>At 20 minutes after quitting:</h3>
+	<ul>
+		<li>Blood pressure decreases</li>
+		<li>Pulse rate drops</li>
+		<li>Body temperature of hands and feet increases</li>
+	</ul>
+
+
+	<h3>At 8 hours:</h3>
+	<ul>
+		<li>Carbon monoxide level in blood drops to normal</li>
+		<li>Oxygen level in blood increases to normal</li>
+	</ul>
+
+
+	<h3>At 24 hours:</h3>
+	<ul>
+		<li>Chance of a heart attack decreases</li>
+	</ul>
+
+
+	<h3>At 48 hours:</h3>
+	<ul>
+		<li>nerve endings start re-growing</li>
+		<li>Ability to smell and taste is enhanced</li>
+	</ul>
+
+
+	<h3>The first year after quitting 2 weeks to 3 months:</h3>
+	<ul>
+		<li>Circulation improves</li>
+		<li>Walking becomes easier</li>
+		<li>Lung function increases</li>
+	</ul>
+
+
+	<h3>1 to 9 months:</h3>
+	<ul>
+		<li>Coughing, sinus congestion, fatigue, shortness of breath decreases</li>
+	</ul>
+
+
+	<h3>1 year:</h3>
+	<ul>
+		<li>Excess risk of coronary heart disease is decreased to half that of a smoker</li>
+	</ul>
+
+
+	
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/5/2" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

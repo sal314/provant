@@ -1,0 +1,64 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Staying Smoke-Free<br /><small>Break IT</small></h1>
+	</div>
+	
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/5/3">
+	<div class="w-75p left">
+	<h3>Tips For Staying Smoke Free</h3>
+	<ul>
+		<li>Review your Break IT tobacco cessation work book regularly</li>
+		<li>Continue to use the Break IT guided imagery audio stream</li>
+		<li>Visualize yourself as tobacco free</li>
+		<li>Use available resources to you including free smoking quitlines</li>
+		<li>Utilize your family, friends, and coworkers for support</li>
+		<li>Make an index card with reminders of why you quit smoking</li>
+		<li>Avoid trigger situations when ever possible</li>
+		<li>Save tobacco product money and buy something special, or save it</li>
+		<li>Discover new healthy hobbies</li>
+		<li>Remove all cigarettes from your home, apartment, workplace, car, clothes, etc.</li>
+		<li>Clean your home, apartment, or car thoroughly to remove the smell of tobacco</li>
+		<li>Make your quit date a special occasion and celebrate it</li>
+		<li>Share with others the sense of pride that you have experienced as a non smoker</li>
+	</ul>
+	<div class="activity border">	
+		<h3>Activity</h3>
+		<p>Make a list of your own helpful tips:</p>
+		<br />
+		<ol>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C1" size="80" value="${POST[C1]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C2" size="80" value="${POST[C2]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C3" size="80" value="${POST[C3]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C4" size="80" value="${POST[C4]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="C5" size="80" value="${POST[C5]}" /></li>
+		</ol>
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>	
+</div>
+</tpt:body>

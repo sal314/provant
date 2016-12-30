@@ -1,0 +1,88 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Know Your Triggers<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIT/Week/1/2">
+	<div class="w-75p left">
+	<p>
+	There are many different triggers that make you want to use tobacco. Knowing how to recognize your triggers will help you to avoid difficult situations that make you want to use tobacco.
+	</p>
+	<p>
+	Triggers can be either mental or physical. Triggers can be people, places, activities, and feelings that you associate with tobacco use. Common triggers include parties or other social activities where alcohol and tobacco use is present, the smell of coffee, and the end of a meal or even driving a car. You may even have other triggers not listed here.
+	</p>
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		Take a moment to think about what kind of triggers make you want to use tobacco.  Place a check in the box next to the trigger that matches your personal tobacco habit. (Check all that apply)
+		</p>
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="B1" value="1" selected="${POST[B1]}" />Watching TV</li>
+			<li><tpt:html type="checkbox" id="B2" value="1" selected="${POST[B2]}" />Talking on the phone</li>
+			<li><tpt:html type="checkbox" id="B3" value="1" selected="${POST[B3]}" />Driving a car</li>
+			<li><tpt:html type="checkbox" id="B4" value="1" selected="${POST[B4]}" />Passenger in a car</li>
+			<li><tpt:html type="checkbox" id="B5" value="1" selected="${POST[B5]}" />Working on the computer</li>
+			<li><tpt:html type="checkbox" id="B6" value="1" selected="${POST[B6]}" />Smelling a cigarette</li>
+			<li><tpt:html type="checkbox" id="B7" value="1" selected="${POST[B7]}" />Seeing someone else smoke</li>
+			<li><tpt:html type="checkbox" id="B8" value="1" selected="${POST[B8]}" />Waking in the morning</li>
+			<li><tpt:html type="checkbox" id="B9" value="1" selected="${POST[B9]}" />Drinking coffee, tea or alcohol</li>
+			<li><tpt:html type="checkbox" id="B10" value="1" selected="${POST[B10]}" />Stressed</li>
+			<li><tpt:html type="checkbox" id="B11" value="1" selected="${POST[B11]}" />Feeling lonely/depressed</li>
+			<li><tpt:html type="checkbox" id="B12" value="1" selected="${POST[B12]}" />Boredom</li>
+			<li><tpt:html type="checkbox" id="B13" value="1" selected="${POST[B13]}" />Anger and or irritability</li>
+			<tpt:if id="DIS" test="EQ" value="T">
+			<li><tpt:html type="checkbox" id="B14" value="1" selected="${POST[B14]}" onchange="setTextBox();" />Other, please describe
+				<br /><br /><input type="text" name="B15" size="50" value="${POST[B15]}" style="background:#DDD;" disabled="true" /></li>
+			</tpt:if>
+			<tpt:else>
+			<li><tpt:html type="checkbox" id="B14" value="1" selected="${POST[B14]}" onchange="setTextBox();" />Other, please describe
+				<br /><br /><input type="text" name="B15" size="50" value="${POST[B15]}" style="background:#FFF;" /></li>
+			</tpt:else>
+		</ul>
+		<br />
+	</div>
+		</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+	
+	
+	<script language="JavaScript" type="text/javascript">
+	function setTextBox() {
+		var other = document.getElementsByName("B14");
+		var txt = document.getElementsByName("B15");
+		if (other[0].checked) {
+			txt[0].disabled = false;
+			txt[0].style.background = '#FFF';
+		}
+		else {
+			txt[0].disabled = true;
+			txt[0].style.background = '#DDD';
+		}
+	}
+	</script>
+</tpt:body>

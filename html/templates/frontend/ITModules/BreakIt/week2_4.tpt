@@ -1,0 +1,70 @@
+<tpt:body><script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Nicotine Replacement Therapy<br /><small>Break IT</small></h1>
+	</div>
+	
+	<p>Nicotine Replacement Therapy (NRT) can help to control your cravings and withdrawal symptoms.  There are a few that can be purchased over the counter and others will need to be prescribed by your doctor.  Each one has their own advantages and side effects, so make sure that you are informed of all of the options of NRTs and determine the best option for you with your physician.</p>
+	<br />
+	<table border="1" cellpadding="2" width="100%" class="datagrid itTable">
+		<thead align="center">
+			<tr>
+				<th width="15%">Type of NRT</th>
+				<th width="35%">Description</th>
+				<th width="25%">Advantage</th>
+				<th width="25%">Possible Side Effects</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Nicotine Patch</td>
+				<td>The nicotine patch can be purchased over the counter. Once you open your box you will find the patch will remind you of a large band-aid.  You will place the patch on your skin, rotating areas each day, then during the day it will give you small doses of nicotine to help your cravings.</td>
+				<td>The patch can be used very easily by changing it once per day.<br /><br />Those who benefit the most from using the patch are those who have smoked for a long time and have a high addiction to nicotine.</td>
+				<td>There can be mild itching, burning or irritation where the patch is placed on the skin.<br /><br />Insomnia can occur and others have documented strange dreams and problems sleeping.</td>
+			</tr>
+			<tr>
+				<td>Nicotine Gum</td>
+				<td>The nicotine gum can be purchased over the counter. It helps to control cravings when you chew the gum, it releases nicotine into the bloodstream.  When a peppery taste is noticed then place the gum up against your cheek to help release the needed amount of nicotine into the system.</td>
+				<td>You are able to control when you want to use the gum, it is not continuous.<br /><br />A good alternative to the patch.<br /><br />If you are having a really bad craving it can help with your withdrawal symptoms</td>
+				<td>Bad taste<br /><br />Bad texture<br /><br />Throat irritation<br /><br />Mouth ulcers<br /><br />Hiccups<br /><br />Nausea<br /><br />Jaw discomfort<br /><br />Racing heartbeat</td>
+			</tr>
+			<tr>
+				<td>Nicotine Lozenge</td>
+				<td>The nicotine lozenge can be purchased over the counter.  They have the consistency of a hard candy or cough drop.  You do not suck on the lozenge you actually place it against your cheek so the nicotine can be released into the bloodstream.</td>
+				<td>It can be used during the day at your discretion.<br /><br />Nicotine enters the bloodstream quickly.</td>
+				<td>Difficulty sleeping<br /><br />Nausea<br /><br />Heartburn<br /><br />Headache<br /><br />Excessive gas<br /><br />Hiccups</td>
+			</tr>
+			<tr>
+				<td>Nicotine Nasal Spray</td>
+				<td>The nicotine nasal spray is prescribed by your doctor.  When you receive the medication you will spray a dose into each nostril.  The nicotine is automatically absorbed into the bloodstream.  This gives you the same sensation as smoking a cigarette.</td>
+				<td>It gives you immediate relief from withdrawal symptoms you might be having.<br /><br />Easy to use.</td>
+				<td>Nasal irritation<br /><br />Runny nose<br /><br />Watery eyes<br /><br />Sneezing<br /><br />Throat irritation<br /><br />Coughing</td>
+			</tr>
+			<tr>
+				<td>Nicotine Inhaler</td>
+				<td>The nicotine inhaler will need to be prescribed by your doctor. It looks very similar to an actual cigarette and you use it the same way. When you take a hit you will receive a puff of nicotine. The puff does not enter the lungs but into the bloodstream through the mouth.</td>
+				<td>Helps to control cravings by giving you a hand to mouth action.<br /><br />The inhaler controls the amount of nicotine you receive.</td>
+				<td>Source:<br />American Cancer Society</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/2/5" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

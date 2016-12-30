@@ -1,0 +1,55 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Support Systems<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/2/1">
+	
+	<div class="w-75p left">
+	<h3>Family and Friends</h3>
+	<p>
+	It is important to have a strong support system of family, friends, and co-workers to help you succeed with becoming tobacco free. Some find it easier to break their tobacco habit if they have a few supportive people that they are able to rely on when they are having a difficult time.  If your family members, friends, or co-workers use tobacco products ask them not to use them around you.  This will help decrease your cravings.  It is good to have someone you can rely on during these tough times.
+	</p>
+	<p>
+	If your family and friends won&amp;acute;t be as supportive as you might need there are always outside organizations there to help.  Many areas have a free, telephonic, confidential, and 24-hour Quitline to help assist you.  They are able to answer questions, help you through a craving period, or they are available just to listen if you are having a tough time.  For a Quitline in your area, call: <strong>1-877-YES-QUIT</strong>.
+	</p>
+
+	<div class="activity border">
+	<h3>Activity</h3>
+	<p class="question">
+	<span>Make a list of all the people you can depend on to be supportive.</span>
+	<textarea name="A1" rows="5" cols="65">${POST[A1]}</textarea><br />
+	</p>	
+	<p class="question">
+	<span>Who is your strongest supporter?</span><br /><input type="text" name="A2" size="40" value="${POST[A2]}" /><br />
+	</p>
+	<p class="question">How would you like them to help you?
+	<textarea name="A3" rows="3" cols="65">${POST[A3]}</textarea><br />
+	</p>
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+</div>
+</tpt:body>

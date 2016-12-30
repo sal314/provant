@@ -1,0 +1,53 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Understanding Addictions<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIT/Week/1/1">
+	<div class="w-75p left">
+	<p>
+	Tobacco use is not just an unhealthy habit, it is an addiction. Your body comes to rely on the nicotine released in tobacco products. This is one of the reasons why it is so difficult to stop using tobacco. Once nicotine is brought into the body, it takes eight seconds for it to reach your brain and stimulate feelings of pleasure.  Most people use tobacco because of a strong desire they have developed for nicotine. As the amount of nicotine in your body decreases, it triggers a craving for more nicotine.  Some people state that the urge is uncontrollable, and that they feel nervous, anxious or short tempered when they have not been able to provide their bodies with nicotine. People who are dependent on nicotine may experience withdrawal symptoms when quitting tobacco products.
+	</p>
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		Place a check in the box next to the feelings or emotions you have when you deprive your body of nicotine. (Check all that apply)
+		</p>
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="A1" value="1" selected="${POST[A1]}" />Nervous</li>
+			<li><tpt:html type="checkbox" id="A2" value="1" selected="${POST[A2]}" />Anxious</li>
+			<li><tpt:html type="checkbox" id="A3" value="1" selected="${POST[A3]}" />Short tempered</li>
+			<li><tpt:html type="checkbox" id="A4" value="1" selected="${POST[A4]}" />Angry</li>
+			<li><tpt:html type="checkbox" id="A5" value="1" selected="${POST[A5]}" />Irritable</li>
+		</ul>
+		<br />
+	</div>
+		</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

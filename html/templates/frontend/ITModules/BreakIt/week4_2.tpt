@@ -1,0 +1,77 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Triggers and Coping Solution Recommendations<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>The false sense that you think you can have just one. This usually leads to another one after that, and then another.</p>
+			
+			<h3>Coping Mechanism:</h3>
+			<p>Remind yourself why you chose to break your habit in the first place.  Use the tools in your Break IT kit to help get you through initial cravings.</p>
+		</div>
+		
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>Stress and/or celebrations. For years you have used tobacco as a way of dealing with all kinds if life events and  situations</p>
+			<h3>Coping Mechanism:</h3>
+			<p>Use guided imagery techniques and affirmations you learned on the Break IT CD to help you cope with situations that make you feel like you want to use tobacco.  Be sure to reward yourself when you go without tobacco in those situations.  Find a friend or your designated support person to talk to before you use tobacco.</p>
+		</div>
+		
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>Many individuals have found that drinking even small amounts of alcohol can trigger the need to use tobacco.</p>
+			<h3>Coping Mechanism:</h3>
+			<p>You don&amp;acute;t need to give alcohol up completely, unless alcohol is also a problem for you, but you may need to stay away from drinking alcohol for the first few weeks of your Break IT plan.</p>
+		</div>
+		
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>Coffee and caffeinated beverages. Individuals who attempt to become tobacco free tend to turn to higher usage of caffeine products.  Be careful as too much caffeine can affect your mood and lead to feelings of anxiety, restlessness and difficulty sleeping.</p>
+			<h3>Coping Mechanism:</h3>
+			<p>Cut back on the amount of coffee, tea or soft drinks containing caffeine that you consume.</p>
+		</div>
+		
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>The smell of secondhand smoke or even just being around others when they are using tobacco can be a trigger that can lead to relapse.</p>
+			<h3>Coping Mechanism:</h3>
+			<p>Avoid situations for the first few weeks where tobacco use is involved. It may be hard to avoid it entirely but with stricter state laws around public smoking, it is getting easier.</p>
+		</div>
+	
+		<div class="health-question">
+			<h3>Trigger:</h3>
+			<p>Not following to package directions for your Nicotine Replacement Therapy (NRT). If you have chosen to use nicotine gum, lozenge, patch, inhalers or nasal spray it is not uncommon for individuals to not follow the package directions carefully. Misuse can become a trigger for relapse, especially if you have been a smoker for many years.</p>
+			<h3>Coping Mechanism:</h3>
+			<p>Use your NRT as directed.  If you are experiencing problems or difficulty with the medication be sure to speak with your primary care physician or call the toll free number generally located on the package insert of the product.  Most companies offer free counselors who can support you with correct use of the medication.</p>
+		</div>
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/4/3" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

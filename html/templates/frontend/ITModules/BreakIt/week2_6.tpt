@@ -1,0 +1,83 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Withdrawal Symptoms and How to Cope<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<p>
+	Withdrawal symptoms are common when quitting tobacco products.  You may experience all of the symptoms below, or only a couple of them or some people do not experience any at all.  It is important to be aware of withdrawal symptoms and know how to cope with them effectively.
+	</p>
+
+	<h3>Cravings</h3><br />
+	<p>
+	The most common withdrawal symptom is craving nicotine.  Your body has formed dependence for nicotine so as you deprive your body of this addictive substance you develop a craving for it. It is important to break the cycle and not give into your cravings.  These symptoms usually begin to decrease within a couple of days and the longer you are able to go with out nicotine the cravings become less intense as well as less often. The American Cancer Society has recommended a 4 step process to help you fight your cravings.
+	</p>
+	<ol>
+		<li>Take Deep Breaths.  Close your eyes and begin to relax, focus on something else, and remember to breathe deeply.  This will help to get you to 	focus on your breathing instead of on your craving.</li>
+		<li>Drink Water. Drinking water will help you during a craving, try to drink it slowly.</li>
+		<li>Do something else. Think back to your support person and give them a call and see if they are able to go out and do a fun activity with you to keep your mind preoccupied.  Do a hobby, read a book etc.</li>
+		<li>Delay for 10 minutes.  Usually cravings only last about 20 minutes so try to delay thinking about your craving for 10 minutes and then repeat as needed until the craving is over.</li>
+	</ol>
+
+	<h3>Irritability/Tension</h3><br />
+	<p>
+	You will find that you are having more mood swings by not having nicotine in the system, this is normal.  Think about taking deep breaths, work on your guided imagery, and staying calm during high stress times.
+	</p>
+
+	<h3>Tingling Sensations</h3><br />
+	<p>
+	The tingling sensations are from an improvement in circulation in your body.  The tingling sensation is usually temporary.
+	</p>
+
+	<h3>Lightheadedness/ Dizziness</h3><br />
+	<p>
+	When you were using tobacco, you were getting less oxygen to the brain and more carbon monoxide. The lightheadedness is because your brain is receiving more oxygen. Most people only experience this symptom when they first quit tobacco.
+	</p>
+
+	<h3>Increased Coughing</h3><br />
+	<p>
+	Smoking destroys the cilia, or tiny little hair-like projections lining your respiratory system and this is the first thing that starts repairing itself when you stop smoking.  They line your nose and reach all the way down into your lungs.  As they start repairing themselves, they often cause coughing. Your body is healing and your lungs are clearing themselves of all the toxins and impurities. As your lungs repair themselves the cough should subside.
+	</p>
+
+	<h3>Additional Withdrawal Symptoms</h3><br />
+	<p>
+	Headaches, Restlessness, Trouble sleeping, Difficulty Concentrating, Constipation
+	</p>
+
+	<h3>Fight Withdrawal Symptoms</h3>
+	<ol>
+		<li>Drink Plenty of Water.</li>
+		<li>Carry hard candy, mints, chewing gum, or other low calorie snacks with you.</li>
+		<li>Participate in physical activities.</li>
+		<li>Continue to use the relaxation techniques of guided imagery or deep breathing located in the Break IT audio stream located on the Break IT main page.</li>
+	</ol>
+	<br />
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/2/7" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

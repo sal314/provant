@@ -1,0 +1,255 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Journaling<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	<p>
+	If you find that you are your strongest supporter, try journaling.  It is a great option and you are able to write down your thoughts and review them at a later date.  Guided journaling is very useful; it helps you to systematically put your thoughts down on paper.
+	</p>
+	<h3>Guided Journaling Worksheet</h3>
+	<table border="1" class="datagrid" cellpadding="5">
+		<thead align="center">
+			<tr>
+				<th>Tobacco<br />Use<br />Number</th>
+				<th>Time of<br />Day</th>
+				<th>Craving<br />Level 1-3*</th>
+				<th>Activity</th>
+				<th>Who was I<br />with</th>
+				<th>Mood</th>
+				<th>What did I do to<br />make me not use<br />tobacco?</th>
+			</tr>
+		</thead>
+		<tbody align="center">
+			<tr>
+				<td>Example</td>
+				<td>7:30 am</td>
+				<td>3</td>
+				<td>Driving to<br />Work</td>
+				<td>Alone</td>
+				<td>Stressed</td>
+				<td>Sang to music<br />and savored a<br />hard candy</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+				<td>&amp;nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+	<strong>*Craving Level rating: 3 high craving, 2 craving manageable, 1 not craving at all</strong><br />
+	<br />
+	<br />
+<!--
+	<a href="javascript:showWin('/ModuleBreakIT/info/week2_2_a', '600px', '280px')">Counseling and Group Support</a>
+-->
+	<a href="javascript:void(0);" onclick="javascript:showWin('/ModuleBreakIT/info/week2_2_a', '600px', '280px')">Counseling and Group Support</a>
+
+	<br />
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/2/3" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+	
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+</tpt:body>

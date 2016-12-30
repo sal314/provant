@@ -1,0 +1,57 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Breaking Your Tobacco Habit<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+
+	<p>
+	Breaking your tobacco habit is hard, but you can do it. It is not easy to let go of something that has been such a vital part of your life for so long. Your tobacco use provided you with an alternative way to cope with your everyday life situations; good, bad, social, personal and private. The nicotine in tobacco has provided you with comfort and activated the pleasure centers in your brain. It is no wonder that the process of breaking the tobacco habit can be so difficult.
+	</p>
+	<p>
+	Relapse is when you have attempted to give up your addiction but you find yourself sneaking a &amp;quot;hit&amp;quot; just to experience the quick pleasure that nicotine can bring.
+	</p>
+	<p>
+	You are in control of your choices. Use this relapse as an opportunity to learn from the triggers and signals that caused you to go back to your tobacco habit and then re-start your Break IT plan. If you take the time to identify the early trouble spots, and write them down, you can improve your Break IT plan and eventually become tobacco free.
+	</p>
+	<p>
+	Remember, relapse is an opportunity for success. If you have used tobacco for a long time, relapse is expected.  Think of relapse as part of the process.  Relapse does not have to be a failure unless you make the choice to fail.  Here are some things to consider when you relapse:
+	</p>
+	<ol>
+		<li>Don&amp;acute;t give up!</li>
+		<li>Make a commitment to a tobacco free life.</li>
+		<li>Make this relapse your last.</li>
+		<li>Learn from the setback.</li>
+		<li>Write down what you think caused your relapse.  Create a visual plan of how you will you handle the next situation when you feel like you might slip up.</li>
+		<li>Use your Break IT module again. Start at the beginning and review all the reasons why you chose to become tobacco free.</li>
+		<li>Use your tools that you have learned about in the Break IT program-the guided imagery audio stream, community resources, family support, etc.</li>
+	</ol>
+	<br />
+	
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/4/2" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

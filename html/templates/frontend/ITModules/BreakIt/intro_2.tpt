@@ -1,0 +1,68 @@
+<tpt:body>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">What is Break IT?<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Intro/2">
+	<div class="w-75p left">
+	
+	<br />
+	<p>
+	If you have ever tried to stop using tobacco before, then you understand how hard it is. The first step for breaking your tobacco habit is to make a commitment to yourself that you will give it your best.  Understand that breaking this habit takes time.
+	</p>
+	<p>
+	The Break IT tobacco cessation program is based on sound physical and behavioral principles. This program uses a positive behavior modification approach in combination with group support, guided imagery, and nicotine replacement coaching.
+	</p>
+	<p>
+	The program will teach you to use various behavior skills that will help you break your cravings and tobacco routine. The certified instructor will address your concerns about Nicotine Replacement Therapy (NRT), symptoms associated with withdrawal; provide suggestions for handling cravings, and ideas for overcoming relapse.
+	</p>
+	<p>
+	The main objective of the program is to improve the quality of your health by helping you to lead a tobacco free life.
+	</p>
+
+	<strong>Are you Ready to Break the Habit?</strong><br />
+	<p>
+	This is a very important question.  Are you ready to make this commitment? To successfully break your tobacco habit, it is important to understand where you fall in The Stages of Change Model. This model is effective for many behavior changes including tobacco use. The Stages of Change Model shows, that for most people, a change in behavior occurs gradually and moves through the following designated stages.
+	</p>
+	<ol>
+		<li><strong>Pre-Contemplation:</strong> Not yet acknowledging that there is a problem behavior that needs to be changed. No thought of changing, now or later and often anger if a loved one makes a suggestion for change.</li>
+		<li><strong>Contemplation:</strong> Acknowledging that there is a problem but not yet ready or sure of wanting to make a change.  At this stage you start to consider that a change may be needed, but have not yet made any plans to make a change.</li>
+		<li><strong>Preparation/Determination:</strong> Getting ready to change, removing temptations, and planning how action will be taken. It is helpful to arrange support and understanding from family, friends, or perhaps a support group at this stage. Arrange healthy substitutes for the missed habit or activity or substance. Beware of substituting a new problem (over-eating, over-spending) for the old.</li>
+		<li><strong>Action/Willpower:</strong> Changing the behavior! The stage most of us picture, actual practice of the new way of being. Breaking the tobacco habit!!</li>
+		<li><strong>Maintenance and Relapse Prevention:</strong> Maintaining the behavior change over the long term. Awareness that relapse is possible and taking measures to prevent returning to older behaviors and abandoning the new changes.</li>
+	</ol>
+	<div style="margin-left:auto;margin-right:auto;">
+		<img src="/assets/media/images/breakit/changemodel.jpg" alt="Stages of Change Model" />
+	</div>
+	
+		<span><strong>Activity</strong></span><br />
+		<p>
+		Where would you place yourself in the Stages of Change Model? Check the box that matches your stage.
+		</p>
+		<tpt:html type="radio" id="B1" value="1" selected="${POST[B1]}" />Pre-contemplation<br />
+		<tpt:html type="radio" id="B1" value="2" selected="${POST[B1]}" />Contemplation<br />
+		<tpt:html type="radio" id="B1" value="3" selected="${POST[B1]}" />Planning/Preparation<br />
+		<tpt:html type="radio" id="B1" value="4" selected="${POST[B1]}" />Action/Willpower<br />
+		<tpt:html type="radio" id="B1" value="5" selected="${POST[B1]}" />Maintenance/Relapse<br />
+		<br />	
+		
+	</div>
+	
+	<div class="clear"> </div>
+
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+	</div>
+	
+		
+		
+	</form>
+	
+
+</div>
+
+</tpt:body>

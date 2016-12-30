@@ -1,0 +1,68 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Setting a Quit Date<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/1/6">
+	<div class="w-75p left">
+	
+	<p>
+	It is time to set a quit date! It is helpful to set a specific date to quit, and then tell as many people as you can.  This helps you to form a personal support group, and some personal accountability.
+	</p>
+	<p>
+	Take a careful look at your calendar and try not to select a date that is likely to be stressful.  Some examples of stressful days are starting a new job, attending a funeral, the day you start a diet, an important family event like a wedding, or your child leaving for college.
+	</p>
+	<p>
+	Mark your chosen quit date on your calendar and begin to prepare yourself.  Make sure you share your quit date with supportive family and friends.  Review your tobacco triggers, and try to avoid trigger situations when possible.
+	</p>
+	<h3>Confidence:</h3>
+	<p>
+	Be confident that you will be successful with breaking your tobacco habit! The American Cancer Society reports the possibility of failure stops an estimated 70 percent of smokers from trying to quit.
+	</p>
+	<p>
+	The Break IT program is designed to give you the support, confidence and tools to successfully break your habit for good.
+	</p>
+	<p>
+	Many former smokers have made several efforts to become a nonsmoker before they are successful.  It is common to make five to seven attempts to stop tobacco use before you are successful.  Remember that relapse is part of the Stage of Change Model and is an expected part of your Break IT process. Don&amp;acute;t let this discourage you! Each time you attempt to break the habit will bring you one step closer to actually achieving your goal.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		If you have attempted to quit in the past, complete the following activity. 
+		</p>
+		<ol>
+			<li class="question">How long did you go without tobacco use?<br /><input type="text" name="F1" size="75" value="${POST[F1]}" /></li>
+			<li class="question">What led you to smoke again?<br /><input type="text" name="F2" size="75" value="${POST[F2]}" /></li>
+			<li class="question">List the positive benefits that you experienced.<br /><input type="text" name="F3" size="75" value="${POST[F3]}" /></li>
+			<li class="question">List the negative benefits that you experienced.<br /><input type="text" name="F4" size="75" value="${POST[F4]}" /></li>
+			<li class="question">What was your biggest personal challenge?<br /><input type="text" name="F5" size="75" value="${POST[F5]}" /></li>
+		</ol>
+		<br />
+		</div>
+		</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

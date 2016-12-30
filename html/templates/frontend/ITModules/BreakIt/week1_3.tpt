@@ -1,0 +1,62 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Preparing to Quit:<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIT/Week/1/3">
+	<div class="w-75p left">
+	
+	<h3>Determine reasons to break the habit, such as:</h3>
+
+	<ul>
+		<li>I will feel better physically</li>
+		<li>I will have more energy and focus</li>
+		<li>I will save money</li>
+		<li>My clothes won&amp;acute;t smell like smoke</li>
+		<li>My family will be proud of me</li>
+		<li>I will be proud of myself</li>
+		<li>I will be able to start an exercise program</li>
+		<li>I will decrease my risk of heart disease</li>
+		<li>I will have improved health</li>
+	</ul>
+
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		Remember that it is &amp;quot;OK&amp;quot; to have mixed feelings about your tobacco quit plan. Prioritize your reasons to break the habit. From the list above, write down your personal reasons in the order of importance to you.
+		</p>
+		<ol>
+			<li><input class="w400" type="text" name="C1" value="${POST[C1]}" /></li>
+			<li><input class="w400" type="text" name="C2" value="${POST[C2]}" /></li>
+			<li><input class="w400" type="text" name="C3" value="${POST[C3]}" /></li>
+			<li><input class="w400" type="text" name="C4" value="${POST[C4]}" /></li>
+			<li><input class="w400" type="text" name="C5" value="${POST[C5]}" /></li>
+		</ol>
+		</div>
+		</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

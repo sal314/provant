@@ -1,0 +1,77 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Personal Fears<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleBreakIT/Week/1/5">	
+	<div class="w-75p left">
+	
+	<p>
+	Another reason individuals may fail to meet their tobacco free goal is because the dependence on nicotine has caused a false sense of fear.
+	</p>
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		What are some of your personal fears that may have prevented you from being successful in the past?
+		</p>
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="E1" value="1" selected="${POST[E1]}" />&amp;nbsp;&amp;nbsp;Fears of Quitting</li>
+			<li><tpt:html type="checkbox" id="E2" value="1" selected="${POST[E2]}" />&amp;nbsp;&amp;nbsp;Weight Gain</li>
+			<li><tpt:html type="checkbox" id="E3" value="1" selected="${POST[E3]}" />&amp;nbsp;&amp;nbsp;Friends still smoke</li>
+			<li><tpt:html type="checkbox" id="E4" value="1" selected="${POST[E4]}" />&amp;nbsp;&amp;nbsp;Spouse still smokes</li>
+			<li><tpt:html type="checkbox" id="E5" value="1" selected="${POST[E5]}" />&amp;nbsp;&amp;nbsp;Limited social support</li>
+			<li><tpt:html type="checkbox" id="E6" value="1" selected="${POST[E6]}" />&amp;nbsp;&amp;nbsp;Fear of success</li>
+			<li><tpt:html type="checkbox" id="E7" value="1" selected="${POST[E7]}" />&amp;nbsp;&amp;nbsp;Fear to fail (again)</li>
+			<li><tpt:html type="checkbox" id="E8" value="1" selected="${POST[E8]}" />&amp;nbsp;&amp;nbsp;Unable to get breaks at work</li>
+			<li><tpt:html type="checkbox" id="E9" value="1" selected="${POST[E9]}" onchange="setTextArea();" />&amp;nbsp;&amp;nbsp;Other, please describe</li>
+		</ul>
+		<tpt:if id="DIS" test="EQ" value="T">
+		  <textarea name="E10" cols="65" rows="3" style="background:#DDD; margin-left:45px" disabled="true">${POST[E10]}</textarea><br />
+		</tpt:if>
+		<tpt:else>
+		  <textarea name="E10" cols="65" rows="3" style="background:#FFF;">${POST[E10]}</textarea><br />
+		</tpt:else>
+		<br />
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+	
+	<script language="JavaScript" type="text/javascript">
+	function setTextArea () {
+		var other = document.getElementsByName("E9");
+		var ta = document.getElementsByName("E10");
+		if (other[0].checked) {
+			ta[0].disabled = false;
+			ta[0].style.background = '#FFF';
+		}
+		else {
+			ta[0].disabled = true;
+			ta[0].style.background = '#DDD';
+		}
+	}
+	</script>
+</tpt:body>

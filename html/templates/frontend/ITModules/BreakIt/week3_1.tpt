@@ -1,0 +1,92 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Breaking Bad Habits<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIT/Week/3/1">
+	<div class="w-75p left">
+	
+	<p>
+	You will have incidents in your life when you will want to use tobacco like driving your car, being at a party, finishing a meal, and high stress situations.  You will be focusing on positive behaviors to get you through these tough times while continuing to be tobacco free.  How you deal with stressful situations will be individualized. Keep trying until you find the method that works best for you.  It will be worth it, when you succeed!
+	</p>
+
+	<h3>Staying Busy</h3>
+	<p>
+	Finding things to do with your time, energy, mouth, hands, and mind will help your cravings.  When you are busy and distracted you will be less likely to think about using tobacco. Below are options you can try, find what works best for you as a distraction.
+	</p>
+
+		<strong>Go to nonsmoking places:</strong>
+		<ul>
+			<li>Visit a Library or museum, or go to a movie or to the theater</li>
+		</ul>
+
+		<strong>Be active:</strong>
+		<ul>
+			<li>Take a nature walk, go to the beach or find a new hobby</li>
+		</ul>
+
+		<strong>Distract your hands:</strong>
+		<ul>
+			<li>Try knitting, crocheting, woodworking, or painting</li>
+			<li>Hold a pen, ball or straw</li>
+		</ul>
+
+		<strong>Distract your mind:</strong>
+		<ul>
+			<li>Read, enjoy music, or learn a new language</li>
+			<li>Play cards, do a cross word puzzle, or a jigsaw puzzle</li>
+		</ul>
+
+		<strong>Fool your mouth:</strong>
+		<ul>
+			<li>Try sugarless gum or mints, eat a lollipop, brush your teeth</li>
+			<li>Use a straw or toothpick</li>
+		</ul>
+
+	
+	<div class="activity border">	
+		<h3>Activity</h3><br />
+		<p>
+		Make a list of enjoyable activities that will help you keep busy.
+		</p>
+		<ol>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="A1" value="${POST[A1]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="A2" value="${POST[A2]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="A3" value="${POST[A3]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="A4" value="${POST[A4]}" size="75" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input type="text" name="A5" value="${POST[A5]}" size="75" /></li>
+		</ol>
+		<br />
+		<br />
+		<a href="javascript:showWin('/ModuleBreakIT/info/week3_1_a', '700px', '280px')">Dealing with Alcohol Use</a><br /><br />
+		<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+	</div>
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	
+	</form>	
+</div>
+</tpt:body>

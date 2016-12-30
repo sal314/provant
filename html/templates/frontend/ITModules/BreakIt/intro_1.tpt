@@ -1,0 +1,22 @@
+<tpt:body>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">What is Break IT?<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="w-75p left">
+		<p class="pad-bottom">The Break IT program is a positive approach to breaking the tobacco habit.  Although it does not guarantee that you will permanently stop using tobacco, it is a guide to help you understand the different ways to break your tobacco habit and provide you with strategies to maintain a tobacco free life.</p>
+	</div>
+
+	<div class="clear"> </div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Intro/2" class="right next">Next</a>
+	</div>
+</div>
+	
+	
+</tpt:body>

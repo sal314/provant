@@ -1,0 +1,39 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+<div class="popup">
+	<div class="inner-content">	
+		<h3>Website Links and Online Community Resources</h3><br />
+		<ul>
+			<li><a href="#" onclick="window.open('http://www.cnacer.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Cancer Society</a><br />
+			    Call 1-800-227-2345/1-800-ACS-2345</li><br />
+			<li><a href="#" onclick="window.open('http://www.cancer.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">National Cancer Institute</a><br />
+			    Call 1-877-44U-Quit (1-877-448-7848)</li><br />
+			<li><a href="#" onclick="window.open('http://www.cancer.gov/aboutnci/cis', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Cancer Information Service</a><br />
+			    Call 1-800-4-CANCER (1-800-422-6237); TTY, 1-800-332-8615</li><br />
+			<li><a href="#" onclick="window.open('http://www.americanheart.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Heart Association</a><br />
+				Call 1-800-AHA-USA1 (1-800-242-8721)</li><br />
+			<li><a href="#" onclick="window.open('http://www.americanlegacy.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Legacy Foundation</a><br />
+				</li><br /><br />
+			<li><a href="#" onclick="window.open('http://www.lungusa.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">American Lung Association</a><br />
+				Call 1-800-LUNG-USA (1-800-586-4872)</li><br />
+			<li><a href="#" onclick="window.open('http://www.cdc.gov/tobacco/osh/', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Centers for Disease Control and Prevention</a><br />
+				Call 1-800-CDC-INFO (1-800-232-4636)</li><br />
+			<li><a href="#" onclick="window.open('http://www.trytostop.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Quit Smoking</a><br />
+				Call 1-800-Try-To-Stop</li><br />
+			<li><a href="#" onclick="window.open('http://www.nicotine-anonymous.org', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Nicotine Anonymous</a><br />
+				Call (toll free) 1-877-879-6422</li><br />
+			<li><a href="#" onclick="window.open('http://www.smokefree.gov', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Somkefree.gov</a> Online materials, including info on state telephone based programs<br />
+				Toll-free number: 1-800-784-8669 (1-800-QUITNOW)</li>
+		</ul>
+		<br />
+		*Inclusion on this list does not imply endorsement
+		<br />
+	</div>
+</div>		
+	</body>
+	</html>
+</tpt:body>

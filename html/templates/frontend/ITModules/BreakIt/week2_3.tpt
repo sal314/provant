@@ -1,0 +1,86 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Methods to Breaking the Cycle<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+	
+	<h3>Cold Turkey</h3>
+	<p>
+	This method has you quit tobacco products abruptly; you go from your current amount of usage each day to not using any tobacco products at all.
+	</p>
+	<blockquote>
+	Example: The day before your quit date you will continue to use your usual amount of tobacco products but on your quit date you will not use any tobacco products at all. Although this is very difficult, it is a very effective quitting method for many people.
+	</blockquote>
+	
+	<h3>Tapering</h3>
+	<p>
+	You will decrease your tobacco use per day until you are not using it at all. Some find this method very difficult.  The American Cancer Society suggests that people cut back to a minimal amount per day and then they move into the &amp;quot;Cold Turkey Method&amp;quot;.
+	</p>
+	<blockquote>
+	Example: Using your quit date determine how many days in advance you will need to begin tapering.  If a person sets their quit date on a Friday they will begin tapering their tobacco usage on Monday so they will be tobacco free by their quit date.
+	</blockquote>
+	<p>
+	Example of tapering for a cigarette smoker:
+	<ul style="list-style-type:none;">
+		<li>Monday: 20 cigarettes</li>
+		<li>Tuesday: 17 cigarettes</li>
+		<li>Wednesday: 14 cigarettes</li>
+		<li>Thursday: 11 cigarettes</li>
+		<li>Friday: no more cigarettes</li>
+	</ul>
+	</p>
+	<p>
+	*When choosing which cigarettes to part with try focusing on the ones that are least needed each day.
+	</p>
+
+	<h3>Postponing</h3>
+	<p>
+	Begin to delay the time that you first use a tobacco product each day. Once you have delayed your first usage of the day there is no need to count or keep track of the amount you have during the day.  You will continue to delay the time each day by a set number of hours until you are no longer using any tobacco products.
+	</p>
+	<p>
+	Example of postponing for a cigarette smoker:
+	</p>
+	<blockquote>A smoker determines that their first cigarette of the day is at 7:00 am.  So they choose to follow the schedule below:
+	</blockquote>
+	
+	<ul style="list-style-type:none;">
+		<li>Day 1: Begin smoking at 7:00 am</li>
+		<li>Day 2: Begin smoking at 10:00 am</li>
+		<li>Day 3: Begin smoking at 1:00 pm</li>
+		<li>Day 4: Begin smoking at 4:00 pm</li>
+		<li>Day 5: Begin smoking at 7:00 pm</li>
+		<li>Day 6: Stop smoking</li>
+	</ul>
+
+	<p>
+	Postponing is a great method if you are at all concerned about quitting.  It helps to build confidence with each day knowing that you can accomplish your goal of being smoke free.  It is important to realize that using this method does not cut back on your withdrawal symptoms. 
+	</p>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/2/4" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

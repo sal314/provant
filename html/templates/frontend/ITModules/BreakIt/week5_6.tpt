@@ -1,0 +1,36 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You have completed the Break IT module!<br /><br /></h1>
+	</div>
+	<div class="txt-ctr">
+		<h2><a href="javascript:void(0);" onclick="window.open('/ModuleBreakIT/Download', '_blank')">Download Certificate</a></h2>
+		<img src="/assets/media/images/breakit/week5-E.jpg" alt="" />
+		
+		<br /><br /><br /><br />
+		
+	</div>
+
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Index" class="loseit-home" style="margin:0 auto">Break It Homepage</a>
+	</div>
+</div>
+
+
+</tpt:body>

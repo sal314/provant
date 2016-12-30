@@ -1,0 +1,56 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Reasons to Quit<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleBreakIT/Week/1/4">
+	<div class="w-75p left">
+	<p>
+	When you want to use tobacco, reach for your personal list to remind yourself of the reasons you want to break the tobacco habit.  Be sure to use your personal reason list to help motivate you on those days when you are struggling.  Keep your list in a location that is most likely to trigger your tobacco habit, like the car, bedside table, near the coffee pot, etc.
+	</p>
+	<p>
+	A tobacco free life is a big task and can be overwhelming.  Individuals who have tried to break the habit in the past and relapsed generally do so because they have &amp;quot;talked themselves&amp;quot; into other reasons to continue to use tobacco.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>
+		What are some of the reasons you want to continue your tobacco habit?<br />
+		Reasons to continue tobacco use:
+		</p>
+		<ol>
+			<li>&amp;nbsp;&amp;nbsp;<input size="75" type="text" name="D1" value="${POST[D1]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input size="75" type="text" name="D2" value="${POST[D2]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input size="75" type="text" name="D3" value="${POST[D3]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input size="75" type="text" name="D4" value="${POST[D4]}" /></li>
+			<li>&amp;nbsp;&amp;nbsp;<input size="75" type="text" name="D5" value="${POST[D5]}" /></li>
+		</ol>
+		<br />
+	</div>
+		</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

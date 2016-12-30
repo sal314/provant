@@ -1,0 +1,41 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header" class="txt-ctr">
+		<h1>You are ready to begin your goals for Week 4<br /><br /></h1>
+	</div>
+	
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Congratulations" />
+	</div>
+
+	<div class="w-75p left">
+		<h3>Remember to:</h3>
+	
+		<ol>
+			<li>Understand how difficult it is to &amp;acute;Break the Habit&amp;acute;</li>
+			<li>Learn triggers and how to cope with them</li>
+			<li>Know the reasons for relapses, especially &amp;acute;The Big Three&amp;acute;</li>
+		</ol>
+		
+	</div>
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Index" class="loseit-home" style="margin:0 auto">Break It Homepage</a>
+	</div>
+</div>
+
+</tpt:body>

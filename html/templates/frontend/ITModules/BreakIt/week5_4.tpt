@@ -1,0 +1,62 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Closing Thoughts<br /><small>Break IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	You have started on an important journey. One that will improve your health and quality of life, so it is important that you take each day as it comes and break through obstacles and barriers one day at a time. Before long you will be tobacco free and will be able to lead a healthier life, not to mention all the money you will save.
+	</p>
+	<p>
+	Hopefully, with each passing day you will begin to notice that your association between tobacco and many of your daily activities is becoming less intense. Be sure to use all of the techniques and tools you have learned through the Break IT program to help you beat each craving and successfully overcome your tobacco triggers. This is not an easy task.  Remind yourself everyday of how well you are doing and how with each passing day without tobacco, you will be closer to your personal goal.  Look around you, at your friends, loved ones and all the people who mean something special to you.  Your choices and actions to break the tobacco habit will allow you to improve your health and live a long happy life with the people who mean the most to you.
+	</p>
+	<p>
+	The choices and behaviors you make are the sum total of everything you do and what makes up your individuality. The day you have your last tobacco product will become an important milestone in your life.  Those who succeed in tobacco cessation are much more likely to come to some important realizations about themselves. Successful abstainers are more motivated to overcome other addictive behaviors and obstacles that may threaten their health and overall well-being. You have mastered a very difficult challenge: you have removed an addictive drug from your life. You should feel a sense of great pride that nicotine no longer controls you. Congratulations on your victory over nicotine and tobacco. 
+	</p>
+
+
+		<br />
+		<i>
+		&amp;quot;To cease smoking is the easiest thing I ever did.  I ought to know because I&amp;acute;ve done it a thousand times.&amp;quot; -Mark Twain, attributed
+		</i>
+		<br />
+		<br />
+		<i>
+		&amp;quot;One thousand Americans stop smoking every day - by dying.&amp;quot;  -Author unknown
+		</i>
+		<br />
+		<br />
+	
+		<a href="javascript:showWin('/ModuleBreakIT/info/week5_4_a')">Resources</a><br />
+		<br />
+
+
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleBreakIT/Week/5/5" class="right next">Next</a>
+		<a href="/ModuleBreakIT/Index" class="left loseit-home">Break It Homepage</a>
+	</div>
+	
+</div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>
