@@ -1,0 +1,51 @@
+body {background: %background% url(/assets/media/images/bg.png) 0 0 repeat-x;}
+h1{color:%background%;}
+h2{color:%background%;}
+h4{color:%background%;}
+a:hover {color:%background%;}
+.divider {background: %background% url(/assets/media/images/dots.png);}
+
+#login-info {background:%background%;}
+#message-info a, #message-info a:hover, #message-info a:visited {color:%background%;}
+
+/*- Navigation--------------------------- */
+#nav span {color:%background%;}
+#header {color:%background%;}
+
+/*Footer Styles*/
+#footer a:hover {color:%background%;}
+#article-header{background-color:%background%; }
+
+/*Main Container*/
+#accordion-container {border-bottom:5px solid %background%;}
+#left-bracket{background: %background%;}
+#right-bracket{background: %background%;}
+#sub-promos a:hover {color:%background%;}
+#sub-promos h4 {color:%background%;}
+
+/* FORM STYLES */
+.item-header{background-color:%background%; }
+
+/*Weight Tracker*/
+.trackervalue{color:%background%; }
+#log h4{color:%background%; }
+#log a:hover{color:%background%;}
+
+/* Color 1 */
+.color1, .odd {background:%color1%!important;}
+
+/* Color 2 */
+.color2 {background:%color2%!important;}
+#articles .option-box {background: %articles%;}
+
+#accordionHandle0{background-color: %tab1%}
+#accordionHandle1{background-color: %tab2%}
+#accordionHandle2{background-color: %tab3%}
+#accordionHandle3{background-color: %tab4%}
+
+#accordionContent0{background-color: %tab1%}
+#accordionContent1{background-color: %tab2%}
+#accordionContent2{background-color: %tab3%}
+#accordionContent3{background-color: %tab4%}
+
+.loginColor{background-color: %background%;}

@@ -1,0 +1,40 @@
+body {background: #0C6AAA url(/assets/media/images/bg.png) 0 0 repeat-x;}
+h1{color:#0C6AAA;}
+h2{color:#0C6AAA;}
+h4{color:#0C6AAA;}
+a:hover {color:#0C6AAA;}
+.divider {background: #0C6AAA url(/assets/media/images/dots.png);}
+
+#login-info {background:#0C6AAA;}
+#message a, #message a:hover, #message a:visited {color:#0C6AAA;}
+
+/*- Navigation--------------------------- */
+/*#nav {background:#0C6AAA;}*/
+#nav a:hover span {color:#0C6AAA;}
+#header {color:#0C6AAA;}
+
+/*Footer Styles*/
+#footer a:hover {color:#0C6AAA;}
+#article-header{background-color:#0C6AAA; }
+
+/*Main Container*/
+#accordion-container {border-bottom:5px solid #0C6AAA;}
+#left-bracket{background: #0C6AAA;}
+#right-bracket{background: #0C6AAA;}
+#sub-promos a:hover {color:#0C6AAA;}
+#sub-promos h4 {color:#0C6AAA;}
+
+/* FORM STYLES */
+.item-header{background-color:#0C6AAA; }
+
+/*Weight Tracker*/
+.trackervalue{color:#0C6AAA; }
+#log h4{color:#0C6AAA; }
+#log a:hover{color:#0C6AAA;}
+
+/* Color 1 */
+.color1, .odd {background:#90E9FF!important;}
+
+/* Color 2 */
+.color2 {background:#D4F6FF;}
+#articles .option-box {background: #D7E7C4;}

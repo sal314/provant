@@ -1,0 +1,40 @@
+body {background: #4CCAEA url(/assets/media/images/bg.png) 0 0 repeat-x;}
+h1{color:#4CCAEA;}
+h2{color:#4CCAEA;}
+h4{color:#4CCAEA;}
+a:hover {color:#4CCAEA;}
+.divider {background: #4CCAEA url(/assets/media/images/dots.png);}
+
+#login-info {background:#4CCAEA;}
+#message a, #message a:hover, #message a:visited {color:#4CCAEA;}
+
+/*- Navigation--------------------------- */
+/*#nav {background:#4CCAEA;}*/
+#nav a:hover span {color:#4CCAEA;}
+#header {color:#4CCAEA;}
+
+/*Footer Styles*/
+#footer a:hover {color:#4CCAEA;}
+#article-header{background-color:#4CCAEA; }
+
+/*Main Container*/
+#accordion-container {border-bottom:5px solid #4CCAEA;}
+#left-bracket{background: #4CCAEA;}
+#right-bracket{background: #4CCAEA;}
+#sub-promos a:hover {color:#4CCAEA;}
+#sub-promos h4 {color:#4CCAEA;}
+
+/* FORM STYLES */
+.item-header{background-color:#4CCAEA; }
+
+/*Weight Tracker*/
+.trackervalue{color:#4CCAEA; }
+#log h4{color:#4CCAEA; }
+#log a:hover{color:#4CCAEA;}
+
+/* Color 1 */
+.color1, .odd {background:#90E9FF!important;}
+
+/* Color 2 */
+.color2 {background:#D4F6FF;}
+#articles .option-box {background: #D7E7C4;}
