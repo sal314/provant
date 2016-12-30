@@ -1,0 +1,30 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You have comlpleted the Lose IT module!</h1>
+	</div>
+	<div class="txt-ctr">
+		<h2><a href="#" onclick="window.open('/ModuleLoseIT/Download', '_blank'); return false;">Download Certificate</a></h2>
+		<img src="/assets/media/images/loseit/week5-G.jpg" alt="" />
+	</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Index" class="loseit-home" style="margin:0 auto">Lose It Homepage</a>
+	</div>
+</div>
+</tpt:body>

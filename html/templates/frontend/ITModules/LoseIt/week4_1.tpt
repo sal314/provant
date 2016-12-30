@@ -1,0 +1,72 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+
+	<form method="post" action="/ModuleLoseIt/Week/4/1" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+
+	<div id="section-header">
+		<h1 class="myfocus-logo">Benefits of Physical Activity<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+
+	</div>
+	<div class="left w-75p">
+		<p>If the benefits of physical activity were put in pill form, everyone would be taking it!  The benefits of exercise are numerous; and it is good for your mind, body and soul!!</p>
+		
+		<h3>Benefits of Physical Activity:</h3>
+		<ul class="spaceout">
+			<li>Helps attain weight loss goal</li>
+			<li>Physical activity burns calories and builds muscle, both which promotes weight loss.</li>
+			<li>Increases energy</li>
+			<li>Exercise improves mood and reduces feelings of stress, anxiety and depression.</li>
+			<li>Provides Restful Sleep</li>
+			<li>Exercise improves the quality of sleep so you feel more refreshed during the day.</li>
+			<li>Promotes Self-confidence</li>
+			<li>Exercise boosts your self-esteem, confidence and sense of control.</li>
+			<li>Builds Strong Bones</li>
+			<li>Weight bearing exercises and strength training improves bone density </li>
+			<li>Reduces the risk of illness and disability</li>
+			<li>Regular exercise may help control blood pressure and cholesterol levels, and can reduce the risk of heart disease and certain types of cancer.</li>
+			<li>Supports Successful aging</li>
+			<li>Exercise improves the quality of sleep so you feel more refreshed during the day</li>
+		</ul>
+		<br />
+		
+		
+		
+	<div class="activity border">
+		<h3>Activity</h3>
+			<div class="question">List The Most Important Benefits To You:</div>
+			<ol>
+				<li><input type="text" name="A1" value="${POST[A1]}" style="width:400px" /></li>
+				<li><input type="text" name="A2" value="${POST[A2]}" style="width:400px" /></li>
+				<li><input type="text" name="A3" value="${POST[A3]}" style="width:400px" /></li>
+			</ol>
+			<br />
+		</div>
+	</div>
+	
+	<div class="clear"> </div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+		</div>
+	
+	</form>
+	
+</div>
+</tpt:body>

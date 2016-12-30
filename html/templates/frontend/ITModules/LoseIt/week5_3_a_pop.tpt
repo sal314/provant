@@ -1,0 +1,43 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+
+</head>
+<body>
+<div class="inner-content">
+	<h1>Healthy Eating Habits</h1>
+
+	<div class="w330 right">
+		<div class="stack">
+			<img src="/assets/media/images/loseit/week5-C-popA.jpg" alt="" />
+		</div>
+		<div class="stack">
+			<img src="/assets/media/images/loseit/week5-C-popB.jpg" alt="" />
+		</div>
+	</div>
+
+	<div class="w425 left">
+		<h3>At Home:</h3>
+		<ul>
+			<li>Decide where you are going to eat your meals when at home.</li>
+			<li>Make your dining experience pleasant.  Try buying flowers, a nice tablecloth or candles to spruce up your table.  Perhaps play some quiet background music.</li>
+			<li>Do not stand in the kitchen to eat.</li>
+			<li>When you sit down for your meal take a minute to unwind.  Take a deep breath and slowly let it out.  Try to slow your mind down so you can savor each and every bite!</li>
+			<li>If you are always the first one to finish your meal, try to eat a garden salad (with low fat/calorie dressing) and drink a large glass of water before your main meal.</li>
+			<li>Avoid watching TV or reading the newspaper during mealtime. You tend to eat too much food when you have a distraction and you might forget what you ate!</li>
+		</ul>
+		<h3>At Work:</h3>
+		<ul>
+			<li>Try to avoid eating at your desk.</li>
+			<li>If you have an appointment away from the office, try to plan your lunch so you are not eating in your car.</li>
+			<li>If you have to eat on the run, make a plan to choose a low calorie option instead of a higher calorie meal.</li>
+			<li>Be prepared and pack a healthy lunch like a sandwich on whole grain bread, wrap or pita and fill it with vegetables. Add a fruit and vegetable sticks to balance it out and give you some crunch!</li>
+			<li>Avoid talking on the phone during mealtime. </li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

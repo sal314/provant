@@ -1,0 +1,49 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Food &amp; Activity Journaling:The Accountability Factor<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="activity-right w-25p right">
+		<div class="stack last">
+			<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+	</div>
+	
+	<div class="activity-left w-75p left">
+		<p class="top">The next step for successful weight loss is to start your food and exercise log.  Included in your Lose IT kit is a food and activity journal which will help you keep track of your daily intake of food and beverages and your daily activity.</p>
+		<p>Many people do not want to keep a journal.  They say it takes too much time, it's too hard, or they don't have time to look up the calories.  Initially it is time consuming, but it is also an eye opener.</p>
+		<p class="stack last">
+		Be specific on your Food Log and write down everything that you eat and drink during the day.  Ideally you want to fill out the Food Log each time you have something to eat or drink.  It is easy to forget that you walked by the candy bowl at work several times during the day and had 4 "small" pieces of candy, or that you snacked on a few slices of cheese when you were making dinner.  These calories do add up.  The purpose of the Food Log is to help give you a better idea of how many calories you are eating each day.  To successfully lose weight you need to have a 250-500 calorie deficit per day.</p>
+		<div>
+			<a href="/FoodLog/Index" target="_blank">Start Your Food Journal Now</a>
+		</div>
+		<br />
+		<div>
+			<a href="#">Start Your Activity Journal Now</a>
+		</div>
+	</div>
+	
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/1/5" class="right next">Next</a>
+
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

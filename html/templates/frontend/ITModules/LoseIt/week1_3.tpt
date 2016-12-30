@@ -1,0 +1,41 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">What does BMI Mean?<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="w-75p left">
+		<p>Body mass index, or BMI, may be a new term to some people. Body Mass Index (BMI) is a number calculated from a person's weight and height. BMI is a reliable indicator for most people to screen for weight categories that may lead to health problems.  The formula is designed for adults over 20 years old.</p>
+		
+		<div class="stack last">
+			<a href="javascript:showWin('/ModuleLoseIt/CalcBmi', '300px', '340px')">Calculate Your BMI Now</a>
+		</div>
+	</div>
+
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/1/4" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+
+
+	
+	<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</div>
+</tpt:body>

@@ -1,0 +1,228 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+		$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+		
+		$("table.nutrition a[title]").colorTip({color:'white'});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Understanding Food Labels<br /><small>Lose IT</small></h1>
+	</div>
+	
+	<div class="right w400">
+	<div class="txt-ctr top">Roll over Nutritional Facts for descriptions</div>
+	<br />
+<table class="nutrition center">
+	<thead>
+		<tr>
+			<th colspan="4"><img src="/assets/media/images/loseit/nutrition.jpg" alt="Nutrition Facts" /></th>
+		</tr>
+	</thead>
+	<tr>
+		<td colspan="4" class="thick">
+			<a href="#" title="The first place to start when you look at the Nutrition Facts label is\nthe serving size and the number of servingsin the package. Serving\nsizes are standardized to make it easier to compare similar foods;\nthey are provided in familiar units, such as cups or pieces, followed by the metric\n amount, e.g., the number of grams.">Serving Size</a> 1 cup (228g)<br />
+			<a href="#" title="Identifies the number of servings contained in the whole package.">Servings Per Container</a> 8
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4"><small>Amount Per Serving</small></td>
+	</tr>
+	<tr>
+		<td colspan="4"><a href="#" title="Calories provide a measure of how much energy you get\nfrom a serving of this food. Many Americans consume more calories than they\nneed without meeting recommended intakes for a number of nutrients.\nThe calorie section of the label can help you manage\nyour weight(i.e., gain, lose, or maintain.)">Calories 140 Calories from Fat 10</a></td>
+	</tr>
+	<tr>
+		<td colspan="4" class="txt-right"><a href="#" title="Based on a 2,000 calorie a day diet. In general a daily value less\nthan 5% is considered low and 20% or more is high.">%Daily Value*</a></td>
+	</tr>
+	<tr>
+		<td colspan="3">Total Fat 1g</td>
+		<td class="txt-right">2%</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="indent">Saturated Fat 0g</td>
+		<td class="txt-right">0%</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="indent"><em>Trans</em> Fat 0g</td>
+		<td class="txt-right">0%</td>
+	</tr>
+	<tr>
+		<td colspan="3">Cholesterol 0mg</td>
+		<td class="txt-right">0%</td>
+	</tr>
+	<tr>
+		<td colspan="3">Sodium 85mg</td>
+		<td class="txt-right">4%</td>
+	</tr>
+	<tr>
+		<td colspan="3">Total Carbohydrates 30g</td>
+		<td class="txt-right">10%</td>
+	</tr>
+	<tr>
+		<td colspan="3" class="indent">Dietary Fiber</td>
+		<td class="txt-right">40%</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="indent">Sugars 6g</td>
+	</tr>
+	<tr>
+		<td colspan="4" class="thick">Protein 13g</td>
+	</tr>
+	<tr>
+		<td colspan="4"><a href="#" title="This section lets you know if the food is\na good source of important vitamins and minerals.">Vitamin A 0% Vitamin C 0%<br />Calcium 6% Iron 10%</a></td>
+	</tr>
+	<tr>
+		<td colspan="4">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on you calorie needs: </td>
+	</tr>
+	<tr>
+		<td> </td>
+		<td>Calories</td>
+		<td>2000</td>
+		<td>2500</td>
+	</tr>
+	<tr>
+		<td>Total Fat</td>
+		<td>Less Than</td>
+		<td>65g</td>
+		<td>80g</td>
+	</tr>
+	<tr>
+		<td>Sat Fat</td>
+		<td>Less Than</td>
+		<td>20g</td>
+		<td>25g</td>
+	</tr>
+	<tr>
+		<td>Cholesterol</td>
+		<td>Less Than</td>
+		<td>300mg</td>
+		<td>300mg</td>
+	</tr>
+	<tr>
+		<td>Sodium</td>
+		<td>Less Than</td>
+		<td>2400mg</td>
+		<td>2400mg</td>
+	</tr>
+	<tr>
+		<td colspan="2">Total Carbohydrate </td>
+		<td>300g</td>
+		<td>375g</td>
+	</tr>
+	<tr>
+		<td colspan="2">Dietary Fiber </td>
+		<td>25g</td>
+		<td>30g</td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<a href="#" title="Some labels will show how many calories per gram of fat, carbohydrate and protein.\nNOTE: There are twice as many calories in fat than there are in carbohydrates or protein.">Calories per gram:</a><br />
+			<div class="txt-ctr">Fat 9 | Carbohydrate 4 | Protein 4</div> 
+		</td>
+	</tr>
+</table>
+	</div>
+
+	<div class="left w425">
+	
+
+		<h3>Tips for Understanding a Food Label</h3>
+		<p>To lose weight it is important to read food labels and to focus on the calories per serving and serving size. This section lets you know if the food is a good source of important vitamins and minerals.
+		NOTE:  Calcium 25% means the serving has 250 mg of calcium in it.  This only works for calcium.</p>
+
+		<br />
+		<div class="ITtables">
+		<table cellpadding="8" width="450px">
+			<thead>
+				<tr>
+					<th>Label Claim</th>
+					<th>Definition</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Light or Lite</td>
+					<td>1/2 Fewer calories or 50% less</td>
+				</tr>
+				<tr>
+					<td>Calorie Free</td>
+					<td>Less than 5 calories</td>
+				</tr>
+				<tr>
+					<td>Fat Free</td>
+					<td>Less than 1/2 gram of fat</td>
+				</tr>
+				<tr>
+					<td>Low Saturated Fat</td>
+					<td>1g or less per serving</td>
+				</tr>
+				<tr>
+					<td>Light in Sodium</td>
+					<td>50% less sodium</td>
+				</tr>
+				<tr>
+					<td>Low Cholesterol</td>
+					<td>20mg or less</td>
+				</tr>
+				<tr>
+					<td>Low Sodium</td>
+					<td>140mg or less</td>
+				</tr>
+				<tr>
+					<td>Very Low Sodium</td>
+					<td>35mg or less</td>
+				</tr>
+				<tr>
+					<td>Sodium Free</td>
+					<td>Less than 5mg</td>
+				</tr>
+				<tr>
+					<td>High Fiber</td>
+					<td>5g or more fiber</td>
+				</tr>
+				<tr>
+					<td>Total Carbohyrdrates</td>
+					<td>15g = 1 starch<br />
+						15g = 1 friut<br />
+						12g = 1 milk
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+
+	<div class="clear"> </div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/3/2" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+	<div class="overlay" id="calories_overlay" style="display:none">
+Calories provide a measure of how much energy you get from a serving of food. Many Americans consume more calories than they need without meeting recommended intakes for a number of nutrients. The calorie section of the label can help you manage your weight (i.e., gain, lose, or maintain.)
+
+Remember: the number of servings you consume determines the number of calories you actually eat (your portion amount).
+
+General Guide to Calories:
+
+<ul>
+<li>40 Calories is low</li>
+<li>100 Calories is moderate</li>
+<li>400 Calories or more is high</li>
+<li>4.  % Daily Value</li>
+</ul>
+
+WARNING: Based on a 2,000 calorie a day diet. In general a daily value less than 5% is considered low and 20% or more is high.
+	</div>
+</div>
+</tpt:body>

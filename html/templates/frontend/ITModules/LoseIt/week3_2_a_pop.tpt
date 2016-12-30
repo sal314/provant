@@ -1,0 +1,108 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="inner-content">
+<h2>Here are some great ideas to increase fruits and vegetables in your diet:</h2>
+
+<div class="stack rows">
+
+	<img src="/assets/media/images/loseit/week3-B-popA.jpg" alt="Week 3" class="right" />
+	
+	<div class="w300 left">
+		<h2>Breakfast</h2>	
+		
+		<ul>
+			<li>4-6 oz of 100% fruit juice (watch portion size, calories can add up)</li>
+			<li>V8 Juice (low sodium) or V-8 Fusion light</li>
+			<li>Fresh fruit, frozen fruit or canned fruit in light syrup</li> 
+			<li>Plain yogurt with blueberries or other fruit</li>
+			<li>Add fresh fruit to high fiber cereal or waffles</li> 
+			<li>Add vegetables to your eggs or omelet</li>
+		</ul>
+	</div>
+
+	<div class="clear"> </div>
+</div>
+
+<div class="stack rows">
+
+	<img src="/assets/media/images/loseit/week3-B-popB.jpg" alt="Week 3" class="right" />	
+
+	<div class="w300 left">
+
+		<h2>Lunch</h2>
+
+		<ul>
+			<li>Salad with light salad dressing (add tuna, chicken, bean or tofu for protein)</li>
+			<li>Pizza with extra vegetables instead of meat toppings</li>
+			<li>Keep fruit cups at work</li>
+			<li>Add lettuce, tomatoes, onions or any other vegetable to your sandwich</li>
+			<li>Low sodium soups (minestrone, lentil, or vegetable) are low in calories</li>
+		</ul>
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+	
+<div class="stack rows">
+	
+	<img src="/assets/media/images/loseit/week3-B-popC.jpg" alt="Week 3" class="right" />
+	
+	<div class="w300 left">
+	
+		<h2>Snacks</h2>
+	
+		<ul>
+			<li>Hummus with carrots or celery</li>
+			<li>Celery with Laughing Cow light cheese</li>
+			<li>Vegetables with low fat dip</li>
+			<li>Low fat or fat free cottage cheese with vegetables or fruit</li>
+			<li>Plain yogurt with fruit (try Greek yogurt, it is higher in Protein)</li>
+			<li>Dry roasted nuts (1/4 cup) with 2 tbsp dried fruit</li>
+		</ul>
+	
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+
+
+
+<div class="stack rows">
+	
+	<img src="/assets/media/images/loseit/week3-B-popD.jpg" alt="Week 3" class="right" />
+	
+	<div class="w300 left">
+	
+		<h2>Dinner</h2>
+		<ul>
+			<li>When dining out order a salad as an appetizer and order double vegetables instead of mashed or baked potatoes, pasta, or rice</li> 
+			<li>Fill half your plate with vegetables</li>
+			<li>Cook extra vegetables to take for lunch</li>
+			<li>Have fruit for dessert</li>
+		</ul>
+	</div>
+	
+	<div class="clear"> </div>
+	
+</div>
+
+<div class="stack">
+
+	<h2>Other great ideas</h2>
+	<ul>
+		<li>Keep your fruits and vegetables in plain view on your countertop or table</li>
+		<li>For a quick energy boost make a fruit smoothie (your choice of juice, yogurt and fruit, blend for a delicious treat).</li> 
+		<li>Plan some meals around a vegetable main dish, such as a vegetable stir-fry or soup.</li>
+		<li>Bake apples and have as an evening snack</li>
+	</ul>
+</div>
+
+</div>
+</body>
+</html>
+</tpt:body>

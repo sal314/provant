@@ -1,0 +1,73 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="ifocus-logo">Walking Safety<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="balanced-workout w-75p left">
+	
+		<p class="stack last">It is important to take a few minutes of safety planning for your outdoor activities. Explore some simple suggestions so you can enjoy your outdoor exercise safely.</p>
+		<div class="button-content">
+		<div class="stack click">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Walking Safety Tips" />
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week4_2_a')" class="no-pointer">Walking Safety Tip</a>
+				<p>Here are a few quick tips for walking safety</p>
+			</div>
+			
+			<div class="clear"> </div>
+		</div>
+		
+		<div class="stack click">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Sun Safety Tips" />
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week4_2_b')" class="no-pointer">Sun Safety Tips</a>
+				<p>It is important to protect your skin while you are enjoying outdoor exercise. </p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="stack click">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Food Care Tips" />
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week4_2_c')" class="no-pointer">Food Care Tips</a>
+				<p>A lot of walking every day is good for the body and the soul - but how about for the soles?</p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		<div class="stack click last">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Wear Properly Fitting Shoe" />
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week4_2_d')" class="no-pointer">Wear Properly Fitting Shoe</a>
+				<p>The right shoe can make all the difference. </p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	</div>
+	</div>
+	<div class="clear"> </div>
+
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/4/3" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+</div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>

@@ -1,0 +1,52 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Preventing Relapse<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="left w-75p">
+		<p class="top">It's very easy to slip back into old behaviors.  
+		A tendency for people who have been successful with weight loss is that their portion sizes gradually get larger.  
+		Then all of a sudden they notice a 5-pound weight gain.  
+		That's why it's so important to develop a plan for the future to help you stay on track.  
+		Keeping a food and exercise log, even after completing this program, 
+		is a great way to avoid that unexpected weight gain.  If this does happen to you, don't panic; 
+		just get yourself back on track.</p>
+
+		<h3>Important Questions to Ask Yourself:</h3>
+		<ul>
+			<li>Am I gaining or maintaining my weight with the amount of food I am eating?</li>
+			<li>Am I still reading labels and being aware of portion sizes?</li>
+			<li>Am I still being mindful at meals so that I don't overeat?</li>
+			<li>Am I faithful with my exercise schedule?</li>
+			<li>Am I still motivated to continue with my new healthy lifestyle?</li> 
+			<li>Are my "special occasion" foods becoming everyday foods?</li>
+			<li>Am I enjoying my new healthy lifestyle?</li> 
+		</ul>
+	</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/5/5" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+</div>
+</tpt:body>

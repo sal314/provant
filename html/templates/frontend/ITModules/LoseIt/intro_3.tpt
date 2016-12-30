@@ -1,0 +1,46 @@
+<tpt:body>
+
+<div class="inner-content loseit">
+	<form method="post" action="/ModuleLoseIT/Intro/3">
+
+	<div id="section-header">
+		<h1 class="myfocus-logo">Are You Ready to Change?<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="left w-75p">
+		<div class="button-content">
+		<div class="stack">
+		List the reasons you want to lose weight:<br/>
+		<label><tpt:html type="checkbox" id="C1" value="1" selected="${POST[C1]}"/>Improve Health</label><br/>
+		<label><tpt:html type="checkbox" id="C2" value="1"  selected="${POST[C2]}"/>Feel Better</label><br/>
+		<label><tpt:html type="checkbox" id="C3" value="1" selected="${POST[C3]}"/>Look Better</label><br/>
+		<label><tpt:html type="checkbox" id="C4" value="1" selected="${POST[C4]}"/>Other</label><br/>
+		<textarea name="C5">${POST[C5]} </textarea>
+		</div>
+		
+		<div class="stack last">
+		List the obstacles that have prevented you from losing weight in the past:<br/>
+		<label><tpt:html type="checkbox" id="C6" value="1"  selected="${POST[C6]}"/>Improve Health</label><br/>
+		<label><tpt:html type="checkbox" id="C7" value="1"  selected="${POST[C7]}"/>Feel Better</label><br/>
+		<label><tpt:html type="checkbox" id="C8" value="1"  selected="${POST[C8]}"/>Look Better</label><br/>
+		<label><tpt:html type="checkbox" id="C9" value="1" selected="${POST[C9]}"/>Other</label><br/>
+		<textarea name="C10">${POST[C10]} </textarea>		
+		</div>
+	</div>
+	</div>
+	<div class="clear"> </div>
+	
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+	</div>
+	</form>
+	
+</div>
+</tpt:body>
+
+
+
+

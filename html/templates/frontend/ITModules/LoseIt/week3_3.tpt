@@ -1,0 +1,61 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<form method="post" action="/ModuleLoseIT/week/3/3">
+
+	<div id="section-header">
+		<h1 class="myfocus-logo">Achieve Your Goals<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="left w-75p">
+		<div class="stack">
+			<div class="question">List obstacles that have prevented you from  exercising in the past:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="C1" value="${POST[C1]}"/></li>
+				<li><input type="text" name="C2" value="${POST[C2]}"/></li>
+				<li><input type="text" name="C3" value="${POST[C3]}"/></li>
+			</ol>	
+		</div>
+		<div class="stack">
+			<div class="question">List steps to achieve your goal:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="C4" value="${POST[C4]}"/></li>
+				<li><input type="text" name="C5" value="${POST[C5]}"/></li>
+				<li><input type="text" name="C6" value="${POST[C6]}"/></li>
+			</ol>
+		</div>
+		<div class="stack last">
+			<div class="question">List incentives to help keep you motivated:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="C7" value="${POST[C7]}"/></li>
+				<li><input type="text" name="C8" value="${POST[C8]}"/></li>
+				<li><input type="text" name="C9" value="${POST[C9]}"/></li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="clear"> </div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+		</div>
+	
+	</form>
+	
+</div>
+</tpt:body>

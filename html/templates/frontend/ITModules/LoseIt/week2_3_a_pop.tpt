@@ -1,0 +1,26 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="inner-content">
+	<h1>Cardiovascular Exercise</h1>
+	
+	<div class="w260 right">
+		<img src="/assets/media/images/loseit/week2-C-cardio.jpg" alt="Friends" />
+	</div>
+	
+	<div class="w300 left">
+		<p>Some people refer to cardiovascular exercise as aerobic exercise, and it is often called 'cardio' for short. Cardiovascular exercise involves the large muscles like legs that help make your heart and lungs stronger. Regular cardiovascular exercise has health benefits such as decreases cardiovascular disease, lowers your blood pressure, increases metabolism and calories burned.<br/>
+		Types of Cardiovascular Exercise and Equipment</p>
+		<ul>
+			<li> Walking, jogging or running, hiking, aerobic dancing, biking, tennis, swimming, basketball, football, soccer, volleyball.</li>
+			<li> Treadmill, bike, elliptical, stair master, Arc trainer and rower.</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

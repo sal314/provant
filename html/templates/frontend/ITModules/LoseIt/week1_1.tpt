@@ -1,0 +1,98 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Understanding Your Eating Habits<br /><small>Lose IT</small></h1>
+	</div>
+	<p>Most eating habits are developed in early childhood and can be difficult to change.  We have found that small changes in your diet over time may help to develop healthier habits, which promote successful weight loss and maintenance.</p>
+		<p>Take a few minutes to complete the Understanding your Eating Habits Questionnaire:<br /><br /></p>
+	<form method="post" action="/ModuleLoseIt/Week/1/1" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+		<table class="interactive datagrid">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Never</th>
+					<th>Sometimes</th>
+					<th>Usually</th>
+					<th>Always</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td class="question"><span>1.</span> I eat when I am sad, lonely or depressed</td>
+				<td><label><tpt:html type="radio" id="A1" value="1" selected="${POST[A1]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A1" value="2" selected="${POST[A1]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A1" value="3" selected="${POST[A1]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A1" value="4" selected="${POST[A1]}"/><br /></label></td>
+			</tr>
+			
+			<tr>
+				<td class="question"><span>2.</span> I eat when someone upsets me.</td>
+				<td><label><tpt:html type="radio" id="A2" value="1" selected="${POST[A2]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A2" value="2" selected="${POST[A2]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A2" value="3" selected="${POST[A2]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A2" value="4" selected="${POST[A2]}"/><br /></label></td>
+			</tr>
+			
+			<tr>
+				<td class="question"><span>3.</span> I reward myself with food when I have completed a difficult or unpleasant task</td>
+				<td><label><tpt:html type="radio" id="A3" value="1" selected="${POST[A3]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A3" value="2" selected="${POST[A3]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A3" value="3" selected="${POST[A3]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A3" value="4" selected="${POST[A3]}"/><br /></label></td>
+			</tr>
+			<tr>
+				<td class="question"><span>4.</span> I let people talk me into eating when I am not hungry.</td>
+				<td><label><tpt:html type="radio" id="A4" value="1" selected="${POST[A4]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A4" value="2" selected="${POST[A4]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A4" value="3" selected="${POST[A4]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A4" value="4" selected="${POST[A4]}"/><br /></label></td>
+			</tr>
+			
+			<tr>
+				<td class="question"><span>5.</span> I eat when I feel bored.</td>
+				<td><label><tpt:html type="radio" id="A5" value="1" selected="${POST[A5]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A5" value="2" selected="${POST[A5]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A5" value="3" selected="${POST[A5]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A5" value="4" selected="${POST[A5]}"/><br /></label></td>
+			</tr>
+			
+			<tr>
+				<td class="question"><span>6.</span> I eat when I am not hungry.</td>
+				<td><label><tpt:html type="radio" id="A6" value="1" selected="${POST[A6]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A6" value="2" selected="${POST[A6]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A6" value="3" selected="${POST[A6]}"/><br /></label></td>
+				<td><label><tpt:html type="radio" id="A6" value="4" selected="${POST[A7]}"/><br /></label></td>
+			</tr>
+			
+			<tr>
+				<td class="question aligntop"><span>7.</span> Are there some other triggers that aren't listed</td>
+				<td colspan="4"><textarea class="triggers" name="A7">${POST[A7]} </textarea></td>
+			</tr>
+			</tbody>
+		</table>
+		
+		<div class="clear"> </div>
+		
+		<div class="progressbar">
+			<div class="percent">
+				<div id="progresstext">
+					<span> </span>
+				</div>
+			</div>
+		</div>
+
+		<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+		</div>
+
+	</form>	
+</div>
+
+
+</tpt:body>

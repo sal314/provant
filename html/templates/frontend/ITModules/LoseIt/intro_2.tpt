@@ -1,0 +1,32 @@
+<tpt:body>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Intro<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="w-75p left">
+		<p class="pad-bottom">If you have ever tried to lose weight before, you understand how hard it is. Losing and maintaining weight may be the biggest challenge you have ever faced. The first step for weight loss is to make a commitment to yourself that you will give it your best.  Understand that it does take time to change lifestyle habits. </p>
+		
+		
+		<div class="stack last">
+			<a href="javascript:showWin('/ModuleLoseIT/info/intro_2')">What is the Formula for a successful weight loss plan?</a>
+		</div>
+		
+
+	</div>
+
+	<div class="clear"> </div>
+
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Intro/3" class="right next">Next</a>
+	</div>
+	 <script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</div>
+</tpt:body>
+
+
+
+

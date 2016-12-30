@@ -1,0 +1,103 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Understanding Your Eating Habits<br /><small>Lose IT</small></h1>
+	</div>
+	<p>Now that you have determined your eating triggers take a look at your style of eating. Please rate the following statements.</p><br /><br />
+	<form method="post" action="/ModuleLoseIt/Week/1/2" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	<table class="interactive datagrid">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Never</th>
+				<th>Sometimes</th>
+				<th>Usually</th>
+				<th>Always</th>
+			</tr>
+		</thead>
+	<tbody>
+		<tr>
+			<td class="question"><span>1.</span> I nibble on food all day long</td>
+			<td><label><tpt:html type="radio" id="B1" value="1" selected="${POST[B1]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B1" value="2" selected="${POST[B1]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B1" value="3" selected="${POST[B1]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B1" value="4" selected="${POST[B1]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>2.</span> I limit my food intake during the day, eating more than half of my food in the evening.</td>
+			<td><label><tpt:html type="radio" id="B2" value="1" selected="${POST[B2]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B2" value="2" selected="${POST[B2]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B2" value="3" selected="${POST[B2]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B2" value="4" selected="${POST[B2]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>3.</span> I feel satisfied after I have eaten.</td>
+			<td><label><tpt:html type="radio" id="B3" value="1" selected="${POST[B3]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B3" value="2" selected="${POST[B3]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B3" value="3" selected="${POST[B3]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B3" value="4" selected="${POST[B3]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>4.</span> I never feel satisfied no matter how much I have eaten.</td>
+			<td><label><tpt:html type="radio" id="B4" value="1" selected="${POST[B4]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B4" value="2" selected="${POST[B4]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B4" value="3" selected="${POST[B4]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B4" value="4" selected="${POST[B4]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>5.</span> I eat as soon as I feel the slightest twinge of hunger.</td>
+			<td><label><tpt:html type="radio" id="B5" value="1" selected="${POST[B5]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B5" value="2" selected="${POST[B5]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B5" value="3" selected="${POST[B5]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B5" value="4" selected="${POST[B5]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>6.</span> I consume high calorie drinks each day (soda, juice, coffee with sugar and cream).</td>
+			<td><label><tpt:html type="radio" id="B6" value="1" selected="${POST[B6]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B6" value="2" selected="${POST[B6]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B6" value="3" selected="${POST[B6]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B6" value="4" selected="${POST[B6]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>7.</span> I finish my food before everyone else.</td>
+			<td><label><tpt:html type="radio" id="B7" value="1" selected="${POST[B7]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B7" value="2" selected="${POST[B7]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B7" value="3" selected="${POST[B7]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B7" value="4" selected="${POST[B7]}"/><br /></label></td>
+		</tr>
+		<tr>
+			<td class="question"><span>8.</span> I eat very large mouthfuls.</td>
+			<td><label><tpt:html type="radio" id="B8" value="1" selected="${POST[B8]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B8" value="2" selected="${POST[B8]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B8" value="3" selected="${POST[B8]}"/><br /></label></td>
+			<td><label><tpt:html type="radio" id="B8" value="4" selected="${POST[B8]}"/><br /></label></td>
+		</tr>
+		</tbody>
+	</table>
+	
+	<div class="clear"> </div>
+	
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+		<div class="clear"> </div>
+	</div>
+
+	</form>
+
+	
+</div>
+</tpt:body>

@@ -1,0 +1,104 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Healthy Meal Plan<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="right w-25p">
+		<div class="stack last">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+		
+	</div>
+	
+	<div class="left w-75p">
+	
+		<p>The following chart shows examples of serving sizes based on the USDA's new MyPyramid Steps to a Healthier You Plan. 
+		It gives you an idea of what a "balanced eating plan" looks like.  
+		Limiting the servings of meats and fats naturally reduces the amount of saturated fat, trans fat, cholesterol, 
+		and calories from your diet.  Filling your plate with a variety of whole grains, vegetables, and fruit can provide 
+		your body with healthy vitamins, minerals, phytochemicals, and antioxidants.</p>
+		
+		<div class="ITtables">
+		<table cellpadding="5" width="620">
+			<thead>
+				<tr>
+					<th>Food Group</th>
+					<th class="txt-nows">1600 kcal</th>
+					<th class="txt-nows">1800 kcal</th>
+					<th class="txt-nows">2000 kcal</th>
+					<th class="txt-nows">2200 kcal</th>
+				</tr>
+			</thead>
+			<tbody>
+			                             
+				<tr>
+					<td>Grains, 3 servings whole</td>
+					<td>5 ounces </td>
+					<td>6 ounces</td>
+					<td>6 ounces</td>
+					<td>7 ounces</td>
+				</tr>
+				<tr>
+					<td>Vegetables</td>
+					<td>2 cups </td>
+					<td>2.5 cups</td>
+					<td>2.5 cups</td>
+					<td>3 cups</td>
+				</tr>
+				<tr>
+					<td>Fruits</td>
+					<td>1.5 cups</td>
+					<td>1.5 cups</td>
+					<td>2 cups</td>
+					<td>2 cups</td>
+				</tr>
+				<tr>
+					<td>Lowfat/fatfree Dairy </td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>Meat, Poultry, Fish, Nuts, Seeds &amp; Legumes</td>
+					<td>5 ounces</td>
+					<td>5 ounces</td>
+					<td>5.5 ounces</td>
+					<td>6 ounces</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<br />
+		<p>Foods eaten away from home tend to be higher in calories than foods you prepare yourself.  Restaurant meals often give large portions of protein and carbohydrates, but only small amounts of vegetables.  Fruits and vegetables add volume to your diet without adding lots of calories.  The 2005 Dietary Guidelines recommend at least 6 servings of vegetables and 3 servings of fruit per day.</p>
+<br />
+		<a href="javascript:showWin('/ModuleLoseIT/info/week3_2_a', '800px')">Ideas to increase fruits and vegetables in your diet</a>
+<br /><br />
+
+		<a href="javascript:showWin('/ModuleLoseIT/info/week3_2_b', '700px', '470px')">Healthy Snack Idea</a>
+
+	</div>
+	
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/3/3" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+		
+</div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>

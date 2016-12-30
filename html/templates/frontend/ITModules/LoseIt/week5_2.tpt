@@ -1,0 +1,65 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<form method="post" action="/ModuleLoseIT/week/5/2">
+
+	<div id="section-header">
+		<h1 class="myfocus-logo">Are You Ready to Change?<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="left w-75p">
+
+		<div class="stack last">
+			<h3>Here are some typical reasons for weight gain.  Check all that apply to you:</h3>
+			<br />
+			<label><tpt:html type="checkbox" id="B1" value="1" selected="${POST[B1]}"/>Not reading food labels</label><br/>
+			<label><tpt:html type="checkbox" id="B2" value="1"  selected="${POST[B2]}"/>Not counting calories</label><br/>
+			<label><tpt:html type="checkbox" id="B3" value="1" selected="${POST[B3]}"/>Finishing everything on your plate even if you feel full</label><br/>
+			<label><tpt:html type="checkbox" id="B4" value="1" selected="${POST[B4]}"/>Not exercising regularly</label><br/>
+			<label><tpt:html type="checkbox" id="B5" value="1"  selected="${POST[B5}"/>Seeking comfort in food</label><br/>
+			<label><tpt:html type="checkbox" id="B6" value="1"  selected="${POST[B6]}"/>Eating too large portions</label><br/>
+			<label><tpt:html type="checkbox" id="B7" value="1"  selected="${POST[B7]}"/>Skipping Meals</label><br/>
+			<label><tpt:html type="checkbox" id="B8" value="1" selected="${POST[B8]}"/>Eating on the go, and not planning for meals or snacks</label><br/>
+			<label><tpt:html type="checkbox" id="B9" value="1" selected="${POST[B9]}"/>Stress Eating</label><br/>
+			<label><tpt:html type="checkbox" id="B10" value="1" selected="${POST[B10]}"/>Reverting to prior eating habits</label><br/>
+		</div>
+		
+	<div class="activity border">
+		<h3>Activity</h3>
+			<div class="question">Now pick three that you are ready to change and write them below:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="B11" value="${POST[B11]}"/></li>
+				<li><input type="text" name="B12" value="${POST[B12]}"/></li>
+				<li><input type="text" name="B13" value="${POST[B13]}"/></li>
+			</ol>
+			<br />
+		</div>
+	</div>
+	
+	<div class="clear"> </div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+	</form>
+	
+</div>
+ 
+</tpt:body>

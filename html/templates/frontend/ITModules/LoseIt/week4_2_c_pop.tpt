@@ -1,0 +1,45 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+		<div class="inner-content">
+		<h1>Foot care Tips</h1>
+		
+			<div class="right padded"><img src="/assets/media/images/loseit/week4-B-popA.jpg" alt="Runner" /></div>
+
+			A lot of walking every day is good for the body and the soul - but
+			how about for the soles? You can help prevent the potential aches,
+			pains, and blisters of long-distance walking with this sensible foot
+			care advice.
+			<ul>
+				<li>Stop blisters before they happen: The secret to avoiding a
+					serious blister is to stop walking as soon as you feel any
+					pinching, rubbing, or other uncomfortable sensation against your
+					foot. If you find a pebble or piece of dirt, remove it. If your
+					sock is bunched up, smooth it out. If your feet are sweaty and
+					sliding in your shoes, let them dry. Apply a Band-Aid to any red
+					spots, and if more padding is needed, attach a layer of moleskin
+					over the Band-Aid.</li>
+				<li>
+					Avoid leg cramps: Occasionally, when legs and feet get a heavy
+					workout, a muscle may lock into a sustained contraction, otherwise
+					known as a spasm or cramp. The exact cause remains a mystery, but
+					it may be related to dehydration, overexertion, or an electrolyte
+					imbalance. To help prevent leg cramps:
+					<ul>
+						<li>Take at least 5 minutes before and after exercise to stretch
+							your muscles</li>
+						<li>Train properly with shorter, less-exerting hikes before taking
+							a long, strenuous one</li>
+						<li>Drink plenty of fluids - either water or a sports drink that
+							helps balance the body's electrolytes</li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+		</body>
+	</html>
+</tpt:body>

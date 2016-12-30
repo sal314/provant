@@ -1,0 +1,32 @@
+<tpt:body>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Intro<br /><small>Lose IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="w-75p left">
+		<p class="pad-bottom">The Lose IT Weight Management program is a positive approach to weight loss.  This program will provide you with strategies to change your eating habits and help you to establish a physical activity plan as well as manage your stress.</p>
+		
+
+	</div>
+
+	<div class="clear"> </div>
+
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Intro/2" class="right next">Next</a>
+	</div>
+</div>
+</tpt:body>
+
+
+
+
+
+
+
+
+
+

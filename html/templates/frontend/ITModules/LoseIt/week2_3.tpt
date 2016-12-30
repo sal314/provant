@@ -1,0 +1,72 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Balancing Your Workout<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="balanced-workout w-75p left">
+	<h3>How To Balance It All</h3><br />
+		<p class="top">The 3 components of a total exercise program are cardiovascular exercise, resistance exercise and stretching.  Each offers unique and important benefits to your total wellness.</p>
+		
+		
+		<br /><br />
+		<div class="button-content">
+		<div class="stack click">	
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Cardiovascular Exercise" />		
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week2_3_a', '700px', '400px')" class="no-pointer">Cardiovascular Exercise</a>
+				<p>First, perform your cardiovascular exercise.</p>
+			</div>
+
+			<div class="clear"> </div>
+		</div>
+		<div class="stack click">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Strength Training" />	
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week2_3_b', '900px', '490px')" class="no-pointer">Strength Training</a>
+				<p>Then, perform full body resistance training, 1 set, 8 -12 repetitions or alternate days between cardiovascular and resistance exercise.</p>
+			</div>
+
+			<div class="clear"> </div>
+		</div>
+		<div class="stack click last">
+			<img class="left" src="/assets/media/images/loseit/temp_icon.jpg" alt="Strength Training" />	
+			<div class="intro">
+				<a href="javascript:showWin('/ModuleLoseIT/info/week2_3_c', '900px', '570px')" class="no-pointer">Stretching Training</a>
+				<p>End by cooling down and stretching your entire body.</p>
+			</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+		
+		<p>Remember to always warm up before any exercise and cool down and stretch after.</p>
+	</div>
+	
+	<div class="clear"> </div>
+	
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span>50%</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/2/4" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+
+</div>
+
+
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>

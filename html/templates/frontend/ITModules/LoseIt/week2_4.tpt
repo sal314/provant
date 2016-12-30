@@ -1,0 +1,51 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<form method="post" action="/ModuleLoseIT/week/2/4">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Make Physical Activity a Daily Habit!<br /><small>LoseIT</small></h1>
+	</div>
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="left w-75p">
+		<div class="stack last">
+			<div class="question">List obstacles that have prevented you from exercising in the past:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="D1" value="${POST[D1]}"/></li>
+				<li><input type="text" name="D2" value="${POST[D2]}"/></li>
+				<li><input type="text" name="D3" value="${POST[D3]}"/></li>
+			</ol>
+		</div>
+		<div class="stack last">
+			<div class="question">List exercises that you would like to try:</div>
+			<ol class="activity-fields">
+				<li><input type="text" name="D4" value="${POST[D4]}"/></li>
+				<li><input type="text" name="D5" value="${POST[D5]}"/></li>
+				<li><input type="text" name="D6" value="${POST[D6]}"/></li>
+			</ol>
+		</div>
+	</div>
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+	</form>
+
+</div>
+</tpt:body>

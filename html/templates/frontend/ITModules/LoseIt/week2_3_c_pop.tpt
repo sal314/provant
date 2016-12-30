@@ -1,0 +1,39 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="inner-content">
+	<h1>Benefits of Stretching:</h1>
+
+	<div class="260 right">
+		<img src="/assets/media/images/loseit/week2-C-stretch2.jpg" alt="Stretch" />
+	</div>
+	<div class="w300 left">
+		<ul>
+			<li> Reduces delayed-onset muscle soreness from exercise.</li>
+			<li> Maintains Flexibility-flexible muscles are strong muscles.</li>
+			<li> Decreases the risk of lower back pain.</li>
+			<li> Reduces muscle tension and makes the body feel more relaxed.</li>
+			<li> Helps coordination and allows for easier movement.</li>
+			<li> Increases range of motion.</li>
+			<li> Prevents injuries and muscle strains.</li>
+			<li> Promotes circulation and it feels great! </li>
+		</ul>
+		<h3>How to Stretch:</h3>
+		<ul>
+			<li> Stretch on a daily basis at least once a day.</li>
+			<li> Hold stretches at least fifteen to twenty seconds with two to three repetitions.</li>
+			<li> Stretch after exercise, when the muscles are warm.</li>
+			<li> Move into a stretch until mild to moderate tension is felt, but NOT pain.</li> 
+			<li> Hold steady for 20 seconds.  DON'T BOUNCE.</li>
+			<li> Breathe normally; don't hold your breath.</li>
+			<li> If a stretch feels too tight, release a little and inhale.</li>  
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

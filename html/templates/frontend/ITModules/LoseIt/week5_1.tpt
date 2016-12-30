@@ -1,0 +1,45 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Are You Ready to Change?<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w400">
+		<img src="/assets/media/images/loseit/week5-A.jpg" alt="" />
+		<h3>Weight Loss Obstacles</h3>
+		<p>There are many reasons that sabotage weight loss efforts. Since no two people are the same when it comes to weight difficulties, it is important to understand what your own personal obstacles are.  Once you look at the factors that contribute to your own weight battles, you can plan a strategy.</p>
+	</div>
+
+	<div class="left w400">
+		<h3>Stages of Change Model</h3>
+		<p>Your commitment and positive approach to the Lose IT program is vital to your own personal success.  The first step is for you to determine where you are in the in The Stages of Change Model. Are you ready to make this commitment? This model is effective for many behavior changes including weight loss, fitness, tobacco use and other addictions. The Stages of Change Model shows, that for most people, a change in behavior occurs gradually and moves through the following designated stages:</p>
+		<ol>
+			<li>Pre-Contemplation: Not yet acknowledging that there is a problem behavior that needs to be changed. No thought of changing, now or later and often anger if a loved one makes a suggestion for change.</li>
+			<li>Contemplation: Acknowledging that there is a problem but not yet ready or sure of wanting to make a change. At this stage you start to consider that a change may be needed, but have not yet made any plans to make a change.</li>
+			<li>Preparation/Determination: Getting ready to change, removing temptations, and planning how action will be taken. It is helpful to arrange support and understanding from family, friends, or perhaps a support group at this stage. Arrange healthy substitutes for the missed habit or activity or substance. Beware of substituting a new problem for the old.</li>
+			<li>Action/Willpower: Changing the behavior! The stage most of us picture, and it is actual practice of the new way of being.</li>
+			<li>5. Maintenance and Relapse Prevention: Maintaining the behavior change over the long term. Awareness that relapse is possible and taking measures to prevent returning to older behaviors and abandoning the new changes.</li>
+		</ol>
+	</div>
+
+	<div class="clear"> </div>
+	
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/5/2" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+</div>
+</tpt:body>

@@ -1,0 +1,32 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="inner-content">
+	<h1>Snack Ideas:</h1>
+	
+	<div class="w260 right">
+		<img src="/assets/media/images/loseit/week3-B-pop-snack.jpg" alt="Strength" />
+	</div>
+
+	<div class="w260 left">
+	Healthy snacking can help to reduce cravings for high calorie sweets and salty foods. Snacks can help to fuel your muscles and increase your overall energy levels.  Eating a quick snack between meals can even help to improve your concentration and memory.  Try to have a low-fat protein source with a whole grain carbohydrate for your snack so you will feel fuller longer. Always remember to watch your portion sizes!
+		<ul>
+			<li>Low fat yogurt sprinkled with 1/4 cup high fiber cereal</li>
+			<li>1 slice whole grain bread topped with "natural" peanut butter</li>
+			<li>1/2 cup fresh berries with 1/2 cup low fat cottage cheese</li>
+			<li>4 graham crackers and an 8 oz glass of fat free milk</li>
+			<li>3/4 cup high fiber cereal with fat free milk</li>
+			<li>2 pretzel rods or fruit and 1 piece of string cheese</li>
+			<li>10 baby carrots dipped in hummus</li>
+			<li>Cereal or granola bar with low fat yogurt</li>
+			<li>Slice of leftover veggie pizza </li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
+</tpt:body>

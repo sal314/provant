@@ -1,0 +1,39 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You are ready to begin your goals for Week 5</h1>
+	</div>
+
+	<div class="right w-25p">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<div class="left w-75p">
+		<h3>Remember to:</h3>
+		<ol>
+			<li>Continue to use your food and exercise journal.</li>
+			<li>Complete the Week 5 activities.</li>
+			<li>Continue to increase your physical activity.</li>
+		</ol>
+	</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/5/7" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+</div>
+</tpt:body>

@@ -1,0 +1,39 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<div class="inner-content">
+	<h1>Strength Training</h1>
+	
+	<div class="w400 right">
+		<img src="/assets/media/images/loseit/week2-C-strength2.jpg" alt="Strength" />
+	</div>
+
+<div class="w300 left">
+	<p>Strength training is crucial for maintaining musculoskeletal strength.  Muscle mass and muscle strength decreases as we age by an average of 30% due to inactivity.  The weakness and frailty of old age is often attributed to the loss of muscular strength and has been shown to be, in part, reversible through resistance training.</p>
+
+	<h3>Benefits of Strength Training</h3>
+	<ul>
+		<li>Increases  muscles mass and strength</li>
+		<li> Increases basal metabolic rate (calories burned at rest = weight loss)</li> 
+		<li> Improves bone density</li>
+		<li> Promotes connective tissue thickness (reducing the risk of falling)</li>
+	</ul>
+</div>
+
+<div class="clear"> </div>
+
+<h3>Proper Strength Training</h3>
+<ul>
+	<li> Start out light: this will help prevent injury and the day after muscle soreness.</li>
+	<li> Slow and controlled: Use proper technique and full range of motion.</li>
+	<li> Do not strength train the same muscle groups on consecutive days, take twenty four to forty eight hours between workouts.</li>
+	<li> It is best to have a professional establish a strength training program and demonstrate the proper technique for each exercise.</li>          
+</ul>
+</div>
+</body>
+</html>
+</tpt:body>

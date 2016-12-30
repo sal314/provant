@@ -1,0 +1,23 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+	<div class="inner-content">
+		<h1>SUN SAFETY TIPS:</h1>
+		
+		<div class="right padded"><img src="/assets/media/images/loseit/week4-B-popB.jpg" alt="Couple" /></div>
+		It is important to protect your skin while you are enjoying outdoor exercise.
+		<ul>
+			<li>Avoid exposure to the midday sun (from 10:00 am to 2:00 pm standard time or from 11:00 am to 3:00 pm daylight savings time)</li>
+			<li>Use sunscreen with a sun protective factor (SPF) of 15-30 or more when exposed to the sun. The lighter your skin, the higher the SPF number should be.</li>
+			<li>Make sure your sunscreen blocks both UVA and UVB rays.</li>
+			<li>Reapply sunscreen every hour or two and always after swimming.</li>
+			<li>Wear a wide brim hat and sunglasses if you plan on being outside during the midday hours.</li>
+		</ul>
+	</div>
+</body>
+</html>
+</tpt:body>

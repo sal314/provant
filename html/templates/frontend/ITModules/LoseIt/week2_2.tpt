@@ -1,0 +1,85 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<form method="post" action="/ModuleLoseIT/week/2/2">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Make Physical Activity A Daily Habit!<br /><small>Lose IT</small></h1>
+	</div>
+	
+	<div class="activity-right w-25p right">
+		<div class="stack last">
+			<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+		<!--[CDATA[ <p>RPE Scale:</p>
+			0= NO EXERTION<br/>
+			1= VERY EASY<br />
+			2= EASY<br />
+			3= MODERATE<br />
+			4=SOMEWHAT HARD<br />
+			5=
+			6=HARD<br />
+			7=<br />
+			8=VERY HARD<br />
+			9=<br />
+			10=MAXIMAL EXERTION ]]-->
+		</div>
+	
+	<div class="activity-left w-75p left">
+		<h3>What is Rating of Perceived Exertion (RPE)?</h3>
+		<p>The RPE Scale helps you evaluate how you feel during exercise based on how hard the session feels to you.  Use your perceived exertion to monitor your exercise intensity. Regular use of perceived exertion helps maintain exercise at the safest most effective level for you to reach your goals and avoid over doing it.</p>
+		<ul> 
+			<li> Optimal exercise intensity is 3 - 5 (moderate to somewhat hard).</li>
+			<li> RPE 2 or below: Add more intensity.  </li>
+			<li> RPE 8 - 10: Reduce intensity of the exercise.</li>
+		</ul>
+		
+				<br />
+		<p>Record your RPE for each activity session on your weekly exercise diary.</p>
+
+	<div class="activity border">
+		<h3>Activity</h3>
+
+		<p>Let's begin by listing the physical activities that you enjoy or are currently doing:</p>
+		<ol class="activity-fields">
+			<li>
+				<input type="text" name="B1" value="${POST[B1]}"/>
+			</li>
+			<li>
+				<input type="text" name="B2" value="${POST[B2]}"/>
+			</li>
+			<li>
+				<input type="text" name="B3" value="${POST[B3]}"/>
+			</li>
+			<li>
+				<input type="text" name="B4" value="${POST[B4]}"/>
+			</li>
+			<li>
+				<input type="text" name="B5" value="${POST[B5]}"/>
+			</li>
+		</ol>
+	</div>
+		
+	</div>
+	
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+			<a href="#" class="nextstep right next">Next</a>
+			<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+
+	</form>
+</div>
+</tpt:body>

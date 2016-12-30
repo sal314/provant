@@ -1,0 +1,50 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Make Physical Activity A Daily Habit!<br /><small>Lose IT</small></h1>
+	</div>
+	
+		<div class="w-25p right">
+			<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		</div>
+		<div class="w-75p left">
+			<p class="top">The first step is always the hardest when increasing activity; however your fitness routine can become a habit that you look forward to daily. Listed below are some ideas to help keep you motivated:</p>
+			<ul>
+				<li>Start off on the right foot by choosing activities that you ENJOY.</li>
+				<li>Engage in a wide variety of activities to keep workouts interesting.</li>
+				<li>Think of your exercise sessions as appointments, and mark them on your calendar.</li>
+				<li>Use the buddy system.  Workout with a friend, family or co-worker.  Encourage one another to walk that extra block even on busy mornings.</li>
+				<li>Set realistic short and long term goals and chart your progress every step of the way.</li>
+				<li>Reward yourself when you meet fitness goals.  For example, treat yourself to a massage, a new pair of sneakers, or clothes.</li>
+				<li>Vary the location in which you workout.  Instead of walking toward the same park everyday, do an about face, and check out the scenery in the other direction.</li>
+				<li>If you fall off the fitness bandwagon, just climb back on again.</li> 
+			</ul>
+			
+			<p>As you begin to add steps to your day, you will see that the key to becoming more active is learning to identify opportunities for physical activity and taking advantage of them as they come up.  The most important tip to remember is that YOU are in control of your life and you actively make the choice to exercise each day.</p>
+			<p>Just take the first step and you will be on your way to making exercise and physical activity regular, life long habits.</p>
+		</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span>50%</span>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/2/2" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+	
+	
+</div>
+</tpt:body>

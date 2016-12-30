@@ -1,0 +1,59 @@
+<tpt:body>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+			<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		</head>
+		<body>
+		<div class="inner-content">
+			<h1>Walking Safety Tips</h1>
+			
+			<div>
+				<div class="right padded"><img src="/assets/media/images/loseit/week4-B-popC.jpg" alt="Couple" /></div>
+			
+				<ul>
+					<li><strong>Face the traffic:</strong><br /> If your walking routes do not have bike paths
+						or sidewalks and you are forced to walk on the road, always walk in
+						the direction facing oncoming traffic so you can see any car that
+						might go out of control.</li>
+					
+					<li><strong>Dress to be seen:</strong><br/>
+						
+						Brightly colored clothing makes it easier for drivers to see you during the daytime. 
+						Wear light-colored or reflective clothing like shocking-pink or brilliant orange
+						if you are walking when it is still dark. Many brands of walking shoes have 
+						reflective material on the heels, and jackets can now be purchased with 
+						reflective strips. Reflective belts are also extremely useful as they are 
+						easily noticed by drivers, and can be worn with little or no discomfort. 
+						If you don't have reflective gear or light colored clothing, wear a white T-shirt. 
+						It is not recommended to wear black or navy blue clothing if walking in the dark, 
+						these colors renders the you virtually invisible to traffic.</li>
+						
+						<li><strong>Never walk alone:</strong><br /> If at all possible, walk with a partner. Not
+							only does this increase your safety while walking; it also makes
+							your walking enjoyable. In the absence of a walking companion,
+							always tell someone which route you will be walking and what time
+							you expect to return.</li>
+						<li><strong>Walk defensively:</strong><br /> Don't simply assume that all road-users know
+							about the 'pedestrian has right-of-way' rule. Many of them don't.
+						</li>
+						<li><strong>Vary your routes:</strong><br /> Don't establish regular patterns by walking
+							the same route at the same time every day. Not only is it safer,
+							but it's a lot more interesting!</li>
+						<li><strong>Carry ID:</strong><br /> Always carry some form of identification in case of an
+							accident or medical emergency. If you are away from home on holiday
+							or business, make a note of the address where you are staying.</li>
+						<li><strong>Keep right:</strong><br /> If you're walking on a cycling or pedestrian path,
+							always walk on the right hand side so that faster walkers, runners
+							and cyclists can easily pass. If you're walking with one or more
+							companions, don't hog the path and prevent others from easily
+							overtaking.</li>
+						<li><strong>Leave the MP3 player at home:</strong><br /> That way you will be alert to any
+							potential dangers, be it a dog, a fast-approaching car, or the
+							sound of other people around you.</li>
+					</ul>
+				</div>
+			</div>
+		</body>
+	</html>
+</tpt:body>

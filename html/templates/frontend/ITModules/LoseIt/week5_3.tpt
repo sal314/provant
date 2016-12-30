@@ -1,0 +1,48 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">The Hunger / Fullness Scale<br /><small>Lose IT</small></h1>
+	</div>
+
+	<div class="right w-25p">
+		
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+		
+	</div>
+	
+	<div class="left w-75p">
+		<p class="top">The Hunger Scale is used to describe your level of hunger and assess your need for food. People on a healthy diet not only know when to eat, they also know when to stop. The Hunger Scale is effective for weight loss because becoming more aware of your hunger or lack of hunger may help you to properly adjust your caloric intake to promote weight loss. The trick to using the Hunger Scale is to pay careful attention to your body and what it is telling you.</p>
+		<ul>
+			<li>You should only eat when you are feeling 1, 2, 3, or 4.</li>
+			<li>Stop eating when you are at 5 or 6, and wait until the next scheduled meal or snack.</li>
+			<li>If you are trying to lose weight, stop at 5, the point at which you are eating less than you are burning.</li>
+		</ul>
+	</div>
+
+	<div class="stack last">
+	<br />
+		<a href="javascript:showWin('/ModuleLoseIT/info/week5_3_a', '900px')">Healthy Mealtime Habits</a>
+	</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleLoseIT/Week/5/4" class="right next">Next</a>
+		<a href="/ModuleLoseIT/Index" class="left loseit-home">Lose It Homepage</a>
+	</div>
+</div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</tpt:body>
