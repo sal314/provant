@@ -1,0 +1,48 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Work-life Balance<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	Finding work-life balance in today&amp;acute;s frenetically paced world is no simple task.
+	</p>
+	<p>
+	Spend more time at work than at home, and you miss out on a rewarding personal life. Then again, when you face challenges in your personal life, such as caring for an aging parent or coping with marital problems, concentrating on your job can be difficult.
+	</p>
+	<p>
+	Whether the problem is too much focus on work or too little, when your work life and your personal life feel out of balance, stress - along with its harmful effects - is the result.
+	</p>
+	<p>
+	The good news is that you can take control of your work-life balance - and give yourself the time to do the things that are most important to you. The first step is to recognize how the world of work has changed. Then you can evaluate your relationship to work and apply some specific strategies for striking a healthier balance.
+	</p>
+	<br />
+		</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/4/3" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

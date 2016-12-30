@@ -1,0 +1,25 @@
+<tpt:body>
+	<form method="post" action="/ModuleReduceIT/Intro/2">
+		<strong style="color:blue;">Activity</strong><br />
+		<p style="color:blue;">
+		List causes of stress:
+		</p>
+		1.&amp;nbsp;&amp;nbsp;<input type="text" name="B1" size="100" value="${POST[B1]}" /><br />
+		2.&amp;nbsp;&amp;nbsp;<input type="text" name="B2" size="100" value="${POST[B2]}" /><br />
+		3.&amp;nbsp;&amp;nbsp;<input type="text" name="B3" size="100" value="${POST[B3]}" /><br />
+		4.&amp;nbsp;&amp;nbsp;<input type="text" name="B4" size="100" value="${POST[B4]}" /><br />
+		5.&amp;nbsp;&amp;nbsp;<input type="text" name="B5" size="100" value="${POST[B5]}" /><br />
+
+		<p style="color:blue;">
+		Now list strategies for stress management:
+		</p>
+		1.&amp;nbsp;&amp;nbsp;<input type="text" name="B6" size="100" value="${POST[B6]}" /><br />
+		2.&amp;nbsp;&amp;nbsp;<input type="text" name="B7" size="100" value="${POST[B7]}" /><br />
+		3.&amp;nbsp;&amp;nbsp;<input type="text" name="B8" size="100" value="${POST[B8]}" /><br />
+		4.&amp;nbsp;&amp;nbsp;<input type="text" name="B9" size="100" value="${POST[B9]}" /><br />
+		5.&amp;nbsp;&amp;nbsp;<input type="text" name="B10" size="100" value="${POST[B10]}" /><br />
+
+		<br />
+		<input class="right submit" type="submit" value="Next &amp;gt;&amp;gt;" /><br />
+	</form>
+</tpt:body>

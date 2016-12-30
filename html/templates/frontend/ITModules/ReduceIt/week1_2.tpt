@@ -1,0 +1,54 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Causes of Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+
+	<h3>Three Critical Rules of Stress:</h3>
+	<ol>
+		<li>If you repeatedly turn on the stress response, your body will be damaged.</li>
+		<li>If you cannot turn off the stress response for prolonged periods of time, your body will be damaged.</li>
+		<li>Chronic Stress both increases the risk of disease and weakens the body&amp;acute;s defenses in the setting of pre-existing disease.</li>
+	</ol>
+	<h3>Causes of Stress</h3>
+	<p>
+	The potential causes of stress are numerous and highly individual. What causes stress depends, at least in part, on your perception of it. Something that&amp;acute;s stressful to you may not faze someone else; they may even enjoy it.
+	</p>
+	<p>
+	For example, your morning commute may make you anxious and tense because you worry that traffic will make you late. Others, however, may find the trip relaxing because they allow more than enough time and enjoy listening to music while they drive. The situations and pressures that cause stress are known as stressors. We usually think of stressors as being negative, such as an exhausting work schedule or a rocky relationship.
+	</p>
+	<p>
+	However, anything that puts high demands on you or forces you to adjust can be stressful. This includes positive events such as getting married, buying a house, going to college, or receiving a promotion.
+	</p>
+	<a href="javascript:showWin('/ModuleReduceIt/info/week1_2_a', '600px', '400px')">Top Ten Stressful Life Events</a><br />
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/1/3" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

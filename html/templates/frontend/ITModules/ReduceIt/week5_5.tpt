@@ -1,0 +1,63 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Tips to Reduce Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/5/5">
+	
+	<div class="w-75p left">
+
+	<ul>
+		<li>Set aside time for relaxation</li>
+		<li>Connect with others</li>
+		<li>Do something you enjoy everyday</li>
+		<li>Keep your sense of humor</li>
+		<li>Exercise regularly</li>
+		<li>Eat a healthy diet</li>
+		<li>Get plenty of sleep</li>
+		<li>Reduce caffeine and sugar<br />
+			Temporary highs from these often lead to a crash in mood and energy</li>
+		<li>Avoid alcohol, cigarettes and drugs<br />
+			These only provide temporary relief, and can end up leading to a more serious problem</li>
+	</ul>
+	<br />
+	
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List 3 tips that you plan to do to reduce your stress:
+		</p>
+		<ol>
+		<li><input type="text" name="E1" size="75" value="${POST[E1]}" /></li><br />
+		<li><input type="text" name="E2" size="75" value="${POST[E2]}" /></li><br />
+		<li><input type="text" name="E3" size="75" value="${POST[E3]}" /></li><br />
+		</ol>
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+	</form>
+</div>
+</tpt:body>

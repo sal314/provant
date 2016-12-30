@@ -1,0 +1,46 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Symptoms of Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<h3>What are the Symptoms and Effects of Excess Stress or &amp;quot;Out-of-Control&amp;quot; Stress?</h3>
+	<p>
+	Manifestations of excess or poorly-managed stress can be extremely varied. While many people report that stress induces headaches, sleep disturbances, feelings of <u>anxiety</u> or tension, anger, or concentration problems, others may complain of <u>depression</u>, lack of interest in food, increased appetite, or any number of other symptoms. In severe situations, one can experience overwhelming stress to the point of so-called &amp;quot;burnout,&amp;quot; with loss of interest in normal activities.
+	</p>
+	<p>
+	Scientific studies have shown that psychological stress may worsen the symptoms of almost every known medical condition. Examples of conditions in which stress may worsen the intensity of symptoms include <u>cardiovascular diseases</u>, <u>asthma</u>, <u>multiple sclerosis</u>, <u>chronic pain</u>, <u>acne</u>, and <u>depression</u>. While stress alone is not a cause of cardiovascular disease or <u>high blood pressure</u>, it may actually worsen the progression of these diseases in many people.
+	</p>
+	<p>
+	Stress also has effects on the immune system. While some studies show that acute short-term stresses may actually be able to boost the body&amp;acute;s immune response, chronic (long-term) stress has the effect of &amp;quot;wearing down&amp;quot; the immune system, leading to an increased susceptibility to colds and other infections. Scientific studies have also shown that stress can decrease the immune response to vaccinations and prolong wound healing.
+	</p>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/2/4" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,86 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Tips On Reducing Financial Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/4/4">
+	
+	<div class="w-75p left">
+
+	<p>
+	The current market conditions and climate could be taking a toll on you emotionally and financially, but there are ways to reduce the stress and worry you may be feeling about the current economic situation.
+	</p>
+	<p>
+	Here are some basic tips to help you reduce your financial stress and re-evaluate your finances:
+	</p>
+
+	<p><span class="miniHead">Look at your current situation</span>
+	Look at your cash flow. Where is your income coming from and most importantly where it is going? This will help you get a clear understanding of how your money is being spent.
+	</p>
+	<p>
+	<span class="miniHead">Set a budget</span>
+	Once you&amp;acute;ve developed a financial plan, set up a budget and stick to it!  Use a financial planning spreadsheet to help you track your cash flow
+	</p>
+	<p>
+	<span class="miniHead">Start a savings plan</span>
+	It doesn&amp;acute;t matter how small or large the amount is! This helps you to save for a rainy day. A great way to start saving is to set up an automated savings plan, which will automatically allocate the money to your savings account.
+	</p>
+	<p>
+	<span class="miniHead">Look at how much you are spending</span>
+	Spend less than you earn, this will help to reduce your debt levels especially if you are living on credit cards. Take steps to reduce unnecessary spending, such as eating lunch out or buying a pair of shoes you don&amp;acute;t need.
+	</p>
+	<p>
+	<span class="miniHead">Take a long-term approach</span>
+	It&amp;acute;s not only about now it&amp;acute;s also about the future. Taking a bird&amp;acute;s-eye view of your funds is a great way to pave your way to financial success as is consolidating your debt.
+	</p>
+	<p>
+	<span class="miniHead">Learn about investing</span>
+	Learn about investing and how to get your money working for you and remember to always take a long-term approach. If you are unsure about your investment needs, you should speak to a Financial Planner to get professional financial advice.
+	</p>
+	<p>
+	<span class="miniHead">Set a timeframe and re-evaluate</span>
+	It&amp;acute;s important to make sure your plan is working. Be sure to re-visit your financial strategy every 3-6 months and make adjustments if needed.
+	</p>
+	<br />
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>		
+		List your financial goals:
+		</p>
+		<ol>
+			<li><input type="text" name="D1" size="75" value="${POST[D1]}" /></li><br />
+			<li><input type="text" name="D2" size="75" value="${POST[D2]}" /></li><br />
+			<li><input type="text" name="D3" size="75" value="${POST[D3]}" /></li><br />
+		</ol>
+		<br />
+
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

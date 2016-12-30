@@ -1,0 +1,48 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress and Nutrition<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	Stress can be a problem in itself, of course. But stress can sometimes lead to unhealthy lifestyle patterns-which lead to more stress! For example, when we&amp;acute;re hurried and under stress, we tend to make poor food choices. Unfortunately, these food choices can create more stress in the long run, as well as other problems.
+	</p>
+
+		<p><span class="miniHead">Drinking Too Much Coffee:</span><br /> When burning the candle at both ends, people often find themselves using coffee drinks to jump-start themselves in the morning, and a pattern of all-day coffee drinking often ensues.</p>
+		<p><span class="miniHead">Making Unhealthy Food Choices:</span> Due partially to increased levels of cortisol, the stress hormone, stressed people tend to crave foods high in fat, sugar and salt.</p>
+		<p><span class="miniHead">Skipping Meals:</span> Overly stressed people often skip meals. Have you ever found yourself rushing out of the house without a healthy breakfast (picking up a latte doesn&amp;acute;t count!), or realizing you&amp;acute;re starving in the late afternoon because you didn&amp;acute;t eat enough?</p>
+		<p><span class="miniHead">Mindless Munching:</span> Conversely, stress also makes people prone to emotional eating, which is when you eat when you aren&amp;acute;t hungry. Have you found yourself mindless snacking on junk food, or eating when you aren&amp;acute;t hungry, because of stress?</p>
+		<p><span class="miniHead">Forgetting Water:</span> With busy lives, it&amp;acute;s easy to forget to drink water. In fact, a good portion of Americans do not drink enough water, and get water only from soda or coffee.</p>
+		<p><span class="miniHead">Fast Food:</span> With busy lifestyles, people eat at home less than in generations past, as it&amp;acute;s easier to just drive through a fast food restaurant than to go home and cook a healthy meal.</p>
+		<p><span class="miniHead">Crash Diets:</span> Because of weight gain from stress, some people intentionally eat less food than they need, or try dangerous fad diets in order to lose the excess weight. Low calorie diets can cause stress and irritability.  A healthy diet is balanced with fruits, vegetables, lean protein, low-fat dairy products and whole grains.</p>
+
+		</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/5/3" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

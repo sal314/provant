@@ -1,0 +1,63 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Meditation<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/4/5">
+	
+	<div class="w-75p left">
+<h3>Benefits of Meditation Include:</h3>
+
+	<ol>
+		<li><strong>Improved concentration</strong> - A clear mind makes you more productive, especially in creative disciplines like writing.</li>
+		<li><strong>Less bothered by little things</strong> - Do you sometimes allow yourself to get upset by little things? It is the nature of the mind to magnify small things into serious problems. Meditation helps us detach. We learn to live in the here and now, rather than worrying about the past or future. We do not worry about meaningless things, but see the bigger picture.</li>
+		<li><strong>Better Health</strong> - There have been numerous studies pointing to the health benefits of meditation. The reason is that meditation reduces stress levels and alleviates anxiety. If we can reduce stress, many health benefits follow.</li>
+		<li><strong>Knowledge of Self</strong> - Meditation enables us to have a deeper understanding of our inner self. Through meditation we can gain a better understanding of our life&amp;acute;s purpose.</li>
+	</ol>
+	<br />
+	<a href="javascript:showWin('/ModuleReduceIT/info/week4_5_a', '650px', '500px')">A Simple Breathing Meditation</a><br />
+	<br />
+
+	<p>
+	With the hectic pace and demands of modern life, many people feel stressed and over-worked. It often feels like there is just not enough time in the day to get everything done. Our stress and tiredness make us unhappy, impatient and frustrated. It can even affect our health. We are often so busy we feel there is no time to stop and meditate! But meditation actually gives you more time by making your mind calmer and more focused. A simple ten or fifteen minute breathing meditation as explained below can help you to overcome your stress and find some inner peace and balance. Meditation can also help us to understand our own mind. We can learn how to transform our mind from negative to positive, from disturbed to peaceful, from unhappy to happy. This is a profound spiritual practice you can enjoy throughout the day, not just while seated in meditation.
+	</p>	
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>			Make a plan for where and when you plan to meditate:
+		</p>
+		<ol>
+		<li><input type="text" name="E1" size="75" value="${POST[E1]}" /></li><br />
+		<li><input type="text" name="E2" size="75" value="${POST[E2]}" /></li><br />
+		<li><input type="text" name="E3" size="75" value="${POST[E3]}" /></li><br />
+		</ol>
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

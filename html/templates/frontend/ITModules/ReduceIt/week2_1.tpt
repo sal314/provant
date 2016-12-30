@@ -1,0 +1,93 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Who Is Affected By Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/2/1">
+	<div class="w-75p left">
+
+	<h3>Who is Most Susceptible to Stress?</h3>
+	<p>
+	Stress comes in all forms and affects people of all ages and all walks of life. No external standards can be applied to predict stress levels in individuals. Everyone copes with stressful situations differently. The degree of stress in our lives is highly dependent upon individual factors such as our physical health, the quality of our interpersonal relationships, the number of commitments and responsibilities we carry, the degree of others&amp;acute; dependence upon and expectations of us, the amount of support we receive from others, and the number of changes or traumatic events that have recently occurred in our lives.
+	</p>
+	<p>
+	Some generalizations, however, can be made. People with strong social support networks (consisting of family, friends, religious organizations, or other social groups) report less stress and overall improved mental health in comparison to those without these social contacts. People who are poorly nourished, who get inadequate sleep, or who are physically unwell also have reduced capabilities to handle the pressures and stresses of everyday life and may report higher stress levels. Some stressors are particularly associated with certain age groups or life stages. Children, teens, working parents, and seniors are examples of the groups who often face common stressors related to life transitions.
+	</p>
+	<p>
+	People who are providing care for elderly or infirm loved ones may also experience a great deal of stress as caregivers. Having a loved one or family member who is under a great deal of stress often increases our own stress levels.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity:</h3>
+		<p>
+		You may be experiencing stress if you exhibit some of the following symptoms.  Check any of the symptoms that apply to you personally.
+		</p>
+		<strong>Cognitive</strong><br />
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="A1" value="1" selected="${POST[A1]}" />Trouble with memory</li>
+			<li><tpt:html type="checkbox" id="A2" value="1" selected="${POST[A2]}" />Inability to concentrate</li>
+			<li><tpt:html type="checkbox" id="A3" value="1" selected="${POST[A3]}" />Poor judgment</li>
+			<li><tpt:html type="checkbox" id="A4" value="1" selected="${POST[A4]}" />Anxious or racing thoughts</li>
+		</ul>
+		<strong>Emotional</strong><br />
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="A5" value="1" selected="${POST[A5]}" />Moodiness</li>
+			<li><tpt:html type="checkbox" id="A6" value="1" selected="${POST[A6]}" />Agitation</li>
+			<li><tpt:html type="checkbox" id="A7" value="1" selected="${POST[A7]}" />Short temper</li>
+			<li><tpt:html type="checkbox" id="A8" value="1" selected="${POST[A8]}" />Impatience</li>
+			<li><tpt:html type="checkbox" id="A9" value="1" selected="${POST[A9]}" />Feeling overwhelmed</li>
+		</ul>
+		<strong>Physical</strong><br />
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="A10" value="1" selected="${POST[A10]}" />Headaches</li>
+			<li><tpt:html type="checkbox" id="A11" value="1" selected="${POST[A11]}" />Backaches</li>
+			<li><tpt:html type="checkbox" id="A12" value="1" selected="${POST[A12]}" />Muscle tension</li>
+			<li><tpt:html type="checkbox" id="A13" value="1" selected="${POST[A13]}" />Stiffness</li>
+			<li><tpt:html type="checkbox" id="A14" value="1" selected="${POST[A14]}" />Insomnia</li>
+			<li><tpt:html type="checkbox" id="A15" value="1" selected="${POST[A15]}" />Nausea</li>
+			<li><tpt:html type="checkbox" id="A16" value="1" selected="${POST[A16]}" />Dizziness</li>
+			<li><tpt:html type="checkbox" id="A17" value="1" selected="${POST[A17]}" />Chest pain</li>
+			<li><tpt:html type="checkbox" id="A18" value="1" selected="${POST[A18]}" />Rapid heartbeat</li>
+			<li><tpt:html type="checkbox" id="A19" value="1" selected="${POST[A19]}" />Weight gain or loss</li>
+			<li><tpt:html type="checkbox" id="A20" value="1" selected="${POST[A20]}" />Frequent colds</li>
+		</ul>
+		<strong>Behavioral</strong><br />
+		<ul style="list-style-type:none;">
+			<li><tpt:html type="checkbox" id="A21" value="1" selected="${POST[A21]}" />Eating more or less</li>
+			<li><tpt:html type="checkbox" id="A22" value="1" selected="${POST[A22]}" />Sleeping too much or too little</li>
+			<li><tpt:html type="checkbox" id="A23" value="1" selected="${POST[A23]}" />Isolating yourself from others</li>
+			<li><tpt:html type="checkbox" id="A24" value="1" selected="${POST[A24]}" />Procrastinating / neglecting responsibility</li>
+			<li><tpt:html type="checkbox" id="A25" value="1" selected="${POST[A25]}" />Teeth grinding or jaw clenching</li>
+			<li><tpt:html type="checkbox" id="A26" value="1" selected="${POST[A26]}" />Picking fights with others</li>
+			<li><tpt:html type="checkbox" id="A27" value="1" selected="${POST[A27]}" />over-reacting</li>
+		</ul>
+		</div>
+		<br />
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

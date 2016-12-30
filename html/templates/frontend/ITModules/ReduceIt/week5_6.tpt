@@ -1,0 +1,107 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Self Talk<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/5/6">
+	
+	<div class="w-75p left">
+	
+	<h3>Positive Self Talk</h3>
+	<p>
+	Most of us are in constant mental chatter. We talk to ourselves all day long and, unfortunately, this self talk is frequently negative. Often it is tainted with guilt about our past or anxiety about our future. This negativity can destroy any seed of hope that we may otherwise have in striving for our dreams.
+	</p>
+	<p>
+	Self-talk is one way to deal with stress. We all talk to ourselves; sometimes we talk out loud but usually we keep self-talk in our heads. Self-talk can be positive (&amp;quot;I can do this&amp;quot; or &amp;quot;Things will work out&amp;quot;) or negative (&amp;quot;I&amp;acute;ll never get well&amp;quot; or &amp;quot;I&amp;acute;m so stupid&amp;quot;).
+	</p>
+	<p>
+	Negative self-talk increases stress. Positive self-talk helps you calm down and control stress. With practice, you can learn to turn negative thoughts into positive ones. For example:
+	</p>
+	<div class="ITtables">
+	<table border="0" cellpadding="8" width="600px">
+		<thead align="left">
+			<tr>
+				<th>Negative</th>
+				<th>&amp;nbsp;</th>
+				<th>Positive</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&amp;quot;I can&amp;acute;t do this.&amp;quot;</td>
+				<td>=</td>
+				<td>&amp;quot;I&amp;acute;ll do the best I can.&amp;quot;</td>
+			</tr>
+			<tr>
+				<td>&amp;quot;Everything is going wrong.&amp;quot;</td>
+				<td>=</td>
+				<td>&amp;quot;I can handle things if I take one step at a time.&amp;quot;</td>
+			</tr>
+			<tr>
+				<td>&amp;quot;I hate it when this happens.&amp;quot;</td>
+				<td>=</td>
+				<td>&amp;quot;I know how to deal with this; I&amp;acute;ve done it before.&amp;quot;</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<br />
+	<h3>Practice Positive Self-Talk</h3>
+	<p>
+	To help you feel better, practice positive self-talk every day - in the car, at your desk, before you go to bed or whenever you notice negative thoughts.
+	</p>
+	<p>
+	Having trouble getting started? Try positive statements such as these:
+	</p>
+	<ul>
+		<li>&amp;quot;I can get help if I need it.&amp;quot;</li>
+		<li>&amp;quot;We can work it out.&amp;quot;</li>
+		<li>&amp;quot;I won&amp;acute;t let this problem get me down.&amp;quot;</li>
+		<li>&amp;quot;Things could be worse.&amp;quot;</li>
+		<li>&amp;quot;I&amp;acute;m human, and we all make mistakes.&amp;quot;</li>
+		<li>&amp;quot;Some day I&amp;acute;ll laugh about this.&amp;quot;</li>
+		<li>&amp;quot;I can deal with this situation when I feel better.&amp;quot;</li>
+	</ul>
+	<p>
+	Remember: Positive self-talk helps you relieve stress and deal with the situations that cause you stress.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List personal affirmations that you plan to use:
+		</p>
+		<ol>
+		<li><input type="text" name="F1" size="75" value="${POST[F1]}" /></li><br />
+		<li><input type="text" name="F2" size="75" value="${POST[F2]}" /></li><br />
+		<li><input type="text" name="F3" size="75" value="${POST[F3]}" /></li><br />
+		</ol>
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+	</form>
+</div>
+</tpt:body>

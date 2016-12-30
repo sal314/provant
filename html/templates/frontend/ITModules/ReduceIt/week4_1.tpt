@@ -1,0 +1,96 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Job Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleReduceIT/Week/4/1">
+	
+	<div class="w-75p left">
+
+	<p>
+	According to a 2006 random national survey of more than 2,000 people conducted by the American Psychological Association 59% said work was a leading source of stress and 47% said they were concerned about stress in their lives.
+	</p>
+	<p>
+	It&amp;acute;s also not great for the bottom line, often resulting in absenteeism, lowered productivity, turnover and health claims. Research has shown that people who are stressed out are more likely to experience hypertension, anxiety or depression and obesity.
+	</p>
+	
+	<h3>Stress in the Workplace</h3>
+	<p>
+	Positive stress in the workplace helps us to meet deadlines, achieve goals, strive for promotions and can have many other positive outcomes.  Negative repercussions can occur when this stress goes from average to excessive.  Workplace stress is usually the result of high demands on the job, a feeling of lack of control, or an unsupportive work environment.
+	</p>
+	<p>
+	There is a clear connection between workplace stress and physical or emotional problems.  According to the National Institute of Occupational Safety and Health, early warning signs of stress include:
+	</p>
+	<ul>
+		<li>Headache</li>
+		<li>Sleep Problems</li>
+		<li>Upset Stomach</li>
+		<li>Difficulty Concentrating</li>
+		<li>Irritability</li>
+		<li>Low Morale</li>
+		<li>Poor Relations with family and friends</li>
+	</ul>
+ 	<br />
+	<h3>Ways to Reduce Stress at Work</h3>
+	<p>
+	Many times, stress can be brought about by our state of mind or personal behavior.  By modifying certain negative thoughts or actions, workplace stress can be reduced.  Here are a few tips for decreasing self-defeating negative thoughts and behaviors:
+	</p>
+	<ul style="list-style-type:none;">
+		<li><strong>Resist the urge for perfection</strong>.  Nothing will ever be perfect and accepting this can help reduce the stress of striving for an unattainable goal.</li>
+		<br />
+		<li><strong>Organize your life and your workspace</strong>.  Wake up 5 or 10 minutes early so you don&amp;acute;t feel rushed to get out the door.  Plan out what you want and need to accomplish each day and write it down.  As you finish each project, cross it off your list so you can visually see how productive you have been.</li>
+		<br />
+		<li><strong>Think positively</strong>.  Avoid negative people in your life who will only contribute to more stress.  Make sure to give yourself credit for all of your accomplishments, even small ones.</li>
+	</ul>
+
+	<p>
+	Here are some more tips for reducing stress at work:
+	</p>
+	<ul>
+		<li>Take a break and walk away from a situation that is becoming stressful.</li>
+		<li>Talk about what&amp;acute;s stressing you, it&amp;acute;s a great way to blow off steam!</li>
+		<li>Befriend positive coworkers.  Knowing you have allies around you can take the pressure off of a stressful situation.</li>
+		<li>Try to find humor in stressful situations.</li>
+	</ul>
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List ways to reduce your work stress:
+		</p>
+		<ol>
+			<li><input type="text" name="A1" size="75" value="${POST[A1]}" /></li><br />
+			<li><input type="text" name="A2" size="75" value="${POST[A2]}" /></li><br />
+			<li><input type="text" name="A3" size="75" value="${POST[A3]}" /></li><br />
+		</ol>
+		<br />
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

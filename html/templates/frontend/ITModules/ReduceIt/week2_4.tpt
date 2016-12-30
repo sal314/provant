@@ -1,0 +1,60 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress Management<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<h3>What Can I Do To Better Manage Stress?</h3>
+	<p>
+	In general, stress is related to both external and internal factors. External factors include your physical environment, your job, relationships with others, your home, and all the situations, challenges, difficulties, and expectations you&amp;acute;re confronted with on a daily basis. Internal factors determine your body&amp;acute;s ability to respond to, and deal with, the external stress-inducing factors. Internal factors which influence your ability to handle stress include your nutritional status, overall health and fitness levels, emotional well-being, and the amount of sleep and rest you get.
+	</p>
+	<p>
+	Managing stress, therefore, can involve making changes in the external factors which confront you or with internal factors which strengthen your ability to deal with what comes your way.
+	</p>
+	<br />
+	<h3>Stress Response (Flight or Fight)</h3>
+	Understanding the natural stress response<br />
+	<p>
+	If your mind and body are constantly on edge because of excessive stress in your life, you may face serious health problems. That&amp;acute;s because your body&amp;acute;s &amp;quot;fight-or-flight reaction&amp;quot; - its natural alarm system - is constantly on.
+	</p>
+	<p>
+	When you encounter perceived threats - a large dog barks at you during your morning walk, for instance - your hypothalamus, a tiny region at the base of your brain, sets off an alarm system in your body. Through a combination of nerve and hormonal signals, this system prompts your adrenal glands, located atop your kidneys, to release a surge of hormones, including adrenaline and cortisol.
+	</p>
+	<ul>
+		<li><strong>Adrenaline</strong> increases your heart rate, elevates your blood pressure and boosts energy supplies.</li>
+
+		<li><strong>Cortisol</strong>, the primary stress hormone, increases sugars (glucose) in the bloodstream, enhances your brain&amp;acute;s use of glucose and increases the availability of substances that repair tissues. Cortisol also curbs functions that would be nonessential or detrimental in a fight-or-flight situation. It alters immune system responses and suppresses the digestive system, the reproductive system and growth processes.</li>
+	</ul>
+	<p>
+	This complex natural alarm system also communicates with regions of your brain that control mood, motivation and fear.
+	</p>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/2/5" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

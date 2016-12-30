@@ -1,0 +1,63 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<br />
+		<table border="1">
+			<thead align="center">
+				<tr>
+					<th width="400px">Top 10 Most Stressful Jobs</th>
+					<th width="400px">Top 10 Least Stressful Jobs</th>
+				</tr>
+			</thead>
+			<tbody align="left">
+				<tr>
+					<td>1. Inner City HS Teacher</td>
+					<td>1. Forester</td>
+				</tr>
+				<tr>
+					<td>2. Police Officer</td>
+					<td>2. Bookbinder</td>
+				</tr>
+				<tr>
+					<td>3. Miner</td>
+					<td>3. Telephone Line Worker</td>
+				</tr>
+				<tr>
+					<td>4. Air Traffic Controller</td>
+					<td>4. Toolmaker</td>
+				</tr>
+				<tr>
+					<td>5. Medical Intern</td>
+					<td>5. Millwright</td>
+				</tr>
+				<tr>
+					<td>6. Stockbroker</td>
+					<td>6. Repairperson</td>
+				</tr>
+				<tr>
+					<td>7. Journalist</td>
+					<td>7. Civil Engineer</td>
+				</tr>
+				<tr>
+					<td>8. Customer Service/Complaint Worker</td>
+					<td>8. Therapist</td>
+				</tr>
+				<tr>
+					<td>9. Secretary</td>
+					<td>9. Natural Scientist</td>
+				</tr>
+				<tr>
+					<td>10. Waiter</td>
+					<td>10. Sales Representative</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">According to <i>Health Magazine</i></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	</html>
+</tpt:body>

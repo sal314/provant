@@ -1,0 +1,36 @@
+<tpt:body>
+<div class="inner-content reduceit">
+	<div id="section-header" class="txt-ctr">
+		<h1>Congratulations!<br />You have completed the Reduce IT module!</h1>
+	</div>
+	
+	<div class="right">
+		<img src="/assets/media/images/reduceit/week5-H.png" alt="Congratulations" />
+	</div>
+
+	<div>
+		<a href="javascript:showWin('/ModuleReduceIT/info/week2_6_a', '722px');">Get a copy of the Stress Journal</a><br />
+	</div>
+
+	<div class="txt-ctr">
+		<h2><a href="javascript:void(0);" onclick="window.open('/ModuleReduceIT/Download', '_blank')">Download Certificate</a></h2>
+		<img src="/assets/media/images/reduceit/week5-H.jpg" alt="" />
+	</div>
+
+	<div class="clear"> </div>
+
+    <div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Index" class="loseit-home" style="margin:0 auto">Reduce It Homepage</a>
+	</div>
+</div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+</tpt:body>

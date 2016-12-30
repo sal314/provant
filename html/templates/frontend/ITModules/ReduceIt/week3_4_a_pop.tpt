@@ -1,0 +1,19 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+		<h3>How to do Deep Breathing Exercises:</h3>
+		<ul>
+			<li>Sit up straight. (Do not arch your back) First exhale completely through your mouth. Place your hands on your stomach, just above your waist.</li>
+			<li>Breathe in slowly through your nose, pushing your hands out with your stomach. This ensures that you are breathing deeply. Imagine that you are filling your body with air from the bottom up.</li>
+			<li>Hold your breath to a count of two to five, or whatever you can handle. It is easier to hold your breath if you continue to hold out your stomach. Slowly and steadily breathe out through your mouth, feeling your hands move back in as you slowly contract your stomach, until most of the air is out. Exhalation is a little longer than inhalation. After you get some experience you don&amp;acute;t need to use your hands to check your breathing.</li>
+		</ul>
+		</div>
+		</div>
+	</body>
+	</html>
+</tpt:body>

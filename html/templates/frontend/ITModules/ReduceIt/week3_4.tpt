@@ -1,0 +1,68 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Deep Breathing Exercises<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIt/Week/3/4">
+	
+	<div class="w-75p left">
+	
+	<p>
+	Deep breathing is a relaxation technique that can be self-taught. Deep breathing releases tension from the body and clear the mind, improving both physical and mental wellness.
+	</p>
+	<p>
+	We tend to breathe shallowly or even hold our hold our breath when we are feeling anxious. Sometimes we are not even aware of it. Shallow breathing limits your oxygen intake and adds further stress to your body, creating a vicious cycle. Breathing exercises can break this cycle.
+	</p>
+	<p>
+	The importance of good posture cannot be overstated. While sitting, we tend to slouch, which compresses the diaphragm and other organs, resulting in shallow breathing. Slouching also strains muscles in the neck and back. It is helpful to sit in a chair with good back support to avoid fatigue that leads to slouching.
+	</p>
+
+	<a href="javascript:showWin('/ModuleReduceIT/info/week3_4_a', '650px', '300px')">How to do Deep Breathing Exercises</a><br /><br />
+	<p>
+	You can also do the above breathing exercise lying on your back. Deep breathing exercises can help you to relax before you go to sleep for the night, or fall back asleep if you awaken in the middle of the night.
+	</p>
+	<p>
+	You can also practice deep breathing exercises standing - e.g. while sitting in traffic, or standing in a lineup at the grocery store. If you are really tense and feel as if you are holding your breath, simply concentrate on slowly breathing in and out.
+	</p>
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		Practice Deep Breathing and note how you feel afterwards:
+		</p>
+		<ol>
+		<li><input type="text" name="D1" size="75" value="${POST[D1]}" /></li><br />
+		<li><input type="text" name="D2" size="75" value="${POST[D2]}" /></li><br />
+		<li><input type="text" name="D3" size="75" value="${POST[D3]}" /></li><br />
+		</ol>
+		<br />
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

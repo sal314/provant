@@ -1,0 +1,50 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress Warning Signs And Symptoms<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<h3>Depression</h3>
+	<p>
+	About 20 in every 100 Americans will develop depression sometime in their lifetime.   Depression is caused by a combination of genetic vulnerability, early childhood experiences and stressful life events.  Depression is at least 50-60 percent caused by genes and having a first degree family member with depression doubles the risk that a person will develop depression. Sadness is a normal reaction to life&amp;acute;s struggles, setbacks, and disappointments.
+	</p>
+	<p>
+	Early life stressful experiences markedly increase the probability that depression will develop.  Ongoing life stressors can also lead to depression, including work stress.   Many people use the word &amp;quot;depression&amp;quot; to explain these kinds of feelings, but clinical depression is much more than just sadness.
+	</p>
+	<p>
+	Whatever the symptoms, depression is different from normal sadness in that it engulfs your day-to-day life, interfering with your ability to work, study, eat, sleep, and have fun. The feelings of helplessness, hopelessness, and worthlessness are intense and unrelenting, with little, if any, relief.
+	</p>
+	<br />
+	<a href="javascript:showWin('/ModuleReduceIT/info/week3_3_a', '650px', '300px')">Early Life Stress</a><br />
+	<br />
+		</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/3/4" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+	
+</tpt:body>

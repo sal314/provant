@@ -1,0 +1,87 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Risk Factors For Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/2/2">
+	<div class="w-75p left">
+	
+	<p>
+	At some point in our lives virtually everyone experiences stressful events or situations that overwhelm our natural coping mechanisms. Some people are simply biologically prone to stress; many outside factors influence susceptibility as well.
+	</p>
+	<h3>Conditions Most Likely To Produce Stress-Related Health Problems:</h3>
+	<p>
+	Conditions that are most likely to be associated with stress and negative physical effects include the following:
+	</p>
+	<ul>
+		<li>An accumulation of persistent stressful situations, particularly those that a person cannot easily control (for example, high-pressured work plus an unhappy relationship).</li>
+		<li>Persistent stress following a severe acute response to a traumatic event (such as an automobile accident).</li>
+		<li>Acute stress accompanying serious illness, such as heart disease.</li>
+	</ul>
+	<br />
+	<h3>Factors That Influence the Response to Stress:</h3>
+	<p>
+	People respond to stress differently depending on different factors:
+	</p>
+	<ul>
+		<li>Early nurturing. (Abusive behavior towards children may cause long-term abnormalities in the hypothalamus-pituitary system, which regulates stress.)</li>
+		<li>Personality traits. Certain people have personality traits that cause them to over-respond to stressful events.</li>
+		<li>Genetic factors. Some people have genetic factors that affect stress, such as having more or less efficient relaxation response. One 2001 study found a genetic abnormality in serotonin regulation that was associated with a heightened reactivity of the heart rates and blood pressure in response to stress. (Serotonin is a brain chemical involved with feelings of well being.)</li>
+		<li>Immune regulated diseases. Certain diseases that are associated with immune abnormalities (such as rheumatoid arthritis or eczema) may actual impair a response to stress.</li>
+		<li>The length and quality of stressors. Naturally the longer the duration and more intense the stressors, the more harmful the effects.</li>
+	</ul>
+	<br />
+	<h3>Individuals at Higher Risk for Stress:</h3>
+	<p>
+	Studies indicate that the following people are more vulnerable to the effects of stress than others:
+	</p>
+	<ul>
+		<li>Older adults. As people age, the ability to achieve a relaxation response after a stressful event becomes more difficult. Aging may simply wear out the systems in the brain that respond to stress, so that they become inefficient. The elderly, too, are very often exposed to major stressors such as medical problems, the loss of a spouse and friends, a change in a living situation, and financial worries. No one is immune to stress, however, and it may simply go unnoticed in the very young and old.</li>
+		<li>Women in general and working mothers specifically. Working mothers, regardless of whether they are married or single, face higher stress levels and possibly adverse health effects, most likely because they bear a greater and more diffuse work load than men or other women.</li>
+		<li>Less educated individuals.</li>
+		<li>Divorced or widowed individuals.</li>
+		<li>Anyone experiencing financial strain, particularly long-term unemployed and those without health insurance.</li>
+		<li>Isolated individuals.</li>
+		<li>People who are targets of racial or sexual discrimination.</li>
+		<li>People who live in cities.</li>
+	</ul>
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List your personal risk factors for stress:
+		</p>
+		<ol>
+			<li><input type="text" name="B1" size="75" value="${POST[B1]}" /></li><br />
+			<li><input type="text" name="B2" size="75" value="${POST[B2]}" /></li><br />
+			<li><input type="text" name="B3" size="75" value="${POST[B3]}" /></li><br />
+		</ol>
+	</div>
+		<br />
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

@@ -1,0 +1,58 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress Response<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<h3>When the Natural Stress Response Goes Haywire</h3>
+	<p>
+	The body&amp;acute;s stress-response system is usually self-regulating. It decreases hormone levels and enables your body to return to normal once a perceived threat has passed. As adrenaline and cortisol levels drop, your heart rate and blood pressure return to baseline levels, and other systems resume their regular activities.
+	</p>
+	<p>
+	But when the stressors of your life are always present, leaving you constantly feeling stressed, tense, nervous or on edge, that fight-or-flight reaction stays turned on. The less control you have over potentially stress-inducing events and the more uncertainty they create, the more likely you are to feel stressed. Even the typical day-to-day demands of living can contribute to your body&amp;acute;s stress response.
+	</p>
+	<p>
+	The long-term activation of the stress-response system - and the subsequent overexposure to cortisol and other stress hormones - can disrupt almost all your body&amp;acute;s processes. This puts you at increased risk of numerous health problems, including:
+	</p>
+	<ul>
+		<li>Heart disease</li>
+		<li>Sleep problems</li>
+		<li>Digestive problems</li>
+		<li>Depression</li>
+		<li>Obesity</li>
+		<li>Memory impairment</li>
+		<li>Worsening of skin conditions, such as eczema</li>
+	</ul>
+	<p>
+	That&amp;acute;s why it&amp;acute;s so important to learn healthy ways to cope with the stressors in your life.
+	</p>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/2/6" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

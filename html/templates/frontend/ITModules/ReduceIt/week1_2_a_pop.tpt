@@ -1,0 +1,28 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+		<h3>Top Ten Stressful Life Events</h3>
+		<ol>
+			<li>Spouse&amp;acute;s death</li>
+			<li>Divorce</li>
+			<li>Marriage separation</li>
+			<li>Jail term</li>
+			<li>Death of a close relative</li>
+			<li>Injury or illness</li>
+			<li>Marriage</li>
+			<li>Fired from job</li>
+			<li>Marriage reconciliation</li>
+			<li>Retirement</li>
+		</ol>
+		<br />
+		Source: <a href="#" onclick="window.open('http://www.harvestenterprises-sra.com/The%20Holmes-Rahe%20Scale.htm', '_blank', 'toolbar=yes,location=yes,directories=yes,resizable=yes,scrollbars=yes')">Holmes-Rahe Life Stress Inventory</a>
+		</div>
+		</div>
+	</body>
+	</html>
+</tpt:body>

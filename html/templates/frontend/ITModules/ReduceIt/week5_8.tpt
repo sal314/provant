@@ -1,0 +1,129 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 5 Questionnaire<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleReduceIt/Week/5/8" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>Congratulations!  You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	
+	<div class="stack">
+			<div class="question">1. What is one of the most effective ways to combat stress?</div>
+			<label><tpt:html type="radio" id="H1" value="1" selected="${POST[H1]}" />Physical exercise</label><br />
+			<label><tpt:html type="radio" id="H1" value="2" selected="${POST[H1]}" />Meditation</label><br />
+			<label><tpt:html type="radio" id="H1" value="3" selected="${POST[H1]}" />Deep Breathing</label><br />
+			<label><tpt:html type="radio" id="H1" value="4" selected="${POST[H1]}" />None of the above</label><br />
+			<tpt:if id="result[H1]" test="EXISTS">
+				<br />
+				<span class="${resClass[H1]}">${result[H1]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">2. Exposure to daylight also has positive effects on mood:</div>
+			<label><tpt:html type="radio" id="H2" value="1" selected="${POST[H2]}" />True</label><br />
+			<label><tpt:html type="radio" id="H2" value="2" selected="${POST[H2]}" />False</label><br />
+			<tpt:if id="result[H2]" test="EXISTS">
+				<br />
+				<span class="${resClass[H2]}">${result[H2]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">3. Which of the following are unhealthy eating habits that can negatively effect our bodies?</div>
+			<label><tpt:html type="radio" id="H3" value="1" selected="${POST[H3]}" />Skipping Meals</label><br />
+			<label><tpt:html type="radio" id="H3" value="2" selected="${POST[H3]}" />Fast Food </label><br />
+			<label><tpt:html type="radio" id="H3" value="3" selected="${POST[H3]}" />Mindless munching</label><br />
+			<label><tpt:html type="radio" id="H3" value="4" selected="${POST[H3]}" />All of the above</label><br />
+			<tpt:if id="result[H3]" test="EXISTS">
+				<br />
+				<span class="${resClass[H3]}">${result[H3]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">4. Components of a healthy diet include:</div>
+			<label><tpt:html type="radio" id="H4" value="1" selected="${POST[H4]}" />Skipping breakfast</label><br />
+			<label><tpt:html type="radio" id="H4" value="2" selected="${POST[H4]}" />Fruits and vegetables</label><br />
+			<label><tpt:html type="radio" id="H4" value="3" selected="${POST[H4]}" />All dairy products</label><br />
+			<label><tpt:html type="radio" id="H4" value="4" selected="${POST[H4]}" />White flour</label><br />
+			<tpt:if id="result[H4]" test="EXISTS">
+				<br />
+				<span class="${resClass[H4]}">${result[H4]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">5. Which of the following tips can reduce stress?</div>
+			<label><tpt:html type="radio" id="H5" value="1" selected="${POST[H5]}" />Set aside time for relaxation</label><br />
+			<label><tpt:html type="radio" id="H5" value="2" selected="${POST[H5]}" />Do something you enjoy everyday</label><br />
+			<label><tpt:html type="radio" id="H5" value="3" selected="${POST[H5]}" />Exercise regularly</label><br />
+			<label><tpt:html type="radio" id="H5" value="4" selected="${POST[H5]}" />Eat a healthy diet</label><br />
+			<label><tpt:html type="radio" id="H5" value="5" selected="${POST[H5]}" />All of the above</label><br />
+			<tpt:if id="result[H5]" test="EXISTS">
+				<br />
+				<span class="${resClass[H5]}">${result[H5]}</span><br />
+			</tpt:if>
+	</div>
+	<br />
+
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleReduceIT/Week/5/9">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleMoveIT/Week/5/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Reduce It Homepage</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

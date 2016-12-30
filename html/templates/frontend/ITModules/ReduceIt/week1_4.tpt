@@ -1,0 +1,45 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Guided Imagery<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<p>
+	Guided imagery works on different levels of the brain that will help you to be open to suggestion. Guided imagery takes you through a series of mental and breathing exercises that will help you relax your body.
+	</p>
+	<p>
+	Please listen to a relaxation CD in a quiet place, without interruption.  It is important not to engage in other activities, like driving, while listening to the CD.  For optimal results, it is important to listen to the CD for 21 consecutive days. Guided imagery is a proven tool for stress management.
+	</p>
+	<br />
+	<span style="color:red;font-size:large;">Will this be provided like the &amp;acute;Break IT&amp;acute; module?</span><br />
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/1/5" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

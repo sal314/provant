@@ -1,0 +1,44 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Journaling Your Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+
+	<p>
+	Journaling your stress can be a great way to realize what&amp;acute;s stressing you out, and how you can avoid or cope with stress.
+	</p>
+	<p>
+	By noting this information on a regular basis, you will be able to identify your most frequent causes of stress, and decide the best action to take to reduce it.
+	</p>
+	<br />
+	<a href="javascript:showWin('/ModuleReduceIT/info/week2_6_a', '722px')">Example of a Stress Journal</a><br />
+
+		</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/2/7" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

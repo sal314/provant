@@ -1,0 +1,44 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress Warning Signs And Symptoms<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+
+	<p>
+	Modern life is full of hassles, deadlines, frustrations, and demands. For many people, stress is so commonplace that it has become a way of life. Stress isn&amp;acute;t always bad. In small doses, it can help you perform under pressure and motivate you to do your best. But when you&amp;acute;re constantly running in emergency mode, your mind and body pay the price.
+	</p>
+	<p>
+	If you frequently find yourself feeling frazzled and overwhelmed, it&amp;acute;s time to take action to bring your nervous system back into balance. You can protect yourself by learning how to recognize the signs and symptoms of stress and taking steps to reduce its harmful effects.
+	</p>
+	<a href="javascript:showWin('/ModuleReduceIt/info/week3_1_a', '680px', '550px')">Stress Warning Signs and Symptoms</a><br />
+	<br />
+		</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/3/2" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+	
+</tpt:body>

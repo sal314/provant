@@ -1,0 +1,17 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+		<h3>Early Life Stress</h3>
+		<p>
+		Early life stress is a particularly powerful cause of depression, especially in women. Women are more likely than men to develop depression after early life stress.  In addition, women that are abused in childhood are 4 times more likely to develop major depression in adulthood compared to those women who are not abused.
+		</p>
+		</div>
+		</div>
+	</body>
+	</html>
+</tpt:body>

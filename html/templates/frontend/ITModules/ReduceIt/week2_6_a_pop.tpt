@@ -1,0 +1,15 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<strong>Journaling Your Stress</strong><br />
+		<br />
+		<a href="javascript:this.frames['StressJournal'].print();">print this Stress Journal</a><br />
+		<br />
+		<br />
+		<iframe src="/assets/html/ReduceIt/StressJournal.html" name="StressJournal" frameborder="0" scrolling="no" width="700px" height="500px"></iframe>
+	</body>
+	</html>
+</tpt:body>

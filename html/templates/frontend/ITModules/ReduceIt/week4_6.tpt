@@ -1,0 +1,128 @@
+<tpt:body>
+
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+	
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Week 4 Questionnaire<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleReduceIt/Week/4/6" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+	
+	<div class="w-75p left">
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+	<ul>
+		<tpt:foreach id="errors" as="error">
+			<li>
+				<tpt:if id="error.type" test="NEQ" value="5">${error.display_name} : ${error.message}</tpt:if>
+				<tpt:else>You have not answered all the questions correctly. Please try again.</tpt:else>
+			</li>
+		</tpt:foreach>
+	</ul>
+	</div>
+	</tpt:if>
+	<tpt:else>
+	<tpt:if id="ftt" test="EQ" value="1">
+	<div id="success-header">
+		<ul>
+			<li>You have answered all questions correctly.  Click 'Next' below to continue.</li>
+		</ul>
+	</div>
+	</tpt:if>
+	</tpt:else>
+
+	
+	<div class="stack">
+			<div class="question">1. The benefits of positive stress at work help employees to which of the following:</div>
+			<label><tpt:html type="radio" id="F1" value="1" selected="${POST[F1]}" />Meet deadlines</label><br />
+			<label><tpt:html type="radio" id="F1" value="2" selected="${POST[F1]}" />Achieve goals</label><br />
+			<label><tpt:html type="radio" id="F1" value="3" selected="${POST[F1]}" />Strive for promotions</label><br />
+			<label><tpt:html type="radio" id="F1" value="4" selected="${POST[F1]}" />All of the above</label><br />
+			<tpt:if id="result[F1]" test="EXISTS">
+				<br />
+				<span class="${resClass[F1]}">${result[F1]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">2. Work is a leading cause of stress for many people.</div>
+			<label><tpt:html type="radio" id="F2" value="1" selected="${POST[F2]}" />True</label><br />
+			<label><tpt:html type="radio" id="F2" value="2" selected="${POST[F2]}" />False</label><br />
+			<tpt:if id="result[F2]" test="EXISTS">
+				<br />
+				<span class="${resClass[F2]}">${result[F2]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">3. Which of the following jobs is considered one of the most stressful?</div>
+			<label><tpt:html type="radio" id="F3" value="1" selected="${POST[F3]}" />Plumber</label><br />
+			<label><tpt:html type="radio" id="F3" value="2" selected="${POST[F3]}" />Painter</label><br />
+			<label><tpt:html type="radio" id="F3" value="3" selected="${POST[F3]}" />Miner</label><br />
+			<label><tpt:html type="radio" id="F3" value="4" selected="${POST[F3]}" />Therapist</label><br />
+			<tpt:if id="result[F3]" test="EXISTS">
+				<br />
+				<span class="${resClass[F3]}">${result[F3]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">4. Which of the following are tips to reduce financial stress?</div>
+			<label><tpt:html type="radio" id="F4" value="1" selected="${POST[F4]}" />Set a budget</label><br />
+			<label><tpt:html type="radio" id="F4" value="2" selected="${POST[F4]}" />Start a savings plan</label><br />
+			<label><tpt:html type="radio" id="F4" value="3" selected="${POST[F4]}" />Learn about investing</label><br />
+			<label><tpt:html type="radio" id="F4" value="4" selected="${POST[F4]}" />All of the above</label><br />
+			<tpt:if id="result[F4]" test="EXISTS">
+				<br />
+				<span class="${resClass[F4]}">${result[F4]}</span><br />
+			</tpt:if>
+	</div>
+	<div class="stack">
+			<div class="question">5. Benefits of meditation include:</div>
+			<label><tpt:html type="radio" id="F5" value="1" selected="${POST[F5]}" />Improved concentration, Less bothered by little things, Better health</label><br />
+			<label><tpt:html type="radio" id="F5" value="2" selected="${POST[F5]}" />Knowledge of Self, Better health, More bothered by little things</label><br />
+			<label><tpt:html type="radio" id="F5" value="3" selected="${POST[F5]}" />Decreased concentration, Knowledge of Self, Better health</label><br />
+			<label><tpt:html type="radio" id="F5" value="4" selected="${POST[F5]}" />None of the above</label><br />
+			<tpt:if id="result[F5]" test="EXISTS">
+				<br />
+				<span class="${resClass[F5]}">${result[F5]}</span><br />
+			</tpt:if>
+	</div>
+	<br />
+
+	</div>
+		<div class="clear"> </div>
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<tpt:if id="submit" test="EQ" value="1">
+			<a class="right next" href="/ModuleReduceIT/Week/4/7">Continue</a><br />
+		</tpt:if>
+		<tpt:elseif id="submit" test="EQ" value="2">
+		<div id="try-again-button">
+			<a class="right next" href="/ModuleMoveIT/Week/4/1">Try again</a><br />
+		</div>
+		</tpt:elseif>
+		<tpt:else>
+		<div id="submit-button">
+			<a href="#" class="nextstep right next">Next</a>
+			<input type="hidden" name="attempt" value="${attempt}" />
+		</div>
+		</tpt:else>
+		<a href="/ModuleMoveIT/Index" class="left loseit-home">Reduce It Homepage</a>
+	</div>
+	</form>
+</div>
+</tpt:body>

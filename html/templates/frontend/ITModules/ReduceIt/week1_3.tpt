@@ -1,0 +1,80 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Effects of Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<div class="w-75p left">
+	
+	<p>
+	While there&amp;acute;s a wealth of information available about the effects of stress, it can be stressful trying to wade through it all! Here are 10 important facts about the effects of stress that can go a long way in helping you understand stress and its role in your life. This can help you quickly and easily learn more about the effects of stress and find some effective stress management techniques to incorporate into your life right now.
+	</p>
+	<p>
+	<span class="question miniHead">1. The Wrong Attitude Significantly Increases Your Stress Level</span><br />
+	We all experience stress, but the pessimists, perfectionists, and those with &amp;acute;type A&amp;acute; personalities (to name a few) greatly increase the level of stress they experience in a given event, and even bring more stressful events into their lives with their self sabotage thought and behavior patterns. If you have some of these tendencies, you can significantly reduce the level of stress you experience with these resources on stress and self sabotage.
+	</p>
+	<p>
+	<span class="question miniHead">2. Some Types of Stress Can Be Beneficial</span><br />
+	A certain type of stress, eustress, is actually necessary and beneficial for a balanced and exciting life. Eustress is the type of stress you experience when you&amp;acute;re riding a roller-coaster (if you enjoy fast rides), are playing a fun game, or are falling in love. Eustress makes us feel vital and alive. (Chronic stress, however, is another story!) If you&amp;acute;re interested in learning more about the different types of stress and how they affect your health, read this article on stress and health.
+	</p>
+	<p>
+	<span class="question miniHead">3. You Can Stop Your Stress Reaction Right Now</span><br />
+	When you experience stress, all manner of physiological changes occur to get you in top physical shape to fight or run. Unfortunately, if you don&amp;acute;t calm yourself down relatively quickly, you could remain in this altered state for too long, and it could take a toll on your health. Practicing stress relievers like breathing exercises and meditation can calm you down quickly, returning your body to normal.
+	</p>
+	<p>
+	<span class="question miniHead">4. Even Small Amounts of Stress Can Affect Your Health</span><br />
+	You may be aware that months spent in a stressful life situation can leave you vulnerable to illness, but did you know that relatively short periods of stress can also compromise your immune system, elevating your risk of illness?
+	</p>
+	<p>
+	<span class="question miniHead">5. The Wrong Attitude Can Make You Sick</span><br />
+	Negative thought patterns and emotional stress can lead to psychosomatic illness, a condition that&amp;acute;s caused at least in part by stress, but has physical symptoms that need to be treated as any other illness does.
+	</p>
+	<p>
+	<span class="question miniHead">6. You Can Prevent Significant Amount Of Stress In Your Life From Occurring</span><br />
+	Some stress is inevitable, but you can structure your life in ways that buffer you from stress and stressful events. For example, maintaining a healthy diet, getting regular exercise, and having at least a few close friendships are all important ways to relieve stress and stay healthy.
+	</p>
+	<p>
+	<span class="question miniHead">7. Stress Can Age You Prematurely</span><br />
+	It may be surprising, but stress can be more of a factor in determining your physical age than the number of candles you blow out each year. Stress actually speeds up wear and tear on your body.
+	</p>
+	<p>
+	<span class="question miniHead">8. Not Everyone Experiences Stress In the Same Way</span><br />
+	Certain inborn personality traits and learned thought patterns can cause two people who live through the same event to experience it very differently, with one person finding it extremely stressful and the other finding it only mildly stressful or not at all. Some of these traits you can&amp;acute;t change, but others you can alter to a large degree.
+	</p>
+	<p>
+	<span class="question miniHead">9. Some &amp;acute;Stress Relievers&amp;acute; Actually Cause More Stress</span><br />
+	Most of us have a few less-than-healthy ways of dealing with stress. Unfortunately, most of these &amp;acute;bad habits&amp;acute; that feel so good at the time can really cause much more stress in the long run. If you smoke, drink in excess, spend too much, or handle stress in a way you know may not be good for you, find resources for understanding how you&amp;acute;re affecting your stress levels right now, and find resources for healthier coping.
+	</p>
+	<p>
+	<span class="question miniHead">10. Imagine Your Stress Gone</span><br />
+	Certain mental stress relief techniques, such as affirmations, guided imagery and visualizations; involve imagining that your stress is gone. And they work!
+	</p>
+	<br />
+	</div>
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/1/4" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+
+</tpt:body>

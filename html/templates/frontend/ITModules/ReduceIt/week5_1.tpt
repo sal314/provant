@@ -1,0 +1,106 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Battling Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/5/1">
+	
+	<div class="w-75p left">
+
+	<h3>Ways to Combat Stress</h3>
+	<ul>
+		<li>Exercise</li>
+		<li>Meditation/Visual Imagery</li>
+		<li>Yoga</li>
+		<li>Healthy Diet</li>
+		<li>Stress Aids (stress balls, silly putty, Play-doh)</li>
+		<li>Creating Work/Life Balance</li>
+		<li>Financial Planning</li>
+		<li>Organization</li>
+	</ul>
+	<br />
+	<p>
+	<h3>Exercise for Relieving Stress</h3>
+	Physical exercise is one of the most effective ways of relieving stress. Exercising the body regularly is very effective in managing stress, on its own or as a part of a stress management plan. Getting into better shape improves your mental health as well as your physical health.
+	</p>
+	<p>
+	When you physically exert yourself, the body releases chemical substances (endorphins) that are similar in nature to opiates. These natural substances produced by our own bodies are free of side effects, except for making us feel good. When it comes to stress management, every little bit of exercise counts.
+	</p>
+	<p>
+	<h3>Aerobics</h3>
+	Any activity that gets your heart pumping (aerobic exercise) will get those endorphins flowing and relieve stress. Though you should check with your doctor before embarking on any exercise program, walking is usually safe for anyone.
+	</p>
+	<p>
+	Try to get your heart going a little faster for at least 15 minutes a day. Even a few minutes here and there of brisk walking can provide stress relief and improve your overall health.
+	</p>
+	<p>
+	<h3>Exercise in a Natural Environment for Additional Stress Relieving Benefits</h3>
+	Obviously it is more relaxing to walk along a nature trail than to walk along a busy street. Natural surroundings trigger relaxation responses deep in the brain. Even mentally picturing being surrounded by mountains, trees, or watching the waves roll in at the beach can have this calming effect.
+	</p>
+	<p>
+	*Exposure to daylight also has positive effects on mood - another benefit of exercising outdoors.
+	</p>
+	<p>
+	<h3>Exercises to Suit Everyone</h3>
+	From doing gentle stretching exercises to keeping up in a physically demanding aerobics class, stress relief can be achieved through a wide range of activities.
+	</p>
+	<p>
+	Some people enjoy the solitude of walking alone. Other people need the stimulation of interacting with others, whether walking in a group, participating in a yoga class or other fitness class, or playing a sport such as tennis, racquetball, etc. Interacting with other people during exercise can provide additional stress relief.
+	</p>
+	<p>
+	<h3>Strengthening Exercises</h3>
+	Though not generally as effective as aerobics for relieving stress, many people find that getting into a strengthening exercise program does relieve stress.
+	</p>
+	<p>
+	Strength exercises are also important to prevent injury during aerobic exercise by strengthening the muscles that support your joints. A toned body has as much impact on mental wellness as physical wellness.
+	</p>
+	<p>
+	<h3>Stretching</h3>
+	Stretching exercises stimulate receptors in the nervous system that decrease the production of stress hormones. Stretching exercises also relax tight, tense muscles and increase blood flow to the muscles.
+	</p>
+	<p>
+	<h3>Other Exercises</h3>
+	Yoga exercises involve the body, mind and spirit. Yoga poses improve flexibility and strength and incorporate breathing techniques that aid in relaxation and general wellness.
+	</p>
+	<br />
+
+	<div class="activity border">
+		<h3>Activity</h3><br />
+		<p>List physical activity that you would like to try to help you reduce your stress:
+		</p>
+		<ol>
+			<li><input type="text" name="A1" size="75" value="${POST[A1]}" /></li><br />
+			<li><input type="text" name="A2" size="75" value="${POST[A2]}" /></li><br />
+			<li><input type="text" name="A3" size="75" value="${POST[A3]}" /></li><br />
+		</ol>
+
+
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

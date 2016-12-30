@@ -1,0 +1,58 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Self Talk<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	
+	<div class="w-75p left">
+
+	<h3>The Key to Stress Management:</h3>
+	<ul>
+		<li>Practice stress management techniques regularly.</li>
+		<li>Know your body and your personal symptoms of excess stress.</li>
+		<li>Create a healthy environment for yourself, especially at times of high stress.</li>
+		<li>Keep organized.</li>
+		<li>Inform others of high stress triggers and accept help during high stress times.</li>
+	</ul>
+	<br />
+
+	<h3>Steps to a Healthier You:</h3>
+	<ul>
+		<li>Eating nutritiously</li>
+		<li>Being physically active</li>
+		<li>Maintaining a healthy weight</li>
+		<li>Reducing stress</li>
+	</ul>
+
+	<p style="font-size:13px; font-style:italic;">
+	Diet, Physical Activity and Stress Management affect our health on a daily basis and paint the picture of our future health!
+	</p>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/5/8" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

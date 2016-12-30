@@ -1,0 +1,64 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Using Stress Props<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<div class="w-75p left">
+
+	<p>
+	Stress props are wonderful for relieving tension and pent up frustration. Many people will find that when they are going through a period of stress they feel the need to do something with their hands. For example some people play with the lose change in their pockets while others make patterns and shapes with their fingers or tap them rhythmically on the tabletop.
+	</p>
+	<p>
+	Stress balls and other stress props are an inexpensive alternative to the incessant hand movements that some people find annoying. They can be squeezed over and over again until you feel your nerves calming down. Stress balls are available in a range of sizes and hardnesses so that there will be a set to suit everybody.
+	</p>
+	<p>
+	Other items such as play doh, silly putty or a small smooth rock can also be great to reduce stress.
+	</p>
+	<p>
+	The squeezing action has a number of effects on the body including improvement of blood circulation, the relief of muscle tension by relaxing muscles and joints and the promotion of sleep.
+	</p>
+	<ul>
+		<li>Rubber stress balls are virtually solid and offer a lot of resistance. Even though they can&amp;acute;t be squeezed a great deal they are great for tension relief in all of the arm muscles.</li>
+		<li>Bean bag stress balls are also quite hard and are normally made of leather. They are stitched together to resemble a baseball and unfortunately the stitching can burst if they are over squeezed for long periods of time. Liquid-filled stress balls are good for those who like to really feel the squeeze! They are not as resistant as the other two types and so are used more by women.</li>
+		<li>Another type of stress ball is the Chinese stress ball. These normally come as a pair and are highly decorated with beautiful Chinese symbols. They are made of metal and each has a chime inside that makes a note when the ball is moved. These balls are not squeezed but are rolled around the palm of the hand with a rhythmic motion. The aim is to rotate them so that they play a calming two-tone melody. They are quite difficult to use when you first begin but with practice they become very relaxing. The concentration required to keep the balls moving helps to distract the mind from the stresses of the day.</li>
+	</ul>
+	<p>
+	The benefits of using stress balls are many. The stimulation of the ball is what helps to reduce the stress. The health benefits include:
+	</p>
+	<ul>
+		<li>Improved memory</li>
+		<li>Stimulates blood circulation</li>
+		<li>Relaxes muscles and joints</li>
+		<li>Relieves joint stiffness and muscle soreness</li>
+		<li>Relieves stress</li>
+		<li>Promotes sleep</li>
+	</ul>
+	</div>
+	
+	<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="loseit-controls">
+		<a href="/ModuleReduceIT/Week/5/5" class="right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce IT Homepage</a>
+	</div>
+	
+</div>
+</tpt:body>

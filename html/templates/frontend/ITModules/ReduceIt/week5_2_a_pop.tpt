@@ -1,0 +1,19 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+		<p>
+		Listed below are a few examples of unhealthy habits that can affect our bodies:
+		</p>
+		<ul>
+			<li><strong>Blood Sugar Imbalances:</strong> When we don&amp;acute;t eat enough food, or don&amp;acute;t eat healthy enough food (too little protein and healthy carbohydrates, too much sugar, etc.) we can experience blood sugar fluctuations. These fluctuations can lead to mood swings, fatigue, poor concentration and other negative consequences in the short term, and greater health problems like hyperglycemia in the long run.</li>
+			<br />
+			<li><strong>Caffeine Side Effects:</strong> Too much caffeine can lead to poor concentration and decrease the effectiveness, sleep disturbances, and increased levels of cortisol in the blood, as well as other negative effects.</li>
+			<br />
+			<li><strong>Poor Health Outcomes:</strong> Poor nutrition can also lead to lowered immunity so you&amp;acute;re more susceptible to illnesses, both minor and major. As you can imagine, this can lead to other problems, including increased stress levels.</li>
+		</ul>
+	</body>
+	</html>
+</tpt:body>

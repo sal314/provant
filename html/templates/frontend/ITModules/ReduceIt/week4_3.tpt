@@ -1,0 +1,84 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">How Work Affects Your Personal Life<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	<form method="post" action="/ModuleReduceIT/Week/4/3">	
+	<div class="w-75p left">
+
+	<p>
+	There was a time when employees showed up for work Monday through Friday and worked eight- to nine-hour days. The boundaries between work and home were fairly clear then. But the world has changed and, unfortunately, the boundaries have blurred for many workers. Here&amp;acute;s why:
+	</p>
+
+		<p><span class="miniHead">Global Economy</span> As more skilled workers enter the global labor market and companies outsource or move more jobs to reduce labor costs, people feel pressured to work longer and produce more just to protect their jobs.</p>
+
+		<p><span class="miniHead">International Business</span> Work continues around the world 24 hours a day for some people. If you work in an international organization, you might be on call around the clock for troubleshooting or consulting.</p>
+
+		<p><span class="miniHead">Advanced Communication Technology</span> Many people now have the ability to work anywhere - from their home, from their car and even on vacation. And some managers expect this.</p>
+
+		<p><span class="miniHead">Longer Hours</span> Employers commonly ask employees to work longer hours than they&amp;acute;re scheduled. Often, overtime is mandatory. If you hope to move up the career ladder, you may find yourself regularly working more than 40 hours a week to achieve and exceed expectations.</p>
+
+		<p><span class="miniHead">Changes in Family Roles</span> Today&amp;acute;s married worker is typically part of a dual-career couple, which makes it difficult to find time to meet commitments to family, friends and community.</p>
+
+	<br />
+	<p>
+	If you&amp;acute;re spending most of your time at work, your home life will likely pay the price. Consider the pros and cons of working extra hours on your work-life balance:
+	</p>
+
+		<p><span class="miniHead">Fatigue</span> Your ability to think and your eye-hand coordination decrease when you&amp;acute;re tired. This means you&amp;acute;re less productive and may make more mistakes. These mistakes can lead to injury or rework and negatively impact your professional reputation.</p>
+
+		<p><span class="miniHead">Family</span> You may miss out on important events, such as your child&amp;acute;s first bike ride, your father&amp;acute;s 60th birthday or your high-school reunion. Missing out on important milestones may harm relationships with your loved ones.</p>
+
+		<p><span class="miniHead">Friends</span> Trusted friends are a key part of your support system. But if you&amp;acute;re spending time at the office instead of with them, you&amp;acute;ll find it difficult to nurture those friendships.</p>
+
+		<p><span class="miniHead">Expectations</span> If you regularly work extra hours, you may be given more responsibility. This could create a never-ending and increasing cycle, causing more concerns and challenges.</p>
+
+	<p>
+	Sometimes working overtime is important. If you work for a company that requires mandatory overtime, you won&amp;acute;t be able to avoid it, but you can learn to manage it. Most importantly, say no when you&amp;acute;re too tired, when it&amp;acute;s affecting your health or when you have crucial family obligations. The key to decreasing your stress is finding a comfortable balance between work and home.
+	</p>
+	<br />
+	<a href="javascript:showWin('/ModuleReduceIT/info/week4_3_a', '680px', '400px')">Top 10 Most / Least Stressful Jobs</a><br />
+	<br />
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List ways to better balance your work and home life:
+		</p>
+		<ol>
+			<li><input type="text" name="C1" size="75" value="${POST[C1]}" /></li><br />
+			<li><input type="text" name="C2" size="75" value="${POST[C2]}" /></li><br />
+			<li><input type="text" name="C3" size="75" value="${POST[C3]}" /></li><br />
+		</ol>
+		<br />
+
+	</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

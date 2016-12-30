@@ -1,0 +1,29 @@
+<tpt:body>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+	</head>
+	<body>
+	<div class="popup">
+	<div class="inner-content">
+		<h3>A Simple Breathing Meditation</h3>
+		<p>
+		The first stage of meditation is to stop distractions and make your mind clearer and more lucid. This can be accomplished by practicing a simple breathing meditation. Choose a quiet place to meditate and sit in a comfortable position. You can sit in the traditional cross-legged posture or in any other position that is comfortable. If desired, sit in a chair. The most important thing is to keep your back straight to prevent your mind from becoming sluggish or sleepy.
+		</p>
+		<ul>
+			<li>Sit with your eyes partially closed and turn your attention to your breathing.</li>
+			<li>Breathe naturally, preferably through the nostrils, without attempting to control your breath, and try to become aware of the sensation of the breath as it enters and leaves the nostrils.</li>
+			<li>This sensation is our object of meditation. We should try to concentrate on it to the exclusion of everything else.</li>
+			<li>There may be a temptation to follow the different thoughts as they arise, but try to resist this and remain focused single-pointedly on the sensation of the breath.</li>
+			<li>If you discover that your mind has wandered and is following your thoughts, try to return it to the breath.</li>
+			<li>Repeat this as many times as necessary until the mind settles on the breath.</li>
+		</ul>
+		<br />
+		<p style="font-size:13px; font-style:italic;">
+		The first stage of meditation is to stop distractions and make our mind clearer and more lucid.
+		</p>
+		</div>
+		</div>
+	</body>
+	</html>
+</tpt:body>

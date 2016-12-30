@@ -1,0 +1,59 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress Tolerance<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+	
+	<form method="post" action="/ModuleReduceIT/Week/3/2">
+	
+	<div class="w-75p left">
+	
+	<h3>Things That Influence Your Stress Tolerance Level</h3>
+
+		<p><span class="question miniHead">Your support network</span><br /> A strong network of supportive friends and family members is an enormous buffer against life&amp;acute;s stressors. On the flip side, the more lonely and isolated you are, the greater your vulnerability to stress.</p>
+		<p><span class="question miniHead">Your sense of control</span><br />  If you have confidence in yourself and your ability to influence events and persevere through challenges, it&amp;acute;s easier to take stress in stride. People who are vulnerable to stress tend to feel like things are out of their control.</p>
+		<p><span class="question miniHead">Your attitude and outlook</span><br />  Stress-hardy people have an optimistic attitude. They tend to embrace challenges, have a strong sense of humor, accept that change is a part of life, and believe in a higher power or purpose.</p>
+		<p><span class="question miniHead">Your ability to deal with your emotions</span><br />  You&amp;acute;re extremely vulnerable to stress if you don&amp;acute;t know how to calm and soothe yourself when you&amp;acute;re feeling sad, angry, or afraid. The ability to bring your emotions into balance helps you bounce back from adversity.</p>
+		<p><span class="question miniHead">Your knowledge and preparation</span><br />  The more you know about a stressful situation, including how long it will last and what to expect, the easier it is to cope. For example, if you go into surgery with a realistic picture of what to expect post-op, a painful recovery will be less traumatic than if you were expecting to bounce back immediately.</p>
+
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List any symptoms of stress that you have experienced:
+		</p>
+		<ol>
+			<li><input type="text" name="B1" size="75" value="${POST[B1]}" /></li><br />
+			<li><input type="text" name="B2" size="75" value="${POST[B2]}" /></li><br />
+			<li><input type="text" name="B3" size="75" value="${POST[B3]}" /></li><br />
+		</ol>
+		<br />
+		</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>

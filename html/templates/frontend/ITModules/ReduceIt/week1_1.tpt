@@ -1,0 +1,88 @@
+<tpt:body>
+<script type="text/javascript">
+	$(function() {
+	$('.progressbar').progress({currentStep:${current_page}, totalSteps:${total_pages}});
+	});
+</script>
+
+<div class="inner-content loseit">
+	<div id="section-header">
+		<h1 class="myfocus-logo">Stress<br /><small>Reduce IT</small></h1>
+	</div>
+	<div class="w-25p right">
+		<img src="/assets/media/images/loseit/temp_img.jpg" alt="Temp Image Place Holder" />
+	</div>
+
+	<form method="post" action="/ModuleReduceIT/Week/1/1">	
+	<div class="w-75p left">
+
+	<h3>Definition of Stress</h3>
+	<p>
+	If you were to ask a dozen people to define stress, or explain what causes stress for them, or how stress affects them, you would likely get 12 different answers to each of these requests. The reason is that there is no definition of stress that everyone agrees on, what is stressful for one person may be pleasurable or have little effect on others and we all react to stress differently. 
+	</p>
+	<p>
+	Stress is defined as any physical, chemical, or emotional factor that causes physical or mental tension and that may be a factor in disease causation.
+	</p>
+	<p>
+	<strong>Acute stress</strong> is experienced in response to an immediate perceived threat, physical, emotional or psychological. The threat can be real or imagined; it&amp;acute;s the perception of threat that triggers the response. During an acute stress response, the autonomic nervous system is activated and the body experiences increased levels of cortisol, adrenalin and other hormones that produce an increased heart rate, quickened breathing rate, and higher blood pressure. Blood is pushed from the extremities to the big muscles, preparing the body to fight or run away. This is also known as the fight-or-flight response.
+	</p>
+	<ul>
+		<li>The body attempts to restore balance when threatened</li>
+		<li>Autonomic, neuro-endocrine and immune systems all become aroused in acute stress</li>
+		<li>The interactive systems compensate (high blood pressure, heart rate, glucose and insulin) in response to varying challenges and threats.</li>
+		<li>This is healthy and adaptive if it occurs sporadically and occasionally</li>
+	</ul>
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List Acute Stress that you may have experienced:
+		</p>
+		<ol>
+			<li><input type="text" name="A1" size="75" value="${POST[A1]}" /></li><br />
+			<li><input type="text" name="A2" size="75" value="${POST[A2]}" /></li><br />
+			<li><input type="text" name="A3" size="75" value="${POST[A3]}" /></li><br />
+		</ol>
+
+	</div>
+	<br />
+	<br />		
+		<p>
+		<strong>Chronic Stress</strong> is a state of ongoing physiological arousal. This occurs when the body experiences so many stressors that the autonomic nervous system rarely has a chance to activate the relaxation response. (We were built to handle acute stress, not chronic stress.) This type of chronic stress response occurs all too frequently from our modern lifestyle, when everything from high-pressured jobs to loneliness to busy traffic can keep the body in a state of perceived threat and chronic stress. In this case, our fight-or-flight response, which was designed to help us fight a few life-threatening situations spaced out over a long period (like being attacked by a bear every so often), can wear down our bodies and cause us to become ill, either physically or emotionally. In fact, it&amp;acute;s estimated that up to 90% of doctor&amp;acute;s visits are for conditions in which stress at least plays a role! That&amp;acute;s why it&amp;acute;s so important to learn stress management techniques and make healthy lifestyle changes to safeguard yourself from the negative impact of chronic stress. 
+		</p>
+		<ul>
+			<li>Chronic high levels of stress responses damage the body, causing progressive and debilitating physical changes that can lead to chronic diseases.</li>
+			<li>Chronic stress negatively effects brain functioning.</li>
+			<li>Chronic stress exposes the body to increase levels of hormones.</li>
+			<li>Most stress in our society is Psychological stress caused by thinking about threats, not actual physical threats themselves.</li>
+		</ul>
+
+	<div class="activity border">
+		<h3>Activity</h3>
+		<p>
+		List Chronic Stress that you may have experienced:
+		</p>
+		<ol>
+			<li><input type="text" name="A4" size="75" value="${POST[A4]}" /></li><br />
+			<li><input type="text" name="A5" size="75" value="${POST[A5]}" /></li><br />
+			<li><input type="text" name="A6" size="75" value="${POST[A6]}" /></li><br />
+		</ol>
+		</div>
+	</div>
+		<div class="clear"> </div>
+		
+	<div class="progressbar">
+		<div class="percent">
+			<div id="progresstext">
+				<span> </span>
+			</div>
+		</div>
+	</div>
+		
+	<div id="loseit-controls">
+		<a href="#" class="nextstep right next">Next</a>
+		<a href="/ModuleReduceIT/Index" class="left loseit-home">Reduce II Homepage</a>
+	</div>
+	
+	</form>
+	</div>
+</tpt:body>
