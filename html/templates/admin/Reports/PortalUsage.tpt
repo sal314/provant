@@ -1,0 +1,14 @@
+<tpt:body>
+	<br /><br />
+	<div class="inner-content">
+	<h1>Portal Usage for ${company}</h1>
+	<span>Total number of users: ${totalUsers}</span><br /><br />
+	<span>Number of users that have logged in this month: ${numLogins}</span><br /><br />
+	<span>Active users: ${activeUsers}</span><br />
+	<span>Percentage active: ${percentActive} %</span><br /><br />
+	<span>Users Completed iFOCUS: ${ifComplete}</span><br />
+	<span>Percentage of active users that have completed the iFOCUS: ${ifPercent} %</span><br /><br />
+	<span>myFocus programs currently in progress: ${myFocusActive}</span><br />
+	<span>myFocus programs completed: ${myFocusComplete}</span><br />
+	</div>
+</tpt:body>

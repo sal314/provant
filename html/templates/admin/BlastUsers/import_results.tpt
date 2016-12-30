@@ -1,0 +1,18 @@
+<tpt:body>
+		<br/>
+		<tpt:if id="success" test="EQ" value="0">
+		  The import has failed due to the following reason
+		  <p class="error">${error}</p>
+		</tpt:if>
+		<tpt:else>
+		  ${success} records were successully imported.<br/>
+		  <tpt:if id="error" test="NOTEMPTY">
+		     The following records could not be imported.<br/>
+		     ${error}
+		  </tpt:if>
+		</tpt:else>
+		
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Import" method="post" enctype="multipart/form-data">
+		</form>		
+   	
+</tpt:body>

@@ -1,0 +1,17 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Delete" method="post" class="dc_${pagename}">			
+        	
+        	 <h1><img src="/common/images/admin/admin_warning.png"/>Do you wish to delete this record?</h1>
+        		  
+        	<div>Record # ${user[id]}         		        			        			
+        	<br/>Name:  ${user[first_name]} ${user[last_name]}
+        	<br/>Email: ${user[email]}
+        	
+  			</div>
+  			<button onclick="document.forms['${pagename}'].submit();"><img src="/common/images/admin/admin_ok.png"/>Yes</button>
+   			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>
+   			<input type="hidden" name ="${tablename}[id]" value="${user[id]}" />
+   		</form>
+   	
+</tpt:body>

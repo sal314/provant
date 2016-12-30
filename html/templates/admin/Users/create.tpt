@@ -1,0 +1,184 @@
+<tpt:body>
+	
+		<a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAssociated()" class="create_${pagename}">
+  			<table border="1">
+    			<tbody>     
+        			<tpt:foreach id="fields" as="field">
+        			  <tr>
+        			   <tpt:if id="field.tinymce" test="EQ" value="1">
+          					<td colspan='2'>${field.label}</td>
+          					<![CDATA[
+        					</tr>
+        					<tr>
+        					]]>
+        					<td colspan='2'>${field.html}</td>
+        			   	</tpt:if>
+        			   	<tpt:else>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   </tpt:else>
+        			 </tr>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+  			
+			<tpt:if id="roles" test="NOTEMPTY">
+  				<h2>Roles</h2>
+  				<div style="float:left">
+  					<select id="unassociated1" size="10">
+  						<tpt:foreach id="roles_unassoc" as="role">  				
+  							<option value="${role[id]}">${role[name]}</option>
+  						</tpt:foreach>
+  					</select>
+  				</div>
+  				<div style="float:left">
+					<a href="javascript:ZMEDIA.FORM.associate('unassociated1','associated1')"><img border="0" src="/common/images/admin/admin_next.png" title="Add Selected" /></a>
+					<br />
+					<a href="javascript:ZMEDIA.FORM.associate('associated1','unassociated1')"><img border="0" src="/common/images/admin/admin_previous.png" title="Remove Selected" /></a>					          									
+				</div>
+				<div style="float:left">
+					<select id="associated1" name="user_roles[]" size="10">
+  					</select>
+  				</div>
+  				<br style="clear:left"/>
+  			</tpt:if>
+
+		<tpt:if id="hide_user_action" test="DNE">  			
+  			<h2>User Site Actions</h2>			
+			<div style="float:left">
+		
+  				<select id="unassociated2" size="10">
+  					<tpt:foreach id="user_action_unassoc" as="role">  				
+  						<option value="${role[id]}">${role[name]}</option>
+  					</tpt:foreach>
+  				</select>
+  			</div>
+  			<div style="float:left">
+				<a href="javascript:ZMEDIA.FORM.associate('unassociated2','associated2')"><img border="0" src="/common/images/admin/admin_next.png" title="Add Selected" /></a>
+					<br />
+				<a href="javascript:ZMEDIA.FORM.associate('associated2','unassociated2')"><img border="0" src="/common/images/admin/admin_previous.png" title="Remove Selected" /></a>					          									
+			</div>
+			<div style="float:left">
+				<select id="associated2" name="user_permissions[]" size="10">
+  				</select>
+  			</div>  			
+  			<br style="clear:left"/>
+		</tpt:if>
+  			
+  		<tpt:if id="hide_admin_action" test="DNE">
+			<h2>Admin Actions</h2>
+  			<div style="float:left">
+  				<select id="admin_roles" size="10">
+  					<tpt:foreach id="admin_action_unassoc" as="role">  				
+  						<option value="${role[id]}">${role[name]}</option>
+  					</tpt:foreach>
+  				</select>
+  			</div>
+  			<div style="float:left">
+				<a href="javascript:addRole()"><img border="0" src="/common/images/admin/admin_next.png" title="Add Selected" /></a>
+			</div>
+			
+			<div  style="float:left">
+				<table id="admin_roles_to_add">
+					<tr><th><a href="javascript:removeRole()">Remove</a></th><th>Role</th><th>READ</th><th>INSERT</th><th>UPDATE</th><th>DELETE</th></tr>
+  					<tpt:foreach id="admin_action_assoc" as="role">  				
+  						<tr>
+  						   <td><input type="checkbox" name="remove" /></td>
+  						   <td>
+  						   <a href="#" onclick="window.open('/admin/Users/Info/${role[id]}','info','width=300,height=200')">${role[name]}</a>
+  						   </td>
+  						   <td>
+  						   		<tpt:setif id="role[permission]" test="HASVALUE" value="READ" var="checked" iftrue="checked='checked'" iffalse=""/>
+  						   		<![CDATA[<input type="checkbox" name="admin_permission[${role[id]}][]" value="READ" ${checked} />]]>
+  						   	</td>
+  						   <td> <tpt:setif id="role[permission]" test="HASVALUE" value="UPDATE" var="checked" iftrue="checked='checked'" iffalse=""/>
+  						   		<![CDATA[<input type="checkbox" name="admin_permission[${role[id]}][]" value="UPDATE" ${checked} />]]>
+							</td>
+  						   <td>	<tpt:setif id="role[permission]" test="HASVALUE" value="INSERT" var="checked" iftrue="checked='checked'" iffalse=""/>
+  						   		<![CDATA[<input type="checkbox" name="admin_permission[${role[id]}][]" value="INSERT" ${checked} />]]>
+							</td>
+  						   <td>	<tpt:setif id="role[permission]" test="HASVALUE" value="DELETE" var="checked" iftrue="checked='checked'" iffalse=""/>
+  						   		<![CDATA[<input type="checkbox" name="admin_permission[${role[id]}][]" value="DELETE" ${checked} />]]>  						   
+  						   </td>
+  						 </tr>
+  					</tpt:foreach>
+
+				</table>
+			</div>
+			
+  			<br style="clear:left"/>
+  		 </tpt:if> 			
+  			
+			<input type="submit" value="Save Changes" />
+			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+<script type="text/javascript">
+   		//<![CDATA[
+   		    function removeRole(){
+   		       if(!confirm("Are you sure you wish to remove all the selected roles")){
+   		         return false;
+   		       }
+   		       
+   		       var sel=document.getElementById("admin_roles");
+   		       var ele=document.getElementsByName("remove");
+	           
+
+   		       for(var x=0;x<ele.length;x++){
+
+   		         if(ele[x].checked){
+   		         	sel.options[sel.length]=new Option(ele[x].getAttribute("rolename"),ele[x].value);
+   		         	
+   		            ele[x].parentNode.parentNode.parentNode.removeChild(ele[x].parentNode.parentNode);
+   		         }
+   		       }
+   		    }
+   		    function addRole(){
+   		    
+   		        var sel=document.getElementById("admin_roles");   		        
+   		        var opt=sel.options[sel.options.selectedIndex];
+   		    	var table=document.getElementById("admin_roles_to_add");
+				var lastRow = table.rows.length;
+	    		var row = table.insertRow(lastRow);
+			    
+	    		var cell_0 = row.insertCell(0);
+   		    		var remove=document.createElement("input");
+   		    		remove.type="checkbox";
+   		    		remove.value=opt.value;
+   		    		remove.setAttribute("rolename",opt.text); 
+   		    		remove.setAttribute("name","remove"); 
+   		    		cell_0.appendChild(remove);  		    	
+	    		
+	    		var cell_1 = row.insertCell(1);
+					cell_1.appendChild(document.createTextNode(opt.text));
+					
+   		    	var cell_2 = row.insertCell(2);
+   		    		var read=document.createElement("input");
+   		    		read.type="checkbox";
+   		    		read.value="READ";
+   		    		read.setAttribute("name","admin_permission["+opt.value+"][]"); 
+   		    		cell_2.appendChild(read);  		    	
+   		    	var cell_3 = row.insertCell(3);
+					var insert=document.createElement("input");
+   		    		insert.type="checkbox";
+   		    		insert.value="INSERT";
+   		    		insert.setAttribute("name","admin_permission["+opt.value+"][]"); 
+   		    		cell_3.appendChild(insert);  		    	   		    	
+   		    	var cell_4 = row.insertCell(4);
+					var update=document.createElement("input");
+   		    		update.type="checkbox";
+   		    		update.value="UPDATE";
+   		    		update.setAttribute("name","admin_permission["+opt.value+"][]");
+   		    		cell_4.appendChild(update);  		    	   		    	    		    	
+   		    	var cell_5 = row.insertCell(5);
+   		    		var del=document.createElement("input");
+   		    		del.type="checkbox";
+   		    		del.value="UPDATE";
+   		    		del.setAttribute("name","admin_permission["+opt.value+"][]");    		    	
+					cell_5.appendChild(del);  		    	   		    	
+   		    	sel.options[sel.options.selectedIndex]=null;
+   		    }
+   		//]]>
+   		</script>   	
+   	
+</tpt:body>

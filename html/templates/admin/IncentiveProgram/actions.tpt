@@ -1,0 +1,145 @@
+<tpt:body>
+<select id="activities">
+<tpt:foreach id="activities" as="act">
+<option value="${act[id]}">${act[description]}</option>
+</tpt:foreach> 
+</select>
+<input type="button" onclick="addActivity()" value="Add Reward"/> <input type="button" value="Delete Selected" onclick="DeleteSelected()"/>
+<br/>
+<table id="current_activities"><tbody>
+<tr>
+  <th></th>
+  <th>Task</th>
+  <th>Points</th>
+  <th>Frequency</th>
+  <th>Days Back</th>
+  <th>Minimum Value</th>
+</tr>
+<tpt:foreach id="point_activities" as="sel">
+	<tr>
+		<td><input type="checkbox" id="remove_${sel[incentive_activity_id]}"/></td>
+		<td>${sel[description]}</td>
+		<td><input type="text" name="p_incentive_triggers[${sel[incentive_activity_id]}][points]" size="4" value="${sel[points}" data-validate="required=true type=integer range=(0,9999]"/></td>
+		<td><select name="p_incentive_triggers[${sel[incentive_activity_id]}][frequency]">
+			<tpt:html type="select-options" data="${frequency}" selected="${sel[frequency]}"/>
+		</select></td>
+		<td><input type="text" name="p_incentive_triggers[${sel[incentive_activity_id]}][days_back]" value="${sel[days_back]}" size="4" data-validate="required=true type=integer range=(0,9999]"/></td>
+		<td>
+			<tpt:if id="sel[has_min_value]" test="EQ" value="0">
+				<input type="hidden" name="p_incentive_triggers[${sel[incentive_activity_id]}][minimum_value]" value="0"/> 0
+			</tpt:if><tpt:else>
+				<input type="text" name="p_incentive_triggers[${sel[incentive_activity_id]}][minimum_value]" size="4" value="${sel[minimum_value]}" data-validate="required=true type=integer range=(0,9999]"/>
+			</tpt:else>
+		</td>
+	</tr>
+</tpt:foreach>
+</tbody></table>
+<br/>
+
+<br/>
+<script type="text/javascript">
+var options={
+<tpt:foreach id="activities" as="act">
+	${act[id]}:{
+		decription:"<tpt:formatvar id="act[description]" op="ESCAPEJSSTRING"/>",
+		has_min_value:${act[has_min_value]}
+	},
+</tpt:foreach>
+	9999999:null
+}
+<![CDATA[
+function addActivity(){
+  var act=document.getElementById("current_activities");
+  var tbody=act.childNodes[0];
+  var childNodes=tbody.childNodes;
+  
+  var sel=document.getElementById("activities");  
+  var selected=sel.options[sel.selectedIndex].value;
+  
+  /*
+  if(childNodes.length>0){
+  	for(var x=0,l=childNodes.length;x<l;x++){
+  	  if(childNodes[x].tagName=="div" && childNodes[x].id.indexOf("_"+selected)&& options[selected]){
+ 			if(!options[selected].has_min_value){
+  	         	alert("This item has already been added to the list of activities.");
+  	         	return;
+  	        }
+  	   }
+	}
+  }
+  */
+
+  var row=document.createElement("tr");
+  	var col1=document.createElement("td");
+  	  	var check=document.createElement("input");
+  	  		check.type="checkbox";
+  	  		check.id="remove_"+selected;
+  	  		check.value="1";
+  	col1.appendChild(check);  
+  	
+  	var col2=document.createElement("td");
+  		col2.appendChild(document.createTextNode(options[selected].decription));
+  
+  	var pointsCol=document.createElement("td");  	
+  		data=document.createElement("input");    	
+  		data.name="p_incentive_triggers["+selected+"][points]";
+  		data.type="text";
+  		data.value=1;
+  		data.size=4;
+  		data.setAttribute("data-validate","required=true type=integer range=(0,9999]");
+  		data.value=options[selected].has_min_value;
+		pointsCol.appendChild(data);
+		
+	var frequencyCol=document.createElement("td");
+	var selectOp=
+	"<select name='p_incentive_triggers["+selected+"][frequency]'>"+
+		"<option value='daily'>Daily</option>"+
+		"<option value='Weekly'>Weekly</option>"+
+		"<option value='Monthly'>Monthly</option>"+
+		"<option value='onetime'>One time</option>"+
+	"</select>"
+		frequencyCol.innerHTML=selectOp;
+		
+  	var minValCol=document.createElement("td");  	
+  		data=document.createElement("input");
+  		data.name="p_incentive_triggers["+selected+"][minimum_value]";  		
+  		if(options[selected].has_min_value==1){
+  			data.type="text";  		  	
+  			data.value=1;
+  			data.size=4;
+  			data.setAttribute("data-validate","required=true type=number range=(0,9999]");
+  			minValCol.appendChild(data);  			  		
+  		}else{
+  			data.type="hidden";
+  			data.value=0;
+  			minValCol.appendChild(data);
+  			minValCol.appendChild(document.createTextNode("0"));
+  		}  	  
+  	
+  	var daysBackCol=document.createElement("td");  	
+  		data=document.createElement("input");    	
+  		data.name="p_incentive_triggers["+selected+"][days_back]";
+  		data.type="text";
+  		data.size=4;
+  		data.value="365";
+  		data.setAttribute("data-validate","required=true type=integer range=(0,9999]");
+		daysBackCol.appendChild(data);
+		
+  	row.appendChild(col1);
+  	row.appendChild(col2);
+  	row.appendChild(pointsCol);
+  	row.appendChild(frequencyCol);
+  	row.appendChild(daysBackCol);
+  	row.appendChild(minValCol);
+  tbody.appendChild(row);  
+}
+function DeleteSelected(){
+  var tags=document.getElementsByTagName("input");
+  for(var x=0,l=tags.length;x<l;x++){
+  		if(tags[x].type!="checkbox" || !tags[x].id || tags[x].id.indexOf("remove_")==-1 || !tags[x].checked) continue;
+  		tags[x].parentNode.parentNode.parentNode.removeChild(tags[x].parentNode.parentNode);
+  }
+}
+]]>
+</script>
+</tpt:body>

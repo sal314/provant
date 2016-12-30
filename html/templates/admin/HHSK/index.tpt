@@ -1,0 +1,11 @@
+<tpt:body>
+<br/>
+<div style="margin-left:400px; margin-top:-600px;">
+<a href="/admin/HomeHealthScreeningKit/download">Download Home Health Screening Kit Orders</a>
+
+<form method="post" enctype="multipart/form-data" action="/admin/HomeHealthScreeningKit/upload">
+	<input type="file" name="data"/>
+	<input type="submit" value="add results"/>
+</form>
+</div>
+</tpt:body>

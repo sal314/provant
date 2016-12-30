@@ -1,0 +1,37 @@
+<tpt:body>
+	
+		<script type="text/javascript" src="/common/js/utils/blast.js"></script>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" class="bs_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.tinymce" test="EQ" value="1">
+        				<tr>
+        					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>
+        			   </tpt:if>
+        			   <tpt:else>
+        			   	<tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   	</tr>
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+  			<fieldset>
+  				<legend>Send Test Email</legend>
+  				Email <input type="input" id="email"  /><br/>
+  				<input type="button" value="Send Test Email"  onclick="send_test_email()" /> 
+  			</fieldset>
+  			<fieldset>
+  				<legend>Send Blast</legend>
+				<input type="submit" value="Start Blast" />
+				<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+			</fieldset>
+   		</form>
+
+</tpt:body>

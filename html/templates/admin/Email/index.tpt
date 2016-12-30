@@ -1,0 +1,26 @@
+<tpt:body>
+	<br />
+<div style="margin-left:400px; margin-top:-600px;">
+	<h1>Send Messages</h1>
+	<br />
+	<form method="post" action="/admin/SendEmail/Index">
+		<tpt:if id="sent" test="EXISTS">
+		<h1>Message sent successfully</h1>
+		</tpt:if>
+		<label><strong>Company:</strong></label>
+		<select name="company_id">
+		<option value="0">All Companies</option>
+		<tpt:html type="select-options" data="${companies}" />
+		</select>
+		&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+		<label><strong>Filter By:</strong></label>
+		<select name="filter">
+		<tpt:html type="select-options" data="${filters}" />
+		</select>
+		<br />
+		<br />
+		<input type="submit" value="Compose Message" />
+		<br />
+	</form>
+	</div>
+</tpt:body>

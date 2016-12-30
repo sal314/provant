@@ -1,0 +1,74 @@
+<tpt:body>
+		<form name="Exercises" id="Exercises" action="/admin/Exercises/InsertRec" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)" class="insert_Exercises">
+  			<table border="1">
+    			<tbody>        	
+    			        <tr>
+        			   		<td>Category</td>
+        			   		<td><select class="p_workout_exercises_category_" name="p_workout_exercises[category]" id="p_workout_exercises[category]" onchange="setEquipment()"><option value='cardio' >cardio</option><option value='core' >core</option><option value='lower body' >lower body</option><option value='upper body' >upper body</option><option value='stretch' >stretch</option></select></td>
+        			   	</tr>
+        			   	<tr>
+        			   		<td>Equipment</td>
+        			   		<td><select class="p_workout_exercises_equipment_" name="p_workout_exercises[equipment]" id="p_workout_exercises[equipment]"><option value='none' >none</option><option value='body weight' >body weight</option><option value='dumbell' >dumbell</option></select></td>
+        			   	</tr>
+    					
+        			   	<tr>
+        			   		<td>Name</td>
+        			   		<td><input class="p_workout_exercises_name_" type="text" name="p_workout_exercises[name]" id="p_workout_exercises[name]" maxlength="50" size="50" data-validate="required=0" value=""/></td>
+        			   	</tr>
+        			   	<tr>
+        			   		<td>METs</td>
+        			   		<td><input class="p_workout_exercises_calories_per_unit_" type="text" name="p_workout_exercises[METs]" maxlength="11" size="11" data-validate="required=true type=number precision=4,2 range=(-1,99)" value=""/></td>
+        			   	</tr>
+        			   	
+        			   	<tr>
+          					<td colspan="2">Description</td>
+        				</tr>
+        				<tr>
+        					<td colspan="2"><textarea class="tinymce p_workout_exercises_description_" name="p_workout_exercises[description]" id="p_workout_exercises[description]" tinymce="true" data-validate="required=0"> </textarea></td>
+        				</tr>    
+    			</tbody>
+  			</table>
+  			
+			<input type="submit" value="Save Changes"/>
+			<input type="button" value="Cancel" onclick="document.location.href='/admin/Exercises/Index'"/>
+   		</form>
+
+   		<script type="text/javascript">
+   		//<![CDATA[
+   		    var selectEquipment=document.getElementById("p_workout_exercises[equipment]");   		    
+   		    var equipmentList=[];   		    
+   		    for(var x=0;x<selectEquipment.options.length;x++){
+   				equipmentList[equipmentList.length]=selectEquipment.options[x];
+   			}
+   				  
+   			function setEquipment(){
+   			  	var form=document.getElementById("Exercises");
+   				var inputField=form.elements["p_workout_exercises[METs]"];
+
+   			
+   				var selectCategory=form.elements["p_workout_exercises[category]"];
+   				
+   			    while(selectEquipment.length){
+   					selectEquipment.options[selectEquipment.length-1]=null;
+   				}	
+   				
+   				if(selectCategory.selectedIndex>=1 && (selectCategory.options[selectCategory.selectedIndex].value!="stretch")){
+   				  	for(var x=1;x<equipmentList.length;x++){
+   				  		selectEquipment.options[selectEquipment.options.length]=equipmentList[x];
+   				  	}   				  
+   				}else{//cario and stretch have no options
+   					selectEquipment.options[selectEquipment.options.length]=equipmentList[0];
+   				}
+   				
+   				var isCardio=(selectCategory["options"][selectCategory.selectedIndex].value=="cardio");
+   				if(!isCardio || (isCardio && !inputField.value)) inputField.value="0";
+   				
+   				validation=inputField.getAttribute("data-validate");   					
+   				var str= validation.replace(/required=[^\s]+/,"required="+isCardio.toString());   					   					
+   				inputField.setAttribute("data-validate",str);
+   				inputField.disabled=!isCardio;
+   			}
+   			setEquipment();   			   			
+   		//]]>
+   		</script>
+</tpt:body>

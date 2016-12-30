@@ -1,0 +1,20 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Delete" method="post" class="dc_${pagename}">
+  			<table border="1">
+    			<tbody>
+        			<tr><th>Do you wish to delete this record?</th></tr>
+        			<tr>
+        				<td>
+        					<input type="hidden" name ="${tablename}[id]" value="${fields[0][id]}" />
+        					${fields[0][first_name]} ${fields[0][last_name]}<br/>
+        					login: ${fields[0][login]}        					
+        				</td>
+        			</tr>        			
+    			</tbody>
+  			</table>
+  			<input type="submit" value="Yes" />
+   			<input type="button" value="Cancel" onclick="document.location.href='/admin/${pagename}/Index'"/>
+   		</form>
+   	
+</tpt:body>

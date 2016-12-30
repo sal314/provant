@@ -1,0 +1,58 @@
+<tpt:body>
+	
+		<script type="text/javascript" src="/common/js/utils/blast.js"></script>
+		<script type="text/javascript">
+		  <tpt:if id="FINISHED" test="ISNULL" value="">
+			setTimeout("document.location.reload(true)",5000);
+		  </tpt:if>			
+		</script>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" class="bc_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:if id="FINISHED" test="NOTNULL" value="">
+        			    <tr><td colspan='2'>There are not any blasts running.${STATUS}</td></tr>
+        			</tpt:if>
+        			<tpt:else>
+        			    <tr>
+        			       <td>EMAIL</td><td>${BLAST_TITLE}</td>
+        			    </tr>
+        				<tr>
+        					<td>STATUS</td>
+        					<td>
+        						<tpt:switch id="STATUS">
+        							<tpt:case value="1">COMPLETE</tpt:case>
+        							<tpt:case value="2">PENDING/RUNNING</tpt:case>
+        							<tpt:case value="3">CANCELED BY USER</tpt:case>
+        							<tpt:case value="4">ABORTED ON ERROR</tpt:case>
+        							<tpt:case value="5">PAUSED</tpt:case>
+        						</tpt:switch>
+        					</td>
+        				</tr>     
+        				   			   
+        				<tr>
+        					<td>PROGRESS</td><td>${SENT} of ${TOTAL}</td>
+        				</tr>
+        				
+        		    </tpt:else>
+    			</tbody>
+  			</table>  			
+  			<tpt:if id="FINISHED" test="ISNULL" value="">
+  			  If the progress bar fails to update when the page refershes, then the blast mailing  process has
+  			  either hung or aborted.  Please contact webmaster@shazamm.net for more information.
+  			  <fieldset>
+  				<legend>Blast Controls</legend>
+  				<tpt:switch id="STATUS">
+  					<tpt:case value="2"> 
+  						<input type="button" value="Pause" id="button" onclick="ctrl_blast()" /> 
+  					</tpt:case>
+  					<tpt:case value="5">  				
+  						<input type="button" value="Resume" id="button"  onclick="ctrl_blast()" /> 
+  					</tpt:case>
+  				</tpt:switch>
+  				<input type="button" value="Cancel"  onclick="cancel_blast()" /> 
+  				<input type="hidden" id="blast_id" value="${BLAST_ID}" />   				
+  			  </fieldset>
+			</tpt:if>
+   		</form>
+   	
+</tpt:body>

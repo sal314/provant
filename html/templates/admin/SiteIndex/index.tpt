@@ -1,0 +1,10 @@
+<tpt:body>
+
+	<form method="post" action="/admin/SiteIndex/Crawl">
+		<p>
+		Click the <q>Index Site</q> button to start the web indexer.
+		</p>
+  		<input type="submit" value="Index Site" name ="simple_spider"/>
+	</form>
+
+</tpt:body>

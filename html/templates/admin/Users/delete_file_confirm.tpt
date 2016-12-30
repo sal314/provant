@@ -1,0 +1,16 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/DeleteFile" method="post" class="dfc_${pagename}">
+  			<h1><img src="/common/images/admin/admin_warning.png"/>Do you wish to delete this file?</h1>
+        	<div>Profile Image for user : ${fields[0][first_name]} ${fields[0][last_name]}<br />
+        	 	 login id: ${fields[0][login]}
+        		<br />							
+        		Image Name: ${file_to_delete}
+  			</div>
+  			<button><img src="/common/images/admin/admin_ok.png"/>Yes</button>
+   			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+			<input type="hidden" name ="${tablename}[id]" value="${fields[0][id]}" />
+			<input type="hidden" name ="${tablename}[${field_to_delete}]" value="${file_to_delete}" />
+   		</form>
+   	
+</tpt:body>

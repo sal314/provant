@@ -1,0 +1,35 @@
+<tpt:body>
+		<tpt:if id="prevent_edit" test="DNE"><a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a></tpt:if>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)" class="edit_${pagename}">
+  			<table border="1">
+    			<tbody>        	
+    			
+        			<tpt:foreach id="fields" as="field">        				
+        			   <tpt:if id="field.htmlfield" test="EQ" value="richtext">
+          				<tr>
+          					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>        			   
+        			   </tpt:if>
+        			   <tpt:else>        			   
+	         			 <tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}
+       			   		   		<tpt:if id="field.deleteKey" test="NOTNULL">
+       			   		   		   <a href="/admin/${pagename}/DeleteFileConfirm/${field.deleteKey}">Delete File</a>
+       			   		   		</tpt:if>
+        			   		</td>
+        			   	 </tr>        			   
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+  			<tpt:if id="associations" test="EXISTS">  	  						
+  				<tpt:include id="admin/_default/add_associate.tpt" importvars="reference"/>
+  			</tpt:if>
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+</tpt:body>

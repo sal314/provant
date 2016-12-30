@@ -1,0 +1,77 @@
+<tpt:body>
+	<div style="margin-left:400px; margin-top:-600px;">
+	<tpt:include id="interface/admin_nav_2.tpt" importvars="reference" />
+    <script language="javascript" type="text/javascript" src="/assets/js/incentiveProgram.js"></script>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="index__${pagename}">
+  			<table border="1">
+    			<tbody>
+    			<tr>
+        			  <tpt:foreach id="table_struct" as="f">
+        			    <tpt:if id="f.htmlfield" test="NEQ" value="none">
+        			      <tpt:if id="f.sortable" test="EQ" value="true">
+        			    	<th><a href="/admin/${pagename}/Index/sort/${f.field_name}/${orderdir}">${f.label}</a></th>        			    		
+        			      </tpt:if><tpt:else>        			      	
+        			      	<th>${f.label}</th>        			      	
+        			      </tpt:else>
+        			    </tpt:if>
+        			  </tpt:foreach>
+        			
+        				<th>Admin</th>
+        			</tr>
+					 
+        			  <tpt:foreach id="fields" as="record">
+        			  	<tpt:setif id="record.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+							<tr class="${ROW_STYLE}">
+        			  	  	<tpt:foreach id="record" as="column">
+        			    		<td>${column.__value__}</td>
+        			    	</tpt:foreach>
+        					
+        					<td>
+        					    <tpt:if id="admin_ctls" test="EQ" value="0">
+        					    	<a href="/admin/${pagename}/Edit/${record[id]}"><img alt="Edit" title="View" border="0" src="/common/images/admin/admin_read.png" /></a>
+        					    </tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${record[id]}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${record[id]}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${record[id]}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${record[id]}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if>        						
+        					</td>
+        				</tr>
+        			</tpt:foreach>
+        			
+    			</tbody>
+  			</table> 
+   		</form>
+   		<br />
+
+   		<h4>Award Points</h4>
+   		<form name="Award_${pagename}" action="/admin/${pagename}/AwardCSV" method="post" enctype="multipart/form-data">
+   			<p>Give the name and location of a CSV file with Incentive points to be awarded</p><br /><br />
+   			<label for="AwardCSVfile">CSV filename:</label>
+   			<input type="file" name="AwardCSVfile" />
+   			<input type="submit" name="submit" value="Send file" />
+   			<br />
+   			<br />
+   		</form>
+
+		<h4>Redeem Points</h4>
+		<form name="Redeem_${pagename}" action="/admin/${pagename}/redeemPoints" method="post">
+			<p />
+			<label for="email">User's email:</label>
+			<input type="text" name="email" id="redeemEmail" size="35" /><br /><br />
+			<label for="points">Points Redeemed:</label>
+			<input type="text" name="points" id="redeemPoints" size="5" /><br />
+			<br />
+			<input type="submit" name="submit" value="Redeem Points" onclick="return checkRedeem()" />
+			<input type="button" name="cancel" value="Cancel" onclick="clearRedeem()" />
+			<br />
+		</form>
+	</div>
+</tpt:body>

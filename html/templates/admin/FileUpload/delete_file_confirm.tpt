@@ -1,0 +1,11 @@
+<tpt:body>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/DeleteFile" method="post">
+  			<h1><img src="/common/images/admin/admin_warning.png"/>Do you wish to delete this file?</h1>
+        	<div>
+        		file: ${file_to_delete}
+  			</div>
+  			<button onclick="document.forms['${pagename}'].submit()"><img src="/common/images/admin/admin_ok.png"/>Yes</button>
+   			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   			<input type="hidden" name ="file" value="${file_to_delete}" />
+   		</form>
+</tpt:body>

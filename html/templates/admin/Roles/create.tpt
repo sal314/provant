@@ -1,0 +1,104 @@
+<tpt:body>
+	
+		<a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" class="create_${pagename}">
+  			<table border="1">
+    			<tbody>     
+        			<tpt:foreach id="fields" as="field">
+        			  <tr>
+        			   <tpt:if id="field.tinymce" test="EQ" value="1">
+          					<td colspan='2'>${field.label}</td>
+          					<![CDATA[
+        					</tr>
+        					<tr>
+        					]]>
+        					<td colspan='2'>${field.html}</td>
+        			   	</tpt:elseif>
+        			   	<tpt:else>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   </tpt:else>
+        			 </tr>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+  			<h2>User Site  Permission</h2>
+  			<table>
+  			<tr><th>Name</th><th>Granted</th></tr>
+  			<tpt:setvar id="site" value="" />  			
+  			<tpt:foreach id="userpermisssions" as="userp">
+  			
+  				<tpt:if id="site" test="NE" value="${userp[site]}">
+  					<tr><td colspan="6" style="background:#00ccFF" >${userp[site]}</td></tr>
+  					<tpt:setvar id="site" value="${userp[site]}" />
+  				</tpt:if>
+  				
+  				<tr><td><a href="#" onclick="window.open('/admin/Users/Info/${userp[id]}','info','width=300,height=200')">${userp[name]}</a></td>
+  				    <tpt:setvar id="read" value="" />  				    
+  					<tpt:foreach id="setper" as="set">
+  						<tpt:if id="set[action]" test="EQ" value="${userp[id]}">
+  								<tpt:switch id="set[permission]">
+  									<tpt:case value="READ">
+  										<tpt:setvar id="read" value="checked=true" />
+  									</tpt:case>
+  								</tpt:switch>
+  						</tpt:if>
+  					</tpt:foreach>
+  					<td><![CDATA[<input type="checkbox" name="permissions[${userp[id]}][]" value="READ" ${read} />]]></td>
+  				</tr>
+  			  </tpt:foreach>
+  			</table>
+  			
+  			<h2>Admin Permission</h2>
+  			<table>
+  			<tr><th>Name</th><th>Read</th><th>Insert</th><th>Update</th><th>Delete</th><th>Execute</th></tr>
+  			<tpt:setvar id="site" value="" />
+  			<tpt:if id="su" test="EQ" value="1">  			  
+  			  <tpt:foreach id="adminpermisssions" as="adminp">
+  				<tpt:if id="site" test="NE" value="${adminp[site]}">
+  					<tr><td colspan="6" style="background:#00ccFF" >${adminp[site]}</td></tr>
+  					<tpt:setvar id="site" value="${adminp[site]}" />
+  				</tpt:if>
+  				<tr><td><a href="#" onclick="window.open('/admin/Users/Info/${adminp[id]}','info','width=300,height=200')">${adminp[name]}</a></td>
+  				    <tpt:setvar id="read" value="" />
+  				    <tpt:setvar id="insert" value="" />
+  				    <tpt:setvar id="update" value="" />
+  				    <tpt:setvar id="delete" value="" />
+  				    <tpt:setvar id="execute" value="" />
+  				    
+  					<tpt:foreach id="setper" as="set">
+  						<tpt:if id="set[action]" test="EQ" value="${adminp[id]}">
+  								<tpt:switch id="set[permission]">
+  									<tpt:case value="READ">
+  										<tpt:setvar id="read" value="checked=true" />
+  									</tpt:case>
+ 									<tpt:case value="INSERT">
+ 										<tpt:setvar id="insert" value="checked=true" />
+  									</tpt:case>
+ 									<tpt:case value="UPDATE">
+ 										<tpt:setvar id="update" value="checked=true" />
+  									</tpt:case>
+ 									<tpt:case value="DELETE">
+ 										<tpt:setvar id="delete" value="checked=true" />
+  									</tpt:case>
+  									<tpt:case value="EXECUTE">
+ 										<tpt:setvar id="execute" value="checked=true" />
+  									</tpt:case>
+  								</tpt:switch>
+  						</tpt:if>
+  					</tpt:foreach>
+  					<td><![CDATA[<input type="checkbox" name="permissions[${adminp[id]}][]" value="READ" ${read} />]]></td>
+  					<td><![CDATA[<input type="checkbox" name="permissions[${adminp[id]}][]" value="INSERT" ${insert} />]]></td>
+  					<td><![CDATA[<input type="checkbox" name="permissions[${adminp[id]}][]" value="UPDATE" ${update} />]]></td>
+  					<td><![CDATA[<input type="checkbox" name="permissions[${adminp[id]}][]" value="DELETE" ${delete} />]]></td>  					
+  					<td><![CDATA[<input type="checkbox" name="permissions[${adminp[id]}][]" value="EXECUTE" ${execute} />]]></td>
+  				</tr>
+  			  </tpt:foreach>
+  			</tpt:if>
+  			</table>
+  			
+			<input type="submit" value="Save Changes" />
+			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+   	
+</tpt:body>

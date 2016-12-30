@@ -1,0 +1,37 @@
+<tpt:body>
+	
+		<tpt:include id="interface/admin_nav_2.tpt" importvars="reference" />
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="index_${pagename}">		
+  			<table border="1">
+    			<tbody>
+        			<tr>
+        				<th>Roll Name</th>
+        				<th>Site</th>
+        				<th>Admin</th>
+        			</tr>
+        			<tpt:foreach id="fields" as="field">
+        			    <tpt:setif id="field.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+        				<tr class="${ROW_STYLE}">        					
+        					<td>${field[name]}</td>
+        					<td>${field[site]}</td>
+        					<td>
+        						<tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${field[id]}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${field[id]}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${field[id]}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${associate_table}/${field[id]}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if>        						
+        					</td>
+        				</tr>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table> 
+   		</form>
+   	
+</tpt:body>

@@ -1,0 +1,91 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAssociated()" class="insert__${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.tinymce" test="EQ" value="1">
+        				<tr>
+        					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>
+        			   </tpt:if>
+        			   <tpt:else>
+        			   	<tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   	</tr>
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+
+  			<table border="1" align="left">
+    			<tbody> 
+    			<tr>
+    				<td>
+						<select id="unassociated1" multiple='multiple' size="20">
+							<tpt:foreach id="unassociated1" as="unassoc1">
+								<option value="${unassoc1.value}">${unassoc1.display}</option>
+							</tpt:foreach>
+						</select>
+					</td>
+					<td>
+				    	<input type="button" value="-->" onclick="ZMEDIA.FORM.associate('unassociated1','associated1')" />
+					    <br />					    
+                 		<input type="button" value="&lt;--" onclick="ZMEDIA.FORM.associate('associated1','unassociated1')" />                 		
+					</td>
+					<td>
+						<select id="associated1" name='${associated_tablename1}[${unassociated_tablename1}_id][]' multiple="multiple" size='20'>
+							<tpt:foreach id="associated1" as="assoc1">
+								<option value="${assoc1.value}">${assoc1.display}</option>
+							</tpt:foreach>
+						</select>						
+					</td>
+					<td>
+                 		<input type="button" value="up" onclick="list_change_order('${associated_tablename1}[${unassociated_tablename1}_id]',-1)"/>
+                 		<br/>
+                 		<input type="button" value="down" onclick="list_change_order('${associated_tablename1}[${unassociated_tablename1}_id]',1)"/>
+					</td>
+				</tr>
+    			</tbody>
+  			</table>
+  			
+			<table border="1">
+    			<tbody> 
+    			<tr>
+    				<td>
+						<select id="unassociated2" multiple='multiple' size="20">
+							<tpt:foreach id="unassociated2" as="unassoc2">
+								<option value="${unassoc2.value}">${unassoc2.display}</option>
+							</tpt:foreach>
+						</select>
+					</td>
+					<td>
+				    	<input type="button" value="-->" onclick="ZMEDIA.FORM.associate('unassociated2','associated2')" />
+					    <br />					    
+                 		<input type="button" value="&lt;--" onclick="ZMEDIA.FORM.associate('associated2','unassociated2')" />                 		
+					</td>
+					<td>
+						<select id="associated2" name='${associated_tablename2}[${unassociated_tablename2}_id][]' multiple="multiple" size='20'>
+							<tpt:foreach id="associated2" as="assoc2">
+								<option value="${assoc2.value}">${assoc2.display}</option>
+							</tpt:foreach>
+						</select>						
+					</td>
+					<td>
+                 		<input type="button" value="up" onclick="ZMEDIA.FORM.list_change_order('${associated_tablename2}[${unassociated_tablename2}_id]',-1)"/>
+                 		<br/>
+                 		<input type="button" value="down" onclick="ZMEDIA.FORM.list_change_order('${associated_tablename2}[${unassociated_tablename2}_id]',1)"/>
+					</td>
+				</tr>
+    			</tbody>
+  			</table>  			
+
+			<input type="submit" value="Save Changes" />
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+   	
+</tpt:body>

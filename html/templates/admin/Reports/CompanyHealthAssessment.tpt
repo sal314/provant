@@ -1,0 +1,97 @@
+<tpt:body>
+<br />
+<h1>Company Health Assessment Summary</h1>
+
+<tpt:foreach id="keys" as="key">
+	<tpt:switch id="key">
+		<tpt:case value="q4">
+	<h2>General Health</h2>
+		</tpt:case>
+		<tpt:case value="q5_0">
+	<strong>Please select the condition(s) that reflect your current state of health:</strong><br />
+		</tpt:case>
+		<tpt:case value="q10_1">
+			<tpt:if id="gina" test="EQ" value="1">
+	<br />
+	<h2>Family Health</h2>
+	  <strong>Please select any condition(s) that has affected a biological relative such as a brother, sister, child or parent.</strong><br />
+			</tpt:if>
+		</tpt:case>
+		<tpt:case value="q8">
+	<br />
+	<h2>Preventive Health</h2>
+		</tpt:case>
+		<tpt:case value="q15">
+	<strong>Female Questions:</strong><br />
+		</tpt:case>
+		<tpt:case value="q18">
+	<strong>Male Questions:</strong><br />
+		</tpt:case>
+		<tpt:case value="q21">
+	<br />
+	<h2>Nutrition</h2>
+		</tpt:case>
+		<tpt:case value="q23_1">
+	<strong>How many servings do you eat from the following food groups?</strong><br />
+		</tpt:case>
+		<tpt:case value="q24">
+	<br />
+	<h2>Physical Activity</h2>
+		</tpt:case>
+		<tpt:case value="q27">
+	<br />
+	<h2>Stress Management</h2>
+		</tpt:case>
+		<tpt:case value="q38_1">
+	<br />
+	<h2>Emotional Health</h2>
+	  <strong>Over the last 2 weeks, how often have you been bothered by any of the following problems?</strong><br />
+		</tpt:case>
+		<tpt:case value="q39">
+	<br />
+	<h2>Alcohol Use</h2>
+		</tpt:case>
+		<tpt:case value="q41">
+	<br />
+	<h2>Saftey</h2>
+		</tpt:case>
+		<tpt:case value="q44">
+	<br />
+	<h2>Tobacco Use</h2>
+		</tpt:case>
+		<tpt:case value="q48_1">
+	<br />
+	<h2>Readiness To Change</h2>
+	<strong>If you are planning on making changes in your behaviors and lifestyle to improve your health status please select the timeframe for anticipated change in the following categories:</strong><br />
+		</tpt:case>
+	</tpt:switch>
+
+	<tpt:setvar id="idx" value="${key.keys[__index__]}" />
+	<tpt:foreach id="questions" as="q">
+		<tpt:if id="q.__key__" test="EQ" value="${idx}">
+	  <strong>${q}</strong><br />
+		</tpt:if>
+	</tpt:foreach>
+
+	<tpt:foreach id="answers" as="ans">
+		<tpt:if id="ans.__key__" test="EQ" value="${idx}">
+			<tpt:setvar id="i" value="0" />
+			<tpt:foreach id="ans" as="a">
+				<tpt:foreach id="data" as="dt">
+					<tpt:if id="dt.__key__" test="EQ" value="${idx}">
+						<tpt:foreach id="dt" as="d">
+							<tpt:if id="d.__index__" test="EQ" value="${i}">
+	<span style="margin-left:10px">${a} - ${d}</span><br />
+							</tpt:if>
+						</tpt:foreach>
+					</tpt:if>
+				</tpt:foreach>
+				<tpt:modvar id="i" op="++" />
+			</tpt:foreach>
+		</tpt:if>
+	</tpt:foreach>
+</tpt:foreach>
+<br />
+<br />
+<br />
+</tpt:body>

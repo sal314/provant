@@ -1,0 +1,66 @@
+<tpt:body>
+		<tpt:if id="admin_ctls" test="AND" value="16">
+        	<a href="/admin/${pagename}/Insert"><img alt="Add Member" title="Add Member" border="0" src="/common/images/admin/admin_add.png" /></a>
+        </tpt:if>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Search" method="post" enctype="multipart/form-data" class="index_${pagename}">
+  			<table border="1">
+    			<tbody>        			    			
+    				<tr><td colspan='2'>${total} active users</td></tr>    				
+    				<tr><td>First Name</td><td><input type="text" name="first_name"/></td></tr>    				
+    				<tr><td>Last Name</td> <td><input type="text" name="last_name"/></td></tr>
+    				<tr><td>Email</td> <td><input type="text" name="email"/></td></tr>
+    				<tr><td>Group</td>
+    					<td><select name="groups">
+    				    		<option value="">--ALL--</option>
+    				    		<option value="-1">--Unassociated Users-- [${UNASSOCIATED}]</option>
+    							<tpt:foreach id="group" as="g">
+    							<option value="${g[id]}"><tpt:var id="g[name]" />[<tpt:var id="g[count]" />]</option>
+    							</tpt:foreach>
+    						</select></td></tr>
+    			</tbody>  
+    		</table>
+    		<a href="javascript:document.forms['${pagename}'].submit()"><img border="0" alt="Search" title="Search" src="/common/images/admin/admin_find.png" />Search</a>
+    	</form>
+    	
+    	<tpt:if id="group2" test="HASELEMENTS">
+    	  <div style="margin-top:10px">
+			<fieldset>
+				<legend>Import Users </legend>
+				<form action="/admin/${pagename}/Import" method="post" enctype="multipart/form-data">
+				   Group <select name="groups">
+    						<tpt:foreach id="group2" as="g">
+    							<option value="${g[id]}">${g[name]}</option>
+    						</tpt:foreach>
+    			    </select><br />
+					Upload CSV data file:<input type="file" name="list" />	<input type="submit" value="Import"/>	<br/>
+					Note: CSV Columns must be First Name, Last Name, Email address
+				</form>
+			</fieldset>
+		  </div>
+		   <div style="margin-top:10px">
+			<fieldset>
+				<legend>Export Users </legend>
+				<form action="/admin/${pagename}/Export" method="post" enctype="multipart/form-data">
+				Group <select name="groups">
+    				     <tpt:foreach id="group2" as="g">
+    						<option value="${g[id]}">${g[name]}</option>
+    				     </tpt:foreach>
+    			      </select> 
+    			      <input type="submit" value="Export"/>
+    			 </form>
+			</fieldset>		  
+		  </div> 
+		</tpt:if>
+    	
+		<tpt:comment>
+    	<div style="margin-top:10px">
+			<fieldset>
+				<legend>Remove invalid recipients</legend>
+				<form action="/admin/${pagename}/Purge" method="post" enctype="multipart/form-data">
+					Upload XML data file:<input type="file" name="list" />	<input type="submit" value="Purge"/>			
+				</form>
+			</fieldset>
+		</div> 
+		</tpt:comment>
+</tpt:body>

@@ -1,0 +1,17 @@
+<tpt:body>
+	
+	<tpt:include id="interface/pager2.tpt" importvars="reference" />	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="index__${pagename}">		
+  			<table border="1">
+    			<tbody>
+    			<tpt:foreach id="records" as="rec">
+    				<tr>
+    					<td>${rec[first_name]} ${rec[last_name]}</td>
+    					<td><a href="/admin/IncentiveProgram/UserPoints/${rec[upid]}">Add Points</a></td>
+    				</tr>
+    			</tpt:foreach>
+    			</tbody>
+  			</table> 
+   		</form>
+   	
+</tpt:body>

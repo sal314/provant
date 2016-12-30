@@ -1,0 +1,11 @@
+<tpt:body>
+	<form name="ShowLog" method="post" action="/admin/IncentiveProgram/Index">
+		<h3>CSV Incentive Points Load log</h3>
+		<p />
+		<tpt:foreach id="logfile" as="line">
+			${line}<br />
+		</tpt:foreach>
+		<br />
+		<input type="submit" name="submit" value="Return" />
+	</form>
+</tpt:body>

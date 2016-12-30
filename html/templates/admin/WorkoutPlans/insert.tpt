@@ -1,0 +1,245 @@
+<tpt:body>
+		<script type="text/javascript" src="/common/js/zmedia/z_dynamic_dropdown.js"></script>
+		<tpt:if id="prevent_edit" test="DNE"><a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a></tpt:if>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)"  class="insert_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.htmlfield" test="EQ" value="richtext">
+          				<tr>
+          					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>        			   
+        			   </tpt:if>
+        			   <tpt:else>
+        			   	<tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   	</tr>
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+  			
+  			<div style="float:left;width:500px">
+  				<a href="javascript:ZMEDIA.FORM.associate('addedExercises',null)">Remove Selected Exercise</a><br/>
+  				<a href="javascript:editSelected()">Alter Selected Exercise</a><br/>
+  				<select name="addedExercises[]" id="addedExercises" multiple="multiple" size="20" style="width:500px">
+  					<tpt:foreach id="exercises" as="ex">
+  						<option value="${ex[day]}|${ex[id]}|${ex[reps]}|${ex[sets]}">Day ${ex[day]}: ${ex[name]}</option>
+  					</tpt:foreach> 
+  				</select>
+  			</div>
+  			<div style="float:left">
+  				<table border="1">
+    				<tbody>        	
+    			  		<tr>
+        		   			<td>Category</td>
+        		   			<td><select class="p_workout_exercises_category_" id="category" onchange="setEquipment()"><option value='ANY' >Any</option><option value='cardio' >cardio</option><option value='core' >core</option><option value='lower body' >lower body</option><option value='upper body' >upper body</option><option value='stretch' >stretch</option></select></td>
+        		   		</tr>
+        		   		<tr>
+        		   			<td>Equipment</td>
+        		   			<td><select class="p_workout_exercises_equipment_" id="equipment"><option value='none' >none</option><option value='body weight' >body weight</option><option value='dumbell' >dumbell</option></select></td>
+        		   		</tr>
+  						<tr>
+	        		   		<td>Exercise</td>
+  							<td><input type="text" id="exercise" maxlength="100" autocomplete="off" value=""/></td>
+  						</tr>
+  					</tbody>
+  				</table>  			
+  				<br/>
+  				
+  				<div id="exfrm" style="display:none;">
+  			 		<select id="day">
+  			 			<option value="1">Day 1</option>
+  			 			<option value="2">Day 2</option>
+  			 			<option value="3">Day 3</option>
+  			 			<option value="4">Day 4</option>
+  			 			<option value="5">Day 5</option>
+  			 			<option value="6">Day 6</option>
+  			 			<option value="7">Day 7</option>
+  			 		</select>
+  			 	
+  			 		<div id="erata">
+	  			 		Reps: <input type="text" id="reps" maxlength="2" size="2" data-validate="required=true type=integer range=(0,100)" value=""/>
+  			 			Sets: <input type="text" id="sets" maxlength="2" size="2" data-validate="required=true type=integer range=(0,100)" value=""/> <br/>   			 			
+  			 		</div>
+  			 		<input type="button" value="Add Exercise" onclick="addExercise()"/>
+  			 	</div>
+  			 </div>
+  			 
+  			 <br style="clear:left"/>
+  			 
+  			 <tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+			 <input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />  			
+  		</form>  			   		
+   		
+   		<script type="text/javascript">
+   		<![CDATA[
+			var selectEquipment=document.getElementById("equipment");   		    
+   		    var equipmentList=[new Option("Any","ANY")];   		    
+   		    for(var x=0;x<selectEquipment.options.length;x++){
+   				equipmentList[equipmentList.length]=selectEquipment.options[x];
+   			}
+   				  
+   			function setEquipment(){
+   			  	var form=document.getElementById("Exercises");
+   				var selectCategory=document.getElementById("category");
+   				
+   			    while(selectEquipment.length){
+   					selectEquipment.options[selectEquipment.length-1]=null;
+   				}	
+   				
+   				var ct=selectCategory.options[selectCategory.selectedIndex].value   				
+   				if(!(ct=="stretch" || ct=='cardio')){
+   				
+   					selectEquipment.options[selectEquipment.options.length]=equipmentList[0];
+   					var start=(ct=="ANY")?1:2;
+   				  	for(var x=start;x<equipmentList.length;x++){
+   				  		selectEquipment.options[selectEquipment.options.length]=equipmentList[x];
+   				  	}
+   				  	selectEquipment.selectedIndex=0;   				  
+   				}else{//cario and stretch have no options   				
+   					selectEquipment.options[selectEquipment.options.length]=equipmentList[1];
+   				}   				   				
+   			}
+   			setEquipment();  
+   			   	
+   			var addExerciseData={
+   			   id:0,
+   			   category:'none',
+   			   equipment:'none',   			   
+   			   update:null
+   			}	
+   			function populateFrm(text,value,mode){
+  				if(mode==0 || !value){
+  					addExerciseData.update=null;
+  					document.getElementById("exfrm").style.display="none";
+  					return; //mode 1 click or enter to select 0 is arrow key (soft select)
+  					 		// or no value no item was selectable
+  				}    			 
+    			values=value.split("|");
+    			addExerciseData.update="add";    			
+    			addExerciseData.id=values[0];
+    			addExerciseData.name=text;
+    			addExerciseData.category=values[1];
+    			addExerciseData.equipment=values[2];
+    			addExerciseData.update="add";       			    			
+    			
+    			document.getElementById("erata").style.display=(addExerciseData.category!="cardio")?"block":"none";    			    			
+    			document.getElementById("reps").value="10";
+    			document.getElementById("sets").value="5";
+    			document.getElementById("exfrm").style.display="block";
+    		} 			
+    		
+  			function addExercise(){
+  				if(!addExerciseData.update){
+  				  	document.getElementById("exfrm").style.display="none";
+  				  	alert("Error no extercise is selected");
+  				  	return;
+  				}
+  				var sets=0;
+  				var reps=0;
+  				
+  				if(addExerciseData.category!="cardio"){
+  				  sets =document.getElementById("sets").value;
+  				  if(isNaN(sets) || sets<=0 || sets>=100 || parseInt(sets)!=sets){
+  				  	alert("Sets but have a value between 1 and 99");
+  				  	return;
+  				  }
+  				  reps =document.getElementById("reps").value;
+  				  if(reps<=0 || reps>=100 || parseInt(reps)!=reps){
+  				  	alert("Reps but have a value between 1 and 99");
+  				  	return;
+  				  }
+  				}
+  				var day=document.getElementById("day").selectedIndex+1;
+  				
+  				
+  				
+  				var value=day+"|"+addExerciseData.id+"|"+reps+"|"+sets;  				  				
+  				var opt=document.getElementById("addedExercises").options;
+  				
+  				//need to ensure we don't add the exercise 2 times on the same day
+  				var testValue=day+"|"+addExerciseData.id+"|";
+  				for(var x=0;x<opt.length;x++){  				
+  				  if(opt[x].value.substring(0,testValue.length)==testValue){
+  				  	if(addExerciseData.update=="add" || addExerciseData.update.selectedIndex!=x){
+  				  		alert("This exercise has already been added to Day "+day+", cannot add exercise again.");
+  				  		return;
+  				  	}
+  				  }
+  				}
+  				if(addExerciseData.update=="add"){//add option  					  				
+  					var option=new Option("Day "+day+" : "+addExerciseData.name,value);//+" Type: "+addExerciseData.category+" - "+addExerciseData.equipment,value);
+  					opt[opt.length]=option;
+  				}else{//update existing option
+  					opt[addExerciseData.update.selectedIndex].value=value;
+  					opt[addExerciseData.update.selectedIndex].text=opt[addExerciseData.update.selectedIndex].text.replace(/Day \d/,"Day "+day); 
+  				}
+  				
+  				var o=[];
+  				while(opt.length){
+  				    o[o.length]=opt[0];
+  				    opt[0]=null;
+  				}
+  				//sort by day subs sort by exercise name
+  				o.sort(function(a,b){  				
+  					var av=a.value.substring(0,a.value.charAt(0));
+  				    var bv=b.value.substring(0,b.value.charAt(0));
+  					if(av>bv) return true;
+  					if(av<bv) return false;
+  					return a.value.substring(a.value.indexOf("|",2))>b.value.substring(b.value.indexOf("|",2));	      				    
+			  				      				    
+  				});
+  				for(x=0;x<o.length;x++){
+  				    opt[opt.length]=o[x];
+  				}
+  				document.getElementById("exfrm").style.display="none";
+  				document.getElementById("exercise").value="";  	  				
+  			}
+  			
+  			function editSelected(){
+  				var ex=document.getElementById("addedExercises");
+  				var opt=ex.options[ex.selectedIndex];
+  				var values=opt.value.split("|");
+  				document.getElementById("reps").value=values[2];
+  				document.getElementById("sets").value=values[3];
+				document.getElementById("erata").style.display=(values[2]=="0")?"none":"block";
+				addExerciseData.category=(values[2]=="0")?"cardio":"other";
+				  				    			
+    			addExerciseData.id=values[1];    			       			    			
+    			addExerciseData.update={
+    				day:values[0],
+    				id:values[1],
+    				selectedIndex:ex.selectedIndex
+    			}
+    			
+  				
+  				document.getElementById("day").selectedIndex=values[0]-1;
+  				document.getElementById("exfrm").style.display="block";
+  			}
+  			
+addEvent(window,"load",function(){
+	ZMEDIA.DynamicDropDown.createDropDown(
+	document.getElementById("exercise"),
+	{
+  		dropdownClassName:"my_drop",
+  		dropdownOptionClassName:"my_drop_option",  
+  		url:"/admin/Exercises/FindExercise",
+  		align:"left",
+  		additionalValues:function(){
+  			var cat=document.getElementById("category")
+  			var equip=document.getElementById("equipment")
+  			return "&cat="+encodeURIComponent(cat.options[cat.selectedIndex].value)+
+  			"&equip="+encodeURIComponent(equip.options[equip.selectedIndex].value);
+   		},
+  		selectCallback:populateFrm
+  	});
+}
+);
+]]>
+</script>
+</tpt:body>

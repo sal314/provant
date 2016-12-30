@@ -1,0 +1,13 @@
+<tpt:body>
+<br/>
+<tpt:if id="errors" test="NOTEMPTY">
+${errors}<br/>
+</tpt:if>
+Reinstate User
+<form method="post" action="/admin/CompanyUsers/Reactivate" onsubmit="return ZMEDIA.FORM.validateForm()">
+	Email:	<input type="text" name="email" value="" data-validate="required=true pattern=email"/><br/>
+	<input type="submit" value="Save Changes"/>
+	<button onclick="document.location.href='/admin/CompanyUsers/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>
+</form>
+
+</tpt:body>

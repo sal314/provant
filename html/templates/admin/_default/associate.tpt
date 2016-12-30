@@ -1,0 +1,44 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" method="post" action="/admin/${pagename}/AddAssociation" onsubmit="ZMEDIA.FORM.selectAssociated()" class="assoc_${pagename}">
+		    <input type="hidden" name="${tablename}[${table_key}]" value="${table_value}"/>
+  			<table border="1">
+    			<tbody> 
+    			<tr>
+    			  <td colspan='4'>${display_asscoiated_title}</td>
+    			</tr>       			
+
+    			<tr>
+    				<td>
+						<select id="unassociated1" multiple='multiple' size="20">
+							<tpt:foreach id="unassociated1" as="unassoc1" >
+								<option value="${unassoc1[value]}">${unassoc1[display]}</option>
+							</tpt:foreach>
+						</select>
+					</td>
+					<td>
+						<a href="javascript:ZMEDIA.FORM.associate('unassociated1','associated1')"><img border="0" src="/common/images/admin/admin_next.png" title="Add Selected" /></a>
+						<br />
+						<a href="javascript:ZMEDIA.FORM.associate('associated1','unassociated1')"><img border="0" src="/common/images/admin/admin_previous.png" title="Remove Selected" /></a>					          									
+					</td>
+					<td>
+						<select id="associated1"  name='${associated_tablename1}[${associated_fieldname1}][]' multiple="multiple" size='20'>
+							<tpt:foreach id="associated1" as="assoc1">
+								<option value="${assoc1[value]}">${assoc1[display]}</option>
+							</tpt:foreach>
+						</select>						
+					</td>
+					<td>
+          				<a href="javascript:ZMEDIA.FORM.list_change_order('associated1',-1)"><img border="0" src="/common/images/admin/admin_up.png" title="Move Up One" /></a><br/><br/>
+          				<a href="javascript:ZMEDIA.FORM.list_change_order_swap('associated1',1)"><img border="0" type="image" src="/common/images/admin/admin_jump.png" title="Move Multiple" /></a><br/><br/>
+          				<a href="javascript:ZMEDIA.FORM.list_change_order('associated1',1)"><img border="0" src="/common/images/admin/admin_down.png" title="Move Down One" /></a>					          									
+					</td>
+				</tr>
+
+  			  </tbody>
+  			</table>
+			<input type="submit" value="Save Changes" />
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+   	
+</tpt:body>

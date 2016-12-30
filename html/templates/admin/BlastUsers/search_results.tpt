@@ -1,0 +1,72 @@
+<tpt:body>
+	
+			<a href="/admin/${pagename}/Index/"><img alt="Back to Index" title="Goto Index" border="0" src="/common/images/admin/admin_home.png" /></a>
+	<tpt:body>
+		<div class='form_action'>
+			Page ${pager[current_page]} of ${pager[last_page]}
+			<tpt:if id="pager[first_page]" test="EXISTS"><a href="/admin/${pagename}/Search/1"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+			<tpt:if id="pager[previous_page]" test="EXISTS"><a href="/admin/${pagename}/Search/${pager[previous_page]}"><img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" /></a></tpt:if>
+			
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/admin/${pagename}/Search/${page}${querystring}">${page}</a></tpt:if>
+			</tpt:foreach>
+			
+			<tpt:if id="pager[next_page]" test="EXISTS"><a href="/admin/${pagename}/Search/${pager[next_page]}"><img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" /></a></tpt:if>
+			<tpt:if id="pager[last_page]" test="EXISTS"><a href="/admin/${pagename}/Search/${pager[last_page]}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if>			
+		</div>
+</tpt:body>
+
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="sr_${pagename}">
+  			<table border="1">
+    			<tbody>
+        			<tr><th colspan='2'>Name</th><th>email</th><th>Admin</th></tr>
+        			
+        			<tpt:foreach id="fields" as="field">
+        			    <tpt:setif id="field.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+        				<tr class="${ROW_STYLE}">        			
+        					<td>
+        						${field[last_name]}</td><td>${field[first_name]}
+        					</td>
+        					<td>
+        						${field[email]}
+        					</td>
+        					<td>        						
+        					  <tpt:if id="field[id]" test="EXISTS">
+        					  <tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${field[id]}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${field[id]}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${field[id]}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${field[id]}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if> 
+        						             						        					        					          					  
+        					  </tpt:if>
+        					  <tpt:else>
+        						 <tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${field[blast_users_id]}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${field[blast_users_id]}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${field[blast_users_id]}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${field[blast_users_id]}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if>          						         						        			
+
+        					  </tpt:else>
+        					</td>
+        				</tr>
+        			</tpt:foreach>
+        			
+    			</tbody>
+  			</table>
+   		</form>
+   	
+</tpt:body>

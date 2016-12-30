@@ -1,0 +1,31 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAssociated()" class="insert_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.tinymce" test="EQ" value="1">
+        				<tr>
+        					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>
+        			   </tpt:if>
+        			   <tpt:else>
+        			   	<tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   	</tr>
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+
+  			
+
+			<input type="submit" value="Save Changes" />
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+   	
+</tpt:body>

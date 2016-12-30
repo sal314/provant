@@ -1,0 +1,33 @@
+<tpt:body>
+		<tpt:if id="prevent_edit" test="DNE"><a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a></tpt:if>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)" class="edit_${pagename}">
+			<input type="hidden" name="z_users[id]" value="${record[id]}"/>
+  			<table border="1">
+    			<tbody>     
+        			  <tr>
+        			   		<td>Last Name</td>
+        			   		<td><input class="z_users_last_name_" type="text" name="z_users[last_name]" id="z_users[last_name]" maxlength="45" size="45" data-validate="required=true" value="${record[last_name]}"/></td>
+        			 </tr>        			
+        			  <tr>
+        			   		<td>First Name</td>
+        			   		<td><input class="z_users_first_name_" type="text" name="z_users[first_name]" id="z_users[first_name]" maxlength="45" size="45" data-validate="required=true" value="${record[first_name]}"/></td>
+        			 </tr>
+        			  <tr>
+        			   		<td>Login</td>
+        			   		<td><input class="z_users_login_" type="text" name="z_users[login]" id="z_users[login]" maxlength="45" size="45" data-validate="required=true" value="${record[login]}"/></td>
+        			 </tr>        			
+        			  <tr>
+        			   		<td>Password</td>
+        			   		<td><input class="z_users_password_" type="password" name="z_users[password]" id="z_users[password]" maxlength="50" data-validate="required=false" value=""/></td>
+        			 </tr>
+        			 <tr>
+        			   		<td>Confirm Password</td>
+        			   		<td><input class="z_users_password_" type="password" name="z_users[password_confirm]" id="z_users[password_confirm]" maxlength="50" data-validate="match=z_users[password]" value=""/></td>
+        			 </tr>        			        			
+    			</tbody>
+  			</table>
+
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+</tpt:body>

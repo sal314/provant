@@ -1,0 +1,47 @@
+<tpt:body>
+	
+		<div class="form_action">
+			<a href="/admin/${pagename}/SearchIndex/"><img alt="Search" title="Find a record" border="0" src="/common/images/admin/admin_find.png" /></a>
+			<a href="/admin/${pagename}/Index/"><img alt="Back to Index" title="Goto Index" border="0" src="/common/images/admin/admin_home.png" /></a>
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="EQUALS" value="current_page">Page ${page} of ${page[last_page]}</tpt:if>							
+				<tpt:if id="page.__key__" test="EQUALS" value="first_page"><a href="/admin/${pagename}/Search/1${querystring}"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="previous_page"><a href="/admin/${pagename}/Search/${page}${querystring}"><img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/admin/${pagename}/Search/${page}${querystring}">${page}</a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="next_page"><a href="/admin/${pagename}/Search/${page}${querystring}"><img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" /></a></tpt:if>
+				<tpt:if id="page.__key__" test="EQUALS" value="last_page"><a href="/admin/${pagename}/Search/${page}${querystring}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if>			
+			</tpt:foreach>			
+		</div>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="sr_${pagename}">	
+  			<table border="1">
+    			<tbody>
+        			<tr><th>email</th>
+        				<th>Name</th>
+        				<th>Admin</th>
+        			</tr>
+        			<tpt:foreach id="fields" as="field">
+        			    <tpt:setif id="field.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+        				<tr class="${ROW_STYLE}">
+        					<td><a href="/admin/${pagename}/Edit/${field.email}">${field.email}</a></td>
+        					<td>${field.last_name}, ${field.first_name}</td>
+        					<td>
+        						<tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${field.id}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${field.id}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${field.id}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${associate_table}/${field.id}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if>        						
+        					</td>
+        				</tr>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+   		</form>
+   	
+</tpt:body>

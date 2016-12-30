@@ -1,0 +1,59 @@
+<tpt:body>
+    <br/>
+    <div style="margin-left:400px; margin-top:-600px;">
+	<div style="float:left;width:300px;">
+	<tpt:if id="insert" test="EQ" value="1">
+		<form method="post" action="/admin/${pagename}/Create">		   
+			<fieldset>
+				<legend>Create new directory</legend>		
+				Enter directory name. <br />
+		    	<input type="hidden" name="dir" value="${current_dir}" />
+				<input type="text" name="dirname" />
+				<input type="submit" value="Create" />
+				<br/>*Note name can not contain the following characters [(space).\/?%~|&amp;]				
+			</fieldset>
+		</form>
+
+		<form method="post" action="/admin/${pagename}/upload"  enctype="multipart/form-data">
+			<fieldset>
+				<legend>Upload File</legend>
+		    	<input type="hidden"  name="dir"  value="${current_dir}" />
+				<input type="file" name="upload" /><br />
+				<tpt:if id="update" test="EQ" value="1">
+				  Overwrite existing: <input type="checkbox" name="overwrite" value="1"/><br />
+				</tpt:if>
+				<input type="submit" value="Upload" />
+			</fieldset>
+			<fieldset>
+				<legend>Resize Image</legend>
+				<input type="radio" name="resize" value="1"/>Yes
+				<blockquote>
+				 <tpt:comment>Keep aspect ratio: <input type="checkbox" name="aspect" vaue="1" checked='checked'/><br /></tpt:comment>
+				 Width: <input name="width" vaue="0" /><br />
+				 Height: <input name="height" vaue="0" /><br />
+				</blockquote>
+				<input type="radio" name="resize" value="0" checked='checked'/>No<br />
+				<br />*The operation will :
+				<ul><li>be preformed only on gif, jpg, or png files</li>
+				<li>be skipped if the new dimensions increase the image's dimensions.</li></ul>
+				
+			</fieldset>			
+		</form>	
+		</tpt:if>	
+		</div>
+		<div style="float:left;marg-n-left:10px;">
+		<h3>Current directory: <strong>${current_dir}</strong></h3>
+		<form method="post" action="/admin/${pagename}/Index">
+		<ul>
+		<tpt:foreach id="dir" as="d">		
+			<li><a href="/admin/${pagename}/Index/${d}">[${d.__key__}]</a></li>
+		</tpt:foreach>
+		<tpt:foreach id="file" as="f">
+			<li>
+			<tpt:if id="delete" test="EQ" value="1"><a href="/admin/${pagename}/DeleteFileConfirm${f[relpath]}"><img src="/common/images/admin/admin_delete.png" border='0' title="delete file" alt="delete file"/></a></tpt:if> <a href="${f[relpath]}">${f[file]}</a></li>
+		</tpt:foreach>
+		</ul>
+		</form>
+		</div><br class="clear" />
+		</div>
+</tpt:body>		

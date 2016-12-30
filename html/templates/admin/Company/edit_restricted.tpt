@@ -1,0 +1,90 @@
+<tpt:body>
+		<tpt:if id="prevent_edit" test="DNE"><a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a></tpt:if>
+		<br />
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)" class="edit_${pagename}">
+			<h4>Company Information</h4>
+  			<table border="1">
+    			<tbody>        	
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.htmlfield" test="EQ" value="richtext">
+          				<tr>
+          					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>        			   
+        			   </tpt:if>
+        			   <tpt:elseif id="field.field_name" test="EQ" value="admin_user">        			      			           			   
+        			   </tpt:elseif>
+        			   <tpt:elseif id="field.field_name" test="EQ" value="is_gina">        			      			           			   
+        			   </tpt:elseif>        			   
+        			   <tpt:elseif id="field.field_name" test="EQ" value="is_wlq">        			      			           			   
+        			   </tpt:elseif>
+        			   <tpt:elseif id="field.field_name" test="EQ" value="url">        			      			           			   
+        			   </tpt:elseif>
+        			   <tpt:else>        			   
+	         			 <tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}        			   		
+       			   		   		<tpt:if id="field.deleteKey" test="NOTNULL">
+       			   		   		   <a href="/admin/${pagename}/DeleteFileConfirm/${field.deleteKey}">Delete File</a>
+       			   		   		</tpt:if>
+        			   		</td>
+        			   	 </tr>        			   
+        			   </tpt:else>
+        			</tpt:foreach>        			
+    			</tbody>
+  			</table>
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+			<button onclick="document.location.href='/admin/${pagename}/Index';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+   		<br />
+   		<br />
+
+   		<h4>Company Locations</h4>
+   		<form method="post" action="/admin/${pagename}/updateLocation" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+			<h1>Update Locations</h1>
+			<input type="hidden" name="company_id" value="${fields[id].dbvalue}" />
+   			<table border="1">
+   			  <tbody>
+   				<tpt:foreach id="locations" as="location">
+   				  <tr>
+   				    <td>Location name</td>
+   				    <td><input type="text" size="20" name="location[${location.id}]" value="${location.location}"/></td>
+   				    <td><a href="/admin/${pagename}/deleteLocation/${location.id}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+   				    </td>
+   				  </tr>
+   				</tpt:foreach>
+			  </tbody>
+			</table>
+			<br />
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+   		</form>
+   		<br />
+   		<br />
+
+   		<form method="post" action="/admin/${pagename}/addLocation" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+			<h1>Add New Location</h1>
+			<input type="hidden" name="company_id" value="${fields[id].dbvalue}" />
+   			<table border="1">
+   			  <tbody>
+   				  <tr>
+   				    <td>Location name</td>
+   				    <td><input type="text" size="20" name="location"/></td>
+   				  </tr>
+			  </tbody>
+			</table>
+			<br />
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Add Location" /></tpt:if>
+   		</form>
+   		<br />
+   		<br />
+
+    	<form method="post" action="/admin/${pagename}/ChangePassword" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+  				<h4>Change Admin Password</h4>
+  				Old Password: <input type="password" name="old_password" data-validate="required=true password=6-20"/><br/>
+  				New Password: <input type="password" name="password" data-validate="required=true password=6-20"/><br/>
+  				New Password Confirm : <input type="password" name="password_confirm" data-validate="required=true match=password"/><br/>
+  				<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+  		</form>
+</tpt:body>

@@ -1,0 +1,48 @@
+<tpt:body>
+<html>
+<head>
+<title>FTP Browser</title>
+	<script type='text/javascript' src='/common/js/zmedia/zmedia.js'></script>
+	<script type='text/javascript' src='/common/js/utils/dialogs.js'></script>
+	<script type='text/javascript' src='/common/js/utils/IEEmu.js'></script>
+	<script type='text/javascript'>fixDialog();</script>
+	<script type="text/javascript">
+	//<![CDATA[
+		var __saveValue=window.dialogArguments;
+		 window.returnValue= null;
+		function setReturnValue(value){
+		    if(__saveValue.fieldName){
+		    	__saveValue.value=value;
+		    	window.returnValue=__saveValue;
+		    }else{
+				window.returnValue =value;
+			}
+			ZMEDIA.MODAL.dialogClose();
+		}
+	//]]>
+	</script>	
+</head>
+<body>	
+		<h1>Current directory: <strong>${current_dir}</strong></h1>
+		<form method="post" action="/admin/${pagename}/Index">
+		<ul>
+		<tpt:foreach id="dir" as="d">		
+			<li><a href="/admin/${pagename}/Browse${method}${d}">[${d.__key__}]</a></li>
+		</tpt:foreach>
+		<tpt:foreach id="file" as="f">
+			<li><tpt:if id="f.alt" test="EXISTS">
+					<img src="${f.alt}" width="50" height="50"/>
+				</tpt:if>
+				<tpt:else>
+					<img src="${f.relpath}" width="50" height="50"/>
+				</tpt:else> <a href="javascript:setReturnValue('${f.relpath}')">${f.file_name}</a>
+				<tpt:if id="f.width" test="EXISTS">
+				<br />w: ${f.width} h: ${f.height}<br />
+				</tpt:if>
+				</li>
+		</tpt:foreach>
+		</ul>
+		</form>
+</body>
+</html>		
+</tpt:body>		

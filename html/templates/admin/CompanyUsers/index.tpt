@@ -1,0 +1,56 @@
+<tpt:body>
+	<script type="text/javascript">
+	function getNewList() {
+		var frm = document.getElementById('${pagename}');
+		frm.submit();
+	}
+	</script>
+
+	<div style="margin-left:400px; margin-top:-600px;">
+	<tpt:include id="interface/admin_nav_2.tpt" importvars="reference" /><br/>
+	<a href="/admin/${pagename}/Reinstate/">Re-activate deleted user</a><br/>	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}" class="index__${pagename}">		
+				<select name="company_id" id="company_id" onchange="getNewList();">
+				<tpt:html type="select-options" data="${companies}" selected="${company_id}" />
+				</select>
+  			<table border="1">
+    			<tbody>
+    			<tr>
+        			  <tpt:foreach id="fields[0]" as="f">        			    
+        			    	<th><a href="/admin/${pagename}/Index/sort/${f.__key__}/${orderdir}">${f.__key__}</a></th>        			    		
+        			  </tpt:foreach>        			
+        			  <th>Admin</th>
+        			</tr>
+					 
+        			  <tpt:foreach id="fields" as="record">
+        			  	<tpt:setif id="record.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+							<tr class="${ROW_STYLE}">
+        			  	  	<tpt:foreach id="record" as="column">
+        			    		<td>${column.__value__}</td>
+        			    	</tpt:foreach>
+        					
+        					<td>
+        					    <tpt:if id="admin_ctls" test="EQ" value="0">
+        					    	<a href="/admin/${pagename}/Edit/${record[id]}"><img alt="Edit" title="View" border="0" src="/common/images/admin/admin_read.png" /></a>
+        					    </tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="4">
+        							<a href="/admin/${pagename}/Edit/${record[id]}"><img alt="Edit" title="Edit" border="0" src="/common/images/admin/admin_edit.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="2">
+        							<a href="/admin/${pagename}/DeleteConfirm/${record[id]}"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a>
+        						</tpt:if>        						
+        						<tpt:if id="admin_ctls" test="AND" value="1">
+        							<a href="/admin/${pagename}/Order/${record[id]}"><img alt="Order" title="Order" border="0" src="/common/images/admin/admin_order.png" /></a>
+        						</tpt:if>
+        						<tpt:if id="admin_ctls" test="AND" value="8">
+        							<a href="/admin/${pagename}/Associate/${record[id]}"><img alt="Associate" title="Associate" border="0" src="/common/images/admin/admin_associate.png" /></a>
+        						</tpt:if>        						
+        					</td>
+        				</tr>
+        			</tpt:foreach>
+        			
+    			</tbody>
+  			</table> 
+   		</form>
+   	</div>
+</tpt:body>

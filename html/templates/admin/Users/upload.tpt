@@ -1,0 +1,32 @@
+<tpt:body>
+<br/>
+<div style="margin-left:400px; margin-top:-600px;">
+Upload users on site by CVS-file: (now format - email,login,password,last_name,first_name,gender,role; need the real format of that input file)
+
+<tpt:if id = "total" test = "GT" value = "0">
+<form method="post" enctype="multipart/form-data" action="/admin/UsersUpload/Upload">
+<!--<pre>
+<tpt:printr id = "company"/>
+</pre>-->
+
+
+<select id="company_list" name="company_list">
+
+<option value="all">Select Company</option>
+<tpt:foreach id = "company" as = "name">
+<option value="${name.id}">${name.company_name}</option>
+
+</tpt:foreach>
+</select>
+<br/><br/>
+<input type="file" name="data"/>
+	<input type="submit" value="Upload users"/>
+	</form>
+</tpt:if>
+<tpt:else>
+No company found
+</tpt:else>
+	
+
+</div>
+</tpt:body>

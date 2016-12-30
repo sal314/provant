@@ -1,0 +1,20 @@
+<tpt:body>
+<div style="margin-left:400px; margin-top:-600px;">
+  <form action="/admin/Reports/Generate/" method="post">
+    <tpt:if id="full" test="EQ" value="0">
+		${company}&amp;nbsp;&amp;nbsp;
+	  	<input type="hidden" name="company_id" value="${company_id}" />
+	</tpt:if>
+	<tpt:else>
+  		<select name="company_id">
+  			<tpt:html type="select-options" data="${companies}"/>
+  		</select>
+  	</tpt:else>
+  	<select name="report">
+  		<option value="CompanyHealthAssessment">Company Health Assessment</option>
+  		<option value="PortalUsage">Monthly Portal Usage</option>
+  	</select>
+  	<input type="submit" name="submit" value="Generate Report"/>
+  </form>
+  </div>
+</tpt:body>

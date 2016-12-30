@@ -1,0 +1,36 @@
+<tpt:body>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)"  class="insert_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			   	<tr>
+        			   		<td>Last Name</td>
+        			   		<td><input class="z_users_last_name_" type="text" name="z_users[last_name]" id="z_users[last_name]" maxlength="45" size="45" data-validate="required=true" value=""/></td>
+        			   	</tr>
+        			   	<tr>
+        			   		<td>First Name</td>
+        			   		<td><input class="z_users_first_name_" type="text" name="z_users[first_name]" id="z_users[first_name]" maxlength="45" size="45" data-validate="required=true" value=""/></td>
+        			   	</tr>
+        			   	<tr>
+        			   		<td>Email/Login</td>
+        			   		<td><input class="z_users_email_" type="text" name="z_users[email]" id="z_users[email]" maxlength="45" size="45" data-validate="required=true pattern=email" value=""/></td>
+        			   	</tr>
+        			   <tr>
+        			   		<td>Email/login Confirm</td>
+        			   		<td><input class="z_users_email_" type="text" id="z_users[email_confirm]" maxlength="45" size="45" data-validate="required=true match=z_users[email]" value=""/></td>
+        			   	</tr>
+        			   	<tr>
+        			   		<td>Password</td>
+        			   		<td><input class="z_users_password_" type="password" name="z_users[password]" id="z_users[password]" maxlength="50" data-validate="required=true password=6-10" value=""/></td>
+        			   	</tr>
+						<tr>
+        			   		<td>Password</td>
+        			   		<td><input class="z_users_password_" type="password"  id="z_users[password_confirm]" maxlength="50" data-validate="required=true match=z_users[password]" value=""/></td>
+        			   	</tr>
+        			   
+    			</tbody>
+  			</table>
+
+			<input type="submit" value="Save Changes" />
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+</tpt:body>

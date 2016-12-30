@@ -1,0 +1,41 @@
+<tpt:body>
+		<form name="${pagename}" id="${pagename}" method="post" action="/admin/zAdmin/Login" class="index_${pagename}">
+			<tpt:if id="error_message" test="NOTEMPTY">
+				<div>${error_message}</div><br/>
+			</tpt:if>						
+			<tpt:if id="authenticated" test="EQ" value="false">
+			    Administrative Area Login:<br /><br />
+				<div style='float:left;padding-left:20px;margin-right:10px;'>
+					User Name <BR/>
+					Password
+				</div>
+				<div style='float:left;'>
+					<input type="text" name="login" value="${login}"/><br />
+					<input type="password" name="password"/>
+				</div>
+				<br style='clear:both;'/>
+				<input type="submit" value="Login"/>
+			</tpt:if>
+			<tpt:else>			
+				Select a Menu option
+				<script type="text/javascript">
+				<![CDATA[
+					var e=document.getElementById("admin_page_sel");
+					var len=e.options.length;
+					if(len==1){
+						javascript:ZMEDIA.goToAdminPage();
+					}else{
+					  var find="${initial_admin}";
+					  if(find!=""){ 
+					  	for(var x=0;x<len;x++){
+					    	if(e.options[x].value=="/admin/"+find+"/Index"){
+					    		document.location.href="/admin/"+find+"/Index";
+					    	}
+					  	}
+					  }
+					} 
+				]]>
+				</script>
+			</tpt:else>
+		</form>
+</tpt:body>		

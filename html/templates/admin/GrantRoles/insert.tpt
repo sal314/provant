@@ -1,0 +1,90 @@
+<tpt:body>	
+	<a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a>
+	<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/InsertRec" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAssociated()" class="insert_${pagename}">
+  	
+    	<script type="text/javascript" src="/assets/js/prototype/prototype.js"></script>   	    	    	
+   	 	<script type="text/javascript" src="/assets/js/widgets/combobox.js"></script>		     	 
+	 	<script type="text/javascript">
+		//<![CDATA[	
+			function init(){var cb = new ComboBox("user", userCallback);}  			
+	  		addEvent(window,'load',init);
+
+			function userCallback(value, comboBox) {
+	   			var tag=document.getElementById("user");
+				tag.selectionValue="";
+				if (value.length >= 2){					
+  					ZMEDIA.AJAX.submitRequest("/admin/Users/GetMatchingName","pattern="+encodeURIComponent(value),userCallback__close,comboBox);
+  				}
+			}
+
+			function userCallback__close(messages,data,comboBox){
+				var err=ZMEDIA.AJAX.getFatalMessage(messages);
+    			if(err){
+    				alert(err);
+    				return;
+    			}          	 
+  				var names=new Array();
+  				var records=data[0].value;
+  				for(var i in records){  				    
+  					//if(records[i].name=="name"){
+  			  			var o={};
+  			  			o.id=records[i].id
+  			  			o.value=records[i].login+" : "+records[i].first_name+" "+records[i].last_name+"&lt;"+records[i].email+"&gt;";
+  		  				names[names.length]=o;
+  					//}
+  				}
+				var items = new Array();			
+				var len=Math.min(names.length, 200);
+				for (var i = 0; i < len; i++) {
+					items.push(names[i]);
+				}
+				comboBox.setItems(items);
+			}  
+
+			function GetUserRoles(){
+	   			var tag=document.getElementById("user");
+				id=tag.selectionValue;									
+				if(!id){
+				  alert("Not a valid user.");
+				  return;
+				}
+  				ZMEDIA.AJAX.submitRequest("/admin/Users/GetGrantableRoles","id="+encodeURIComponent(id),getUserRolesCallback__close);  							
+			}
+			
+			function getUserRolesCallback__close(messages,data,comboBox){
+				var err=ZMEDIA.AJAX.getFatalMessage(messages);
+    			if(err){
+    				alert(err);
+    				return;
+    			}          	 
+  				
+  				var available=data[0].value;
+  				var granted=data[1].value;
+  				
+  				
+  				var assoc=document.getElementById("associated");
+  				var unassoc=document.getElementById("unassociated");
+  				
+  				for(var i in granted){
+  				  assoc.options[assoc.options.length]=new Option(granted[i].name,granted[i].id);
+  				}
+  				for(var i in available){
+  				  unassoc.options[unassoc.options.length]=new Option(available[i].name,available[i].id);
+  				}
+
+			}  
+		//]]>
+		</script>
+		<input type="text" id="user" /> <input type="button" value="Fetch User" onclick="GetUserRoles()"/>
+		<select multiple="multiple" style="width:225px;height:200px;" disabled='disabled' id="unassocaited">
+			
+		</select>
+		<select name="roles_granted[]" multiple="multiple" style="width:225px;height:200px;" disabled='disabled' id="assocaited">
+			<tpt:foreach id="tags" as="tag">
+				<option value="${tag[id]}">${tag[name]}</option>
+			</tpt:foreach>				
+		</select><br/>
+		<input type="button" value="Remove Selected Tags" onclick="removeTags()"/><br/>
+		<input type="button" value="Close Window" onclick="window.close()"/>
+	</form>		
+</tpt:body>

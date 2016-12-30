@@ -1,0 +1,16 @@
+<tpt:body>
+	
+	<html>
+	<head><title>Privledge Info</title></head>
+	<body>
+		<table>
+		  <tbody>
+			<tr><td>Name</td><td>${info[0][name]}</td></tr>
+			<tr><td>Applies to Admin </td><td><tpt:if id="info[0][is_admin]" test="EQ" value="0">No</tpt:if><tpt:else>Yes</tpt:else></td></tr>
+			<tr><td>Description</td><td>${info[0][description]}</td></tr>			
+		  </tbody>
+		</table>
+	</body>
+	</html>
+   	
+</tpt:body>

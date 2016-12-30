@@ -1,0 +1,53 @@
+<tpt:body>
+		<tpt:if id="prevent_edit" test="DNE"><a href="javascript:document.forms['${pagename}'].submit()" id="admin_save_btn"><img alt="save" title="save" src="/common/images/admin/admin_save.png" border="0"/></a></tpt:if>
+		<script language="javascript" type="text/javascript" src="/assets/js/incentiveProgram.js"></script>
+		<form name="${pagename}" id="${pagename}" action="/admin/IncentiveProgram/AddPoints" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)" class="edit_${pagename}">
+			<input type="hidden" name="id" value="${profile[z_user_id]}"/>
+			Name: ${zInfo[first_name]} ${zInfo[last_name]}<br/>
+			Company: ${company[company_name]}<br/> 
+			Current Points: ${profile[incentive_points_total]}
+  			<table id="current_activities"><tbody>
+
+<tpt:setvar id="hdr" value="0" />
+<tpt:foreach id="point_activities" as="sel">
+
+	<tpt:if id="sel[incentive_activity_id]" test="EQ" value="20">
+		<tpt:setvar id="hdr" value="1" />
+	</tpt:if>
+
+</tpt:foreach>
+
+<tr>
+  <th></th>
+  <th>Task</th>
+  <th>Points</th>
+<tpt:if id="hdr" test="EQ" value="1">
+  <th>Comment</th>
+</tpt:if>
+</tr>
+<tpt:foreach id="point_activities" as="sel">
+	<tr>	
+		<td><input type="checkbox" name="addPoints[${sel[incentive_activity_id]}]" id="id_${sel[incentive_activity_id]}" /></td>
+		<td>${sel[description]}</td>
+		<tpt:if id="sel[incentive_activity_id]" test="EQ" value="20">
+			<td><input type="text" size="5" name="generic_points" id="generic_points" value="${sel[points]}" onkeyup="checkTheBox();" /></td>
+			<td><input type="text" size="40" name="generic_comment" id="generic_comment" onkeyup="checkTheBox();" /></td>
+		</tpt:if>
+		<tpt:else>
+			<td>${sel[points]}</td>
+		</tpt:else>
+	</tr>
+</tpt:foreach>
+</tbody></table>
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Add Points" /></tpt:if>
+			<button onclick="document.location.href='/admin/Company/ListUsers/?company_id=${company[id]}';return false;"><img src="/common/images/admin/admin_cancel.png"/>Cancel</button>  			
+   		</form>
+Points Awarded Log   		
+<table cellpadding="5">  			
+<tpt:foreach id="history" as="entry">
+<tr>
+<td>${entry[date_added]}</td><td>${entry[description]}</td><td>${entry[points]}</td><td>${entry[comment]}</td>
+</tr>
+</tpt:foreach>  			
+</table>   		
+</tpt:body>

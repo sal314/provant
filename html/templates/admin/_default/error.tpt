@@ -1,0 +1,5 @@
+<tpt:body>
+	
+		${ERROR_MESSAGE}
+   	
+</tpt:body>

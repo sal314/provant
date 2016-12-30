@@ -1,0 +1,16 @@
+<tpt:body>
+	
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Save" method="post" enctype="multipart/form-data" class="ex_${pagename}">
+			<input type="hidden" name="path" value="${PATH}" />
+  			<table border="1">
+    			<tbody>        			
+          				<tr>
+          					<td><textarea  class="tinymce xml_template" name="file" id="file" tinymce="true" validate="nullable=0">${BODY}</textarea></td>
+        				</tr>
+    			</tbody>
+  			</table>
+			<tpt:if id="prevent_edit" test="DNE"><input type="submit" value="Save Changes" /></tpt:if>
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+   	
+</tpt:body>

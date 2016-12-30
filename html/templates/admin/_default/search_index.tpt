@@ -1,0 +1,71 @@
+<tpt:body>
+	
+		<a href="/admin/${pagename}/Index/"><img alt="Back to Index" title="Goto Index" border="0" src="/common/images/admin/admin_home.png" /></a>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/Search" method="post" enctype="multipart/form-data" class="si_${pagename}">
+  			<table border="1">
+    			<tbody>        			    			
+					<tpt:foreach id="fields" as="field">
+						<tpt:if id="field.searchable" test="EQ" value="true">						    
+							<tr>
+								<td>${field.label}</td>
+								<td>
+									<select name="search[${field.field_name}][test]">
+									    <option value=""></option>
+									    <option value="ISNULL">IS NULL</option>
+									    <option value="ISNOTNULL">NOT NULL</option>
+										<option value="EQUAL">=</option>
+										<option value="CONTAINS">CONTAINS</option>
+										<option value="LIKE">LIKE</option>
+										<option value="GT">GREATER THAN</option>
+										<option value="GTE">GREATER OR EQUAL TO</option>
+										<option value="LT">LESS THAN</option>
+										<option value="LTE">LESS THAN OR EQUAL TO</option>
+									</select>
+								</td>
+								<td>
+								    <tpt:if id="field.type" test="EQUALS" value="enum">
+								    	<select name="search[${field.field_name}][value]">
+								           <tpt:foreach id="field.enumValues" as="value">
+								           		<option value="${value}">${value.__key__}</option>
+								           </tpt:foreach>								           
+								      	</select>
+								    </tpt:if>
+								    <tpt:elseif id="field.key" test="EQUALS" value="MUL">
+							    		<select name="search[${field.field_name}][value]">
+							           		<tpt:foreach id="field.enumValues" as="value">
+							           			<option value="${value}">${value.__key__}</option>
+							           		</tpt:foreach>									           
+							      		</select>
+								     </tpt:elseif>								    
+								     <tpt:elseif id="field.type" test="EQUALS" value="timestamp">
+								     		<input type="hidden" value="" validate="nullable=0 type=timestamp" id="search[${field.field_name}][value]" name="search[${field.field_name}][value]" />
+								     		<a href="javascript:ZMEDIA.MODAL.getTimeStamp('1','search[${field.field_name}][value]')"><img border="0" src="/common/images/calendar.gif" /></a>
+								     		<span id="search[${field.field_name}][value]_disp" class="timestamp"> </span>
+								     </tpt:elseif>
+								     <tpt:elseif id="field.type" test="EQUALS" value="tinyint">
+								     	<select name="search[${field.field_name}][value]">
+								     		<option value="0">False/No/Off/0</option>
+								     		<option value="1">True/Yes/On/1</option>
+								     	</select>
+								     </tpt:elseif>
+								     <tpt:else>
+									    	<input type="text" name="search[${field.field_name}][value]" text="" />
+									</tpt:else>	
+									
+								</td>
+							</tr>
+						</tpt:if>
+					</tpt:foreach>
+					</tbody>
+    			</table>
+  				<tpt:if id="fields" test="DNE">
+   					<br/>
+   					There are not any searchable fields set in the tables_def.xml for ${pagename}
+   					<br/>
+   				</tpt:if>
+				<tpt:else>    			
+    				<a href="javascript:document.forms['${pagename}'].submit()"><img border="0" alt="Search" title="Search" src="/common/images/admin/admin_find.png" />Search</a>
+    			</tpt:else>
+    	</form>
+    
+</tpt:body>

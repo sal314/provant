@@ -1,0 +1,119 @@
+<tpt:body>
+	<script type="text/javascript" language="JavaScript" src="/assets/js/Colors.js"> </script>
+
+	<br />
+	<br />
+	<br />
+	<tpt:if id="message" test="NE" value="">
+		<div style="margin-left:20px; background-color:#D7E7C7; color:#000; width:200px;">
+			<br />
+			<span style="margin-left: 20px;">${message}</span><br />
+			<br />
+		</div>
+	</tpt:if>
+	<br />
+	<br />	
+	<form id="frm" method="post" action="/admin/Colors/Index/${cid}">
+	<input type="hidden" name="background_r" id="background_r" value="${background_r}" />
+	<input type="hidden" name="background_g" id="background_g" value="${background_g}" />
+	<input type="hidden" name="background_b" id="background_b" value="${background_b}" />
+	<input type="hidden" name="tab1_r" id="tab1_r" value="${tab1_r}" />
+	<input type="hidden" name="tab1_g" id="tab1_g" value="${tab1_g}" />
+	<input type="hidden" name="tab1_b" id="tab1_b" value="${tab1_b}" />
+	<input type="hidden" name="tab2_r" id="tab2_r" value="${tab2_r}" />
+	<input type="hidden" name="tab2_g" id="tab2_g" value="${tab2_g}" />
+	<input type="hidden" name="tab2_b" id="tab2_b" value="${tab2_b}" />
+	<input type="hidden" name="tab3_r" id="tab3_r" value="${tab3_r}" />
+	<input type="hidden" name="tab3_g" id="tab3_g" value="${tab3_g}" />
+	<input type="hidden" name="tab3_b" id="tab3_b" value="${tab3_b}" />
+	<input type="hidden" name="tab4_r" id="tab4_r" value="${tab4_r}" />
+	<input type="hidden" name="tab4_g" id="tab4_g" value="${tab4_g}" />
+	<input type="hidden" name="tab4_b" id="tab4_b" value="${tab4_b}" />
+	<input type="hidden" name="articles_r" id="articles_r" value="${articles_r}" />
+	<input type="hidden" name="articles_g" id="articles_g" value="${articles_g}" />
+	<input type="hidden" name="articles_b" id="articles_b" value="${articles_b}" />
+	<input type="hidden" name="color1_r" id="color1_r" value="${color1_r}" />
+	<input type="hidden" name="color1_g" id="color1_g" value="${color1_g}" />
+	<input type="hidden" name="color1_b" id="color1_b" value="${color1_b}" />
+	<input type="hidden" name="color2_r" id="color2_r" value="${color2_r}" />
+	<input type="hidden" name="color2_g" id="color2_g" value="${color2_g}" />
+	<input type="hidden" name="color2_b" id="color2_b" value="${color2_b}" />
+
+	<div style="width:100%">
+		<div style="width:35%; margin-top: 10px; float:left;">
+			<div style="width:95%; position:relative; background-color:#000; height:80px;">
+				<select name="picker" id="picker" onchange="setColorTag()">
+					<option value="background">Background &amp;amp; Header Text</option>
+					<option value="tab1">Sliding Tab 1</option>
+					<option value="tab2">Sliding Tab 2</option>
+					<option value="tab3">Sliding Tab 3</option>
+					<option value="tab4">Sliding Tab 4</option>
+					<option value="articles">Health Articles</option>
+					<option value="color1">Footer Navigation 1</option>
+					<option value="color2">Footer Navigation 2</option>
+				</select>
+				<span style="position:absolute; top:40px; left:10px; font-size:14px; color:#FFFFFF;"><strong>R</strong></span>
+				<input id="red" style="position:absolute; top:40px; left:25px;" type="text" size="5" readonly="true" value="${background_r}" />
+				<a style="position:absolute; top:30px; left:95px;" href="javascript:void(0);" onclick="adjustColor('r', 'up', 10);"><img src="/assets/media/images/dbl_uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:40px; left:95px;" href="javascript:void(0);" onclick="adjustColor('r', 'up', 1);"><img src="/assets/media/images/uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:50px; left:95px;" href="javascript:void(0);" onclick="adjustColor('r', 'down', 1);"><img src="/assets/media/images/downarrow.jpg" style="height:10px;" alt="dn" /></a>
+				<a style="position:absolute; top:60px; left:95px;" href="javascript:void(0);" onclick="adjustColor('r', 'down', 10);"><img src="/assets/media/images/dbl_dnarrow.jpg" style="height:10px;" alt="dn" /></a>
+				<span style="position:absolute; top:40px; left:120px; font-size:14px; color:#FFFFFF;"><strong>G</strong></span>
+				<input id="green" style="position:absolute; top:40px; left:135px;" type="text" size="5" readonly="true" value="${background_g}" />
+				<a style="position:absolute; top:30px; left:205px;" href="javascript:void(0);" onclick="adjustColor('g', 'up', 10);"><img src="/assets/media/images/dbl_uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:40px; left:205px;" href="javascript:void(0);" onclick="adjustColor('g', 'up', 1);"><img src="/assets/media/images/uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:50px; left:205px;" href="javascript:void(0);" onclick="adjustColor('g', 'down', 1);"><img src="/assets/media/images/downarrow.jpg" style="height:10px;" alt="dn" /></a>
+				<a style="position:absolute; top:60px; left:205px;" href="javascript:void(0);" onclick="adjustColor('g', 'down', 10);"><img src="/assets/media/images/dbl_dnarrow.jpg" style="height:10px;" alt="dn" /></a>
+				<span style="position:absolute; top:40px; left:230px; font-size:14px; color:#FFFFFF;"><strong>B</strong></span>
+				<input id="blue" style="position:absolute; top:40px; left:245px;" type="text" size="5" readonly="true" value="${background_b}" />
+				<a style="position:absolute; top:30px; left:315px;" href="javascript:void(0);" onclick="adjustColor('b', 'up', 10);"><img src="/assets/media/images/dbl_uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:40px; left:315px;" href="javascript:void(0);" onclick="adjustColor('b', 'up', 1);"><img src="/assets/media/images/uparrow.jpg" style="height:10px;" alt="up" /></a>
+				<a style="position:absolute; top:50px; left:315px;" href="javascript:void(0);" onclick="adjustColor('b', 'down', 1);"><img src="/assets/media/images/downarrow.jpg" style="height:10px;" alt="dn" /></a>
+				<a style="position:absolute; top:60px; left:315px;" href="javascript:void(0);" onclick="adjustColor('b', 'down', 10);"><img src="/assets/media/images/dbl_dnarrow.jpg" style="height:10px;" alt="dn" /></a>
+			</div>
+			<br />
+			<br />
+			<a style="margin-left:50px;" href="/admin/Company/Edit/${cid}">Back to Company Edit</a>
+			<a style="margin-left:50px;" href="javascript:void(0);" onclick="document.getElementById('frm').submit();">Save Color Scheme</a>
+		</div>
+		<div id="testpage" style="width:65%; margin-top: 10px; background-color:${colors[background]}; float:right; height: 700px;">
+			<div style="position:relative; margin-left:5%; margin-top:20px; background-color:#fff; width:90%; height:150px;">
+				<span id="hdrtxt" style="position:absolute; top:50px; left:40%; font-size:14px; color:${colors[background]};">&amp;lt; Header Text &amp;gt;</span>
+			</div>
+			<div style="position:relative; margin-left:5%; margin-top:20px; background-color:#fff; width:90%; height: 250px;">
+				<div id="tab1" style="position:absolute; left:50px; top:20px; width:50px; height:200px; background-color:${colors[tab1]}"> </div>
+				<span style="position:absolute; left:50px; top:230px; font-size:14px;">Tab 1</span>
+				<div id="tab2" style="position:absolute; left:150px; top:20px; width:50px; height:200px; background-color:${colors[tab2]}"> </div>
+				<span style="position:absolute; left:150px; top:230px; font-size:14px;">Tab 2</span>
+				<div id="tab3" style="position:absolute; left:250px; top:20px; width:50px; height:200px; background-color:${colors[tab3]}"> </div>
+				<span style="position:absolute; left:250px; top:230px; font-size:14px;">Tab 3</span>
+				<div id="tab4" style="position:absolute; left:350px; top:20px; width:50px; height:200px; background-color:${colors[tab4]}"> </div>
+				<span style="position:absolute; left:350px; top:230px; font-size:14px;">Tab 4</span>
+			</div>
+			<div style="position:relative; margin-left:5%; margin-top:20px; background-color:#fff; width:90%; height: 150px;">
+				<div style="position:absolute; left:50px; top:20px; width:25%; height: 100px; background-color:#e1e1e1;">
+					<div id="articles_1" style="position:absolute; left:0; top:50px; width:100%; height:50px; background-color:${colors[articles]};"> </div>
+				</div>
+				<div style="position:absolute; left:250px; top:20px; width:25%; height: 100px; background-color:#e1e1e1;">
+					<div id="articles_2" style="position:absolute; left:0; top:50px; width:100%; height:50px; background-color:${colors[articles]};"> </div>
+				</div>
+				<div style="position:absolute; left:450px; top:20px; width:25%; height: 100px; background-color:#e1e1e1;">
+					<div id="articles_3" style="position:absolute; left:0; top:50px; width:100%; height:50px; background-color:${colors[articles]};"> </div>
+				</div>
+				<span style="position:absolute; left:300px; top:130px; font-size:14px;">Articles</span>
+			</div>
+			<div style="position:relative; margin-left:5%; margin-top:20px; width:90%; height:45px;">
+				<div id="nav1" style="position:absolute; left:0; top:0; width:25%; height:20px; background-color:${colors[color1]};"> </div>
+				<div id="nav5" style="position:absolute; left:0; top:25px; width:25%; height:20px; background-color:${colors[color1]};"> </div>
+				<div id="nav2" style="position:absolute; left:25%; top:0; width:25%; height:20px; background-color:${colors[color2]};"> </div>
+				<div id="nav6" style="position:absolute; left:25%; top:25px; width:25%; height:20px; background-color:${colors[color2]};"> </div>
+				<div id="nav3" style="position:absolute; left:50%; top:0; width:25%; height:20px; background-color:${colors[color1]};"> </div>
+				<div id="nav7" style="position:absolute; left:50%; top:25px; width:25%; height:20px; background-color:${colors[color1]};"> </div>
+				<div id="nav4" style="position:absolute; left:75%; top:0; width:25%; height:20px; background-color:${colors[color2]};"> </div>
+				<div id="nav8" style="position:absolute; left:75%; top:25px; width:25%; height:20px; background-color:${colors[color2]};"> </div>
+			</div>
+		</div>
+	</div>
+	</form>
+	<div class="clear"><br /></div>
+</tpt:body>

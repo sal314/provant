@@ -1,0 +1,40 @@
+<tpt:body>
+		<form name="${pagename}" id="${pagename}" action="/admin/${pagename}/${zActionDefault}" method="post" enctype="multipart/form-data" onsubmit="ZMEDIA.FORM.selectAll(this);return ZMEDIA.FORM.validateForm(this)"  class="insert_${pagename}">
+  			<table border="1">
+    			<tbody>        			
+        			<tpt:foreach id="fields" as="field">
+        			   <tpt:if id="field.htmlfield" test="EQ" value="richtext">
+          				<tr>
+          					<td colspan='2'>${field.label}</td>
+        				</tr>
+        				<tr>
+        					<td colspan='2'>${field.html}</td>
+        				</tr>        			   
+        			   </tpt:if>
+        			   <tpt:else>
+        			   	<tr>
+        			   		<td>${field.label}</td>
+        			   		<td>${field.html}</td>
+        			   	</tr>
+        			   </tpt:else>
+        			</tpt:foreach>
+<!-- [CDATA[
+        			<tr>
+        				<td>Administer Login Name</td><td><input type="text" name="z_user[login]" data-validate="required=true regex=ALPHANNUMERIC length=6-20"/></td>
+        			</tr>
+        			<tr>
+        				<td>Administer Password</td><td><input type="password" name="z_user[password]" data-validate="required=true password=6 length=6-20"/></td>
+        			</tr>
+   					<tr>
+        				<td>Administer Password Confirm</td><td><input type="password" name="z_user[password_confirm]" data-validate="required=true match=z_user[password]"/></td>
+        			</tr>
+]] -->
+    			</tbody>
+  			</table>
+  			<tpt:if id="associations" test="EXISTS">  	  						
+  				<tpt:include id="admin/_default/add_associate.tpt" importvars="reference"/>
+  			</tpt:if>
+			<input type="submit" value="Save Changes" />
+			<input type="button" value="Cancel"  onclick="document.location.href='/admin/${pagename}/Index'" />
+   		</form>
+</tpt:body>

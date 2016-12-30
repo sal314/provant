@@ -1,0 +1,81 @@
+<tpt:body>
+	
+		<div class='form_action'>
+			<tpt:if id="prevent_insert" test="DNE"><a href="/admin/${pagename}/Insert"><img alt="Add Member" title="Add Member" border="0" src="/common/images/admin/admin_add.png" /></a></tpt:if>
+		</div>	
+		<script>
+		//<![CDATA[
+		  function deleteUser(email){
+		    if(confirm("Are you sure you want to delete this email "+email)){
+		  		performCommand("/admin/BlastUsers/DeleteUser/","email="+encodeURI(email),confirmDeleteEmail);
+		  	}
+		  }
+		  function confirmDeleteEmail(messages,data){
+			var fatal=getFatalMessage(messages);
+			if(fatal){
+				alert("The request cold not be completed due to the following errors:\n"+fatal);
+				return ;
+			}			
+			//var email=data.getElement('email').value;
+			var email=data[0]['value'];
+		    var t=document.getElementById('deleteable');
+		    
+		    var p=null;
+		    for(var x=0;x<t.childNodes.length;x++){
+		      if(t.childNodes[x].tagName=="TBODY"){
+		      	p=t.childNodes[x];
+		      }
+		    }
+		    for(var x=0;x<p.childNodes.length;x++){
+		    	var cn=p.childNodes[x];
+		      	if(p.childNodes[x].tagName=="TR"){
+		      		var count=0;
+		      	   	for(var y=0; y<cn.childNodes.length;y++ ){
+		      	  		node=cn.childNodes[y];
+		      	      	if(node.tagName!="TD") continue;
+		      	      	count++;
+		      	      	if(count==2){
+		      	   			if(node.innerHTML==email){
+		      		  			p.removeChild(cn);
+		      		  			alert("User Deleted.");
+		      		  			return;		      		
+		      	    		}
+		      	   		}
+		      	   	}
+		      	}
+		    }
+		  }
+		  //]]>
+		</script>
+		<h3>The following users did not receive the blast and may need to be unsubscribed manualy</h3>
+		<table border='1' id="deleteable">
+		<tpt:foreach id="notDelivered" as="nd">
+        	<tpt:setif id="nd.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+       		<tr class="${ROW_STYLE}">  
+       			<td><a href="javascript:deleteUser('${notDelivered[email]}')"><img alt="Delete" title="Delete" border="0" src="/common/images/admin/admin_delete.png" /></a></td>
+       			<td>${nd[email]}</td>
+       			<td>${nd[code]}</td>
+			</tr>
+		</tpt:foreach>
+		</table>
+
+		<h3>The following users did not receive the blast  but could not be found or were marked as inactive in the database.</h3>
+		<table border='1'>
+		<tpt:foreach id="notFound" as="fn">
+        	<tpt:setif id="nf.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+       		<tr class="${ROW_STYLE}">        					
+       			<td>${nf}</td>
+			</tr>
+		</tpt:foreach>
+		</table>
+
+		<h3>The following users were unsubscribed as the email address in no longer valid</h3>
+		<table border='1'>
+		<tpt:foreach id="unsubscribeList" as="uns">
+        	<tpt:setif id="uns.__index__" test="ISODD" var="ROW_STYLE" iftrue="oddrow" iffalse="evenrow" />
+       		<tr class="${ROW_STYLE}">        					
+       			<td>${uns}</td>
+			</tr>
+		</tpt:foreach>
+		</table> 
+</tpt:body>
