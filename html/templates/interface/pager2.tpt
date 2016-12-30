@@ -1,0 +1,14 @@
+<tpt:body>
+		<div class='form_action ${pager[class]}'>
+			Page ${pager[current_page]} of ${pager[last_page]}
+			<tpt:if id="pager[first_page]" test="EXISTS"><a href="/admin/${pagename}/${pmethod}/1?${querystring}"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+			<tpt:if id="pager[previous_page]" test="EXISTS"><a href="/admin/${pagename}/${pmethod}/${orderpath}${pager[previous_page]}?${querystring}"><img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" /></a></tpt:if>
+			
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/admin/${pagename}/${pmethod}/${orderpath}${page}?${querystring}">${page}</a></tpt:if>
+			</tpt:foreach>
+			
+			<tpt:if id="pager[next_page]" test="EXISTS"><a href="/admin/${pagename}/${pmethod}/${orderpath}${pager[next_page]}?${querystring}"><img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" /></a></tpt:if>
+			<tpt:if id="pager[last_page]" test="EXISTS"><a href="/admin/${pagename}/${pmethod}/${orderpath}${pager[last_page]}?${querystring}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if>			
+		</div>
+</tpt:body>

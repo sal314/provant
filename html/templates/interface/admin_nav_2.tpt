@@ -1,0 +1,20 @@
+<tpt:body>
+		<div class='form_action'>
+			<tpt:if id="admin_ctls" test="AND" value="16">
+        		<a href="/admin/${pagename}/Insert"><img alt="Add Entry" title="Add Entry" border="0" src="/common/images/admin/admin_add.png" /></a>
+        	</tpt:if>
+			<tpt:if id="admin_ctls" test="AND" value="32">
+			<a href="/admin/${pagename}/SearchIndex"><img alt="Find Entry" title="Find Entry" border="0" src="/common/images/admin/admin_find.png" /></a>
+			</tpt:if>
+			Page ${pager[current_page]} of ${pager[last_page]}
+			<tpt:if id="pager[first_page]" test="EXISTS"><a href="/admin/${pagename}/Index/1"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+			<tpt:if id="pager[previous_page]" test="EXISTS"><a href="/admin/${pagename}/Index/${orderpath}${pager[previous_page]}"><img alt="Previous page" title="Previous Page" border="0" src="/common/images/admin/admin_previous.png" /></a></tpt:if>
+			
+			<tpt:foreach id="pager" as="page">
+				<tpt:if id="page.__key__" test="STARTSWITH" value="page"><a href="/admin/${pagename}/Index/${orderpath}${page}">${page}</a></tpt:if>
+			</tpt:foreach>
+			
+			<tpt:if id="pager[next_page]" test="EXISTS"><a href="/admin/${pagename}/Index/${orderpath}${pager[next_page]}"><img alt="Next page" title="Next Page" border="0" src="/common/images/admin/admin_next.png" /></a></tpt:if>
+			<tpt:if id="pager[last_page]" test="EXISTS"><a href="/admin/${pagename}/Index/${orderpath}${pager[last_page]}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if>			
+		</div>
+</tpt:body>

@@ -1,0 +1,52 @@
+<tpt:body>
+	<div class='form_action'>
+		<tpt:if id="admin_ctls" test="AND" value="16">
+			<a href="/${pagename}/Insert"><img alt="Add Entry" title="Add Entry" border="0" src="/common/images/admin/admin_add.png" /></a>
+		</tpt:if>
+		<tpt:if id="admin_ctls" test="AND" value="32">
+			<a href="/${pagename}/SearchIndex"><img alt="Find Entry" title="Find Entry" border="0" src="/common/images/admin/admin_find.png" /></a>
+		</tpt:if>
+		
+		<?php /*
+		Page ${pager[current_page]} of ${pager[last_page]}
+		<tpt:if id="pager[first_page]" test="EXISTS"><a href="/${pagename}/Index/1"><img alt="1st page" title="1st Page" border="0" src="/common/images/admin/admin_first.png" /></a></tpt:if>
+		*/ ?>
+		
+		<tpt:if id="pager[previous_page]" test="EXISTS">
+			<a href="/${pagename}/Index/${orderpath}/${pager[previous_page]}">Previous</a>
+		</tpt:if>
+		
+<!-- [CDATA[
+		<tpt:foreach id="pager" as="page">
+			<tpt:if id="page.__key__" test="STARTSWITH" value="page">
+
+  Unfortunately the template parser cannot compare two variables.  I've run into this
+  before - pain.  I have created a parallel array 'pagetype' that is either a "<span>" or an "<a>"
+  based on if it's the current page or not.  So this loop is commented out and a much
+  smaller one is below to drop the HTML in.....Scott
+
+				[${pager.current_page}][${page}]
+				<tpt:if id="pager.current_page" test="EQ" value="page">
+
+				${pagetype[1]}
+				<tpt:if id="pagetype[${page}]" test="EQ" value="a">
+					<a href="/${pagename}/Index/${orderpath}/${page}">${page}</a>
+				</tpt:if>
+				<tpt:else>
+					<span class="currentPage">${page}</span>
+				</tpt:else>				
+			</tpt:if>
+		</tpt:foreach>
+]] -->
+		<tpt:foreach id="pagetype" as="pt">
+			${pt}
+		</tpt:foreach>
+
+		<tpt:if id="pager[next_page]" test="EXISTS">
+			<a href="/${pagename}/Index/${orderpath}/${pager[next_page]}">Next</a>
+		</tpt:if>
+		
+		<?php /*
+		<tpt:if id="pager[last_page]" test="EXISTS"><a href="/${pagename}/Index/${orderpath}${pager[last_page]}"><img alt="Last page" title="Last Page" border="0" src="/common/images/admin/admin_last.png" /></a></tpt:if> */ ?>
+	</div>
+</tpt:body>

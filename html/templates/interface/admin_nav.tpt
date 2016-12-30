@@ -1,0 +1,28 @@
+<tpt:body>
+<!-- [CDATA[
+	<form name="admin_logout" id="admin_logout" method="post" action="/admin/zAdmin/Logout"  style="display:inline;">
+]] -->
+	<br />
+	<form name="admin_logout" id="admin_logout" method="post" action="/Landing/logout"  style="display:inline;">
+		<a href="javascript:ZMEDIA.logout()"><img border="0" alt="Log out" title="Log out" src="/common/images/admin/admin_log-out.png" /></a>
+	</form>
+	<form id="admin_nav" name="admin_nav" style="display:inline;">
+		<select name="admin_page_sel" id="admin_page_sel">
+		<tpt:foreach id="results" as="result">
+			<tpt:if id="result[selected]" test="EQ" value="true">
+				<option selected='selected' value="/admin/${result[page]}/Index">${result[name]}</option>
+			</tpt:if><tpt:else>
+				<option value="/admin/${result[page]}/Index">${result[name]}</option>
+			</tpt:else>
+		</tpt:foreach>		
+		</select><a href="javascript:ZMEDIA.goToAdminPage()"><img border="0" alt="Go To Page" title="Go To Page" src="/common/images/admin/admin_go.png" /></a>
+	</form>
+	<tpt:foreach id="results" as="result">
+	<ul>
+	<li><a href="/admin/${result[page]}/Index">${result[page]}</a></li>
+	
+	</ul>
+	
+	
+	</tpt:foreach>	
+</tpt:body>
