@@ -1,0 +1,434 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#additional-details').hide();
+		$('#additional-click').toggle(function() {
+			$('#additional-details').slideDown();
+			$(this).text('Hide additional measurements');
+		}, function() {
+			$('#additional-details').slideUp();
+			$(this).text('Show additional measurements');
+		});
+	});
+
+	function calculateRatio() {
+		var hips = document.getElementById('hips');
+		var waist = document.getElementById('waist');
+		if (hips.value.length > 0) {
+			if (waist.value.length > 0) {
+				if (hips.value > 0) {
+					var ratio = document.getElementById('waisthipratio');
+					var r = new Number(waist.value / hips.value);
+					ratio.value = r.toFixed(2);
+				}
+			}
+		}
+	}
+</script>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Body Measurements Tracker<br /><small>Resources and Tools</small></h1>
+	</div>	
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+
+	<div class="left w-75p measure">
+	<h3>Waist to Hip Ratio </h3> <br />
+		<p>Your waist to hip ratio is an important tool that helps you determine your overall health risk. People with more weight around their waist are at greater risk of lifestyle related diseases such as heart disease and diabetes than those with weight around their hips. </p>
+		
+		<p><a href="javascript:showWin('/TrackerMeasurements/showWaist')" style="text-decoration:underline">How to Calculate Waist/Hip Ratio?</a></p>
+
+		<p>To determine if you have a healthy waist to hip ratio, use a measuring tape to measure the circumference of your hips at the widest part of your buttocks. Then measure your waist at the smaller circumference of your natural waist, usually just above the belly button.</p>
+		
+		
+		
+		
+		<br />
+		
+		
+<form  method="post" action="/TrackerMeasurements/AddEntry/?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">		
+		
+		<h3>Enter Body Measurements</h3>
+		<br />
+		<div id="entry" class="bold">
+				<div class="entryform">
+						
+						<input class="right" type="submit" value="Add Entry"/>
+						<div class="entryarea right">
+							<label>Waist/Hip Ratio: </label><input class="tinyForm" style="margin-right:5px" type="text" name="waisthipratio" id="waisthipratio" value="${post[wh_ratio]}" readonly="true" /> &amp;nbsp;
+						</div>
+						<div class="entryarea right">
+							<label>Hips: </label><input class="tinyForm" style="margin-right:5px" type="text" name="hips" id="hips" onblur="calculateRatio();" value="${post[hips]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/> &amp;nbsp;
+						</div>
+						<div class="entryarea right">
+							<label>Waist: </label><input class="tinyForm" style="margin-right:5px" type="text" name="waist" id="waist" onblur="calculateRatio();" value="${post[waist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/> &amp;nbsp;
+						</div>
+						
+						<div class="left datepicker">
+							<div class="trackerCal">Date: &amp;nbsp;
+	
+							<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+							<a href="javascript:void(0);" onclick="showCalendarDialog(event, 210, 259, 'past');"><img src="/assets/media/images/calendar.gif" alt="Calendar"/></a>
+							<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+							</div>
+						</div>
+				</div>
+				<div class="clear"> </div>
+			<!-- [CDATA[	<div class="right"><a id="additional-click" href="#"> &gt; Enter additional measurements</a></div>	]]-->	
+
+			</div>
+	<br />
+		
+	<div class="ITtables">
+	
+	<table cellpadding="8" cellspacing="0" style="width:632px;">
+		<thead>
+			<th colspan="3" style="background-color:#ECE9E9; color:#000;">Waist to Hip Ratio Chart</th>
+		</thead>
+		
+		<tbody>
+	
+			<tr style="background-color:#ECE9E9; color:#000;" >			
+				<td align="center">Health Risk Based Solely on WHR</td>
+				<td align="center">Male</td>
+				<td align="center">Female</td>
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;" align="center">Low Risk</td>
+				<td style="background-color:#FFF;" align="center">0.95 or below</td>
+				<td style="background-color:#FFF;" align="center">0.80 or below</td>
+
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;" align="center">Moderate Risk</td>			
+				<td style="background-color:#fff; color:orange;" align="center">0.96 to 1.0</td>
+				<td style="background-color:#FFF; color:orange;" align="center">0.81 to 0.85</td>
+
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;" align="center">High Risk</td>			
+				<td style="background-color:#fff; color:red" align="center">1.0+</td>
+				<td style="background-color:#FFF; color:red" align="center">0.86+</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<!-- [CDATA[	<div id="additional-details">
+			<table id="additional" class="datagrid" cellpadding="4">
+				<tbody>
+					<tr>
+						<td>Bust</td>
+						<td>
+							<input type="text" class="tinyForm" name="bust" value="${post[bust]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						<td>Below Bust</td>
+						<td>
+							<input type="text" class="tinyForm" name="below_bust" value="${post[below_bust]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+
+						<td>Forearm</td>
+						<td>
+							<input type="text" class="tinyForm" name="forearm" value="${post[forearm]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>	
+						</td>
+					
+						
+						<td>Wrist</td>
+						<td>
+							<input type="text" class="tinyForm" name="wrist" value="${post[wrist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						
+					</tr>
+					<tr>	
+						
+						<td>Left Calf</td>
+						<td>
+							<input type="text" class="tinyForm" name="left_calf" value="${post[left_calf]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						<td>Right Calf</td>
+						<td>
+							<input type="text" class="tinyForm" name="right_calf" value="${post[right_calf]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+
+						<td>Left Thigh</td>
+						<td>
+							<input type="text" class="tinyForm" name="left_thigh" value="${post[left_thigh]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						<td>Right Thigh</td>
+						<td>
+							<input type="text" class="tinyForm" name="right_thigh" value="${post[right_thigh]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Left Arm</td>
+						<td>
+							<input type="text" class="tinyForm" name="left_arm" value="${post[left_arm]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						<td>Right Arm</td>
+						<td>
+							<input type="text" class="tinyForm" name="right_arm" value="${post[right_arm]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+
+						<td>Abdomen</td>
+						<td>
+							<input type="text" class="tinyForm" name="abdomen" value="${post[abdomen]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+						</td>
+						<td>
+							&amp;nbsp;
+						</td>
+						<td>
+							&amp;nbsp;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div> 
+		
+		]]-->
+		
+		<br />
+	</form> 
+	
+		<!-- [CDATA[ 	
+	<div style="margin-top:5px; overflow:hidden;">
+
+<h3>Waist to Hip Ratio </h3><br />
+
+	<p>Waist-to-hip ratio (WHR) looks at the relationship between the differences in the measurements of waist and hips. It is generally accepted that, for most people, carrying extra weight around their middle ("apple shape") increases health risks more than carrying extra weight around their hips or thighs ("pear shape"). <br /><a href="javascript:showWin('/TrackerMeasurements/showWaist')" style="text-decoration:underline">How to Calculate Waist/Hip Ratio?</a></p>
+	
+
+	<div class="clear"> </div>
+	
+	</div> ]]-->
+
+<br />
+
+
+	<tpt:if id="data_points" test="GT" value="0">
+	<div id="log">
+	<h4>Measurement Log</h4>
+		<div class="logselect">
+		Show: <a href="/TrackerMeasurements/Index/?log=week">Past Week</a> | <a href="/TrackerMeasurements/Index/?log=month">Past Month</a> | <a href="/TrackerMeasurements/Index/">Full Log</a>
+		</div>
+		<br />
+		<div class="message-center">
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<th>Date</th>		
+					<th>Waist</th>
+					<th>Hips</th>
+					<th>Waist/Hip Ratio</th>
+					<th colspan="2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="log" as="entry">
+					<tr>
+						<td>${entry[de]}</td>
+						<td>${entry[waist]}</td>
+						<td>${entry[hips]}</td>
+						<td>${entry[wh_ratio]}</td>
+					<!-- [CDATA[	<td>
+							<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+							<tpt:else>${entry[enter_name]}</tpt:else>
+						</td> ]]-->
+						
+						<td class="dg-col-edit"><a href="/TrackerMeasurements/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerMeasurements/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		</div>
+		<br />
+		<br />
+		
+		<!-- [CDATA[
+		
+		<h3>Upper Body</h3>
+		<br />
+		<div class="message-center">
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Bust</th>
+					<th>Below Bust</th>
+					<th>Forearm</th>					
+					<th>Left Arm</th>
+					<th>Right Arm</th>
+					<th>Abdomen</th>
+					<th colspan="2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="log" as="entry">
+					<tr>
+						<td>${entry[de]}</td>
+						<td>${entry[bust]}</td>
+						<td>${entry[below_bust]}</td>
+						<td>${entry[forearm]}</td>
+						<td>${entry[left_arm]}</td>
+						<td>${entry[right_arm]}</td>
+						<td>${entry[abdomen]}</td>
+						<td>
+							<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+							<tpt:else>${entry[enter_name]}</tpt:else>
+						</td>
+
+						<td class="dg-col-edit"><a href="/TrackerMeasurements/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerMeasurements/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		</div>
+		<br />
+		<br />
+		
+		<h3>Lower Body</h3>
+		<br />
+		<div class="message-center">
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Left Thigh</th>
+					<th>Right Thigh</th>
+					<th>Left Calf</th>
+					<th>Right Calf</th>
+					<th colspan="2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="log" as="entry">
+					<tr>
+						<td>${entry[de]}</td>
+						<td>${entry[left_thigh]}</td>
+						<td>${entry[right_thigh]}</td>
+						<td>${entry[left_calf]}</td>
+						<td>${entry[right_calf]}</td>
+						<td>
+							<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+							<tpt:else>${entry[enter_name]}</tpt:else>
+						</td>
+						
+						<td class="dg-col-edit"><a href="/TrackerMeasurements/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerMeasurements/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		</div> ]]-->
+		<br />
+		<br />
+	
+	</div>
+	</tpt:if>
+	<div class="clear"> </div>		
+		
+	</div>
+	<div class="clear"> </div>		
+</div>
+
+
+
+
+<!--[CDATA[
+<td class="dg-col-edit"><a href="/TrackerMeasurements/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerMeasurements/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		<br />
+		
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Bust</th>
+					<th>Below Bust</th>
+					<th>Forearm</th>					
+					<th>Waist</th>
+					<th>Hips</th>
+					<th>Left Thigh</th>
+					<th>Right Thigh</th>
+					<th>Left Calf</th>
+					<th>Right Calf</th>
+					<th>Left Arm</th>
+					<th>Right Arm</th>
+					<th>Abdomen</th>
+
+					<th>Total</th>
+					<th colspan="2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="log" as="entry">
+					<tr>
+						<td>${entry[de]}</td>
+						<td>${entry[bust]}</td>
+						<td>${entry[below_bust]}</td>
+						<td>${entry[forearm]}</td>
+						<td>${entry[waist]}</td>
+						<td>${entry[hips]}</td>
+						<td>${entry[left_thigh]}</td>
+						<td>${entry[right_thigh]}</td>
+						<td>${entry[left_calf]}</td>
+						<td>${entry[right_calf]}</td>
+						<td>${entry[left_arm]}</td>
+						<td>${entry[right_arm]}</td>
+						<td>${entry[abdomen]}</td>
+						<td>${entry[total]}</td>
+						<td>
+							<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+							<tpt:else>${entry[enter_name]}</tpt:else>
+						</td>
+						
+						
+						
+						<td class="dg-col-edit"><a href="/TrackerMeasurements/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerMeasurements/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+		<br />
+]]-->
+
+
+
+
+</tpt:body>
+
+
+

@@ -1,0 +1,154 @@
+<tpt:body>
+	<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript" src="/assets/js/ExPlan.js"></script>
+	<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+<div class="inner-content tracker" id="Container">
+	<div id="section-header">
+		<h1>Exercise Planner<br /><small>Resources and Tools</small></h1>
+	</div>
+	<div class="w-25p right">
+		<div class="stack last">
+			<h3>Select a Tracker</h3>
+			<div class="sidebar">
+				<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+					<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+					<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+					<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+					<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+					<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+					<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+					<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+				</ul>
+			</div> 
+		</div>
+	</div>
+
+	<div class="left w-75p">
+	
+
+	
+	<div class="menu-controls exercise">
+		<div class="menu-search left">
+			<h3>Search for an Exercise Plan</h3><br />
+		</div>
+		<div class="menu-select right">
+			<tpt:if id="uPlans" test="HASELEMENTS">
+				<form id="SelectPlanForm" method="post" action="/WorkoutPlan/Display">
+					<div style="width:50%; height:200px;" id="SelectExPlan">
+						<h3>Show Your User Defined Exercise Plan</h3>
+						<label>Plan to Show:
+							<select name="ExPlanID" id="ExPlanID">
+								<tpt:html type="select-options" data="${uPlans}" />
+							</select>
+						</label>
+						<a href="#" onclick="getExPlanDetails(); return false;" class="next right">Go</a>
+					</div>
+				</form>
+			</tpt:if>
+			<h3><a href="/WorkoutPlan/Supplemental">Manage Supplemental Exercises</a></h3>
+			<div class="clear"> </div>
+		</div>
+	</div>
+
+	<div class="MPSource EPSource">
+
+		<div id="menuList" class="menuList right">
+			<div id="planList">
+				<tpt:setvar id="idx" value="1" />
+				<tpt:foreach id="ePlans" as="sp">
+				  <input type="hidden" id="EPidx${idx}" value="${sp[plan][id]]}" />
+					<input type="hidden" id="Exn${sp[plan][id]}" value="${sp[plan][name]}" />
+					<input type="hidden" id="ExTyp${sp[plan][id]}" value="${sp[plan][category]}" />
+					<input type="hidden" id="ExLevel${sp[plan][id]}" value="${sp[plan][level]}" />
+					<tpt:modvar id="idx" op="++" />
+				</tpt:foreach>
+	
+				<div id="PLContent">
+					<tpt:foreach id="ePlans" as="sp">
+						<a href="#" onclick="selectPlan(${sp[plan][id]}); return false;"><span>${sp[plan][name]}</span></a><br />
+					</tpt:foreach>
+				</div>
+			</div>
+		</div>
+
+		<div class="filterPlans filterMenu left">
+			<div class="blue">Filter By:</div>
+			<br />
+			<select name="PlanCategory" id="PlanCategory" class="left">
+				<tpt:html type="select-options" data="${planCategory}" selected="${PT}" />
+			</select><br />
+
+			<select name="PlanLevel" id="PlanLevel" class="left">
+				<tpt:html type="select-options" data="${planLevel}" selected="${PL}" />
+			</select><br />
+
+			<div id="submit-button" class="left">
+				<a href="#" onclick="filterPlans(); return false;" class="submit next">Submit</a>
+			</div><br />
+
+			<div class="clear"> </div>
+
+			<input type="hidden" name="selectedDay" id="selectedDay" />
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+</div>
+<div class="clear"> </div>
+<div>
+<p>To create your custom exercise plan select a day from the pre-defined exercise plan in the right column.  Move it to your exercise plan by selecting the option under the chosen day in the left column.</p>
+</div>
+
+	<form method="post" id="PlanForm" action="/WorkoutPlan/SaveUserPlan">
+		<div class="menuHolder">
+			<div id="srcPlan">
+			</div>
+			<div class="left">
+				<h3>Custom Exercise Plan: <input type="text" name="UserPlanName" id="UserPlanName" value="${UserPlanName}" /></h3>
+				<div class="planTab">
+					<tpt:setvar id="dayNum" value="1" />
+					<tpt:while id="dayNum" test="LE" value="7">
+						<div id="UPDay${dayNum}_tab" style="float:left;"><a href="#" onclick="displayUserPlan(${dayNum}); return false;"><span class="dayName">Day ${dayNum}</span></a></div>
+						<tpt:modvar id="dayNum" op="++" />
+					</tpt:while>
+				</div>
+				<div class="clear"> </div>
+				<div class="border" style="width:400px; min-height:140px">			
+					<input type="hidden" name="PlanName" id="PlanName" value="${UserPlanName}" />	
+		
+					<tpt:setvar id="dayNum" value="1" />
+					<tpt:setvar id="display" value="block" />
+		
+					<tpt:while id="dayNum" test="LE" value="7">
+						<div id="UPDay${dayNum}_content" style="display:${display};">
+							<a href="#" onclick="moveExercises(${dayNum}); return false;"><span class="dayName">Day ${dayNum}</span></a>
+							<div id="exercise${dayNum}" class="ExList"> </div>
+						</div>
+						<tpt:modvar id="dayNum" op="++" />
+						<tpt:setvar id="display" value="none" />
+					</tpt:while>
+					<input type="hidden" name="UPDay" id="UPDay" value="1" />
+					<div class="clear"> </div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+			<a href="#" onclick="submitPlanForm(); return false;" class="next right">Next</a>
+		</div>
+	</form>
+</div>
+
+<div class="clear"> </div>
+
+<script type="text/javascript">
+	displayUserPlan(1); // AW: Call out first meal display
+</script>
+
+</tpt:body>

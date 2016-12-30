@@ -1,0 +1,52 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content portionPlate">
+	<div id="section-header">
+		<h1>Portion Plate<br /><small>Anatomy of a Plate</small></h1>
+	</div>
+	
+	<div class="right">
+		<img src="/assets/media/images/portionplate.jpg" alt=" " />
+	</div>
+	
+	<div>
+		<h3>Balance your plate</h3>
+		<ul>
+			<li>Fill 1/4 of your plate with lean meat, poultry or fish.</li>
+			<li>Fill 1/4 of your plate with whole grains or starchy vegetables.</li>
+			<li>Fill 1/2 or more of your plate with fruits or vegetables.</li>
+		</ul>
+		
+		<h3>A healthy dietary intake includes a variety of:</h3>
+		<ul>
+			<li>Fruits</li>
+			<li>Vegetables</li>
+			<li>Whole Grains</li>
+			<li>Low-fat Dairy Products</li>
+			<li>Lean meats, poultry, fish, beans, eggs and nuts</li>
+		</ul>
+		
+		<h3>There are many benefits to a healthy diet</h3>
+		<ul>
+			<li>Vegetables, fruits, whole grains and beans are low in calories and full of vitamins and minerals.  Filling 3/4 of your plate with these foods may reduce your risk of cancer and heart disease and help you to lose weight.</li>
+			<li>Fruits and vegetables are full of antioxidants, B-vitamins, phyto-chemicals, and fiber. Aim for a variety of colors.</li>
+		</ul>
+		
+		<h3>Tips for a healthy diet:</h3>
+		<ul>
+			<li>Enjoy fruit for a snack or with meals, be sure to limit portions of fruit juice.</li>
+			<li>Choose lean meats and skinless poultry since they are low in saturated fat and calories. Limit portions of meat to 2-3 oz per meal, or the size of a deck of cards.</li>
+			<li>Balancing your plate helps to control portion size. Try using a smaller plate (10") if you are trying to lose weight. </li>
+			<li>Plan on low-fat dairy products which include skim or 1% milk, low-fat yogurt, and calcium fortified soy products.</li>
+			<li>Make at least half of your choices per day whole grain and/or unprocessed grains.</li>
+			<li>Enjoy healthy fats like nuts, seeds and nut butter in small amounts.</li>
+			<li>Use olive oil or canola oil.</li>
+			<li>Try baking, broiling, or grilling instead of frying.</li>
+			<li>Drink low or no calorie beverages.</li>
+		</ul>
+		
+		<div class="clear"> </div>
+	</div>
+</div>
+
+</tpt:body>

@@ -1,0 +1,29 @@
+<tpt:body>
+<HTML>
+<HEAD>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		<title>Dietsite - Measure Stride Help</title>
+</HEAD>
+<body bgColor="#ffffff">
+	<div class="inner-content">
+		<h1>How to measure stride:</h1><br />
+	    An individuals stride may vary in length. Input the appropriate length for your average walking length.
+
+	    <div style="text-align:center;">
+	    	<p><img src="/assets/media/pedometer2.jpg"/></p>
+		</div>
+
+
+
+		<p>There are several ways to measure this, but one of the easiest is to make a mark behind your right heel, then walk 10 steps and mark the spot where your right heel ends. Measure that distance and divide by 10. </p>
+		
+		<p>An alternative is to measure a specific distance on the sidewalk, like 20 feet. Start walking before your measured area, so that you are up to your typical walking speed by the time you start counting steps. From your "start" line, measure how many steps it takes you to get to the "finish" line. Divide your 20 feet by the number of steps it took you to get there.</p>
+
+	    <div style="text-align:center;">
+	    	<p><img src="/assets/media/pedometer.jpg"/></p>
+	    </div>
+</div>
+	</body>
+</HTML>
+</tpt:body>

@@ -1,0 +1,220 @@
+<tpt:body>
+	<link href="/assets/css/MealPlan.css" rel="stylesheet" type="text/css" media="screen" />
+<div class="inner-content phip">
+	<div id="section-header">
+		<h1>Add A Supplemental Exercise<br /><small>Exercise Planner</small></h1>
+	</div>
+
+<tpt:setvar id="left" value="0" />
+	<div class="right">
+		<div class="right">
+			<tpt:setvar id="color" value="#efefef" />
+			<tpt:setvar id="lite" value="hilite" />
+			<tpt:foreach id="exercises" as="c">
+				<div id="div${c.__index__}" style="float:left; background:${color} url(/assets/media/images/top-left-${lite}.png) left top no-repeat; margin-left:5px; height:25px">
+					<a style="padding-left:10px; display:block; height:100%; width:100%" href="javascript:tab('${c.__index__}')">
+						<span id="spn${c.__index__}" style="background: ${color} url(/assets/media/images/top-right-${lite}.png) right top no-repeat; padding:0 10px 0 0">${c.__key__}</span>
+					</a>
+				</div>
+				<tpt:setvar id="color" value="#c3c3c3" />
+				<tpt:setvar id="lite" value="lolite" />
+			</tpt:foreach>
+		</div>
+		<div class="clear"> </div>
+		<form  method="post" action="/WorkoutPlan/AddExercise" id="addfrm">  	
+			<input type="hidden" name="category" id="category" value="cardio" />
+			<div>
+				<input type="text" value="name" name="name" id="name"/>
+				Day <select name="day" id="day">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				</select>
+				<div id="dsets" style="display:none;">
+					Sets <input type="text" name="sets" id="sets" size="10" />
+				</div>
+				<div id="dreps" style="display:none">
+					Reps <input type="text" name="reps" id="reps" size="10" />
+				</div>
+				<div id="dweight" style="display:none">
+					Weight <input type="text" name="weight" id="weight" size="10" />
+				</div>
+				<div id="dduration" style="display:inline;">
+					Duration <input type="text" name="duration" id="duration" size="10" />
+				</div>
+				<div id="dMETs" style="display:inline;">
+					METs <input type="text" name="METs" id="METs" size="10" />
+				</div>
+				<div id="dcalories" style="display:inline;">
+					OR&amp;nbsp;&amp;nbsp;&amp;nbsp;Calories burned <input type="text" name="calories" id="calories" size="10" />
+				</div>
+				<input type="button" value="Add Entry" onclick="submitButton();"/> 
+			</div>
+		</form>
+	</div>
+	<div class="clear"> </div>
+  <tpt:foreach id="exercises" as="c">
+    <tpt:setif id="c.__index__" test="EQ" value="0" var="style" iftrue="display:block;" iffalse="display:none;"/>
+    <div id="tab_${c.__index__}" style="${style}">
+    	<tpt:setvar id="title" value="${c.__key__}" />
+    	<tpt:if id="title" test="EQ" value="stretch">
+    		<tpt:setvar id="title" value="stretching" />
+    	</tpt:if>    	
+    	<tpt:foreach id="c" as="col">
+    		<tpt:if id="col" test="HASELEMENTS">
+    			<div style="width:250px; margin-right:20px; float:left">
+    				<tpt:if id="col.__key__" test="NE" value="column 2">
+						<tpt:if id="col.__key__" test="NE" value="column 3">
+    						<h4 style="margin-left:20px;">${col.__key__}</h4>
+						</tpt:if>
+    				</tpt:if>
+					<tpt:else>
+						<h4 style="margin-left:20px;">More</h4>
+					</tpt:else>
+    				<ul>
+    					<tpt:foreach id="col" as="row">
+    						<li><a href="#" onclick="setEx(this,'${row[id]}')">${row[name]}</a></li>
+    						<input type="hidden" id="mets${row[id]}" value="${row[METs]}" />
+    					</tpt:foreach>
+    				</ul>
+    			</div>
+    		</tpt:if>
+    	</tpt:foreach> 
+		<div class="clear"> </div> 	    	
+    </div>
+  </tpt:foreach>
+  <div class="clear"> </div>
+	<a href="/WorkoutPlan/Create">Back to the Exercise Planner</a>
+  <div class="clear"> </div>
+  <script type="text/javascript">
+  <![CDATA[
+  	function tab(i){
+  		var div;
+  		var spn;
+  	  for(x=0;x<=4;x++){
+  	  	document.getElementById("tab_"+x).style.display=(x==i)?"block":"none";
+  	  	div = document.getElementById("div"+x);
+  	  	div.style.backgroundColor = "#c3c3c3"
+  	  	div.style.backgroundImage = "url(/assets/media/images/top-left-lolite.png)";
+  	  	spn = document.getElementById("spn"+x);
+  	  	spn.style.backgroundColor = "#c3c3c3"
+  	  	spn.style.backgroundImage = "url(/assets/media/images/top-right-lolite.png)";
+  	  }
+  	  div = document.getElementById("div"+i);
+  	  div.style.backgroundColor = "#efefef";
+  	  div.style.backgroundImage = "url(/assets/media/images/top-left-hilite.png)";
+  	  spn = document.getElementById("spn"+i);
+  	  spn.style.backgroundColor = "#efefef";
+  	  spn.style.backgroundImage = "url(/assets/media/images/top-right-hilite.png)";
+
+  	  document.getElementById("name").value = "";
+  	  if (i == 0) {
+  	  	document.getElementById('dsets').style.display = "none";
+  	  	document.getElementById('dreps').style.display = "none";
+  	  	document.getElementById('dweight').style.display = "none";
+  	  	document.getElementById('dduration').style.display = "inline";
+  	  	document.getElementById('dMETs').style.display = "inline";
+  	  	document.getElementById('METs').value = "";
+  	  	document.getElementById('dcalories').style.display = "inline";
+				document.getElementById('category').value = "cardio";
+  	  }
+  	  else if (i == 1) {
+  	  	document.getElementById('dsets').style.display = "inline";
+  	  	document.getElementById('dreps').style.display = "inline";
+  	  	document.getElementById('dweight').style.display = "inline";
+  	  	document.getElementById('dduration').style.display = "none";
+  	  	document.getElementById('dMETs').style.display = "none";
+  	  	document.getElementById('dcalories').style.display = "none";
+  	  	document.getElementById('category').value = "core";
+			}
+			else if (i == 2) {
+  	  	document.getElementById('dsets').style.display = "inline";
+  	  	document.getElementById('dreps').style.display = "inline";
+  	  	document.getElementById('dweight').style.display = "inline";
+  	  	document.getElementById('dduration').style.display = "none";
+  	  	document.getElementById('dMETs').style.display = "none";
+  	  	document.getElementById('dcalories').style.display = "none";
+  	  	document.getElementById('category').value = "lower body";
+			}
+			else if (i == 3) {
+  	  	document.getElementById('dsets').style.display = "inline";
+  	  	document.getElementById('dreps').style.display = "inline";
+  	  	document.getElementById('dweight').style.display = "inline";
+  	  	document.getElementById('dduration').style.display = "none";
+  	  	document.getElementById('dMETs').style.display = "none";
+  	  	document.getElementById('dcalories').style.display = "none";
+  	  	document.getElementById('category').value = "upper body";
+			}
+			else if (i == 4) {
+  	  	document.getElementById('dsets').style.display = "inline";
+  	  	document.getElementById('dreps').style.display = "inline";
+  	  	document.getElementById('dweight').style.display = "none";
+  	  	document.getElementById('dduration').style.display = "none";
+  	  	document.getElementById('dMETs').style.display = "none";
+  	  	document.getElementById('dcalories').style.display = "none";
+  	  	document.getElementById('category').value = "stretch";
+			}
+  	}
+
+  	function setEx(a,value){  	  
+  	  document.getElementById("name").value=a.innerText;
+  	  document.getElementById("METs").value = document.getElementById("mets"+value).value;
+  	}
+
+		function submitButton() {
+			var cat = document.getElementById('category');
+			if (cat.value == "cardio") {
+				var dur = document.getElementById('duration');
+				if (dur.value.length == 0) {
+					alert('Cardio exercises require a duration in minutes');
+					dur.focus();
+					return false;
+				}
+				var mets = document.getElementById('METs');
+				var cals = document.getElementById('calories');
+				if (mets.value.length == 0) {
+					if (cals.value.length == 0) {
+						alert('Cardio exercises require a value for either METs or calories burned')
+						mets.focus();
+						return false;
+					}
+				}
+			}
+			else if ((cat.value == "lower body") || (cat.value == "upper body") || (cat.value == "core")) {
+				var sets = document.getElementById('sets');
+				if (sets.value.length == 0) {
+					alert('Strength exercises require a number of sets');
+					return false;
+				}
+				var reps = document.getElementById('reps');
+				if (reps.value.length == 0) {
+					alert('Strength exercises require a number of repititions (reps)');
+					return false;
+				}
+			}
+			else if (cat.value == "stretch") {
+				var sets = document.getElementById('sets');
+				if (sets.value.length == 0) {
+					alert('Stretching exercises require a number of sets');
+					return false;
+				}
+				var reps = document.getElementById('reps');
+				if (reps.value.length == 0) {
+					alert('Stretching exercises require a number of repititions (reps)');
+					return false;
+				}
+			}
+
+			var frm = document.getElementById('addfrm');
+			frm.submit();
+			return true;
+		}
+
+  	]]>
+  </script>
+ </div>
+</tpt:body>

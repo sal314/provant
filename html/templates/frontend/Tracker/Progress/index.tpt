@@ -1,0 +1,207 @@
+<tpt:body>
+<script type="text/javascript">
+$(function() {
+	$('.progressValue').hide();
+	
+	$('.expand').hover(function() {
+		$(this).addClass('hover');
+	},
+	function() {
+		$(this).removeClass('hover');
+	});
+	
+	$('.expand').toggle(function(event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		$('.progressValue', this).slideDown().show();
+		return false;
+	},
+	function(event) {
+		event.preventDefault();
+		event.stopImmediatePropagation();
+		$('.progressValue', this).slideUp().hide();
+		return false;
+	})
+});
+</script>
+
+<div class="inner-content phip progress tracker">
+	<div id="section-header">
+		<h1>My Progress<br /><small>Resources and Tools</small></h1>
+	</div>
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+	
+
+	<div class="w-75p left">
+		<p>Tracking your fitness and health progress is one of the best ways to stay healthy. Staying motivated is a big part of success, and we can help you measure your results, track your progress, and see how your diet and exercise work together. We keep track of everything for you.</p><br />
+		<div class="weight">
+			<tpt:if id="ifm" test="EQ" value="1">
+			<div><span class="blue right">${ifscore}</span><span>iFOCUS score:</span></div>
+			</tpt:if>
+			<tpt:else>
+			<div><span class="blue right">You have not taken the iFOCUS health assessment</span></div>
+			</tpt:else>
+			<br />
+			<div><span class="blue right">${weight}</span><span>My current weight (${wt_date}): </span></div>
+			<div><span class="blue right">${BMI}</span><span>My BMI: </span></div>
+			<div><span class="blue right">${goal} lbs</span><span>Goal Weight: </span></div>
+			<div><span class="blue right">${dist} lbs</span><span>Distance from goal weight: </span></div>
+			<div><span class="blue right">${change} lbs ${direction}</span><span>Change of weight from start date: </span></div>
+			<br />
+			<tpt:if id="bp" test="HASELEMENTS">
+			<div><span class="blue right">${bp[systolic]} mmHg</span><span>Blood Pressure Systolic (upper number):</span></div>
+			<div><span class="blue right">${bp[diastolic]} mmHg</span><span>Blood Pressure Diastolic (lower number):</span></div>
+			<br />
+			</tpt:if>
+			<tpt:if id="cholesterol" test="HASELEMENTS">
+			<div><span class="blue right">${cholesterol[total]} mg/DL</span><span>Total Cholesterol:</span></div>
+			<div><span class="blue right">${cholesterol[hdl]} mg/DL</span><span>HDL Cholesterol (Good):</span></div>
+			<div><span class="blue right">${cholesterol[hdl_ratio]}</span><span>TC/HDL Ratio:</span></div>
+			<div><span class="blue right">${cholesterol[ldl]} mg/DL</span><span>LDL Cholesterol (Bad):</span></div>
+			<div><span class="blue right">${cholesterol[triglycerides]} mg/DL</span><span>Triglycerides:</span></div>
+			<br />
+			</tpt:if>
+			<tpt:if id="activity" test="HASELEMENTS">
+			<div><span class="blue right">${activity[date_entered]}</span><span>Last Exercise Date:</span></div>
+			<div><span class="blue right">${activity[calories]}</span><span>Calories Burned:</span></div>
+			<br />
+			</tpt:if>
+			<tpt:if id="food" test="HASELEMENTS">
+			<div><span class="blue right">${food[date_entered]}</span><span>Last Food Log Date:</span></div>
+			<div><span class="blue right">${food[calories]} / ${diet[target]}</span><span>Calories Consumed/Target:</span></div>
+			<br />
+			</tpt:if>
+			<div><span class="blue right">${incentive} points</span><span>Incentive Points Earned: </span></div>
+		</div>
+		<div class="clear"> </div>
+		<br />
+		
+		</div>
+	
+	<div class="clear"> </div>
+	<br />
+	<div>
+		<div class="left">
+			<img src="/TrackerWeight/history/1" alt="Weight Tracker" width="420"/>
+			<br /><br />
+			<!--[[CDATA	<img src="/assets/media/images/phip/tempPieChart.jpg" alt="" />]]-->
+		</div>
+		<div class="right">
+			<img src="/TrackerWeight/history/1" alt="Weight Tracker" width="420" />
+			<br /><br />
+			<!--[[CDATA	<img src="/assets/media/images/phip/tempPieChart.jpg" alt="" />]]-->
+		</div>
+		<div class="clear"> </div>
+		
+		
+		
+		
+		
+		<div class="button-content">
+		
+			<div class="right">
+				<div class="stack expand">
+					<img class="left" src="/assets/media/images/phip/activity.jpg" alt="Activity Tracking" />		
+					<div class="intro">
+						<a href="/MyProgress/Index" class="no-pointer">Activity Tracking</a>
+						<p>Coming Soon.</p>
+					<!--[[CDATA		<ul class="progressValue">
+							<li>Last exercise day: <span class="blue"></span></li>
+							<li>Walking  <span class="blue"> </span></li>
+							<li>Total calories burned: <span class="blue"> </span></li> 
+						</ul>]]-->
+					</div>
+				</div>
+				
+				<div class="stack">
+					
+					<img class="left" src="/assets/media/images/phip/nutrient.jpg" alt="Nutrient Needs"  style="margin:0 10px 10px 0;}"/>	
+					<h3 style="margin-bottom:5px;}">Nutrient Needs</h3>
+					<p>The DRIs (Dietary Reference Intake) are actually a set of four reference values: Estimated Average Requirements (EAR), Recommended Dietary Allowances (RDA), Adequate Intakes (AI), and Tolerable Upper Intake Levels, (UL) that have replaced the 1989 Recommended Dietary Allowances (RDAs). RDAs and AIs may both be used as goals for individual intake.  RDAs are set to meet the needs of almost all (97-98 percent) individuals in a group.  For healthy breastfed infants, the AI is the mean intake.  The AI for other life stage and gender groups is believed to cover needs of all individuals in the group, but lack of data or uncertainty in the data prevent being able to specify with confidence the percentage of individuals covered by this intake. </p>	
+
+						<ul style="list-style-type:none">
+							<li>Carbs: <span class="blue">${diet[3]} </span></li>
+							<li>Protein: <span class="blue">${diet[7]} </span></li>
+							<li>Fat:  <span class="blue">${diet[4]} </span></li>
+							<li>Fiber: <span class="blue">${diet[74]} </span></li>
+							<li>Sodium: <span class="blue">${diet[34]} </span></li>
+						<!--[[CDATA	<li>Breakfast: <span class="blue">XXX </span></li>
+							<li>Morning Snack: <span class="blue">XXX </span></li>
+							<li>Lunch: <span class="blue">XXX </span></li>
+							<li>Afternoon Snack: <span class="blue">XXX </span></li>
+							<li>Dinner: <span class="blue">XXX </span></li>
+							<li>Evening Snack: <span class="blue">XXX </span></li> ]]-->
+	
+						</ul>
+
+				</div>
+			</div>
+		
+		
+		
+		
+			<div class="left">
+				<div class="stack expand">
+					<img class="left" src="/assets/media/images/phip/summary.jpg" alt="Weekly Summary" />		
+					<div class="intro">
+						<a href="/MyProgress/Index" class="no-pointer">View Weekly Summary</a>
+						<p>Coming Soon. </p>
+					</div>
+				</div>
+				
+				<div class="stack expand">
+					<img class="left" src="/assets/media/images/phip/health.jpg" alt="Health Tracking" />		
+					<div class="intro">
+						<a href="/MyProgress/Index" class="no-pointer">Health Tracking</a>
+						
+						<p>Coming Soon.</p>
+				<!--[[CDATA			<br /><br /><br /><br />
+					<ul class="progressValue">
+							<tpt:if id="cholesterol" test="HASELEMENTS">
+							<li>Last entered Cholesterol: <span class="blue">${cholesterol[total]} (${cholesterol[date_entered]})</span></li>
+							<li>LDL: <span class="blue">${cholesterol[ldl]}</span></li>
+							<li>HDL: <span class="blue">${cholesterol[hdl]}</span></li>
+							<li>Triglyceride levels: <span class="blue">${cholesterol[triglycerides]}</span></li>
+							<li>Blood pressure (Systolic): <span class="blue">${bp[systolic]} (${bp[date_entered]})</span></li>
+							<li>Blood pressure (Diastolic): <span class="blue">${bp[diastolic]} (${bp[date_entered]})</span></li>
+							<li>Blood glucose (fasting): <span class="blue">${bg[fasting][blood_glucose]} (${bg[fasting][date_entered]} )</span></li>
+							<li>Blood glucose (random): <span class="blue">${bg[random][blood_glucose]} (${bg[random][date_entered]}) </span></li>
+							</tpt:if>  
+						</ul>]]-->
+					</div>
+				</div>
+			</div>	
+			
+			
+			<div class="clear"> </div>
+		</div>	
+		</div>	
+
+</div>
+</tpt:body>
+
+
+
+

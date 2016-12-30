@@ -1,0 +1,11 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+<h1>${exercise[name]}</h1>
+${exercise[description]}
+</body>
+</html>
+</tpt:body>

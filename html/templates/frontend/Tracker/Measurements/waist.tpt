@@ -1,0 +1,103 @@
+<tpt:body>
+<HTML>
+<HEAD>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+		<title>Dietsite - Measure Stride Help</title>
+</HEAD>
+<body bgColor="#ffffff">
+	<div class="inner-content">
+	<h1>How to Calculate Waist/Hip Ratio </h1>
+	
+	<h3>Waist Circumference (WC): </h3>
+	<p>Waist Circumference and Body Mass Index (BMI) are related; however waist circumference may provide an independent prediction of risk in addition to BMI. Fat that accumulates around the stomach area poses a greater health risk than fat stored in the lower half of the body.</p>
+	
+	<h3>Waist to Hip Ratio:</h3>
+	<p>Waist-to-hip ratio (WHR) looks at the relationship between the differences in the measurements of waist and hips. It is generally accepted that, for most people, carrying extra weight around their middle ("apple shape") increases health risks more than carrying extra weight around their hips or thighs ("pear shape"). </p>
+	
+	<h3>Waist Measurement:</h3>
+	<ul>
+		<li>Measure the narrowest part of the waist in inches. This is at or slightly above the navel.</li>
+		<li>Place the end of the tape measure on the side of the waist.</li>
+		<li>Wrap the tape measure around the waist so that the ends come together in the front.</li>
+		<li>Write down this measurement.</li>
+	</ul>
+	<h3>Hip Measurement:</h3>
+	<ul>
+		<li>Measure the widest part of the hip area in inches. This is usually around the buttocks.</li>
+		<li>Place the tape measure at the hip bone.</li>
+		<li>Wrap the tape measure around the hips making sure the two ends meet at the hip bone.</li>
+	</ul>
+	
+	<h3>To Calculate Waist to Hip Ratio:</h3>
+	<ul>
+		<li>Once the measurements are obtained, use a calculator to divide the waist measurement by the hip measurement. For example: </li>
+		<li>32" W</li>
+		<li>35" H </li>
+		<li>32÷35= 0.91 WHR</li>
+	</ul>
+	<br />
+	
+	<table cellpadding="6" cellspacing="0" style="border:solid 1px #000; width:575px; font-size:13px">
+		<thead>
+			<th colspan="3" style="background-color:#053863; color:#FFF; border:solid 1px #000;">Waist Circumference (WC)</th>
+		</thead>
+		
+		<tbody style="border:solid 1px #000;">
+	
+			<tr>
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">WC Health Risk</td>
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">Male</td>
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">Female</td>
+			</tr>
+			<tr>
+				<td style="background-color:#fff;border:solid 1px #000;" align="center">Increased Health Risk</td>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">Above 40in (102cm)</td>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">Above 35in (88cm)</td>
+			</tr>
+	
+		</tbody>
+	</table>
+	<div>
+	
+	<br />
+
+	
+	
+	<table cellpadding="6" cellspacing="0" style="border:solid 1px #000; width:575px; font-size:13px">
+		<thead>
+			<th colspan="3" style="background-color:#053863; color:#FFF; border:solid 1px #000;">Waist to Hip Ratio Chart</th>
+		</thead>
+		
+		<tbody style="border:solid 1px #000;">
+	
+			<tr>			
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">Health Risk Based Solely on WHR</td>
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">Male</td>
+				<td style="background-color:#053863; color:#fff;border:solid 1px #000;" align="center">Female</td>
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">Low Risk</td>
+				<td style="background-color:#fff;border:solid 1px #000;" align="center">0.95 or below</td>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">0.80 or below</td>
+
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">Moderate Risk</td>			
+				<td style="background-color:#fff;border:solid 1px #000; color:orange;" align="center">0.96 to 1.0</td>
+				<td style="background-color:#FFF;border:solid 1px #000; color:orange;" align="center">0.81 to 0.85</td>
+
+			</tr>
+			<tr>
+				<td style="background-color:#FFF;border:solid 1px #000;" align="center">High Risk</td>			
+				<td style="background-color:#fff;border:solid 1px #000; color:red" align="center">1.0+</td>
+				<td style="background-color:#FFF;border:solid 1px #000; color:red" align="center">0.86+</td>
+			</tr>
+		</tbody>
+	</table>
+
+	</div>
+</div>
+	</body>
+</HTML>
+</tpt:body>

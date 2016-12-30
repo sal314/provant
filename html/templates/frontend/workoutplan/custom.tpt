@@ -1,0 +1,104 @@
+<tpt:body>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/ExLog.css" /> 
+	<script type="text/javascript" src="/assets/js/salscal.js"></script>
+	<script type="text/javascript" src="/assets/js/ExPlan.js"></script>
+
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Add a Custom Exercise<br /><small>Resources and Tools</small></h1>
+	</div>
+
+	<tpt:if id="status" test="NE" value="">
+	<div style="padding:20px; background-color:#dd9999; color:red;">
+		<span>${status}</span>
+	</div>
+	</tpt:if>
+
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+					</ul>
+				</div> 
+			</div>
+	</div>
+	<div class="w-75p left">
+
+		<p>You can add a custom exercise to your workout plan by entering the details outlined below.  For cardio exercises you will need to know the Metobolic Equivalent of Task or METs for the exercise.  As a guideline here is a list:</p>
+		<table border="0">
+			<tr>
+			<td>Walking 3.0 MPH (moderate pace)</td>
+			<td>METs = 3.3</td>
+			</tr>
+			<tr>
+			<td>Walking 4.0 MPH (brisk pace)</td>
+			<td>METs = 5.0</td>
+			</tr>
+			<tr>
+			<td>Swimming laps (moderate effort)</td>
+			<td>METs = 7.0</td>
+			</tr>
+			<tr>
+			<td>Snow skiing downhill (moderate effort)</td>
+			<td>METs = 6.0</td>
+			</tr>
+			<tr>
+			<td>Running 6.0 MPH (10 min / mile)</td>
+			<td>METs = 10.0</td>
+			</tr>
+			<tr>
+			<td>Running 9.0 MPH (6.5 min / mile)</td>
+			<td>METs = 15.0</td>
+			</tr>
+			<tr>
+			<td>Bicycling &amp;lt;10 MPH (light pace)</td>
+			<td>METs = 4.0</td>
+			</tr>
+		</table>
+
+		<form id="customExerciseForm" method="post" action="/WorkoutPlan/InsertCustom">
+			<br />
+			<br />
+			<label>Name:<input type="text" name="name" id="name" size="20" /></label>
+			<br />
+			<label>Category:
+			<select name="category" id="category" onchange="custChgCat()">
+			<tpt:html type="select-options" data="${categories}" />
+			</select>
+			</label>
+			<br />
+			<div id="cardio" style="display:none">
+				<label>Duration:<input type="text" name="duration" id="duration" size="20" /></label>
+				<label>METs:<input type="text" name="METs" id="METs" size="20" /></label>
+			</div>
+			<div id="strength" style="display:none">
+				<label>Sets:<input type="text" name="sets" id="sets" size="5" /></label>
+				<label>Reps:<input type="text" name="reps" id="reps" size="5" /></label>
+				<label>Weight:<input type="text" name="weight" id="weight" size="5" /></label>
+			</div>
+			<br />
+			<div id="button" style="display:none">
+				<label>Day:
+				<select name="day">
+				<tpt:html type="select-options" data="${days}" />
+				</select>
+				</label>
+				<br />
+				<a href="#" onclick="submitAddCustom();">Add Exercise</a>
+			</div>
+			<div class="clear"> </div>
+		</form>
+	</div>
+	<div class="clear"> </div>
+</div>
+</tpt:body>

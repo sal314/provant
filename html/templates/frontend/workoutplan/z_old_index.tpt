@@ -1,0 +1,169 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Exercise Planner</h1>
+		<p>Below are a range of exercise plans which have been created by our team of professional Trainers. Select a plan to have it placed at the top of the Cardio and Strength Training Log pages. If you want to create your own exercise plan or add exercises to your existing plan, simply click the Create your own exercise plan link at the bottom. </p>
+	</div>
+<h4>You are currently subscribed to:</h4>
+<table border="0">
+<tpt:foreach id="subscribed_plans" as="sub">
+  <tr>
+	<td style="font-size:14px; background-color:#fff;">${sub[name]}</td>
+	<td style="background-color:#fff;" width="70px">&amp;nbsp;</td>
+	<td style="background-color:#fff;"><a href="/WorkoutPlan/RemovePlan/${sub[id]}">Remove Plan</a></td>
+  </tr>
+</tpt:foreach>
+</table>
+<br />
+<br />
+<h4>Workout plans</h4>
+<tpt:foreach id="all_plans" as="eplan">
+<table class="datagrid">
+	<thead>
+		<tr>
+			<th colspan="2" style="font-size:large">
+				${eplan[plan][name]}
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan="2">${eplan[plan]desciption]}</td>
+		</tr>
+		<tr class="day">
+			<td colspan="2">
+				Day 1:
+			</td>
+		</tr>
+		<tpt:foreach id="eplan[exercises][1]" as="ex"> 
+		<tr>
+			<td>
+				<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+				<tpt:else>${ex[name]}</tpt:else>
+			</td>
+			<td>
+				<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+			</td>
+		</tr>
+		</tpt:foreach>
+		<tr class="day">
+			<td colspan="2">
+				Day 2:
+			</td>
+		</tr>
+		<tpt:foreach id="eplan[exercises][2]" as="ex">
+			<tr>
+				<td>
+					<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+					<tpt:else>${ex[name]}</tpt:else>
+				</td>
+				<td>
+					<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+				</td>
+			</tr>
+		</tpt:foreach>
+		<tr class="day">
+			<td colspan="2">Day 3:
+			</td>
+		</tr>
+		
+		<tpt:foreach id="eplan[exercises][3]" as="ex">
+		<tr>
+			<td>
+				<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+				<tpt:else>${ex[name]}</tpt:else>
+			</td>
+			<td>
+				<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+			</td>
+		</tr>
+		</tpt:foreach>
+
+		<tr class="day">
+			<td colspan="2">
+ 			 Day 4:
+			</td>
+		</tr>
+
+		<tpt:foreach id="eplan[exercises][4]" as="ex">
+			<tr>
+				<td>
+					<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+					<tpt:else>${ex[name]}</tpt:else>
+				</td>
+				<td>
+					<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+				</td>
+			</tr>
+		</tpt:foreach>
+
+		<tr class="day">
+			<td colspan="2">
+			  Day 5:
+			</td>
+		</tr>
+
+		<tpt:foreach id="eplan[exercises][5]" as="ex">
+		<tr>
+			<td>
+				<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+				<tpt:else>${ex[name]}</tpt:else>
+			</td>
+			<td>
+				<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+			</td>
+		</tr>
+		</tpt:foreach>
+		<tr class="day">
+			<td colspan="2">
+				Day 6:
+			</td>
+		</tr>
+		<tpt:foreach id="eplan[exercises][6]" as="ex">
+		<tr>
+		<td>
+		<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+		<tpt:else>${ex[name]}</tpt:else>
+		</td>
+		<td>
+			<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+		</td>
+		</tr>
+		</tpt:foreach>
+		<tr class="day">
+			<td colspan="2">
+				Day 7:
+			</td>
+		</tr>
+		<tpt:foreach id="eplan[exercises][7]" as="ex">
+			<tr>
+				<td>
+					<tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+					<tpt:else>${ex[name]}</tpt:else>
+				</td>
+				<td>
+					<tpt:if id="ex[category]" test="NE" value="cardio">${ex[reps]} ${ex[sets]} </tpt:if>
+				</td>
+			</tr>
+		</tpt:foreach>
+		<tr>
+			<td colspan="2">
+			  <tpt:if id="subscribed_plans" test="HASKEY" value="${eplan[plan][id]}"><a href="/WorkoutPlan/RemovePlan/${eplan[plan][id]}">Remove Plan</a></tpt:if>
+			  <tpt:else><a href="/WorkoutPlan/AddPlan/${eplan[plan][id]}">Add Plan</a></tpt:else>
+			</td>
+		</tr> 
+	</tbody>
+</table>
+<br />
+<br />
+</tpt:foreach>
+<br />
+<a href="/WorkoutPlan/AddExerciseToPlan">Create Your Own Exercise Plan</a><br />
+
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+
+	<div id="section-footer">
+	
+	</div>
+</div>
+</tpt:body>

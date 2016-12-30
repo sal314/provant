@@ -1,0 +1,168 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content tracker">
+
+	<div id="section-header">
+		<h1>Blood Pressure<br /><small>Resources and Tools</small></h1>
+	</div>
+
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+		
+		<div class="w-75p">
+			<div>
+			<p>The Blood Pressure tracker is a useful tool for you to monitor your blood pressure.   <a class="ttip" href="#" title="The first place to start when you look at the Nutrition Facts label is\nthe serving size and the number of servingsin the package. Serving\nsizes are standardized to make it easier to compare similar foods;\nthey are provided in familiar units, such as cups or pieces, followed by the metric\n amount, e.g., the number of grams.">Tool Tip Test</a></p>
+			</div>
+			
+	<h3>Blood Pressure Legend</h3>
+	<br />
+	<div class="message-center  legend">
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<td> </td>
+					<td>Systolic</td>
+					<td>Diastolic</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width:150px">Stage II Hypertension:</td>
+					<td style="color:red;">&gt;160</td>
+					<td  style="color:red;">&gt;100</td>
+				</tr>
+				<tr>
+					<td style="width:150px">Stage I Hypertension:</td>
+					<td style="color:orange;">140-159</td>
+					<td style="color:orange;">90-99</td>
+				</tr>
+				<tr>
+					<td style="width:150px">Prehypertension:</td>
+					<td>120-139</td>
+					<td>80-89</td>
+				</tr>
+				<tr>
+					<td style="width:150px">Optimal blood pressure is:</td>
+					<td style="color:green;">&lt;120</td>
+					<td style="color:green;">&lt;80</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+			<br />
+			
+			<h3>Enter Blood Pressure Information</h3>
+			<br />
+			<div id="entry" class="bold">
+				<div class="entryform">
+					<form  method="post" action="/TrackerBP/AddEntry?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+						<input class="right" type="submit" value="Add Entry"/>
+						<div class="entryarea right">
+							<label>Diastolic: </label><input class="smallForm" style="margin-right:10px" type="text" name="diastolic" value="${post[diastolic]}" data-validate="required=true type=integer range=(0,500)"/>&amp;nbsp;
+						</div>
+						<div class="entryarea right">
+							<label>Systolic: </label><input class="smallForm" style="margin-right:10px" type="text" name="systolic" value="${post[systolic]}" data-validate="required=true type=integer range=(0,500)"/>&amp;nbsp;
+						</div>
+						
+						<div class="left datepicker trackerCal">
+							<label>Date: &amp;nbsp;</label>
+							<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+							<a href="javascript:void(0);" onclick="showCalendarDialog(event, 210, 259, 'past');"><img src="/assets/media/images/calendar.gif" alt="Calendar"/></a>
+							<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+						</div>
+					</form>
+				</div>
+				<div class="clear"> </div>
+			</div>
+	<br />
+
+	<tpt:if id="data_points" test="GT" value="0">
+	<div id="log">
+		<h4>Blood Pressure Log</h4>
+		<div class="logselect">
+				Show: <a href="/TrackerBP/Index?log=week">Past Week</a> | <a href="/TrackerBP/Index?log=month">Past Month</a> | <a href="/TrackerBP/Index/">Full Log</a>
+		</div>
+		<tpt:if id="data_points" test="GT" value="1">
+		<div class="history">
+			<img src="/TrackerBP/History?log=${loglevel}" width="630px"/>
+		</div>
+		</tpt:if>
+		<br />
+		<h3>Summary</h3>
+		<br />
+		<div class="message-center">	
+			<table class="datagrid">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Systolic</th>
+						<th>Diastolic</th>
+
+						<th>Controls</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:foreach id="log" as="entry">
+						<tr>
+							<td class="dg-col-date">${entry[de]}</td>
+							<td class="dg-col-systolic">
+								<tpt:if id="entry[systolic]" test="GE" value="160"><tpt:setvar id="color" value="red"/></tpt:if>
+								<tpt:elseif id="entry[systolic]" test="GE" value="140"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+								<tpt:elseif id="entry[systolic]" test="GE" value="120"><tpt:setvar id="color" value="black"/></tpt:elseif>
+								<tpt:else><tpt:setvar id="color" value="green"/></tpt:else>
+								<span style="color:${color}">${entry[systolic]}</span>
+							</td>
+							<td class="dg-col-diastolic">
+								<tpt:if id="entry[diastolic]" test="GE" value="100"><tpt:setvar id="color" value="red"/></tpt:if>
+								<tpt:elseif id="entry[diastolic]" test="GE" value="90"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+								<tpt:elseif id="entry[diastolic]" test="GE" value="80"><tpt:setvar id="color" value="black"/></tpt:elseif>
+								<tpt:else><tpt:setvar id="color" value="green"/></tpt:else>
+								<span style="color:${color}">${entry[diastolic]}</span>
+							</td>
+<!--[CDATA[							<td class="dg-col-name">
+								<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+								<tpt:else>${entry[enter_name]}</tpt:else>
+							</td>-->
+							<td class="dg-col-edit"><a href="/TrackerBP/Index?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerBP/DeleteEntry/${entry[id]}?log=${loglevel}">Delete</a></td>
+						</tr>
+					</tpt:foreach>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+	
+	<br /><br />
+
+	</tpt:if>
+	<br />
+	<p>You should have your blood pressure checked yearly by your physician or health care professional.  If you have elevated blood pressure you may need to have it monitored more often. For optimal results you should be seated and relaxed for five minutes prior to measuring your blood pressure. </p>
+	</div>
+<div class="clear"> </div>
+
+	
+
+</div>
+</tpt:body>

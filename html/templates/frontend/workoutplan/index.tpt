@@ -1,0 +1,61 @@
+<tpt:body>
+	<script type="text/javascript" src="/assets/js/ExPlan.js"></script>
+	<div class="inner-content">
+	<div id="section-header">
+		<h1>Exercise Planner<br /><small>Resouces and Tools</small></h1>
+	</div>
+
+	<tpt:if id="status" test="EQ" value="success">
+	<div style="background-color: #aaeeaa">
+		<br />
+		<span style="margin-left: 20px; font-size:16px">Successfully added your workout plan</span>
+		<br />
+		<br />
+	</div>
+	</tpt:if>
+
+	<tpt:elseif id="status" test="EQ" value="failure">
+	<div style="background-color: #eeaaaa">
+		<br />
+		<span style="margin-left: 20px; font-size:16px; color:red">Failed to save your workout plan</span>
+		<br />
+		<br />
+	</div>
+	</tpt:elseif>
+		
+	<br />
+	
+	<tpt:if id="uPlans" test="HASELEMENTS">
+	<form id="SelectPlanForm" method="post" action="/WorkoutPlan/Display">
+		<div class="inner-content" style="width:50%;" id="SelectExPlan">
+			<h3>Show Your User Defined Exercise Plan</h3>
+			<label>Plan to Show:
+			<select name="ExPlanID" id="ExPlanID">
+			<tpt:html type="select-options" data="${uPlans}" />
+			</select>
+			</label>
+			<a href="javascript:void(0);" onclick="getExPlanDetails();" class="next right">Go</a>
+		</div>
+	</form>
+
+	<hr />
+	</tpt:if>
+
+	<form id="CreatePlanForm" method="post" action="/WorkoutPlan/Create">
+		<div class="inner-content" style="width:50%;" id="CreateExPlan">
+			<h3>Create a New User Defined Exercise Plan</h3>
+			<label>New Exercise Plan Name: <input type="text" id="UserExPlanName" name="UserExPlanName" size="25" /></label>
+			<a href="javascript:void(0);" onclick="createExPlan();" class="next right">Go</a>
+		</div>
+	</form>
+	<div class="clear"> </div>
+	
+	<hr />
+	<div class="inner-content">
+		<h3>Supplemental Exercises</h3>
+		Add supplemental exercises to all of your workout plans.<br />
+		<a href="/WorkoutPlan/Supplemental">Manage Supplemental Exercises</a><br />
+	</div>
+	<div class="clear"> </div>
+</div>
+</tpt:body>

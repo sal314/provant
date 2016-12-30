@@ -1,0 +1,171 @@
+<tpt:body>
+  <tpt:body>
+  <div class="inner-content">
+	<div id="section-header">
+		<h1>Cardio Tracker</h1>
+		<p>Track the activities and exercises you do, and see the calories burned from each activity and then use the reports to see how far you've come. The Cardio Log can help you reach your fitness goals. It's online, so you can use it anywhere you have Internet access. </p>
+	</div>
+
+  <h2>Weekly Plan</h2>
+  <h3>Day 1:</h3>
+  <tpt:foreach id="planex[1]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+   <br/>  	
+  </tpt:foreach>
+  <h3>Day 2:</h3>
+  <tpt:foreach id="planex[2]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h3>Day 3:</h3>
+  <tpt:foreach id="planex[3]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h3>Day 4:</h3>
+  <tpt:foreach id="planex[4]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h3>Day 5:</h3>
+  <tpt:foreach id="planex[5]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h3>Day 6:</h3>
+  <tpt:foreach id="planex[6]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h3>Day 7:</h3>
+  <tpt:foreach id="planex[7]" as="ex"> 
+   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+   <tpt:else>${ex[name]}</tpt:else>
+  	 <br/>
+  </tpt:foreach>
+  <h2>Date</h2>
+  <tpt:html type="date_picker" id="date_entered" value="${post[date_entered]}" display="m/d/Y" /><br/>
+  <form method="post" action="/WorkoutPlan/SaveComment">
+  <h2>Comment</h2>
+  	<input type="hidden" value="${post[date_entered]}" id="date_entered_1" name="date_entered"/>
+  	<input type="hidden" name="type" value="cardio"/>
+  	<textarea name="comment"> </textarea><br/>
+  	<input type="submit" value="Save Comment"/>
+  	<input type="button" value="View Comment" onclick="showWin('/WorkoutPlan/ViewComments/cardio')"/>
+  </form>
+  
+  <div style="float:left;">
+  <form method="post" action="/WorkoutPlan/AddCardio/cardio">
+  <h2>Add Cario Exercise</h2>
+  <input type="hidden" value="${post[date_entered]}" id="date_entered_2" name="normal[date_entered]"/>
+  	<input type="hidden" value="${post[id]}" id="id_2" name="normal[id]"/>    
+    <select name="normal[p_workout_exercises_id]" id="exs"><tpt:html type="select-options" data="${exercises}"/></select><br/>
+    Minutes: <input type="text" value="0" name="normal[units]" id="units" size="3" maxlengh="3"/><br/>
+    Heart Rate:<input type="text" value="0" name="normal[heart_rate]" id="hrate" size="3" maxlengh="3"/><br/>
+    <input type="submit" value="Save Entry"/>
+  </form>
+  </div>
+  
+  <div style="float:left;">
+  <form method="post" action="/WorkoutPlan/AddCardio/Custom">
+  <h2>Or Add a Custom Cario Exercise</h2>
+  	<input type="hidden" value="${post[date_entered]}" id="date_entered_3" name="custom[date_entered]"/>
+  	<input type="hidden" value="${post[id]}" id="id_3" name="custom[id]"/>    
+    <select name="custom[p_workout_exercises_id]" onchange="setOption(this)">    	
+    	<tpt:html type="select-options" data="${custom_exercises}"/>
+    </select><br/>
+    Name: <input type="text" value="" name="custom[custom_name]" id="cname"/><br/>
+    Amount: <input type="text" value="0" name="custom[units]" id="camt" size="3" />
+    <input type="text" value="minutes" name="custom[label]" id="cunits" size="5" maxlength="10"/><br/>
+    Calories: <input type="text" value="0" name="custom[calories]" id="ccal" size="3" maxlengh="3"/><br/>
+    Heart Rate:<input type="text" value="0" name="custom[heart_rate]" id="chrate" size="3" maxlengh="3"/><br/>    
+    <input type="submit" value="Save Custom Entry"/>
+  </form>
+</div> <br class="clear"/>
+<h2>Log</h2>
+<tpt:foreach id="logged" as="log">
+<b>${log[date_entered]}</b> 
+<tpt:if id="log[name]" test="NE" value="">${log[name]}</tpt:if><tpt:else>${log[custom_name]}</tpt:else>   
+${log[units]} 
+${log[heart_rate]}
+${log[calories]}
+<a href="javascript:editEntry('${log[id]}')">Edit Entry</a>
+<a href="/WorkoutPlan/DeleteEntry/${log[id]}">Delete Entry</a><br/>
+</tpt:foreach>
+  
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+<![CDATA[
+ZMEDIA.MODAL.getTimeStamp_close_callback=function(returnObj){    
+  document.getElementById("date_entered_1").value=returnObj.value;
+  document.getElementById("date_entered_2").value=returnObj.value;
+  document.getElementById("date_entered_3").value=returnObj.value;
+}
+  
+  
+  function editEntry(id){
+    var params="id="+id;
+    ZMEDIA.AJAX.submitRequest("/WorkoutPlan/GetEntry/",params,editEntry_close);      
+  }
+  function editEntry_close(messages,data){
+    var m=ZMEDIA.AJAX.getFatalMessage(data);
+    if(m){
+    	alert(m);
+    	return;
+    }
+    var record=data.getElement("entry").value;
+    
+    if(record.custom_name){
+    	document.getElementById("cname").value=record.custom_name;	
+    	document.getElementById("camt").value=record.units;
+    	document.getElementById("cunits").value=record.label;
+    	document.getElementById("ccal").value=record.calories;
+    	document.getElementById("chrate").value=record.heart_rate;
+    	document.getElementById("id_3").value=record.id;
+    	document.getElementById("date_entered_3").value=record.date_entered;
+    }else{
+    	var op=document.getElementById("exs");
+    	for(x=0;x<op.options.length;x++){
+    	   if(op.options[x].value==record.p_workout_exercises_id){
+    	   	op.selectedIndex=x;
+    	   	break;
+    	   }
+    	}
+    	document.getElementById("units").value=record.units;
+    	document.getElementById("hrate").value=record.heart_rate;
+    	document.getElementById("id_2").value=record.id;
+    	document.getElementById("date_entered_2").value=record.date_entered;
+    }
+    var display=document.getElementById("date_entered_disp");
+    var fmat=display.getAttribute("data-display");
+    var value=record.date_entered;
+    if(fmat){
+      var regex=/^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9])\s?(?:([0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$/;
+	  var parts=value.replace(regex,"$1 $2 $3 $4 $5 $6").split(' ');
+	  var myDate= new Date(parts[0],parts[1]-1,parts[2],parts[3],parts[4],parts[5]);
+	  value=myDate.format(fmat);
+	  display.innerHTML=value;
+    }
+    document.getElementById("date_entered").value=record.date_entered;
+  }
+  function setOption(e){
+  
+  	if(e.selectedIndex>=1){
+    	var values=e.options[e.selectedIndex].value.split("|"); 
+    	document.getElementById("cname").value=values[0];
+    	document.getElementById("ccal").value=values[1];
+    	document.getElementById("camt").value=values[2];    	
+    	document.getElementById("chrate").value=values[3];
+    }
+  }
+  ]]>
+</script>
+</div>
+</tpt:body>
+</tpt:body>

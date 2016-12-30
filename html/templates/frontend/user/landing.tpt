@@ -1,0 +1,293 @@
+<tpt:body>
+
+<!--
+	 AW: Adding script to landing page only at this point.
+		 If needed else where we can add it to the frame.php and the common.js
+-->
+
+<script type="text/javascript" src="http://cdn.jquerytools.org/1.2.3/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery/jquery.hrzAccordion.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// initialize scrollable
+		$("div.scrollable").scrollable();
+	
+		// get the API, needed to use events
+		var scrollable = $("div.scrollable").data("scrollable");
+		// use the event "onSeek", which fires every time you scroll an item
+		scrollable.onSeek(function(){
+			var size = 3;
+	
+			if (this.getIndex() >= this.getSize() - size) {
+				$("a.next").addClass("disabled");
+			} else {
+				$("a.next").removeClass("disabled");
+			}
+		});
+
+		$(".browse").click(function(event) {
+			event.preventDefault();
+		});
+
+		$("#accordion").hrzAccordion({
+				containerClass     : "acc-cont",
+				listItemClass      : "acc-item",					
+				handlePosition     : "left",
+				contentWrapper     : "contentWrapper",
+				contentInnerWrapper: "contentInnerWrapper",
+				handleClassOver    : "handleOver",
+				handleClassSelected: "handleSelected",
+				openOnLoad         : ${slider2open},
+				fixedWidth			: 720
+		});
+	});
+</script>
+
+
+<div id="accordion-container">
+	<ul id="accordion">
+
+	<tpt:foreach id="slider" as="sl" >
+		<li class="${sl[handle]}">
+			<div class="handle"> </div>
+			<tpt:if id="sl[list]" test="EXISTS">
+				<img class="left" src="/assets/media/images/myfocusAcc.jpg" alt="My Focus"/>
+			<div class="myFocusOpts">
+				<tpt:foreach id="sl[list]" as="mod">
+
+			
+				<div class="left" style="height:95px">
+					<div class="stack cube click">
+						<img class="left" src="/assets/media/images${mod[img]}" alt="${mod[alt]}" />
+						<div class="intro">
+							<a href="${mod[link]}" class="fs16 no-pointer">${mod[alt]}</a>
+							<p> ${mod[text]} </p><br />
+						</div>
+						
+					</div>
+					<br />
+				</div>	
+					
+	
+				</tpt:foreach>
+				<div class="clear"> </div>
+			</div>
+			
+			
+			
+			</tpt:if>
+			<tpt:else>
+				<tpt:if id="sl[Total]" test="EXISTS">
+					<div class="iFocusComplete">
+						<div class="score">
+							<span class="iFocusScore">Your iFOCUS Score: </span><span class="iFocusTotal">${Total}</span>
+						<br />
+						<span class="iFocusDate">Completed on: ${DateComplete}</span>
+						</div>
+						<br /><br />
+						<ul style="list-style-type:circle">
+							<li><a href="javascript:void(0);" onclick="window.open('${Cert}', '_blank')">Download Your Certificate</a></li><br />
+							<li><a href="${Summary}">See Your iFOCUS Summary Report</a></li>
+						</ul>
+					</div>
+				</tpt:if>
+				<tpt:else>
+				<a href="${sl[link]}">
+					<img src="${sl[img]}" alt="${sl[alt]}" />
+				</a>
+				</tpt:else>
+				
+				
+				
+				
+			</tpt:else>
+		</li>
+	</tpt:foreach>
+
+	</ul>
+	<div class="clear"> </div>
+</div>
+
+<div class="home">
+	<!--Articles Area-->
+
+	<div id="article-header">
+		<div id="view-articles">
+			<a href="/HealthArticles/Index">&gt;&gt; VIEW ALL ARTICLES </a>
+		</div>
+		<h3 class="article-title">Featured Health Articles</h3>
+		<div class="clear"> </div>
+	</div>
+
+	<!--Articles-->
+
+	<div id="scroll-container">
+
+		<div id="left-button" class="left">
+			<a href="#" class="prev browse left">
+				<span>&gt;</span>
+			</a>
+		</div>
+		<!-- root element for scrollable -->
+		<div class="scrollable left">   
+		   <!-- root element for the items -->
+		   <div id="articles" class="items">
+			
+				<tpt:foreach id="articles" as="article">
+				<div class="item option-box">
+					<a href="/HealthLibrary/getChunk/${article[ebsco_id]}">
+						<img src="/zImageCache/Crop/257/142/${article[file_image]}" alt="" />
+					</a>
+					<p>${article[summary]}</p>
+					<a href="/HealthLibrary/getChunk/${article[ebsco_id]}"> &amp;gt;&amp;gt;Read Article </a>
+				</div>
+				</tpt:foreach>			
+
+			</div>
+		</div>
+		
+		<!-- "next page" action -->
+		
+		<div id="right-button" class="left">
+			<a href="#" class="next browse right">
+				<span>&lt;</span>
+			</a>
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+
+	<div class="divider"> </div>
+
+	<div id="sub-promos">
+		<div id="left-bracket">
+			<img src="/assets/media/images/left-bracket.png" alt="" />
+		</div>
+
+		<tpt:if id="hc_link" test="EQ" value="1">
+		<div class="option-box">
+			<h4>Take the Health Assessment</h4>
+			<div class="optionContent">
+			<p>The iFOCUS Health Assessment is the key to the Provant health
+				initiative.  It will establish a baseline so that you can
+				better attain your health goals.</p>
+			</div>
+			<a href="/IFocus/Index"> &amp;gt;&amp;gt;Start Now </a>
+		</div>
+		</tpt:if>
+		<tpt:elseif id="hc_link" test="EQ" value="2">
+		<div class="option-box">
+			<h4>Sign up for Health Coaching</h4>
+			<div class="optionContent">
+			<p>Using a collaborative and consultative approach, we deliver
+				evidence-based preventive services that are truly gold standard in
+				the industry.</p>
+			</div>
+			<a href="/User/HealthCoachOptIn"> &amp;gt;&amp;gt;Sign Up Now </a>
+		</div>
+		</tpt:elseif>
+		<tpt:elseif id="hc_link" test="EQ" value="3">
+		<div class="option-box">
+			<h4>Connect with a Health Coach</h4>
+			<div class="optionContent">
+			<p>Using a collaborative and consultative approach, we deliver
+				evidence-based preventive services that are truly gold standard in
+				the industry.</p>
+			</div>
+			<a href="/Messages/Compose"> &amp;gt;&amp;gt;Connect Now </a>
+		</div>
+		</tpt:elseif>
+		<tpt:elseif id="hc_link" test="EQ" value="4">
+		<div class="option-box">
+			<h4>My Progress</h4>
+			<div class="optionContent">
+			<p>Using the resources and tools, you can track your progress in weight control,
+			  exercise planning, and diet and nutrition.</p>
+			</div>
+			<a href="/MyProgress/Index"> &amp;gt;&amp;gt;Show My Progress </a>
+		</div>
+		</tpt:elseif>
+
+		<div class="option-box">
+			<h4>Screening Kits</h4>
+			<div class="optionContent">
+			<p>Knowledge is power. Empower your employees to make conscious
+				health choices by providing educational wellness seminars at your
+				workplace.</p>
+			</div>
+			<a href="#"> &amp;gt;&amp;gt;Learn More </a>
+		</div>
+
+		<div class="option-box">
+			<h4>Health Library</h4>
+			<div class="optionContent">
+			<p>Search diseases or conditions with our locator tool</p>
+			<div id="library-list">
+				<!--<li id="active"><a href="#" id="current">Item one</a></li>-->
+
+					<a href="/HealthLibrary/ConditionInjuryList/#A">A</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#B">B</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#C">C</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#D">D</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#E">E</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#F">F</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#G">G</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#H">H</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#I">I</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#J">J</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#K">K</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#L">L</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#M">M</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#N">N</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#O">O</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#P">P</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#Q">Q</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#R">R</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#S">S</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#T">T</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#U">U</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#V">V</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#W">W</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#X">X</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#Y">Y</a>
+
+					<a href="/HealthLibrary/ConditionInjuryList/#Z">Z</a>
+			</div>
+			</div>
+				<a href="/HealthLibrary/Search"> &gt;&gt;Advanced Search</a>
+
+		</div>
+
+		<div id="right-bracket">
+			<img src="/assets/media/images/right-bracket.png" alt="" />
+		</div>
+		<div class="clear"> </div>
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+</tpt:body>

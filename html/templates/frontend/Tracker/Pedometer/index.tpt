@@ -1,0 +1,193 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Pedometer<br /><small>Resources and Tools</small></h1>
+	</div>	
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+	<div class="left w-75p entryTall">
+
+	<p>A simple way to incorporate exercise into your daily routine is through walking. Wearing a pedometer and tracking steps is one easy way to monitor daily physical activity.  The advantage of a pedometer is that it can catch small increases in activity, like walking up stairs instead of taking elevators. Health experts recommend a goal of 10,000 steps (approximately 5 miles) a day.</p>
+	<p>Use the pedometer tracker to measure your daily steps.</p>
+	
+	<h3>Enter Pedometer Information</h3>
+	<br />
+			<div id="entry" class="bold">
+				<div class="entryform">
+					<form  method="post" name="pedometer" action="/TrackerPedometer/AddEntry/?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+						<input type="hidden" id="userweight" name="userweight" value="${userweight}" />
+						<input class="right" type="submit" value="Add Entry"/>
+						<div class="entryarea right">
+							<label>Calories: </label><input class="tinyForm" style="margin-right:5px" type="text" name="calories" value="${post[calories]}" data-validate="required=true type=integer range=(0,9999]"/> &amp;nbsp; 
+						</div>
+						<div class="entryarea right">
+							<label>Stride: </label><input class="tinyForm" style="margin-right:5px" type="text" name="stride" size="4" maxlength="4" value="${post[stride]}" data-validate="required=true type=integer range=(0,100)" onkeyup="updateCals()"/> &amp;nbsp;
+						</div>
+						<div class="entryarea right">
+							<label>Steps: </label><input class="tinyForm" style="margin-right:5px" type="text" name="steps" size="5" maxlength="5" value="${post[steps]}" data-validate="required=true type=integer range=(0,99999]" onkeyup="updateCals()"/> &amp;nbsp;
+						</div>
+
+
+						<div class="left datepicker">
+							<div class="trackerCal">Date: &amp;nbsp;
+	
+							<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+							<a href="#" onclick="showCalendarDialog(event, 210, 259, 'past'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+							<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+		
+						</div>
+						
+					</div>
+					<br />
+	<div style="margin-top:20px; overflow:hidden; float:right">
+		<div class="right">
+			<label>Override Calories</label> <tpt:html style="vertical-align:middle" type="checkbox" id="override" selected="${post[override]}" value="1" onchange="updateCals()"/>
+		</div>
+				
+		<div class="right" style="margin:1px 15px 0 0;">
+			<a href="javascript:showWin('/TrackerPedometer/measure/')">How to calculate your stride</a>
+		</div>
+		
+	<div class="clear"> </div>
+					
+					
+	</div>		
+	<div class="clear"> </div>		
+					</form>
+				</div>
+				<div class="clear"> </div>
+			</div>
+	
+
+	
+	
+
+	<br />
+
+<tpt:if id="data_points" test="GT" value="0">
+<div id="log">
+	<h4>Pedometer Log</h4>
+	<div class="logselect">
+		Show: <a href="/TrackerPedometer/Index/?log=week">Past Week</a> | <a href="/TrackerPedometer/Index/?log=month">Past Month</a> | <a href="/TrackerPedometer/Index/">Full Log</a>
+	</div>
+	<tpt:if id="data_points" test="GT" value="1">
+	<div class="history">
+		<img src="/TrackerPedometer/History/?log=${loglevel}" width="630px"/>
+	</div>
+	</tpt:if>
+	<br />
+	<h3>Summary</h3>
+	<br />
+	<div class="message-center">	
+	<table class="datagrid">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Steps</th>
+				<th>Miles</th>
+				<th>Calories</th>
+				<th>Controls</th>
+				<th> </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tpt:foreach id="log" as="entry">
+				<tr>
+					<td class="dg-col-date">${entry[de]}</td>
+					<td class="dg-col-steps">${entry[steps]}</td>
+					<td class="dg-col-miles">${entry[miles]}</td>
+					<td class="dg-col-calories">${entry[calories]}</td>
+					<td class="dg-col-name">
+						<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+						<tpt:else>${entry[enter_name]}</tpt:else>
+					</td>
+					<td class="dg-col-edit"><a href="/TrackerPedometer/Index/?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerPedometer/DeleteEntry/${entry[id]}&amp;log=${loglevel}">Delete</a>
+					</td>
+				</tr>
+			</tpt:foreach>
+			<tr>
+				  <td class="dg-col-total bold">Totals:</td>
+				  <td class="dg-col-all-steps bold">${totals[log_totals][steps]}</td>
+				  <td class="dg-col-all-miles bold">${totals[log_totals][miles]}</td>
+				  <td class="dg-col-all-calories bold">${totals[log_totals][calories]}</td>
+				 	<td class="dg-col-total"> </td>
+					<td class="dg-col-total"> </td>
+			  </tr>
+		</tbody>
+	</table>
+	</div>
+	<div class="message-center">	
+	<br/><br/>
+	<h3>Monthly Totals</h3>
+	<br />
+	<table class="datagrid">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Steps</th>
+				<th>Miles</th>
+				<th>Calories</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tpt:foreach id="totals[month_totals]" as="sum">
+				<tr>
+					<td class="dg-col-date">${sum[de]}</td>
+					<td class="dg-col-steps">${sum[sum_steps]}</td>
+					<td class="dg-col-miles">${sum[sum_miles]}</td>
+					<td class="dg-col-calories">${sum[sum_calories]}</td>
+				</tr>
+			</tpt:foreach>
+		</tbody>
+	</table>
+	</div>
+</div>
+</tpt:if>
+
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+function updateCals(){
+  if(document.getElementById("override").checked) return;
+  
+  var stride=document.forms["pedometer"].elements["stride"].value;
+	if (stride == "") return;
+	stride = stride / 12;
+  var steps=document.forms["pedometer"].elements["steps"].value;
+	if (steps == "") return;
+  var wt=document.getElementById('userweight');
+  var userweight = wt.value;
+
+  var miles = Math.round(steps*stride / 52.800) / 100;
+  var exDur = miles * 20.0;
+  var cals = exDur * userweight * 0.2625;
+  cals = Math.round(cals);
+  document.forms["pedometer"].elements["calories"].value=cals;
+}
+</script>
+
+</div>
+<div class="clear"> </div>
+</div>
+</tpt:body>

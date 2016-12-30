@@ -1,0 +1,54 @@
+<tpt:body>
+<table>
+  
+	<tr>
+		<td>${days[0]}</td>
+		<td></td>
+		<td></td>
+		<td><tpt:foreach id="exercises[0]" as="ex">
+				${ex[custom_name]}
+				<tpt:if id="ex[calories]" test="GT" value="0">
+				${ex[units]} ${ex[label]} ${ex[calories]}clalories
+				</tpt:if> 
+				<br/>
+				</tpt:foreach></td>
+	</tr>  	
+	<tr>
+		<td>${days[1]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+	<tr>
+		<td>${days[2]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+	<tr>
+		<td>${days[3]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+	<tr>
+		<td>${days[4]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+	<tr>
+		<td>${days[5]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+	<tr>
+		<td>${days[6]}</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>  	
+  
+</table>
+</tpt:body>

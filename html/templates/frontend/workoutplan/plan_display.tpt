@@ -1,0 +1,56 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/ExPlan.js"></script>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<!-- <link href="/assets/css/ExPlan.css" rel="stylesheet" type="text/css" media="screen" /> -->
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Exercise Planner<br /><small>Resources and Tools</small></h1>
+	</div>
+	
+	<div class="w-25p right">
+		<div class="stack last">
+			<h3>Select a Tracker</h3>
+			<div class="sidebar">
+				<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+					<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+					<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+					<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+					<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+					<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+					<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+					<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+					<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+				</ul>
+			</div> 
+		</div>
+	</div>
+
+	<div class="w-75p left">
+		<div class="ExPlan border">
+		<tpt:if id="ExPlan" test="HASELEMENTS">
+			<div id="submit-button" class="right">
+				<a href="javascript:this.frames['userPlan'].print();" class="submit right">Print This Exercise Plan</a><br />
+			</div>
+			<br />
+
+			<div style="width:50%;">
+				Add exercises from this plan that you&amp;acute;ve done to your exercise log by clicking on the activity listed below.
+			</div>
+			<tpt:include id="/frontend/workoutplan/show_plan.tpt" importvars="reference" /><br/>
+			<!--<iframe src="/WorkoutPlan/ShowPlan/${ExPlanId}" name="userPlan" scrolling="no" frameborder="0" width="100%" height="${vSize}px">
+			</iframe>-->
+
+		</tpt:if>
+		</div>
+	</div>
+	<div class="clear"> </div>
+	<a href="/WorkoutPlan/Create">Back to the Exercise Planner</a>
+	<div class="clear"> </div>
+</div>
+</tpt:body>

@@ -1,0 +1,103 @@
+<tpt:body>
+<div class="inner-content phip">
+	<div id="section-header">
+		<h1>Resources and Tools<br /><small>Personal Health Improvement</small></h1>
+	</div>
+	<div>
+		<p>Tracking your fitness and health progress is one of the best ways to stay healthy. Staying motivated is a big part of success, and we can help you measure your results, track your progress, and see how your diet and exercise work together. We keep track of everything for you.</p>
+		<br />
+		
+	<div class="button-content right">
+			<div class="stack">
+				<img class="left" src="/assets/media/images/phip/weight.png" alt="Weight Tracker" />		
+				<div class="intro">
+					<h3 class="item-title">Weight Tracker</h3>
+					<p>Determine your weight goal and track it here. This will help keep you motivated to meet your goals.</p>
+					<ul>
+						<li><a class="fs13" href="/TrackerWeight/Index">View Weight Tracker</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="stack">
+				<img class="left" src="/assets/media/images/phip/exercise.png" alt="Exercise Tools" />		
+				<div class="intro">
+					<h3 class="item-title">Exercise Tools</h3>
+					<p>Track your physical activity and view exercise videos.  Use these tools to get moving or to add something new to your routine. </p>
+					<ul>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">View Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">View Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/WorkoutPlan/Create">Add Exercise Plan</a></li>
+						<li><a class="fs13" href="javascript:void(0);">View Exercise Examples</a> Coming Soon</li>
+						<li><a class="fs13" href="/WorkoutPlan/ExerciseLog">View Exercise Log</a></li>
+						
+						
+		<!--[[CDATA	    <li><a class="fs13" href="/WorkoutPlan/Index">Add Exercise Plan</a></li>
+						<li><a class="fs13" href="/WorkoutPlan/Examples">Exercise Examples</a></li>
+						<li><a class="fs13" href="/WorkoutPlan/trackCardio">Exercise Tracker</a></li>
+						<li><a class="fs13" href="/WorkoutPlan/trackStrength">Exercise Log</a></li>]]-->
+					</ul>
+				</div> 
+			</div>
+			
+			<div class="stack last">
+				<img class="left" src="/assets/media/images/phip/heart.png" alt="Blood Glucose Tracker" />		
+				<div class="intro">
+					<h3 class="item-title">Blood Glucose Tracker</h3>
+					<p>Log your daily blood glucose results to maintain the best control.</p>
+					<ul>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">View Blood Glucose Tracker</a></li>
+					</ul>
+				</div>
+			</div>			
+			
+	</div>	
+		
+		<div class="button-content left">
+		
+			<div class="stack">
+				<img class="left" src="/assets/media/images/phip/progress.png" alt="My Progress" />		
+				<div class="intro">
+					<h3 class="item-title">My Progress</h3>
+					<p>View a summary of your trackers and other important health data.</p>
+					<ul>
+						<li><a class="fs13" href="/MyProgress/Index">View My Progess</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="stack">
+				<img class="left" src="/assets/media/images/phip/meal.png" alt="Meal Planner" />
+				<div class="intro">
+					<h3 class="item-title">Meal Planner/Food Log</h3>
+					<p>All of your nutritional resources are located here. Track your daily intake, monitor your calories, view a variety of meal plans or create your own.</p>
+					<ul>
+						<li><a class="fs13" href="/MealPlan/Create">View Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">View Food Log</a></li>
+						<li><a class="fs13" href="/PortionPlate/Index">View Portion Plate</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="stack last">
+				<img class="left" src="/assets/media/images/phip/heart.png" alt="Heart Health" />		
+				<div class="intro">
+					<h3 class="item-title">Heart Health</h3>
+					<p>Monitor your blood pressure and/or your cholesterol results.</p>
+					<ul>
+						<li><a class="fs13" href="/TrackerBP/Index">View Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">View Cholesterol Tracker</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+	
+	<div class="clear"> </div>
+
+	</div>
+	
+	<div class="clear"> </div>
+</div>
+</tpt:body>

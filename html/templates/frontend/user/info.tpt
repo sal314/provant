@@ -1,0 +1,220 @@
+<tpt:body>
+
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Profile<br/></h1>
+	</div>
+
+	<div class="left" style="margin:0 auto;">
+
+		<tpt:if id="status" test="EQ" value="success">
+		<div id="success-header">
+			<ul>
+				<li>Your profile has successfully been updated!</li>
+			</ul>
+		</div>
+		<br />
+		</tpt:if>
+		<tpt:elseif id="status" test="EQ" value="failed">
+		<div id="error-header">
+			<ul>
+				<li>An error occurred updating your profile.  Please contact your administrator.</li>
+			</ul>
+		</div>
+		<br />
+		</tpt:elseif>
+
+		<form method="post" id="profile-form" action="/User/saveinfo" onsubmit="return ZMEDIA.FORM.validateForm(this);">
+		<div class="stack last question">
+			<label class="left">Email:<br />
+				<input class="profile-width" type="text" name="email" value="${POST[email]}" data-validate="required=true pattern=email"/>
+			</label>
+			<label class="left column">First Name:<br /><input class="profile-width" type="text" name="first_name" value="${POST[first_name]}" data-validate="required=true" /></label>
+			<label class="left column">Location:<br /><select class="drop-width" name="location_id"><tpt:html type="select-options" data="${locations}" selected="${POST[location_id]}"/></select></label><br />
+			<div class="clear"> </div>
+		</div>
+		
+		
+
+		<div class="stack last question">
+			<label class="left">Confirm Email:<br />
+				<input class="profile-width" type="text" name="email_confirm" value="${POST[email_confirm]}" data-validate="required=true match=email"/>
+			</label>
+		
+		
+
+			<label class="left column">Last Name:<br /><input class="profile-width" type="text" name="last_name" value="${POST[last_name]}" data-validate="required=true" /></label>
+			<label class="left column">Birthday:<br /><tpt:html type="date_picker_dropdown" id="dob" value="${POST[dob]}"/></label><br/>
+			
+			<div class="clear"> </div>
+		</div>
+		<a href="javascript:showWin('/User/ChangePassword/', '550px', '400px')">Change Password</a><br /><br />
+	<tpt:comment>
+		Address1:   <input type="text" name="address1" value="${POST[address1]}" data-validate="required=true"/><br/>
+		Address2:   <input type="text" name="address2" value="${POST[address2]}" /><br/>
+		City:   	  <input type="text" name="city" value="${POST[city]}" data-validate="required=true"/><br/>
+		Country:    <tpt:html id="country" type="country_select" include_only="US,CA" target="state" selected="${POST[country]}"/><br/>
+		State:	  <tpt:html id="state" type="state_select" selected="${POST[state]}"/><br/> 
+		Zip Code:    <input type="text" name="zipcode" value="${POST[zipcode]}" data-validate="required=true pattern=zipcode"/><br/>
+	</tpt:comment>
+	
+	
+	<div class="clear"> </div>
+	
+	<div class="stack last question profile-width left">
+		Gender:<br />
+		<tpt:html type="radio" id="gender" value="M" selected="${POST[gender]}" onclick="enableF(false)"/><label style="font-weight:normal" for="gender">Male</label><br />
+		<tpt:html type="radio" id="gender" altid="gender2" value="F" selected="${POST[gender]}" onclick="enableF(true)"/><label  style="font-weight:normal" for="gender2">Female</label>
+	</div>
+	<div class="stack last question left column">
+		<label>Height:<br />
+			<select name="height_ft"><tpt:html type="select-options" data="${height_ft}" selected="${POST[height_ft]}"/></select>
+			<select name="height_in"><tpt:html type="select-options" data="${height_in}" selected="${POST[height_in]}"/></select>
+		</label>
+	</div>
+	
+	<div class="clear"> </div>
+	
+	<div class="stack last question left">
+		<label>Ethnicity:<br />
+			<select class="profile-width" name="race_id"><tpt:html type="select-options" data="${race}" selected="${POST[race_id]}"/></select>
+		</label>
+	</div>
+	
+	<div class="stack last question left column">
+		<label>Language:<br />
+			<select class="profile-width" name="language_id"><tpt:html type="select-options" data="${languages}" selected="${POST[language_id]}"/></select>
+		</label>
+	</div>
+	<div class="stack last w300 left column">
+		<div class="question">Do you have a vision impairment that requires special reading materials?<br /></div>
+			<label style="font-weight:normal"><tpt:html type="radio" id="vision" value="Y" selected="${POST[vision]}"/>Yes</label><br />
+			<label style="font-weight:normal"><tpt:html type="radio" id="vision" value="N" selected="${POST[vision]}" default="true"/>No</label>
+		
+		</div>
+	
+	<div class="clear"> </div>
+
+	<br />
+		<div class="stack last left question profile-width">Marital Status:<br />
+			<label class="radio"><tpt:html type="radio" id="marital_status" value="S" selected="${POST[marital_status]}" default="true"/>Single(never married)</label><br />
+			<label class="radio"><tpt:html type="radio" id="marital_status" value="M" selected="${POST[marital_status]}"/>Married</label><br />
+			<label class="radio"><tpt:html type="radio" id="marital_status" value="P" selected="${POST[marital_status]}"/>Seperated</label><br />
+			<label class="radio"><tpt:html type="radio" id="marital_status" value="D" selected="${POST[marital_status]}"/>Divorced</label><br />
+			<label class="radio"><tpt:html type="radio" id="marital_status" value="O" selected="${POST[marital_status]}"/>Other</label><br />
+		</div>
+	
+		<div class="stack last left question column profile-width">Education:<br />
+			<label class="radio"><tpt:html type="radio" id="education" value="I" selected="${POST[education]}" default="true"/>Some High School</label><br />
+			<label class="radio"><tpt:html type="radio" id="education" value="H" selected="${POST[education]}"/>High School or GED</label><br />
+			<label class="radio"><tpt:html type="radio" id="education" value="S" selected="${POST[education]}"/>Some College</label><br />
+			<label class="radio"><tpt:html type="radio" id="education" value="C" selected="${POST[education]}"/>College</label><br />
+			<label class="radio"><tpt:html type="radio" id="education" value="G" selected="${POST[education]}"/>Post Graduate or Professional Degree</label><br />
+		</div>
+		
+	<div class="stack last w300 column left">	
+	<div class="stack last question">Do you have a hearing impairment that requires special hearing equipment?<br /></div>
+		<label style="font-weight:normal"><tpt:html type="radio" id="hearing" value="Y" selected="${POST[hearing]}"/>Yes</label><br />
+		<label style="font-weight:normal"><tpt:html type="radio" id="hearing" value="N" selected="${POST[hearing]}" default="true"/>No</label><br />
+		<label style="font-weight:normal"><tpt:html type="radio" id="hearing" value="NS" selected="${POST[hearing]}"/>Not Sure</label><br />
+	</div>
+		
+		<div class="clear"> </div>
+
+
+	
+	<br />
+<tpt:comment>
+  Team:<select name="team_id"><tpt:html type="select-options" data="${teams}" selected="${POST[team_id]}"/></select><br/>
+</tpt:comment>  
+
+	<div class="stack last question left profile-width">
+		<label>Signup Weight:<br />
+			<input class="profile-width"  type="text" name="initial_weight" value="${POST[initial_weight]}" data-validate="required=true type=number precision=5,2 range=(0,999.99)"/>
+		</label><br />
+		<label>Goal Weight:<br />
+			<input class="profile-width"  type="text" name="goal_weight" value="${POST[goal_weight]}" />
+		</label>
+	</div>
+	<div class="stack last question left column profile-width">
+	Goal:<br />		
+	
+	<label class="radio"><tpt:html type="radio" id="goal" value="maintain" selected="${POST[goal]}" default="true"/>Maintain Weight</label>
+	<div>
+	<label class="radio"><tpt:html type="radio" id="goal" value="gain_1pw" selected="${POST[goal]}"/>Gain 1lb per week</label><br />
+	<label class="radio"><tpt:html type="radio" id="goal" value="gain_2pw" selected="${POST[goal]}"/>Gain 2lb per week</label><br />
+	</div>
+	<div>
+	<label class="radio"><tpt:html type="radio" id="goal" value="lose_1pw" selected="${POST[goal]}"/>Lose 1lb per week</label><br />
+	<label class="radio"><tpt:html type="radio" id="goal" value="lose_2pw" selected="${POST[goal]}"/>Lose 2lb per week</label><br />
+	</div>
+	<label class="radio"><tpt:html type="radio" id="goal" value="other" selected="${POST[goal]}"/>Other</label><br />
+	</div>
+	
+	<div class="stack last question left column">
+	<label>Activity Level:<br/>
+		<select class="w300" name="activity_level_id"><tpt:html type="select-options" data="${activity_level}" selected="${POST[activity_level_id]}"/></select>
+	</label>
+</div>
+	<div class="clear"> </div>
+	
+
+
+<tpt:setif id="POST[gender]" test="EQ" value="f" var="display" iftrue="block" iffalse="none"/>
+
+<br />
+<div id="female_q" style="display:${display}">
+
+<div class="stack last question left profile-width">
+	Pegnancy:<br />	
+	<label class="radio"> <tpt:html type="radio" id="pregnancy" value="no" selected="${POST[pregnancy]}" default="true"/>No</label><br />
+	<label class="radio"><tpt:html type="radio" id="pregnancy" value="trimester_1" selected="${POST[pregnancy]}"/>1st Trimester</label><br />
+	<label class="radio"><tpt:html type="radio" id="pregnancy" value="trimester_2" selected="${POST[pregnancy]}"/>2nd Trimester</label><br />
+	<label class="radio"><tpt:html type="radio" id="pregnancy" value="trimester_3" selected="${POST[pregnancy]}"/>3rd trimester</label><br />
+
+</div>			  
+	  	  
+
+	<div class="stack last question left column profile-width">		  
+	Lactating:<br />
+	<label class="radio"><tpt:html type="radio" id="lactating" value="no" selected="${POST[lactating]}" default="true"/>No</label><br />
+	<label class="radio"><tpt:html type="radio" id="lactating" value="0-6" selected="${POST[lactating]}"/>1st 6 months</label><br />
+	<label class="radio"><tpt:html type="radio" id="lactating" value="6-12" selected="${POST[lactating]}"/>2nd 6 months</label><br />
+	<label class="radio"><tpt:html type="radio" id="lactating" value="12+" selected="${POST[lactating]}"/>12+ months</label><br />
+				  
+	</div>
+	
+<div class="stack last question left column">
+	<label>Fitness Pregnancy:<br/>
+  		<select name="fitness_goal_id"><tpt:html type="select-options" data="${fitness_goal}" selected="${POST[fitness_goal_id]}"/></select>
+	</label>
+</div>
+
+<div class="clear"> </div>
+		  		  
+
+</div>
+<br />
+
+<div id="save-button-grey" class="right">
+	<a href="#" class="nextstep next"> </a>
+</div>
+<div class="left">
+<br />
+	<tpt:html type="checkbox" id="allow_provant_access" value="1" selected="${POST[allow_provant_access]}" default="true"/>Allow health coaches to see my account information.
+</div>
+
+<div class="clear"> </div>
+
+
+</form>
+</div>
+<div class="clear"> </div>
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+  function enableF(w){
+    document.getElementById("female_q").style.display=(w)?"block":"none";
+  }
+</script>
+</div>
+</tpt:body>

@@ -1,0 +1,10 @@
+<tpt:body>
+Disable account.<br/>
+<form method="post" action="/user/SubmitDisableAccount/">
+Please let us know why you are disabling your Provant account.<br/>
+<textarea name="message">
+
+</textarea><br/>
+<input type="submit" value="Disabel Account"/> 
+</form>
+</tpt:body>

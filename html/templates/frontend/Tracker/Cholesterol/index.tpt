@@ -1,0 +1,224 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content tracker">
+
+	<div id="section-header">
+		<h1>Cholesterol Tracker<br /><small>Resources and Tools</small></h1>
+	</div>	
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+		
+	<div class="left w-75p entryTall">
+
+		<p>The Cholesterol Tracker enables you to monitor your most recent lipid levels.  Cholesterol levels provide important information about your risk for cardiovascular disease. According to the American Heart Association screening cholesterol levels should be measured every 1-5 years in healthy adults. More often for individuals with elevated levels, including those on drug therapy.</p>
+			<br />
+			
+			<h3>Cholesterol Legend</h3>
+	<br />
+	<div class="message-center legend">
+		<table class="datagrid">
+		  <thead>
+		  <tr>
+			<td> </td>
+			<td>Total Cholesterol</td>
+			<td>HDL</td>
+			<td>LDL</td>
+			<td>Triglycerides</td>
+		  </tr>
+		  </thead>
+		  <tbody>
+		  <tr>
+			<td>Desirable Level:</td>
+			<td>below 200 mg/dL</td>
+			<td>above 45 mg/dL</td>
+			<td>below 130 mg/dL</td>
+			<td>below 150 mg/dL</td>
+		  </tr>
+		  <tr>
+			<td>Border-line risk:</td>
+			<td style="color:orange;">200 to 240 mg/dL</td>
+			<td style="color:orange;">35 to 45 mg/dL</td>
+			<td style="color:orange;">130 to 160 mg/dL</td>
+			<td style="color:orange;">150 to 199 mg/dL</td>
+		  </tr>
+		  <tr>
+			<td>Undesirable risk:</td>
+			<td style="color:red;">above 240 mg/dL</td>
+			<td style="color:red;">below 35 mg/dL</td>
+			<td style="color:red;">above 160 mg/dL</td>
+			<td style="color:red;">above 200 mg/dL</td>
+		  </tr>
+		  </tbody>
+		</table>
+	</div>
+	<br /> <br />
+	<h3>Enter Cholesterol Information</h3>
+	<br />
+			<div id="entry" class="bold">
+				<div class="entryform">
+					<form  method="post" action="/TrackerCholesterol/AddEntry?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+					<div class="">
+							<div class="trackerCal">Date: &amp;nbsp;
+	
+							<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+							<a href="#" onclick="showCalendarDialog(event, 210, 259, 'past'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+							<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+							
+						</div>
+						<br />
+						<div style="margin-top:10px">
+						<input class="right" type="submit" value="Add Entry"/>
+						<div class="entryarea left">
+							<label>Total: </label><input class="tinyForm" style="margin-right:5px" type="text" id="total" name="total" value="${post[total]}" data-validate="required=true type=integer range=(0,500)" onchange="calculateRatio()"/> &amp;nbsp;
+						</div>
+						<div class="entryarea left">
+							<label>HDL: </label><input class="tinyForm" style="margin-right:5px" type="text" id="hdl" name="hdl" value="${post[hdl]}" data-validate="required=true type=integer range=(0,500)" onchange="calculateRatio()"/> &amp;nbsp;
+						</div>
+						<div class="entryarea left">
+							<label>TC/HDL ratio: </label><input class="tinyForm" style="margin-right:5px" type="text" id="hdl_ratio" name="hdl_ratio" value="${post[hdl_ratio]}" readonly="true" /> &amp;nbsp;
+						</div>
+						<div class="entryarea left">
+							<label>LDL: </label><input class="tinyForm" style="margin-right:5px" type="text" name="ldl" value="${post[ldl]}" data-validate="required=true type=integer range=(0,500)"/> &amp;nbsp;
+						</div>
+						<div class="entryarea left">
+							<label>Triglycerides: </label><input class="tinyForm" style="margin-right:5px" type="text" name="triglycerides" value="${post[triglycerides]}" data-validate="required=true type=integer range=(0,500)"/> &amp;nbsp;
+						</div>
+						</div>
+						
+					</div>
+							
+					</form>
+				</div>
+				<div class="clear"> </div>
+			</div>
+	<br /><br />
+
+<tpt:if id="data_points" test="GT" value="0">
+<div id="log">
+		<h4>Cholesterol Log</h4>
+		<div class="logselect">
+		Show: <a href="/TrackerCholesterol/Index?log=month">Past Week</a> | <a href="/TrackerCholesterol/Index?log=month">Past Month</a> | <a href="/TrackerCholesterol/Index/">Full Log</a>
+		</div>
+<!--
+		<tpt:if id="data_points" test="GT" value="1">
+		<div class="history">
+			<img src="/TrackerCholesterol/History?log=${loglevel}" width="630px" />
+		</div>
+		</tpt:if>
+-->
+		<br />
+		<h3>Summary</h3>
+		<br />
+	<div class="message-center">	
+		<table class="datagrid">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Total Cholesterol</th>
+					<th>HDL</th>
+					<th>LDL</th>
+					<th>Triglycerides</th>
+
+					<th>Controls</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tpt:foreach id="log" as="entry">
+					<tr>
+						<td class="dg-col-date">${entry[de]}</td>
+						<td class="dg-col-total-chol">
+							<tpt:if id="entry[total]" test="GT" value="240"><tpt:setvar id="color" value="red"/></tpt:if>
+							<tpt:elseif id="entry[total]" test="GE" value="200"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+							<tpt:else><tpt:setvar id="color" value="black"/></tpt:else>
+							<span style="color:${color}">${entry[total]}</span>
+						</td>
+						<td class="dg-col-hdl">
+							<tpt:if id="entry[hdl]" test="LT" value="35"><tpt:setvar id="color" value="red"/></tpt:if>
+							<tpt:elseif id="entry[hdl]" test="LE" value="45"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+							<tpt:else><tpt:setvar id="color" value="black"/></tpt:else>
+							<span style="color:${color}">${entry[hdl]}</span>
+						</td>
+						<td class="dg-col-ldl">
+							<tpt:if id="entry[ldl]" test="GT" value="160"><tpt:setvar id="color" value="red"/></tpt:if>
+							<tpt:elseif id="entry[ldl]" test="GE" value="130"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+							<tpt:else><tpt:setvar id="color" value="black"/></tpt:else>
+							<span style="color:${color}">${entry[ldl]}</span>
+						</td>
+						<td class="dg-col-tri">
+							<tpt:if id="entry[triglycerides]" test="GT" value="200"><tpt:setvar id="color" value="red"/></tpt:if>
+							<tpt:elseif id="entry[triglycerides]" test="GE" value="150"><tpt:setvar id="color" value="orange"/></tpt:elseif>
+							<tpt:else><tpt:setvar id="color" value="black"/></tpt:else>
+							<span style="color:${color}">${entry[triglycerides]}</span>
+						</td>
+						<!-- [CDATA[<td class="dg-col-name">
+							<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+							<tpt:else>${entry[enter_name]}</tpt:else>
+						</td>-->
+						<td class="dg-col-edit"><a href="/TrackerCholesterol/Index?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerCholesterol/DeleteEntry/${entry[id]}?log=${loglevel}">Delete</a></td>
+					</tr>
+				</tpt:foreach>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+	<br /><br />
+	
+</tpt:if>
+	<br />
+	<p>Cholesterol levels provide important information
+		about your risk for cardiovascular disease. According to the American Heart
+		Association cholesterol levels should be measured every 1-5 years in healthy
+		adults. For people with elevated
+		cholesterol levels every 6 months and for people on drug therapy every six
+		weeks until stable and then at least every 6 months.&amp;nbsp; With poor dietary
+		habits, your cholesterol can increase in as little as 2 weeks. </p>
+</div>
+
+<div class="clear"> </div>
+</div>
+
+<script type="text/javascript">
+function calculateRatio() {
+	var hdl = document.getElementById('hdl');
+	var tot = document.getElementById('total');
+	var ratio = document.getElementById('hdl_ratio');
+
+	if (hdl.value.length == 0) {
+		ratio.value = "";
+		return;
+	}
+
+	if (tot.value.length == 0) {
+		ratio.value = "";
+		return;
+	}
+
+	var rat = new Number(tot.value / hdl.value);
+	ratio.value = rat.toFixed(2);
+	return;
+}
+</script>
+</tpt:body>

@@ -1,0 +1,52 @@
+<tpt:body>
+<div class="inner-content phip">
+	<div id="section-header">
+		<h1>Manage Supplemental Exercises<br /><small>Exercise Planner</small></h1>
+	</div>
+	<div>
+
+
+	<h3>Manage Supplemental Exercises</h3>
+
+	<div class="ITtables">
+	
+	<tpt:if id="error" test="EXISTS">
+	<div style="background-color:#ddaaaa; color:red">
+		<span>${error}</span>
+	</div>
+	<div class="clear"> </div>
+	</tpt:if>
+
+	<tpt:if id="sExs" test="HASELEMENTS">
+		<table border="0" cellpadding="8">
+		<tpt:foreach id="sExs" as="se">
+			<tr>
+			<td>${se[name]}</td>
+			<tpt:if id="se[type]" test="EQ" value="cardio">
+			<td>Duration: ${se[duration]}</td>
+			<td>METs: ${se[METs]}</td>
+			</tpt:if>
+			<tpt:else>
+			<td>Sets: ${se[sets]}</td>
+			<td>Reps: ${se[reps]}</td>
+			</tpt:else>
+			<td>Day: ${se[day]}</td>
+			<td><a href="/WorkoutPlan/DeleteFromPlan/${se[id]}">Delete</a></td>
+			</tr>
+		</tpt:foreach>
+		</table>
+	</tpt:if>
+	<tpt:else>
+		<span>You currently have no supplemental exercises in your workout plans</span><br />
+	</tpt:else>
+	</div>
+	<br />
+	<div style="width:75%">
+		<a href="/WorkoutPlan/Create">Back to the Exercise Planner</a>
+		<a class="right" href="/WorkoutPlan/AddExerciseToPlan">Add a Supplemental Exercise</a>
+	</div>
+	<div class="clear"> </div>
+	</div>
+	
+</div>
+</tpt:body>

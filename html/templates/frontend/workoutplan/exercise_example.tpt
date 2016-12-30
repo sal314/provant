@@ -1,0 +1,190 @@
+<tpt:body>
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Exercise Examples</h1>
+		<p></p>
+	</div>
+	
+<a href="/WorkoutPlan/Examples/core">Core</a> |
+<a href="/WorkoutPlan/Examples/upper_body">Upper Body</a> |
+<a href="/WorkoutPlan/Examples/lower_body">Lower Body</a> |
+<a href="/WorkoutPlan/Examples/stretch">Stretch</a> 
+
+	<div class="datagrid-ex right">
+		<tpt:foreach id="exercises" as="ex">
+			<div class="left ex-box">
+				<div class="ex-img">
+				  <a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[id]}')"><img src="/zImageCache/crop/102/102${ex[file_name]}"/></a>
+				</div>
+				  <a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[id]}')">${ex[name]}</a>
+				  <tpt:if id="ex.__index__" test="ISEVEN"><br/></tpt:if>
+			</div>
+		</tpt:foreach>
+		<div class="clear"> </div>
+	</div>
+
+	
+	<tpt:switch id="category">
+		<tpt:case value="core">
+			<h2>Strengthening your core</h2>
+			<p>
+				Core strengthening requires the regular and proper exercise of your
+				body's 29 core muscles. Examples of exercises that will enhance
+				your core fitness are listed below.
+            </p>
+			<p>Core Exercises</p>
+			<p>
+				Core exercises are an extremely important part of overall fitness
+				training that are often overlooked. To get your core muscles in
+				better shape, it's important to understand how you can strengthen it.
+				Your body's core, or the area around your trunk and pelvis, is where
+				your center of gravity is located. When you have good core stability,
+				the muscles in your abdomen ,pelvis, lower back, and hips work in
+				unison. They provide support to your spine for just about any
+				physical activity. A weak core can make you prone to poor posture,
+				lower back pain and muscle injuries, where strong core muscles
+				provide the brace of support needed to help prevent such pain and injury.
+			</p>
+		</tpt:case>
+		<tpt:case value="upper_body">
+			<h2>Upper Body Exercises</h2>
+			<p>
+				Upper Body exercises focus on the group of muscles defined as the
+				chest, shoulders, biceps, back, triceps, lats, and rhomboids. The
+				exercise examples listed below target all the muscles of the upper
+				body, and can be done at home or at the gym, with any type of resistance.
+			</p>
+			<ul class="bullet">
+				<li>Beginners-start with no weight (or light weight) and do for 1
+					set of 12-16 reps</li>
+				<li>Intermediate/Advanced: Do 2-3 sets of 10-12 reps with enough
+					weight that you can ONLY complete the desired number of repetitions.</li>
+				<li>Use a minimum of weight the first week, then gradually build up
+					the weight. Starting out with weights that are too heavy
+					can cause injuries.</li>
+				<li>Warm up with 5 to 10 minutes of light cardio or do warm up
+					sets of each exercise with light weight.</li>
+				<li>Rest at least one day before doing this workout again.</li>
+				<li>Check with your doctor before you begin any type of
+					exerciseprogram</li>
+			</ul>
+			<p>
+				Remember that you have to gradually add a challenging amount of
+				weight in order to benefit from any strength exercises. If you don't
+				challenge your muscles, you won't benefit from strength
+			</p>
+			<p>
+				It should feel somewhere between hard and very hard for you to
+				lift or push the weight. It should not feel very, very hard. If you
+				can't lift or push a weight 8 times in a row, it's too
+				heavy for you. Reduce the amount of weight. If you can lift a
+				weight more than 15 times in a row, it's too light for you.
+				Increase the amount of weight.
+			</p>
+			<p>Stretch after strength exercises, when your muscles are warmed up.
+				If you stretch before strength exercises, be sure to warm up your
+				muscles first (through light walking and arm
+				pumping, for example).
+			</p>
+		</tpt:case>
+		<tpt:case value="lower_body">
+			<h2>Lower Body Exercises</h2>
+			<p>
+				Lower Body exercises focus on the group of muscles defined as the
+				quadsriceps, hamstrings, gluteals, hip flexors and calves. The
+				exercise examples listed below target all the muscles of the lower
+				body, and can be done at home or at the gym, with any type of
+				resistance.
+			</p>
+			<ul class="bullet">
+				<li>Beginners-start with no weight (or light weight) and do for 1 set of 12-16 reps</li>
+				<li>Intermediate/Advanced: Do 2-3 sets of 10-12 reps with enough
+					weight that you can ONLY complete the desired number of repetitions.</li>
+				<li>Use a minimum of weight the first week, then gradually build up
+					the weight. Starting out with weights that are too heavy can cause injuries.</li>
+				<li>Warm up with 5 to 10 minutes of light cardio or do warm up sets
+					of each exercise with light weight.</li>
+				<li>Rest at least one day before doing this workout again.</li>
+				<li>Check with your doctor before you begin any type of exercise program</li>
+			</ul>
+			<p>
+				Remember that you have to gradually add a challenging amount of
+				weight in order to benefit from any strength exercises. If you
+				don't challenge your muscles, you won't benefit from strength
+			</p>
+			<p>
+				It should feel somewhere between hard and very hard for you to
+				lift or push the weight. It should not feel very, very hard. If
+				you can't lift or push a weight 8 times in a row, it's too heavy
+				for you. Reduce the amount of weight. If you can lift a weight
+				more than 15 times in a row, it's too light for you. Increase the
+				amount of weight.
+			</p>
+			<p>Stretch after strength exercises, when your muscles are warmed
+				up. If you stretch before strength exercises, be sure to warm up
+				your muscles first (through light walking and arm pumping, for example).</p>
+			<ul class="bullet">
+				<li>Beginners-start with no weight (or light weight) and do for 1 set of 12-16 reps</li>
+				<li>Intermediate/Advanced: Do 2-3 sets of 10-12 reps with enough
+					weight that you can ONLY complete the desired number of repetitions.</li>
+				<li>Use a minimum of weight the first week, then gradually build
+					up the weight. Starting out with weights that are too heavy can cause injuries.</li>
+				<li>Warm up with 5 to 10 minutes of light cardio or do warm up 
+					sets of each exercise with light weight.</li>
+				<li>Rest at least one day before doing this workout again.</li>
+				<li>Check with your doctor before you begin any type of exercise program</li>
+			</ul>
+			<p>Remember that you have to gradually add a challenging amount of
+				weight in order to benefit from any strength exercises. If you
+				don't challenge your muscles, you won't benefit from strength</p>					
+			<p>It should feel somewhere between hard and very hard for you to
+				lift or push the weight. It should not feel very, very hard. If
+				you can't lift or push a weight 8 times in a row, it's too heavy
+				for you. Reduce the amount of weight. If you can lift a weight
+				more than 15 times in a row, it's too light for you. Increase the
+				amount of weight.</p>
+			<p>Stretch after strength exercises, when your muscles are warmed
+				up. If you stretch before strength exercises, be sure to warm up
+				your muscles first (through light walking and arm pumping, for example).</p>
+		</tpt:case>
+		<tpt:case value="stretch">
+			<h2>Stretching</h2>
+			<p>No exercise program is complete without stretching. Although
+				aerobic exercises, such as walking, running, hiking, biking and
+				rollerblading all burn calories and anaerobic exercises help to
+				build muscle, don't neglect your muscles and joints!</p>
+
+			<p><b>Advantages</b></p>
+			<p>Stretching helps you promote the health of your joints, ligaments
+				and muscles. It improves circulation and decreases stress, and helps
+				avoid exercise-related injuries. Stretching also has the added
+				benefit of helping to prevent disabling osteoarthritis.</p>
+
+			<p><b>Exercise guidelines</b></p>
+			<p>Most people can benefit from slow, static stretches following
+				their exercise cool down. That's because the muscles you have used
+				during your workout tense up from exertion and need to be coaxed
+				back to a resting position. Stretching also helps reduce muscle
+				soreness.</p>
+
+			<p>Although it's tempting to perform stretches only for the parts of
+				the body you have just exercised (thighs and calves for walkers and
+				runners, shoulders and arms for tennis players, for example), your
+				entire body can benefit from a few minutes of stretching. You should
+				perform stretches on every muscle group shoulders, chest, arms,
+				stomach, back, lower back, hip flexors, quadriceps, hamstrings and
+				calves. This will help you to release muscle tension, increase
+				muscle flexibility and expand the range of motion of your joints.
+				Then you'll find practically everything you do - daily household
+				chores or sports activities - becomes easier to perform.</p>
+
+			<p><b>If it hurts, stop!</b> The idea is to gently stretch the muscle, not to yank it into an
+				injured state.</p>
+		</tpt:case>
+	</tpt:switch>
+	
+	<div class="clear"> </div>
+
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+</div>
+</tpt:body>

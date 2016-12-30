@@ -1,0 +1,319 @@
+<tpt:body>
+<link rel="stylesheet" type="text/css" media="screen" href="${css}" />
+<script type="text/javascript" language="JavaScript" src="/assets/js/Register.js"></script>
+
+
+
+<div class="wrapper">
+	
+	<div class="loginHeader">
+		<div class="loginProvant right">
+			<img src="/assets/media/images/login/provant.jpg" alt="Login"></img>
+		</div>
+		
+		<div class="loginLogo left">
+			<tpt:if id="logo" test="NOTEMPTY">
+				<img src="/zImageCache/Scale/500/${logo_height}/${logo}" alt="Company Logo"></img>
+			</tpt:if>
+			<tpt:else>
+				<img src="/uploads/image/logo.jpg" alt="Default Logo"></img>
+			</tpt:else>
+		</div>
+		
+		<div class="clear"> </div>
+	</div>
+	
+	<div class="loginColor">
+	</div>
+	
+	<div class="loginShade">
+	</div>
+
+
+
+
+	<div id="register">
+		<div id="section-header">
+			<h1>${company}<br />
+			<small>Register</small></h1>
+		</div>
+
+	<tpt:if id="errors" test="haselements">
+	<div id="error-header">
+		Please correct the following errors:
+		<ul>
+			<tpt:foreach id="errors" as="error">
+				<li>${error.display_name} ${error.message}</li> 
+			</tpt:foreach>
+		</ul>	
+		</div>
+	</tpt:if>
+	
+	<form method="post" action="/Register/AddUser/${company}/${uid}" onsubmit="return ZMEDIA.FORM.validateForm(this);">
+		<input type="hidden" name="status" value="${POST[status]}" />
+	
+	
+	
+	
+	
+	
+		<div class="right">
+		
+		
+		
+		
+		
+		<label>Ethnicity:<br />
+			<select class="profile-width" name="race_id"><tpt:html type="select-options" data="${race}" selected="${POST[race_id]}"/></select>
+		</label>
+		<br /><br />
+		
+	<div>
+		<div class="left profile-width">	
+			<label>Current Weight:*<br />
+				<input class="profile-width" type="text" name="initial_weight" value="${POST[initial_weight]}" data-validate="required=true type=number precision=5,2 range=(0,999.99)"/>
+			</label>
+		</div>
+		<div class="left">
+			<label class="left column">Goal Weight:*<br />
+				<input class="profile-width" type="text" name="goal_weight" value="${POST[goal_weight]}" />
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	<br /><br />
+	
+		
+		<div>
+			<label>Goal:*</label><br />
+		 	<tpt:html type="radio" id="goal" altid="goal1" value="maintain" selected="${POST[goal]}" default="true"/>Maintain Weight<br/>
+			<tpt:html type="radio" id="goal" altid="goal2" value="gain_1pw" selected="${POST[goal]}"/>Gain 1lb per week
+			<tpt:html type="radio" id="goal" altid="goal3" value="gain_2pw" selected="${POST[goal]}"/>Gain 2lb per week<br/>
+			<tpt:html type="radio" id="goal" altid="goal4" value="lose_1pw" selected="${POST[goal]}"/>Lose 1lb per week
+			<tpt:html type="radio" id="goal" altid="goal5" value="lose_2pw" selected="${POST[goal]}"/>Lose 2lb per week<br/>
+			<tpt:html type="radio" id="goal" altid="goal6" value="other" selected="${POST[goal]}"/>Other<br/>
+		</div>
+	
+	<div>
+	<br />
+	
+<!--[CDATA[
+	
+	<h3 style="color:#444;text-decoration:underline;">Optional:</h3>	
+		
+	
+	<div>
+		<div class="left">
+			<label>Chest<br /> Measurement: <br />
+				<input type="text" name="measurement[chest]" size="4" maxlength="4" value="${POST[measurement][chest]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label>Waist<br /> Measurement: <br />
+				<input type="text" name="measurement[waist]" size="4" maxlength="4" value="${POST[measurement][waist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label>Hips<br />  Measurement: <br />
+				<input type="text" name="measurement[hips]" size="4" maxlength="4"  value="${POST[measurement][hips]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	
+	]]-->
+	
+
+	<tpt:setif id="POST[gender]" test="EQ" value="f" var="display" iftrue="block" iffalse="none"/>
+		<div id="female_q" style="display:${display}">
+			<div class="left profile-width">
+			<label>Wrist<br /> Measurement:<br />
+				<input class="profile-width" type="text" name="measurement[wrist]" size="4" maxlength="4" value="${POST[measurement][wrist]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+			</label>
+			</div>
+			<div class="left profile-width column">
+				<label>Forearm<br /> Measurement:<br />
+					<input class="profile-width" type="text" name="measurement[forearm]" size="4" maxlength="4" value="${POST[measurement][forearm]}" data-validate="required=false type=number precision=3,1 range=(0,100)"/>
+				</label>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	
+	
+	<br /><br />
+		<tpt:html type="checkbox" id="allow_provant_access" value="1" selected="${POST[allow_provant_access]}" default="true"/>Allow health coaches to see my account information.
+	</div>
+	<br />
+
+	<iframe width="525" scrolling="auto" height="200" marginwidth="5" marginheight="5" src="/Page/Privacy/">
+	</iframe>
+
+	<!--
+	${policy}
+	-->
+	<br /><br />
+	
+	<div class="registerSubmit" style="float:right">
+		<div class="fieldgroup">
+			<tpt:html type="radio" altid="eula1" id="eula" value="accept" selected="${POST[eula]}" default="true"/>Accept 
+			<tpt:html type="radio" altid="eula2" id="eula" value="decline" selected="${POST[eula]}"/>Decline
+		</div>
+		<br /><br />
+		
+		<div id="submit-button" style="margin:0;">
+			<a href="#" class="nextstep next"> </a>
+		</div>
+	</div>
+	<div class="clear"> </div>
+	
+	
+	
+	<script type="text/javascript">
+		function enableF(w){
+			document.getElementById("female_q").style.display=(w)?"block":"none";
+		}
+	</script>
+	<br />
+	<span>* Required Field</span>
+	</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+<div class="left">
+	<div>
+		<div class="left">
+			<label class="textfield" for="first_name">First Name:*<br />
+				<input type="text" name="first_name" value="${POST[first_name]}" data-validate="required=true" />
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="last_name">Last Name:*<br />
+				<input type="text" name="last_name" value="${POST[last_name]}" data-validate="required=true" />
+			</label>
+		</div>
+		<div class="clear"> </div>
+	</div> 
+	<br />
+	
+	<div>
+		<div class="left">
+			<label class="textfield" for="email">Email:*<br />
+				<input type="text" name="email" value="${POST[email]}" data-validate="required=true pattern=email"/>
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="email_confim">Confirm Email:*<br />
+				<input type="text" name="email_confirm" value="${POST[email_confirm]}" data-validate="required=true match=email"/>
+			</label>
+		</div>
+		<div class="clear"> </div>
+	</div> 
+	<br />
+		
+	<div>
+		<div class="left" style="width:208px">
+			<label class="textfield" for="password">Password:*<br />
+				<input type="password" name="password" value="${POST[password]}" data-validate="required=true password=6"/><br />
+				<span style="font-size:11px; font-weight:normal;">Password must contain at least 6 characters</span>
+			</label>
+		</div>
+		<div class="left column">
+			<label class="textfield" for="password_confirm">Confirm Password:*<br />
+				<input type="password" name="password_confirm" value="${POST[password_confirm]}" data-validate="required=true match=password"/><br />
+			</label>
+		</div>
+		<div class="clear"> </div>
+
+	</div> 
+	<br />
+	
+	<div class="left">
+		<label for="registration_code" class="textfield">Registration Code:*<br/>
+			<input type="text" name="registration_code" value="${POST[registration_code]}" data-validate="required=true" />
+		</label>
+	</div>
+	<div class="left column">
+		<label for="location_id">Location:*<br />
+			<select class="drop-width" name="location_id"><tpt:html id="location_id" type="select-options" data="${locations}" selected="${POST[location_id]}" /></select>
+		</label>
+	</div>
+	<div class="clear"> </div>
+		
+		<br />
+
+	<tpt:comment>
+	  Address1:   <input type="text" name="address1" value="${POST[address1]}" data-validate="required=true"/><br/>
+	  Address2:   <input type="text" name="address2" value="${POST[address2]}" /><br/>
+	  city:   	  <input type="text" name="city" value="${POST[city]}" data-validate="required=true"/><br/>
+	  Counrty:    <tpt:html id="country" type="country_select" include_only="US,CA" target="state" selected="${POST[country]}"/><br/>
+	  State:	  <tpt:html id="state" type="state_select" selected="${POST[state]}"/><br/> 
+	  zipcode:    <input type="text" name="zipcode" value="${POST[zipcode]}" data-validate="required=true pattern=zipcode"/><br/>
+	</tpt:comment>  
+	  
+	<div class="fieldgroup left drop-width"><label>Gender:*</label><br />
+			<tpt:html type="radio" id="gender" value="M" selected="${POST[gender]}" onclick="enableF(false)"/><label for="gender"><span>Male</span></label>
+			<tpt:html type="radio" id="gender" altid="gender2" value="F" selected="${POST[gender]}" onclick="enableF(true)"/><label for="gender2"><span>Female</span></label>
+		</div>
+
+		
+		<div class="fieldgroup left column profile-width">
+			<label>Height:*</label><br />
+			<select name="height_ft"><tpt:html type="select-options" data="${height_ft}" selected="${POST[height_ft]}"/></select>
+			<select name="height_in"><tpt:html type="select-options" data="${height_in}" selected="${POST[height_in]}"/></select>
+		</div><br />
+	<div class="clear"> </div>  
+	  <br />
+	<div>  
+		<label>Date of Birth:*<br />
+			<select name="dob_month" id="dob_month" onchange="setDays();">
+			<tpt:html type="select-options" data="${months}" selected="${post[dob_month]}"/>
+			</select>
+			<select name="dob_day" id="dob_day">
+			<tpt:html type="select-options" data="${days}" selected="${post[dob_day]}"/>
+			</select>
+			<select name="dob_year" id="dob_year" onchange="setDays();">
+			<tpt:html type="select-options" data="${years}" selected="${post[dob_year]}"/>
+			</select>
+		</label>
+	</div>
+	</div>	
+		
+	</form>	
+	
+	<div class="clear"> </div>
+</div>
+
+
+
+
+<div class="push"> </div>
+
+</div>
+
+
+<div class="loginFooter">
+
+	<div class="loginColor">
+	</div>
+	
+	<div class="loginShade">
+	</div>
+
+
+	<div class="loginCopy">
+	<p>&amp;copy; 2010 Provant all rights reserved. &amp;nbsp;<a href="/Page/Privacy/">Privacy Policy</a> &amp;nbsp;| <a href="/Page/Terms/"> &amp;nbsp;Terms of Use </a> &amp;nbsp; |&amp;nbsp; <a href="/Page/Legal/">Legal Notice </a> &amp;nbsp;| &amp;nbsp;<a href="#">About Us</a> &amp;nbsp;|  &amp;nbsp;<a href="#">Contact Us</a></p>
+	</div>
+	
+	
+</div>
+
+
+
+</tpt:body>

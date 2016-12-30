@@ -1,0 +1,196 @@
+<tpt:body>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/ExLog.css" /> 
+	<script type="text/javascript" src="/assets/js/salscal.js"></script>
+	<script type="text/javascript" src="/assets/js/ExPlan.js"></script>
+</head>
+	
+<body>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Exercise Log for <span id="date_entered_disp">${POST[disp_date]}</span><br /><small>Resources and Tools</small></h1>
+	</div>
+	<form method="post" action="/WorkoutPlan/AddExerciseLog" onsubmit="return checkEntry();">
+
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+	<div class="w-75p left">
+
+		<p>The Exercise Log is designed to make tracking and recording your physical activity as quick and easy as possible. Use the Exercise Log to show how many calories burned.</p>
+
+		<div class="ELCalories">
+			<div class="left">
+				<span>Calories Burned: <strong class="blue">${calories}</strong></span>
+			</div>
+		</div>
+		<div class="clear"> </div>
+		<br />
+
+		<div class="ELContainer">
+			<div class="ELSearch">
+				<div class="exerciseSearch right">
+					<label>Search Exercises: <input type="text" name="Exercise" id="search" size="25" maxlength="100" autocomplete="off" onkeyup="handleSearchBox(event, '/WorkoutPlan/GetList');" /></label><br />
+<!--
+					<div id="customExercise" >
+						Didn't find what you were looking for? &amp;nbsp;<a href="/WorkoutPlan/AddCustomExercise/el">Add a Custom Exercise</a>
+					</div>
+-->
+				</div>
+
+				<div class="exCal left">
+					<input type="hidden" name="ExID" id="ExID" />
+					<input type="hidden" name="Sets" id="Sets" />
+					<input type="hidden" name="Reps" id="Reps" />
+					<input type="hidden" name="Dur" id="Dur" />
+					<input type="hidden" name="Weight" id="Weight" />
+					<input type="hidden" name="Category" id="Category" />
+					<input type="hidden" name="Custom" id="Custom" />
+					<label><strong> Date: 
+					<span id="date_entered_disp">${POST[disp_date]}</span> &amp;nbsp;</strong></label>
+
+					<a href="#" onclick="showCalendarDialog(event, 225, 300, 'past', '/WorkoutPlan/ExerciseLog'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+					<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+				</div>
+
+				<div class="clear"> </div>
+				<div id="ExerciseList"> </div>
+			</div>
+		</div>
+		<br />
+
+		<tpt:if id="cardio" test="HASELEMENTS">
+			<tpt:setvar id="dispc" value="block" />
+		</tpt:if>
+		<tpt:else>
+			<tpt:setvar id="dispc" value="none" />
+		</tpt:else>
+
+		<div style="display:${dispc}">
+			<div class="message-center">
+				<table class="datagrid">
+				<thead>
+					<tr>
+					<th>Cardio Exercises</th>
+					<th>Duration</th>
+					<th>Edit</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tpt:foreach id="cardio" as="ex">
+					<input type="hidden" id="cat${ex[id]}_${ex[supplemental]}" value="${ex[category]}" />
+					<tr>
+					<td>${ex[name]}</td>
+					<td class="sets"><input id="dur${ex[id]}_${ex[supplemental]}" class="tinyForm" size="2" value="${ex[duration]}" />Minutes</td>
+					<td class="actions">
+						<a href="#" class="exUpdate" onclick="UpdEx(${ex[id]}, ${ex[supplemental]}); return false;">Update</a>&amp;nbsp; | &amp;nbsp;
+						<a href="#" class="exDelete" onclick="DelEx(${ex[id]}, ${ex[supplemental]}); return false;">Delete</a>
+					</td>
+					</tr>
+					<input type="hidden" id="cat${ex[id]}_${ex[supplemental]}" />
+				</tpt:foreach>
+				</tbody>
+				</table>
+			</div>
+			<br />
+			<br />
+		</div>
+
+		<tpt:if id="strength" test="HASELEMENTS">
+			<tpt:setvar id="disps" value="block" />
+		</tpt:if>
+		<tpt:else>
+			<tpt:setvar id="disps" value="none" />
+		</tpt:else>
+
+		<div style="display:${disps}">
+			<div class="message-center">
+				<table class="datagrid">
+				<thead>
+					<tr>
+					<th>Strength Exercises</th>
+					<th>Sets</th>
+					<th>Repetitions</th>
+					<th>Weight</th>
+					<th>Edit</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tpt:foreach id="strength" as="ex">
+					<input type="hidden" id="cat${ex[id]}_${ex[supplemental]}" value="${ex[category]}" />
+					<tr>
+					<td>${ex[name]}</td>
+					<td class="sets"><input id="sets${ex[id]}_${ex[supplemental]}" class="tinyForm" size="2" value="${ex[sets]}" /></td>
+					<td class="sets"><input id="reps${ex[id]}_${ex[supplemental]}" class="tinyForm" size="2" value="${ex[reps]}" /></td>
+					<tpt:if id="ex[equipment]" test="EQ" value="dumbell">
+					<td class="sets"><input id="weight${ex[id]}_${ex[supplemental]}" class="tinyForm" size="2" value="${ex[weight]}" /></td>
+					</tpt:if>
+					<tpt:else>
+					<td colspan="1"></td>
+					</tpt:else>
+					<td class="actions">
+						<a href="#" class="exUpdate" onclick="UpdEx(${ex[id]}, ${ex[supplemental]}); return false;">Update</a>&amp;nbsp; | &amp;nbsp;
+						<a href="#" class="exDelete" onclick="DelEx(${ex[id]}, ${ex[supplemental]}); return false;">Delete</a>
+					</td>
+					</tr>
+				</tpt:foreach>
+				</tbody>
+				</table>
+			</div>
+		</div>
+
+		<tpt:if id="dispc" test="EQ" value="block">
+			<tpt:setvar id="dispcom" value="1" />
+		</tpt:if>
+		<tpt:else>
+			<tpt:setvar id="dispcom" value="0" />
+		</tpt:else>
+
+		<tpt:if id="disps" test="EQ" value="block">
+			<tpt:setvar id="dispcom" value="1" />
+		</tpt:if>
+
+		<tpt:if id="dispcom" test="EQ" value="1">
+			<tpt:setvar id="add_edit" value="Add a" />
+			<tpt:if id="comment" test="NOTEMPTY">
+				<br /><br />
+				<h4>Comments:</h4>
+				<div class="message-center">
+				<span>${comment}</span><br />
+				<tpt:setvar id="add_edit" value="Edit the" />
+				</div>
+			</tpt:if>
+
+			<div class="message-center">
+				<br />
+				<a href="/WorkoutPlan/AddComment/${POST[date_entered]}">${add_edit} comment about your workout</a>
+			</div>
+		</tpt:if>
+	</div>
+	</form>
+</div>
+<div class="clear"> </div>
+</body>
+</html>
+</tpt:body>

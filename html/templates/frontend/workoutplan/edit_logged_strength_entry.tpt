@@ -1,0 +1,18 @@
+<tpt:body>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/popup.css" />
+</head>
+<body>
+    <form method="post" action="/WorkoutPlan/UpdateStrengthLogEntry">
+  <h2>Update Entered Exercise</h2>  	  	   
+  	<input type="hidden" value="${exercises[id]}" name="id"/>
+    Name: ${exercises[custom_name]}<br/>
+    Sets: <input type="text" value="${exercises[sets]}" name="sets"/><br/>
+    Reps:<input type="text" value="${exercises[reps]}" name="reps"/><br/>
+    Weight:<input type="text" value="${exercises[weight]}" name="weight"/><br/>    
+    <input type="submit" value="Update Entry"/>
+  </form>
+  </body>
+</html>  
+</tpt:body>

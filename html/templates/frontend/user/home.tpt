@@ -1,0 +1,139 @@
+<tpt:body>
+
+<a href="/User/info">Profile</a><br/>
+<a href="/Page/ContactUs/">Contact us</a><br/>
+<br/>
+<a href="/ProgressReport/Index">Progress Report:  </a>
+<br/>
+iFocus:  <a href="/IFocus/Index">${last_completed}</a>
+<br/><br/>
+<a href="/TrackerBP/Index">Blood Pressure Tracker</a> <br/>UPDATE every ${trackers[update_bp]} days<br/>
+<a href="/TrackerCholesterol/Index">Cholesterol Tracker</a> <br/>UPDATE every ${trackers[update_cholesterol]} days<br/>
+<a href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a> <br/>UPDATE every ${trackers[update_blood_glucose]} days<br/>
+<a href="/TrackerPedometer/Index">Pedometer Tracker</a><br/>
+<a href="/TrackerWeight/Index">Weight Tracker</a> ${bmi_warning}<br/>
+<a href="/TrackerMeasurements/Index">Measurement Tracker</a><br/>
+<br/>
+<a href="/WorkoutPlan/Index">Workout Plans</a><br/>
+<a href="/WorkoutPlan/Examples/Core">Exercise Examples</a><br/>
+<a href="/WorkoutPlan/trackCardio">Enter Cardio Log</a><br/>
+<a href="/WorkoutPlan/trackStrength">Enter Strength Log</a><br/>
+<br/>
+<a href="/User/SetIntervals">Set Intervals</a><br/>
+<br/>
+<tpt:comment>
+<tpt:foreach id="modules" as ="module">
+	<tpt:if id="module[class_name]" test="NOTEMPTY">
+		<a href="/${module[class_name]}/Index/">${module[name]}</a><br/>
+	</tpt:if>
+</tpt:foreach>
+</tpt:comment>
+
+<br/>
+${profile[first_name]}<br/>
+You've worked very hard.<br/>
+Here are your current results:<br/>
+Current BMI: ${bmi}<br/>
+Current Weight: ${weight}<br/>
+Weight Change: ${weight_change}<br/>
+Goal: ${profile[goal_weight]} lbs<br/>
+Goal Dif: ${goal_weight_change} lbs<br/>
+Target Calories: ${target_calories}<br/>
+Exercise level: ${exercise_level}<br/>
+New Messages: <a href="/Messages/Inbox">${new_messages}</a><br/>
+Incentive Points: ${incentive_points}<br/>
+Water Consumed today: ${glasses}<a href="/User/AddGlass">+</a> <a href="/User/RemoveGlass">-</a>
+<br/><br/>
+<tpt:switch id="hhsk">
+	<tpt:case value="1">
+		<a href="/HomeHealthScreeningKit/RequestKit">Request Home Health Screening Kit</a>
+	</tpt:case>
+	<tpt:case value="2">
+  		<tpt:if id="hhsk_confirm_reception" test="EQ" value="true">
+			<form method="post" action="/HomeHealthScreeningKit/Received">
+				<input type="radio" value="1" name="recieved"/>I have recieved my Home Health Screening Kit<br/>
+				<input type="radio" value="0" name="recieved"/>I have not recieved my Home Health Screening Kit
+				<input type="submit" value="Update Status"/>	
+			</form>
+  		</tpt:if>
+  		<tpt:else>
+  			Home Health Screening Kit Has Been Ordered
+  		</tpt:else>	
+	</tpt:case>
+	<tpt:case value="3">
+		Awating results
+	</tpt:case>
+	<tpt:case value="4">
+			<!-- <a href="/HomeHealthScreeningKit/Index">HHSK Screening Results</a><br/> -->
+	</tpt:case>
+</tpt:switch><br/>
+
+<tpt:switch id="lvk">
+	<tpt:case value="1">
+		<a href="/LabVoucherKit/RequestKit">Request Lab Voucher Kit</a>
+	</tpt:case>
+	<tpt:case value="2">
+  		<tpt:if id="lvk_confirm_reception" test="EQ" value="true">
+			<form method="post" action="/LabVoucherKit/Received">
+				<input type="radio" value="1" name="recieved"/>I have recieved my Lab Voucher Kit<br/>
+				<input type="radio" value="0" name="recieved"/>I have not recieved my Lab Voucher Kit
+				<input type="submit" value="Update Status"/>	
+			</form>
+  		</tpt:if>
+  		<tpt:else>
+  			Lab Voucher Kit Has Been Ordered
+  		</tpt:else>	
+	</tpt:case>
+	<tpt:case value="3">
+		Awating results
+	</tpt:case>
+	<tpt:case value="4">
+	<!-- <a href="/HomeHealthScreeningKit/Index">Lab Voucher Kit Results</a> -->
+	</tpt:case>
+</tpt:switch><br/>
+<br/>
+<a href="/HomeHealthScreeningKit/Index">Screening Results</a><br/>
+<br/>
+<a href="/ITModules/Index/">IT Modules</a>
+<br/><br/>
+<a href="/HealthLibrary/ConditionInjuryList/A#A">A</a>
+<a href="/HealthLibrary/ConditionInjuryList/B#B">B</a>
+<a href="/HealthLibrary/ConditionInjuryList/C#C">C</a>
+<a href="/HealthLibrary/ConditionInjuryList/D#D">D</a>
+<a href="/HealthLibrary/ConditionInjuryList/E#E">E</a>
+<a href="/HealthLibrary/ConditionInjuryList/F#F">F</a>
+<a href="/HealthLibrary/ConditionInjuryList/G#G">G</a>
+<a href="/HealthLibrary/ConditionInjuryList/H#H">H</a>
+<a href="/HealthLibrary/ConditionInjuryList/I#I">I</a>
+<a href="/HealthLibrary/ConditionInjuryList/J#J">J</a>
+<a href="/HealthLibrary/ConditionInjuryList/K#K">K</a>
+<a href="/HealthLibrary/ConditionInjuryList/L#L">L</a>
+<a href="/HealthLibrary/ConditionInjuryList/M#M">M</a>
+<a href="/HealthLibrary/ConditionInjuryList/N#N">N</a>
+<a href="/HealthLibrary/ConditionInjuryList/O#O">O</a>
+<a href="/HealthLibrary/ConditionInjuryList/P#P">P</a>
+<a href="/HealthLibrary/ConditionInjuryList/Q#Q">Q</a>
+<a href="/HealthLibrary/ConditionInjuryList/R#R">R</a>
+<a href="/HealthLibrary/ConditionInjuryList/S#S">S</a>
+<a href="/HealthLibrary/ConditionInjuryList/T#T">T</a>
+<a href="/HealthLibrary/ConditionInjuryList/U#U">U</a>
+<a href="/HealthLibrary/ConditionInjuryList/V#V">V</a>
+<a href="/HealthLibrary/ConditionInjuryList/W#W">W</a>
+<a href="/HealthLibrary/ConditionInjuryList/X#X">X</a>
+<a href="/HealthLibrary/ConditionInjuryList/Y#Y">Y</a>
+<a href="/HealthLibrary/ConditionInjuryList/Z#Z">Z</a>
+
+
+<script type="text/javascript">
+  function gotoReport(){
+    var el=document.getElementById("report");
+    
+    if(el.selectedIndex){
+      document.location.href="/iFocus/Total/"+el.options[el.selectedIndex].value;
+      return;
+    }
+    alert("You must select a report.");
+  }
+</script>
+
+</tpt:body>

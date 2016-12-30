@@ -1,0 +1,143 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content tracker" >
+	<div id="section-header">
+		<h1>Blood Glucose Tracker<br /><small>Resources and Tools</small></h1>
+	</div>
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+	
+	<div class="left w-75p entryTall">
+		<p>The Blood Glucose Tracker enables you to monitor your blood glucose levels by entering daily glucose readings.  Maintaining healthy glucose levels reduces your risk for complications of diabetes.</p>
+
+		<br />
+		
+		<div id="entry" class="bold">
+				<div class="entryform">
+					<form  method="post" action="/TrackerBloodGlucose/AddEntry?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+				
+						<div class="left datepicker" style="margin-left:30px">
+							<div class="trackerCal">Date: &amp;nbsp;
+	
+							<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+							<a href="#" onclick="showCalendarDialog(event, 210, 259, 'past'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+							<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+		
+						</div>
+						
+					</div>
+						<div class="left BGtime" style="margin-left:40px">
+								<label>
+									Time:<tpt:html type="time_picker" class="dropdown" id="time_entered" value="${post[time_entered]}"/>
+								</label>
+						</div>
+						<div class="entryarea left" style="margin-left:40px" >
+							<label>Blood Glucose: </label><input class=" " style="margin-right:5px; width:80px;"  type="text" name="blood_glucose" value="${post[blood_glucose]}" data-validate="required=true type=integer range=(0,500)"/> &amp;nbsp;
+						</div>
+						
+						<br />
+
+						<div class="clear"> </div>
+					
+						<div style="margin-top:15px">
+							<input class="right" style="margin-right:23px" type="submit" value="Add Entry"/>
+						
+						
+						
+<!--[CDATA[						<div class="entryarea left" style="margin-left:30px">
+							<label>Medication: </label><input class="smallForm" style="margin-right:5px"  type="text" name="medication" value="${post[medication]}" data-validate="required=false"/> &amp;nbsp;
+						</div>-->
+						<div class="entryarea left" style="margin-left:30px">
+							<label>Method: </label>
+							<select name="method" class="dropdown" style="margin-right:5px">
+								<tpt:html type="select-options" selected="${post[method]}" data="[non-fasting:=random,,fasting:=fasting]"/>
+							</select> &amp;nbsp;
+						</div>
+						
+						</div>
+					</form>
+				</div>
+				<div class="clear"> </div>
+			</div>	
+		<br />
+
+	<tpt:if id="data_points" test="GT" value="0">
+	<div id="log">
+		<h4>Blood Glucose Log</h4>
+		<div class="logselect">
+			Show: <a href="/TrackerBloodGlucose/Index?log=week">Past Week</a> | <a href="/TrackerBloodGlucose/Index?log=month">Past Month</a> | <a href="/TrackerBloodGlucose/Index/">Full Log</a>
+		</div>
+		<tpt:if id="fasting_data" test="GT" value="1">
+		<div class="history">
+			<img src="/TrackerBloodGlucose/History?type=fasting&amp;amp;log=${loglevel}" width="630px"/>
+		</div>
+		</tpt:if>
+		<tpt:if id="random_data" test="GT" value="1">
+		<br />
+		<div class="history">
+			<img src="/TrackerBloodGlucose/History?type=non&amp;amp;log=${loglevel}" width="630px"/>
+		</div>
+		</tpt:if>
+		<br />
+		<h3>Summary</h3>
+		<br />
+	<div class="message-center">
+			<table class="datagrid">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Weight</th>
+						<th>Blood Glucose</th>
+
+						<th>Method</th>
+
+						<th>Controls</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:foreach id="log" as="entry">
+						<tr>
+							<td class="dg-col-date">${entry[de]}</td>
+							<td class="dg-col-date">${entry[te]}</td>
+							<td class="dg-col-weight">${entry[tel]}</td>
+							<td> ${entry[blood_glucose]}</td>
+<!--[CDATA[							<td> ${entry[medication]}</td> ]]-->
+							<td> ${entry[method]}</td>
+<!--[CDATA[								<td class="dg-col-name">
+								<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+								<tpt:else>${entry[enter_name]}</tpt:else>
+							</td> ]]-->
+							<td class="dg-col-edit"><a href="/TrackerBloodGlucose/Index?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerBloodGlucose/DeleteEntry/${entry[id]}?log=${loglevel}">Delete</a></td>
+						</tr>
+					</tpt:foreach>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</tpt:if>
+</div>
+<div class="clear"> </div>
+</div>
+</tpt:body>

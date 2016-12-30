@@ -1,0 +1,21 @@
+<tpt:body>
+TRACK MY EXERCISE<br/><br/>
+This report shows you the approximate amount of calories you have burned, during the given time period for the exercise you have selected based on your last entered weight. Use this report to assess your fitness. Recording your efforts helps you work toward your goals and can remind you that you're making progress.
+<br/>
+<br/>
+Last Exercise entered: ${data.exercises[0][custom_name]} (${data.exercises[0][date_entered]})<br/>
+Total Calories burnes: ${data.calories}<br/><br/>
+ 
+  <tpt:foreach id="data.exercises" as="ex">
+  	<div>
+  		<div style="float:left">${ex[date_entered]}</div>
+  		<div style="float:left;width:200px;text-align:right;">${ex[custom_name]}</div>
+  		<div style="float:left">
+  			<div style="background-color:#80BFB6;min-width:${ex[unit_width]}px;float:left;text-align:right;">${ex[units]} ${ex[label]}</div>
+  			<br style="clear:left;"/>
+  			<div style="background-color:#E2EDCC;min-width:${ex[cal_width]}px;float:left;text-align:right;">${ex[calories]} cals</div>
+  		</div>
+  		<br style="clear:left;"/>
+  	</div>
+  </tpt:foreach>
+</tpt:body>

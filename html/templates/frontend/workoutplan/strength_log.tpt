@@ -1,0 +1,232 @@
+<tpt:body>
+  <tpt:body>
+    <div class="inner-content">
+	<div id="section-header">
+		<h1>Strength Exercise Tracker</h1>
+		<p>Track the activities and exercises you do, and see the calories burned from each activity and then use the reports to see how far you've come. The Cardio Log can help you reach your fitness goals. It's online, so you can use it anywhere you have Internet access. </p>
+	</div>
+	
+
+  <h2>Date</h2>
+  	<div class="custom-exercise-item">
+		<tpt:html type="date_picker" id="date_entered" value="${post[date_entered]}" display="m/d/Y" /><br/>
+  	</div>
+<div class="grid">
+	
+	<form method="post" action="/WorkoutPlan/AddStrength">
+	<input type="hidden" value="${post[date_entered]}" id="date_entered_2" name="normal[date_entered]"/>
+	
+	<h2>Weekly Plan</h2>
+	
+	
+	<div class="right">
+	
+		  <div class="day-tracker">
+	  <h2>Day 5:</h2>
+	  <tpt:foreach id="planex[5]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>   
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>      
+		 <br/>
+	  </tpt:foreach>
+	  </div>
+	  
+	  <div class="day-tracker">
+	  <h2>Day 6:</h2>
+	  <tpt:foreach id="planex[6]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>      
+		 <br/>
+	  </tpt:foreach>
+	  </div>
+	  
+	  
+	  <div class="day-tracker">
+	  <h2>Day 7:</h2>
+	  <tpt:foreach id="planex[7]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>   
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>      
+		 <br/>
+	  </tpt:foreach>
+	  
+	  </div>
+	
+</div>	
+
+	<div class="left">
+	  <div class="day-tracker">
+	  
+	  <h2>Day 1:</h2>
+	  <tpt:foreach id="planex[1]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>   
+	   <br/>  	
+	  </tpt:foreach>
+	  
+	  </div>
+	  
+	  <div class="day-tracker">
+	  <h2>Day 2:</h2>
+	  
+	  <tpt:foreach id="planex[2]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>   
+		 <br/>
+	  </tpt:foreach>
+	  
+	  </div>
+	  
+	  <div class="day-tracker">
+	  <h2>Day 3:</h2>
+	  <tpt:foreach id="planex[3]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>   
+		 <br/>
+	  </tpt:foreach>
+	  </div>
+	  
+	  <div class="day-tracker">
+	  <h2>Day 4:</h2>
+	  <tpt:foreach id="planex[4]" as="ex"> 
+	   <tpt:if id="ex[has_desc]" test="EQ" value="1"><a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[p_workout_exercises]}')">${ex[name]}</a></tpt:if>
+	   <tpt:else>${ex[name]}</tpt:else>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][sets]" value="${ex[sets]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="2" maxchar="2" name="normal[${ex[id]}][reps]" value="${ex[reps]}" data-validate="required=false pattern=integer range=[0,99]"/>
+	   <input type="text" size="3" maxchar="3" name="normal[${ex[id]}][weight]" value="${ex[weight]}" data-validate="required=false pattern=integer range=[0,999]"/>
+	   <input type="checkbox" value="${ex[supplemental]}" name="normal[${ex[id]}][finished]"/>
+	   <input type="hidden" name="normal[${ex[id]}][supplemental]" value="${ex[supplemental]}" data-validate="required=false pattern=integer"/>   
+		 <br/>
+	  </tpt:foreach>
+	  </div>
+	  
+</div>	  
+	  
+<div class="clear"> </div>
+	  
+	  <input type="submit" value="Save Entries"/>
+	</form>  
+	<br/><a href="/WorkoutPlan/AddExerciseToPlan">Add Exercise to Plan</a><br/>
+	
+</div>
+
+	<div class="custom-exercise">
+	  <form method="post" action="/WorkoutPlan/AddStrength">
+	  <h2>Add a Custom Exercise</h2>
+		
+		<input type="hidden" value="${post[date_entered]}" id="date_entered_3" name="custom[date_entered]"/>  	    
+		<input type="hidden" value="${post[id]}" id="id_3" name="custom[id]"/>
+		
+		<div class="custom-exercise-item">
+			<div class="inline-field">
+				<label>Name:</label>
+				<input type="text" value="" name="custom[custom_name]" id="cname"/>
+			</div>
+			
+			<div class="inline-field">
+				<label>Sets:</label>
+				<input type="text" value="0" name="custom[sets]" id="csets"/>
+			</div>
+			<div class="inline-field">
+				<label>Reps:</label>
+				<input type="text" value="0" name="custom[reps]" id="creps"/>
+			</div>
+			<div class="inline-field">
+				<label>Weight:</label>
+				<input type="text" value="0" name="custom[weight]" id="cweight"/>
+			</div>
+		</div>
+		<input type="submit" value="Save Custom Entry"/>
+	  </form>
+	  
+		<form method="post" action="/WorkoutPlan/SaveComment">
+			<h2>Comment</h2>
+			<div class="custom-exercise-item">
+				<input type="hidden" value="${post[date_entered]}" id="date_entered_1" name="date_entered"/>
+				<input type="hidden" name="type" value="strength"/>
+				<textarea name="comment"> </textarea><br/>
+			</div>
+		
+			<input type="submit" value="Save Comment"/>
+			<input type="button" value="View Comment" onclick="showWin('/WorkoutPlan/ViewComments/strength')"/>
+		</form>
+	
+	</div> 
+
+	<br />
+	<div id="log">
+	
+		<h2>Exercise Log</h2>
+			
+			<table class="datagrid">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Exercise</th>
+						<th>Sets</th>
+						<th>Reps</th>
+						<th>Weight</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:foreach id="logged" as="log">
+						<tr>
+							<td class="dg-col-date">${log[date_entered]} </td>
+							<td class="dg-col-weight">
+								<tpt:if id="log[name]" test="NE" value="">${log[name]}</tpt:if>
+								<tpt:else>${log[custom_name]}</tpt:else>   
+							</td>
+							
+							
+							<td>${log[sets]}</td>
+							<td>${log[reps]}</td>
+							<td class="dg-col-name">${log[weight]}</td>
+							
+							<td class="dg-col-edit"><a href="javascript:showWin('/WorkoutPlan/EditStrengthEntry/${log[id]}?supl=${log[supplemental]}')">Edit Entry</a> | <a href="/WorkoutPlan/DeleteEntry/${log[pk]}">Delete Entry</a></td>
+						</tr>
+					</tpt:foreach>
+				</tbody>
+			</table>
+		</div>
+		<div id="section-footer">
+		
+	</div>
+	
+<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+<script type="text/javascript">
+<![CDATA[
+ZMEDIA.MODAL.getTimeStamp_close_callback=function(returnObj){    
+  document.getElementById("date_entered_1").value=returnObj.value;
+  document.getElementById("date_entered_2").value=returnObj.value;
+  document.getElementById("date_entered_3").value=returnObj.value;
+}
+  ]]>
+</script>
+
+
+
+</div>
+</tpt:body>
+</tpt:body>

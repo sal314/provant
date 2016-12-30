@@ -1,0 +1,134 @@
+<tpt:body>
+<!-- [CDATA[  &&& There should be a Provant logo that goes in the top right corner of this page ]] -->
+	<script type="text/javascript" lanuguage="JavaScript" src="/assets/js/User.js"> </script>
+	
+<div class="inner-content">
+	<div id="section-header">
+		<h1>Health Coaching<br/></h1>
+	</div>
+	<form method="post" action="/User/HealthCoachSignUp">
+	
+	<p>
+	Congratulations for completing your Health Assessment and taking the first step toward achevieng personal good health and well-being.
+	</p>
+	<p>
+	According to your answers to the Health Assessment questions your personal iFOCUS score is ${score}. This places you in the &amp;quot;${risk}&amp;quot; health risk category and qualifies you for a personal health coach.
+	</p>
+	<p>
+	Based on your personal risk category, you are eligible for ${calls} proactive outreach calls from a qualified health coach.  The health coach is absolutely free and is an added benefit to you from your employer. Your health coach will support you with developing a personal health improvement plan (PHiP) and provide you with the motivation, direction and support you need to help reach your personal health goals. In addition to proactive outreach calls, you will also have unlimted inbound e-mail access to your health coach through the &amp;quot;coaching connection&amp;quot; feature on the ${company_name} web portal.
+	</p>
+	<h3>Consent Terms</h3>
+	<i>
+	I hereby release Provant Health Solutions, LLC, its partners, executives, employees, representatives or consultants and any other party associated with this comprehensive programming and claims analysis from any liability arising from or any way connected to the aforementioned health coaching program. I understand that:
+	</i>
+	<ol>
+		<li>My involvement in this wellness program is completely voluntary.  By agreeing to this program I agree to allow Provant Health Solutions to use my biometric screening results and health assessment results to coordinate appropriate health coaching.  I fully understand that my employer will never see my individual results and Provant Health Solutions; LLC will keep my results completely confidential.</li>
+		<li>I understand that participating in this program in no way affects my employment status and the aggregate reporting supplied by Provant Health Solutions, LLC to my employer will in no way influence my employment or eligibility for health insurance coverage.</li>
+		<li>I may withdraw my voluntary involvement in the health coaching program at any time.  I further understand that to do so I must submit my withdrawal in writing to Provant Health Solutions, LLC, PO Box 901, East Greenwich, RI  02818.  Provant will immediately withdraw me from the program upon receipt of my written withdrawal.</li>
+		<li>It is my responsibility to understand the HIPAA policy written below and to seek assistance in understanding my rights as a voluntary participant in this health coaching program:
+		   
+		</li>
+	</ol>
+
+
+	
+
+	
+	
+	
+	
+<div style="border: 1px solid #000; padding:20px; width:370px" class="optin right">
+	<h3 style="margin-top:0;">Opt-In Form</h3>
+	<p>If you have agreed to participate in the employer sponsored health coaching program, please provide the following information:</p>
+	<div class="last question">
+		<label class="left" style="margin-right:15px">Daytime Phone:<br />
+			<input type="text" name="dayphone" id="dayphone" size="25" value="${dayphone}" onblur="formatPhone('day');" />
+		</label>
+		
+		<label class="left">Evening Phone:<br />
+			<input type="text" name="evephone" id="evephone" size="25" value="${evephone}" onblur="formatPhone('eve');" />
+		</label>
+		
+		<div class ="clear"> </div>
+	</div>
+	
+	<div class=" last question">
+		<label>Please specify the best day of the week to receive a call from your Health Coach: <br />
+		</label>
+			<tpt:html id="weekday" type="radio" value="Monday" />Monday<br />
+			<tpt:html id="weekday" type="radio" value="Tuesday" />Tuesday<br />
+			<tpt:html id="weekday" type="radio" value="Wednesday" />Wednesday<br />
+			<tpt:html id="weekday" type="radio" value="Thursday" />Thursday<br />
+			<tpt:html id="weekday" type="radio" value="Friday" />Friday<br />
+	</div>
+	<div class=" last question">
+
+		<label>Please specify the best time of the day to recieve a call from your Health Coach: <br />
+
+		</label>
+
+				<tpt:html id="besttime" type="radio" value="Mornings" />Mornings (8:30 am to 11:00 am)<br />
+				<tpt:html id="besttime" type="radio" value="Mid-Day" />Mid-Day (11:00 am to 1:00 pm)<br />
+				<tpt:html id="besttime" type="radio" value="Afternoons" />Afternoons (1:30 pm to 5:00 pm)<br />
+				<tpt:html id="besttime" type="radio" value="Evenings" />Evenings (5:30 pm to 7:00 pm )<br />
+	</div>
+	<div class=" last question">
+		<label>Please specify your time zone:<br />
+		</label>
+				<tpt:html id="tz" type="radio" value="EST" />EST<br />
+				<tpt:html id="tz" type="radio" value="CST" />CST<br />
+				<tpt:html id="tz" type="radio" value="MST" />MST<br />
+				<tpt:html id="tz" type="radio" value="PST" />PST<br />
+		
+	</div>
+	Health Coaching Program will begin ${start_date}
+		<input type="hidden" name="startdate" value="${start_date}" />
+		<br />
+		<!--[CDATA[ <a href="/User/Index">Cancel</a> ]]-->
+		<br />
+		
+		<div id="submit-button" class="right">
+			<a class="next" href="javascript:void(0);" onclick="validateForm();">Submit Form</a>
+		</div>
+		
+
+		<div class="left" style="width:270px"> 
+			<span style="color:#a1a1a1;">&amp;copy;2010 Provant Health Solutions. All Rights Reserved. Health Coaching Opt-In Web Consent.</span><br />
+		</div>
+		<div class="clear"> </div>
+	</div>
+	
+	
+	
+	<div class="left" style=" width:390px">
+	 <p>In instances where Provant Health Solutions, LLC receives Protected Health Information, herein referred to as &amp;quot;PHI&amp;quot; from me, Provant Health Solutions, LLC agrees that it shall:</p>
+		    <ol>
+		    	<li>comply with the applicable provisions of the Administrative simplification section of the Health Insurance Portability and Accountability Act of 1996, as codified at 42 U.S.C. &amp;sect; I 320d through d-8 (&amp;quot;HIPM&amp;quot;), and the requirements of any regulations promulgated there under.</li>
+		    	<li>not use or further disclose any PHI concerning a patient other than as permitted by this Agreement, the requirements of HIPAA and/or applicable federal regulations. PROVANT shall implement appropriate safeguards to prevent the use or disclosure of a patient&amp;acute;s PHI other than as provided for by this Agreement.</li>
+		    	<li>promptly report to participant any violations, use and/or disclosure of a patient&amp;acute;s PHI not provided for by this Agreement as soon as practicable, upon becoming aware of the improper violation(s), use and/or disclosure.</li>
+		    	<li>PROVANT agrees that it shall maintain, in strict confidence, and shall not use any confidential information it receives from the participant for any purpose other than to complete services outlined within the details of the comprehensive health and wellness program details as outline by my employer.</li>
+		    </ol>
+	
+	<p>
+	
+	<br /><br />
+	I have read the health coaching terms.  By clicking on the &amp;quot;I agree&amp;quot; box, you agree to voluntarily participate in the employer sponsored telephonic health coaching powered by Provant Health Solutions, LLC.
+	</p>
+
+
+			<div style="margin-left:50px; float:left"><input name="agree" id="agree" type="radio" />I Agree</div>
+
+			<div style="margin-left:120px; float:left"><input name="agree" id="disagree" type="radio" />I Disagree</div>
+			
+			<div class="clear"> </div>
+
+	<br />
+	
+	</div>
+	
+	<div class="clear"> </div>
+		
+	</form>
+	
+</div>
+</tpt:body>

@@ -1,0 +1,164 @@
+<tpt:body>
+<script type="text/javascript" src="/assets/js/salscal.js"></script>
+<div class="inner-content tracker">
+	<div id="section-header">
+		<h1>Weight Tracker<br /><small>Resources and Tools</small></h1>
+	</div>
+	<div class="w-25p right">
+			<div class="stack last">
+				<h3>Select a Tracker</h3>
+				<div class="sidebar">
+					<ul>
+					<tpt:foreach id="tracker" as="t">
+						<li><a class="fs13" href="${t[link]}">${t[text]}</a></li>
+					</tpt:foreach>
+<!--
+						<li><a class="fs13" href="/MyProgress/Index">My Progress</a></li>
+						<li><a class="fs13" href="/TrackerWeight/Index">Weight Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBP/Index">Blood Pressure Tracker</a></li>
+						<li><a class="fs13" href="/TrackerCholesterol/Index">Cholesterol Tracker</a></li>
+						<li><a class="fs13" href="/MealPlan/Index">Meal Planner</a></li>
+						<li><a class="fs13" href="/FoodLog/Index">Food Log</a></li>
+						<li><a class="fs13" href="/TrackerMeasurements/Index">Body Measurements Tracker</a></li>
+						<li><a class="fs13" href="/TrackerPedometer/Index">Pedometer Tracker</a></li>
+						<li><a class="fs13" href="/TrackerBloodGlucose/Index">Blood Glucose Tracker</a></li>
+-->
+					</ul>
+				</div> 
+			</div>
+	</div>
+		<div class="w-75p left">
+			<p>Weight management begins by choosing a healthy goal weight. This weight chart allows you to record your weekly weights and keep you up-to-date on the status of your goal in graph form.</p>
+			<br />
+	
+			<div>
+				<h3>Current Weight Information as of ${current[de]}:</h3>
+			</div>
+			<br />
+			<div id="tracker-details">
+				<div class="tracker-item left">
+					<div class="trackervalue blue">
+						${current[weight]}
+					</div>
+					<div class="trackertype">
+						Pounds
+					</div>
+				</div>
+				<div class="tracker-item left">
+					<div class="trackervalue blue">
+						${bmi} 
+					</div>
+					<div class="trackertype">
+						BMI
+					</div>
+				</div>
+				<div class="tracker-item left">
+					<div class="trackervalue blue">${body_fat}</div>
+					<div class="trackertype">
+						Body Fat<br />Percentage
+					</div>
+				</div>
+				<div class="tracker-item left">
+					<div class="trackervalue blue">${goal_weight}</div>
+					<div class="trackertype">
+						Goal<br />Weight
+					</div>
+				</div>
+				<div class="tracker-item left">
+					<div class="trackervalue blue">${distance_from_goal_weight}</div>
+					<div class="trackertype">
+						Distance From<br />Goal Weight
+					</div>
+				</div>
+				<div class="tracker-item left">
+					<div class="trackervalue blue">${change_from_init_weight}</div>
+					<div class="trackertype">
+						Weight Change From<br />Initial Weight
+					</div>
+				</div>
+				
+				<div class="clear"> </div>
+			</div>
+			<br />
+			<h3>Enter Weight Information</h3><br />
+			<div id="entry" class="bold">
+				
+				<div class="entryform">
+					<form  method="post" action="/TrackerWeight/AddEntry?log=${loglevel}" onsubmit="return ZMEDIA.FORM.validateForm(this)">
+					
+	
+					<div class="entryarea right">
+						<label for="weight">Weight
+						<input class="smallForm" type="text" name="weight" value="${post[weight]}" data-validate="required=true type=number precision=5,1range=(0,1000)"/>
+						<input type="submit" value="Add Entry"/></label>
+					</div>	
+					
+					<div class="left datepicker">
+						<div class="trackerCal">Date: &amp;nbsp;
+	<!-- [CDATA[
+						<tpt:html type="date_picker" id="date_entered" value="${post[date_entered]}" display="m/d/Y" />
+	]]-->
+						<span id="date_entered_disp">${POST[disp_date]}</span>&amp;nbsp;&amp;nbsp;
+						<a href="#" onclick="showCalendarDialog(event, 210, 259, 'past'); return false;"><img src="/assets/media/images/calendar.gif" /></a>
+						<input type="hidden" id="date_entered" name="date_entered" value="${POST[date_entered]}" />
+	
+						</div>
+					</div>
+
+					</form>
+					<div class="clear"> </div>
+				</div>
+				<div class="clear"> </div>
+			</div>
+			
+
+		<br />
+
+	<tpt:if id="data_points" test="GT" value="0">
+	<div class="message-center">
+		<div id="log">
+			<h4>Weight Log</h4>
+			<div class="logselect">
+			Show: <a href="/TrackerWeight/Index?log=week">Past Week</a> | <a href="/TrackerWeight/Index?log=month">Past Month</a> | <a href="/TrackerWeight/Index/">Full Log</a>
+			</div>
+			<tpt:if id="data_points" test="GT" value="1">
+			<div class="history">
+				<img src="/TrackerWeight/History?log=${loglevel}" width="630px"/>
+			</div>
+			</tpt:if>
+			<br />
+			<h3>Summary</h3>
+			<br />
+			<table class="datagrid">
+				<thead>
+					<tr>
+						<th>Date</th>
+						<th>Weight</th>
+						<th>Controls</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tpt:foreach id="log" as="entry">
+						<tr>
+							<td class="dg-col-date">${entry[de]}</td>
+							<td class="dg-col-weight">${entry[weight]}</td>
+						<!-- [CDATA[	<td class="dg-col-name">
+								<tpt:if id="entry[SE]" test="EQ" value="1">self-entered</tpt:if>
+								<tpt:else>${entry[enter_name]}</tpt:else>
+							</td> ]]-->
+							<td class="dg-col-edit"><a href="/TrackerWeight/Index?edit=${entry[id]}&amp;log=${loglevel}">Edit</a> | <a href="/TrackerWeight/DeleteEntry/${entry[id]}?log=${loglevel}">Delete</a></td>
+						</tr>
+					</tpt:foreach>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="clear"> </div>
+		</div>
+		</tpt:if>		
+		<div class="clear"> </div>
+	</div>
+	<div class="clear"> </div>
+</div>
+
+</tpt:body>

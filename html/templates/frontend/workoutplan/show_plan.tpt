@@ -1,0 +1,126 @@
+<tpt:body>
+	<script type="text/javascript" language="JavaScript" src="/assets/js/ExPlan.js"></script>
+	<script type="text/javascript" src="/common/js/zmedia/zmedia.js"></script>
+		<script type="text/javascript" src="/common/js/zmedia/z_LightBox.js"></script>
+	
+	<br />
+	<h3>${ExPlanName}</h3>
+	<tpt:setvar id="idx" value="1" />
+	<tpt:setvar id="msg" value="0" />
+	<!--<pre><tpt:printr id = "ExPlan"/></pre>-->
+	<tpt:foreach id="ExPlan" as="ep">
+		<tpt:if id="idx" test="EQ" value="${ep[day]}">
+			<span style="font-size:16px; color:#462288">Day ${idx}</span><br />
+			<table border="0">
+			<tpt:foreach id="ep[ex]" as="ex">
+<!--<pre><tpt:printr id = "ex"/></pre>-->
+				<tpt:if id="ex[supplemental]" test="EQ" value="1">
+					<tpt:setvar id="star" value="*" />
+					<tpt:setvar id="msg" value="1" />
+				</tpt:if>
+				<tpt:else>
+					<tpt:setvar id="star" value="" />
+				</tpt:else>
+				<tpt:if id="ex[category]" test="EQ" value="cardio">
+					<tr>
+						<td>
+						<tpt:if id="ex[logged]" test="EQ" value="1">
+							<input type="checkbox" id="check${idx}_${ex[id]}_${ex[supplemental]}" checked="true" onchange="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[duration]}, ${ex[METs]});" />
+						</tpt:if>
+						<tpt:else>
+							<input type="checkbox" id="check${idx}_${ex[id]}_${ex[supplemental]}" onchange="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[duration]}, ${ex[METs]});" />
+						</tpt:else>
+						</td>
+
+						<tpt:if id = "ex[description]" test = "NOTEMPTY">
+
+							<td>
+								<a href="javascript:showWin('${ex[description]}', '650px')">${ex[name]}</a>&amp;nbsp;&amp;nbsp;<span style="color:red">${star}</span>
+							</td>
+
+						</tpt:if>
+						<tpt:else>
+							<td>
+								${ex[name]}&amp;nbsp;&amp;nbsp;<span style="color:red">${star}</span>
+							</td>
+						</tpt:else>
+			
+			<!--<td>
+				<span id="check${idx}_${ex[id]}_${ex[supplemental]}"></span>
+			</td>
+			<td>
+				<a href="javascript:void(0);" title="add to exercise log" onclick="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[duration]}, ${ex[METs]})">${ex[name]}<span style="color:red">${star}</span></a>
+			</td>-->
+			<td>
+				<span>Duration: ${ex[duration]}</span>
+			</td>
+
+			<td>
+<!--
+				<span>METs: ${ex[METs]}</span>
+-->
+			</td>
+			<td id="added${idx}_${ex[id]}_${ex[supplemental]}">
+			<tpt:if id="ex[logged]" test="EQ" value="1">
+				added
+			</tpt:if>
+			</td>
+
+
+
+
+			</tr>
+			</tpt:if>
+			<tpt:else>
+			<tr>
+				<td>
+				<tpt:if id="ex[logged]" test="EQ" value="1">
+						<input type="checkbox" id="check${idx}_${ex[id]}_${ex[supplemental]}" checked="true" onchange="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[sets]}, ${ex[reps]});" />
+				</tpt:if>
+				<tpt:else>
+						<input type="checkbox" id="check${idx}_${ex[id]}_${ex[supplemental]}" onchange="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[sets]}, ${ex[reps]});" />
+				</tpt:else>
+				</td>
+				<tpt:if id = "ex[description]" test = "NOTEMPTY">
+				<td>
+					<a href="javascript:showWin('/WorkoutPlan/ExerciseDescription/${ex[id]}', '650px')"><span>${ex[name]}</span>&amp;nbsp;&amp;nbsp;<span style="color:red">${star}</span></a>
+				</td>
+				</tpt:if>
+				<tpt:else>
+				<td>
+				${ex[name]}&amp;nbsp;&amp;nbsp;<span style="color:red">${star}</span>
+				</td>
+				</tpt:else>
+			
+			<!--<td>
+				<span id="check${idx}_${ex[id]}_${ex[supplemental]}"></span>
+			</td>
+			<td>
+				<a href="javascript:void(0);" title="add to exercise log" onclick="addToExLog(${idx}, ${ex[id]}, ${ex[supplemental]}, '${ex[category]}', ${ex[sets]}, ${ex[reps]})">${ex[name]}<span style="color:red">${star}</span></a>
+			</td>-->
+			
+				<td>
+					<span>Sets: ${ex[sets]}</span>
+				</td>
+				<td>
+					<span>Reps: ${ex[reps]}</span>
+				</td>
+				<td id="added${idx}_${ex[id]}_${ex[supplemental]}">
+				<tpt:if id="ex[logged]" test="EQ" value="1">
+					added
+				</tpt:if>
+				</td>
+			</tr>
+			</tpt:else>
+		</tpt:foreach>
+		</table>
+		<br />
+		</tpt:if>
+		<tpt:modvar id="idx" op="++" />
+	</tpt:foreach>
+	<br />
+	<br />
+	<tpt:if id="msg" test="EQ" value="1">
+	<span style="color:red">*</span> - Supplemental exercises<br />
+	</tpt:if>
+</tpt:body>

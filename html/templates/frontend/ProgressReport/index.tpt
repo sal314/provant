@@ -1,0 +1,36 @@
+<tpt:body>
+<div style="float:left;">
+	<img src="/TrackerWeight/History/1?log="/>
+</div>
+<br/>
+<a href="/ProgressReport/WeeklySummary">Weekly Summary</a><br/>
+<a href="/ProgressReport/TrackExercise">Track my exercises</a><br/>
+<a href="/TrackerWeight/Index/?log=week">Track my Weight</a><br/>
+
+<div style="float:left;">
+	My Health Tracking Records<br/>
+	Last Entered Cholesterol (${cholesterol[date_entered]}):<br/> 
+	Total: ${cholesterol[total]}<br/>
+	LDL: ${cholesterol[ldl]}<br/>
+	HDL: ${cholesterol[hdl]}<br/>
+	Triglycerides: ${cholesterol[triglycerides]}<br/>
+	Blood Pressure: ${bp[systolic]}/${bp[diastolic]} (${bp[date_entered]}<br/>
+	Blood Glucose: ${bg[blood_glucose]} ${bg[method]} (${bg[date_entered]})<br/>
+	<br/>
+	My Exercise Tracker<br/>
+	<tpt:foreach id="ex.exercises" as="rec">
+	  ${rec[custom_name]} <tpt:if id="rec[calories]" test="GT" value="0"> ${rec[calories]} calories</tpt:if><br/>
+	</tpt:foreach>
+	Total Calories Burned ${ex.calories}
+</div>
+
+<br style="clear:both;"/>
+My Current Weight: ${weight[weight]} ${weight[date_entered]}<br/>
+My Current BMI: ${bmi}<br/>
+Goal Weight: ${profile[goal_weight]} lbs<br/>
+Distance from Goal: ${goal_weight_change} lbs<br/>
+Weight Change from start date: ${weight_change}<br/>
+Incentive Points: ${incentive_points}<br/>
+<br/>
+My Nutrient Needs
+</tpt:body>

@@ -1,0 +1,8 @@
+<tpt:body>
+<form method="post" action="/User/saveinterval" onsubmit="return ZMEDIA.FORM.validateForm(this);">
+  Blood Pressure: <input type="text" size="2" maxlength="3" name="update_bp" value="${POST[update_bp]}" data-validate="required=true type=integer range=[0,365]" /><br/>
+  Cholesterol:    <input type="text" size="2" maxlength="3" name="update_cholesterol" value="${POST[update_cholesterol]}" data-validate="required=true type=integer range=[0,365]" /><br/>
+  Blood Glucose:  <input type="text" size="2" maxlength="3" name="update_blood_glucose" value="${POST[update_blood_glucose]}" data-validate="required=true type=integer range=[0,365]"/><br/>
+  <input type="submit" value="Save"/>
+</form>
+</tpt:body>
